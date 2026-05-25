@@ -13,10 +13,28 @@ LOG_CSV = OUT_DIR/'generation_log.csv'
 
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+BOOK_MAP = {
+    '太':'马太福音','可':'马可福音','路':'路加福音','约':'约翰福音','徒':'使徒行传','罗':'罗马书',
+    '林前':'哥林多前书','林后':'哥林多后书','加':'加拉太书','弗':'以弗所书','腓':'腓立比书','西':'歌罗西书',
+    '帖前':'帖撒罗尼迦前书','帖后':'帖撒罗尼迦后书','提前':'提摩太前书','提后':'提摩太后书','多':'提多书','门':'腓利门书',
+    '来':'希伯来书','雅':'雅各书','彼前':'彼得前书','彼后':'彼得后书','约一':'约翰一书','约二':'约翰二书','约三':'约翰三书',
+    '犹':'犹大书','启':'启示录'
+}
+BOOK_KEYS = sorted(BOOK_MAP.keys(), key=len, reverse=True)
+
+
 def normalize_tts_text(text: str) -> str:
-    # 约14:26 / 约14：26 -> 约翰福音14章26节，避免读成“14点26分”
-    text = re.sub(r'约\s*(\d+)\s*[:：]\s*(\d+)', r'约翰福音\1章\2节', text)
     text = text.replace('**', '')
+    text = re.sub(r'\[(.*?)\]\([^\)]*\)', r'\1', text)  # 清掉 markdown 链接，保留可见文本
+
+    def repl(m):
+        book = m.group(1).replace(' ', '')
+        chap = m.group(2)
+        verse = m.group(3)
+        full = next((BOOK_MAP[k] for k in BOOK_KEYS if book == k), book)
+        return f'{full}{chap}章{verse}节'
+
+    text = re.sub(r'([\u4e00-\u9fff]{1,8})\s*(\d+)\s*[:：]\s*(\d+)', repl, text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
