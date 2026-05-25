@@ -13,18 +13,38 @@ LOG_CSV = OUT_DIR/'generation_log.csv'
 
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+def normalize_tts_text(text: str) -> str:
+    # 约14:26 / 约14：26 -> 约翰福音14章26节，避免读成“14点26分”
+    text = re.sub(r'约\s*(\d+)\s*[:：]\s*(\d+)', r'约翰福音\1章\2节', text)
+    text = text.replace('**', '')
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
 def clean_text(html_content: str) -> str:
+    chunks = []
+
+    # 朗读页面主标题（日期/章节标题）
+    h1 = re.search(r'<div[^>]*class="hero"[^>]*>.*?<h1>(.*?)</h1>', html_content, flags=re.S | re.I)
+    if h1:
+        t = normalize_tts_text(html.unescape(re.sub(r'<[^>]+>', '', h1.group(1))))
+        if t:
+            chunks.append(t)
+
     m = re.search(r'<article[^>]*class="article"[^>]*>(.*?)</article>', html_content, flags=re.S | re.I)
     article = m.group(1) if m else html_content
-    ps = re.findall(r'<p[^>]*>(.*?)</p>', article, flags=re.S | re.I)
-    if not ps:
-        ps = [article]
-    chunks=[]
-    for p in ps:
-        p=re.sub(r'<[^>]+>','',p)
-        p=html.unescape(p).replace('**','')
-        p=re.sub(r'\s+',' ',p).strip()
-        if p: chunks.append(p)
+
+    # 按正文顺序提取小标题与段落，确保“章节标题也读一下”
+    blocks = re.findall(r'<(h2|h3|p)[^>]*>(.*?)</\1>', article, flags=re.S | re.I)
+    if not blocks:
+        blocks = [('p', article)]
+
+    for tag, raw in blocks:
+        text = re.sub(r'<[^>]+>', '', raw)
+        text = normalize_tts_text(html.unescape(text))
+        if text:
+            chunks.append(text)
+
     return '\n'.join(chunks)
 
 def synthesize(text: str, out_mp3: Path):
