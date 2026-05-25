@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月五日</h1><p class="meta">03.无比的爱 · 第310/366段</p><p><a class="btn" href="s309.html">上一篇</a><a class="btn" href="s311.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s310.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月五日</h2>
+<p>主拯救我们，救我们就救我们到底，像祂爱我们，爱我们到底一样（[约13:1](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=42&amp;chapter=12&amp;verse=0&amp;highlight=1#P0)）。</p>
+<p>祂救我们不是救一半，救到不上不下，挂在空中，不！经历得救只有两头，不得救的时候是在那一头，得救了就在这一头，不会救到中间挂着的。</p>
+<p>我们越学习，也越跟主有关系。其它的东西，或许要作一点，也是带手作的。</p>
+<p>我们和主的关系像朋友一样。朋友乃彼此相亲，朋友不只是自己要的，更是自己拣选的，在那么多人的人中，作朋友的双方，就是甘心乐意的来拣选，心里是多舒服，彼此是多亲密。所以圣经说，&quot;有一朋友，比弟兄更亲密&quot;（[箴18:24](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=19&amp;chapter=17&amp;verse=23&amp;highlight=1#P23)）主耶稣就是我们这位朋友，我们是这样主动，没有勉强也没有一点压迫的来拣选祂，来和祂有亲密的交通。</p>
+<p>兄弟是生出来的，我们不能自由拣选，父母生了多少个，我们都被逼接受，我们没法不同意------彼此作兄弟。在这方面说兄弟是不如朋友了，所以说&quot;有一朋友比弟兄更亲密&quot;这就是我们的主耶稣。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

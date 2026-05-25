@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月六日</h1><p class="meta">02.在光中得以见光 · 第188/366段</p><p><a class="btn" href="s187.html">上一篇</a><a class="btn" href="s189.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s188.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月六日</h2>
+<p>我们不敢作什么，因着各方面还有一些顾虑。总的，我们要去说那些出于神的东西。出于神的，神来负责。如果凭自己作，我们自己负责不了。出于神的，就由神来负责。特别是环境这一方面，也是神负责的。</p>
+<p>神负责的就轻松，神会赐给恩典。你作多少，他就给恩典多少。如果凭自己乱作，神给我们停止，就什么都没有，要作也作不下去。因为我们的本钱是基督复活的大能。</p>
+<p>我们有基督复活的大能覆蔽。我们的灵、魂与身体，因着基督复活大能，就能把神福音的大能，神话语的大能一直穿透到人灵里去，叫他们给神得着。所以所讲的话不是给人听到思想这里为止，乃是到人里面去，叫人的心被夺回到基督这一边来。</p>
+<p>所以，我们的工作不是讲道理，我们的工作乃是要将人的心夺回，转回到基督，给基督得着，叫人和基督挂钩起来。这样，就怎样都不能叫人与基督分离，因为跟主挂起来了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-七月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十七日</h1><p class="meta">03.无比的爱 · 第199/366段</p><p><a class="btn" href="s198.html">上一篇</a><a class="btn" href="s200.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s199.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十七日</h2>
+<p>要看整个基督。整个基督就是我们的救恩，整个教会是我们交通，整本圣经是我们的指引，整个世界是我们的工场。故此，认识基督，关系到多方面，还有讲不完呢！因为神是丰富的就叫我们拿不完。神的丰富是：还有，还有。祂的恩典给你一直用不完。</p>
+<p>在神这里，你只管吃，必不会饿死！这像什么呢？就像约瑟在埃及作宰相，七个丰年中，仓库里一仓一仓把粮食装得顶多的。一只蚂蚁不会在这里苦虑：&quot;不知在这里会不会饿死？&quot;蚂蚁只有一点已经够用，何况这么大的仓库，所以，决不会饿死牠。神的丰富更是超过我们所想的，因为祂是&quot;还有，还有的&quot;，是用不完的。所以要认识神，认识祂的丰富、认识祂的慈爱，认识祂的公义。认识神要从神的丰富一点一点去认识（[诗104:24](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=18&amp;chapter=103&amp;verse=23&amp;highlight=1#P23)；[132:15](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=18&amp;chapter=131&amp;verse=14&amp;highlight=1#P14)）。</p>
+<p>但照着我们所认识的，还是有限，说丰富也只一点的丰富而已。我们到广东，那荔枝园的主人栽培了几百棵荔枝树。进去就可尽量的吃，一棵树给你吃一颗吧，一百棵树，就有一百颗荔枝，秤起来也有几斤，能吃得完吗？他们那边有个例，吃的人在那里可以尽量白吃，就是不能带出去，带出去就要付钱。神的丰富比起这些不知大多少！你尽量在神那里享受、享恩，享受不完。在神那里，只要你有信心支取，就是你的，不必客气说：&quot;太多了！&quot;你尽量去拿去取用，就是这样！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

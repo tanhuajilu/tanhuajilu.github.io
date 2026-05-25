@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-三月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月三十一日</h1><p class="meta">04.晒熟的美果 · 第85/366段</p><p><a class="btn" href="s084.html">上一篇</a><a class="btn" href="s086.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s085.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月三十一日</h2>
+<p>神作工是依着每个人的需要，像医生看病，依每个病人的病情开药。因此有一个东西（神有一个工作）临到我们，我们要说：&quot;感谢主！借着这人作工在我身上！&quot;你看见神的工作，稍后果效就显明，不必先说，有没有果效。</p>
+<p>主作了工，就像你看牙科一样...牙齿要拔要补，就让医师去做，不必说：&quot;让我看着。&quot;你看着，医生就不能拔。你要好像死了一般，让医生为你做。</p>
+<p>你若说：&quot;怎么补法？给我看看。&quot;还没有补，怎么给你看。等完全补成功，给你镜子，你就会说：&quot;呀！这么漂亮！&quot;</p>
+<p>神在我们身上作工也一样，神这里作，那里作，什么时候给你看呢？等到完全作好，完全显明，都给你看。在神作工的过程中，你看不到，也不知道，你只管让神作，该知道：神会作好。像画师画画，花草鸟鱼...起初看不出来，直到完全显明，都清清楚楚的。</p>
+<p>神在我们身上作工，这里一点那里一点，有一天，里面的图画就都显明，那时你看到神作得真好：你思想清楚，感情清楚，意志清楚，灵清楚，做人清楚，各样都清楚。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

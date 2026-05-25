@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-二月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十七日</h1><p class="meta">02.在光中得以见光 · 第48/366段</p><p><a class="btn" href="s047.html">上一篇</a><a class="btn" href="s049.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s048.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十七日</h2>
+<p>属灵的东西不分大小。大也紧要，小也紧要，若是小的，少一个也不行的。一部机器，少一粒螺丝钉也不行，少了就没有办法开动，还是要接上去。若是少一钉，以为不要紧，却影响整部机器。所以神在祂永远的计划里，计划我们在基督里，永远得救，少一个也不行。</p>
+<p>一百只羊，失掉一只，我们会想，有什么要紧呢？少一个，还有九十九只啊！但是一百只才是完整的数字，少掉一只，虽然有九十九，还是差一只呢？你去看一看这情形，心里总是感到很难受的。（路15：4－7）</p>
+<p>像我们一双手有十个手指头，少掉一个就不行，因为十个很正常，少掉一个手指就不正常。神在创造里的工作是完全的，缺少一个不要以为不紧要，像我们人这个身体，若是少一个肢体就是残废，就不完美。</p>
+<p>九十九只羊还在，但神仍然要把那失去的一只找回来，才满足我们神的心。（路15：7）我们今天是蒙拣选，蒙怜悯的，不是说&quot;我&quot;喜欢怎么样，或我有什么可以叫神喜悦，不，神如果喜欢，我们今天也喜欢，神如果不喜欢，我们要喜欢就没有意思了。</p>
+<p>像作儿子的人，吃得好穿得好，生活很享受，若父母在家饿肚子，自己吃饱也不会平安。父母在那里过苦生活，你活得很享受，没有意义呀！神高兴我们也高兴，神不高兴，我们高兴有什么用？没有用！所以我们的一切都为着神连于神，不为自己！蒙头就是为着这个见证。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十日</h1><p class="meta">02.在光中得以见光 · 第294/366段</p><p><a class="btn" href="s293.html">上一篇</a><a class="btn" href="s295.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s294.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十日</h2>
+<p>以后的道路怎么呢？不是什么方法，不是怎么作，乃是仰望耶稣。希伯来书说，仰望为我们信心创始成终的耶稣，他创始他亦成终。（来12：2）</p>
+<p>所以基督是第一，他也是末了。如希腊文的字母，第一个字母是阿拉法，末了的字母是俄梅戛，他就是阿拉法，也是末了一个字母。希腊文提到第一个字母和末了一个字母，也包括中间那很多的字母，这些简单的字母，拼起来，可以成为千万个字词，简单的字母结果拼出为许多话来。主耶稣说：&quot;我是始，我是终。&quot;主是起初，又是末后的，祂包括一切。</p>
+<p>就像音乐drmfs...这些音符，可以编成千万首诗歌。基督是起初是末了，基督是一切，你认识基督，好多东西也就组合起来。认识基督，你的道路就简单，工作轻松，事奉轻松，讲道轻松，什么都轻松，不然，就成重担。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

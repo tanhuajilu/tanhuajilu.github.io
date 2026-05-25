@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十八日</h1><p class="meta">01.天窗365 · 第302/366段</p><p><a class="btn" href="s301.html">上一篇</a><a class="btn" href="s303.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s302.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十八日</h2>
+<p>问：操练性格好象与属灵生命无关，彷佛追求生命之外的另外一项。对不对呢？</p>
+<p>答：谈起操练性格，因着有&quot;操练&quot;两个字，很多人就给弄糊涂了，以为与生命无关，这想法是错的。</p>
+<p>我们所说的生命，是指着神的生命、基督复活的生命说的，是经过死而复活的。经过死，又从死亡里复活的，才是刚强大能的生命。我们基督徒里面所得的，就是这一个大能、复活的生命。（提后1:10，约11:25，林后5:4）</p>
+<p>但是，生命的大能和特征能够出来，还需要有一个出口，像自来水借着出口能够涌流出来一样。**没有出口，水流怎么能出来？生命的出来，更需要有合用的性格让它出来。**（雅1:12；提前6:19）**如果性格不对头，只会把里面的东西堵死。**</p>
+<p>性格就是人外面魂这部份的东西。人的魂包括人的意志，情感和思想等。</p>
+<p>有些人的意志是软的，有些人的意志是刚硬的，有些人就比较不稳定。他们的意志常是反反复复的，这些都不是正常的性格。</p>
+<p>在思想方面，有些人是糊里糊涂、散散漫漫的；情感方面，有些人的情感是浪漫的。这些性格都不能让生命出来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

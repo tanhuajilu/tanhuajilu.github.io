@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-一月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十六日</h1><p class="meta">02.在光中得以见光 · 第26/366段</p><p><a class="btn" href="s025.html">上一篇</a><a class="btn" href="s027.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s026.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月二十六日</h2>
+<p>在外表上，按人说，主耶稣并没有美容叫人羡慕他，因为他面貌憔悴。但是，为什么他有这么大的吸引力？是因这&quot;复活&quot;的大能；二千年来，在历史上，整个世界都被这位主所吸引，祂多伟大！我们今天就是有这一个！有这一个就够。我们今天就要有这一个，有这一个，我们才有胆量讲神的话。有主作你的宝贝，你才敢去断定一些事情。</p>
+<p>判断错，就会走错路，判断对就走上对的路。虽然不绝对，也可以相对的慢慢地走路。今天对了，明天还再对，比前看得更凖更对，总是一步一步的，看得更清楚。现在，按亮光愈过愈清楚，可是人却愈过愈糊涂，为什么？因为掺杂自己的思想自己的聪明。神的东西经过人改都改得不象样了，所以要恢复到正路来。</p>
+<p>不是恢复到人所说的那种道路，也不是回到使徒行传的时代。若要回到行传也是没有进步。使徒行传只是个开始，圣灵作工要一直作到主再来（太28：19－20徒1：8）。</p>
+<p>历世历代属灵的遗产是愈累积愈多的，所以，N弟兄说：&quot;没有一个时代比今天这个时代在属灵上更丰富，因为历代神所大用的人在各时代都留下属灵的遗产给我们。&quot;我们已经接受，就像儿子承受父亲的遗产一样。如圣经所说，&quot;你是我的，我是你的&quot;你还求什么？（林前1：2，3，21）</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

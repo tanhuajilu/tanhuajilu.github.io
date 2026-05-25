@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十八日</h1><p class="meta">02.在光中得以见光 · 第139/366段</p><p><a class="btn" href="s138.html">上一篇</a><a class="btn" href="s140.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s139.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十八日</h2>
+<p>有一次，我们从早上，一直交通到晚上十点钟，那么长时间的讲话，真要准备，至少要准备十篇道理，需要很多稿子，但是我一个稿子也没有。就是凭着里面接通了神的恩典。这个里面的路要给你愈过愈清楚的。你里面的路通了，从里面通到外面，从至圣所通到圣所，从圣所通到外院，就开了一条新路出来。</p>
+<p>主耶稣已经完成了这个工作，祂被钉在十字架上时，至圣所和圣所中间的幔子就裂开分为两半，幔子裂开，路就通了。这幔子就是主的身体，主的身体&quot;裂&quot;开，就给我们开了一条又新又活的路，叫我们亲近神。（可15：38，来10：20）今天至圣所就在我们灵里。摸到这个，你只能够说：&quot;荣耀！神的工作荣耀！&quot;</p>
+<p>神的爱还可以理解一点，神的荣耀，我们理解不来。因着所罗门的荣耀，南方女王千里迢迢来看，看到了就神不守舍！她看到这么荣耀！建筑是这么荣耀，这里的管理排列是这么荣耀，所穿戴的衣服是这么荣耀，所罗门所谈论的是这么荣耀，这么有智慧！所罗门把神的荣耀代表出来了──就是荣耀！非常的荣耀。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

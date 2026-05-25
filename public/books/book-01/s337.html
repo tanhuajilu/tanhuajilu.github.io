@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二日</h1><p class="meta">01.天窗365 · 第337/366段</p><p><a class="btn" href="s336.html">上一篇</a><a class="btn" href="s338.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s337.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二日</h2>
+<p>**&quot;基督是我们的&quot;**（林前1:2）**，神的恩典不是分开的，而是整体的。**他是爱、是真理、是道路、是生命.......他都是！**在基督里都能活用，并不是死的一套。**我们得着基督，就像得着了整座百货商场，不是只得着一两件礼物。</p>
+<p>我们相信主，就是把主整个接过来。什么时候需要爱，就有爱，需要温柔就有温柔，需要公义，就有公义，都根据你需要的东西，自然流露出来。</p>
+<p>我们的神是做&quot;批发的&quot;，不是零卖的。你既已从神得着基督，就不要怕没有道理说。**以讲道来说，我们自己的话是何等的虚空，如果，我们的话里充满生命、充满基督，而供应出去，这才活呢！**</p>
+<p>以前，年长的弟兄用药丸作比喻，吃药，单吃空胶襄没用，胶襄内的药粉才有用。同样的，单有白纸黑字的经文不够，只是字眼、字句的道理不够，里面还有生命啊！生命还在里面！主说：&quot;我对你们所说的话，就是灵，就是生命。&quot;（约6:63）有生命在里面的，你接受这个道理，就有生命；没有生命在里面的，你接受道理，就是空的，因为没有内容呀！属灵的东西就是这么实际。</p>
+<p>所以讲道、交通的人，里面有没有生命的内容，非常重要。里面有内容的，这节圣经给他一念，会给你生命，如果没有内容，经文念了，里面没有东西，只是空话。有内容的，这节圣经能感动人，没有里面内容的，圣经读出来也不会感动人。因为有思想，就只能到人的思想为止，如果是从灵里面出来，就会进到别人的灵里去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

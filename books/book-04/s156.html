@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-六月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十日</h1><p class="meta">04.晒熟的美果 · 第156/366段</p><p><a class="btn" href="s155.html">上一篇</a><a class="btn" href="s157.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s156.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十日</h2>
+<p>问：启示是什么意思</p>
+<p>答：启示就是一个&quot;开始&quot;。有了启示，我们也要&quot;继续&quot;在这个启示上。意思是，今后，我们不凭自己，而凭启示。圣灵的带领，圣灵的启示，感动等许多名词，叫法不一样，其实都一个。</p>
+<p>至于&quot;神怎样启示？&quot;讲出来是理论的东西，有经历的人就知道启示是怎样的一回事。</p>
+<p>启示录中，约翰在主日受感，看见了将来的事，天的门向他打开，他能看到天上的事物。启示在我们身上也是这样，启示会越来越多，起初只看一点，后来，就越看越多。至于答复&quot;神怎样启示？&quot;讲出来的，是理论的东西，有经历的人就知道启示是怎样的一回事。</p>
+<p>我们的难处是&quot;停顿&quot;，以为够了。但是，神要我们更多，更清楚看见祂的东西以及其中内容。神实在不是给我们什么东西，乃要将自己给我们。人的意思是要从神得着一点一点的东西，但是，祂却要将自己给我们。祂的自己就包括了一切，祂的自己是丰富的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

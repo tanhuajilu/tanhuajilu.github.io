@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十一日</h1><p class="meta">01.天窗365 · 第163/366段</p><p><a class="btn" href="s162.html">上一篇</a><a class="btn" href="s164.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s163.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十一日</h2>
+<p>在圣经里，使徒、长老、执事是怎么样来的？使徒是圣灵差遣的，长老是圣灵设立的（徒20:28）；今天很多人选举长老，用选举的办法，这一个就离开圣经很远。他们是热乎乎的去做，又有使徒，又设立长老、执事，样样都有。</p>
+<p>在橱窗里的模特儿和真人很像，有穿西装的，有穿裙子的，漂亮得很，整天站在那边动也不动，但这是机械的！今天，教会也这样的变成机械，失去了属灵的实际。</p>
+<p>外表的再漂亮也没有用！因为活的人，要比机械的人宝贝多了。</p>
+<p>所以，我们常问弟兄姐妹说：&quot;你摸到活的呢？还是摸到死的？&quot;**摸到&quot;活&quot;的，什么都活，摸到&quot;死&quot;，什么都死。**</p>
+<p>在一次的交通里，我注意到一位弟兄，我想他恐怕没有得到帮助，因为他坐在那里不说话，人也消沉，像有病的样子。他虽然来了一次又一次，听是听，我想恐怕没法得到什么帮助。</p>
+<p>后来，我们到他家，他只讲了几句话，我听着就知道情形不像我想的，我说：&quot;感谢主！&quot;我以为他不可能得到什么，事实上，他比很多人更&quot;通&quot;。</p>
+<p>他说什么？他说&quot;弟兄阿，里面活了，连看圣经也活；以前不活时，圣经看不懂，现在看圣经，也活了。以前看属灵的书看不懂，今天里面一活，看属灵书也活。&quot;</p>
+<p>你里面活了，读经就不一样，读属灵的书也跟以前不一样，跟弟兄交通也跟以前不一样。**以前接触这些，你觉得这个好，那个也好，直等摸到生命，里面的价值观就不一样**，会觉得这个不行、太幼稚。你会有这些感觉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

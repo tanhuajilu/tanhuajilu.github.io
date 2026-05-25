@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十一日</h1><p class="meta">01.天窗365 · 第265/366段</p><p><a class="btn" href="s264.html">上一篇</a><a class="btn" href="s266.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s265.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十一日</h2>
+<p>《人的破碎与灵的出来》这本书，你要多看。</p>
+<p>**一些关于怎么帮助人的要点，要去学习，凡摆在我们面前的都要给我们经历。**像医生替人治病，起初看病还不知会否出错，多做几年就很老练，心中有数。初出来看病，一个病看很久，到他老练，行医几年，一看就知道是什么病。</p>
+<p>有些医生一天要看几十个病人，如果只靠仪器进行检查诊断，一点钟也看不到一个人。老练的，看一看情形，他心中有数。凭着病态的显明，病的&quot;味道&quot;的显明，他什么种类的病都去医，经验就帮助他作出诊断和医方。一个一个的病，是怎样的病态，每一种病&quot;味道&quot;怎样，作久了，都能感觉出来。</p>
+<p>我们事奉主，所遇到的是怎样的信徒，是怎样的不信的人，一接触就知道，晓得他是什么类型的人。有些是外向的，有些是内向的，有思想发达的，有感情型的，有个性刚硬的，有古里古怪的，各种人都有。</p>
+<p>古里古怪的人，他就讲古里古怪的问题，什么古怪的都给你拿来问。如&quot;亚当的儿子娶什么人作老婆？&quot;他有些古怪的思想就问古怪的问题，要跟他讲，讲不清楚。</p>
+<p>我说：&quot;你信圣经是神的话，圣经没有记载很多，你相信所记载的就不会错。你不必研究为什么没有记亚当儿子找谁作妻子。你问这些，都和我们没有直接关系。&quot;他说：&quot;这一个我不明白，就信不下去。&quot;我说：&quot;你信不下，就信不下，有一天，就信得下。&quot;因为圣经这么大本（内容很多），我们就是到现在还没法了解完。&quot;</p>
+<p>狂傲的人才会说：圣经六十六卷已经给他开启了，启示录的启示也给他开启了。&quot;没有一个人能懂，就是他能懂。&quot;这是狂傲的话，他是在讲他所不知道的话。我们说：就是有一千个熟读圣经的人也没有办法把圣经讲透啊！如果能讲透，神就不伟大，因你已跟祂差不多了！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

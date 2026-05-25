@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十日</h1><p class="meta">03.无比的爱 · 第355/366段</p><p><a class="btn" href="s354.html">上一篇</a><a class="btn" href="s356.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s355.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十日</h2>
+<p>人的观念是想：我要怎么去爱...都要去作，总以为爱心是作出来的，忍耐是作出来的，我们就一再求主的帮助，叫自己有爱心，有忍耐...一直在求！但我们所得神的生命，都包括了这一切，而且是活的。所以，我们才说，爱不是行为，爱是一位有位格之神的生命。神就是爱，只要是神的，神就是爱。</p>
+<p>我们却不能说爱就是神。我们人的爱怎么能跟神连得起来。</p>
+<p>人有人的爱，神是神，神就是爱，凡是碰到神，就碰到爱；但是，你碰到爱，有时碰到的是生命，有时碰到的却是死亡，因为那叫人死亡的是从肉体出来的爱。所以爱有它的来源------是神的爱，还是人的爱？是生命的爱还是天然的爱？因我们的天然也有爱，但神的爱超过天然的爱。</p>
+<p>属灵的东西都是在基督里面（弗1:3），没有一个属灵的东西是单独一个的。你的爱该是在基督里，凭自己有的那单独的爱，跟那在基督里的差很远，距离很远啊！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

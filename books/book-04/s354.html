@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十九日</h1><p class="meta">04.晒熟的美果 · 第354/366段</p><p><a class="btn" href="s353.html">上一篇</a><a class="btn" href="s355.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s354.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十九日</h2>
+<p>回想我信主之时，我怎样会信，也感到奇妙，总是又多了一个人得救，这是神作的。信主之时，我们听说他也是信主的，就有感觉。</p>
+<p>往下去，多知道一些弟兄的事，这样一搞，反而没有亲切感。这是因受人的宗派思想，看法影响给搞乱了。但是，只等生命一长，就会跟上去。因着我们有一个要神的心，神就给我们得到。</p>
+<p>二八年，我们在乡下，就开始跟随主。我才十三，四岁，信主以后就有一个&quot;要主&quot;的心。我们在乡下都是耕田的，从小就参加劳动，工作很忙，特别在一些农忙的季节。那时，我们想去灵修找出时间，也没有条件，就是说，要安静追求也没有条件。但是能走上去，就是因为我们对神有这一个&quot;要&quot;的心。那个时候，我们就是&quot;要&quot;，要神啊！心是那么要，也没有路，那没有路，还是要。</p>
+<p>那时，我们年青，得鼓励作工的很少，因为年长的不赞成。他们以为我们年纪太少，书也读得不多。我们在事奉主这方面是没有条件的，谈不上作主的工。</p>
+<p>只因着这一个&quot;要&quot;，我们三兄弟，还加上一些年青弟兄，就一起常有祷告。有什么事就祷告，道理是一句也不会讲，就是靠祷告。有时候，我们也看一些属灵的书籍，在无依靠时只靠祷告。慢慢的，人数就增加，弟兄姊妹们也同心合意。</p>
+<p>当时在乡下聚会的人是比城里的多，我们实在无人可靠，只能靠神。能走上去，就是因为我们对神有这一个&quot;要&quot;的心。所以年青人呀，必须要有一颗爱主的心，不要灰心，迟早神要向你显现向你显明。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

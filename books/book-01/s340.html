@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月五日</h1><p class="meta">01.天窗365 · 第340/366段</p><p><a class="btn" href="s339.html">上一篇</a><a class="btn" href="s341.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s340.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月五日</h2>
+<p>有一对夫妻常常有矛盾，矛盾什么？妻子才刚信主，信主以后，她哥哥对她说：&quot;我们要专心倚靠主。你不要挂虑没有工作，或顾虑穿什么、吃什么，就是没有这些，你还要有信心。&quot;</p>
+<p>她听哥哥这样说，就信；但是一方面信，一方面事情却作到失败，失败再失败。她说：&quot;我真不知道该怎样走。我要信，但面对新的工作，碰这个失败，碰那个失败，信也信不来了！&quot;丈夫就说：&quot;这样子，我觉得走不通。要按计划做。你说要信，不作，天要掉饭给你吃吗？&quot;</p>
+<p>哥哥对她丈夫说：&quot;信，就是不作什么。我一直享受。你要学我呀！不要作什么、不要挂虑，要像我这样。&quot;她丈夫说：&quot;我跟你不一样，你年纪大，经济没困难，但我没有作工，要我学你不作工，我要饿死！&quot;哥哥说：&quot;神是活的，你要有我这样的信心呀！&quot;她哥哥说这话就很高调！行不通，接下去能怎么作？</p>
+<p>二夫妇就为着这个矛盾对我说：&quot;老弟兄，我们两个人到底那一个对，那一个错？&quot;</p>
+<p>我就说，**信靠神、凭信心是对的，但这信心不是盲目的。**</p>
+<p>信心告诉我们：&quot;应当一无挂虑。（腓4:6）&quot;主耶稣告诉我们不要为吃、为穿忧虑，因为我们所需要的，我们的父是知道的。还没有求之先，神已经知道，这一个要相信；先求他的国和他的义，这一切都要赐给我们。</p>
+<p>但这一个，并不是说，你不要作事（多3:8、14）。</p>
+<p>你不作事，圣经说：不作工就不要吃（帖后3:10）。不作工是懒惰，按慕迪先生说的：懒惰的人，连魔鬼也不要。因为牠要殷勤的人为他服务，懒惰的人，魔鬼也没有办法。</p>
+<p>神要我们殷勤不可懒惰（罗12:11）。所以，**你不作工，要等候神赐给你，这个不现实，这是超现实。**我对上述的一对夫妇说：&quot;两个人，对也是对，错也是错。有对的一面，还有另外的一面。&quot;</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月七日</h1><p class="meta">02.在光中得以见光 · 第128/366段</p><p><a class="btn" href="s127.html">上一篇</a><a class="btn" href="s129.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s128.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月七日</h2>
+<p>刚才提到年长弟兄的问题，面对年长弟兄，要知道，第一，他们年纪比我们大，我们要站在自己的地位上去应对他们。以讲话这方面说，我们也要站地位。一个家庭，父亲和儿子说话，彼此的地位就不一样。地位不同，讲话语气就不一样。</p>
+<p>父亲告诉孩子怎样怎样，还教训他们不能够怎样怎样，换过来，作儿女的教训父亲就不行了，这些话不是作儿女该说的。这些只能是父亲对儿子说的话。这就是神安排的次序。对年长的，你不能说：&quot;你要怎样、怎样&quot;。你站在什么地位来说这个话？我们若站自己的地位，讲话也会更接近自己的地位。</p>
+<p>以前我们作年青人，面对几个年长的弟兄，，他们比我们多出十多岁，好多属灵的事，我们都没有交通，怎么样讲？不敢讲。我们只和那些比较年纪小的一同去做，去交通。因为对年长的，我们讲话总是自然表现我们是下一辈。虽然如此，只要有学习，就有效果。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

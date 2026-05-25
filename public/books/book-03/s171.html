@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-六月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十九日</h1><p class="meta">03.无比的爱 · 第171/366段</p><p><a class="btn" href="s170.html">上一篇</a><a class="btn" href="s172.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s171.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十九日</h2>
+<p>（问：我在情感上很敏感，原因是什么？）</p>
+<p>从人的情感来说，情感类型也不一样，人的爱（情感），经过时间久一点，就把各人的情形显出来。大家相处的时间多一点，情感的情形显露，就有矛盾；所以情感也要对付，不然会吃感情&quot;丰富&quot;的亏。特别是姐妹们，一碰到感情受伤，就很难受。活在感情里的人，常感到痛苦。(活在思想里的人，想到别人各种情况，也容易难过。)</p>
+<p>（问：怎样和他------有神经衰弱的姐妹------相处？）</p>
+<p>这个要学习。我们凭着情感去爱一个人，自己要学功课。所以要爱一个人也不能凭着自己去爱，若是凭主去爱，他辜负你，你也不会受伤，不会灰心，以为他无情无义的。</p>
+<p>作主工的也要凭着主去作。如果还是凭着自己去作，有一天，要吃自己的果子了。因为凭自己作的就从肉体收败坏，就碰到不安，碰到死亡，凭着主作，就有生命和平安。（罗8:5-6）</p>
+<p>你经过这些，学会不凭自己；碰见失败了，就觉得很好，因为藉着失败，你就摸到得胜。做机械工作的，没有做错过，就学不好，错了，就学到，再错又再学。主藉着这些事（失败的事）要叫你这个人转得对，人不对，事情做好了，还是碰巧的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

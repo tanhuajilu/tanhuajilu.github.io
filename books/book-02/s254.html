@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十日</h1><p class="meta">02.在光中得以见光 · 第254/366段</p><p><a class="btn" href="s253.html">上一篇</a><a class="btn" href="s255.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s254.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十日</h2>
+<p>以色列人一年三次聚集耶路撒冷过节。耶路撒冷就建在锡安山上，神就是借着锡安山来祝福耶路撒冷。这在新约说明什么？就是说，神借着得胜者来祝福教会。以色列人失败了，神兴起利未人作得胜者在会幕里事奉神。新约，神要得着教会，当大部分人失败，神呼召得胜者站在教会的地位上，完成神的旨意。所以今天属灵的工作乃是从每一个个人开始。</p>
+<p>属灵的事情是千真万确的。以前我们很多人受基督教神学思想影响，都从外面想神的事，想属灵的事。实在说来，旧约会幕圣殿里的东西，都是指着主耶稣基督说的，你刚才提到的节期，也是讲到主耶稣基督。</p>
+<p>一九三五年我们听N弟兄交通，提到什么是教会，也提到圣灵充满。人的成长有幼稚的阶段，有长进的阶段，还有成熟的阶段。若用成熟的眼光看幼稚的情形，就会觉得好笑。这幼稚阶段是必须的过程。如果作爸妈的用绝对的眼光看孩子幼稚的情形，就不对了。</p>
+<p>一九三五年我们领受了对生命的启示和亮光，这是第一次，到一九四九年，我们又听了一次，两次的内容，我们听了，就觉得以后那一次讲的，要比第一次讲的更成熟，内容更丰富。经过1935年那一次，就带进全国的一个复兴，但不能永远停留在圣灵浇灌这层次上，以后在生命的经历上，对圣灵认识上就更成熟了，带给同工们有更成熟的启示和经历。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

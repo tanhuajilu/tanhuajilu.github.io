@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-八月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十三日</h1><p class="meta">02.在光中得以见光 · 第226/366段</p><p><a class="btn" href="s225.html">上一篇</a><a class="btn" href="s227.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s226.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十三日</h2>
+<p>讲到罪没有感觉，罪就只是个名词。你讲到罪，要有一个痛恨罪的感觉，要有这个感觉穿透到他心灵里面去。主耶稣说，从圣灵生的就是灵。从肉体生的，就是肉体。信主从圣灵生，是实实在在的，不然，一个人受浸，你怎么给他受浸？靠答问，靠不住。</p>
+<p>菲律宾的一个聚会明文规定一年要给几百个人受浸。不管怎样，信徒要凑到这个数字，那么大家就叫人来信耶稣，接受后有受浸报名。为通过受浸谈话，信徒就教那些报名的，&quot;怎么问，就答这些&quot;，到了时候，对答如流，给他受浸。其实，他还没有生命，都凭嘴巴讲的。如果有属灵的感觉，他讲几句，有没有得救，马上摸着。有生命的就有生命，没有的就没有，有生命的，他里面能反应出来，没有生命的，就没有反应。这些好像很抽象，却很实际，有的就有，没有的就没有。</p>
+<p>以前有一个青年人想：&quot;那受浸的究竟有没有得救，你说可以知道。我要考考你们。&quot;他那时还没有得救，他问一位负责的弟兄，他可以受浸吗？他的道理很会讲，讲完了，他问：&quot;我可以受浸吗？&quot;弟兄对他说：&quot;以后再说。&quot;他就不敢受浸。他回去以后，心里很佩服。他说：&quot;我是假的呀！要考考他。&quot;&quot;真的，我实在没有得救。&quot;他也不会怪说：&quot;你为什么不给我受浸。&quot;那负责的弟兄也没有顾面子，说：&quot;过一段时间再谈&quot;。过了一段时间，这青年真的得救了，他说，这一次，我不是要考他，我真的得救了。他没说几句话，弟兄说好，可以受浸。这位青年人对我说：&quot;属灵的东西是实在的。我自己是假过来的。&quot;</p>
+<p>如果传道人、牧师、负责人糊涂，以为受浸愈多愈好，可以多一个收入（因为礼拜堂，教友都要收年费，收会员费的），他就是要人多了。但这不是人多少的问题，要问他里面有没有东西（生命），有，才给人受浸。</p>
+<p>所以要摸到属灵的实际，真的，神是轻慢不得的。人种的是什么，收的也是什么。作糊涂事的，果子就是糊涂的，所作的工作是清楚，果子也就清楚。所以一个教会好不好，不必看信徒，去看那些带领的人就知道。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

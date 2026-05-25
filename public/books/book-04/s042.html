@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-二月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十六日</h1><p class="meta">04.晒熟的美果 · 第42/366段</p><p><a class="btn" href="s041.html">上一篇</a><a class="btn" href="s043.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s042.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十六日</h2>
+<p>夫妇二人原是一体，彼此又能和谐相爱，这样的家庭才是美好的家庭。夫妇如果不和睦，常常吵架，虽然在神看，夫妇实际是一体，但是他们的生活------家庭生活------却没有享受，只有痛苦，没有幸福。夫妇是和睦的，就有祝福。</p>
+<p>我们跟神之间的关系也一样。</p>
+<p>如果我们跟神和睦，因着个性曾经经过对付，就有享受，就有喜乐。如果没有和谐，我们里面就有所缺。</p>
+<p>弟兄妹妹之间也是这样，彼此有对付，个性经过对付，大家同心合意在一起，就觉得甘甜。如果没有经过对付，你对我有意见，我也对你有意见，彼此不和谐，就不会喜欢见面，就是见面也是交通不来的！</p>
+<p>神在十字架的工作，就是作和睦的工作，把我们带到和谐里。这都不是人作的，是神所作的。</p>
+<p>彼此和谐，这一个需要时间。大家所认识的道理虽然不同，却不要怕，只要肯受对付！今天，有这些特点和看法，但是到了一天，你碰到神了，你就可以放下来，因为基督是一切律法总结。还有，基督是一切律法的总纲。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

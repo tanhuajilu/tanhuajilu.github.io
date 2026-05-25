@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十八日</h1><p class="meta">02.在光中得以见光 · 第302/366段</p><p><a class="btn" href="s301.html">上一篇</a><a class="btn" href="s303.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s302.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十八日</h2>
+<p>教会就是建立在基督这盘石上的，建立在上面的也是活石。换一句话说，得着基督的生命，就自然而然建立在这个盘石上面。用木头建造的不相称，木头很轻，被大水一冲就冲去了。基督是教会是盘石，建造在上面的也是活石，活的石头一个一个被建造起来。我们都是有生命之人，也是一块活石。当我们在一起时，就成为在主面前的一个灵宫（彼前2：5），彼此可以有聚会有交通。</p>
+<p>所罗门建圣殿之时，所有建造的石头都是一块一块在山上打好，已经按规格做好，多长多阔，房角石或什么石都有规格，都按照规格在山上给打好了。抬回来再不必用锤用锥再打，规格好了就已经定了，整整齐齐的。所以讲到教会，就离不开十字架。</p>
+<p>石头已抬来，再不是三尖六角的，&quot;十字架&quot;已经把石头规格好，抬来的就再一块一块合起来。其中最重要的是基石，就摆在最下面，看也看不见，没法出风头说，我要给你看见。愈大的愈作根基的，愈是隐藏，埋在土底下。</p>
+<p>在根基上面的石头也按照规格迭起来。迭的时候，是一层一层去迭，上一层与下一层的石块要交叉相迭。你去看造房子的，下一层的每一块石块留下一些部分，按序般给上一层石头去迭。上下直线去接，很容易倒下，因没有交叉。若有交叉，彼此交叉相迭才牢固。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

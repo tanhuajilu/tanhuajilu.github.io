@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十二日</h1><p class="meta">03.无比的爱 · 第296/366段</p><p><a class="btn" href="s295.html">上一篇</a><a class="btn" href="s297.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s296.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十二日</h2>
+<p>按正常说，一个人要有亲情，没有，就比不信的更不好。家人好或不好，还是自己的，要去照顾。是亲人，有钱的，就要照顾家贫的。有人做不到，但有需要，还要帮助。他坏，还是自己的儿子，总不能不要儿子。神也是这样，你好，祂爱你，就是不好，祂还爱你。神不偏待人，好的坏的，祂都爱。当然，以我们是好，是坏这一面来看，神对待我们会不相同。</p>
+<p>我们人有真理认识不相同的问题，有程度不同的问题，也有看法不相同的问题，但是你去爱，他看见你爱，他也爱，大家就同在一路了。</p>
+<p>爱是没法讲清楚的，神是大的，祂的爱也是大的。现在常存的有三，有信、有望、有爱，其中最大的是爱（林前13:13），神的爱太难以测量，我们是不懂爱的，更难以述说祂的爱。对神的爱，我们要反应，反应不来！</p>
+<p>因着我们不懂爱，对弟兄姐妹的爱，有时我们也反应不来。有人说他有爱，很可能，那只是一点点的爱；也有人好像没有爱，但你不知道在他里面有多大的爱！有真爱能拿一张纸写得下来吗？写得下来的，恐怕还不是呢！真爱必有牺牲，写不下来。爱是奥秘的，爱不是那些能见到的行为。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

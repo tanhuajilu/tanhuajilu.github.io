@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-一月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十九日</h1><p class="meta">02.在光中得以见光 · 第19/366段</p><p><a class="btn" href="s018.html">上一篇</a><a class="btn" href="s020.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s019.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十九日</h2>
+<p>我们知道有些聚会，参加的人有背叛的态度，充满的是人的意思，甚至在交通聚会中大家争辩，辩到脸红起来、拍桌子！神哪能有办法在这里？</p>
+<p>所以属灵的东西，在我们每一个人身上自己先解决，再摆在一起，困难才会减少。如果盼望好，盼望以后会再好，盼望不到！去埋怨怪聚会不好也没有用。</p>
+<p>不好是外面的事，你自己怎样？自己在神面前先要蒙恩！外面即使黑暗，但你里面有光（弗5：8，腓2：15），&quot;四围不忠，你却赤忠。&quot;这就是主的路。主耶稣说：&quot;我就是世界的光。&quot;（约1：4，8：12）四围不忠，我们还是忠心跟从主，这才对。你说这个世界黑暗堕落，你还跟上神；在整个背叛的情形里，你仍顺服，这就叫作中流砥柱，虽然这样的人是少数，但&quot;少数&quot;就是宝贝。</p>
+<p>今天我们不要去想作大工，要给主大用，开布道大会，在全世界出名，这是虚的是假的。很多出名的布道家，最后在属灵上跌倒得最厉害！在国外的人更清楚这些情形。好些出名的电视布道家，结果，到一个地步，他们好多坏东西都显露出来。这是什么原因？是因他单靠恩赐作工，在生命上却没有长进。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

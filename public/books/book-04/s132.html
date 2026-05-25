@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-五月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十七日</h1><p class="meta">04.晒熟的美果 · 第132/366段</p><p><a class="btn" href="s131.html">上一篇</a><a class="btn" href="s133.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s132.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十七日</h2>
+<p>要勉强知道一个东西，对我们的经历反而有拦阻，因为我们知道了什么，无形中就以为我们有了什么，而别人没有，这个态度就是不对。那些讲方言的就是这样想，&quot;我能讲方言，你们不能&quot;，他们的态度摆在这里已经&quot;搁浅&quot;了。</p>
+<p>好多时候，我们是不知道自己是怎样的，如果你知道，你就会讲，会想，以为&quot;我会帮助人，我能供应人，我能做一大堆的...&quot;这个意念一来，嘴巴一讲，你属灵的功用就停止了。这个就像巴比伦王尼布甲尼撒的情形。他说：这么大的巴比伦城，岂不是我建造的吗？话还没有讲完，天上就有声音说：&quot;你的日子到此为止，因为你自夸，夸耀你的本事，但你要吃草如牛七年！&quot;话说完了，他就离开人间了，这就是神对骄傲的人的刑罚。所以圣经才说，神赐恩给谦卑的人，神抵挡骄傲的人。</p>
+<p>没有一个骄傲的人是蒙神祝福的。圣经说：骄傲在败坏之先。败坏以先，就是骄傲，人先有骄傲，就注定有以后的失败，因为这是撒但的原则。撒但是自持漂亮，有智慧，就骄傲，高抬自己，要跟神同等，要超过神。这个就是骄傲。所以，我们要在神面前蒙怜悯，靠着神，无依无靠的仰望神，一切都是出于神的怜悯和祝福。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

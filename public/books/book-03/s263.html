@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-九月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十九日</h1><p class="meta">03.无比的爱 · 第263/366段</p><p><a class="btn" href="s262.html">上一篇</a><a class="btn" href="s264.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s263.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十九日</h2>
+<p>过去，我们讲道，外邦人就常说：&quot;你们哪有那么多话来讲？&quot;真的，基督的丰富，你没有办法用嘴唇讲完。有首诗歌说：&quot;即使千万舌头，也不能把主爱尽唱！&quot;有一位弟兄也说：&quot;巴不得我全身是口，这里是口，那里也是口，都赞美感谢神。&quot;一个口的赞美不够！因为有主在我们里面，彼此就都回应，实在是&quot;讲也讲不完&quot;。在我们里面有一个东西，就是&quot;爱&quot;，它把我们捆绑住！</p>
+<p>一个被爱捆绑的人，别人无法拿刀给他剖开。你看那些正谈恋爱的男女，爱到入迷，用刀给他砍，也砍不开，因为不能分开，已成为一个了。我们跟主，也已经连在一起了。我们跟主的联合比人的联合更深刻，根本不能分离。是爱把我们捆绑，谁也无法使我们与基督的爱隔绝。所以保罗说：&quot;谁能使我们与基督的爱隔绝呢？难道是患难吗？是刀剑吗？是赤身露体吗？是羞辱吗？无论是什么，都不能叫我们与基督的爱隔绝。因为这爱是神的爱，是在我们主耶稣基督里的。&quot;（[罗8:39](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=44&amp;chapter=7&amp;verse=38&amp;highlight=1#P38)）神既把我们跟基督连在一起，你就跟基督连在一起了。因这一个，无论你到什么地方，都能跟主有交通。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

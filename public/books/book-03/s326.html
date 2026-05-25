@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十一日</h1><p class="meta">03.无比的爱 · 第326/366段</p><p><a class="btn" href="s325.html">上一篇</a><a class="btn" href="s327.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s326.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十一日</h2>
+<p>许多人以为我们讲这些，都与别人相反的，但我们知道，所讲的都是圣经的基本道理。你以为太高，其实只是道理的开端，还有更高、更荣耀的。</p>
+<p>你是否以为自己越靠近神，越爱神吗？还不够呢！主还要问，你爱我更深吗？当时主耶稣就对彼得问了三次&quot;你爱我比这些更深吗？&quot;、&quot;你爱我吗？&quot;、&quot;你爱我吗？&quot;。究竟我们对主的爱多长多深，有多少的认识，又有多少的回应呢？主在问：&quot;你爱我吗？&quot;（[约21:17](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=42&amp;chapter=20&amp;verse=16&amp;highlight=1#P16)）</p>
+<p>&quot;爱&quot;这东西，好像有，又好像没有，但爱却又是最实际的，最实际的就是爱，爱就是神的自己。有神就有丰富而永远的爱，祂用这爱来爱我们。我们也用这爱去爱别人，这就是出于人与出于神不同的地方。爱是永远完全，爱永不止息，信望爱三者，其中最大的是爱。（[林前13:13](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=45&amp;chapter=12&amp;verse=12&amp;highlight=1#P12)）</p>
+<p>神的爱才吸引人。这爱一吸引我们。就有力量。这是上升的路，因为神在高天之上，你天天记念祂，归向祂，你的心就在天上。你归向神，就解决了许多属灵的问题。</p>
+<p>你和一个人同行，你不爱他却和他同行，就有羞耻感。</p>
+<p>一个人什么事都做对了，但若人本身有问题，属灵的东西在他身上就不能彰显。</p>
+<p>我们一看到主，就满足了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

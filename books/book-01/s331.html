@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十一月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十六日</h1><p class="meta">01.天窗365 · 第331/366段</p><p><a class="btn" href="s330.html">上一篇</a><a class="btn" href="s332.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s331.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十六日</h2>
+<p>问：神的爱（罗5:5）和人的爱，这两种爱是不同性质的吗？</p>
+<p>答：对，是不同的。一个是受造的爱，一个是非受造的爱。我们信主所得、在我们里面的爱，乃是非受造的爱，出于非受造的生命；这个超过道德，超过所有世上的东西。孔子最讲道德了，在道德上讲得比我们讲的还更好，但是没有神，没有神就够不上去。</p>
+<p>今天，我们会失败，会软弱，但是我们有神，够得上神，这是神生命的层次，神的生命超越过一切。</p>
+<p>人的生命是受造的，是有限的，但我们人有位格；动物的生命更低了。人的尊贵就在于有位格。我们是人，有灵，我们的灵就是要和神有交通（约4:23）。动物没有位格，动物没有灵，所以动物没有宗教，人才有宗教。</p>
+<p>因人有灵，所以有敬拜神的事，这个敬拜神和人有宗教信仰有关。</p>
+<p>有些人有偶像的崇拜，偶像就是他崇拜的对象。</p>
+<p>基督徒怎么样事奉神呢？基督徒事奉神，不是凭着人的天然去事奉神，用天然的生命去事奉神不行；像我们有人格，叫一只狗来称赞我们，来拜我们，我们不要。有位格的人给狗来拜，我们人岂不就跟它一样吗？人尊重、称赞我们还差不多，因为我们都是有位格的，你尊敬我，我尊敬你，这个有意义。叫狗称赞我们，就没有意义了。我们受狗来的称赞，就把我们人格贬值，贬得不值钱了</p>
+<p>而神的生命是高贵的，我们的生命却是犯罪堕落的，我们要拜神，神也不要我们拜，像我们不会被狗来拜一样。</p>
+<p>什么种的人才会拜神？是得着死而复活生命的人。神是灵，敬拜神必须用心灵诚实拜牠，这才对称。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-三月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十二日</h1><p class="meta">03.无比的爱 · 第82/366段</p><p><a class="btn" href="s081.html">上一篇</a><a class="btn" href="s083.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s082.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十二日</h2>
+<p>神就是喜欢我们的心和祂连起来。你和你的爱人定规了的爱情，不能改变！如果改变，就有问题。爱主这件事不只是思想感情的事，更是意志的事（我们要爱主到这个地步）。</p>
+<p>让我们常向神说：&quot;阿爸父阿！我爱你。&quot;没有血缘关系而喊阿爸父，是没有意思的；就是给你钱去叫阿爸父，也真叫你难受。但是，向着我们的父神，虽然没有人给钱，我们叫祂阿爸却是何等甘甜、踏实（加4:6-7）。一谈到有一位父神在天上，我们的心感到多荣耀！（太6:9）</p>
+<p>有一个人以补皮鞋为生，非常喜乐，常因自己是属主的，是天上神的儿子而欢乐。他常常口中唱着赞美歌，因为认识主耶稣，祂是万王之王、万主之主。他经历主的实际，所以人生观就不一样。我们也一样，只要自己对主有认识，就会有同样的心情。有些作传道的人，本身还未得救，他们去领教会，不是把教会搞翻吗？</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

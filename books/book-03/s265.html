@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-九月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十一日</h1><p class="meta">03.无比的爱 · 第265/366段</p><p><a class="btn" href="s264.html">上一篇</a><a class="btn" href="s266.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s265.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十一日</h2>
+<p>以前我们听到&quot;生命吞灭死亡&quot;这些话，听了也不会懂，一直等到经历的时候就懂得了。&quot;生命吞灭死亡&quot;没有碰到时，以为都是人讲出来的，觉得很抽象，&quot;生命不生命&quot;你怎么会知道？S弟兄来交通时就提出过这问题。我回答说：&quot;弟兄，你受了伤，因着有些事情，你的灵受了伤，你这个伤要恢复。受了伤的，需要医治。&quot;圣经就说：&quot;神创伤你，神也医治你。&quot;怎么知道他的灵受了创伤？因他的灵出来时带着创伤的情形。像一个人，脚扭伤了，走起路来就是一拐一拐的，这就显明他的脚扭伤了。人的身体有什么毛病，就会有什么毛病的现象。</p>
+<p>在属灵人里面，有一点很重要，就是要保持我们的灵在正常的情形里。人的灵正常，就是他有谦卑的灵（[赛57:15](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=22&amp;chapter=56&amp;verse=14&amp;highlight=1#P14)），有温柔的灵。相反的，不正常的时候，就有狂傲的灵，有嫉妒的灵，有忿恨的灵。正常的灵，会有爱，有温柔；有谦卑，有公义。不正常的时候，这灵有嫉妒，有骄傲。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

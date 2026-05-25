@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-八月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十一日</h1><p class="meta">04.晒熟的美果 · 第218/366段</p><p><a class="btn" href="s217.html">上一篇</a><a class="btn" href="s219.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s218.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十一日</h2>
+<p>讲到那位弟兄，他说：&quot;我该全时间还是该带职业？&quot;以后他说：&quot;请你帮助我，帮助我属灵长进。&quot;我说：&quot;讲到帮助，要从多方面来看，要有好多学习。我今天给你谈一个就好。&quot;我说：&quot;年青人要事奉主，头一个就是要对付轻浮。&quot;他神学毕业，可以上讲台讲道理，很有自豪感，讲话表现了他的轻浮，行动也表现他的轻浮。单单他轻浮的态度，就要去学习，学不了的。因为一个年青人的轻浮，讲话没有人信任，别人不会听的。</p>
+<p>他轻轻浮浮，摇摇摆摆讲话不稳重，这一个要对付。他问怎么对付，我说：&quot;不是怎么对付，要经过神的对付，要经过神给十字架的对付。不过你要注意说我们是浮浅的，求主作工，让主作工来对付我们的浮浅。&quot;</p>
+<p>为什么浮浅要对付，因为浮浅就像个浅盘盛水满满的，走到楼下水已经荡完了，因为太浅，水都溅掉没有了。如果是深的一个桶，你提到楼上去，水还在，因为有深度。这个浅，不对付不行。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

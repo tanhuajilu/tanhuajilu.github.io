@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-六月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十四日</h1><p class="meta">03.无比的爱 · 第166/366段</p><p><a class="btn" href="s165.html">上一篇</a><a class="btn" href="s167.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s166.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十四日</h2>
+<p>基督徒的生活，不是教条的，乃是&quot;你里面去感觉怎样。&quot;属灵道路是很自然的。每一段路程，都为叫我们更认识主，叫我们越来越成熟，越走越进步。</p>
+<p>虽然我们常劝人：&quot;弟兄姐妹要彼此相爱。&quot;但是，一到现实情形里，人的本性就显露出来。因着人有这东西，所以才需要十字架去对付。十字架就是要打破、粉碎人的自私。人总是爱自己的。</p>
+<p>盖恩夫人被对付到，她没有自己的思想、爱好。神在她身上就是作这个工作。在我们身上，神也作这个工作。十字架在各人身上都不一样，效果也不一样。有些人，神作了工有效果，有些人就没有。有些人神打不破，越打他越硬。</p>
+<p>在保罗身上，神在大马色的路上一下子就把他改变过来。但这才是个开始，以后还有...后来他被提到三层天，看见了启示。因这启示甚大，恐怕他自高自大，就有一根刺加在他肉体上，叫他不能骄傲。有一刺根，才叫他没法夸口。这根刺一直留下，主没有因他的祷告而除掉，只对他说：&quot;我的恩典够你用的。&quot;（林后12:9）有这一句话，就比没有刺在他身上更荣耀了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

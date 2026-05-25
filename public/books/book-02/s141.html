@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十日</h1><p class="meta">02.在光中得以见光 · 第141/366段</p><p><a class="btn" href="s140.html">上一篇</a><a class="btn" href="s142.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s141.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十日</h2>
+<p>圣灵的降临是为要我们相信主耶稣基督，今天，我们重生成为新造就是要荣耀主耶稣。</p>
+<p>诗篇说，神的膏油浇在亚伦的头上，流到胡须，又流到他的衣襟（诗133：2）。神的膏已膏抹、设立了主耶稣，他是教会的元首，这膏又流下来，流通到他的身体。所以我们要得着圣灵的充满，只要回到身体里，切不要离开身体，身体以外，没有膏油。活在教会（身体）里，就有膏油。</p>
+<p>好多人自称是自由布道家，他是单独的，单单他自己一个，哪有身体？但是，教会（这个身体）不是组织的，教会不只是外面有配搭而已，身体是生机的是生命的东西，就像这双手，不是人把它插进去的，乃是生出来的。身体就是从里面长出来的。小孩子虽然个子小，等他长大了，个子就很大了。</p>
+<p>如果一个肢体脱离身体，单独被摆在桌子上，人家就怕，因为肢体不是一个死的东西，乃是长在身体里面的生机体。要认识教会，就要认识身体，认识身体是在灵里、在生命里认识的。今天许多人所说的教会，都是人的组织，原因就是里面缺少这个生机的内容。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

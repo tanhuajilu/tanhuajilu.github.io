@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十一月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月九日</h1><p class="meta">02.在光中得以见光 · 第314/366段</p><p><a class="btn" href="s313.html">上一篇</a><a class="btn" href="s315.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s314.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月九日</h2>
+<p>神是不改变的，却还需要一些人有个不改变的性格，来跟神站在一起。那对你们现在外面教会的情形，虽然我们没有办法理到，但是我们对好多属灵的情形都有感觉。真理的东西需要更多的认识。对好多错的东西，人说：&quot;不要了。&quot;不要是不要，好多它的味道，却还在他里面发生作用，还在影响他。</p>
+<p>属灵的东西是纯正的，就像蜂蜜是纯正的。养蜂的人若用装过洋油的铁桶来装，即使给它洗给它消毒，用开水烫也没法除味，蜂蜜装进去，取出来还是有洋油的味道。这么厉害！是呀！我们这个人若装了过去许多错误的东西没有消毒干净，东西还带那个味道出来。</p>
+<p>先前T弟兄记的交通记录，加了些题目，加了些摘要，一段一段的记起来，寄到加拿大去。那边弟兄看过，又给一些弟兄姊妹看。他们说，好是好，但是，记录中，X弟兄的味道还很重。是这样奇妙的。因T弟兄跟X那里好长时间。X的用词、字句，都在他里面很深，所以记录也把这些掺进去。这并不是他存心不好，他就是自然这样。X用的一些字眼，好像不是我常用的字呢，记录中有这些字，人就能感觉，哎，这就是X的味道。</p>
+<p>怎么会这样？这就是记录的人把他的字眼记下去。根本的东西是差不多，就是那个字眼问题。后来我们就跟T弟兄交通，以后的记录就是讲什么记什么就好。最后记录下来的，就没有那些字眼，记下来就太好了，感觉就不同。现在那些记录整理出来就像谈话一样，像感语随笔般，一、二、三、四...列叙出来，只有那个内容，就很好。因我们就是谈话，谈话就不像讲道，有一个题目，有分节，有什么布局组织。我们的谈话是这里一点，那里一点，叫作谈话，所以我们给它的题目叫作交通记录。</p>
+<p>如果再加上二个字交通谈话也可以。交通就是谈话，交通记录，以后就是第一册，第二册，第三册的。人看见就知道，哦，这是谈话。这样我们也表明说，这是谈话。讲道就有分题分节，有头有尾的。谈话就是好像没有题目的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

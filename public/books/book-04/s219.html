@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-八月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十二日</h1><p class="meta">04.晒熟的美果 · 第219/366段</p><p><a class="btn" href="s218.html">上一篇</a><a class="btn" href="s220.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s219.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十二日</h2>
+<p>他讲话也好，态度也好，都是很轻浮的，神若要这个轻浮的人，还得了！</p>
+<p>后来他再来，再来态度就不像初见面时那样轻浮了，再后来结了婚，结婚再来，又不同。多了太太，彼此有意见，吵架也会有，头就抬不起来了，后来生孩子负担也重，头更抬不起来。那浮浅的味道就渐渐减少。就是通过现实的环境把这个人带到深处里去。</p>
+<p>所以一个年青人在结婚前后，就是个很显明的分界线。以前，他什么都理想，等结婚以后，就不那么理想。不那么理想，为带他进入实际。理想的时候想&quot;我要作个好丈夫（或好妻子），要多好多好。看他是天使很好很好。&quot;结了婚才发现，哦不行。彼此有意见，怎办？达不到理想，这理想无形就破灭了。</p>
+<p>破灭就带你进入实际，你要从这里学习功课，不要想：&quot;我倒楣。如果我不结婚，就不会像今天这样倒楣。&quot;但是别人结婚，也感到倒楣，他们也有！只是你这个山看他那个山高，他也看你这个山高，其实都一样。都没有一个很理想的，都是多有矛盾，多有困难，有这些存在达不到理想。那么达不到理想怎么办？想离婚不能离婚------如果不理想就离婚，一生要离婚多少次。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

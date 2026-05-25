@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十八日</h1><p class="meta">04.晒熟的美果 · 第363/366段</p><p><a class="btn" href="s362.html">上一篇</a><a class="btn" href="s364.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s363.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十八日</h2>
+<p>在七十年代，我们看见教会的情形就灰心。那时，好象只剩下&quot;你&quot;一个人，看见弟兄也不能和他们来往，人也怕&quot;你&quot;。如果那时&quot;你&quot;要倒下去，要灰心，到了现在，就什么也没有了。所以虽然是只剩下自己一个人，还是要跟主走。慢慢的，两个人要跟主，三个人也要跟主，越跟就越多。因为这些有心向着神的，爱主的，还是要跟主走的。要主的人，总是要归队的。所以不要给一些现象将我们为难倒了，我们相信圣经。我们相信神恩典的原则，神就借着我们的信作工。</p>
+<p>我告诉你，我们不只是以前受反对，七十年代开始，我们还是受反对，特别是&quot;聚会处&quot;，在全国都对我们有意见。</p>
+<p>56年以来...，我的日子就是这样去过，一天过一天，好漫长的。所以一个人的十字架就是这样一一接受过来。几十年就学这功课，到了一定的时间，对好多的事，对好多的感觉，就越来越清楚。清楚了，话就不随便说，说话就更准确。</p>
+<p>就在那个时候，好多传道人，还有聚会处的弟兄姊妹，不管是X地、Y地的弟兄，或李常受那边来的弟兄，我们都有见面。交通里，我们看到许多的名传道，情形都不象样，从这里，就压出属灵的东西来。借着交通，来交通的弟兄就有进步，起初Y弟兄也带人来，人来了，就改变，他也感到奇怪......</p>
+<p>我们走这条道路要有异象，就不会改变。这条道路要继续坚持下去。得胜还是我们的，因为还是神得胜。</p>
+<p>到了经过一个大震动，好些事物就显明出来了。有内容的，到今时还存在，没有内容的，在当时都没有了。这都是神给我们学习的属灵功课，也带我们认识神。</p>
+<p>虚心就有生命长出来，舍己，就把恩典带出。</p>
+<p>神在中国作工，也在外国作工，美，加，星，澳各地都有人来交通，有过路来的，也有特意来的。要怎样，我们也不着急，踏实来作更稳妥。教会就是站住的，站住比作工更难。神不看我们怎么作，他看我们的态度。教会是纯洁的，我们站住在这里，神自己负责一切，神会带领我们。</p>
+<p>基督复活的能力，就是这样的厉害，虽然有坟墓困住，有大石封住，有死亡围住，压制住，复活能力把这些全都冲破，以致福音传至全世界各处。可是，今天福音已布满全球，却少能看到复活的力量。</p>
+<p>七十年代以来，神叫我们有点学习，就从小数人开始有些交通，慢慢叫许多人转过来，越转越多，并且同心合意。神再作工！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

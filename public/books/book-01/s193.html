@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-七月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十一日</h1><p class="meta">01.天窗365 · 第193/366段</p><p><a class="btn" href="s192.html">上一篇</a><a class="btn" href="s194.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s193.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十一日</h2>
+<p>传福音有一个特点，要有福音的火才能烧到人的心，在这里，要有分辨，人若凭肉体，就是献凡火，若凭圣灵，就是分别为圣，是摆在神手里的。</p>
+<p>出于圣灵的怎样，出于肉体的又怎样？</p>
+<p>以前有一位出名的传道人，把这二方面列出一个表来对照，属灵的与属肉体的表现都列出来，照这边作就属灵，照那边作，就属肉体，他是用一种道理来衡量比较。这也没法叫人走出路来。因为用这些规条做出属灵来，做出来也是假的。</p>
+<p>**属灵的东西就有生命的本质，它是生命的东西。出于属灵的东西都很自然。**所以属灵的东西，无论在个人方面的，在教会方面的，都不是用道理讲出来的。</p>
+<p>有从Z地来交通的弟兄，提到今天的光景非常不正常，他回问我一句：你们这地的教会正常不正常？我说：&quot;你感觉正常不正常？&quot;因为这都不是用话说得出来的。我没有把握去讲，因为这不能用一个标准去衡量，这只能用你的感觉相对地去鉴别，差不多就是了。</p>
+<p>像在美国聚会的感觉与这里聚会的感觉比较是不同的，但这不同，也非说，我们就绝对的好，只能相对的比较好一点。我们也不敢说完全，所有的&quot;一点，&quot;若没有继续进步，也会跌下去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

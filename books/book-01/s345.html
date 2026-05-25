@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十日</h1><p class="meta">01.天窗365 · 第345/366段</p><p><a class="btn" href="s344.html">上一篇</a><a class="btn" href="s346.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s345.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十日</h2>
+<p>我们来看亚伯拉罕，他把儿子带到山上，柴给他背，仆人跟着；到了一个地方，就把儿子绑起来，摆在祭坛上；举刀要杀时，你想，他的心痛不痛？他只有这个独生子，心当然痛，这是父母的心。这时，神也感动，神说停，&quot;我知道你爱我了。&quot;，圣经说，他彷佛从死里得回他的儿子。</p>
+<p>奉献以撒------以撒从死里出来，就是预表主耶稣基督是神的独生爱子，借着死，从死里复活。我们每个信徒都得到这个奇妙的福音。这是个甜美的故事，是奇妙的故事。</p>
+<p>主与我们能够联合，这个是奇妙的故事，也是甜美的故事，我们的主耶稣是这么伟大；认识到这一个，你里面的重担就脱下。</p>
+<p>主说：&quot;你们要先求祂的国和祂的义。&quot;（太6:33）</p>
+<p>神的义是什么，神的义就是神所是的，你能认识神所是的，又成为你所是的，神就称义。亚伯拉罕信神，献上以撒；亚伯拉罕信神，神称他为义。所以，我们要追求神所是的。</p>
+<p>&quot;祂的国&quot;，就是神掌握的范围。国家之间，常常争国界、争权柄，因为没有权柄，国家就倒，神的权柄却维持万有。神用权柄托住万有，用权柄治理万有，神有他的权柄、有他的管理、有他的政治制度。今天我们先求他的国，就是先服在神的权柄底下。</p>
+<p>千禧年国度就是所说的天国，但神今天的权柄、旨意先运行在地，他的国度要先彰显在地。所以，主教我们祷告说：我们在天上的父。这句话，我们从里面去感觉是多么的亲切。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

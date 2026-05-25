@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-七月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十五日</h1><p class="meta">01.天窗365 · 第207/366段</p><p><a class="btn" href="s206.html">上一篇</a><a class="btn" href="s208.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s207.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十五日</h2>
+<p>**无论谈到蒙头、洗脚......一切都要连到基督，才有内容。**以前英国的弟兄会，主要有三个东西，一个是&quot;爱筵&quot;，一个是&quot;彼此亲嘴&quot;，一个是彼此&quot;洗脚&quot;（约13:1－17），这几个属灵的东西是他们中间很显明的&quot;恢复&quot;。到了以后，爱筵却变成&quot;吃喝&quot;，像世界的一样，&quot;亲嘴&quot;也因不小心、不圣洁，反而使罪恶产生出来。&quot;洗脚&quot;，后来，也变成形式，并不像刚才你们谈到的。你们谈到的**&quot;洗脚&quot;是彼此借着交通，得到新鲜的生命供应。**在有需要的时候，我们也可以洗脚，不是当作一种条例；问题是你在神面前，有没有保持着属灵的性质。</p>
+<p>这一种的表现就不是外面的，受浸，要跟主连得起来；按手，也要跟主连得起来；擘饼，要跟主连起来；蒙头，要跟主连起来。跟主连得起来，就有意义，没有跟主连起来，就一点内容都没有阿！（西2:9－10）</p>
+<p>就是我们这个聚会也不是长期要这样做，若是只跟着外面规矩做下去，做到里面摸不到基督，就不好了。你说，圣经不是说，不要停止聚会吗？是呀，不要停止聚会，还要看这是怎样的聚会。但是&quot;属人的会，属世的爱，不能与主相比&quot;。人的会那么多，我们也无所得，主也无所得啊！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

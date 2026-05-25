@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月三十日</h1><p class="meta">01.天窗365 · 第365/366段</p><p><a class="btn" href="s364.html">上一篇</a><a class="btn" href="s366.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s365.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月三十日</h2>
+<p>**神拆毁外面的东西，为要建立里面属灵的实质。**凭自己的感觉是&quot;今不如昔&quot;（传7:10）。但属灵的事实是经过时间、遭遇等，带我们长进。我们不要一直注意自己，以免落在自己里面。神的路是：我们随从圣灵就是生命平安，随从肉体就是死。</p>
+<p>神在我们身上工作是不停止的，圣灵水流在工作上也是不停止的。只是我们不知道，我们有许多难处都有圣灵在那里管治对付我们。**我们工作失败、冷落，也是圣灵在那里工作，叫我们到神面前去仰望祂的怜悯。**</p>
+<p>所以不是解决工作的难处，或解决属灵上的一些现象、软弱、失败，乃是接受主自己作我们的生命（西3:4），有了祂就有了一切。神在基督以外，没有再赐什么，都在基督里。</p>
+<p>我们愿意与所有爱主者交通。出于对主的忠心，凡主所托付的，都不能不见证。我们专一的见证是基督。在基督以外，没有生命，没有光，没有爱。唯祂是一切，又充满一切。什么都要过去，只剩下基督；没有一件属灵的东西可与基督相比。愿我们心目中只有基督。无论在何处，一切事奉，以祂为中心，即使在十字架阴影下，也愿背负加略苦架。</p>
+<p>学习认识祂的所&quot;是&quot;。惟求祂的喜悦。</p>
+<p>&quot;只有你来带我进荣耀（原永业），我才满愿。</p>
+<p>我会忘记路上的一切，当我看见你面。&quot;</p>
+<p>当在苦难中被创伤时，感到这路上的一切......只待主来才会忘记。但主怜悯，二十多年后的一日，祂的荣耀带我过去了，今日就可忘记......</p>
+<p>但仍留下伤痕......从积极方面去跟随祂的道路，更高的道路。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

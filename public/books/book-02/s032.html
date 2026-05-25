@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月一日</h1><p class="meta">02.在光中得以见光 · 第32/366段</p><p><a class="btn" href="s031.html">上一篇</a><a class="btn" href="s033.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s032.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月一日</h2>
+<p>昨天，有一位弟兄问我：&quot;我和一位弟兄交通，那一位弟兄说：两个强盗其实都受了洗呀！我问他根据哪里的经文，我没有听过这说法！到了晚上，我再问他这种说法的根据，他找不出经文来支持，反而硬说我对圣经的文字不理解，不跟我谈论。要把他转到主的旨意上，该怎么作？&quot;</p>
+<p>那弟兄是偏到这种情形。连圣经没有的东西，他可以把它套进去！二个强盗已在十字架上，怎么受洗？这是因他们强烈主张必须到海里受浸。这二件拉不拢的事，现在也勉强说成是事实，他们竟然偏到这个地步。</p>
+<p>人信了主，还没有受洗，才有别人安慰他说：&quot;十字架悔改的强盗，他没法聚会，但心里信主耶稣还能得救。你虽然病重不能受浸，但心里相信主也可以得救。&quot;用这话安慰他。而那偏激的人却说成十字架的强盗也受了洗，还说二个强盗都受过洗。这就变成邪灵的道理了，他还讲的猛响的。</p>
+<p>人若常把不是事实的东西拿来乱说一通，再下去，不小心处理，他还会愈说愈黑暗呀！因为圣经是神的话，你用自己的观念去套是套不上去的，所以连念圣经这事，也需要神的破碎。不然，人的主观就会套在圣经上。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

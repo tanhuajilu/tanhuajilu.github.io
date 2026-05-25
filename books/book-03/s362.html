@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十七日</h1><p class="meta">03.无比的爱 · 第362/366段</p><p><a class="btn" href="s361.html">上一篇</a><a class="btn" href="s363.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s362.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十七日</h2>
+<p>我们所受的恩典何等浩大，不仅主的宝血赦免了我们的千万罪孽，祂的荣耀更遮盖了我们的千万亏欠。神在基督的荣耀里看我们，也就是在复活里面看我们；如浪子的父亲说：&quot;这个儿子是死而复活，&quot;所以设宴快乐。故我们勿落在自感&quot;亏欠&quot;里。良心软弱则良心易受控告。</p>
+<p>当浪子离家时，就是开始走向&quot;死亡&quot;境地。</p>
+<p>一个离开神的人就是与生命隔绝，面向死亡奔走。浪子过着随心所欲的生活，享受暂时的罪中快乐，正是带他进入更深的堕落；最终在绝境中才醒悟过来，回到父家。到了家，父亲以爱收纳，以复活的眼光看待他。在复活里只看见荣耀，把儿子过去死在罪中的一切都遮盖了。</p>
+<p>复活的大能，把我们从死亡里带出来，复活的荣耀把我们一切的丑恶遮盖了，有如浪子回家穿上了那上好的袍子，并宰那肥牛犊，享丰宴，真是荣上加荣，就快乐起来。浪子在此情此景，又羞又喜，百感交集。</p>
+<p>父亲的慈爱显在与回家浪子连连亲嘴。谁认识父亲的慈爱，领会祂的心？谁能理解祂荣耀的万一？我们只能说，祂的爱，我们难能领会。</p>
+<p>神在复活里看我们，我们蒙悦纳，是因基督的复活。哈利路亚，祂复活。</p>
+<p>从大卫的身上，我们不只看见恩典，而且这恩典是荣耀的恩典。因他有失败的一面，也有尊荣的一面，神荣耀的恩典超越充溢了他。这就叫我们不能讲理的敬拜神，因神超越的工作是人测不透的。</p>
+<p>人在荣耀的恩典中不感觉恩典，不知道恩典有多大；此人在长期的苦难中，也不感觉受苦，不知道苦是多大。</p>
+<p>一点点恩典我们可以感觉到，也可以一一计算，但浩大的恩典我们就无从领悟，也无从计算。</p>
+<p>一点点苦难我们可以记牢，可以回忆述说。但神把我们放在祂安排的苦炼中，被火炼熔化过，我们就无从述说那些点滴的，一件件的苦难经过，而是当人摆出来，就让人感到他是经过神手对付出来的人。</p>
+<p>一个认识神生命的人，就能产生工作的果效。在我们身上如果属灵生命是丰盛的，那么在属灵的世界就会产生大的影响。</p>
+<p>赦免人，自己要吃亏，所以赦免是个大的恩典。一个恩典多的人，就容易赦免人的过失；缺少恩典的人，就与人斤斤计较，很难赦免人。</p>
+<p>遍地满了耶和华的爱。（诗三十三5）无论到何处，相信祂的丰富也是满了遍地。（诗一○四24）只要我们是活在神面前，里面与神是无间隔的，到任何地方都能享受神的丰富。环境不同，但丰富仍是一样的。我们只有神的安排，而没有所谓的环境。相信在一生的路上有恩惠和慈爱随着我们，神的祝福跟着我们。约瑟因有神的同在、神的祝福，在被卖为奴时，凡事顺利；受枉屈狱，仍有祝福随着他。人成为祝福的人，到处使人因他蒙福。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

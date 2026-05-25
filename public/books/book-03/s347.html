@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十二日</h1><p class="meta">03.无比的爱 · 第347/366段</p><p><a class="btn" href="s346.html">上一篇</a><a class="btn" href="s348.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s347.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十二日</h2>
+<p>约瑟的十个哥哥相认以后，不久，心里就惧怕了，心里想，恐怕约瑟要怀恨，足足的报复他们。他们还没有说，约瑟先说：&quot;不要因为把我卖到这里自忧自恨。这是神差我在你们以先来，为要保全生命。&quot;这就是说，不是&quot;你们卖我&quot;，是&quot;神差我&quot;，为救活全家七十口人。（[创45](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=0&amp;chapter=41&amp;verse=20&amp;highlight=1#P20):8）</p>
+<p>这么大的家庭，要挨饥荒七年...约瑟不是想到&quot;你们卖我&quot;，是想到&quot;神差我&quot;；所以，要看神的排布。人是看，&quot;你落到我的手里了。&quot;但我们的心要说：&quot;我是在神手里，等时候到了，神就安置我。&quot;在困难中经过的时候，因着神，我的心更感甘甜。经过艰难我才知道什么是福气。</p>
+<p>人把福字倒贴，表明祈愿福从天而下倾，所以，&quot;福&quot;全在神手里。人向着天，福就降下，降到你无处可容。</p>
+<p>N弟兄说：什么人受苦最多，最有可以给人。什么时候你给人最多，神就还你更多。你向人讨，就只一点而已。你面对现实，经过困难，神就赐恩给你。你若仰望人，你就枯干，你仰望神，就有福气。</p>
+<p>所以教会不是人多人少的问题，是看神的祝福，是祝福的问题。有恩典，也就有一条神赐恩的路，若不接受恩典，人是把恩典的路堵死了。教会是基督的身体，基督要充满万有，要满溢教会。教会有多大？十分难说，基督多大，教会也多大!</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

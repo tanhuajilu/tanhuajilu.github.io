@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-九月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十三日</h1><p class="meta">03.无比的爱 · 第257/366段</p><p><a class="btn" href="s256.html">上一篇</a><a class="btn" href="s258.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s257.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十三日</h2>
+<p>有人说：&quot;圣经说，不可停止聚会。所以，你们应该有经常的聚会。&quot;也曾有一位弟兄来辩论：&quot;一定要聚会&quot;的问题。我们就给他看一首诗歌：&quot;愿你为大，哦主耶稣...属人的会，属世的爱，不能与你相比。&quot;我接着说：&quot;你所谓的聚会，是属人的会，属世的会，并不是属灵的会，属天的会。&quot;所以，不是有聚会就好。像对小孩子来说，不是有奶就好，乃是&quot;有母亲&quot;，是母亲给他奶吃。有一个孩子，母亲不在，邻居来给孩子奶吃；母亲给孩子吃奶，她是孩子的母亲，但是邻居给孩子吃奶，她却不是孩子的母亲。你可以有聚会，但这聚会不是神要的那个聚会，神给的聚会不是人的会。</p>
+<p>这时，那弟兄就说：&quot;怎么是人的会？&quot;我说：&quot;你自己感受，自己讲出来，这个会给了你多少的供应？这个聚会给你多少属灵的帮助？你自己有感觉。&quot;就是这几句话，他释放了。他说：&quot;对了，只是有属灵供应的聚会，我才要，没有的，我们不要！&quot;说简单是很简单，他里面一通，就清楚了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

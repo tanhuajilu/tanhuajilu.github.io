@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十一日</h1><p class="meta">02.在光中得以见光 · 第203/366段</p><p><a class="btn" href="s202.html">上一篇</a><a class="btn" href="s204.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s203.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十一日</h2>
+<p>说回来，在属灵的追求上，也是有一种情形：属灵的人总会去找属灵的人交通，属血气的会找属血气的人交通。喜欢出风头的，喜欢找喜欢出风头的交通，安静事奉神的会找喜欢安静事奉神的人交通。多话的会找多话的讲话，聚会前已在讲个不停，聚会开始了才静下去；安静的人却要找几个来祷告，都是各从其类的。这些情形很自然摆在我们面前，你能把这各种类型分别出来。</p>
+<p>有些人，今天你不能帮助他，因为还在走属自己的道路，跟他说生命的路他不来了，直等他转向属灵的路了，再跟他讲才会差不多。所以，对一些人交通，还要看时间到不到，时间到了，就走下去，还没有到，不过浪费时间，有时还会有反作用。时间没有到的，就让他多失败，多受打击，到他没有路，彼此交通的时候就快到了。</p>
+<p>有一位弟兄来交通说：&quot;阿，弟兄，我已经被带到山穷水尽，讲道理讲到空了，讲给别人听，自己却愈讲愈空。&quot;他问说怎么办。我说：&quot;这个很好，你向神投降，就在事奉上有重新起头。你重新起头作的，一年的就等于过去十年的。&quot;因为从前作的没有价值，从前凭自己作的工作都是没有价值的，今天凭着圣灵去作工，所作的才会&quot;直到永远&quot;。所作的是草木禾秸，试炼来，一下子就推倒摧毁了，若用金银宝石作的，所建造的才牢固。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

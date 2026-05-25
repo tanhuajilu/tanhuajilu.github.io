@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十四日</h1><p class="meta">02.在光中得以见光 · 第135/366段</p><p><a class="btn" href="s134.html">上一篇</a><a class="btn" href="s136.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s135.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十四日</h2>
+<p>你没有增加里面的内容，就不过是在讲道理，全是道理！我们不改变别人的作法，我们是要把属灵的内容增加！至于做法是灵活的，有需要时，我们也需要一点的作法。但今天还不需要，特别在我们的环境，还不需要。现在，就由你们年青的开始，在生命、能力里一直去走。对于别人，我们不摸他们，摸不来的！</p>
+<p>以前我们按手，也摸到属灵的实际。最初按手，好多人有意见，我自己也有看法，后来，我也接受了这个东西。有些年长的，我们知道他们会觉得反感，因此就没有跟他交通，因为我们想，他既有那一个味道，讲也是多余的，我们就按向着主，跟从主的态度去行。</p>
+<p>到了一天，有一个晚上，我们按手的时候，他（那年长的弟兄）坐在后面观看，我们一个一个的按手，到一个地步，他也摸到，也慢慢的从后面跟着跪下，跪在后面接受按手。对这一个，我们也感动。因为他对这个本来很不接受，现在也不必讲，乖乖的跪下接受按手。</p>
+<p>我们彼此间，有的人对属灵的看法也常不一样，但是，我们按着主的带领去作，就看见主在我们中间，他也跟上来了。所以，把年青人带动了，也会把老人家带动起来。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月六日</h1><p class="meta">02.在光中得以见光 · 第280/366段</p><p><a class="btn" href="s279.html">上一篇</a><a class="btn" href="s281.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s280.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月六日</h2>
+<p>雅各最诡诈，手段也是最多的，但他的苦难也最多，就是这些苦对付他的古怪。需要对付！神的话说：&quot;我喜爱雅各，恨恶以扫。&quot;（罗9：13）奇怪，古里古怪、诡诈的雅各，神竟然喜爱他！神倒反厌恶以扫不喜爱他。神不凭人天然的好坏去爱，神是说，&quot;你走在什么原则里？&quot;你走在神的原则里，神喜欢！走在人的原则里，神要定罪。</p>
+<p>雅各身上，有一个原则，是什么原则？他要神要神的祝福。他要祝福！虽然他用了不正常的手段把祝福夺过来。以扫是长子，有长子的名分，雅各就把他这长子的名分夺过来，连长子的福份也把它夺过来。以扫呢？以扫不看重这福分，不看重长子的名分。打猎回来，他说，我渴死了，红豆汤喝下去就解决我的饥渴，&quot;长子&quot;名分算什么？今日享受就好。就把长子名分卖了。以扫不要，雅各要！</p>
+<p>所以，不是人的天然好坏的问题。问题是要不要基督，要不要神祝福。常常一个人罪孽愈重，他愈感觉需要救主。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

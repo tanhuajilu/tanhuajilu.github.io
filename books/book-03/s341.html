@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月六日</h1><p class="meta">03.无比的爱 · 第341/366段</p><p><a class="btn" href="s340.html">上一篇</a><a class="btn" href="s342.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s341.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月六日</h2>
+<p>人能接受神的工作，神就作工，有的人，神怜悯他，也有些人，神任凭他。神任凭他的，人怎么作，你去作，也没有路。</p>
+<p>当神不说话了，就比死还难受。大家不讲话就闷死了，是吗?以利的日子，耶和华的话稀少，（[撒上3:1](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=8&amp;chapter=2&amp;verse=0&amp;highlight=1#P0)）到了撒母耳之时，神讲话，就有一个新的起头。为什么神不说话，因为以利爱人过于爱神。一个人能够听神的话，或神能对他讲话，就是件严肃的事。神不说话，属灵的道路就会断了，没有了。</p>
+<p>以前某地方只有几位弟兄，人数不多，却有属灵的力量；带领信徒也有果效，如今却没有了。所以按我们看，一切先从小作起，不然，样样都作大了，越大越快，在神面前反而变没有。</p>
+<p>X弟兄实在蒙神怜悯，他头一次和Y弟兄一起来，都没有说话，后来就讲一二句。头一句，他说：&quot;圣灵的工作就好像挪亚的鸽子放出来了。&quot;</p>
+<p>（挪亚先放出乌鸦没有回来，因乌鸦站在死尸上吃腐尸；又放出鸽子，鸽子是圣洁、单纯的就飞回来；过七天，挪亚再放鸽子出去，这次鸽子带回橄榄新芽，就知道水退了；第三次放鸽子，就不回来，因地已经洗干净。）（[创世记8:8-12](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=0&amp;chapter=7&amp;verse=11&amp;highlight=1#P11)）</p>
+<p>这时，神就对挪亚说，要把方舟的门打开，一公一母或七公七母的生物都带出来。方舟里，一切需要的都有，彼得书说，挪亚的得救，是丰丰富富的得救。（罗得的得救是仅仅得救。他妻子还变成盐柱摆在那里作历世历代的鉴戒。）</p>
+<p>神在各地都有祂的工作，所碰到的事绝非偶然，都有安排。我们面前这些神的安排，就要抓住机会作工，不然，哪有什么能作的工作？</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

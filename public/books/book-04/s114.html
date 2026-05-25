@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-四月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十九日</h1><p class="meta">04.晒熟的美果 · 第114/366段</p><p><a class="btn" href="s113.html">上一篇</a><a class="btn" href="s115.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s114.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十九日</h2>
+<p>问：圣经说，在上有权柄的人人都当顺服。连乖僻的，都要顺服。但是圣经也要我们持守真理。我经历了两个社会的变化。我搞不清，我们该顺着文化去走呢？还是要坚持自己的立场？</p>
+<p>答：世界上是有不同思想，各种社会也有各种不同的情形，各种社会，因着有不同复杂情况，所以都不一样。</p>
+<p>但是信主耶稣得救，却是普遍的，包括了各种各样的民族的及人民。无论是东方西方的，传福音叫他们信主，就是要叫他们跟神的关系重新恢复过来。这是不同情况下基督徒共同的点。</p>
+<p>在中国有信主的人，在美国也有信主的人，虽然身在不同地方，大家是信主的人，这一点却是相同。像我们在中国，是信主的，同时，我们也是中国的公民。因此在神面前，我们是基督徒，在地上，我们还有作公民的一面。</p>
+<p>由此看来，基督徒有跟主的关系的一面，有跟弟兄姊妹关系的一面，基督徒还有与家庭的关系，与社会的关系，与政府的关系，与国家关系的各方面；我们对这些关系该怎么样去应对呢？</p>
+<p>基督徒要在神面前忠心，儆醒，在属灵的一面做好基督徒的见证。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

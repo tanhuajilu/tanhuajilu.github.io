@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-七月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月三十一日</h1><p class="meta">01.天窗365 · 第213/366段</p><p><a class="btn" href="s212.html">上一篇</a><a class="btn" href="s214.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s213.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月三十一日</h2>
+<p>问：现在的时代，压力愈来愈厉害，刚才交通到&quot;与主同活&quot;，至于在经历与主同升天这点上，又怎么应用出来？</p>
+<p>答：我们信的人要经历与主同死、同埋葬、同复活，同升天，将来主还要再来，我们要和祂永远同在。同死，是消极一面的；同埋葬，是结束，因为埋葬了，就再看不见，这也是消极的方面。埋葬了，旧人、旧世界就都结束，这些旧造的，到基督死而埋葬就结束了。</p>
+<p>公元就是表明新世纪的出现，是新造出现的时代。因基督的死而复活，亚当就结束了。在神面前只有两个人，有首先的亚当，有末后的亚当。**我们从前在亚当里面，现今在基督里面。**（罗5:12－21）</p>
+<p>从前我们在亚当里面，亚当犯罪，我们跟着他，也犯了罪。现在我们在基督里，因基督一个人的死，我们被包括在基督里，也死了。若不然，我们人这么多，他一个人，怎么会替我们死？就是因为我们在基督里被结束，都死掉了。再者，旧造因基督的埋葬，也看不见。接下去，第三天，神的大能大力却叫祂从死里复活，这是新造，因此，我们现在已经进入新造。这是因着神在十字架上的工作，使我们从亚当迁到基督里面而成就的。**经过与祂同死、同埋葬，也经过与祂同复活，神那复活、重生的生命进到我们里面，我们就进到基督里面来。**</p>
+<h1>28OCT－7NOV选自 见面交通（陆）一至三 1999年7月3日上午</h1>
+<h1>8 NOV－2 DEC 选自 见面交通（陆）四至十三 99年7月3日下午</h1></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

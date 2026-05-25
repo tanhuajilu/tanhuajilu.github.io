@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十七日</h1><p class="meta">02.在光中得以见光 · 第138/366段</p><p><a class="btn" href="s137.html">上一篇</a><a class="btn" href="s139.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s138.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十七日</h2>
+<p>昨天，我告诉这位弟兄，我说：&quot;你的思想要开朗，不开朗就拘束，讲话也不会自然。&quot;我们许多东西是有了，但是总讲不出来。像这位弟兄，他里面有东西，他读了许多属灵书籍，里面有个底子，经过突破，他的东西就出来。你自己进步，别人也进步。这很奇妙。</p>
+<p>你们回去以后就可以去找一些对象，有可以讲的，就给他讲，有耳朵听的就讲给他听，没有耳朵听的，你就不给他讲，慢慢去作。你多几个经验，就不一样！</p>
+<p>起初我们走这条路，跟一些人讲也讲不通，慢慢，能通的就通，通一个算一个，等到大家起来，路更通，以后光更亮，就更通了。</p>
+<p>盼望神怜悯你们，能有一个转折，有一个突破。L弟兄来了五次，一次一次的转，一直转折，像坐飞机在跑道上走，跑那么快，要跑哪里去？需要转折，转折再转折，愈转愈高，转到正确的轨道上，就觉得好像没有走一样。在跑道上，你觉得很快，到了高空的轨道上，你再不觉得快，只觉得一切都很平稳的。</p>
+<p>在属灵上也是这样，若你觉得进步很快，或许还在地上爬行呢！你若转折上去，到了高空上，就好像不感觉进步，不感觉进步，就是有进步。你若一直凭感觉，就愈走愈没有路，故此要相信神，不然，你来了，我们从哪里准备道理来讲！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

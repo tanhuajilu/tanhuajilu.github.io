@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十五日</h1><p class="meta">01.天窗365 · 第167/366段</p><p><a class="btn" href="s166.html">上一篇</a><a class="btn" href="s168.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s167.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十五日</h2>
+<p>鼓岭山上听交通的人中，有些人当时也接受了一点属灵的东西，但是经过五十年，已经漏掉，已经没有了。因为没有天天更新。</p>
+<p>倪弟兄在那里，讲到权柄，听的人没有一个站得住；要藏起来，也找不到地方藏，听到这个&quot;权柄&quot;，真是叫人俯伏在神面前。不像今天我们讲权柄，讲得那么轻松，&quot;我是长老，你要顺服，你不顺服，我就对付你。&quot;</p>
+<p>今天，很多人已经落到&quot;人&quot;这个层次里了。那时，一讲到权柄，人就俯伏，一讲到破碎，我们也俯伏，在强光中看见自己，&quot;我这个人是这么的刚硬，连动也不能动。&quot;讲到话语职事，就感觉自己，&quot;哎呀！我们离开神的话太远了！到底我传道，传什么的！&quot;</p>
+<p>在那里，大家都在神面前俯伏敬拜。特别有些姐妹，站不住了！因为她们在家里，对丈夫是顶撞的，不顺服的，在神的光里，有着厉害的感觉，在那里哭，哭了几点钟还哭不完哩！那时的情形是这样的。并不是像我们这样很舒服，听道理，他们是在神的面前呀！</p>
+<p>所以，倪弟兄说：&quot;到鼓岭来，是要你的命。&quot;什么命呢？就像扫罗，在大马色路上，在神的光中完全服服贴贴在神面前，被神打倒（徒9:3－4）。所以顺服不是我们所讲的那么舒服，顺服乃是把你折服下去，折服在神面前！</p>
+<p>**因着人顺服在神面前，圣经说：神赐圣灵给顺服的人是没有限量的**（约3:34）。没有顺服，就没有把握蒙圣灵的祝福。没有经过在神面前这样的俯伏，你就没法想：我能给人家恩典。</p>
+<p>人想的就是要工作成功，&quot;我被圣灵充满，我就要为神作工。&quot;你是这样的人，圣灵会充满你吗？这都是你自己想的。圣灵充满是什么？你不懂得，也不知道。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十二日</h1><p class="meta">03.无比的爱 · 第317/366段</p><p><a class="btn" href="s316.html">上一篇</a><a class="btn" href="s318.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s317.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十二日</h2>
+<p>我们作工的对象就是人的心灵，是人的心，也是人的灵。人的心是狂傲的，必须给主约束，心向着主是对的，果效也对。若是存心有问题，越去作，越作不清楚。</p>
+<p>不过，你们彼此间，虽然有意见，在你们的情形还是好的，因为彼此有这一个心的倾向，难处就容易解决。</p>
+<p>因为你们和弟兄从前的交通是很甘甜的，虽然今天没有了交通，等大家再一起有交通，情形就转了。</p>
+<p>这是神的工作，神要作工把我们带回到当初的情形里（[启2:4](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=65&amp;chapter=1&amp;verse=3&amp;highlight=1#P3)-5），正如以弗所教会，有一个起初的爱心。有这一个爱心，聚会就好，不会只是嘴巴讲而已。</p>
+<p>你们打通了，X弟兄也打通了，其它的，过去的东西都放下来，有交通。这样你们也不是孤单的了。&quot;孤单&quot;是说，只有你一个，这样算起来，你们也不孤单了。</p>
+<p>你们的起点摸到属灵的高处，属灵上就走一条高的道路。若是起点低，就只能走低的道路。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

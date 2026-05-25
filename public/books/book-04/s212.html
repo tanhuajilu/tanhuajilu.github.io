@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-八月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月五日</h1><p class="meta">04.晒熟的美果 · 第212/366段</p><p><a class="btn" href="s211.html">上一篇</a><a class="btn" href="s213.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s212.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月五日</h2>
+<p>那么，怎么会懂得这个价值观呢？保罗认识这个价值观。他为什么能把万事当作粪土？万事包括很多！包括他过去的学问，包括他过去的热心，律法没有办法定他的罪，他在律法上无可指摘，看来也很高的，但是有一天，他认识基督，并且认识基督为至宝，对这至宝有认识，其他的东西对他就失去颜色。上好的福分你得着，那次好不列等的就不要了。你拣选上好的，其他的就让开，你不可要。</p>
+<p>今天我们对主，对主的价值有认识，整个世界也不能跟我们的主相比了。认识基督的人才会对万事看作粪土，认识主的人，才会撇下世界。你若把世界的东西抓得紧紧，你没有办法。</p>
+<p>小孩把小钱抓得紧紧，抢也抢不走，等你将更宝贝的给他，他才会把小钱丢掉！神今天就要让我们对基督的认识有增加，也就是宝贝祂，很多的东西才不会去计较，心眼才不会那么小，只看见这么一点点！你就能看到那个更高的东西。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

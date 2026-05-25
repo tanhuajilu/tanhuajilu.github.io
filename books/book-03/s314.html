@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月九日</h1><p class="meta">03.无比的爱 · 第314/366段</p><p><a class="btn" href="s313.html">上一篇</a><a class="btn" href="s315.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s314.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月九日</h2>
+<p>这些话不容易听，要用道理来讲明白，也感到困难。但是，为着主为着爱主，就肯舍已，甘愿牺牲。你今年才三十岁，再过三十年就大不一样，因为一直成熟。越进步，会越感觉得不够，但是神就满足，你也经历基督是你的满足。</p>
+<p>哈巴谷先知说：&quot;虽然无花果树不发旺，葡萄树不结果，橄榄树也不效力，圈中绝了羊，棚内也没有了牛，然而，我要因耶和华欢欣，因救我的神喜乐。&quot;（[哈3:18](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=34&amp;chapter=2&amp;verse=17&amp;highlight=1#P17)）他还要敬拜神的道路，叫神的恩典也能和别人一同承受。</p>
+<p>你要一直进步，到六十岁就不一样，别人也感觉你不一样。这些是别人感觉的，不是你自己说的。要忘记背后，努力面前，向着标杆直跑，向前走，永不回头。</p>
+<p>你要忘记背后，努力面前的（[腓3:13](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=49&amp;chapter=2&amp;verse=12&amp;highlight=1#P12)），不看那些属灵人，不以人（作偶像）代替主，以前以为好的，因基督都当作粪土，工作也要当作粪土。</p>
+<p>照你的背景，要走这条路，你也有不少的困难。有很多人对你有爱心，你念神学，很多人也羡慕你，看重你。你看重人情，就要偏离主，落到错误里。你若放下这些，丢下以后的包袱，就走在正路上。你该立定心志走在主的道路上，一直去寻求主！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

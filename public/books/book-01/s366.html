@@ -1,0 +1,56 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月三十一日</h1><p class="meta">01.天窗365 · 第366/366段</p><p><a class="btn" href="s365.html">上一篇</a><a class="btn" href="index.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s366.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月三十一日</h2>
+<p>经过了三十多年，神让我经过了时间漫长的磨炼，产生忍耐再忍耐的学习。时间实在对人的考验是苛刻的。许多的遭受也是难以言尽的，但神藉此来带领我进入深处（至圣所）事奉祂。外面虽然黑暗，里面却有祂的光。道路上的艰难似是无了时，但祂的恩典却带领我经过一生。</p>
+<p>荣耀的主，再来的王，求你开我们的眼睛，看见你再来的这一件事实，叫我们的灵里被吸引来&quot;思念上面的事&quot;（西3:2）。我们的灵与宝座上的灵完全联合为一。愿我们还在地上的日子，不被地上的事物所摸；天的吸引，把我们带入你无限的荣耀里。当你在荣耀中显现降临的时候，我们也在其中。哈利路亚！整个宇宙欢呼，亿万天军，亿万圣徒，齐唱新歌，颂赞神的羔羊。耶和华的荣光充满万有，我们就永远与你同在一起，就是神的帐幕在人间。那时，撒但与一切的背叛者都一齐扔在永火里受刑罚，直到永永远远。</p>
+<p>**我的灵啊，当赞美！我的灵啊，要敬拜！我的灵要欢呼，因为再过不过一点时候，我们就要结束这世上的路程，今生的苦楚都成为过去了。世上的国成了我主和主基督的国，你要作王，直到永永远远。**（启11:15）</p>
+<h1>23 DEC －31 DEC 选自 感语随笔</h1>
+<h1>未命名章节</h1>
+<h1>INDEX(14)</h1>
+<p>KE365 (1) 苏醒</p>
+<p>1 JAN － 6 FEB 选自 JMJT(4) 17/2/99((AM.)</p>
+<p>7 FEB － 3 JUN 选自 JMJT(4)　17/2/99(PM.)</p>
+<p>4 JUN － 9JUL 选自 见面交通（壹）一 1998/12/26 上午</p>
+<p>10 JUL－12AUG 选自 见面交通（壹）二 1998/12/26 下午</p>
+<p>13AUG－31AUG 选自 见面交通（壹）三 1998/12/26 晚上</p>
+<p>1 SEP－21 SEP 选自 见面交通（壹）伍 1998/12/27 下午之一</p>
+<p>22 SEP－17 OCT 选自见面交通（壹）六 1998/12/27 下午之二</p>
+<p>18 OCT－27 OCT 选自见面交通（壹）七 1998/12/27 晚</p>
+<p>28 OCT－7 NOV 选自见面交通（陆）一至三 1999/7/3 上午（补）</p>
+<p>8 NOV－ 2 DEC选自见面交通（陆）四至十三 1999/7/3下午（补）</p>
+<p>3 DEC－14 DEC 选自见面交通（壹）八 1999年1月10日</p>
+<p>15 DEC－22 DEC 选自见面交通（壹）四 1998年12月27日上午</p>
+<p>23 DEC－31 DEC选自感语随笔</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

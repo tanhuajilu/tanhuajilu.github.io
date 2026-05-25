@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十六日</h1><p class="meta">03.无比的爱 · 第351/366段</p><p><a class="btn" href="s350.html">上一篇</a><a class="btn" href="s352.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s351.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十六日</h2>
+<p>基督囚徒的一封信</p>
+<p>在主耶稣的患难、国度、忍耐里一同有份的圣徒们：平安！</p>
+<p>二十多年来拦阻多，交通少，因着里面的要求，多么迫切渴想能以彼此交通领受祂荣耀的丰富。</p>
+<p>当我们提起祂荣耀尊贵的圣名，我们的灵是何等的激动；当我们思念祂所赐的浩恩，我们的灵惟有俯伏敬拜。当我们听到祂说话的声音，我们神不守舍，感动的眼泪、激情的眼泪、喜乐的眼泪交织涌流......往日苦楚的行程，一方面使我们心里欢喜，因被称是配为祂的名受辱，为基督的身体，就是为教会在我们肉身上补满基督患难的缺欠；另一方面我们仍是觉得自己的软弱，自感不配，但祂是可称颂的主，配得我们一切所有，为了祂，没有一件代价是太大太重的。祂是神的中心，是我们的依据，离了祂，我们就无所适从。</p>
+<p>在这漫长的日子里，神的儿女遭受患难四散，缺少实质的交通，里面倍感忧郁，加以人意是非的争辩，给属灵的生命带来损伤；混乱黑暗的情况，迷糊了多少神儿女的道路。需要祂怜悯，叫我们在祂光中俯伏仰望祂的恩待，带领我们走在生命的道路上，撇下我们所有、所是、所能，把自己为耶稣被交于死地，使耶稣的生，在我们身上显明出来（林后四11）。</p>
+<p>余下的日子，我们当走的路还远，凭着我们以往所学习所认识的，是不够应付我们自己与教会以及工作的需要，当我们看到神儿女属灵的贫乏，众多的迷羊失丧，广大工场零落，这一切的需要摆在我们面前的时候，就要更感到我们自己是多么贫乏，没有什么可以给人，这怎能不叫我们向主呼吁&quot;主啊，怜悯！&quot;求祂怜悯我们，在我们这些软弱的瓦器里，显明祂超越的能力。</p>
+<p>这些日子是严肃的，神的要求是高的，神的拣选是严格的。如果我们停留在以往所有、所是、所能上，则我们就无法跟上神今天要作的工。神用了二三十年的时间，给我们经历不平凡的年日和艰难的道路，为要让复活的生命在我们身上更加显明，让教会的见证是复活生命的彰显，好叫神藉着教会，使天上执政的、掌权的，现在得知神百般的智慧。</p>
+<p>今日的需要是求神兴起更多合用的器皿来承担今时代工作的需要，没有可用的器皿，就没有工作，求祂复活祂的工作，求祂先复活我们自己。只有当我们先让神有工作，神才能藉着我们有更好的工作。</p>
+<p>但愿基督的爱激励我们，让我们再次献上自己，接受神的挑选，来背负祂的托付，让神的儿女蒙受更丰富的话语、供应，充实属灵的分量，并得能力，引领失丧的灵魂认识救主。</p>
+<p>愿主怜悯我们，愿一切荣耀归祂直到永远，阿们。</p>
+<p>祝为主忠心！</p>
+<p>你们的弟兄</p>
+<p>灵负灵轭谨上</p>
+<p>一九七九年四月四日</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

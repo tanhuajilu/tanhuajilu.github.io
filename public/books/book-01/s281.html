@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月七日</h1><p class="meta">01.天窗365 · 第281/366段</p><p><a class="btn" href="s280.html">上一篇</a><a class="btn" href="s282.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s281.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月七日</h2>
+<p>**讲到教会就是件大事，是个奥秘**（弗3:9－10，5:32）**。教会只有够得上基督，才是正常，凡够不上基督的，就不正常。**这都要先从个人做起，要大家都来在一起，也是没有办法的。要从个人做起。</p>
+<p>因为教会是一个一个信徒自然去组合的。像这里一块布，是由一条一条的纱线织起来的，纱线的质量要好，要精密才行，如果是一大、一小，粗幼不一，织起来就不象样，不会平衡，也就不像一块好布料了。</p>
+<p>照样，**我们每一个，给神一个一个的带领，一个一个的受对付，大家就会配得很自然。**</p>
+<p>大家在一起，要配搭、有安排，但是你们自己里面要明亮才行，谁是作什么的，这一个，大家要懂得。如果不懂，他不会作，你去叫他作，就会很勉强了。教会里有所谓的负责人，什么叫做负责人？负责人就要带领，要负责、要看守，不然错误来了，还不知道，就会出事！</p>
+<p>你们在外面已经存在了这些安排、配搭的，也不是说马上停下来，不！已经做到这里，你突然停下，大家的头也很大的！现在，我们是要加上属灵的内容。属灵的内容还要加上去！</p>
+<p>好多人误会我们，说我们不要人去作。那么，你还是去作，我们并没有说：&quot;你不要作。&quot;我们是说：&quot;你要增加里面的内容。&quot;你们外面作了那么多，会讲道的，已经讲了那么多道理；对于你们，我们的感觉是说：&quot;你们要增加里面的内容。&quot;</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

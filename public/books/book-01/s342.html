@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月七日</h1><p class="meta">01.天窗365 · 第342/366段</p><p><a class="btn" href="s341.html">上一篇</a><a class="btn" href="s343.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s342.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月七日</h2>
+<p>生活总有计划，所以，计划要作什么，并不是说不可以；圣经说的，叫你不挂虑，不是叫你不计划。</p>
+<p>盖房子没有计划，你怎么盖。做一件衣服，没尺寸，你怎么去剪。作一件事，总是要事先考虑一下。主耶稣说，你盖房子，就要先计算花费。没有花费而乱盖，到时你没有钱，向哪里去拿？要计算花费。</p>
+<p>即使我们在这里彼此交通，也不随便就讲什么，也里面考虑应该讲什么，总要预备一下。以后，还有预备，不然上面接不到下面；像做文章没有一个中心题目，就不知道你里面讲什么。有一个中心，有一个主题，绕着这个主题讲，有条有序，讲的舒服，听的也会舒服。如果你乱讲，下一句、上一句乱套，人听得很苦。</p>
+<p>却又不是死套的，这就与挂虑不一样了。你挂虑跟心中有考虑是不同的，对一件事都要有考虑。</p>
+<p>作生意，你要考虑，不然就是乱作，不知这个生意有没有可做的，乱买货，你就倒霉。以后，你还要计算有没有销路，客源在那里，你要去想有没有市场。一句话说：每一个东西都有路。路不认识而你乱做，就没有路走。</p>
+<p>**对一些问题，有计划不等于你去挂虑。**一个人挂虑，跟计划不一样，人一挂虑就挂到头晕，想也不能想。所以，**把挂虑交给神，交托祂，你里面就轻松，对事情，就看得清楚，考虑事情也有路。**若挂重担在这边，心里觉得不对，对这事情总是进进退退的，矛盾就在那里产生。</p>
+<p>**对一些问题要先交托，挂虑、重担都交托给主**（彼前5:7）**。另一方面事情应该考虑，这个就有路了。**有一个弟兄来，他说：&quot;我现在要多作事，你说不要挂虑，不要挂虑怎么样？生活天天要过！&quot;他这样挂虑，怎么能知道神的旨意呢？他不会知道！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

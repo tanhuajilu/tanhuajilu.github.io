@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月三十日</h1><p class="meta">03.无比的爱 · 第304/366段</p><p><a class="btn" href="s303.html">上一篇</a><a class="btn" href="s305.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s304.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月三十日</h2>
+<p>我们要一直注意&quot;人&quot;的问题。这个人要给主造就得标准。</p>
+<p>体温表能量出体温多少度，显示得很准，不要人去猜想。神就要得着我们也用我们当作这&quot;表&quot;去衡量人，去分辨人。测量体温，不光用手去摸，还要用体温表，才会准确。我们自己不能糊涂，神才能用我们作标准的量表去量别人。</p>
+<p>我们要成为标准的才有用。那制造体温表的人会发现里面的水银显示不标准，只能作废，即便是一大堆，也只能割爱。重新在火中制造新的一批。</p>
+<p>作废的，拿出去卖便宜一点，可以吗？不可以！神用我们就像用体温表一样！</p>
+<p>我们感觉时刻都需要主。正如一首诗歌说的：&quot;我每时刻需你，可爱恩主，无人柔声似你，能施安抚。我需你主我需你，每时刻我需你，哦主，现在赐恩力，我来就你。&quot;</p>
+<p>因为在主里我们会进步，以后再会进步。在我们里面有这一个宝贝------主（[林后4:7](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=46&amp;chapter=3&amp;verse=6&amp;highlight=1#P6)），我们要爱护，要爱惜。因着神要用我们，我们还要进步。神要用我们的标准在哪里？这标准就是主。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

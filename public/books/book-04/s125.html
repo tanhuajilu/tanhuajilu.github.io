@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-五月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十日</h1><p class="meta">04.晒熟的美果 · 第125/366段</p><p><a class="btn" href="s124.html">上一篇</a><a class="btn" href="s126.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s125.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十日</h2>
+<p>圣经说：主向门徒显现，门徒看见主，就喜乐了。当他们回去，讲到他们看见主了，但是还有人不信。特别是多马，多马说：&quot;若是主不给我亲自听见，我不会相信。&quot;乃是等有一天，他们又一次聚集，主耶稣就进到他们中间，说：&quot;愿你们平安。&quot;主不单向门徒再显现，这次更向多马显现说：&quot;伸过你的指头来，摸我的手，伸出你的手来，探入我的肋旁，不要疑惑，总要信。&quot;主似乎向他说：&quot;如果是魂，是没有身体的，但我是有身体的，我是带着身体复活。&quot;多马说：&quot;我的主，我的神！&quot;主耶稣说：&quot;你因看见了我才信，那没有看见就信的，有福了。&quot;主已复活，升天，他还要再来，至今差不多二千年了，我们还没有见他来，但是，彼得书信说：&quot;我们虽然没有见过他，却是爱他。&quot;这个不简单，我们今天还没有见过祂，却是爱祂。直至一天，和他面对面了，我们要怎么说呢？我们要说：&quot;主啊，教会爱你两千年，等候了两千年，我也爱你已经几十年了，爱你爱得这长久，到今天，我们才看见所爱的主。&quot;</p>
+<p>今天，我们就是因着信去跟从主，和主有接触，有交通，等候他来。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

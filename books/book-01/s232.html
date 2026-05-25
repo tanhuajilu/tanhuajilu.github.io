@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-八月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十九日</h1><p class="meta">01.天窗365 · 第232/366段</p><p><a class="btn" href="s231.html">上一篇</a><a class="btn" href="s233.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s232.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十九日</h2>
+<p>我对那全时间事奉又转去做生意的弟兄说：&quot;这说明一个危机，说明你这个跟从主──全时间事奉，只是被一时热心冲动，也只是被人号召──他也出来（全时间）、我也出来（全时间），大家都表示要全时间事奉。这一阵热气叫你站不住脚，你也假作全时间了。但是时间是神最好的仆人，神借着时间来考验你，考验你到四十多岁，你就打退堂鼓，回去作生意了。&quot;</p>
+<p>他说：&quot;怎么办呢？&quot;我说：&quot;这个很好呀！&quot;</p>
+<p>&quot;怎么好？&quot;</p>
+<p>&quot;你全时间可以事奉，在职也可以事奉呀！不要以为全时间才是作主的工，做职业就不是，这都是人的观念。其实，你所谓的全时间，什么都没有做。以为每天都祷告、读经，做主工，才叫事奉，那不正确。&quot;</p>
+<p>我说：&quot;你睡觉的时候，那八个小时不是就没有全时间吗?而且还有吃饭的时间呢?人家八小时上班，你能像上班一般二十四小时去事奉吗?不能，你还要睡八小时，吃三顿饭，还要做许多生活上枝枝节节的事呢！算起来你八小时讲道事奉主也没有啊！最多是一周讲几趟道理而已。**我们说的全时间事奉，意思是，不管什么时候，不管什么事情，你心里都跟主有不住的交通，与外面做什么职业是没有关系的**，反而那说自己是全时间事奉，没有工作的，常是最懒惰的，但是属灵不应是懒惰的。</p>
+<p>有一个人，家庭需要他帮忙，他反说？&quot;我没有时间，我在灵修。&quot;家里小孩一吵，他一生气，灵修所得的都给抵消完了。所以他的属灵就是不现实的。</p>
+<p>以诺与神同行三百年，并且&quot;生儿养女&quot;，他对儿女还是有责任（创5:22－24）。并不是自己作主的工，自己的责任却不知道，儿女还要他负责，生活还要他负责，家务还要去做，家庭里许多的事还要去作。</p>
+<p>夫妻在家庭里要忙着照顾孩子，要帮忙洗尿布、刷地板，因为家庭是共同负担的，你有分，</p>
+<p>我也有分。所以，我们要生活在实际里，不是活在抽象里。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

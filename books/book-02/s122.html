@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月一日</h1><p class="meta">02.在光中得以见光 · 第122/366段</p><p><a class="btn" href="s121.html">上一篇</a><a class="btn" href="s123.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s122.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月一日</h2>
+<p>主所做的，我们说，我们做不到，因为都不是叫我们做的，是叫我们去相信，叫我们接受他的恩典。他的恩典够我们用（林后12：9），一定够用。你相信就够你用，你就长进，就是以后的为难比现在更大，你也够用。就如小孩挑东西，先挑五斤十斤，再挑二十斤...愈挑愈能挑，愈挑愈多，如果挑不起，就是没有长进。</p>
+<p>有时，我们想，这次或许要松一点，但再下去，困难更多！我们常想：今天不好过，明天或许好过。但是，明天更困难！因为这条道路不由得我们自己定规，全是神的安排，为叫我们接受祂更大的恩典（林前15：10）。</p>
+<p>有一位弟兄，未结婚以前，常替另一位弟兄担苦：&quot;他这家庭怎么过好！矛盾很多，困难很多，娶了一个太太这么苦，这么为难。&quot;他觉得很困难，但是，到他结婚了，他反而说：&quot;我走这个路，好像爬山，爬到很高的山顶去，上面还有更高的。&quot;就是这一个，叫他一生有学习。从人来看，他很不象样，别人看，好像没有幸福。要说怎么办，这是现实，他也没有推开，那么，就在这情形下，学习爱主，跟从主，虽然困难仍然存在，还是爱这个十字架，接受十字架跟从主。</p>
+<p>他在跟从主，无形中就帮助了弟兄姊妹。因为好多弟兄姊妹家庭有难处，他会帮助，别人有困难，也肯告诉他，因为他经过困难。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

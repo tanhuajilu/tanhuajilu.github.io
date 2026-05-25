@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十九日</h1><p class="meta">03.无比的爱 · 第293/366段</p><p><a class="btn" href="s292.html">上一篇</a><a class="btn" href="s294.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s293.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十九日</h2>
+<p>现在，你要挑担，生活和服事的担，挑一、二百斤，使你感到受压，为的是叫你认识灵，你不知道就很可惜。</p>
+<p>很多培灵会，并非培灵，实是培魂。人在其中，是道理多听一点，奇奇怪怪的事多听一点而已，对神而言，是越来越离开神。</p>
+<p>所以，讲道不易为，要慎重。</p>
+<p>脾气的话，说出来，就有脾气的气氛；柔和的说话，有柔和的气氛。但有讲论温柔的，讲的人却是粗的，话出来也是粗的。</p>
+<p>灵才生出灵的果实，魂就结出魂的果子。</p>
+<p>圣灵所结的果子有仁爱、喜乐、和平、忍耐、恩慈、良善、信实、温柔、节制等九样（[加5:22](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=47&amp;chapter=4&amp;verse=21&amp;highlight=1#P21)），肉体的果子却是显而易见的，如奸淫、污秽、邪荡、拜偶像、邪术、仇恨、争竞、忌恨、恼怒、结党、纷争、异端、嫉妒、醉酒、荒宴等。什么树就结什么样的果子，不会坏树结好果子，也不会，好树结坏果子。所以，做基督徒，不是怎么作，乃要人是对的，作的才对。</p>
+<p>比如写字不好的人，写一个字还不容易看到，多写几个字就不行了。写字好的，写出二张，四张，贴起来看，还是一样好，因为他写得好。有人写得不好，就怪用笔不好，换了笔再写，还说是笔不好。写字的是个书法家，写出来的字是有字体的，就顺顺的写下去；如果写一张好的，写另一张不好，就不好看。在灵、魂、体这方面去学习，功课是一辈子的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

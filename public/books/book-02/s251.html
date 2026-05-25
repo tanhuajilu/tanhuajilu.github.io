@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月七日</h1><p class="meta">02.在光中得以见光 · 第251/366段</p><p><a class="btn" href="s250.html">上一篇</a><a class="btn" href="s252.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s251.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月七日</h2>
+<p>我们作主的工，有时要进攻，有时要防守，有时还退让几步。像战场上的战士，该进就进，该退就退。这个退就是为了可以更进。有时有的人给我们七问八问的，我不答复！让你再问。他要辩，我承认不够他辩！到了我们觉得应该讲的时候，就给他整个的摔倒，给他拉到神面前来。</p>
+<p>因为属灵的工作是最实际的，不是讲得好听的。N弟兄说，无论是传福音，或者给信徒帮助，都是个摔跤。既是摔跤，就看你本身的力量有多大。你有力量，能把他吃得消，你把他一拉，就拉到主面前去，扳到主这里来。如果你力量不够，因他是硬板板的，你拉也拉不动，反而会给他拉到受伤。你里面是有力量有东西的，就不用怕。</p>
+<p>像那学功夫的人，你没有功夫拉他不动的，你打他，他不会痛，你反而痛。在属灵上你是刚强的，人家打你，摔你，摔不动你，他自己会受伤。所以今天教会的问题不是外面的难处，乃是教会本身的难处。</p>
+<p>我们如果认识神，活在神面前，蒙神的恩典，好多非法的事，不法的事，在我们中间就站立不住。因叫他碰到神。他再有道理，在神面前在光中都要仆倒下来。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

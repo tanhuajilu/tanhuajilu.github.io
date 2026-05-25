@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十六日</h1><p class="meta">01.天窗365 · 第178/366段</p><p><a class="btn" href="s177.html">上一篇</a><a class="btn" href="s179.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s178.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十六日</h2>
+<p>好多属灵的感语都非今日几个月内可以写出来的，乃是一年一句，几年几句，某年某月有什么话，交通了什么话，最终集中在一起的。</p>
+<p>这是几年的结晶。有圣灵工作的人，一看都摸着，都感动！</p>
+<p>因为出于神的话，不会改变，所以今天，我们没有学习属灵的功课，是没有路走的。</p>
+<p>但是在经过的过程，也是不简单，都要相信神。你不要灰心，就是要死了，也不要怕，死了还会叫你复活。像保罗说，他在亚西亚受压太重，力不能胜，自己也断定是必死的。</p>
+<p>死，是什么意思？死就是使我们去倚靠那一位叫我们死而复活的神。这里就摸到神复活的大能。**神复活的大能给摸着了，什么都带过去。**（林后1:9，4:14，5:11）</p>
+<p>保罗说：&quot;使我们认识基督和祂复活的大能。&quot;（腓3:10）</p>
+<p>主耶稣也说：要明白圣经，也要晓得神的大能。我们常会明白圣经，但是却忘记了神的大能，摸不着神的大能。既是这样，你怎么单去研究、明白死的字眼？你要摸着神的大能！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

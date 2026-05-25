@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十四日</h1><p class="meta">01.天窗365 · 第258/366段</p><p><a class="btn" href="s257.html">上一篇</a><a class="btn" href="s259.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s258.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十四日</h2>
+<p>M弟兄告诉我，有一个人从外面回来送他金链；心里想：&quot;送我这么贵重的东西，我怎么响应？&quot;后来有一位亲属来，他对这方面很内行，M弟兄把金链让他看，测试后就说：&quot;这是假的&quot;。M弟兄说：&quot;啊，是假的！我还想回礼，不要亏欠他呢！&quot;那弟兄也是我认识的，他后来告诉我：&quot;他送这些给人，只为好看就是了。&quot;</p>
+<p>今天好多假的，都跟真的差不多，但经火一烧一试就变黑了，显出不是真的，而是假的。</p>
+<p>所以交通就是这样，有的东西需要有人辨真假，经过交通，就清楚了。</p>
+<p>有弟兄说：&quot;我拣了好的就好，拣了不好的就上当。在外面，好多东西人家不说，好的不说，坏的也不说，面对选择，我无所适从。所碰到的人，有些乱讲，有些该讲却不去讲，因此，我常常吃亏。&quot;但是，我们如果肯把一些东西摆在弟兄姐妹中间交通，就不会吃亏！特别你们那边来往的人多，来历不清的人不要随便相信。除非有介绍信，不然就不要随便接受。</p>
+<p>他只说：&quot;我是信主的，我也是为主受苦。&quot;而你因有爱心，赶快接纳过来，就常常会吃亏。其实，他是否为主受苦，你不知道，都只凭他嘴巴去说。</p>
+<p>我们知道很多人在外面到处行骗，七讲八讲，经过调查，才发现没有这些事！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

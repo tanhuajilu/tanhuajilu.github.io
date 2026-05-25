@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-三月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十一日</h1><p class="meta">02.在光中得以见光 · 第81/366段</p><p><a class="btn" href="s080.html">上一篇</a><a class="btn" href="s082.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s081.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十一日</h2>
+<p>有时，一些事情发生，借着弟兄所讲的一句话，就叫你得造就；有时，为着你一个需要，你等候主，有些事临到你，你也得到造就。得造就，我们好像随时都可以。一般人都是从听道理受造就，但这个远比不上在实际环境里得的造就更多。因为听道理是听了，但里面还是摸不着。实际上，你不能脱离现实，神就是借着这个现实，才叫你去依靠神。</p>
+<p>好多姊妹结婚以后又生孩子，经历最多，她经历神听她祷告。小孩发烧，她就紧张，只有依靠主，一想到依靠主，紧张就没有了。有时她一直紧张，孩子的病好了，她还紧张担心孩子的病会不会复发──她有好多经历，在过往许多的事故中都经历了神。所以，我们基督徒一生的道路，就是经历神，愈经历神，才有从神来的东西供应出去。（诗66：12，罗8：28）</p>
+<p>下午我们谈话时，一位还没有结婚的姊妹也在谈，她会把婆婆、媳妇相处之道，怎么做、怎么做、说出来，讲一大堆，其实她还没有结婚。他教人做婆婆要怎么样，讲的都是空话。</p>
+<p>有一个弟兄也是这样，他给人讲怎么教孩子，讲了很多。另一位弟兄在那里听，&quot;哎呀！讲得很有道理&quot;。但看看旁边的老弟兄却没有表情。如果有表情，会阿们会点头。他想，老弟兄为什么没有表情，怎么回事？以后就问老弟兄。老弟兄说：&quot;他还没有结婚。&quot;他自己没有儿子，却教导人说怎么教、怎么教，这就是不现实，话说对了，也是外行，不是内行的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

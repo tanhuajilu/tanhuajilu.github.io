@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-四月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十六日</h1><p class="meta">03.无比的爱 · 第117/366段</p><p><a class="btn" href="s116.html">上一篇</a><a class="btn" href="s118.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s117.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十六日</h2>
+<p>谈到主来，我们该讲什么？我们就讲：末日，人要背道，人专爱自己不爱神，他们只爱世界，爱宴乐，爱吃喝。今天，这些东西已显在我们中间，这些就是预言的应验。</p>
+<p>圣经说，信徒们说主耶稣要来，等了二千年还没有来，就有人说：什么缘故主说要来，还没有来啊？这些话就是一个预言的应验。讲这些话就说出主耶稣要再来。</p>
+<p>所以，讲主的再来，要从近的事情去看。若从远的去看，虽然看了很多，还是很抽象的。近的事情，人才看得见。</p>
+<p>圣经说：末了的日子，人的爱心渐渐冷淡（太24:12）。现在，人的爱心，真的渐渐冷淡了。这是预言。主来之时，人是又吃又喝的。现在的世界，人真的是又吃又喝，并且注意喝的比吃的更多。有的人办宴筵，请人吃喝，吃得很贵，喝的也很贵。喝汽水、喝酒，真的，喝的比吃的更多更贵。</p>
+<p>挪亚的日子就是又吃又喝的，现在的日子，人也是又吃又喝的。研究主耶稣再来，就在这里，就在眼前。每一件事，你去看看，你就知道，主耶稣近了。所以我们里面要儆醒。</p>
+<p>主耶稣到圣殿去，看见殿里那些做买卖的，兑换银钱的，买牛羊鸽子的，就发怒，用绳子当作鞭子把他们赶出去。祂为神洁净了圣殿。在主的心里看，这是神的殿，怎可容让垃圾杂杂的堆在这里。凡不是神要的东西，无论是什么，都要赶出去。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

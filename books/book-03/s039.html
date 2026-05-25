@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-二月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月八日</h1><p class="meta">03.无比的爱 · 第39/366段</p><p><a class="btn" href="s038.html">上一篇</a><a class="btn" href="s040.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s039.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月八日</h2>
+<p>（姐妹在家又当怎样作妻子呢？）</p>
+<p>要顺服丈夫（弗5:22）。</p>
+<p>姐妹很重要，有姐妹说，作妻子不简单，作传道人的妻子更不简单，因为人人都看着你。作妻子是要作多方面的：作主妇、煮妇、护士、杂工，什么都要牺牲去作。不甘心的就会感到倒霉。假若要推丈夫去作也就乱了，因此作姐妹的在家里要好好为主作。</p>
+<p>弟兄姐妹作夫妻，感情应该很好，因为既是夫妇的感情，又是&quot;弟兄姐妹&quot;的感情，两种或三种感情连在一起，的确很甜美，很亲切。</p>
+<p>对于家务的承担，夫妻间也该有协调。有人在结婚以前已说清楚，将来孩子的尿布要归丈夫洗。等到生了孩子，姐妹真的一概不洗，这就过份。到了真要洗尿布的时候，丈夫可以洗，妻子也可以洗，彼此就更亲爱。在夫妇间的感情应该是越来越丰富的。能苦乐与共的，感情就增加，爱更趋于成熟。有老弟兄对老伴说：&quot;我越来越爱你了，因为日子不多。&quot;。夫妇间感情正常是越来越丰富的。</p>
+<p>很不幸，也真有人，两夫妻天天吵架直到死。晚年非常孤单的也有。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

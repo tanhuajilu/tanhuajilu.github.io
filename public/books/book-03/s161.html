@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-六月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月九日</h1><p class="meta">03.无比的爱 · 第161/366段</p><p><a class="btn" href="s160.html">上一篇</a><a class="btn" href="s162.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s161.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月九日</h2>
+<p>信主家庭里的儿女，很需要求主特别怜悯，他们不要以为自己听了很多，道理都懂就可以。他们从小在基督教的家庭里，什么道理都知道，从新约到旧约，好多经节都念过，有些初出来的传道人还输他呢！这情形，需要主的怜悯。特别是作传道人的，他们的孩子不信主的很多呢！他们每次传福音，很多人得救，家里孩子却没有得救，甚至他们的儿子也有反对他们的。这说明什么？是说明救人的工作不是人做的。如果是人作的，能叫这么多人信主，家里还会有一堆不信的吗？别人得救实在是圣灵作的，传道人的儿子得救，也必是圣灵的工作！不是作父母的能教导的。</p>
+<p>因此可以确定：得救、重生不是教出来的，是生出来的（[彼前1:](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=59&amp;chapter=0&amp;verse=22&amp;highlight=1#P22)23）。生出来的才是生命。只有在主里面的生命才可以行得通，是生命的，事奉主才会轻松；在教会中事奉得轻松，带领弟兄姐妹轻松，带领罪人得救也轻松。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

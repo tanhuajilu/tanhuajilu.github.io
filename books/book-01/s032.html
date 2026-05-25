@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月一日</h1><p class="meta">01.天窗365 · 第32/366段</p><p><a class="btn" href="s031.html">上一篇</a><a class="btn" href="s033.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s032.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月一日</h2>
+<p>夫妇和睦与否，直接影响孩子。孩子最苦的就是父母吵架，到底他要靠近母亲还是靠近父亲？他难受死了！</p>
+<p>夫妇和睦，儿子当然快乐，但夫妇间不是绝对没有矛盾，还会有的。但矛盾来时，要赶快解决掉，小的不解决，大的就很难解决。那么，怎样解决？都不是靠讲理的。越讲理由，只会越吵。你要学习让步（罗12:10）。有人说：&quot;我哪会让步，难道丈夫怕老婆吗？&quot;</p>
+<p>我说：&quot;不要说这话。你少说几句就不会吵了。到这么老，我们还在学习呢。&quot;</p>
+<p>**要学习让步**（腓4:5），**家庭才和睦**。</p>
+<p>一般说，女人总会话多一些，作丈夫的就要忍受。她讲说你，你跟他吵，感觉就不好！你忍受，肯听她讲了，很快，她又跟你好好的！夫妇就是这样奇怪的。先前吵吵闹闹，一下子又好好的。别的人劝他们不要吵，为此气得要死，还没有完，他俩却好起来了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

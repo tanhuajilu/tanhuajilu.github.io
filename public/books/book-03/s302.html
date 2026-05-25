@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十八日</h1><p class="meta">03.无比的爱 · 第302/366段</p><p><a class="btn" href="s301.html">上一篇</a><a class="btn" href="s303.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s302.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十八日</h2>
+<p>复活的大能（[林前15:42](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=45&amp;chapter=14&amp;verse=41&amp;highlight=1#P41)）有炸力。这炸力越受压越厉害。打石的人要打到几尺深处，才埋下炸药，一下子大石块炸开。如果打石打得浅，只能炸开一点点，如果打得深一点才有更深更大的炸力。所以要打得深。</p>
+<p>复活的大能，还有粘力。大家同有这个生命，都粘在一起，合一是因主粘着才有的，并且彼此连在一起，就是打台风也打不掉，刀剖也剖不开。罗马书八章说，谁能叫我们与基督的爱分开呢？在基督里，我们就是基督奥秘的身体，谁也不能分开。</p>
+<p>所以，我们在服事时，有没有和元首基督连起来？又有否和身体连起来？若没有，就不过你作一套，我作一套吧！力量都分散了。</p>
+<p>有人用羊圈（篱笆）把羊圈起来，只要有一处损坏，羊就跑出来走自己的路。有牧者，就不用篱笆，因羊是有群性的，牠们听牧人的声音。羊能听出牧者的声音，信徒能听出主的声音或不是主的声音。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

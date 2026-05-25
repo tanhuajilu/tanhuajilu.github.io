@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-三月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十六日</h1><p class="meta">03.无比的爱 · 第76/366段</p><p><a class="btn" href="s075.html">上一篇</a><a class="btn" href="s077.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s076.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十六日</h2>
+<p>哪里有神的爱，人就要来。碰着这个爱，人就来，因为每一个信的人都有属灵的生命，这个爱是彼此有响应的。因彼此有响应，你就觉得这个爱是丰富的。你一点爱出来，我也一点爱出来，&quot;爱&quot;出来了，就丰富。假如你没有，他也没有，大家都没有东西拿来，就不会感觉得到。这个拿出来，不是一个道理讲一讲，不是一种行为，也不是一种属灵的爱的气氛。所以很难讲这个爱，你觉得有的人给你感到温暖，这就是爱的东西。</p>
+<p>虽然一个人他外面很热情，但是你碰到他，感到在他里面有一个格格不合的东西，就很难交通。正如常说的一句话：&quot;有见面没交通。&quot;面是见了，里面还没有交通过。因为这是超过&quot;人&quot;的东西，是生命的东西，如果没有碰到的话，就会感到很抽象，讲是讲，但都是摸不着的东西。如果你碰着了，就会觉得是千真万确的。</p>
+<p>这一个需要主、需要圣灵的工作，藉着外面的破碎，藉着里面的启示光照，两面作工在你身上，你在属灵上就会有突破，对属灵的世界开始有感觉。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

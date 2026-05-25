@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-三月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十三日</h1><p class="meta">03.无比的爱 · 第73/366段</p><p><a class="btn" href="s072.html">上一篇</a><a class="btn" href="s074.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s073.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十三日</h2>
+<p>有些人相当温柔，给人觉得他的生命很好，经过碰一碰才晓得，他有的是人的温柔。人的温柔是有限度的，不是生命。以前我们看问题，都看外面的，&quot;这位姐妹很温柔，讲话很少，好像很敬虔的，这位姐妹是好姐妹！是属灵的姐妹！&quot;后来才认识这不是基督的，是&quot;属人&quot;的。等他经过神的对付，才发觉他的好不能成就神的义，只有出于神的才是。</p>
+<p>林前十三章讲爱，有些人舍己身叫人焚烧，把所有的都周济贫穷人，这个爱是不是最大的？接下去说，如果没有爱，你这些如何呢？没有基督，就没有真实的爱，所作的只不过是鸣锣响钹就过去了（林前13:1）。出于人的爱都是手段，因为你另有目的存在，虽然你没有说出来，但是达到你目的时，爱就到这里为止；目的没有达到，就反过来&quot;恨&quot;，这个&quot;恨&quot;比先前的&quot;爱&quot;更厉害。</p>
+<p>这个就是人的东西，但神的爱不是这样。神的爱是：你反对我，我也爱你，敌对我，我也爱你。&quot;你相信主耶稣，你就成为神家的儿女&quot;，人一相信，神就要赦免你。就是先前说&quot;钉祂十字架，钉祂十字架&quot;的，神也赦免他们。因为他们所作的，他们不知道，这就是神的爱！爱有实行，爱有实际，要出代价；这个代价不是外面的，乃是生命的代价。神的爱牺牲了祂的儿子，主的爱牺牲了祂的生命。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

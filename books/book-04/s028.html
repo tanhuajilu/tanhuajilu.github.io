@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月一日</h1><p class="meta">04.晒熟的美果 · 第28/366段</p><p><a class="btn" href="s027.html">上一篇</a><a class="btn" href="s029.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s028.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月一日</h2>
+<p>有些人在聚会中表现很轻浮，很浮浅的，你给他&quot;看一看&quot;，他就要收起来。所以，这就是：教会在属灵充实时，肉体在其中要萎下去，他没有办法站起来。</p>
+<p>常常就因缺少属灵的充实，肉体在这场合里有市场，他在这里要找机会讲话，要把他那一点点发表出来！叫人怎样走，头不要抬起来------这不是敬虔，这是人的东西------敬虔是&quot;像神&quot;。这像神是很自然的，生命是很自然的，大家在一起交通是很自然的，不是规规矩矩，是个牧师的样子------穿了牧师袍，看起来很像样的------像一个宗教领袖，有宗教的气氛。不是这个。</p>
+<p>不要去注意这个，因这是外面的。如果敬虔是这个，你去多做几套衣服（牧师袍）去穿就可以！这虽然看上去像很好看的，但是里面没有！因为没有神，就没有敬虔。圣经说：&quot;大哉，敬虔的奥秘，就是神在肉身显现。&quot;</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

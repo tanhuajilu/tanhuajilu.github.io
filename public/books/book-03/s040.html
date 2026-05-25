@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-二月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月九日</h1><p class="meta">03.无比的爱 · 第40/366段</p><p><a class="btn" href="s039.html">上一篇</a><a class="btn" href="s041.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s040.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月九日</h2>
+<p>有些老人家常给人印象或被称赞说：&quot;看见你总是那样慈祥的。&quot;对，老人家的脸是几十年模成的，盼望年老的时候，人家看见我们是慈祥的，否则，越老就越叫人怕。</p>
+<p>夫妻之间不只有爱，也要彼此相信。没有&quot;信&quot;，就很苦。妻子说：&quot;你跟那人说些什么？&quot;丈夫听见这话，就感到很苦。相信就没有疑惑。</p>
+<p>除了相信，也该有督促。夫妻必然彼此关心，免不了有时也会作错，这时要爱护要保护。有不正常的情形却要提醒，因为试探很多。在家庭里，这些功课是学习不完的。现代趋向小家庭，我们在大家庭的，在家中也有学习。所以作儿女有学习的，都很好，是神的怜悯。</p>
+<p>许多被神用的人都有好的母亲（如提摩太，提后1:5），很多好的下一代都因好的母亲影响而来。</p>
+<p>家里有不如意的事，叫你很感为难，也当感谢神；恩典是够用的，反正属神的人，神会带领，叫我们与祂更亲密。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

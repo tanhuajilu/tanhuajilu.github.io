@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月八日</h1><p class="meta">02.在光中得以见光 · 第282/366段</p><p><a class="btn" href="s281.html">上一篇</a><a class="btn" href="s283.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s282.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月八日</h2>
+<p>只有道理，不一定碰到实际。你碰到事实，再去讲你的道理，还更清楚呢！那时你讲什么叫作爱，你知道！</p>
+<p>常在一些关头，在一些要紧的事件上，会显出人里面真实的情形。如果你忠心于主，虽然吃亏，神为你所作所补给你的，超过你原来的千万倍。神要把你充满！你真的为着主，主的眼睛就在看着你；在主所带我们的道路上，他不只亲手牵引我们，还用眼目引导我们。你走到那里，主都看见，我们的情形主都看见。所以哥林多书说，若有人爱神，这人是神所知道的。你爱神，而神知道，这就够了。（林前8：3）</p>
+<p>很多人爱神，是要叫人知道：&quot;这人爱主啊&quot;。你怎么知道他爱主？&quot;啊，他很有爱心，他爱主！&quot;有一次，在一个丧事聚会里，一位长老起来说：&quot;这位弟兄很有爱心，怎么有爱心呢？有一次我进院治病，他买一大包饼干给我！&quot;这就很有爱心吗？这个叫爱心吗？真正的这是什么呢？他对这个爱认识太浅了。爱心不是表面的，乃是实际的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

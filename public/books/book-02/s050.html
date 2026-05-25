@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-二月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十九日</h1><p class="meta">02.在光中得以见光 · 第50/366段</p><p><a class="btn" href="s049.html">上一篇</a><a class="btn" href="s051.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s050.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十九日</h2>
+<p>我们的神对我们也是这样，首先，我们得着祂的亲嘴，这一个亲嘴就表明了祂的爱。祂拥抱着我们来亲嘴。父亲把孩子们抱起来，就是抱在他的胸怀。抱在怀里是什么意思？主耶稣是父怀里的独生子，胸怀就是爱所在的地方。今天我们是生活在爱的地方，就是神的胸怀里。我们是多安息哩！就像婴孩睡在母亲的怀里，是多安息多温暖的。</p>
+<p>有一个人对我说：&quot;我碰到一个传道人，是反对蒙头的，他问圣经里有亲嘴问安的事，你们为什么不亲嘴，是否因为感觉不清洁？&quot;我说，他这样问，是要为难你，圣经说：&quot;你们亲嘴问安，彼此务要圣洁。&quot;（罗16：16，林后13：12）这关系到圣洁，若是风俗，就不会提到圣洁了。各人各自去生活就可以，不需要亲嘴问安。还有，如果没有圣洁而去亲嘴，这就跟那些邪灵有关的事没有分别了。</p>
+<p>圣经说，在圣洁的人，凡事都圣洁，在不洁的人，凡事都不洁。这不是外面做的问题，要问是什么人做的。对的人做的就是对，不对的人做的，就是不对。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月四日</h1><p class="meta">02.在光中得以见光 · 第278/366段</p><p><a class="btn" href="s277.html">上一篇</a><a class="btn" href="s279.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s278.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月四日</h2>
+<p>跟从主，背十字架，没有人的舒服；因此，我们的诗歌说：&quot;我若稍微偏离正路，我要立刻舒服。&quot;肉体就是喜欢舒服的。&quot;但我记念我主基督，如何忠心受苦。&quot;所以连受苦也要忠心，主所要的受苦是忠心的受苦，忠心到怎样的地步？连神掩面离弃祂，还是忠心顺从。不是说：&quot;从永远到永远，我们永远连在一起的。父与子是不分开的。&quot;然而，主为了担当人的罪，父掩面不看！你看这多痛苦的。主却经过这个。</p>
+<p>今天，我们这人也要受点苦。找弟兄找不到交通；跟神也好像离得很远；里面很孤单！神给你经过这孤单，也带领你进到丰富里去。所以凡是你为难的感觉，都对你有帮助的。</p>
+<p>你的道路走得愈深，同情同走的人愈少。刚才我们同唱的诗歌说：&quot;忠心跟从的人，一日比一日少。&quot;连那些忠心跟从的人，都不很多。当主在旷野传道时，妇女孩子不算已经五千人，恐怕全部算七千人也不止。大家在那里听道。到主被抓钉十字架时，恐怕吃过饼的人还在那里喊钉他十字架。跟随主到十字架下的剩下多少？没有几个！除了一些妇女，还有约翰（约19：25，26）。</p>
+<p>今天，很多人表示奉献跟从主，跟主的人很多。&quot;众人涌进主的国度&quot;，但是&quot;十架少人负。&quot;所以，不在乎人数多，乃在乎得着几个忠心跟从基督的人叫神喜悦，那么，神就能够心满意足了。因此，不是凭我们享受不享受！是看神喜悦不喜悦。对真的进到至圣所里更深事奉神的人，外面的人不会理解。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

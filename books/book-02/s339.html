@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十二月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月四日</h1><p class="meta">02.在光中得以见光 · 第339/366段</p><p><a class="btn" href="s338.html">上一篇</a><a class="btn" href="s340.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s339.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月四日</h2>
+<p>每一位在神那里蒙了恩典的人，他的灵是正常的，跟别人都会彼此合拍，像唱歌合拍一样。大家都按同一歌谱打拍子，依旋律去唱，&quot;拍拍拍&quot;不会乱七八糟，声音都很齐的。</p>
+<p>在音乐会里，唱歌唱到有歌的感觉有乐感的时候，演唱者在唱，他唱你也和他合拍（拍拍拍），几千人合拍，还很和谐的，因为里面有一个和谐的东西。当神作工在我们里面的时候，也必叫我们的灵跟他和谐。若有人的灵跟神没有和谐合拍，他跟别人也没有办法和谐。所以我们跟神的关系，一定要挂好。</p>
+<p>一个人跟神的关系，如果不正常，他跟弟兄姊妹，也连不起来，这情形，我们都有经历。一位弟兄爱主、是正常的，见到弟兄虽然还距离很远，他巴不得多走几步，赶快见面拉手握手：&quot;感谢主，今天，见了个面！&quot;如果一个人跟神是不和谐的，看见你来，会赶快走开，避免跟你见面，因为见面打招呼也是很勉强。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

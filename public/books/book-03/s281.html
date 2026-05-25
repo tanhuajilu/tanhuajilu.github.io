@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月七日</h1><p class="meta">03.无比的爱 · 第281/366段</p><p><a class="btn" href="s280.html">上一篇</a><a class="btn" href="s282.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s281.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月七日</h2>
+<p>属灵的东西，不要讲得那么高，叫人摸不着。要高，也要从低处学习起，一点一点的往上学习。</p>
+<p>基督教里常有很多书出版，一本书出来，首页就介绍作者，很多的衔头先写出来，叫人有一个印象：这些书是叫人去认识人，都没有叫人去认识神。这些作法都是要叫读者从人去看问题，没有叫人以基督作中心。</p>
+<p>我们所有的一切，要以基督作中心。祂是神的中心，是宇宙的中心。教会也以基督作中心。（[西1:24](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=50&amp;chapter=0&amp;verse=23&amp;highlight=1#P23)）我们这个人也以基督作中心。中心定下来就好，基督要给定下来作中心。画圆，要有圆心，所画的圆周线才完整、完美。到将来，万有也要在基督里同归于一。在宇宙间，唯有基督是中心。至于我们，我们彼此之间的关系也因着基督，因着基督的爱。基督作中心，我们才连得起来。</p>
+<p>在我们的一切经历中，出于主的，神就祝福，出于我们自己，神不祝福，在自己里面，我们没有路走。人总是有限的，人再好，再有本事也是有限的，基督才是无限的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-一月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十四日</h1><p class="meta">02.在光中得以见光 · 第14/366段</p><p><a class="btn" href="s013.html">上一篇</a><a class="btn" href="s015.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s014.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十四日</h2>
+<p>以前宋弟兄传道说：&quot;谁要我替他祷告，写信给我，我就替他祷告。&quot;写信的很多，怎么祷告？有一位弟兄说，他可能把这些字条拿到神面前说：&quot;主，交给你。&quot;若是这样就不现实，这么笼统就是不现实。</p>
+<p>那么，应该怎么样？你有负担为一个人祷告，你就替他祷告，若没有负担，去祷告很多也没有用。有一个初得救的年青人，有一天来找我说：&quot;老弟兄，我祷告，神没有听。&quot;我说：&quot;怎么样？&quot;他说：&quot;我在中学念书时，有两个老师对我很好。得救以后，我就为他们祷告，求主拯救，二三年之久，天天替他们祷告，那两个老师还没有得救就死了。到底我这个祷告对不对？怎么我祷告，他们不会得救？&quot;</p>
+<p>我问：&quot;你怎么起头替他们祷告？&quot;他说：&quot;我看N弟兄的三次见证，讲到他为同级同学的得救祷告，先先后后，他的同学都得救。所以我学他这样祷告。&quot;我说：&quot;你这个是学的，N弟兄做，你学他做。他为60多同学祷告，神全听，因为他是有负担从里面向神祷告；但你只学他而已，你去学，里面没有这个负担。你学他去做，外面去做，结果没有效果。&quot;</p>
+<p>所以属灵的事不是学得的，是里面自然而然有一个属灵的负担去做（林后2：14，3：3－4）。凡事有属灵负担去作的，不论是祷告，是带人信主，都有效果。凡没有负担做，只是别人作，你跟去作，或应人所请去作的，做是做了，都没有效果。有效果，也是假象而已。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

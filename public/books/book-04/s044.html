@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-二月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十八日</h1><p class="meta">04.晒熟的美果 · 第44/366段</p><p><a class="btn" href="s043.html">上一篇</a><a class="btn" href="s045.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s044.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十八日</h2>
+<p>很多人参加擘饼，吃饼喝杯好多年，却看不到有一些长进。他们把擘饼当作一种仪式。</p>
+<p>所以你要先摸到属灵的实际，这个见证摆出来才有能力。不然，犯罪的人还去擘饼，擘了还是平安，犯了革除罪的人去擘，也没有事情，表明大有问题，因为不是主所承认的。</p>
+<p>如果这饼是主所承认的，有问题的人，犯罪的人吃了，圣经说：&quot;在中间，就会有人软弱，有人患病，甚至会死，因为不按理吃饼的是吃喝自己的罪了。&quot;可是，今天人吃了也没有这等事发生，吃了还是平安无事！</p>
+<p>有信徒问我们：&quot;怎么许多人参加擘饼聚会，我们明明知道他犯罪，负责人也知道他犯罪，却不敢对他开除，还给他擘饼，他擘了还平安无事，生意还做得很好。怎么办？&quot;我说：&quot;这个饼主没有承认。如果主承认的，这样的得罪主，主还给他过去吗？这就是属灵的实际。&quot;</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

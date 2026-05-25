@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十一月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十九日</h1><p class="meta">01.天窗365 · 第324/366段</p><p><a class="btn" href="s323.html">上一篇</a><a class="btn" href="s325.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s324.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十九日</h2>
+<p>现在，提到基督徒对钱财方面：</p>
+<p>钱财的迷惑非常厉害（提前6:8），钱财会把人占满，因为钱财这东西能叫人不仁不义，所以，圣经才说末世的时候，许多人会变成爱钱财，爱宴乐，不爱神。</p>
+<p>钱财破坏人很厉害，人一要钱，亲人也可以不认。</p>
+<p>在国外的人，接到国内亲友的信，就不肯看，因为怕向他要钱。&quot;又要讨钱了。&quot;心里就很怕，因他看钱看得很重。</p>
+<p>有一个弟兄到美国生活（是八十多岁的老人了）。有一天，他到外面工作，儿子对他说：&quot;父亲呀，你赚钱了，要补贴伙食费呀！&quot;父亲哭笑不得，心想：从小培养你长大，到了时候帮助你出国生活，今天我老人家到你这来吃几顿饭，为要看你，你却算我伙食。那么，我要跟你算，你算得了吗？</p>
+<p>儿子有钱，还要再多，舍不得给父亲吃饭，还要父亲付钱。</p>
+<p>人为钱，为到要命，这钱真害死人呀！所以，圣经说，贪财是万恶之根。</p>
+<p>不过，圣经叫人不贪钱，不是叫人不赚钱。能赚钱就最好，因为你可有余钱帮助别人。正如以色列人在旷野拾玛哪，多收的没有余，少收的也没有缺，因为多收的可以给人（林后8:14－15）。神给你这么多钱，不是为着你用，你还要看到好些肢体在痛苦中，想到这一个，你就会把捆住的钱解开，放你的钱出去，让神行神迹。</p>
+<p>神如果用你的钱，就是给你的恩典，这也是很荣耀的事。</p>
+<p>如果你的人不对，你有最多的钱，神也不要。</p>
+<p>啊！这是严肃的事，只有糊涂的传道人才会随便收受人家的钱。清楚的人，就不会随便，人是对的，他的钱财会收，人不对的，他的钱也不会接受，因为是对的，神才悦纳。</p>
+<p>埃布尔因着人是对的，神也悦纳他的奉献。因此，不是你外面财物的问题，是你人的问题。你是对的，东西才分别为圣归神。</p>
+<p>你有财物，却一直说：&quot;这是你的。&quot;你越说是你的，你越自私，自私到要你一点也很难。所以有人在这方面就很不正常，向他讲道理，也没有办法。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

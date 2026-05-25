@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十二日</h1><p class="meta">02.在光中得以见光 · 第256/366段</p><p><a class="btn" href="s255.html">上一篇</a><a class="btn" href="s257.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s256.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十二日</h2>
+<p>1935年时，我们开始认识圣灵的生命，直到1949年，再有认识，其间，不知增加了多少的丰富！后来的比先前的更有亮光，更有分量。（就如市面所卖的维生素剂，有不同克单位分量的产品。）分量浓的，所供应的量就愈大。如果分量是薄的，功用就薄。属灵的分量强的，效力就大，分量薄的，味道就淡，功用也薄。</p>
+<p>像N弟兄，本来很重解经，以后就被转到生命上。他两次出外，在世界转了两圈，又找到史百克弟兄，就有转变。开始时，两者都观望，后来就更进一步交通，因史百克弟兄的书有复活生命的启示。N弟兄就是这样一路进步一路进步，直到有一天被关牢，被关了，以后的情形就不知道了。但我会说，他的供应在主面前是更有能力，虽然他过世了，他留下的文字，仍然在说话。像亚伯虽死了，却因信仍在讲话。话不在多，乃在它的内容。</p>
+<p>有人写一本叫X殉道史的书，但却没有把殉道的灵荣耀的灵写出来。有这个灵，才叫人可以殉道。写这样殉道者的书，应该由中国大陆内地的人来写，才会有同感。那一本书所提到的内容，就有叫人含糊的地方。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月八日</h1><p class="meta">01.天窗365 · 第160/366段</p><p><a class="btn" href="s159.html">上一篇</a><a class="btn" href="s161.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s160.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月八日</h2>
+<p>我们讲神，不是用理由去讲有神，我们是用灵来讲有神的事实（林后3:6）。你讲有神、有神，人也不会相信神。我们不能把神当作理论。我们是把神这个事实摆出来。我们讲神，就显明神在这里，我们不是讲空话的。</p>
+<p>我们讲茶------这杯茶，里面就是有茶的，不能里面没有茶。</p>
+<p>**我们讲神，我们里面就是装着神的。**如果没有装神，只一个理论，就不会在我们身上产生那个实际。</p>
+<p>你有神，话摆出来，神就借着你的话摆出来。</p>
+<p>今天，凡是属灵的东西都是事实，我们不是讲理论，讲道理，我们是摆事实。不然，知识分子的理论也太多了。你要把一个有知识的人带上去不容易，你不容易把一个人折服下来。因为他从天问到地，由东问到西，整个世界他都问。问这些问题，你能给他完全解答清楚吗？解答不了的。</p>
+<p>很多人来谈话，来讲科学，我说我对科学不谈，因我不是谈科学的，我是讲耶稣的。天文不天文我不懂，我只是讲耶稣。你跟他谈天文，他讲内行，我们讲外行呀！一讲耶稣，我们变作内行，他变作外行了。</p>
+<p>所以有些人来，谈一谈，他说：&quot;我是高中生。&quot;高中生有什么了不起，大学生也一大堆，你以为高中生就不得了吗？</p>
+<p>那读大学的也说：&quot;我是大学研究生。&quot;这也没有什么了不起。博士在美国也一大堆，在那里博士洗碗的也很多，有什么了不起啊！你把这个摆出来作什么？</p>
+<p>**你真正需要神，我就把神传递给你。你心灵空虚，我就把这位主耶稣给你来满足你！其他的，我没有。**像彼得所说的：&quot;金银财宝我没有，我将我所有的给你，就是拿撒勒耶稣的名。&quot;瘸脚的就被治好，可以行走；这是有钱买不到的。（徒3:6）</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

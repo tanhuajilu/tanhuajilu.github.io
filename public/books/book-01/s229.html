@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-八月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十六日</h1><p class="meta">01.天窗365 · 第229/366段</p><p><a class="btn" href="s228.html">上一篇</a><a class="btn" href="s230.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s229.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十六日</h2>
+<p>问：有人要跟随主，却不理自己的家庭，不是不负责吗？</p>
+<p>答：在你自己是否要跟从主？别人是别人的事。</p>
+<p>问题是，跟从主的人，他自己清楚要跟从主，跟从主，自然而然要付代价。另一面，他对家庭有责任，要养孩子，要养家。**如果主清楚呼召他，家庭的责任，主必供应他，他要有信心去走。**</p>
+<p>要有信心，这是最现实的。（罗9:22，来3:14，彼前1:7、9）他没有信心，家庭的责任，谁来负责？他在外全时间服事，主也要叫他有信心去过信心生活；若是没有，还是去做工，维持生活好；带着职业来为主作一点工作就比较实际。</p>
+<p>如果兄弟姐妹（家人）也是信主，对他专心服事也有彼此的关心，主若真选择他撇下家庭儿子为他作工。也会感动他爱人和他同心合意。有这个同心合意，他作工才有力量。如果太太埋怨，就是个漏洞，所以作工的人，家庭很有关系。就像一台戏，后台没有鼓，没有锣，演出也没意思。有时后台好，比起前面做戏更要紧。</p>
+<p>一个传道人，后台（家庭）很重要。你在这里做，她在那里拆，所做的都拆光了，你还建造什么？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

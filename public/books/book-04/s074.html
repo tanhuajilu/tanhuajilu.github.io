@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-三月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十日</h1><p class="meta">04.晒熟的美果 · 第74/366段</p><p><a class="btn" href="s073.html">上一篇</a><a class="btn" href="s075.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s074.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十日</h2>
+<p>&quot;各从其类&quot;是神工作的原则。</p>
+<p>在弟兄姊妹中间有各种不同的情形，也是各从其类。用思想的就跟用思想的在一起，属灵的就跟属灵的在一起；多话的就找多话的，是安静的就安安静静坐那里，都不一样。说&quot;不一样&quot;是里面的，不是外面的，所以里面的是什么，外面的也是什么。</p>
+<p>主耶稣说：&quot;心里所充满的，口里就讲出来。&quot;充满真理的，就把真理讲出来，充满基督充满主，就把主讲出来。正如那些赚钱的一坐下就讲赚钱，就讲赚钱的路在哪里，开口就讲赚钱。至于那些追求学问的，讲的就是学问，那些重名声地位的，一讲就是名声地位，都在这些东西上去比高低。那属灵的人，就讲属灵的话，各从其类。</p>
+<p>属灵的人必跟属灵的人走在一起，属肉体的就跟属肉体的一起，要叫属肉体的人跟属灵的人去，没有办法！因这里的分别，是生命的分别。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

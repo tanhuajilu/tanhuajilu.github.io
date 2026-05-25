@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十四日</h1><p class="meta">03.无比的爱 · 第319/366段</p><p><a class="btn" href="s318.html">上一篇</a><a class="btn" href="s320.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s319.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十四日</h2>
+<p>我们不要求知道，不要想知道前面怎么去走。我说，明天的道路，只有主知道，我们自己也不知道。真的，我们一点也不知道。如果我们想知道工作怎样，家庭怎样，越要知道，就越糊涂。我们是不知道！虽然不知道，但是我们的神知道！我爱神，神知道！别人不知道，我自己也不知道，但是神知道！（[林前8:3](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=45&amp;chapter=7&amp;verse=2&amp;highlight=1#P2)）</p>
+<p>对一些人，我们常看外面说，这人很好。事实怎样，我们不知道，以为他很好，恐怕他最坏，但神知道。神看人的内心，神知道人怎样！我们看这人，今天是热乎乎的，到他要跌倒，就跌倒了。反而有些人，他一个人平平淡淡在过生活，一天又一天的过，他不改变。</p>
+<p>（我们看过有些人很热心，热热闹闹的，过了一年、两年，看不见他们了。）</p>
+<p>对于前面的路，我们不要怕，因为有神的同在，就有胆量，没有神的同在，人再多也没有用，我们的路是越走越光明，越走也越有把握。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

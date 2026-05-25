@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十六日</h1><p class="meta">02.在光中得以见光 · 第198/366段</p><p><a class="btn" href="s197.html">上一篇</a><a class="btn" href="s199.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s198.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十六日</h2>
+<p>如果人想要做&quot;大&quot;，就会给神摔下，他自卑，神却叫他高升，这是属灵的定律。圣经说：&quot;神抵挡骄傲的人，赐恩给谦卑的人。&quot;（雅4：6）</p>
+<p>骄傲的人不会因人劝他几句，就不骄傲，一辈子，他还不会谦卑的！乃是经过神的打撃，神的对付，对付到他不低头也得低头。像那些个子高大的人，经过矮门框，一不小心就碰额，第二次他忘记了，又碰一下，碰到头了，他才乖乖的，以后经过门就把头低下来。若不低下头来，又会再碰，碰到头痛。</p>
+<p>你骄傲，神有办法对付！你再骄傲，神再对付。你看那些有钱人，走起路来有风，挺身昂首，到他破产的时候走出去的时候，头都放得低低的，用报纸把脸蒙起，这时，他才谦卑。</p>
+<p>一个人愈喜欢面子，愈喜欢荣耀，神就给他拆下。所以，我们在神面前都是赤露敞开的，不必要把自己装饰起来，只管带着本相到主面前！。因为到神面前去的，神不是看你的好，还是坏，神看什么？神看在你身上彰显的是基督还是你自己？是出于基督，就是对，出于人的，最好的也是不对！</p>
+<p>我们不是零零碎碎的看什么好或什么不好，不是，乃要看是否出于基督。出于基督，就是神所喜悦的，出于人都是受咒诅的。所以到神面前来，不是看&quot;我有多好&quot;，乃是披上基督，穿上基督。圣经说，我们靠着主耶稣基督，就能坦然无惧的来到神面前，如果不以主作我们的义袍，我们没有一个能有胆量到神面前去。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

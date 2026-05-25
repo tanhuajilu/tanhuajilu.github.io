@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十五日</h1><p class="meta">04.晒熟的美果 · 第360/366段</p><p><a class="btn" href="s359.html">上一篇</a><a class="btn" href="s361.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s360.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十五日</h2>
+<p>五○年开始，运动成立，说宗教信仰自由，但要表示爱国，要参加运动，以后就有政治学习，当时最为难了，因为聚会处一直都和外国人无关，但其他的人因此都定罪聚会处。从这里，我们才发觉许多的东西是超过了信仰的。</p>
+<p>在这里面，一直有摩擦，每次开会，上百的传道人要有&quot;学习&quot;，形成的压力很大。一段时间以后，教会生活都变作政治学习了，无形中就受了亏损。</p>
+<p>大家开始感觉不行，以后就脱离了。那时，就是在争战中，真的感到为难，因为教会外面的活动要增加，但是属灵的内容却越是空虚，这里面有很大的争战</p>
+<p>五十年代，各宗派教堂的人都在那里搞起来，人都定性我们顽固到底。我们连一句他们的话也不讲，他们就说我们顽固到底，顽固到死。可是，在我们是说：我们为主对真理绝对，不是顽固，我们是忠于真理。他们问：&quot;怎么样讲才是真理？&quot;我们是说：&quot;你说是毒素，我说是真理。&quot;在当时，你见证真理，谁会来支持你？没有的。谁都反对真理，但你见证真理，坚持真理，忠于真理，真理的神，真理的灵就与你同在，荣耀的灵与你同在！</p>
+<p>所以殉道不是死了才是殉道，乃是还没有死，他里面就有殉道的灵。殉道者能够多受一些苦难，甚至自己牺牲，这不是人能作的，乃是荣耀的圣灵在那时充满了他。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

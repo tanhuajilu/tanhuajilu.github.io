@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十四日</h1><p class="meta">01.天窗365 · 第166/366段</p><p><a class="btn" href="s165.html">上一篇</a><a class="btn" href="s167.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s166.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十四日</h2>
+<p>今天若没有这一个在基督里的经历，就有代替品来代替。</p>
+<p>以前没有东西吃的时候，树叶、草根都拿来吃，吃是吃了，说吃饱这是口说的，实在是填肚子，不是饱肚子。</p>
+<p>今天很多人就是作代替品的工作，没有圣灵的能力，就用人的能力来代替；没有真理，就用道理来代替；没有神，就用神学来代替。**代替品怎么能叫人满足呢？**</p>
+<p>在属灵的世界里，你稍有开窍，就会看见：**今天全世界，属灵生命是非常的贫穷，在闹饥荒。**</p>
+<p>一年过一年，举行了很多特会，都没法解决这些属灵的问题。每一年都要开特会，不开不行，但是每一年开特会，都比不上前一次的。开始时，生命出来还差不多，越多举行，生命的分量就越少。为什么？</p>
+<p>**吗哪是天天新的**（出16:16，18－22，启2:17），**属灵的东西是天天新的**。所以不能凭着老资格，&quot;我服事主几年几年了。&quot;这些没有用。</p>
+<p>有一位服事主的弟兄来交通，师母也同来交通，他问说：&quot;在国外，有很多老弟兄，一讲就说他&#x27;是鼓岭的&#x27;。但是摸到他身上的生命也跟别人差不多。究竟&#x27;是鼓岭的&#x27;表示了什么？为什么他说是鼓岭的，我们在他身上摸不到什么呢？到底是怎么一回事？&quot;</p>
+<p>我答说：&quot;你这话摸得很实际。&quot;鼓岭是什么呢？&quot;鼓岭&quot;不是单讲几篇道理，鼓岭山上倪弟兄讲了什么？《权柄与顺服》是鼓岭讲的，《工人的性格》是鼓岭讲的，《话语职事》是鼓岭讲的，《人的破碎与灵的出来》是鼓岭讲的，这些书，大家都有，在那里接受教导时，也听了这些东西，但是，很多人只是听到道理为止，那个属灵的东西却没有，也没有带回去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

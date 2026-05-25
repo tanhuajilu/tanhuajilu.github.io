@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-二月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十九日</h1><p class="meta">01.天窗365 · 第60/366段</p><p><a class="btn" href="s059.html">上一篇</a><a class="btn" href="s061.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s060.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十九日</h2>
+<p>问：工作很忙、很多，怎么认识主？</p>
+<p>答：靠主来活，这些工作都为主来作。作工和为主活是相对的，你摆对你的态度，为主活，为主作就好（罗14:7－8），工作无论大小也靠主承担。</p>
+<p>社会上的人都不给你放松，就给你在实际的忙碌中学习实际的功课，叫你应用里面的灵和神交通。</p>
+<p>我们的工作是外面的，只叫我们在思想上用功或来往。**思想在外面，但我们的灵与神交通，**两者功用不同。外面尽管忙，我里面倚靠主；并不像以前说的，等跪着祷告才靠主。碰到困难，我里面还是靠神。站在那边可以祷告，随时随地可以祷告，忙不忙都可祷告。</p>
+<p>圣经说，我睡觉，我醒着，主都和我同在，我也可以跟主在一起。你要信这一个，里面使用这个灵和主交通，若不然，我们越来越忙，就给他忙倒了。这就叫你认识我们的灵和魂是怎样分开的。</p>
+<h1>7FEB-3JUN选自见面交通（四）1999年2月17日下午</h1></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

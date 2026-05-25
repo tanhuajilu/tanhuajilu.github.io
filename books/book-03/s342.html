@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月七日</h1><p class="meta">03.无比的爱 · 第342/366段</p><p><a class="btn" href="s341.html">上一篇</a><a class="btn" href="s343.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s342.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月七日</h2>
+<p>书本上讲到等候主来，有很多条件，有些讲出二十多条，你看到头都痛，怎么去作，要跟着去作，作不到。俞成华弟兄交通：爱要求的是同在。（我听他交通，记得这句话。）你爱一个人，就巴不得和他同在。你爱主就喜欢祂同在，喜欢祂来。</p>
+<p>怎么爱主，人的想法很多；但你要是一个喜欢祂快来与我们同在的人，这是很自然的。</p>
+<p>圣经说，爱主，纪念主，思念主。</p>
+<p>擘饼是什么意思？就是爱主而纪念主。很多人擘饼都没有找到爱。</p>
+<p>有些人提到主耶稣来，就有恐怖感，有恐怖感，就是因为没有摸到爱，爱里没有惧怕，爱主就喜欢主，渴慕要主。一些弟兄听了启示录的交通，就来找我说：&quot;主快来了，要为主工作，要热心事奉。&quot;我说：&quot;这都是你去想的。圣经是说：&#x27;若有人爱主，这人是神所知道的。&#x27;你爱祂，祂不会不知道，反过来说，主爱你，可能你不知道。&quot;</p>
+<p>知道的是有限的，不知道，就是无限。</p>
+<p>人都有限，生命有限，时间有限，什么都很快过去。在人看，能吃到一百岁，是这么长命，但在神看，只是一点点，因祂看千年如一日。（[彼后3:8](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=60&amp;chapter=2&amp;verse=7&amp;highlight=1#P7)）</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

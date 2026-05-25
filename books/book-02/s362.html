@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十二月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十七日</h1><p class="meta">02.在光中得以见光 · 第362/366段</p><p><a class="btn" href="s361.html">上一篇</a><a class="btn" href="s363.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s362.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十七日</h2>
+<p>（续上）以上讲了&quot;道路&quot;，至于&quot;真理&quot;怎样？以前我们读了很多家学──什么家，什么家，每一家都说自己理论最好，大家都说他们所发现的理论是放诸四海而皆准的。可是，真要用的时候，都用不上，讲时不变，用时就变。经过很多年，我们对这些都失望了，对所谓的真理也灰心了。直到后来，我们找到主基督，我们活在祂里面，才确定下来：祂在我们里面才是不动摇的真理。自己感觉到，我们年青时候的思想是太复杂了。</p>
+<p>现在谈主就是&quot;生命&quot;这一点。我小的时候想，一个人几十年就会死，算能活一百年吧，长寿年岁和神的无限相比也不过是无限长在线的一点吧！对主来说，祂的生命是永生，永世才能和它相连结。我们即使活一万年，相比这个永生的生命，也不过短暂的一秒！</p>
+<p>亚当在伊甸园里吃了善恶知识树的果子，神说：&quot;你吃的日子必定死。&quot;为何这样说？因他和神这位造物主断了开系，和神断了就是死。</p>
+<p>新约使徒行传记载，当司提反被人用石头打死时，他不是悲悲惨惨的哀求，乃是面对更辉煌的生命，他所得的生命﹝永生﹞是更有价值的。&quot;他看见神的荣耀，又看见耶稣站在神的右边&quot;我相信他的脸就像发光一样的。</p>
+<p>人生最大的不幸﹝最悲惨的事﹞就是这三件事：走投无路、一切落空、最终死亡。没有生命就是最惨的。哦！何等的丰盛，主就是一切，主就是道路真理生命。（约14:6）</p>
+<p>在伯大尼，马利亚已经选上那上好的福份，﹝她已得到主耶稣自己﹞，得了这个就再没有人能夺去。一生几十年，我走了许多弯路...神把我一切的努力都打岔了。但是所经过的日子，却稍为给我看见：主就是我们一切的一切！谈起主是道路真理生命，我交通这一点点。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

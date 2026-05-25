@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十二月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二日</h1><p class="meta">02.在光中得以见光 · 第337/366段</p><p><a class="btn" href="s336.html">上一篇</a><a class="btn" href="s338.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s337.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二日</h2>
+<p>有青年人来交通（是传道人的儿子，也作传道）说：&quot;我很软弱，我到这里来就好像到了加油站，你给我加油加油。我一句话都没有说。</p>
+<p>他说：&quot;你要帮助我，你不加油，也要加点水。&quot;我说：&quot;油不加，水也不加。&quot;他说怎么样？我说：&quot;我问你，你今天所走的路，跟你父亲的一样不一样？&quot;他说：&quot;我不知道。&quot;&quot;那么，你传道作工到处去，要作什么？&quot;他说他也不晓得。这样子，他带领人怎么去带？</p>
+<p>他说：&quot;今天我失望，因你一句话也不讲。&quot;我说：&quot;对你讲话，就像对墙说话，因你没有接受东西。如果你接受，话进去，你就吸收。你没有这东西，没有办法讲。你来的目的，就是要听几句话拿去讲道理。&quot;（他喜欢讲道理，讲那些对头不对尾乱讲的话。没有办法。）</p>
+<p>今天，我们每一个人都要知道自己走什么道路。&quot;我&quot;作什么工？不是糊里糊涂随便作的。我们所作所事奉，都有一个&quot;到底作什么&quot;，不然，工作就没有目标，你工作就是盲目的，以为只要有&quot;讲&quot;就好！但是，你要讲，偏偏人家不给你讲。除非那些糊里糊涂的，他们才什么都好，随你讲。</p>
+<p>教会不是说不请人，也不是说请人，看情形。你需要一个东西帮助，那个人有东西，我们可以请来，他没有东西，偏要来讲，就不给他。这都有一定的原则。总是属灵的东西，会愈交通愈碰到实际。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

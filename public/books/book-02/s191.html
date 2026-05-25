@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月九日</h1><p class="meta">02.在光中得以见光 · 第191/366段</p><p><a class="btn" href="s190.html">上一篇</a><a class="btn" href="s192.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s191.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月九日</h2>
+<p>但以理是个大蒙恩典的，似乎他没有为神作出过什么，但是他为着神那一个忠心，没有恩典是站不住的。王下令禁止人除王以外，三十天内不准向神和人求什么，但以理却还要一天三次面向耶路撒冷在耶和华面前祷告。因这一件事，人抓住他，把他丢到狮子坑里去。</p>
+<p>按我们的思想，神若有大能，应该把他救离，不该把他弄到狮子坑。神没有照这样子做，神让他被人丢到狮子坑里。但是，神就在狮子中间封闭狮子的口（但6：22），这一个的恩典是非常荣耀的，比没有丢下去更是荣耀。</p>
+<p>但以理虽然被扔下狮子坑，却蒙了保守，从狮子口中被救出来，这是非常荣耀的，在这里，神得着荣耀。所以，如果我们认识恩典，就不会逃避现实。</p>
+<p>但以理的三个朋友也有同样的经历，他们因着向神忠心，不肯跪拜偶像就被扔在七倍加热的火窑里。他们相信神会将他们从烈火窑中救出来，即或不然，他们也决不拜王的金像。结果他们被王扔在火窑里。我们会想，如果神救他们免去火窑之害多好呢！神没有救他们，神让他们受害，被扔在火窑里。</p>
+<p>在火窑里，王看到的不只三个人，乃是四个，除了他们三人，还有一位，好像是神子，和他们同行；所以，王就大喊说：&quot;至高神的仆人沙得拉、米煞、亚伯尼歌出来，上这里来吧！&quot;三人就从火窑出来。一出来，绑他们的绳子都烧掉了，衣服却连火燎的气味也没有（但3：27）。你看，这多荣耀！&quot;火无力伤他们的身体，头髪也没有烧焦，衣裳也没有变色，并没有火燎的气味&quot;，这就是神的荣耀，这就是神的恩典。恩典给人承担了人所不能承担的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

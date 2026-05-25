@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十六日</h1><p class="meta">04.晒熟的美果 · 第361/366段</p><p><a class="btn" href="s360.html">上一篇</a><a class="btn" href="s362.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s361.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十六日</h2>
+<p>1949年借着鼓岭的交通，就是我的一个转折。但是转得不够，以后还不断的转，就是人被神带着转。到四十岁就更进步了，虽然也有难处。这些难处就是为叫我有更实际的学习，由那时起再三十多年也越清楚越进步的。</p>
+<h1>在五十年代，我们也看表面说：&quot;哦！这些人很好！&quot;通过五十年，各方面观察认识，才知道以前所说的热心爱主，实在距离主要的好远。因为人有人的爱心，也有人的热心，并不是灵里的火热，也不是在生命里面的爱。</h1>
+<p>问：在监牢里，主怎样引导你？</p>
+<p>五六年以后，简单的说，就在牢里。在牢中的经历，是要把圣徒带到灵里头去事奉神，而不是带圣徒们怎样作怎样作。凡是要怎样作的，到了实际的情况下，都倒下来，并不实际。</p>
+<p>在牢里的生活也为破碎你。破碎是多方面的，神量给你了，你想也想不到，但是神会安慰你的！在牢中，时间是很长的。时间这样长，怎能等到那时候呢？等不到也要等，只能等！</p>
+<p>你说，漫长的日子怎么过？整天整夜都是向神！圣经是不能有的，但是我们有一本活的圣经写在心版上。日子怎么过？这也不是你准备好的，乃是到了那个，神就给你恩典。</p>
+<p>无论是什么，都不能叫我们与基督的爱隔绝。为什么，因为这爱是神的爱，是在我们主耶稣基督里的。&quot;神既把我们跟基督连在一起，你就跟基督连在一起了。因这一个，无论你到了什么地方，都能跟主有交通。只要你有生命，无论到哪一个地方，主都和你同在。</p>
+<p>在五十年代时，很多弟兄姊妹给弄到山区去，弄到外地去，过了三十年，四十年，重新见面，一见面，发现大家里面都有进步，比起以前有聚会时，更有进步！这个进步从哪里来的？是神负责的呀！神亲自作了他的工。</p>
+<p>在那些艰难的环境中，我常有这诗歌：&quot;祂不误事，因祂是神...祂使软沙作海界限，波浪虽狂，不能再前。&quot;一切问题有神的手，有神的定规，再凶，也不能超越神的手。祂能叫你承受你所不能承担的事。应当相信我们的一生有神的手在那里。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

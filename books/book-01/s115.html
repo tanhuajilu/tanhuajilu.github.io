@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-四月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十四日</h1><p class="meta">01.天窗365 · 第115/366段</p><p><a class="btn" href="s114.html">上一篇</a><a class="btn" href="s116.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s115.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十四日</h2>
+<p>问：弟兄姐妹有财物上的奉献，怎么处理？</p>
+<p>答：没有人负责管理，而交给个人的，就由个人处理。有些地方人多一点，有教会，有人负责管理，就和个人的处理不同。</p>
+<p>如果弟兄姐妹们有一点钱摆出来，不知道该用到哪里，就由几个人交通，去处理这些事情。因为钱财上已经有人安排管理、负责了，这样，问题比较简单，这些钱，就交与负责管理的人。</p>
+<p>你那边是个人管理的，个人对这管理问题，没有一定的方式，这也是要个人里面去学习受圣灵的引导（加5:18）。不是说有了钱，看见有需要就去作，**在财物上，还要圣灵引导我们**。这不是一种规定的，这个月多少，下个月多少，如果照这样作，就会背重担。因为你一直要经营得很好，每月都供应，如果改变了，可能人就有意见。假设一年十二个月，供给八个月，两个月不供给，有人就会说：&quot;你怎么样？这样没爱心，不拿给我。&quot;</p>
+<p>那些有学习的，可不会向你讨，向你开口。没有学习的，会说：&quot;我今天困难，明天困难。&quot;他天天都讨这些------为着钱，你也应付不了！所以，要学习受圣灵的引导。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

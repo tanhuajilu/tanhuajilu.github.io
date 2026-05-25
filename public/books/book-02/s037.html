@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-二月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月六日</h1><p class="meta">02.在光中得以见光 · 第37/366段</p><p><a class="btn" href="s036.html">上一篇</a><a class="btn" href="s038.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s037.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月六日</h2>
+<p>刚才弟兄提到，&quot;我们有热心，却遇见失败。&quot;对于热心还有另一方面要说的，就是要问：人热心所有的火是怎样的火？</p>
+<p>亚伦的儿子拿答、亚比户，献上凡火，这火就有问题。（利10：1－2）&quot;凡火&quot;，在另外的翻译作&quot;平常的火&quot;。他们献祭竟然献上凡火，结果就死在祭坛那里。那么，神所要的是什么种的火？是祭坛上的火。</p>
+<p>祭坛上的火焚烧祭物，才叫神得到馨香之气，叫神喜欢。凡火不是祭坛上的火，乃在祭坛以外的火、是平常的火。今天，我们的热心若是凭着&quot;凡火&quot;──凭着血气，凭着自己──在属灵上，定规是失败的。如果是在祭坛上献上圣火，而且有牺牲全然摆在祭坛上，祭坛的火在其上燃烧把祭物烧给神，就不一样，因为这是分别出来的。</p>
+<p>根据什么分别呢？根据是否摆在祭坛上。在祭坛上就圣洁，在祭坛以外就不圣洁。牛羊被杀，放在祭坛上就成为祭物，放在祭坛以外，不过是普通的死牛死羊。因此圣经说：&quot;殷勤不可懒惰，要心里火热常常服事主。&quot;（罗12：11）这火是里面的。</p>
+<p>至于外面的热心是感情冲动，五分钟就失去就完了。里面的火热才会长久。外面的火热是短命的，在奋兴会时人是火热的，奋兴会过后却冷冰冰的。凭着外面的火会着火－热得太过你就走错路。所以神才给我们经历：有热心之时，也有冷淡之时。为什么要这样？是要平衡我们这个人，一面有火热，一面要冷静。火热要受冷静的调整平衡。很多人就是热得没有分寸，结果就走错路。但是，我们的火热却要在祭坛上，经过祭坛的，就是灵里面的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

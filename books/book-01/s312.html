@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十一月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月七日</h1><p class="meta">01.天窗365 · 第312/366段</p><p><a class="btn" href="s311.html">上一篇</a><a class="btn" href="s313.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s312.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月七日</h2>
+<p>很多奋兴家连个人的的问题都没法解决。我们认定只有生命才能解决问题，**只有生命加上生命，才有属灵的力量，只有光加上光，才会发亮。**</p>
+<p>属灵的事不是靠讲道理，乃要在交通中蒙神带领，叫我们在光中可以碰到神。人碰到神，神就给他认识，叫他里面有一个突破、里面清楚（林后3:16－18）。外面的道理，暂时不通不要紧，到了时候，你里面就会清楚。里面清楚，外面的你也跟着清楚。</p>
+<p>从外面去做，没有办法叫人里面清楚，只有人里面被开启，才会有里面的清楚。**这里面（人里面）能清楚就是因着灵里的启示，再进一步，就做到思想更新、蒙光照的地步。圣灵会做这工作。**</p>
+<p>至于我们外面的这个肉体，神会借着外面的环境来对付。因为我们的里面（我们的灵）是细软、能反应神的；外面却是硬板板，不受里面感动，也不听里面的声音，就是说它不听圣灵的感动（林前2:14），甚至违背里面良心的感觉。因此，神不得不在外面给我们击打。那些骄傲，又刚硬的人，神击打他就更厉害了，十字架的工作在他身上是越作越彻底的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

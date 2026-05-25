@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十六日</h1><p class="meta">02.在光中得以见光 · 第300/366段</p><p><a class="btn" href="s299.html">上一篇</a><a class="btn" href="s301.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s300.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十六日</h2>
+<p>答：教会这问题要认识，十字架这方面要多谈，对十字架要认识。谈一个属灵的东西，就要对那一个东西有认识。我们先谈教会。主耶稣说：&quot;我要把我的教会建造在这盘石上。&quot;这盘石就是基督，这盘石是牢固不变的，像诗歌所说：耶稣不改变。耶稣不改变，他就是盘石，教会是建立在这盘石上。</p>
+<p>今天许多人是建立在道理上面，建立在组织上面，建立在所谓亮光上面。他看见一个亮光，就建立一个教会，我看见一个亮光又建立一个教会。每个人所看见的亮光又不一样，有的时候，人的一个亮光跟另一个的亮光彼此矛盾。所以这个不牢靠。唯有基督这盘石是万古盘石，万古盘石才流出活水。万古盘石已经为我们裂开。基督就是盘石！一个房子盖在沙土上，水冲风吹就倒，房子建在盘石上就牢固。</p>
+<p>所以先要认定，教会乃建立在基督这盘石上。用什么建立？如果在上面建造的是草棚木块，风一吹就倒。建在盘石上面的也该用活石。彼得说我们都是活石，来建立灵宫成为圣灵居住的地方。所以建立在这盘石上，乃是一个一个有基督生命的人──活石建在盘石上。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

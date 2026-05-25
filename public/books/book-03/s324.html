@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十九日</h1><p class="meta">03.无比的爱 · 第324/366段</p><p><a class="btn" href="s323.html">上一篇</a><a class="btn" href="s325.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s324.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十九日</h2>
+<p>要去摸到神那无限的生命！这生命就在我们里面，超过人的生命，是超越的生命。</p>
+<p>人在外面看，看到外面的多好！但人对暗中所是的却不知道。你里面若是通的，所走的路就越走越光明。</p>
+<p>许多人讲&quot;金灯台&quot;，却彼此攻击，搞分裂；都已经没有光了，还是金灯台吗？事实就没有金灯台。这些人已经败坏了，连老底嘉都已经不及，比撒狄更死，更差，自己还不知道。因为里面没有爱。</p>
+<p>有爱，就有温暖，有爱，人就不会离开家庭。人碰不到这些，就有问题。</p>
+<p>一位弟兄年青时出来全时间事奉，今年60多岁，他说走不上去，转做生意。他说今天我没有家，因教会没有温暖，不像家。全世界有那几个地方有温暖？</p>
+<p>属灵的东西一谈到，彼此都会感应，不然，环境这样（消沉的），那有办法？神要怜悯谁，就怜悯谁，要恩待谁就恩待谁。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

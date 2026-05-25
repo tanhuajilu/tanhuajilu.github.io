@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-五月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十二日</h1><p class="meta">04.晒熟的美果 · 第127/366段</p><p><a class="btn" href="s126.html">上一篇</a><a class="btn" href="s128.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s127.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十二日</h2>
+<p>所以真正的使徒的讲话，先知的讲话，都是经过膏油涂抹的，因为有经过膏油的涂抹，虽然时代变迁，他们的话不改变。因此我们今天越念这些属灵的著作，这些属灵的东西，都会像在当时跟他们一起，有一个交通的味道。</p>
+<p>唱诗歌也是这样。唱诗的时候，你的灵也跟写诗歌者的灵有交通。故此，唱诗在我们事奉主上，对我们有很大关系。越唱诗歌，我们里面的灵越细嫩。如果灵不细嫩，就是粗鲁，属灵的感觉就是粗糙的。借着唱诗，常常把我们带到神面前来，叫我们的灵被带到诗歌那个细软的感觉里。所以，诗歌能够叫我们得到帮助。</p>
+<p>读经也是这样，我们读经，也可以用灵去摸到神的话。</p>
+<p>我们祷告也是这样，要用灵祷告。借着祷告，叫我们的灵向着神。所以圣经说：我们本不知怎样祷告，只是圣灵用说不出来的叹息替我们祷告。故此，我们的祷告有我们自己的祷告，也有圣灵替我们的祷告，还有主作中保替我们的祷告。我们这个祷告，是祷告到主那边，祷告到圣灵里。</p>
+<p>彼此的交通也是这样。我们彼此交通，主这个复活的能力就住在我们的灵里面，叫我们经历复活的大能。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十四日</h1><p class="meta">02.在光中得以见光 · 第298/366段</p><p><a class="btn" href="s297.html">上一篇</a><a class="btn" href="s299.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s298.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十四日</h2>
+<p>种子种下去，若缺阳光雨水，长是长，却会软下去，如快死的样子。基督徒的成长也一样，必须经过一些环境；遇到环境，你不要怕，也不要担心。我们对初信的最容易担心，常想，如果他遇到病，碰到家庭反对，会不会站得住？其实不用担心，他里面有生命，因着环境，他总会有点接触。因着有这个生命，反对拦阻必然产生。如果没有，恐怕他里面还没有东西呢。经过这些，他会愈过愈刚强。</p>
+<p>有一位初信的弟兄说：&quot;我信主不久，就遇到很多不顺的事，不是生一场大病，就是损失。家庭的难处一直临到。&quot;但他又说：&quot;我的信心反而愈过愈坚固。我还信，还要信。&quot;这就不简单，说明他里面有主耶稣那个信心。N弟兄说，这个信是主耶稣的信。主耶稣的信是信到神离开他，他还信神。如果神离开我们，恐怕我们说：&quot;神，你离开我，我也离开你。&quot;但主耶稣在十字架上，天昏地暗时说：&quot;我的神我的神为什么离开我。&quot;（太27：46）虽然神离开他，他还信。主耶稣的信就是这样的信。</p>
+<p>神给你恩典，你信，神给你的，若你认为不是恩典的，你信不信？还要信！反正是神的，是交在我手中了，我就信，一直信神。像你亲生儿子，把他打得要命，他还要回来，你赶他出去，他还要回来，因他没有母亲不行。这个&quot;打&quot;是母亲的爱，你是他的母亲，他还是要你。如果别的小孩，你打他，他不好意思，不会再来。作儿子的，无论怎么被打，还是母亲好，这是因为爱的关系。</p>
+<p>而我们和神的关系也是这样真实，是彼此接起来的。无论怎么样，我们都爱神，心里会说：&quot;感谢神，祂不会错，祂不误事。&quot;</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

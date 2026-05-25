@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十一月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十二日</h1><p class="meta">02.在光中得以见光 · 第327/366段</p><p><a class="btn" href="s326.html">上一篇</a><a class="btn" href="s328.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s327.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十二日</h2>
+<p>虚浮的东西很容易改变。在我们身上，是踏实的，是实在的，才会稳定。如果里面都是虚的，虚的一下子受不了，就改变。所以，不是工作的面积大，还要有深度啊！你没有深度，就站立不住。像以前坐船，从这里到星加坡要坐大船，如果用轮渡去走，半路就翻倒到水里去。为什么？因为它的水量浅，一翻就倒。那大船呢！大船都是几万吨以上的，吃水深，能抵得过大海浪，能经过大海洋。</p>
+<p>我们做基督徒不是浅浅的，初期是浅，神要作工，就叫我们深。所以，好多环境，好多苦难难处，就是要带我们到深处去。因此，我们不能逃避这些苦难，不要逃避为难不顺的环境。如果盼望舒服，我们永远就是浅的。要深！</p>
+<p>如果浅，在海上，一下子就给海风海浪翻倒，是深的，吃水深，才能经过风浪，才能航行到达目的地。今天，神作十字架的工作在我们身上，要把我们打碎，就是要我们深。这个盘是浅的，装一盘水从这里拿到楼下，摇一摇，水都摇掉了。因为这东西是平平的，水会溜出去，而且手拿着盘子很不容易平衡，都摇掉，就是因为浅。如果深一点，用水桶把水从楼下拿上来，上来还是一桶水，没有失去一点，就因为它是深的。浅的就没有办法。</p>
+<p>所以，在我们身上要深，要有深度。有深度，跟那没有深度的是大两样的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-八月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十三日</h1><p class="meta">03.无比的爱 · 第226/366段</p><p><a class="btn" href="s225.html">上一篇</a><a class="btn" href="s227.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s226.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十三日</h2>
+<p>对应新约的启示录，旧约里就有雅歌书是我们常说的。其中的感觉是细嫩的，因为爱情是细嫩的。粗鲁的人怎么会讲雅歌呢？我们读雅歌，一读就有爱的流露，如果让粗鲁的人来讲，一讲就破坏了。</p>
+<p>知识、理由是最粗的，道理讲不通就打，就骂。那些念很多神学的，他们里头是古里古怪的，因为思想混乱。所以，大头脑的都要&quot;砍头&quot;。若是讲爱的，就是柔软、柔细的。</p>
+<p>人的头发要去梳理，不梳理，就受它的害。大卫的儿子押沙龙，就因他的长发挂住在树上被杀。（[撒下18:9](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=9&amp;chapter=17&amp;verse=8&amp;highlight=1#P8)）</p>
+<p>很多时候，我们的损失，就是利益。</p>
+<p>有一位弟兄说：&quot;我好像离开主很远。&quot;但是跟我说话中，他不像离开主的。他以前为名为利，爬得很高，现在，这些都改变了，他感觉惟有他以前所信的主是永不改变的。他在说的时候，就有里面的感觉，也有属神的味道。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

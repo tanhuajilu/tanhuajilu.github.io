@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-三月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十九日</h1><p class="meta">04.晒熟的美果 · 第83/366段</p><p><a class="btn" href="s082.html">上一篇</a><a class="btn" href="s084.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s083.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十九日</h2>
+<p>另外一点，是关于钱财的。</p>
+<p>钱财的迷惑非常厉害，钱财会把人占满，因为钱财这东西能叫人不仁不义，所以圣经才说，末了的时候，许多人会变成爱钱财爱宴乐，不爱神。</p>
+<p>钱财害人很大，人一要钱，亲人也可以不认。特别在国外的人，接到国内亲友的信，就不肯看，因为怕向他要钱。&quot;又要讨钱！&quot;心里就很怕。他看钱看得很重。有一个弟兄到美国生活（是八十多岁的老人了）。有一天，他到外面工作，儿子对他说：&quot;父亲呀，你赚钱了，要补贴伙食费呀！&quot;父亲哭笑不得，心想：从小培养你长大，到了时候帮助你出国生活，今天我老人家到你这里来吃几次饭，为要看你，你却算我伙食，那么，我要跟你算，你算得了吗？</p>
+<p>儿子有钱，还要再多，舍不得给父亲吃饭，还要父亲付钱。人为钱死。为钱要命，这钱害死人呀！所以，圣经说，贪财是万恶之根。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

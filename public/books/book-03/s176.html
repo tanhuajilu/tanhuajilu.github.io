@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-六月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十四日</h1><p class="meta">03.无比的爱 · 第176/366段</p><p><a class="btn" href="s175.html">上一篇</a><a class="btn" href="s177.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s176.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十四日</h2>
+<p>主的救恩是完全的，我们的债不但给还清，罪给赦免了，还得到一个丰盛的生命，所以我们不再犯罪。就是有犯罪，这生命会来拉一下，来平衡一下，叫我们不往罪中堕下去。你要认识这条路。就是今天你犯了罪，你去认罪，主耶稣也必赦免你。你跟主的交通也马上恢复。</p>
+<p>很多人以为自己犯了罪，即使再认罪，那几天也苦苦的度过。有一弟兄说：&quot;我犯了罪就不敢祷告，不敢亲近神了。&quot;他的意思好象说：我这样子到神面前，不知道神还要不要我？我说：&quot;这就是你的思想，神不是这个思想！因为祂有恩典、怜悯，祂不轻易发怒,，且有丰盛的慈爱。（[诗篇103:8](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=18&amp;chapter=102&amp;verse=7&amp;highlight=1#P7)；86:15）祂既是这么的慈爱，我们在神的家里，怎么会不肯见神，亲近祂呢？</p>
+<p>小孩子在家顽皮，母亲给他打，他到母亲面前，还会叫妈妈。因为是生命的关系，亲情的关系，是不能断的。别人的孩子给你打一打，一气就跑掉，也恨你到死！如果是儿子，父母无论怎样打，还是他的爸妈，对他还很亲切，因为是生命的关系。在神面前我们也是这样。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

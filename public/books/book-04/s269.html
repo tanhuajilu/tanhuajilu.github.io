@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月一日</h1><p class="meta">04.晒熟的美果 · 第269/366段</p><p><a class="btn" href="s268.html">上一篇</a><a class="btn" href="s270.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s269.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月一日</h2>
+<p>问：有人说：我有属灵的实际，没有蒙头的记号也可以。对吗？</p>
+<p>答：这个不能单从道理上去看。</p>
+<p>宇宙中有二个东西是没有理由可说的。第一件是权柄，第二件是爱。法律是一定的，一定这样就是这样。(法律所维持的就是权柄)。爱就是爱，也是无理由可说的，这爱能征服人。权柄能征服人，不能征服的，就由爱来征服。</p>
+<p>****宇宙中最大的就是爱，这爱是指神永远有能，不会改变的爱。像诗歌所说：&quot;你的爱心像你能力&quot;神的爱是无限的，如果有限，到一个地步就没有了。这个爱能感动人****。****</p>
+<p>****权柄是非常尊严的。提到国度，就是谈到权柄的问题。国度，权柄，荣耀这三个是连在一起的。神的权柄受抵挡，神的国，神的荣耀也受抵挡。我们顺服神，就是为要维持神的尊严****。****</p>
+<p>主耶稣死在十字架，祂一定要死在十字架上。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

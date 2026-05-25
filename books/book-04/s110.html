@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-四月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十五日</h1><p class="meta">04.晒熟的美果 · 第110/366段</p><p><a class="btn" href="s109.html">上一篇</a><a class="btn" href="s111.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s110.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十五日</h2>
+<p>这么多夫妇来找你，向你诉苦，你一听把自己搞在里面，落在深沟里爬不起来，就不值得了。所以听了这些话，你觉得是不对头的，就不要听。</p>
+<p>很多时候，&quot;告状&quot;的人讲了又讲，我们听了，还要再问：&quot;你是怎么样？这矛盾是怎样的？你丈夫跟你是怎么样？他没有理，就跟他讲...&quot;讲得越多，越不明朗。这就是没有智慧。</p>
+<p>如果你说：&quot;你是光明的，别人怎样说你还是光明的。况且，你们再多矛盾也是夫妇，只要你学习容忍他，他也学习容忍你，夫妻就和气了。&quot;你这样一说，他就得着释放，你也释放，这个交通就光明了。</p>
+<p>如果我们遇到事情，还增加事情，越加越多；教会里人这么多，话也多，就乱死了！今天教会最大的难处，就是话太多。所以该听的，要听，不该听的，既然听了就不要再讲。同时你要帮助他知他所讲的到底是什么，你要听清楚他到底讲的是什么？有价值的，你要听过去，没有价值的，就是浪费，还会破坏我们里面的东西。实在的，我们自己已经够乱，听别人多讲就更乱了，听过以后更糟糕。</p>
+<p>所以弟兄姊妹有矛盾，家里有重担，忧忧愁愁的，笑都一会笑。讲到这些矛盾，我就叫他不要再讲，一转转到主里面去交通，交通交通，重担反而脱掉了。他说：&quot;担子脱掉了&quot;，我就说：&quot;感谢主！&quot;他担子脱掉就回去，&quot;空气&quot;也变了，他把这个清新光明的空气带回家，家庭的气氛也改变了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

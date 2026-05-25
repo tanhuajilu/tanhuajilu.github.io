@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-五月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十五日</h1><p class="meta">03.无比的爱 · 第136/366段</p><p><a class="btn" href="s135.html">上一篇</a><a class="btn" href="s137.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s136.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十五日</h2>
+<p>我们如果把彼此相爱，当做一个道理来讲、彼此来劝，也只会是道理。因为彼此相爱不是一个道理，彼此相爱是生命的东西。是生命的东西，就不是一种人的行为。</p>
+<p>从外面去做，可以被认为是彼此相爱。国外时髦吃爱筵，虽然名为爱筵，中间却摸不到彼此相爱的实际。这种爱筵，有时变成宴乐，吃吃喝喝而已，像财主一般，天天奢华宴乐。他们常是这个礼拜我请你，下个礼拜你请我，轮流一人请一个礼拜，成为一种风气。但是，在爱筵中，人摸不到属灵的交通，只是吃吃讲讲；他们不过在嘻嘻哈哈的，属灵上、生命上、经历上都没有什么交通。</p>
+<p>所以，你要认定彼此相爱不只是一个道理，彼此相爱是一个生命的东西（约一4:7）。生命的东西看起来好象没有跟爱有什么关系，因为没有什么表现，实际上生命却会流露爱也会通过爱。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

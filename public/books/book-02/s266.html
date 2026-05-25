@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十二日</h1><p class="meta">02.在光中得以见光 · 第266/366段</p><p><a class="btn" href="s265.html">上一篇</a><a class="btn" href="s267.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s266.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十二日</h2>
+<p>主耶稣在十字架上所流的宝血，至今还是&quot;现在的。&quot;所以虽然我们犯罪了，宝血要洁净你。对于我们，救恩是今天的。爱主也是今天的，昨天的&quot;爱主&quot;过去了，今天还爱主。你今天如何，就是如何，这是我们的现实。明天还没有来，还不是我们的。昨天呢？昨天过去，也就已经成了以往的。今天，今天我们天天活在神面前，活在神今日赐给我们的光里面。</p>
+<p>俞成华弟兄在《生命的信息》里讲到：每一个基督徒，都要生活在今天神给我们的光里。明天，神再赐亮光。每一天，我们都活在神给的光中，就是这样自然而然的往前，至于明天，明天的光，神给得更大更多更高，一天一天神带领我们。</p>
+<p>谁生活中没有失败？都有。就是有失败，我们转向神，有软弱，就转为刚强。经过死亡，才会摸到生命。一个基督徒，有时神为带他经过幽暗的死谷，就叫他经历死，经历十字架。经过死谷出来，就是复活。没有经历神的，还摸不到复活。像茶杯，还没有经过火窑出来，只是个土杯，假若拿土杯盛水，水就把杯溶掉，整个杯就软下去了。经过火出来就不同，经过火出来就可以用。</p>
+<p>我们还没有经过十字架的工作，没有经历磨炼，经历火炼，只是个制造出来的土杯瓦器，还不能用。经过火窑后，才能使用。土杯摆进火窑就被掩埋，封得密密的，下面还加火。但是，过一段时间，火窑一开，器皿拿出来都坚坚固固的，可以用了。</p>
+<p>神量给我们每一个人，也有这样一个工作的过程，时候没有到，要做也做不来，时候到了，自然而然做好。好多人都想赶快给主用。但还没有经过火，没有经过火窑的过程，要赶快出来，一碰就坏掉。又或遇到水，就软下去。经过火炼的才叫过关，过了关才可以用。</p>
+<p>所以属灵的东西都要一段路过一段路，一个关过一个关的，直至我们到神面前认识神，也认识属灵的东西。你这样熬炼过才稳定。若不然，今天道理讲清楚，问题就该解决了。不！还要经过年日，让神一步步造就带领，也一步步的对付。神的工作总是不断的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

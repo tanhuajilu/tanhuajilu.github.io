@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十九日</h1><p class="meta">02.在光中得以见光 · 第201/366段</p><p><a class="btn" href="s200.html">上一篇</a><a class="btn" href="s202.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s201.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十九日</h2>
+<p>自己要摸到复活的基督才好啊！没有摸到复活的基督，那就像天使对马利亚说的，&quot;你们是在死人中找活人了。&quot;（路24：5）主已经复活，你去找的只是个空墓。今天，你要去找主耶稣，主耶稣在哪里？放眼所见，到处都是空坟墓呀！祂已经复活，所以，我们今天要碰到复活的基督，只有复活的基督才吸引人，只有复活的生命才会吞灭死亡。</p>
+<p>教会的派别那么多，意见那么多，像山头一样，一个一个摆在这里，要讲教会是基督的身体，他不象样不正常呀！所以真需要圣灵的工作，需要动一个大的手术。今天教会若没有经过十字架的手术，不象样的情形只会愈来愈厉害。你且看，三十年代时（我年青时），全世界宗派（派别）有两千多个，现在恐怕达九千，甚至一万多也不止；大小宗派愈分愈多，人却摸不着神，给人看到的都是外在的基督教，里面没有基督──只是个壳子，里面没有内容。</p>
+<p>神要作什么工？神今天要作的，就是把一些人分别出来，神工作的原则是分别。从创世记开始，神就作分别的工作。</p>
+<p>创世记第一章说，地还是黑暗空虚混沌之时，神说：&quot;要有光。&quot;就有了光；光出来，光暗就分开。因此没有半光半暗的，暗，就是暗，光就是光。接下去，神说，要有空气，就把空气以上的水、空气以下的水分开了。神说，水要聚在一处、使旱地露出来，于是，海跟陆地就分别，陆地是陆地，海是海...最后，神造人──造男造女，使男女有别，絶没有含含糊糊造一个半男半女的。男就是男，女就是女，都清清楚楚的。</p>
+<p>神的教会是属灵的，属灵的就是属灵的，不能把属地的东西掺杂在教会里面。今天教会里面却是多复杂的！复杂的情形，国外有国外的光景，国内有国内的光景。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十二日</h1><p class="meta">01.天窗365 · 第266/366段</p><p><a class="btn" href="s265.html">上一篇</a><a class="btn" href="s267.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s266.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十二日</h2>
+<p>最近，有一位初信的弟兄问我：&quot;我念不懂圣经！&quot;我说：&quot;你慢慢念。&quot;后来再谈，他自己的话已经答复了他的问题。他说：&quot;我如果读懂圣经，这位神就不伟大，祂不过跟我一样！&quot;这话最好，因此，我没有再答复他。对神的话，我们只管相信！就是不明白，是你不明白，在神那边，是非常清楚的。</p>
+<p>如果根据你的进步，相对地去明白圣经，你里面平静一点，不钻牛角尖，就很好。钻牛角尖就会走错路。</p>
+<p>圣经不是人解释出来的。**圣灵感动人写出圣经，圣灵也必感动人明白圣经。**圣灵来就是要叫人明白神的话，也叫人进入神的话（约16:13）。**没有圣灵的启示，我们不会懂神的话。**</p>
+<p>其实，我们对好多问题都不懂，不懂就说不懂吧！&quot;你读经读到老还不懂吗！&quot;是，我就是不懂。我们不要顾面子，不要怕不好意思，不懂的就说不懂。圣经所讲的是包罗万有的，包括过去、现在、将来的事，也包括整个宇宙、整个神的计划；这么伟大，我们怎么懂，哪儿去懂？</p>
+<p>对我们而言，国家整盘的计划，其中有很多各方面的计划，还有些国家的秘密，要去懂，到哪里去懂？你要懂，也不会告诉你。</p>
+<p>神那么伟大的计划更是这样。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

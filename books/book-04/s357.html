@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十二日</h1><p class="meta">04.晒熟的美果 · 第357/366段</p><p><a class="btn" href="s356.html">上一篇</a><a class="btn" href="s358.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s357.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十二日</h2>
+<p>一九四八年，我到了福州，那里的话很多，反对倪弟兄的话最多，我们也因多听就受了影响。所以一九四八年我回来了，却没有到鼓岭去。我听了那些话觉得不对，但是我也无路可走。直到一九四九年，有同工写信与我和其他同工，叫我们去，我去了，就是我的大转机。如果没有这一次，就没有了以后的经历。</p>
+<p>到鼓岭，我并没有四个月的训练（才一个月）。鼓岭的负担最突出的，就是使用灵和人的破碎。这一点摸到，就叫你&quot;下来&quot;以后用不完。</p>
+<p>这个点，叫我在以后的十多年的艰难环境里用不完，因为这些环境就是叫人破碎，叫人长期在那里熬炼，焖煮，煮到烂烂的。我们由&quot;不平&quot;被熬到&quot;不会不平&quot;。神就是这样作。</p>
+<p>我们今天就是宝贝倪弟兄那些属灵供应的东西。不然，我们跟他也很少接触，很少有什么感情，有什么人情的关系。所有的关系，也是很平常的，就是他所出版的刋物书籍，神借他涌流出的生命能力直临到我们，我们要站也站不住。</p>
+<p>有一段时间，上海有很多人反对他，直等他有机会上讲台一讲，带出生命供应的话来，没有一个人站得住，听的人都流泪大哭。这不是生命的工作，是什么？因为这是圣灵的工作。叫一个人哭就不容易了，是不是？在那里，有上千的人，那时是冬天，人人都围着围巾，这围巾变做擦眼泪用的，都擦得湿湿的。不是神的工作，倪柝声有这个本事吗？神的工作是借着人的灵出来，灵出来，碰到人的深处，罪人就得救，信徒就得造就。这是一辈子学不完的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

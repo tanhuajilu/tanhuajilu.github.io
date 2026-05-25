@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月三日</h1><p class="meta">04.晒熟的美果 · 第338/366段</p><p><a class="btn" href="s337.html">上一篇</a><a class="btn" href="s339.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s338.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月三日</h2>
+<p>主是我们的王，我们认定他就有恩典也有力量。你一个人认识了主，这价值要胜几万人。神的工作要超过我们所想的。</p>
+<p>不要去欣赏工作，欣赏工作就是拜金牛犊。摩西带着法版从山上下来，看到百姓拜金牛犊，就把法版摔破，因为他们把吃草的牛当作神来拜，说这是领他们出埃及的神，还不知罪，神的话在他们面前是没有用了。</p>
+<p>当人欣赏工作，&quot;荣耀归你&quot;了，神在哪里？所以摩西要把金牛犊打得粉碎，和水给百姓喝，因为这是得罪神的东西。</p>
+<p>人没有摸到属灵的路，只去追求道理就是听十年八年，不过知道些名词，还不会知道当中的内容。</p>
+<p>圣经却说，事奉神的人，是世界不配有的。</p>
+<p>这样说来，谁能得救呢？在人不能，在神凡事都能，是神能。你从神摸到属灵的路，在神面前碰到现实，就有属灵的东西来学习。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

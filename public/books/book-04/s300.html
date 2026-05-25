@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-一月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月一日</h1><p class="meta">04.晒熟的美果 · 第300/366段</p><p><a class="btn" href="s299.html">上一篇</a><a class="btn" href="s301.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s300.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月一日</h2>
+<p>我们在这里是彼此交通。交通和听道讲道不一样。讲道就像给学生讲课一样，但是我们在属灵方面，不能像文士，法利赛人站在摩西的位上，要人家听，自己却一个指头也不肯动。我们这个交通是彼此的，是信徒里面生命的需要。</p>
+<p>这种需要，人自己说不出来。到底自己需要些什么，很多人都不知道。有需要就会有要求。人如果知道自己里面有需要，并且知道自己需要什么，就是个蒙恩待蒙怜悯的对象。</p>
+<p>神要怜悯谁就怜悯谁，恩待谁就恩待谁。是的，可是，谁有需要，他就是神要怜悯要恩待的。神虽然要将恩典赐给我们，但他不会白白浪费恩典，乃要赐给那些懂得宝贝的人。神不把宝贝随便去放，神这东西是放在懂得宝贝的人身上。</p>
+<p>神的恩典，我们是白白得的，在他那边就不简单。你给人送礼，人将它乱放，你心很痛！神也是这样。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

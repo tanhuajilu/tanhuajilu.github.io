@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十九日</h1><p class="meta">01.天窗365 · 第273/366段</p><p><a class="btn" href="s272.html">上一篇</a><a class="btn" href="s274.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s273.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十九日</h2>
+<p>问：一同服事的弟兄彼此有不同意见，应该怎样？</p>
+<p>答：所说的意见不同，内容是指什么？</p>
+<p>（应：指参与儿童服事配搭里的。）</p>
+<p>服事的进行，通常有一个规定（关于时间、内容、或作法）作指引，总有一个步伐去作，即同工的关系总有一个安排。大家按着这个安排去作就可以。</p>
+<p>（应：我是指彼此有不同的意见时常常争持不下。）</p>
+<p>问题是这样，怎么去作，要有一个估价，就是说，我做这一件事情，是否有价值。**每作一件工作总是要有价值，我们不作那无价值的事，也就是不作无聊的事。</p>
+<p>**</p>
+<p>譬如买一件东西，没有那个价值，却要你出那个代价，就是很亏本，很受损呀！所以做一件事，要问有没有价值，而且还要多加两个字，有没有&quot;属灵&quot;的价值。</p>
+<p>**如果没有属灵的价值，就让别人去作吧！你跟他争，也是没有属灵的价值，我们宁可放下。**如果有属灵的价值，我们去作。他们若不同意，我们也不勉强，也可暂时停下。假如不同意，就算，也叫我们的己再一次受到对付。</p>
+<p>**我们要学习，在教会里，不随便出主意，如果要出主意，就要有属灵的价值。**出来的若是出于圣灵，大家都会跟上去，都会一同&quot;阿们&quot;。若是今天、明天出了很多主意，都是我们自己出的，主意多，话也多，人就讨厌，不会听你。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

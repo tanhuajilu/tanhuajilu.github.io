@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十二月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月三十日</h1><p class="meta">03.无比的爱 · 第365/366段</p><p><a class="btn" href="s364.html">上一篇</a><a class="btn" href="s366.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s365.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月三十日</h2>
+<p>感语随笔选二</p>
+<p>1.我们的主是神的爱子，尚且还因所受的苦难学了顺从，何况我们呢？（来五8）</p>
+<p>2.这么多的宗派要一一去对付是对付不了的；我们要站在神这一边，活在祂面前，认定基督为中心，让元首基督占有我们全人，在主爱里彼此交通，在生命里彼此供应，活在主光中，让主在地上的教会有见证。</p>
+<p>3.要带领众圣徒爱主、跟从主，不是讲跟从主的真理，乃是我们本身是一个被主吸引跟从主的人。众圣徒的属灵情形，跟我们发生关系。</p>
+<p>4.基督献上自己，顺服神以至于死，并且死于十字架上（地点）。奉献的本身就是牺牲（燔祭），就是自己损失。奉献也是敬拜神，同时手里拿着火和刀（创二十二5-6）：刀要杀儿子，火要烧儿子，要亲手绑独生爱子，把他放在祭坛上，并伸手拿刀要杀儿子。这些都是实际的具体行动，一点不是理想。</p>
+<p>5.这一种奉献，就是不留下所爱的给神。这一种奉献，蒙神赐大福，子孙众多，得仇敌城门，地上万国都因其后裔得福。</p>
+<p>6.交通是里面的灵与别人的灵没有间隔，溶化在圣灵里。不是妥协，不是勉强，不是盲目。这是灵与灵的感应，在里面真知道（启示）。一切外面的交际、交往、交情、交流是无济于事的。在神的爱里，在神的光中，就彼此有交通。</p>
+<p>7.有聚会才有事奉，这种传统观念必须改正过来。因为事奉神是灵里的事，有否聚会并不影响我们的事奉。在某种情况下，虽无聚会，主却是更亲近的。主为要我们与祂更亲密，常把外表的形式一一拆掉，好让我们里面更深认识祂。这是祂在我们身上工作的必要过程，也是多年来，所有爱主者的经历。</p>
+<p>8.历世历代，不少忠诚爱主者，为主牺牲并受尽苦楚，那么地上产业还算什么？但人却重视这一些，因可作为显扬自己的场所，建造巴别塔，名为主，实为己。可怜，许多人像当日的妇女们，在死人中找活人。&quot;祂不在这里，已经复活了。&quot;（路二十四5-6）肯定的说，主不在其中。人尽管凭自己发热心，仍见不到复活的主。我们要认定，凡与主没有关系的，与我们也无关系。主所要的是我们专心跟从祂，这里需要代价。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-二月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十八日</h1><p class="meta">02.在光中得以见光 · 第49/366段</p><p><a class="btn" href="s048.html">上一篇</a><a class="btn" href="s050.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s049.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十八日</h2>
+<p>接着我们谈一谈你所提&quot;彼此亲嘴&quot;的事。圣经提到亲嘴很多次，从旧约到新约多次提到亲嘴，但所提的内容和性情，不都一样。</p>
+<p>约拿单跟大卫亲嘴，是心心相印的。约拿单爱大卫如同爱自己，这是全圣经的记载中友情最好的朋友。约拿单死的时候，大卫称赞说，他们的爱情，胜过妇女的爱情。这是爱。亲嘴是表明亲爱。（撒上20：41）</p>
+<p>但是犹大的亲嘴就不是表示爱。他是用亲嘴来作卖人子的暗号。他看见主就说：&quot;先生。&quot;主耶稣对他说：&quot;你要作的事，快做。&quot;他是用亲嘴来出卖主，这是种可怕的亲嘴，是害人的亲嘴。（路22：48）</p>
+<p>浪子回家，全身都污秽肮脏，父亲却跑过去，连连和他亲嘴。（路15：20）这亲嘴又是什么？如我们诗歌所说：&quot;他用亲嘴表明赦罪。&quot;浪子以往在外面浪荡放纵，他一回来，父亲就赦免他。不等浪子说话（浪子已等着要说所预备的一番话：&quot;我不配称为你的儿子，把我当作一个雇工吧！&quot;），浪子的话还没有说出来，父亲已抱着他连连与他亲嘴，又赶紧叫仆人为浪子准备衣袍，准备鞋子，准备戒指。</p>
+<p>浪子回来时，全身样子如乞丐一样，现在却穿起袍子鞋子带上金戒指；本来什么都没有的，现在得着赦罪，因为&quot;亲嘴&quot;表示赦罪，赦罪以后，浪子全人焕然一新。我们也是这样。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-四月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十六日</h1><p class="meta">02.在光中得以见光 · 第107/366段</p><p><a class="btn" href="s106.html">上一篇</a><a class="btn" href="s108.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s107.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十六日</h2>
+<p>以前，你们夫妇在家有矛盾，吵吵闹闹的，信主以后，就肯让步不争，这就是基督的生命，是基督在你身上显影。本来是贪便宜的，这也要，那也要，在菜市场，要多拿一棵菜、一条蒜，到你信主后，心里觉得做不下去，就改了。</p>
+<p>有些从乡下来的，路过人家田边，看见地瓜那么大，露出来，就偷回去，信主以后想一下，也不敢了，因为他认为信主已经很好，不要再贪，这就是人从各方面把主显明出来。所以，信主以后所遇到的困难，就是要把我们里面的生命显明出来。</p>
+<p>对这一点，我们常常不认识，以致我们说：&quot;主阿，你要给我平安无事，不然，我会跌到。&quot;这样祷告，其实都是按着人的观念。</p>
+<p>回头看我们的经历，信主以后，反对就来，逼迫就来，什么困难都来；对那真信主的，他不会因此改变，他会坚定说：&quot;我还是信。&quot;那没有生命的只会说：&quot;我信主是要得平安，我要离开了。&quot;他就是这样的投机，要拜他的平安上帝而已。我们信主以后，差不多马上都有事情发生，这都为显出我们里面的生命，愈显也愈确实。（帖前1：4－8）</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

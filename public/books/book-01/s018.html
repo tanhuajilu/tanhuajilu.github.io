@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-一月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十八日</h1><p class="meta">01.天窗365 · 第18/366段</p><p><a class="btn" href="s017.html">上一篇</a><a class="btn" href="s019.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s018.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十八日</h2>
+<p>有人说：&quot;我们人穿了衣服才好看，而人本身就是最难看的。&quot;实在是这样。今天，我们在神面前也是这样，**穿上基督就好看**。基督──这义袍──若拿走了，我们自己所有的，不过是破烂的衣服，是不行的。</p>
+<p>所以每次交通，我们不是有新道理、新亮光。我们每一次的交通，都要交通基督、讲基督。只有基督是神所喜悦的，（太17:5）也只有基督会满足我们的心。我们是靠基督，基督怎样蒙神悦纳，我们也因基督蒙神悦纳，所以，都是靠着基督到神面前来。</p>
+<p>简单说，我们是交通于基督。H地来的姐妹头一天就说：&quot;我想来听道理，整天晚上都讲基督，没有讲道理。但是奇怪，基督这两个字，就叫我得光明，得释放，好像问题都解决了。基督一来就好了。&quot;</p>
+<p>所以，我们要有一个心：&quot;在这里，借着交通，要更深认识基督。&quot;这&quot;深&quot;是无底止的，通过交通，通过经历，通过追求，通过一些道路，要叫我们越来越认识基督，对基督越来越清楚。**认识了基督，才能把基督供应给别人，叫别人也得着基督**。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

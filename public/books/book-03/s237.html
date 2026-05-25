@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-八月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十四日</h1><p class="meta">03.无比的爱 · 第237/366段</p><p><a class="btn" href="s236.html">上一篇</a><a class="btn" href="s238.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s237.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十四日</h2>
+<p>人接触到神以后，对神，对神的事情，才有感觉；好像你接触&quot;甜&quot;，才有甜的感觉，如果不接触就不知道，也不能平白地生出甜的感觉来，必须是有一个&quot;东西&quot;，才有这个反应，没有的就没有反应！</p>
+<p>在&quot;领会属灵的事&quot;上，我们是已经有了一个底子，就是神的生命已经在我们里面，我们遇到了神，自然就有反应。如手有手感，夏天会出汗。冬天时，手摸到暖的东西会温暖，摸到冷的东西，自然也会缩回去。手有手感，很灵敏，能反应客观的情况。</p>
+<p>对圣灵的感觉，我们里面会感到很温和，若不是圣灵的感觉，就相反，你里面会厌烦，会不喜欢。这一个需要人实际去接触，要不然，你一直讲，他也不会通。神的旨意在理论上也是摸不到的，必须人和神的生命接触，神的旨意才会传达到你心里来！所以，我们诗歌里有一句说：使你思想成我思想，使你所爱成我所爱。我们要和神连起来；与神交通，就是要&quot;与神交得通&quot;使神的东西可以进到我们里面来，而我们也能反应神。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

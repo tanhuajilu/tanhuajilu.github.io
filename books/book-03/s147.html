@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-五月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十六日</h1><p class="meta">03.无比的爱 · 第147/366段</p><p><a class="btn" href="s146.html">上一篇</a><a class="btn" href="s148.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s147.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十六日</h2>
+<p>你到一个地方，感觉最喜乐的，就是弟兄们在一起的时候，灵是和谐，彼此没有间隔的。你怎么会知道呢？因为从表现出来的东西，你就知道；大家在一起灵里没有一个相反的敌对的气氛，这叫我们感到最喜乐。在这个和谐的气氛下，你要讲神的话也轻松，接受神的话也快，因为大家没有争竞，一讲都接受，一交通都接受。如果没有和谐的灵，你讲，我在这里变个鬼脸，你再讲，我也比你更会讲，这样的话，就是人在那里争。</p>
+<p>如果是从里面到外面都和谐，你就会感觉到这里是一个神的同在的地方，是一个有主的爱的地方。彼此只见一个面，里面就有交通，虽然彼此见见面，里面就新鲜，握握手，还没有讲话，里面问题就解决。因为原来有好多东西在我们里面，叫我们黑暗，叫我们受捆绑，叫我们不释放，叫我们里面烦躁，现在你跟弟兄一见面，笑一笑，里面这个烦也没有了。因为主藉着肢体的交通，来供应我们，给我们有光（约一2:10），给我们有生命。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

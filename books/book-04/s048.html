@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-二月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十三日</h1><p class="meta">04.晒熟的美果 · 第48/366段</p><p><a class="btn" href="s047.html">上一篇</a><a class="btn" href="s049.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s048.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十三日</h2>
+<p>这条路是圣灵的路。所以，使徒行传其实就是圣灵的行传，一段路一段路的去走，越走越远也越高。它不是停在耶路撒冷，也不会停在安提阿，以后就进步到以弗所，直到以弗所失去当初的爱心，已经被淘汰了，神还一路再拣选，再拣选。历史上，那些忠心爱主的人总不会少，这都是历史的事实。</p>
+<p>今天的教会是那么的复杂，特别经过历史的累积，异端累积很多，错误也累积很多，似乎要叫人灰心，可是，他在属灵实质方面的累积却也越过越丰富。</p>
+<p>二千年来，属灵的人留下给我们的遗产，是多么的丰富，我们已经承接过来并得以应用，加上今天神给我们的亮光，我们可以说，在教会历史上，今天乃是最丰富的时代。那么，问题就是，我们的眼睛必须开起来，看见神的丰富，我们也要把自己摆在神的道路上，跟着神这一条路去走，只有这样，才会产生属灵的影响来！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

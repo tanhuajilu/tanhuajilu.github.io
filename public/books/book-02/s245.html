@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月一日</h1><p class="meta">02.在光中得以见光 · 第245/366段</p><p><a class="btn" href="s244.html">上一篇</a><a class="btn" href="s246.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s245.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月一日</h2>
+<p>一个圆盘的水在这边，水是平的，你照一照，怎样？圣经说：&quot;水中照脸，彼此相和。&quot;（箴27：19）你看一看水中的脸儿，跟你一模一样，若水是有波浪的，如海浪澎湃的，你看那个脸，映来映去就看不清楚。</p>
+<p>因此，你的灵在神面前，是安静的，对神才有反应，神怎么感动，对你怎么说，你才听到，才清楚。你是忙乱的，连人对你讲话都听不清楚，心不知跑到哪里──要听神的声音更不清楚了。因为你灵里面不安静。所以，一切灵里不安静的人，没有办法事奉主。</p>
+<p>安静不是什么都不作。这安静是叫你做更好的工作。你劳动五天（星期一到星期五），还休息二天，这两天休息不是叫你不作工，是叫你休息好，到星期一更有劲头上班。休息是为作更好的工作。</p>
+<p>有的人，整年整天都忙不过来，工作哪里做得起来？某某传道人下一年的工作时间表都已经安排好，按照时间一月份在那里，二月份在那里...在那里几天，又在那里几天，都排好，这是什么？我说，圣灵的带领在什么地方？自己都已定规好...我们作神的工作，不是自己计划好好，定规好好，乃是有一天，神带领一天。你去读使徒行传，使徒作工并不是排好的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

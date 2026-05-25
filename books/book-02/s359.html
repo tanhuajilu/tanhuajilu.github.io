@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十二月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十四日</h1><p class="meta">02.在光中得以见光 · 第359/366段</p><p><a class="btn" href="s358.html">上一篇</a><a class="btn" href="s360.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s359.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十四日</h2>
+<p>交通一：为着这次到这里，我仰望主的引领，祂给了我哥林多后书二章14-17节这一段话。&quot;感谢神，常率领我们在基督里夸胜，并</p>
+<p>借着我们在各处显扬那因认识基督而有的香气...&quot;神的率领就是祂的引领了──Leading。你问到：怎么和弟兄姊妹们交通，借着交通服事他们，有什么该注意的；这就跟神的率领引领有关。神怎样带领我们？祂领我们在基督里夸胜。在基督里就是进到基督里面，夸胜就是得胜，这里夸胜原是个名词。</p>
+<p>&quot;并借着我们在各处显扬那因认识基督而有的香气。&quot;我们虽然&quot;在各处&quot;，有时在这里，有时在那里，无论在那里，却只有一件事，就是去认识基督，认识基督就有香气，才会在各处显扬因认识基督而有的香气。（林后2：14）提到香气，天然人有天然人的味道，基督在我们里面，也有基督的味道。</p>
+<p>我们信主的人，无论在那里，神都在引领我们，我们不会走错路：我们这些在基督里的人，如果在神面前是坦然的，神就会引领我们，祂不会丢弃我们。像&quot;交通&quot;这一件事，不只我们自己要找交通，这还不够！主会引导我们找到交通。我们是否神的儿女，若是，神就用祂永恒的爱来爱我们，祂永不丢掉我们。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

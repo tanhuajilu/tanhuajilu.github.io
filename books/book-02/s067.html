@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-三月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月七日</h1><p class="meta">02.在光中得以见光 · 第67/366段</p><p><a class="btn" href="s066.html">上一篇</a><a class="btn" href="s068.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s067.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月七日</h2>
+<p>有人说：&quot;我们领受的跟你所领受的不同&quot;，我说：奇怪，有什么不同？如有不同，你的领受就有问题了。保罗传神的话的时候说：&quot;我当日所领受，又传给你们的，第一...&quot;（林前11：23，15：3）所领受、所传的就是一个，怎么有不同呢？</p>
+<p>在中国出名的牧师中，一个是贾玉铭、一个是陈崇桂，二人有一点不同，贾玉铭讲&quot;一次得救，永远得救&quot;，陈说&quot;一次相信，不是永远得救，还会永远沉沦。&quot;有弟兄问我：&quot;你的主张看法是怎样？&quot;我问他说：&quot;你是怎么样看的？你先讲&quot;。他说：&quot;我赞成陈崇桂所讲的。&quot;我说：&quot;那么好，我不答复你。你自己已经答复，你还要问我？你已跟陈崇桂，&#x27;一次相信，不会永远得救&#x27;，你已经赞成这一个，我不会给你讲！你就按你那个去信好了，我不答复。&quot;</p>
+<p>如果我答复他，就上当。他会拿着我们这个争辩，说我们不对，我们就受亏损。我们的灵听了就烦就不舒服，灵里像空气污染般，受不了。所以，一些道理，你愈辩，自己就愈掉下去，因为争辩叫人动血气。你最好用一般态度对待他，不跟他讲。如果他要寻找交通，要客观一些才行，他已经这么主观，还要来问？</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

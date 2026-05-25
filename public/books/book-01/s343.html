@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月八日</h1><p class="meta">01.天窗365 · 第343/366段</p><p><a class="btn" href="s342.html">上一篇</a><a class="btn" href="s344.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s343.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月八日</h2>
+<p>前述的夫妇，我问丈夫说：&quot;你能作什么(行业)？&quot;他说：&quot;我做饮料的。&quot;</p>
+<p>我说：做饮料，你很内行，你就从你内行着手去做事，靠主，凭信心去走。你不要说，主阿，告诉我怎么作。主不会告诉你，要你自己去走。</p>
+<p>若人告诉你，就变被动。**你自己要分析、要知道怎样去作，主就祝福你。你考虑时，要有信心去相信神。你要对主说：&quot;你祝福，我感谢；亏本，我也感谢！&quot;**（帖前5:18）这颗心就平；事情要去作，不要说作不好怎么样，你这样，就没有路走了。你这颗心先平下去。</p>
+<p>保罗说，用世物，又好象不用世物（林前7:31），心里就平；有儿子像没有儿子，有东西像没有东西，这个心就平。你把你的事交给主就要说：&quot;主，我交给你，你祝福，我感谢，你不祝福、我也感谢！&quot;心这样想才好。不然，你都是包赢的，没有祝福，就难受、就痛苦。</p>
+<p>这位弟兄听了我的话，就说：&quot;好，我就做饮料。&quot;</p>
+<p>我说，不是我告诉你的！你能够作饮料，你才做下去。</p>
+<p>接下去就有一个问题，就是商标问题，他说，他当地拥有的商标字型太小，做出去，没有销路；大家都相信香港的、深圳的商标，他接用别人的商标花费就很大。我问：这方面你想怎样？他说：&quot;我心里考虑、考虑...考虑怎样用商标，又考虑到给抓到一个假商标就吃不消，所以不敢。&quot;</p>
+<p>我说：&quot;这个我不能告诉你。你自己答复了。&quot;</p>
+<p>他自己良心已经知道，这样做下去...我们信主的人不可以这样做，一旦给政府发现，是作假的，就要破产了。罚款是一块钱要罚几倍的。他说：&quot;这个我也不敢讲，不敢做。&quot;</p>
+<p>我说：&quot;你就按你本身的牌照吧！各种手续就好办。按这个做，会赚不赚，你就告诉主。主不会给你没有路，主会祝福你呢！如果不祝福，你也要感谢！这也是主给你的考验。求主记念。世人是靠商标，我们是靠主的祝福，有时主一祝福，你便宜一点，销路就大；你想赚大钱，没有那么多大钱给你赚，你从少好好赚起，赚赚赚，神的祝福增加再增加，恩上加恩，再恩上加恩。你这样去作。&quot;</p>
+<p>他们二夫妻说：&quot;今天我们二人的矛盾除掉了。&quot;</p>
+<p>我说：他作，你跟他同心，就有祝福。很多人说你没有信心，一直说你：&quot;她哥哥这样信，是信到着迷了。不着实，好象变作迷信了&quot;。我说我们不是迷信。要信主，但现实的问题该作的就去作。</p>
+<p>所以不管事业、工作，我们就按这原则做。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

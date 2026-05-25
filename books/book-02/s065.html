@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-三月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月五日</h1><p class="meta">02.在光中得以见光 · 第65/366段</p><p><a class="btn" href="s064.html">上一篇</a><a class="btn" href="s066.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s065.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月五日</h2>
+<p>感谢神，神今天有话说，神今天要兴起话语的职事，神今天要怜悯许多人有耳朵来听。那一天，M弟兄讲了几句话，我觉得很宝贝，他说，我们有两只耳朵，但是圣经所说：&quot;凡有耳朵的，就应当听；圣灵向众教会所说的话，凡有耳的就应当听。&quot;（启2：7、14、29，3：6、13、22）这耳朵在英文是单数的。我们的两只耳朵常是从这边听来，却从那边出去，听完就没有了。但在这里的耳朵是单数，就是说，我们的心应当专心的来接受神的话。那些三心二意的人就没有办法走神的道路，一心一意的人才能走上神的道路。</p>
+<p>神对我们的要求就是&quot;一心一意&quot;──单心，正如圣经雅歌书所说的，&quot;我的佳偶...你的眼...好像鸽子眼&quot;，为什么要说&quot;鸽子眼&quot;？鸽子眼就是单一的眼，不是复眼，单一的眼就是单单看那一个目标、一件东西，复眼的就会看很多东西。我们的眼睛向着神是单一的，我们的耳朵也单一的向着祂。我们是这样单一的，只看祂，只听祂，只仰望祂，我们的道路才是正直的。</p>
+<p>这是窄路，我们的脚要受这窄路的限制；这门是小的，人进这门，肥胖的人进不去，也走不上，他要走上去很难受！那些自大、自满、自尊、属肉体的人，就是这些肥胖的人，要进窄门，就进不去！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

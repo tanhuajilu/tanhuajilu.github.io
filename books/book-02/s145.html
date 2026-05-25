@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-五月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十四日</h1><p class="meta">02.在光中得以见光 · 第145/366段</p><p><a class="btn" href="s144.html">上一篇</a><a class="btn" href="s146.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s145.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十四日</h2>
+<p>普通信徒虽然很多，并不构成问题，问题产生在带头服事的人身上。在事奉上，你自己清楚，也带人清楚，跟在后面的人就会跟得清楚。普通的信徒没法自己带出一条路，他们不懂得道路，自然要跟别人走。带头的人在走，他们也跟着来。</p>
+<p>譬如说，聚会带头的人都落在争辩里，情形就变得糊里糊涂的。有个地方，两方的聚会对立得很厉害，带头的人在路上见到也不打招呼，即便双方擘饼都说见证合一（实际是对立的），这个擘饼就失去意义。我们讲的是事实。那日，我问从当地来的弟兄：&quot;双方合起来可能不可能？&quot;他说不可能。</p>
+<p>本来直接合起来不可能，也可通过中介，两边通一通有可能，但是他们说不可能。我想现在双方或许关系可恢复一点，还是没有办法！这很自然，因为各有一套，两套东西没法连起来。从生命来说更不容易，因都落到死沉沉里，没法整体解决，这样神只能做挑选的工作。（提后2：20－21）神在这里挑这个，那里挑那个，这些人就莫名其妙地走在主的路上。</p>
+<p>你说：&quot;岂不又多一派？&quot;怎么说好？由你去说！里面的内容对，就是宝贝，若没内容，就是没有派的，里面还是空！这方面也需要慢慢地渐渐地清楚。等到新一代起来，陆续就会达到共同的看见。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

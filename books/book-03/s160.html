@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-六月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月八日</h1><p class="meta">03.无比的爱 · 第160/366段</p><p><a class="btn" href="s159.html">上一篇</a><a class="btn" href="s161.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s160.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月八日</h2>
+<p>爱东西的就给东西绑住。</p>
+<p>有一位老弟兄喜欢捡东西。香港房子小，住起来很挤，他还去捡东西，床底角落头都有他捡的东西。有一天，要搬家，东西已经丢了，他还捡回来。老人家过去是作生意很有钱的，现在还是爱东西，连捡来的东西，还是爱。</p>
+<p>人里面对神清楚，对东西就会看破，不会爱这些东西好象爱命一样。</p>
+<p>故此，我们不要看现象，要看实际。口说热心爱主，一旦弟兄姐妹到你家吃一顿饭，你就受不了哩！会心里说：&quot;我家才二三个人，你一个人来大吃！&quot;他越吃，你心越痛。若是你爱主，随他吃多少，心都不会痛，你的心量是大的。爱心是要有度量的，没有度量，哪有爱心？</p>
+<p>圣经说：爱不计算（[林前13:5](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=45&amp;chapter=12&amp;verse=4&amp;highlight=1#P4)）。但我们常斤斤两两在算。所以，所说从英国回来捡东西的姐妹确实是心理变态，不然，怎么会作这些事？她里面不正常。我们知道，有些人不只捡东西，还把捡来的都吃下去，至此，已变成不由自主了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

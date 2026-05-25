@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-三月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十四日</h1><p class="meta">03.无比的爱 · 第84/366段</p><p><a class="btn" href="s083.html">上一篇</a><a class="btn" href="s085.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s084.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十四日</h2>
+<p>使徒们传神的话，既有人的成份，也有神那面的成份。福音出去了，就带出荣耀。彼得有祂的成份，保罗也有祂的成份，但是加上了神的成份，大家就相同。用词语气不尽一样，但是属灵的东西一样，就是神的荣耀。每一位使徒各有自己的成份，加上了神的成份就好。</p>
+<p>每一位使徒都能显出他的那一点（特征），四福音，说出了四方面的特征。虽然说出了不一样的特征，但是不会说出不同的成份；这样，才将主的成份说得全备。马太说出主是王；马可说出主是仆人（服事人而不是受人服事）；路加说出主是人子（木匠之家，过人子的生活，孝敬父母）；约翰说出主是神的儿子（生命和爱）。约翰福音中，&quot;爱&quot;、&quot;生命&quot;、&quot;永生&quot;用得最多，在人这方面的是&quot;信&quot;，突出了&quot;信&quot;。约翰壹书说神先爱我们（约4:19），也说到爱，&quot;爱&quot;是神特别给约翰的丰富。至于保罗，他的特征是建造教会。</p>
+<p>每一个信徒都有他特出的恩典。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十八日</h1><p class="meta">02.在光中得以见光 · 第292/366段</p><p><a class="btn" href="s291.html">上一篇</a><a class="btn" href="s293.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s292.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十八日</h2>
+<p>在属灵的道路上，有一个东西要认识，就是学习认识属灵的价值。这价值观很要紧，若把好东西看成便宜，坏东西看为宝贝，就把好变坏，也把坏变作好的。因此价值观必须正确。我们得着主，是得着至宝，多么的宝贵，祂的价值，世界任何东西不能相比，没有一样比得上主。你要把这个价值算好，祂就是至宝，价值最高，是最好的东西；那不值钱的给我，不要，因为已经有一个最好的。</p>
+<p>小孩子在玩，玩得很开心，你叫他来，不会来，除非你把最好的给他，这给他，他赶快把玩具都丢了，要拿你这最好的。我们也是这样，有时，我们一直玩意那自以为&quot;宝&quot;的，等主把至宝显给你，你再去看那些&quot;宝&quot;，都失色了。腓立比书里，保罗说：&quot;我以认识我主耶稣基督为至宝，我为他丢弃万事，看作粪土。&quot;（腓3：8）不然，万事对我们也是宝。你的财物，你的东西，都是宝，大家都要，但这有一个比那些更宝更美的，你得着了，就能把那些丢掉放掉。</p>
+<p>放掉，不是说我们不再用它，我们还用世物，不过用又好像没有用，就是我们不受物质的捆绑。不然，一套的衣服就摸到我们的心。&quot;呀，这衣服那得多好。&quot;穿出去给弄脏，心里就痛，对人发脾气：&quot;你怎么...我这衣服多值钱的。&quot;这个就摸到你的心。你发脾气已经叫你损失了，这衣服值多少钱，会叫你发脾气，多亏本的！你就为这一点点气成这样子！你这人格还比不上这套衣服了。</p>
+<p>有时买东西，只差一点点，跟人计较，跟他发脾气；你今天真买贵东西了，你只买贵几分钱，却花上了你的人格。我说，你这样计较，斤斤计较，又发脾气，是你自己亏损，因这个，别人也看你不起啊！所以，人若没有认识主，所受的许多苦都是自己找来，好多损失都是自己无知带来的。求主给我们有智慧能看透问题，价值观一直能够正确。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

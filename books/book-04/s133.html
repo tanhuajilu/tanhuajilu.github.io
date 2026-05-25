@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-五月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十八日</h1><p class="meta">04.晒熟的美果 · 第133/366段</p><p><a class="btn" href="s132.html">上一篇</a><a class="btn" href="s134.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s133.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十八日</h2>
+<p>问：加拉太书里讲到，神乐意将他儿子启示在我们里面，这启示是什么？在前几节，保罗说，我所讲的不是从人来的，乃是从耶稣基督启示来的。这两个启示有何分别？</p>
+<p>答：我们一个基督徒，是不断有启示的。光不是一次的，光是要一直照一直照，不只一次的。离开光，你就黑暗，离开启示，就没有路。启示是不断的，这个不断不是我们在外面一直求来的，这个不断，乃是在我们里面，一直给我们有启示。这是什么意思呢？</p>
+<p>启示就是：&quot;给你看见。&quot;你原看不见的，现在翻开给你看见。神的儿子在我们里面，就是要一直给我们看见属灵的东西。这个就是&quot;里面不断的启示，不断的光照&quot;这就是我们里面的眼睛一直给擦亮，越擦也越清楚。</p>
+<p>有启示，就叫你里面的灵，越来越明，越来越亮！增加启示，再增加启示，不住的有启示，这个启示就叫你得着丰富。我们不要停在一段的启示，以为有了到此为止，以后还有！神的伟大是够你认识的，叫你认识不了，今天给你看见这个，明天给你看见那个...看也看不完。启示给我们里面的眼睛更加明亮，能以看出属灵的事物，因为这是个在里面生命的东西。这不是外面什么普通的东西。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

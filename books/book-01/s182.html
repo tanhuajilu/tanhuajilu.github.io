@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月三十日</h1><p class="meta">01.天窗365 · 第182/366段</p><p><a class="btn" href="s181.html">上一篇</a><a class="btn" href="s183.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s182.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月三十日</h2>
+<p>**我们已经跟主联合，你认识主，认识祂的丰富，就很安息、很轻松，因为所给我们的恩典是用不完的**（林前16:23，林后9:5）。像鱼放回海里一样，不必忧虑海水会给他喝干，任凭它去喝也喝不干。又像蚂蚁在约瑟的时代，有那么多的仓库，虽然有七年大荒年，也不用怕饿坏，怕粮食用尽。</p>
+<p>我们在基督里，对祂的丰富，连理解也理解不来！但是，只要你相信、接受即可，我们只管因信安息，只管奉献，交托与主。</p>
+<p>有些人说，我已奉献给主，为何我还在挂虑？</p>
+<p>我说：你这种奉献就像那些拜偶像的，你不是放在祂手里！你只是挑一担东西去拜一拜而已。如果你向主说：&quot;主，我的一生、我的家庭、我的前途，和我的一切，都交托给你。&quot;你就轻松，一切主会负责（诗68:19，太11:30）。</p>
+<p>接下去，你相信祂负责你，你的心也必得安息。不然，明天还没有到，今天你已经挑着明天的重担了，甚至还把明年的挂虑拿起来挑哩！（彼前5:7）</p>
+<p>有一个姐妹怀了孕，她却在忧虑：&quot;我这个孩子将来生出来，怎样去养育他？&quot;我说：&quot;孩子还没有生出，你已经在忧虑这些，还挂虑他将来念大学能念成功否。这样挂虑法，是挂不了的！&quot;</p>
+<p>所以，要一天过一天去相信神。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

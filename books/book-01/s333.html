@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十一月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十八日</h1><p class="meta">01.天窗365 · 第333/366段</p><p><a class="btn" href="s332.html">上一篇</a><a class="btn" href="s334.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s333.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十八日</h2>
+<p>**我们的事奉和工作是属灵的，所以叫灵工。一切属灵的东西都离不开这个灵。**我们的思想作的是思想的工作，作教师就是作思想的工作。灵作灵工，不能用思想来作属灵的工作。</p>
+<p>思想是给神用的，借着人的思想，能把神的工作带过来，思想的作用就是发现人灵里面所领受（林前2:13，16）的。人借着思想，用嘴巴把话讲出去，这是以灵作出发点出来的。好象会幕，从至圣所开始，经过圣所，出来这一条路是通的。就是这样，你这条路走通了，你事奉神就轻松，属灵的效果就显明。这条路不通，你怎么做也做不通。</p>
+<p>你单凭思想，我要问你，你有多少思想去问？人凭着头脑去想，想破了头还不能想出什么，若凭着灵里的启示，就超过你的思想。</p>
+<p>保罗虽然有学问，但他说：&quot;这些东西我不用，我不用高言大志去讲福音（林前2:1），我是借着圣灵，靠着他的大能大力，传讲基督十字架的福音。基督十字架的福音在那不信的人看是愚拙，神却用人所当作愚拙的道理来拯救一切相信的人。&quot;因为在得救的人，十字架的福音是神的大能（林前1:18），不信的人反倒以为愚拙，但神的愚拙总比人超越。神竟用人愚拙的道理去拯救人。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

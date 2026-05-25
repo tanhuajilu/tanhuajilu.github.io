@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十三日</h1><p class="meta">03.无比的爱 · 第318/366段</p><p><a class="btn" href="s317.html">上一篇</a><a class="btn" href="s319.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s318.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十三日</h2>
+<p>你要别人爱你，这不容易达得到，因为人的爱有限，要想做却达不到。还有，你要求别人爱你，你也要去爱人，因为人与人之间，爱要相等相互的，彼此才会平。</p>
+<p>人的爱是有限的，会变的。夫妇的爱不是外面表现亲密，就是好，最要紧是彼此心里相爱。</p>
+<p>有很多外国来的人说，&quot;你们中国人夫妇手拉手也没有，究竟彼此有没有爱情？&quot;夫妻在街上没有拉手，就是没有爱情吗？这一点外国来的人，不能明白。这是东方跟西方两边的不同。实际上，我们比他们的更有爱情。看我们乡下的夫妇，结婚以后，夫妻白头偕老，七八十岁夫妇同行多的是。外国的离婚率却是最高的，证明外面表现出来的不一定长久，因为外表的是有限的，会变的，里面出来的才比较长久。</p>
+<p>特别我们有主耶稣基督的人，有主，就更亲爱了。因为夫妻是表明基督和教会，越老（越久）越爱。到老了，爱情越发增加。一切从神出来的，就要被保守得越深。</p>
+<p>你们年青人，不久结了婚，前面的路还有几十年，怎么过呢？就是要彼此相爱（[帖前3:12](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=51&amp;chapter=2&amp;verse=11&amp;highlight=1#P11)），相爱，大家才有甘甜。失去了爱，就是苦。如果没有爱，一点苦来，就受不了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

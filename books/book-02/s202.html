@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十日</h1><p class="meta">02.在光中得以见光 · 第202/366段</p><p><a class="btn" href="s201.html">上一篇</a><a class="btn" href="s203.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s202.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十日</h2>
+<p>天主教过去是个政治的教会，今天还是充满政治的势力在里面，它跟政治套在一起，跟世界套在一起。属灵的和属肉体的套在一起就把基督教变成哲学，变成理论，变成今天的这个样子。</p>
+<p>基督教是生命的宗教，不是叫人做好行好的。若讲做好行好，孔子的道理更会讲了，世界上的道德家更会讲了。基督教不是作这一个，因为人不会行好，也不会做好；如果会作，基督就不需要来钉十字架了。我们就是不会作好！基督耶稣不是作教主，他乃是救主，他来，为拯救我们。</p>
+<p>我们用&quot;基督教&quot;，是权宜用的，因一千多年来都这样说。其实圣经没有&quot;基督教&quot;，只有基督的教会，教会要做的是高举基督，只有基督。基督教不是教，是救！这一个救（拯救）就是恩典，所以我们从头到脚都是恩典。今天，神要救我们，神要拣选我们。</p>
+<p>主耶稣说，蒙召的人多，选上的少。我们不能够单作一个仅仅得救的基督徒，我们蒙召了，也要被主拣选。所以，这么多信徒只有少数人拣选走属灵的道路，也是神荣耀的工作。</p>
+<p>某地来的弟兄说，听到这种交通的话的人有几百个，几千个，但是只有蒙主怜悯的少数人，才看见这条属灵的路，愿意走上去。而且，没有走这条路时，不会有什么事情，我们要走上去了，那些人就一齐反对攻击我们，找我们麻烦，七讲八讲的。</p>
+<p>我说，这条路是十字架的窄路，你必须经过主耶稣走的这条路，不然，主耶稣钉十字架的话，你讲是讲了，不过像讲故事。如果你经过十字架，你能体会说，十字架是什么，苦难是什么。每一种的十字架都有它每一种的味道，你各种的味道都尝过了，无形中，属灵的生命就丰富。所以遭遇这些苦难也是恩典。</p>
+<p>我们的眼睛要看到这些苦难的背后，就是施恩典的神，苦难是祂分派给我们的。我们一生年日的遭遇，没有偶然，都有神的安排，这个安排，也是人想不到的，说到底，就是神为我们都安排好了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

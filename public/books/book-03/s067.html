@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-三月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月七日</h1><p class="meta">03.无比的爱 · 第67/366段</p><p><a class="btn" href="s066.html">上一篇</a><a class="btn" href="s068.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s067.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月七日</h2>
+<p>&quot;爱&quot;有两种。讲到爱，讲到谦卑，讲到温柔都有两种。一种是人的爱，一种是生命的、神的爱。因为人都有天然的爱心，就是不信耶稣的，也有爱心。</p>
+<p>我们信主以后，有时候也凭着爱来作一些好事。怎么知道我们的爱是出于神的或是出于人的呢？凡是人的爱，都是有限的，神的爱才是无限的。你说爱会化解愤恨，但是在人这一层也化解不了；能化解的也是表面的。如果那个爱能把忿恨彻底化解就是神的爱了。</p>
+<p>神拯救我们就是因爱。祂消除了我们过去所有的罪恶，但是这个爱不是藉着说&quot;我爱你，赦免你的罪&quot;一句话，乃是透过法律的手续。因为一个罪人一定要经过法律，没有经过法律的那些爱是没有原则的。不理清白就给你赦免的，是糊涂的。</p>
+<p>我们常说恩爱，有爱就有恩典。这个恩典就是藉着主耶稣基督为我们完成救法，作成救恩；所以我们得赦罪是很容易的，一信就得着；在神那边却不容易。你看，祂把独生子赐给我们------道成为肉身，也经过所有人间的苦，最后为我们死、埋葬、复活。这样一来，恩爱和公义，都成全了，就完成了神这个工作。（弗5:8-9）</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

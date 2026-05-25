@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-四月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十七日</h1><p class="meta">04.晒熟的美果 · 第112/366段</p><p><a class="btn" href="s111.html">上一篇</a><a class="btn" href="s113.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s112.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十七日</h2>
+<p>主耶稣的得胜就是因为牺牲自己，他没有死，又怎能得胜？就是借着死，他败坏了那掌死权的，就是魔鬼。所以他死了，他也得胜了。按人看，主被人抓去，已经是一败涂地，彻底的失败了。但是，这个就是他的得胜。</p>
+<p>所以，我们基督徒，不要想便宜，没有便宜的呀！你要便宜，便宜就叫你漏掉。如果你做了不该做的，就是你得着钱，这个钱也会漏掉，因为你的钱是放在破漏的袋子里。</p>
+<p>我们的眼睛应该仰望主，连着主。你连于主，大家也就跟着主。牧羊的人都会培养一只带头的羊，他拉着羊走，所有的羊也就跟着他走。今天，是主在带领我们，我们就跟着走，羊的脚踪就直了。如果，我们没有跟着主走，我们的路就是弯的，我们的脚踪也是弯的，没有办法有直的脚踪。</p>
+<p>所以要多多的向着主，仰望主。我们向着主，就是敞着脸。圣经说，我们的心几时归向主，帕子就几时除去了。神的光是从主的脸上射出来的，我们向着主，就像镜子向着太阳，就有光照出来。我们每一个人都向着这位荣耀的主(我们的太阳)，就从主接受光，也把主反射出去。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月九日</h1><p class="meta">01.天窗365 · 第253/366段</p><p><a class="btn" href="s252.html">上一篇</a><a class="btn" href="s254.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s253.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月九日</h2>
+<p>好象我们照相需要显影，没有显影就是黑的，一有显影，（冲洗相片），所照的相就出现；**在我们身上也有生命，不断在显影，一直到基督显出来。**信主以后，怎么知道有主在你里面？你碰到主，得到主，就开始彰显基督了！并不是你去作好、行好，乃是你一信主，在外面，你自然有一种反应。</p>
+<p>你信主不久，就有家庭的反对、朋友的反对，撒但借着各种的事故来攻击你，这些就是&quot;显影&quot;。</p>
+<p>本来人家说你一句，你要吵起来，现在无论怎么说，你不会吵。旁边的人也觉得奇怪：&quot;你以前一听就气，跟着就吵，今天却可不理，里面很平静。&quot;这个就是一个显影。</p>
+<p>以前你丢了几块钱，苦死了！现在丢了一百多元还像平常一样，好象世界的东西，有也可以，没有也可以。本来人骂你一句，你反骂他三句，以牙还牙，以眼还眼，信主以后，人打你这边，那边也让他打，这是人所做不到的。这就是生命在你里面才做到，没有生命你不能做到。</p>
+<p>人讲一句占便宜的话，你不跟他计较，人打你，你受得了，还说&quot;这边也让你打&quot;；以前家庭遇上什么事，就愁眉苦脸，现在你有主作喜乐。这都是生命的反应。</p>
+<p>希伯来书也记述许多人因信主，家业被抢夺，心里还有平安、有喜乐，这就是基督的显影。他们把他们的基督显明出来了。（来10:32－39）</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

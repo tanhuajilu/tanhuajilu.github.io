@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十三日</h1><p class="meta">02.在光中得以见光 · 第257/366段</p><p><a class="btn" href="s256.html">上一篇</a><a class="btn" href="s258.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s257.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十三日</h2>
+<p>提到方言，方言是诸多恩赐里最末了的一项。保罗在哥林多前书提到：五句悟性里说的话还比许多方言更好。讲方言的，也还带着许多世界里的东西呢！有人以为讲方言就好，但面对生活，面对一些实际，却不知如何去应对。</p>
+<p>我们要注意一般做人要正常...会幕里的东西都是&quot;细&quot;的，海狗皮是最粗的了，就盖在会幕的外面，但里面却是有宝贝，&quot;宝贝放在瓦器里&quot;，神藉此要显出他的能力。（林后4：7）</p>
+<p>我们听说，在香港有很多关乎方言争论的问题。有的说有方言，有的说没有。我们不去凭他们说的作断定。我们根据圣经。所以，我们不依他们口里所说的，乃依他们的实际。说有或说没有，就看他们&quot;是不是&quot;。</p>
+<p>属灵的东西，只要你是内行的，就能辨别清楚。从那里去辨清楚？凭你里面的感觉就可以了。你摸到的是布，就是布，你摸到的是桌子，就是桌子。你碰到活人，就是活人，碰到的是死人，你就知道，你会怕。体贴圣灵的就是生命平安，若是碰到肉体，就是死。对一个聚会，你在里面碰到的是生命，就会感到喜乐，若碰到死亡，就感到死和不安。（罗8：6）</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

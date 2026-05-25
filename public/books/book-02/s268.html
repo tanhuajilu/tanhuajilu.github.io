@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十四日</h1><p class="meta">02.在光中得以见光 · 第268/366段</p><p><a class="btn" href="s267.html">上一篇</a><a class="btn" href="s269.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s268.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十四日</h2>
+<p>以前我们小孩子过年传福音，传什么福音？那时，也分单张，是什么单张？就是说：拜偶像的来听！传福音的跟那些拜偶像的唱一下歌谣，念一下歌谣。我现在看起来，就觉得这很幼稚。今天再传这个，没有人听了。</p>
+<p>以前女人缠脚，教会也出一种单张，要解放小脚。以前旧社会要绑小脚，认为又好看又漂亮，不绑小脚的没有人要，嫁不出去。教会传福音说，上帝创造男女，男女的脚都一样，你不要绑小脚，绑了就怎样怎样！教会就传这样的福音，教会也来帮忙这种事。这样传福音，传一辈子也没有人得救。所以现在的传福音，是愈来愈接近福音的本质。福音的本质不传，而传许多外面的东西做什么？</p>
+<p>有人传福音，看起来，都不是传福音。科学家把科学讲讲，讲到差不多才把耶稣几个字，几个名词插进去，根本不是传福音！别人还需要你这传道人去传科学吗？科学书那么多，去看书就好。你是传道人，就专门传主耶稣并他钉十字架啊！你把研究好的科学拿来讲，叫人知道很多知识，天地万物讲了那么多，福音却都没有讲。</p>
+<p>有的人讲故事，把故事书买来，讲道理就把故事编进去讲，叫人听听笑笑的，福音在哪里呢？现在为吸引人传福音，唱诗也用世界流行曲现代调去唱。福音的味道给唱没有了，没法有一点属灵的东西。</p>
+<p>我们唱诗用属灵的调，用属灵的感觉来唱，诗歌一唱就把我们带到神面前去。可是今天，人唱诗都往世界去了。因为那些曲调都是世界上跳舞娱乐唱的（一个思想往那边去，人的灵性也往那边去了）。但若你的感情思想往神去，你的灵也往神去，彼此都有互相关系的。一个人的思想一直浸在那些空气里，灵的东西出来也给你这些东西冲淡没有了，是吗？</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

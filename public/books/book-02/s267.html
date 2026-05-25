@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十三日</h1><p class="meta">02.在光中得以见光 · 第267/366段</p><p><a class="btn" href="s266.html">上一篇</a><a class="btn" href="s268.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s267.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十三日</h2>
+<p>神怎样作工在我们身上，不是凭我们思想，想要怎样。我们想的，都不是事实。我们去想的，都是我们的理想和幻想。我们要尊重事实。这个事实就是基督在我们里面。</p>
+<p>在我们里面，常跟外面的需要有矛盾。常常我们里面是通的，却又在这里有一个理由。因为思想这东西是最喜欢讲理由的。我还要说：理由讲得愈多的人，他里面愈是刚硬。如果他有理由，就会靠着他的理由说：&quot;我讲得有理。&quot;如果他肯不靠理由，不凭思想，肯坦然到神面前来，神在他身上的工作会直接作到他里面，他会更细软的去认识神，认识属灵的东西。</p>
+<p>愈多讲理由的人，里面愈硬，愈硬板板的。生命的东西却是柔软的，不是硬板板的；但是它是刚强的，刚强的才有用。硬板板的就没有用，像石头硬板板，碰到要碰流血了。那铁矿石就更锐利更刚硬。没有受过神对付的人，他的&quot;强&quot;就像矿石般刚硬，最会伤人的。</p>
+<p>所以在属灵的功课上，我们要经过各种各样的情形：经过水经过火经过压榨。这些对我们很有用，因为经过压榨的，里面就会踏实。很多人经过交通，一次过一次，从他里面就有一个东西出来。就是发觉，愈交通他里面愈踏实。有的人起初交通还浮浮浅浅，轻轻浮浮的，话讲得很多。经过一段时间，他那个浮浅就减少，而且是踏实的。就是因为经过了一些压榨，才踏实的。像那些木粉经过科学处理压过的，是很坚实的，就是火烧也烧不起来，因为压实了。神也在我们身上作压实的工作。不然，我们就是太松散太轻浮、不实的，现在就给我们实实在在的压下去，让我们生命的品质（素质）被提高。</p>
+<p>人的属灵素质没有被提高（素质是低的）就没有用。神今天对付我们每一个人，就是要让我们属灵的素质被提高。你的被提高了，从你出来的东西才叫人得到造就。素质低的人，出来的东西就低。这一个，人若去要求却达不到。特别在今天，属灵的要求，要比任何的时代更高。今天信徒里面的要求，想用过去的道理来满足，满足不了。</p>
+<p>今天的需要是一种渴慕神的需要，不是道理听得好就够，信徒里面还有要求，他们的灵里还有要求。灵的要求很高。你出去的供应要高，才能应付。以前传福音要求很低，现在传的就比较高了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十二日</h1><p class="meta">01.天窗365 · 第347/366段</p><p><a class="btn" href="s346.html">上一篇</a><a class="btn" href="s348.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s347.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十二日</h2>
+<p>启示录说，有一天，世上的国成了我主和主基督的国（启11:15），神的旨意就在地上通行。那时候，拦住神旨意的仇敌──撒但，就被扔在无底坑去，最终，还要扔在火湖里永远受刑（启20:10）。</p>
+<p>弟兄交通说，我们有个大仇敌，就是撒但，主在各各他，已经打败牠，牠失败了。牠虽然伤了女人后裔的脚跟，今天尾巴还在转动，但是，头却已经被打破。</p>
+<p>主耶稣是我们的元首，教会是祂的身体在地上，就是说，主的脚就在地上。撒但的头已破了，祂这尾巴在这里只能吓唬人。今天蛇的尾巴在这里转动，我们就在这里践踏牠；今天是暂时性的践踏牠，到国度时期，祂还要被扔在无底坑里。</p>
+<p>**教会在这个时代，就是国度的交叉点，为带进国度；所以我们要求神的国降临，求他的旨意通行**（太6:10）**。**</p>
+<p>很多的问题，等主再来才能解决，今天解决不了，全世界的矛盾解决不了，人也没有力量去解决，直到主耶稣基督再来就解决。所以，我们今天活着乃是为着将来、为着永远，是为着这么大的事情，就是为着神的名、神的旨意、神的国度。</p>
+<p>这些都是大事。神叫我们与祂的圣名、旨意、国度连在一起；我们都与这些大事有关。因此，我们不能多说：&quot;我又弱又小。&quot;这态度就不对！因为**我们是从天而生的，我们的前途是尊贵的。**</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

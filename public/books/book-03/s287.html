@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十三日</h1><p class="meta">03.无比的爱 · 第287/366段</p><p><a class="btn" href="s286.html">上一篇</a><a class="btn" href="s288.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s287.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十三日</h2>
+<p>你所问&quot;同心&quot;的问题，可分二方面看。第一方面是对家庭方面的，第二方面是关系属灵之事的。作为家庭，你们夫妻必然要同心，你们两人不同心，家庭就不会搞得好，大家同心，才会共同去建立自己的家（[提前3:4](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=53&amp;chapter=2&amp;verse=3&amp;highlight=1#P3)）。因着都爱家庭，为家庭的缘故，必定在各方面去考虑、去做，去出代价，这一方面的同心，比较上问题不大。说不同心也得同心，因为你们已成为夫妻了。至于个性、性格方面，只要通过所面对的事情，都必有所对付。</p>
+<p>至于属灵方面，彼此就不能勉强了。我们个人最要尊重人的自由意志。他怎样就怎样，不能勉强。别人对他赞成，不赞成都可以，但是不能勉强，不能把他不要的勉强加给他。</p>
+<p>为神作工，不是为服从人，乃是要服从神（徒5:29）。彼此看法不一样的，不要去勉强一样。你照你所看的去做，他照他所看见的去做，到了一天，大家就都看到主的带领怎样，所以不是大家怎样说好，怎样协调。这样就很自然。</p>
+<p>以前，有作夫妇的，就因对受浸的看法不同（受浸呢，受洗呢？）各自的闹得很厉害。像这样的例子很多。直到一天大家同有看见，就自然同走一路。在S地有一位公会的长老因儿媳们要按真理受浸，都到&quot;聚会处&quot;去，他从来不肯去。直到一天，有弟兄来电告知我们：&quot;好消息呀！这长老要求受浸了。&quot;他一受浸，儿子就打电话与各亲人说：&quot;父亲受浸了。&quot;各亲人在本国的在海外的都彼此通报，热闹得很，认真得很。这也是神的工作。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

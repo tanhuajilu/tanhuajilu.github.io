@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-二月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十一日</h1><p class="meta">04.晒熟的美果 · 第37/366段</p><p><a class="btn" href="s036.html">上一篇</a><a class="btn" href="s038.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s037.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十一日</h2>
+<p>我们的思想要有管理，要专一。如果思想不专一，心思散漫，你这人就散漫。好像你吃饭，你就要专一吃饭。有些人一边吃饭，还一边在看报纸，思想就已经散漫了。像学生做作业，却一边看电视，他哪里有心做作业。如果他看电视，专一去看，到准备功课时，专心去准备才好（不要作二个）。作每件事情，不要一个时间作那么多，乃是一件一件去作清楚。这样一件一件作清楚，思想才会集中，才能有条理。</p>
+<p>有时，我们有试探，这一个没有做好，就抢着又作第二件，对这试探，你要去胜过。</p>
+<p>像你出门，已清楚锁上门，但出门半路上，还会有思想：&quot;恐怕门还没有锁上。&quot;你回去看一看，其实门已经锁好了。你就是被思想作弄，作弄到你苦了。</p>
+<p>你已经锁上门就是锁上了，突然来的思想&quot;没有锁&quot;，你不要信它，心里说，我是锁了，就是没有锁，我也不要再回头。这样，你思想就健康。若是你思想不健康，去跟人讲道，你没有办法讲好。你讲这一句，下一句就忘记了。因你思想变成贫穷，变软弱，不够用了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

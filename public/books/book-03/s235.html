@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-八月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十二日</h1><p class="meta">03.无比的爱 · 第235/366段</p><p><a class="btn" href="s234.html">上一篇</a><a class="btn" href="s236.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s235.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十二日</h2>
+<p>你思想上不通还不要紧，重要的是从你里面有生命出来。一个人生命上一通，自己就清楚，就能通。</p>
+<p>里面通了，悟性上也能通，就能表达出来。</p>
+<p>坟墓里的东西，让它去吧！不要再去挖骨头，找死人；也不要在死人中找活人。只要我们与基督联合，与祂同死，与祂同复活，同升天，一同喜乐，我们就是祂的见证。</p>
+<p>我们常像多马一样多疑，因我们常在思想、道理里面。很多基督徒就是注意道理，常说基督教的道理是怎样怎样。但我们要生活在属灵的境界里。</p>
+<p>马太福音十七章，关于变化山上的记载，就是把国度的异象给我们，在那里，主耶稣在门徒面前变了形象，显出祂的荣耀，祂的脸面明亮如日头，衣裳洁白如光。虽然摩西和以利亚也出现过，但云彩过后门徒只看到基督一人，天上的声音说：这是我的爱子，你们要听祂。</p>
+<p>教会也是国度的缩影。一下子，摩西和以利亚不见了，&quot;不见一人，只见耶稣&quot;（[太17:8](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=39&amp;chapter=16&amp;verse=7&amp;highlight=1#P7)），就是说，今天在教会中，律法和先知在荣耀的主跟前已经过去。所以我们不只不去看人，也不去看律法和先知，只见耶稣，因为主是活的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

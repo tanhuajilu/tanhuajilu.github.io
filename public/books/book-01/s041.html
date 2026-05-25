@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-二月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十日</h1><p class="meta">01.天窗365 · 第41/366段</p><p><a class="btn" href="s040.html">上一篇</a><a class="btn" href="s042.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s041.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十日</h2>
+<p>从以往情形看，好多信徒与不信者结合，还保持活在主面前的也不少。因着主的怜悯，有些不信者也信了，我们也碰到过，的确是主亲自作的工作。</p>
+<p>有很多人，一跟不信人的结婚，就一直离开主。**如果真有生命的，结果还会转向主、归向主**（林后2:6）。虽然浪费了几十年，生活在旷野，他还会向着主这边来。结果怎样，要根据每个人的情形。</p>
+<p>五十年代有一位热心事奉主的姐妹，跟不信的人结婚，男的又是无神论的人。现在她已经七十岁了，丈夫至今还与她对立，不许她与信徒来往，信徒到她家，就给顶出来，她自己感到很苦。但**主还怜悯**她，生了一个儿子和她同心敬畏主。这一点是神特别的怜悯。</p>
+<p>有一次大家交谈，她说，为什么从结婚到现在，这么多年一直祷告，丈夫还不信？还这样？她又说：&quot;一般的信徒还不会受这么大的对付，但我要事奉主，要做主工的；一改变，和无神论者结婚，至今还是格格不合的。这是神政治的手在我身上要对付我啊！&quot;</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

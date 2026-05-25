@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-九月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十七日</h1><p class="meta">03.无比的爱 · 第271/366段</p><p><a class="btn" href="s270.html">上一篇</a><a class="btn" href="s272.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s271.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十七日</h2>
+<p>（孩子渐渐长大，怎么带他们到主的路上。）</p>
+<p>一切都是神的怜悯，盼望我们的家庭怎样，这一个也是神的怜悯，不在乎我们奔跑和定意，全在乎神，神要怜悯谁，就怜悯谁。在经历中，当我们碰到一些实际，才觉得人不简单，要帮助人是不容易的事。现在，一个家庭有一、二个孩子，已经叫人感到怕，以前的人生一大批的就更怕了。但是前一代，生十多个的，倒反很单纯，没有什么复杂的事，这是神的怜悯。</p>
+<p>&quot;要怎样、怎样&quot;，讲也讲不完，因为每一个家都有它的情形，每一个家都有每一个家的十字架。一个家，夫妇两个人在一起就有十字架，孩子生出来，又添增更重的十字架。家庭的十字架是夫妻两个人一同背负、负责的。</p>
+<p>教会也是这样，教会的十字架不是一个、二个人去负担的，乃是每一个弟兄姐妹都同心合意，共同去背负，大家同甘共苦，同受患难也同得荣耀。（[罗8:17](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=44&amp;chapter=7&amp;verse=16&amp;highlight=1#P16)）</p>
+<p>一个家庭怎样管理，没有确定的标准。家庭既是灵活的，对待也该灵活。你知道孩子怎样可以得到帮助，就照他的需要扶持他。若你硬来，他就会说你压制他，刺他，亲情就会受伤，彼此的感情也会破裂。（教会，也是要依各种不同人的情形来对待）。</p>
+<p>这些都不是讲的，是在现实中学习的，这也没法教导，是从经验中体验出来的。每一个人都有他的性情，你不要触犯他，这都要灵活，都需要神的怜悯。</p>
+<p>每一个人都有他们做人的尊严，还有他们做人的人格或位格。每一个人在众人面前都有自己的自尊心，我们不要损害人自尊，否则，就不会有真实的接触。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

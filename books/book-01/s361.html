@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十六日</h1><p class="meta">01.天窗365 · 第361/366段</p><p><a class="btn" href="s360.html">上一篇</a><a class="btn" href="s362.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s361.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十六日</h2>
+<p>如果我们属灵的眼睛是开起来，就能看见神所说的是什么，就会感到自己还不够。只有一个态度就是俯伏在神面前，仰望祂的怜悯，求祂把我们拉到祂的路上来，重新起头，没有停留地向标竿力前，领取祂荣耀的祝福。</p>
+<p>&quot;所看见的，正如我们所听见的。&quot;(诗四十八8)</p>
+<p>听见了，还需要看见来证实。我们听见了真理还需要看见真理。听见的知道和看见的知道不同。真的知道祂，是由于圣灵的启示(弗一17)，启示就是揭开给我们看见。</p>
+<p>我们不只要听见，还要看见。约翰福音第九章十一节瞎眼人听说有一个人名叫耶稣，但他还没有看见耶稣，他把耶稣当先知，(约九17)他知道自己从前是瞎眼的，如今能看见了，(约九25)但还没有看见主自己，也知道神不听罪人(约九31)。当主耶稣听说他被赶出会堂去，后来遇见他，就说：&quot;你信神的儿子么？&quot;他回答说：&quot;主啊，谁是神的儿子，叫我信祂呢？&quot;耶稣说：&quot;你已经看见祂，现在和你说话的就是祂。&quot;他就信祂并拜祂。(参九35－38)**只有看见主的人，才能相信并敬拜，而不是盲目的信，盲目的拜。**</p>
+<p>列王纪上第十章第一至五节：示巴女王听见所罗门的名声，就用难解的话试问所罗门......示巴女王来见了所罗门，......就诧异得&quot;神不守舍&quot;。&quot;所听见......及至我来亲眼见了......越过我所听见的风声，......常侍立在你面前听你智能的话，是有福的。&quot;(6－8)</p>
+<p>示巴女王一切所要求的，所罗门王都送给她。(王上十13)另外，他照自己的厚意，馈送她超过她所求所想的。(弗三20)</p>
+<p>骄傲是最愚昧的，**谦卑的人才能蒙恩。只有当我们来到丰富者的面前，才感到自己是贫穷。只有活在祂面前的人，才能认识自己的真实情况。**虚心再虚心就会得到饱足。我们不能以知道为满足，因为这并不等于我们就是有那样的生命情景，乃是要有真实的看见，并有实际的学习。</p>
+<p>今天多么需要更多地看见主，正如当日抹大拉的马利亚，她说：&quot;我已经看见了主&quot;(约二十18)。只有看见了主，才能把主对他说的那话告诉门徒。&quot;我们所说的，是我们知道的。我们所见证的，是我们所见过的。&quot;(约三11)</p>
+<p>述说主话语的，必须先遇见主；遇见主的人，出来传说主的话语，是多么荣耀！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

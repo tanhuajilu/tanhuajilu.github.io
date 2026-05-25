@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月六日</h1><p class="meta">01.天窗365 · 第250/366段</p><p><a class="btn" href="s249.html">上一篇</a><a class="btn" href="s251.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s250.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月六日</h2>
+<p>虽然我们得到活水泉源，仍然会被垃圾塞死。因此，乡下人开井，过了一段时间，必须把里面的东西清理一下，那时泉源又涌出活水来。信主以后，为什么还有这个烦恼，那个苦闷？怎么会这样？啊，常常是因为有许多垃圾塞在里面，泉源塞住了，哪有路涌出呢？</p>
+<p>因此，好多时候，我们的交通就是在彼此清理水沟，水沟不能通是最苦的，彼此相聚，还塞在那里是最苦的，得到交通就畅快了。</p>
+<p>所以，我们的交通不是交际，不是交流意见，彼此检讨。我说我的，你说你的没有用，你说分享也没有用；塞得死死的，怎么分享，根本没有东西分享。**要分享，先要开路，路开了，不必分享，泉源也涌出来。**</p>
+<p>我们每一次交通，聚在一起，对每个人都有观察，某人来，讲什么，我们就反应什么。常常通过谈话，通过问一些情形，接触到各人里面的情形，我们会知道各人里面阻塞的是什么。阻塞的给拿开，各人里面就通畅。等你里面开了，你会感觉&quot;就是基督，就是基督！&quot;</p>
+<p>虽然通了，还是个开始，回去后，恐怕又塞起来。很多人到这边来交通，感到很亮，回去又暗淡了，又不通了，问&quot;到底什么缘故？&quot;我说：&quot;不要紧！再通一次！&quot;意思不是再到这里来，是你到神面前去祷告，你跟神办交涉去！自然，里面也通了。如果一直靠外面的，&quot;通&quot;，就很难再有一次。**我们所说的通，是指要有心窍，自己一通，各样都通！有一个塞在那里，常常什么都不通！**</p>
+<p>我们信主的人，就有生命在我们里面，并且要成为泉源一直涌流，这泉源要满溢而流出，使自己、使别人都得满足。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

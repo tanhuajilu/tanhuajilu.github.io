@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-二月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十三日</h1><p class="meta">03.无比的爱 · 第54/366段</p><p><a class="btn" href="s053.html">上一篇</a><a class="btn" href="s055.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s054.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十三日</h2>
+<p>不是本份的催促，也不是人的劝勉，乃是无价之宝------荣耀的主------的显现。正如诗歌所说的：&quot;惟有彼得所见的泪眼，司提反所仰望的荣脸，陪着马利亚同哭的慈心，会使我们脱离地的吸引。&quot;你说地的吸引大，叫自己没有法子去防，（世界的东西吸引力真大，真是防不胜防），但是主的力量更吸引我们！祂的吸引叫我们脱离地的辖制。没有主的吸引，世界要脱离也脱离不开。所以一面是主来吸引我们，一面也是主来作工。很多人爱世界，爱到一个地步，有一天，他怕了世界，他怕了金钱，结果自己脱离了。因为人吃过世界的亏，吃到金钱的亏，就会怕就会放下。他才会回到主面前来。所以对爱世界的基督徒，你不必说：&quot;弟兄，不要爱世界。&quot;你越讲，他越爱。你让他去爱吧，等到一天，他会怕世界，讨厌它。好像我们吃东西，吃多了就怕；怕了，他就不敢再吃。到了你怕，你厌烦，就不必人家说：&quot;你丢下吧！&quot;你厌烦，就会丢下。神就用这一个来叫你对付这一个。你如果喜欢一个东西，神就用这个东西来对付你。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

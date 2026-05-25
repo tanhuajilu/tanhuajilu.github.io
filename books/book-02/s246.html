@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-九月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二日</h1><p class="meta">02.在光中得以见光 · 第246/366段</p><p><a class="btn" href="s245.html">上一篇</a><a class="btn" href="s247.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s246.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二日</h2>
+<p>使徒行传里，圣灵今天在带领，明天在带领，每一章都在圣灵的带领里。保罗要往亚西亚传道，但圣灵禁止，后来要往庇推尼，耶稣的灵不许。以后有马其顿的呼声，保罗还不敢肯定，因为圣经说：&quot;我们...以为神召我们传福音给那里的人听。&quot;到了那里，所发生的就印证神的引导是对的。一路上，都是神在引导他们（徒16：6，10）。因此，使徒行传又叫圣灵行传。使徒行传还延续到今天，圣灵还在这里带领我们。</p>
+<p>许多人作主的工，却是自己在安排，自己在定规，年头安排到年底。其实明天的事要怎样发生，都不知道，你却把工作计划一整年的。什么都预备好，讲什么道理也准备好，到时候就按计划去作，这是死的还是活的呢？</p>
+<p>如果是活的，到一个新的地方，就会有新的需要，来的人既有新的需要，你所准备好这些，都不管用了。可是，时间都定得死死的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

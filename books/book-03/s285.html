@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十一日</h1><p class="meta">03.无比的爱 · 第285/366段</p><p><a class="btn" href="s284.html">上一篇</a><a class="btn" href="s286.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s285.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十一日</h2>
+<p>在家庭里，要舍己，要背十字架，有时教训没有用，反而引起反感，要敬畏神。敬畏神的就跟神，儿女跟着敬畏神。父母若爱自己，跟世界，儿女看见也跟着他爱自己，爱世界了。</p>
+<p>人的天性是&quot;不服气&quot;的，不要人管，却要管别人。主要我们在家庭里有学习，不要惹儿女的气。作父母的哆嗦，儿女就会不耐烦、生气、不服，反而不好。所以在家里，不必多讲话，有需要讲的话，一两句适当时种下去，多少能给孩子们得帮助，做父亲的尤其要学习这个。</p>
+<p>其它的道理比较容易讲，讲一百篇也可以，关于婚姻家庭一篇也难讲。家庭的事一讲，都很现实。讲婚姻、家庭，不是去讲好，就好。</p>
+<p>有一位弟兄说：&quot;我的家从来没有一样为难的事发生。&quot;有经验的老姐妹听了就说：&quot;这话骗人！&quot;讲说自己的家庭很好，其实骗人！讲家庭的事还是现实一点的好！不讲理想，就讲现实的，才会有学习，才有进步。</p>
+<p>有人讲家庭之道，大家都给他骗了。有一位奋兴家到处传福音，讲奋兴的道，可是，他的家人一个也没有信主。他是救别人，没有救自己的。能救了别人，显明也不是他救的，是主要救的。他要救别人，该先救自己的。现在救了别人，没有救自己的，就叫他不能骄傲了。有人做工都是自高自傲，打击别人的！神也用这个情形造就他，叫他谦卑。这些情形都为叫我们有学习，不以现在的情形为满足，不以为够了，也不停在追求理想！</p>
+<p>现实，常是跟理想相反的。在现实里，我们只有藉着祷告，敬畏神（[诗25:14](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=18&amp;chapter=24&amp;verse=13&amp;highlight=1#P13)），在一切的事上蒙神的怜悯（[诗123:2](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=18&amp;chapter=122&amp;verse=1&amp;highlight=1#P1)）。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

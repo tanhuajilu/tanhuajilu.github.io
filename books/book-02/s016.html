@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-一月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十六日</h1><p class="meta">02.在光中得以见光 · 第16/366段</p><p><a class="btn" href="s015.html">上一篇</a><a class="btn" href="s017.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s016.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十六日</h2>
+<p>在五十年代，有奋兴家在鼓浪屿传福音时呼召：现在要信主的人举手！有几个弟兄也举手。我们有位弟兄就问他们：&quot;你们已经信了，怎么还举手？&quot;他说：&quot;我举手是凑数目，鼓动别人举手呀！&quot;他们在作假的。真要信主的，也不是举手才信啊！有些今天晚上举手，明天晚上又举手，一个星期传福音过去，举手的算起来有几百个，其实集合起来还不够一百个。这是虚假。虚假的事，我们不做。（诗119：37，彼前1：22，罗12：9）</p>
+<p>最初开放时，教堂重开，有人来动员我：&quot;聚会处恢复了，你若不来，大家也不来呀！现在几十人聚会还不够，聚会最好多一两百人。&quot;我说：&quot;这种工作我不作。若几百人来，等到有什么事，这些人都怕都跑掉。怎办？&quot;但若我们扎扎实实得着两个三个与我们同心的，同经过苦难，这样才宝贝。</p>
+<p>跟主耶稣吃饼得饱的五千人，恐怕在那喊&quot;钉他十字架&quot;的人中间，他们也有分。真正跟从主的，你看，只剩下几个呀！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

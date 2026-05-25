@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十四日</h1><p class="meta">02.在光中得以见光 · 第288/366段</p><p><a class="btn" href="s287.html">上一篇</a><a class="btn" href="s289.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s288.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十四日</h2>
+<p>每一个人都有他自己的学习，深浅也各有不同。但是，你要知道，浅的不永远浅，浅的到一个时候，也会深，不用你说你是深的。是否以后就不会变浅？也会！有的时候，水井挖很深，日子久，又变浅了，因为有些泥土掉下去，垃圾也倒下去，水就浅了。浅的，就要重新挖深。再挖时，才发现泥土把泉源堆塞住，泉水不能涌出来。</p>
+<p>所以，在神面前，应当常有交通，我们里面才会流通。水渠你不给它畅通，污水就积在那边。你不天天清理，到一个时候去清理也困难。所以要天天清理，像家庭里打扫地方一样，要天天打扫。若是每月才打扫一次，垃圾不知堆积多少呢！在神面前，交通是很需要的，彼此需要有交通。</p>
+<p>另外一方面，个人也要有追求。个人不追求靠交通，一下子通了，回家去又不通；在这里看见光，回去也暗淡变没有了。为什么会这样？因为你只接受别人的帮助，没有在自己里面从神得供应。所以，一方面各人都要跟神挂起来，一方面弟兄姊妹间彼此要有交通。属灵的交通，是愈交通愈实际，愈真实的。</p>
+<p>我们的生命，不是几年就长进，也是年年追求才长进。以前我们看一些书，以后这些书需要再看。因为照着我们知道的，我们还是不知道！神是太丰富太荣耀了。</p>
+<p>一方面，我们向着神，赞美神。另一方面，还看见，撒但最怕我们赞美的。以前有一个以色列的王，打仗时，唱歌赞美的就排在阵前。一赞美，仇敌就跑掉。撒但有时不怕你祷告，牠怕你赞美！你赞美唱信心的歌，赞美唱诗，撒但就逃跑。所以，我们要祷告，我们要赞美。好多的祷告不能成功的，借着赞美就成功了。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-八月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十七日</h1><p class="meta">02.在光中得以见光 · 第230/366段</p><p><a class="btn" href="s229.html">上一篇</a><a class="btn" href="s231.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s230.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十七日</h2>
+<p>在教会今天的情形里，也是这样，如果基督在其中作元首，圣灵能够掌权，那些背叛的势力就消灭，因教会是站在主这边，跟主站在一起的，那背叛的事没法搞起来。</p>
+<p>圣灵掌权，圣灵作工，人碰到主就服下去，人敬畏主也服下去。不然，在教会里各持己见，一个意见顶出来，你赢了，没有得什么，我输了，很难受，面子拿不回来，就是这样大家去学习了。功课学了，你来顶，我认输，我不跟你对顶，一认输，在这里就带进祝福。你若说我要赢，愈属肉体愈高大，你就更难了。</p>
+<p>所以我们彼此学习谦让，你退一步，我也退一步，不要去争，争到血气都出来了，属灵生命就受损失。意见不同不要紧，有意见大家彼此去学习。</p>
+<p>这些争意见的情形，我们以前看到，很不明白，以后就慢慢的清楚，总是要摸到属灵的路，摸到了，就会愈来愈清楚。如果没有起头，就看不见也摸不到，有起头了，就有下文，以后还有呢！不只你本身有这个东西，无形中，别人也会给你影响，能接受的就接受，不能接受的，他会反对。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

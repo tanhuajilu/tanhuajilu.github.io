@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十一月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十八日</h1><p class="meta">01.天窗365 · 第323/366段</p><p><a class="btn" href="s322.html">上一篇</a><a class="btn" href="s324.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s323.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十八日</h2>
+<p>**你一直为自己，在神面前就是自私的。特别是作工的人，自私是最可耻的。**他只顾自己，却不顾别人。你如果在神面前有恩典，对同工就有照顾，你不会嫉妒。他好，你为他赞美神，不够的，你要帮助他，这才是正常的。</p>
+<p>现在，有些人对同工，巴不得一棍打下去，通通打死，等他一个人作工、出名就好。他这个态度和世界上很多人比较还不如，世上有道德的人也不这样作。世界上的事，很多的手段很可怕，但是在教会中好多事奉神的人也做了，你且看他们作事的表现就知道，他们只有手段。</p>
+<p>认识神，相信神。这方面，你自己要有追求，还要和那些清心祷告主的人一同追求（提后2:22）。</p>
+<p>问：弟兄刚才问的是要你跟神那秘密的东西，能不能泄密？</p>
+<p>答：有一点要认识，就是**所有你所碰到的困难，都帮助你跟神更亲近**（来7:10）**。在各种环境中，你都能跟神亲近。**</p>
+<p>我知道有些初信的弟兄姐妹，就因着有一个困难，被转到主的路上来。一下子经济损失，一下子身体有病，要开刀，一下子压力来了；各方面的难题都来，按人看，还担心他能否站得住。但是他说，面对这些东西他不怕，他非常清楚。因为物质的东西要过去，**什么都要过去，主永不过去，他把主抓得紧紧的，而且充满喜乐、平安。借着这些困难，他爬得更高。**</p>
+<p>好多人都有这些经历：似乎要给困难难倒了，现在，却利用了这些困难自己长进了。好多的道理，我们在四十多岁以前就认识，对属灵的东西却只是在思想上知道，也知道这条路。但是，经过几十年，在那些不平凡的环境里，尝过各种滋味的时候，就觉得主最亲，因为难处把我们赶到主那里去。因此要知道，世界上所有的艰难痛苦，都是要把我们推到主面前。没有认识这个，你就会灰心。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

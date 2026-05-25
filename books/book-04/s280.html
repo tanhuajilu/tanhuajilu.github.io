@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十二日</h1><p class="meta">04.晒熟的美果 · 第280/366段</p><p><a class="btn" href="s279.html">上一篇</a><a class="btn" href="s281.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s280.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十二日</h2>
+<p>国内许多地方都有人被主兴起，有交通的不少，交通后把属灵的实际带回去，都发生影响。国外的，也有个别来交通的，回去也发生影响，这是神荣耀的工作。每个人找到&quot;主是道路&quot;就好，对这个有认识，路就直了。&quot;清楚&quot;，要从里面清楚。经过交通，就知道各地都有人清楚。</p>
+<p>祷告：亲爱的主耶稣，在你面前，我们都是赤露敞开的，我们无法逃避你的脸。你在拣选的路上没有漏掉我们，让我们全然摆上来为你。主，教会的情形你都知道，求你兴起你的工作，兴起我们这些人，带起更多的圣徒来为着你，迎着你。叫他们能正直的走在你的路上。各地来的弟兄姊妹，你都恩待他们。现在我们虽然要分开，但是与你却不分开，那一天你再来的时候，我们也不分开。</p>
+<p>得胜荣耀的主，撒但今天已经失败了，你已经打破了蛇的头，我们在你的得胜里，宣告你的得胜。在你宝血下，我们宣告：撒但永远失败，神永远得胜。祷告，祈求，奉主耶稣基督的名。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

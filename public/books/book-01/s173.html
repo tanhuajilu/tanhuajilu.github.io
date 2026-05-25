@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十一日</h1><p class="meta">01.天窗365 · 第173/366段</p><p><a class="btn" href="s172.html">上一篇</a><a class="btn" href="s174.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s173.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十一日</h2>
+<p>在外国，有一位弟兄说：&quot;难得有两个同工是同心的。&quot;</p>
+<p>有一位弟兄说：&quot;在美国，要找二位同心合意的同工，我们找不到。大家都是单独的去干。&quot;</p>
+<p>两个都不肯同心，要把弟兄姐妹带到身体里面怎么可能？三、五个长老执事都不同心，一点事就相争相闹，怎么把弟兄姐妹带到属灵的道路上去？</p>
+<p>他到国内来，就看见很多弟兄能同心合意的事奉主。</p>
+<p>所以，这位弟兄诚意地问我：&quot;你跟这些同配搭的弟兄，怎么能同心。&quot;</p>
+<p>因为不是一年、两年的事，而是从五十年代以前，一直同心到现在，其间经过半个世纪了。</p>
+<p>究竟&quot;同心&quot;有什么秘诀，有什么办法？</p>
+<p>我说：没有什么秘诀！而是**每一个人都去跟从主**（路9:23），**每一个人都给主的爱所融化，自然而然，在属灵上就和谐，就合一**（约10:27）。虽然我们还有一些对事情的不同的看法，或对道理的不同解释（因为大家各人的层次不同）。不同归不同，还是可以保留，但是摸到生命、摸到主，就都放下自己的看法，投进基督里面。</p>
+<p>这个合一不是我们讲出来的合一──要怎么去合一──乃是大家进到一个属灵的交通里。到了这样的一个聚会，你感到这个聚会很和谐。这种情形，和那有存在背叛态度的聚会全然不同。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

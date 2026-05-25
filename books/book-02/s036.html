@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-二月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月五日</h1><p class="meta">02.在光中得以见光 · 第36/366段</p><p><a class="btn" href="s035.html">上一篇</a><a class="btn" href="s037.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s036.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月五日</h2>
+<p>有人称自己为当代的大先知，说：&quot;我就是，不跟我的就没有路走。&quot;也有人说：&quot;独一的职事。&quot;这是什么？这是人的东西。</p>
+<p>人的东西，我们统统不要，我们要主的！</p>
+<p>摩西是最大的先知，以利亚也是最大的先知：一个经过了死，一个被提。跟主耶稣在变化山上时，彼得看见就说：&quot;主阿！这里真好，最好搭三座棚，一座为你，一座为摩西，一座为以利亚。&quot;忽然间，摩西和以利亚看不见了。天上有声音说：&quot;这是我的爱子，我所喜悦的，你们要听他。&quot;（太17：5）</p>
+<p>我们不是为着主去建造一所房子给他们（摩西和以利亚）住，而是&quot;我们要听他（主）！&quot;今天我们不是要为着办一个教会，乃是&quot;我们要听他！&quot;因为教会不是人建立的。你可以办医院办小学，但你不能办教会。因为教会是属灵的东西，你怎么能去办。今天凡人所能办的教会，都是组织，都是世界的社会团体，这样办教会都是神所定罪的。</p>
+<p>提起教会很严肃的，教会是神的！神在此掌握，基督作元首，圣灵在此运行作工。神得到一些能让圣灵运行的人，就把神的心意表明出来。我们就是盼望神盼望圣灵，在我们里面能有运行能有感动，能把神的东西带出来。个个都有这东西，一合起来一聚会，就有神在我们中间。大家服在神面前就不会争辩道理。人看见真理就俯伏下去。</p>
+<p>真理是绝对的，你对真理的态度要有一个绝对的心来顺服。你不清楚，神也不勉强。被动的没有用，你清楚，就是这样去顺服。所以关键就在我们跟主的关系要很紧很密切的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

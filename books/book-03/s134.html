@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-五月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十三日</h1><p class="meta">03.无比的爱 · 第134/366段</p><p><a class="btn" href="s133.html">上一篇</a><a class="btn" href="s135.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s134.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十三日</h2>
+<p>你丈夫爱儿子吗？（很爱。）那更简单了。他爱儿子，你也爱儿子。你们两位就有共同点，就有&quot;一样的&quot;。如果一个不爱儿子，就增加痛苦，因为儿子也不爱，妻子也不爱。其实，他爱儿子，就是爱妻子，这是相连一起的。所以他爱儿子就是&quot;好&quot;的。</p>
+<p>有姐妹来谈家庭问题，我也是问她丈夫爱不爱儿子。她说他好爱，像爱命一样。我说：&quot;说得好！你们的矛盾不要讲了！因为这里有一个共同的爱。&quot;往后的矛盾即或加重，儿子会去消除。有的时候，吵到没有办法，你也不讲，他也不讲，那儿子在中间就给你们做调解的。通过儿子，你们俩就缓和了。家中的儿子无形中也做了个和解的工作。聪明懂事的小孩子很会做双方调解的工作呀！这真奇怪！他在父亲面前讲母亲的好话，在母亲面前讲父亲的好话，帮助他们和好，消除矛盾。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

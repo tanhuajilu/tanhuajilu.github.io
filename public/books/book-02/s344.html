@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十二月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月九日</h1><p class="meta">02.在光中得以见光 · 第344/366段</p><p><a class="btn" href="s343.html">上一篇</a><a class="btn" href="s345.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s344.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月九日</h2>
+<p>如果不是神儿子启示在保罗（扫罗）里面，他还要逼害信主的人，把信主的人抓去下牢。他从大祭司得了权柄，凭这命令抓基督徒。他是这样的人，怎么会信主？难怪保罗信主以后传福音，门徒还信不来，耶路撒冷的门徒都不敢接待他。只有巴拿巴量度大把他接来！</p>
+<p>如果不是主启示，扫罗怎么会信主！主怎么启示呢？他领到文书，要去抓信徒的时候，在大马色的路上，忽然，天上有大光照他，他就仆倒在地。主说：&quot;为什么逼迫我。你用脚踢刺是难的。&quot;他说：&quot;主阿，你是谁？&quot;主说：&quot;我就是你所逼迫的耶稣。&quot;（徒9：4，5，26：14，15）</p>
+<p>主说：&quot;你用脚踢刺是难的。&quot;──他逼害信徒，而主说，他是&quot;逼迫我&quot;。为什么主说扫罗逼迫他？因教会是基督的身体，信徒是基督的肢体，扫罗逼害教会就是逼害主耶稣了。所以在这里，主亲自出面来得着扫罗，扫罗仆倒在主面前，圣灵的光照叫他看见主认识主。</p>
+<p>那一天，扫罗说：&quot;主阿，你是谁？&quot;因此，他看见异象，这异象就是主的本身。有人说，我都没有看见扫罗所看见的那个大光，如果大光照我，我也信主。这光不是人说的什么异象，这光就是主本身。这个异象是主耶稣自己。主就是我们的异象。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

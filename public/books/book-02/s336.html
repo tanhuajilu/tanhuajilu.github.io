@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月一日</h1><p class="meta">02.在光中得以见光 · 第336/366段</p><p><a class="btn" href="s335.html">上一篇</a><a class="btn" href="s337.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s336.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月一日</h2>
+<p>初信的弟兄看一本书，著者很出名，内容谈到我们的工作有的是金银宝石的工作，有的是草木禾秸的工作。有一天有火发现，草木禾秸的工作要被烧毁，金银宝石的工作才能经过火，经得起火烧而存留。（林前3：12，13）</p>
+<p>讲完这个，这本书接下去说：&quot;我现在所作的，我也不知道是金银宝石呢，还是草木禾秸。&quot;你看，他讲什么？他所作的，自己也不知道。这位初信的说：&quot;你自己是金银宝石呢，还是草木禾秸，你自己不知道，那么，到底你作什么的？&quot;初信的弟兄讲得很对。</p>
+<p>你盖一所房子，我问你用什么材料建造，你跟我说：&quot;不知道。&quot;我会奇怪。你用木头做，就说用木头，用水泥盖，就说用水泥，不能木头水泥搞在一起，因为性质不同！是凭自己作的，今天就可以定规说你是草木禾秸的，若凭基督作，就是金银宝石的。你所作的竟不知道，要等那一天烧光才知道吗？</p>
+<p>管你讲道出名，讲很多道，凭你自己作就是草木禾秸，火一发现，都烧光了。所以要清楚到底自己所作的是什么，走的是什么路。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

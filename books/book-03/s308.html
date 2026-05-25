@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-十一月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月三日</h1><p class="meta">03.无比的爱 · 第308/366段</p><p><a class="btn" href="s307.html">上一篇</a><a class="btn" href="s309.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s308.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月三日</h2>
+<p>窥探流奶与蜜之地的不是有十个探子吗？但是，进入迦南的只有两个探子，就是约书亚和迦勒。</p>
+<p>进入迦南的还有两个已经死了的，一个是雅各，第二个是约瑟。雅各进入迦南归葬，是在约瑟生前作的，约瑟进入迦南归葬，摩西是按照约瑟的遗愿做的。从那里出来的，就归回那里去。</p>
+<p>将来那些被提的人，也是有活的，有死的。无论是死是活的，他们都是专一爱神的人。</p>
+<p>以前有人讲进天国，提出二十多个条件，这么多的条件，要遵守很不容易，守了这个，就丢了那个，恐怕到最后换来的是主的一句话：&quot;我从来不认识你们，你们这些作恶的人，离开我去吧！&quot;那时，你们所作的，什么工都白作了，没有价值。但遵行神旨意的却要永远长存（[约2:17](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=61&amp;chapter=1&amp;verse=16&amp;highlight=1#P16)）。神要我们的是什么？神要我们&quot;尽心尽意尽力爱祂&quot;。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

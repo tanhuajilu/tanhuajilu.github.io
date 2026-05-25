@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-八月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月八日</h1><p class="meta">02.在光中得以见光 · 第221/366段</p><p><a class="btn" href="s220.html">上一篇</a><a class="btn" href="s222.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s221.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月八日</h2>
+<p>我们这个人要成为神的圣殿。我们的身体是神的殿，有神的灵住在里面。不管我们在那里，都可以敬拜神，因为神在里面，所以弟兄们在一起，就感到荣耀。你个人是神的殿，大家在一起，都成为神的殿，这是个荣耀的交通。</p>
+<p>有一个台湾牧师问年青弟兄：&quot;你们有没有去做礼拜？&quot;青年弟兄说没有。&quot;那你拜上帝到哪里去拜？&quot;他指着自己的心说：&quot;在这里。因神就住在我里面，我在灵里可以敬拜他。&quot;</p>
+<p>你到教堂去，还要问：&quot;神有没有在其中？&quot;因现在教堂里，世界的东西都搬来了，教友拍手唱歌...什么都有。你还说这里有神的殿么？连唱歌都要唱现代调，把社会流行的一些曲调作成诗歌来唱，敬拜神的诗歌用世界的调去唱，一点敬虔的味道都没有，一点属灵的味道都没有！所以我们要从里面去认识神。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十一日</h1><p class="meta">01.天窗365 · 第295/366段</p><p><a class="btn" href="s294.html">上一篇</a><a class="btn" href="s296.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s295.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十一日</h2>
+<p>问：今天外面的情形很乱，圣经说，民无异象就放肆，各人任意而行。但那看见教会异象的，不会失望。</p>
+<p>答：**今天亮光不是没有，但亮光再大，对瞎了的人，依然看不见，一定要神怜悯。主就是光，你眼睛开了就看见光。**你说，要按异象去做，要等新的亮光出来，异象本身是什么？**异象就是基督！**</p>
+<p>摩西在山上看见建立会幕的异象，要知道，这会幕的每一件都是预表基督。在会幕里、会幕中间及会幕外面，各样的对象如陈设饼、金灯台、香炉等，每一样都是预表基督（西：27，来10:1）。异象不是其它，异象就是基督本身。我们需要认识基督。</p>
+<p>因此，主说&quot;我就是光。&quot;又说：&quot;我就是道路......&quot;我们要更深地认识基督。旧约所记的那些正面事物都是预表基督。为什么那么多东西预表基督？**因为单一的东西太简单、太单调了，基督是丰富的，神用各方面的来预表基督，人才懂得基督的丰富多彩。**他的里面有无穷无尽的东西，神跟人的关系也在这里面预表出来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

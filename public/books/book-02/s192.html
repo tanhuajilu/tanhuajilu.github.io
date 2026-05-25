@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十日</h1><p class="meta">02.在光中得以见光 · 第192/366段</p><p><a class="btn" href="s191.html">上一篇</a><a class="btn" href="s193.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s192.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十日</h2>
+<p>如果我们以为能承担什么，我们去作，所作的还不会有能力。即使祷告说：&quot;主阿，帮助我，我们不能作什么。&quot;这些都是假话。</p>
+<p>好多人的口说：&quot;我软弱，我不能作工。&quot;他还讲得很大声哩！如果是真软弱的，恐怕连道理都不敢讲，也不敢去作工了。若不是人给神带到一个地步，真的自己不能作什么，要作，就需要神，这才会有一个开始。</p>
+<p>好多人到我们这里交通，回去以后，还要照旧讲道作工时，里面都会有拦阻。他里面摸到主的，回去以后就不讲道了。奇怪，我们也没有叫人不讲道，为什么他们会这样？原因是他们碰到主了，他们觉得以往都是凭自己作工，现在不敢再这样。</p>
+<p>他们想：&quot;哎哟！这个工作是神圣的，不是今天作就完了，我们今天的工作，都要带到永远里面去的。因为属灵工作的性质是永远性质的，不是今天作，今天没有了。我们今天所作的，还要带到基督的审判台前，到主那边去呀！是这样严肃的！&quot;</p>
+<p>人看见这工作的严肃性，他就觉得：&quot;过去，我凭自己作，今天，我再凭自己作，这些就都是草木禾秸，到那一天，都要被烧掉了（林前3：13）。&quot;不必到那天烧掉，今天就烧掉。今天经过好多苦难，好多试验，工作都倒了，连自己也倒了。这是很实际的东西。</p>
+<p>所以蒙恩典的人对神的认识更深，对神的认识就更超越。为什么神还要我们经过冷淡退后、犯罪跌倒，或是软弱不能起来呢？这些本来是不必经过的，但是神看我们需要，也给我们经过。就是经过这些，我们才知道自己不能作什么。因着经过这些，我们才会甘愿投降在神面前，认识什么叫作顺服。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

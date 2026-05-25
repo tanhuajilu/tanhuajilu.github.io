@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十五日</h1><p class="meta">02.在光中得以见光 · 第197/366段</p><p><a class="btn" href="s196.html">上一篇</a><a class="btn" href="s198.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s197.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十五日</h2>
+<p>施洗约翰为主耶稣作先锋，他来，就是要把那不平的路填平，把弯曲的路改直。以后，保惠师圣灵的工作也要在信徒身上把里面弯弯曲曲的（如诡诈骄傲、自高自大等）所有不正直的东西不平的东西都弄直弄平；叫我们从魂到灵都有一条平直的路，让主的话出来时显出能力。</p>
+<p>以水流为例，弯弯曲曲的水是没有力量的，水流若是直的，所受的约束力愈大，产生的力量也愈大。如果一个人的思想是有约束的，感情也是有约束的，意志也经过对付的，他里面的灵所带出来的（那个话），就有力量；若是散漫，（思想散漫、感情散漫），讲来的话不过像讲故事说笑话，圣灵的能力就一点也没有了。所以，单说我们这个人要学习的东西就已经是太多，一生学习也学习不完。</p>
+<p>神为着得着一个人，就要作工在他身上。有人说：&quot;我得救以后，怎么会发生这么多的事？别人得救，都平安无事的。为什么我却有那么多的事？&quot;我说：&quot;这才好哩！&quot;他说：&quot;很难受阿！&quot;我说：&quot;难受就是好！&quot;</p>
+<p>有一个人，得救还不够一年，天天发生好多事。我问他：&quot;遇到这些，你怎么样？&quot;他说：&quot;我还是信主！对主，我还坚定的相信。&quot;我说：&quot;这就是好。主就要你这一个。&quot;</p>
+<p>如果碰到困难，一般人会说：&quot;啊！信主倒霉。一下子损失那么多，难处那么多！一下子又有病！&quot;但是这位弟兄说：&quot;我还是信。&quot;这一个态度就是宝贝。我对他说：&quot;神给你经过这些，你能够站住；神给你经过这些，你还爱神，无形中，神就增加在你身上，增加到你自己不知道。&quot;这就是施洗约翰所说的，&quot;我必衰微，他必兴旺。&quot;所碰到这些事情，都为叫我们这个人衰微，而叫基督显大。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

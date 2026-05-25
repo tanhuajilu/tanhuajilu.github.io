@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-六月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十三日</h1><p class="meta">03.无比的爱 · 第165/366段</p><p><a class="btn" href="s164.html">上一篇</a><a class="btn" href="s166.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s165.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十三日</h2>
+<p>我们信主的要尊重事实，生下来是男是女，既是定了，就接受。</p>
+<p>你已结婚了，对于以前相恋过的，就彻底放下，不管是错是对，都要放下。要接受事实。我们生活都是现在的。现在既成事实，坏，也要爱他；好，也要爱他，家庭就快乐。常常回想过去，如果怎样怎样，都不现实！</p>
+<p>我们都是想人家的好。但是，别人说好，不一定真好，很多的好都是表面的，你不知道他里面有多少的痛苦！</p>
+<p>《荒漠甘泉》记了一个故事，所有的花草都埋怨，埋怨到一个地步：&quot;这么苦，不如死掉！&quot;结果都死掉了。只有心安草还活得好好的，因为它感谢神，它说：&quot;我感谢造我的神。&quot;我碰到一个姐妹，她的名字叫&quot;安心&quot;，我说这名最好。心里不平不安是最痛苦的，想到自己不及别人就不平，知道别人分得不公，也抱不平。人能&quot;安心&quot;就是最快乐的。主说：&quot;在世上，你们有苦难，在我里面有平安。&quot;（[约](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=42&amp;chapter=15&amp;verse=32&amp;highlight=1#P32)16:33）主说的平安，非外面的，乃是里面的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

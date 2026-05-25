@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十一月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十六日</h1><p class="meta">02.在光中得以见光 · 第331/366段</p><p><a class="btn" href="s330.html">上一篇</a><a class="btn" href="s332.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s331.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十六日</h2>
+<p>若有一个罪人悔改，我们要欢喜。不但父神欢喜，天使也欢喜，整个宇宙都要为着他唱歌赞美神！所以，一个人得救是件大事，会有很大的影响。神住在我们里面，这是个事实，这个事实不会改变。你相信这一个（神住在我们里面）就得胜。这一个事实在我们里面，就会产生属灵的作用，显出属灵的功效来。</p>
+<p>所以，你里面既有这位基督，生命也是丰满的，无形之中，就会产生影响。你在这里，别人就感觉到你有神，他们马上会感觉。凡是得着属灵交通的人，所作的工就不一样。</p>
+<p>我们在五十年前后，通过弟兄们的交通，以及年长弟兄的帮助，回来后还照样讲道，但是，讲的时候却感觉不一样。怎么不一样？我们自己没有感觉什么，别人却感觉出来，属灵的东西就是这样实际的给人家感觉得到。</p>
+<p>一个人在神面前，神的对付所达到的目的，就是要把人挖得更深一点。如果人没有深一点，他里面就是浅的，浅的就轻浮，轻浮的人的讲话就不确实。不必说属灵的，就说做人，一个人轻浮很表面的，你看到都会讨厌。他给你讲道讲再好，你也不会听他。一个比较郑重的人，比较有一个样子的，讲的话就比较稳重。这样的人，你肯听他。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

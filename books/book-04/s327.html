@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十一月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十四日</h1><p class="meta">04.晒熟的美果 · 第327/366段</p><p><a class="btn" href="s326.html">上一篇</a><a class="btn" href="s328.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s327.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十四日</h2>
+<p>我在电话里对弟兄说：&quot;你有机会参加鼓岭，上海的交通，感觉很好很好，你是有属灵的感觉，对这个你有反应，你会哭，你会说，以前，我们就有这样属灵的气氛，今天没有地方有这个好的东西，都变化了。&quot;</p>
+<p>他问我：&quot;你对李弟兄的感觉怎样？&quot;我反问他：&quot;你的感觉怎样？&quot;他说：&quot;很好，你认为怎样？&quot;我说，&quot;你感觉好就好！&quot;每个人都有每个人的感觉，不能因人说好就看为好。很多人自己说好，却还要别人的口说来再谈他的。我说：&quot;我不会去说，你感觉怎样就怎样，我不参与，不给看法。&quot;因我说好，你会用我所&quot;说好&quot;乘机再说出来，我说不好，你原说好，我怎么能说下去？</p>
+<p>有些人自己一直没有主意！所以，每一个人不能糊里糊涂，说好，好在哪里，说坏，坏在哪里，他也不知道，就套来套去。</p>
+<p>心怀二意的人，在他所行的道上都没有定见。有些人又可以这样，又可以那样，他自己先矛盾了。对的就是对，不对，自然就有矛盾，有矛盾也不怕，矛盾过一段时间，就要找到正确的东西来，他一转到主面前，定意说，我要你（主耶稣）呀，就好。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

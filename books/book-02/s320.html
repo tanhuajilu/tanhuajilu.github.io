@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十一月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十五日</h1><p class="meta">02.在光中得以见光 · 第320/366段</p><p><a class="btn" href="s319.html">上一篇</a><a class="btn" href="s321.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s320.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十五日</h2>
+<p>讲到&quot;里面的人和外面的人&quot;，就指出我们灵与魂分开的事实。人若不是在圣灵的启示里，碰到圣灵的实际，都不会理解。50多年，就给我们看清楚魂跟灵分开这件事。</p>
+<p>有些人说，若魂跟灵分开岂不死掉，怎么还活。这是因他理解的跟我们讲的对不起来。好多时候属灵的东西听是听见，却还没有看见，还没有看见就不会懂得。这要圣灵的启示。</p>
+<p>你说平安，平安又是怎么一回事？你的印象就是我家里没有坏事情，身体健康，这就是平安，但这是外面的平安。这平安，世界的人也有，很多人人丁兴旺，生意发达，身体健康，什么都顺利，就说很平安很平安。</p>
+<p>基督徒不是单单这个平安，基督徒有里面的平安。因为有这里面平安，他外面虽然苦，却还不觉怎么苦，因为有一个超越的生命在他里面。通过所有这些不平安、患难，人就从这里去认识神，经历神的可靠，经历神对我们每个人负责任。</p>
+<p>什么叫作好父亲，对儿女负责任的就是好父亲。对家中儿女不负责任就不是好父亲。那神是负责任的，他说话算数。神是信实公义的，你真的相信他，好像是我们吃了亏，神却不会给你吃亏，神不会亏待他的儿女。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

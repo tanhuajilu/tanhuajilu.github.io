@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月四日</h1><p class="meta">01.天窗365 · 第156/366段</p><p><a class="btn" href="s155.html">上一篇</a><a class="btn" href="s157.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s156.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月四日</h2>
+<p>你说擘饼，擘饼是什么意思？（应：是记念主。）（可14:12－14）</p>
+<p>怎么样是记念主？（应：就是喝杯、吃饼来记念主。）</p>
+<p>我说不对！（应：怎么不对呀。）</p>
+<p>有爱，才有记念。（林后5:14，约壹4:10，林前16:22）</p>
+<p>你爱一个人，才记念他，你不爱那个人，怎么会记念。你去记念，还是外面的而已。你去记念主，就要问你是不是爱主？你有爱去记念主，就不是只有礼拜天去记念，你是时时刻刻去记念，又借着这个擘饼来表明&quot;记念&quot;。你这个**记念主跟里面那个爱要相称**（约13:1；14:15，15:9），不然，你的心不受约束，都不知跑到那里去了。</p>
+<p>如果有爱去记念，你记念到时间多长也会忘掉。就是时间够，你也觉得很短呀，就像跟你的好朋友讲话讲三个钟，时间也忘掉了。为什么这样？因为有爱呀！这擘饼记念主，要看你有没有爱！</p>
+<p>另一面，**擘饼记念也是见证基督的身体**。因为这是表明基督的身体。身体是什么？&quot;身体&quot;不是单独的，身体就有身体的感觉，我们的擘饼有没有叫人感觉到身体？你擘你的，他擘他的，就没有身体的感觉。不能擘了就散。我们擘饼不是擘了就散。</p>
+<p>再者，**擘饼还是&quot;等候主再来&quot;呢！**</p>
+<p>你有否等候主再来的心？过去，是爱祂记念祂，现在，也是爱祂记念祂，等候主是为着将来。因此，以往、现在、将来都连在一起了，都连在擘饼上。我们在这里擘饼，是等候主耶稣再来，等候主来，跟擘饼很有关系呀！因为跟爱主也有关系。</p>
+<p>圣经说，若有人不爱主，这人可咒可诅，主必快来。就是你爱主，才要主快来。如果没有爱，你归你的，他归他的，你不会关心。擘饼记念主关系到你的心爱主。擘饼这事关系到你有爱，有记念，对主有感觉，见证主再来。若不是这样，一年五十二礼拜都去擘饼有什么意义啊。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

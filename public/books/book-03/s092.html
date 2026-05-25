@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-四月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月一日</h1><p class="meta">03.无比的爱 · 第92/366段</p><p><a class="btn" href="s091.html">上一篇</a><a class="btn" href="s093.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s092.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月一日</h2>
+<p>有一个爱心，自然就要有一个东西去放这个爱心；没有东西去放，你这个爱就浪费，所以爱心是需要一个东西来装的。神的爱需要你这个心来装（约一4:16）。如果你有爱心，也需要有一个人来装才行，不然，这个爱就被弃绝。爱被弃绝，我们就很痛苦：&quot;我这么爱你，你竟不理解，还弃绝我！&quot;难受极了。</p>
+<p>有一个爱心，也要人能懂得用爱心。凡属灵的东西，在应用上都不是滥用的。因此，有爱，不要随便滥用浪费，要正确地使用。爱错了，比做错事更厉害。事情做错，还可以改，爱错，就很难改。像爱情，爱情用错，一辈子受苦，因此，你不要凭情感去爱。结婚前，如果和对方没有彼此了解，也不了解对方的性情，你的一生，这个十字架就背不了！所以在爱情上要非常慎重。因为爱错，一辈子你要背负着这个，改也不能改。道理错可以改；思想错还可以改，情感错了，改也改不及，结果只有懊悔。</p>
+<p>我们对爱心的理解，要准确一点。在Ｘ地，弟兄们为表示爱心，就轮流给一个穷人送饭。今天轮到你，就煮三碗五碗菜到他家。明天轮到我，我煮七碗，比你多两碗。结果轮流的，一个比一个的，你多我再多...去煮，这能做多久？不久就停了，没有办法，因为是挑重担。另一面，这也不是那穷人的需要，你拿一点钱给他反而好，他吃多就吃多，吃少就吃少，现在把煮好的菜送去，吃不完都浪费了。这些都是人为的作法。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

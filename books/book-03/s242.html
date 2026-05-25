@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-八月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十九日</h1><p class="meta">03.无比的爱 · 第242/366段</p><p><a class="btn" href="s241.html">上一篇</a><a class="btn" href="s243.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s242.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十九日</h2>
+<p>主再来是千真万确的，我们该怎么面对？那么去走？是往上走！你说到诗篇的上行之诗。主耶稣和门徒们在吃逾越节晚餐完了，那天晚上，就唱着上行之诗到橄榄山去。（[太26:30](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=39&amp;chapter=25&amp;verse=29&amp;highlight=1#P29)）</p>
+<p>主说：你们要吃我的饼，喝我的杯。说完以后就唱上行之诗。</p>
+<p>我们擘饼记念主之后，也有敬拜，就唱上行之诗，就是在</p>
+<p>&quot;上升、上升&quot;。每个擘饼聚会都要叫你往天上升，不能像今天好多人这边擘饼，擘饼后去跳舞、去犯罪...不是的，是走往上升的路！所以，我们记念主，是回忆以往爱我们的主曾为我们舍己；记念主是要在这里作见证，耶稣基督已经从死里复活，擘饼，喝这个杯，是在表明主的死。</p>
+<p>&quot;表明&quot;这个词，有的翻译作宣告。表明主的死也是宣告主的死。这个宣告和一般说话不一样。宣告是有权柄的，政府宣布一件事，就可以用这词，政府宣告一件事，大家都很顺服的听从。今天，神的话在这里宣告，在这里见证：基督从死里复活，得到天上地下所有的权柄。现在，我们擘饼记念主，我们在这里做见证，就是在宣告主来了，主做了工，祂死了，又活了，也宣告主要再来，我们在这里就是等候祂的再来。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

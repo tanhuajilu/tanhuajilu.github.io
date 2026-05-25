@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-一月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月三十一日</h1><p class="meta">02.在光中得以见光 · 第31/366段</p><p><a class="btn" href="s030.html">上一篇</a><a class="btn" href="s032.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s031.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月三十一日</h2>
+<p>经过不断的更新不断苏醒，我们在神面前，就是个有积蓄的人。若是有积蓄，仓库里堆得满满的，要搬仓也搬不了呀！仓库是空的，要搬仓，三两天很快就搬完了。所以，今天你要认识基督的丰富，才有办法持续事奉，才有办法在属灵上稳定，不然，靠外来的力量去推，也不会推动你走&quot;向前&quot;，要靠特会奋兴会也不会达到目的。</p>
+<p>整年去开奋兴会是不行的，即使整年开，还是没有路走。问题是你有没有走上属灵的路。当你认识属灵的路，不管你摆在哪个地方、哪种情形，都可以去做基督徒，可以好好的活基督徒的生活，因为主与你同在。主活在你里面，每逢你碰到基督徒，大家在一起，都觉得宝贝。</p>
+<p>所以我们过去好多观念应该翻过来，人的意念要放下，去摸到神的意念。（赛55：8－9）神的意念给你摸着，你就跟神走。若一味用思想，把经文拿来套上自己的东西，就不行；要放下这一个，你要顺服圣经的话。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

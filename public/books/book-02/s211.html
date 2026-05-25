@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-七月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十九日</h1><p class="meta">02.在光中得以见光 · 第211/366段</p><p><a class="btn" href="s210.html">上一篇</a><a class="btn" href="s212.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s211.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十九日</h2>
+<p>你若说：&quot;我经历了，却会忘记。&quot;忘记也不要紧，经过一件事情，你就得到帮助，经过一件事情，你本身必然有吸收，就得帮助。忘记了，不要紧，像你过去吃了好多东西都忘记，你不会再去想前天吃了些什么好东西。虽然你忘记，但吃下去的，已经成了身体的一部份。你经过一些事情，听道也好，经历也好，这些经历虽然过去，但在无形中，神的生命已经组织在里面。记得不记得不要紧，这已组织在你里面就好。今天组织，明天组织，今天增加，明天增加，你里头是接受得丰丰富富的。</p>
+<p>丰富是从一点一点、一天一天加起来的。我们一天过一天都要有学习，正如一首闽南诗歌说的：&quot;一滴一滴的水，成了海那么的大，一粒一粒的黄沙，成为大地和众山。&quot;我们里面，一个一个，一点一点属灵的东西累积起来就丰富。加上，大家所有的再合起来，更丰富了。</p>
+<p>我们所经过的，就是反面的经历也不要紧，反面的也会给我们利用，来得到正面的祝福。所以好多反面的事情发生，也都是神的祝福。有的人说，苦难是我们化装的祝福。对！外面是装苦难，里面是装祝福。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-一月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十九日</h1><p class="meta">04.晒熟的美果 · 第17/366段</p><p><a class="btn" href="s016.html">上一篇</a><a class="btn" href="s018.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s017.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十九日</h2>
+<p>我们不夸口医病赶鬼。你作这个，将来的下场就是羞耻，羞辱主的名。要去问主，某些东西，主要作不要作。</p>
+<p>那个大麻疯病人到主面前说：&quot;主若肯必能叫我洁净了。&quot;主若不肯也没有办法。所以他祷告问主肯不肯。对大麻疯病人，当时人碰也不碰，摸也不摸，在主呢？主能作，但是，主肯不肯还是另一件事情。主说：&quot;我肯。&quot;就洁净了。</p>
+<p>今天很多问题是&quot;主肯不肯。&quot;所以马太福音第七章提到很多人能奉主的名赶鬼行异能，但是到了一天，主说：&quot;我从来不认识你，你们这些恶人离开我去吧。&quot;为什么主不认识他们，因为赶鬼行异能，离不开主，离不开生命，离不开源头。你一离开，就什么都没有了。</p>
+<p>只有你保持跟主的关系正常，保持你跟主灵里有交通，能走在这个路上，你才很轻松，很安息。不然工作是重担，去看望也成重担，传福音也是一个重担，连读经，祷告也成为重担。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十一月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十四日</h1><p class="meta">02.在光中得以见光 · 第319/366段</p><p><a class="btn" href="s318.html">上一篇</a><a class="btn" href="s320.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s319.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十四日</h2>
+<p>问：请谈一谈基督的平安这一点</p>
+<p>答：船会摇，但抛锚于海就不怕。不抛锚，船是会摇动，遇到危险一翻就倒。虽然海会摇它，却有一个力量在那里控制着。圣经说，我们有信心就抛了锚。信心就是抛锚到主里面去，信心就是相信神。我们是跟主连在一起的，即使在世上有风浪，有苦难，我们因为跟主连起来，就有力量。（因信与主一起，我们就有一个能控制的力量，来帮助我们。虽然船仍摇动，但它安定，知道锚已经抛妥。）</p>
+<p>主说：在世上你们有苦难。信的人有苦难，不信的人也有苦难，同样经过苦难。但是主又说，你们可以放心，因我胜过世界。又说：你们在我里有平安，这平安非世人所赐平安，祂所赐乃是与世界所不同的平安。这是主成为我们平安。看环境我们一想就怕，看困难，也会紧张会挂虑。转到主这边来，就有交托，里面就有平安。摆在我们身上的有平安，同时也有挂虑，我们会感到苦，却也同时感觉甜的味道。</p>
+<p>世界上的人苦就是苦，基督徒的苦，却是苦中有甘甜。苦在那里甜也在那里。苦有外面的苦，身体的苦，也有思想上感情上的苦。但经过这些苦，在我们灵里就摸到平安，都因着主。这说明在我们人身上，我们外面的人跟里面的人两种东西，是二码事。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十五日</h1><p class="meta">02.在光中得以见光 · 第299/366段</p><p><a class="btn" href="s298.html">上一篇</a><a class="btn" href="s300.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s299.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十五日</h2>
+<p>因此，在那些艰难的环境中，我常有这诗歌：&quot;祂不误事，因祂是神...祂使软沙作海界限，波浪虽狂，不能再前。&quot;一切问题有神的手，有神的定规，再凶，也不能超越神的手。祂能叫你承担你所不能承担的事。我们应当相信，我们的一生中，有神的手在那里。</p>
+<p>那天，有位姊妹交通说：&quot;我们在神手中，就像元宵做汤丸，糯米团弄得粘粘的圆圆的，在手上却不会掉。我们在神手中也这样，不会掉。就是掉，也会把我们捡回来。&quot;那姊妹连字也不认识，但她会联系到我们在主手中像汤丸在我们手中一样。这样的解释圣经，连博士也不会说。这是里面圣灵教导的，是活的教导。所以，许多乡下的弟兄对属灵的理解虽然简单，却很有窍，很奇妙，这是神启示他的。</p>
+<p>X弟兄，你这次有一个开始，就走在这条路上，十字架要带你经过死，也带出复活的能力。在你那边，有几位跟你同心，就是有难处，主还会把你带过去。</p>
+<p>祷告：主阿，一切荣耀归给你，这是你自己作的工，主你在我们里面恩待我们。明天有几位弟兄要回去，求你看顾他们，你祝福他们，在今后的日子更被你开启，属灵的眼睛更能看见，清楚你属灵的道路，求你祝福他们，叫他们能作一个见证人，带领他们回到那个地方，把你的生命见证出来，也借着他们得着更多的人来认识主，来事奉主。以下我们还有些交通，求你继续恩待我们，祷告奉主的名。阿们。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

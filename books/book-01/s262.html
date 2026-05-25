@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-九月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十八日</h1><p class="meta">01.天窗365 · 第262/366段</p><p><a class="btn" href="s261.html">上一篇</a><a class="btn" href="s263.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s262.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十八日</h2>
+<p>有一个姐妹，他的弟弟在这边患癌，他要赶回来，他一家都回来，回来就同心祷告，祷告的中心只有一个，就是说：&quot;主阿，你要医治他！&quot;他有一个小妹妹，比较接触到属灵的东西。他对这个祷告不很阿们。</p>
+<p>如果有人没有学习，听到这话就会以为反常：&quot;哥哥病重，快死了，祷告他病好，你觉不通，这是什么意思？&quot;</p>
+<p>我问这小妹妹：&quot;怎么你感觉不通？&quot;</p>
+<p>她说：&quot;就是他好了，全家人对主耶稣还是无所谓的。如果神怜悯，借着他病，叫全家人有个属灵的转机，神的工作才达到目的，因为藉这苦难叫人向神寻求了。他若能好，他转向神，大家也转向神，就是好事，如果他不能好，虽然损失了一个人，全家还是里面对主有热心、有追求，并且注重天上的事，这一个价值，就比病好还更宝贝呢。&quot;</p>
+<p>她是看到这一面来。我说：&quot;阿们，对的！&quot;</p>
+<p>很多人都注意病快点好，可是，常常病好了，人依然故我，有什么用！许多热心的姐妹，到医院传福音，还天天煮汤给人吃，要人家信主。那些朋友看到信主的人很好、有爱心，弟兄姐妹这么相爱，就说：&quot;很好，很好，我信，我信。&quot;但是，到他病好出院就不信了。</p>
+<p>因为这是从外面去作的，爱心如果借着几碗汤可以帮助人叫人重生，那就容易了。这乃是圣灵的工作（约3:5－8）。**圣灵若没有工作，你走在圣灵前面，你去作也没有门路。你没有门路，对圣灵的工作，你就配合不进去呢！**</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

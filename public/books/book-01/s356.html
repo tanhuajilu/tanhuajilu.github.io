@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-十二月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十一日</h1><p class="meta">01.天窗365 · 第356/366段</p><p><a class="btn" href="s355.html">上一篇</a><a class="btn" href="s357.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s356.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十一日</h2>
+<p>在这里，我们不推行，你怎样做，这完全是你自己的工作。我们推行，人不会听我们的。**我们只得着神所要得着的人，神要得着的，我们才得着**；神不要得着的，我们不去摸。我们越摸他，他越怕。若神要得着他，他必定到神面前来。</p>
+<p>主耶稣说：若不是神吸引人，就没有人会到主这里来。如果不是父所栽种的（约15:1），都要被拔起来。所以，我们真的要无倚无靠的来信靠神。</p>
+<p>只管向着神，你向着神的心越深，就连反对你的人也给你吸引，仇敌也要俯伏在你面前。所以，过去N弟兄的那个伟大是我们佩服的。因为好多人起来反对，到他面前，就服下去。给神作出来的东西才能够把人征服，并不是说他的道理怎样，他一讲就把人带到神面前去。</p>
+<p>当N弟兄在S地尽职事时，一进门，一走到台上，整个气氛就是严肃的，好象把神带进来；还没有讲道，大家已经到神面前，当时是这一个情形。不然大家都不必听讲道，把书看看就可以了。</p>
+<p>这就是人在那边把神带进来，所以约翰一书才说：我不愿意再写信，乃愿意当面交通、见面交通。我们写信，与我们面对面交通完全不同，距离那么远，书信来往是平常的，直等面对面见到了，一见面里面就有交通；所以，**有机会见一个面也是难得的，要宝贝这个见面交通的机会！**</p>
+<p>我们有些人很长久没有见面，一旦见面，就很宝贝。有些人见面，一点钟很快就回去，像煮菜还没有煮开，就算了，这是非常可惜的。你若煮得稀烂，不只煮熟，还煮得烂烂的，才是好的。所以，我们在交通中通了，还要再通、再通，就像煮东西熟，还要再熟一样。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

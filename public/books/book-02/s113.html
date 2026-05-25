@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-四月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十二日</h1><p class="meta">02.在光中得以见光 · 第113/366段</p><p><a class="btn" href="s112.html">上一篇</a><a class="btn" href="s114.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s113.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十二日</h2>
+<p>一个做护士的看见病人就责备：&quot;怎么愁眉苦脸！&quot;别人发烧难受叫苦，她说：&quot;你怎么这样子？&quot;直等一天，他发烧40度了；才发觉自己对人不会同情。自此，才改变态度。不然，她给人一个印象：这护士是最坏的，人病得要死，还给人骂！她经过痛苦，发觉生病是这样痛苦，就改变了。</p>
+<p>很多人没有学习，就想帮助人，他帮助人是帮倒忙呀！所以帮助人安慰人乃是你把所得的安慰去安慰别人。这安慰不是道理，不是话语，这安慰有一个东西！就像喜乐，喜乐有一个东西；平安，平安也有一个东西。（罗15：33）</p>
+<p>世界上的平安是环境平安无事。环境改变，就不平安了，这平安也是受外面影响的。主耶稣在我们里面，就是我们的平安；你没有平安，但主作我们的平安，这平安不受外面好坏影响，这平安还在！（帖后1：7，3：6）</p>
+<p>主说：&quot;我赐的平安，不像世人所赐的。&quot;（约14：27），世人的平安是反复无常的，会改变的，主的平安在我们里面，这平安不改变，是留得住的。（西3：15，腓1：2）</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

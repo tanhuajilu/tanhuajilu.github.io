@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-三月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十一日</h1><p class="meta">02.在光中得以见光 · 第71/366段</p><p><a class="btn" href="s070.html">上一篇</a><a class="btn" href="s072.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s071.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十一日</h2>
+<p>家庭里的功课是神给我们最好的门徒训练；我们的脾气，个性，就是通过家庭的矛盾，给对付过去的。矛盾在你家里就有，看你怎么学习。你有学习，矛盾就会转换。以后矛盾还会有，这些矛盾，会叫你们有学习，更进步。</p>
+<p>我们注意的，不是有没有事情发生，乃是有事，你吃得消吗？身体健康，肠胃好的人，吃东西就会消化。生命就是这样，人软弱，什么都受不了。你是刚强的，困难压力来，就给你消化过去。事奉主的也要这样，他里面刚强，反对一来，还可以吃得消，不然给人家讲一句话受不了，三天晚上睡不下去。所以，实际的功课都从实际的环境中去学习。</p>
+<p>许多全时间事奉的人，谈起家庭讲得头头是道，但家庭是什么味道，丈夫是什么味道，他不懂得，所说的都是外行话。</p>
+<p>虽然家庭里矛盾很多，继续还有，但是不要怕，因为在我们里面的生命是升天的生命，主是在宝座上。神的生命超过这些东西，再多的矛盾也不会把你难倒困死，你还能唱歌赞美呢！赞美到锁链都脱落，正像当日保罗、西拉在牢里唱歌赞美的情形一样。（徒16：24－26）</p>
+<p>虽然压力很大，你感谢赞美，这些就过去。有的人不只有一种压力，他有工作的压力，有家庭的压力，有服事上的压力；但是愈多压力，力量愈多，恩典愈多，感谢更多，属灵的东西在他里面更丰富。婆婆跟媳妇的矛盾是最多的；无论是海外或是国内，家庭中所学的功课都是很多的。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

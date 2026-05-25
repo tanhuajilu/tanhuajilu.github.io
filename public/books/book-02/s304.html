@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02.在光中得以见光-十月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月三十日</h1><p class="meta">02.在光中得以见光 · 第304/366段</p><p><a class="btn" href="s303.html">上一篇</a><a class="btn" href="s305.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-02/s304.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月三十日</h2>
+<p>今天我们在神面前，心要正直公平，只要能帮助弟兄姊妹在属灵上认识主就好。所以凡是爱主追求主的信徒，都可以彼此交通。有个别的人他不能接受，交不通，也给他交通。（但他不接受，你勉强也没有用，甘心乐意才有用。）</p>
+<p>属灵的东西，帮助人要甘心乐意，接受的人也要敞开去接受。所以作话语职事的，还要去学习一个东西，就是你交通给别人，你里面要有个乐意的灵，才有办法交通。如果是勉强的，是应付式的，这种工作没有用。我们需要甘心乐意去对每一个有需要的人。你愿意把属灵的东西跟他交通，这样别人就会得着实际的供应。作到勉强而不情愿的，这种工作没有用。</p>
+<p>有的人，只有交而不通；你不作也得作，去作却作得很吃力。</p>
+<p>但如果圣灵有带领有差遣有感动，你去作就有膏油有喜乐，工作作下去，负担就卸掉。我们常说，负担负担，负担就是挑一个担子，但挑到你负担卸了，担子放下，你双手就很轻松。你有负担作神的工作，作了，里面就充满喜乐平安，因负担卸掉。如果没有负担的话，人空空去也空空回来。有负担的做下去，负担卸下，不用再挑回去，里面就是轻松的。</p>
+<p>好多时候，你传福音给一个人，传到里面负担卸掉，他也得救了。很奇妙，你相信你里面的负担能够出去，圣灵就在人里面作工。这是属灵的奇妙：能交通的彼此交通，我们怎会知道你吸收呢？因这个是有对流的，有对流我们愈作愈轻松愈释放，作到里面负担卸下。有时我没有话讲，别的弟兄有负担再接下去，一浪高过一浪；这是属灵的交通，会一直高，高到顶，最后得着释放。所以在交通中，弟兄姊妹也同有感觉，很多人都有感觉。交通中一次打不通的，再一次再一次就通；交通到最后一次才通的也有。这是属灵的事实。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

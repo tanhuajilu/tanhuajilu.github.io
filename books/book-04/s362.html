@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04.晒熟的美果-十二月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十七日</h1><p class="meta">04.晒熟的美果 · 第362/366段</p><p><a class="btn" href="s361.html">上一篇</a><a class="btn" href="s363.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-04/s362.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十七日</h2>
+<p>许多年以后，就回来了。</p>
+<p>回来以后，人都是想，神&quot;要使用你更多。&quot;但是没有那么简单。回来以后更难。回来以后，我们都不可以做什么。你可以工作，但是神的纯洁，我们不能牺牲。我们可以牺牲工作以保守教会的纯洁与尊严！分别为圣是&quot;绝对&quot;的。</p>
+<p>虽然我们是出来了，但是聚会不能聚会，交通也不能交通，这就把我们关在主的面前。要这样的，起初没有几个，慢慢的，神就作工。属灵的工作都不是人自己作的，都是主作的。主在别人身上作了，我们才能作。当他们作到没有路了，我们就像强盗般地和他们交通起来。通过交通，蒙了光照，属灵的路就都清楚了。通过很多的交通，全世界的光景，我们也懂一点。</p>
+<p>有路走，就有起头，有人了，就有工作。没有路就没有工作。神可以把工作放下来，先来对付人。神不用天使传福音，神却用人，因为神兴起合乎他用的人作为器皿。我们要传的是活的道，不是死的道。这道是活泼的，且有两刃利剑的。它能剖开我们，扎我们的心。信徒的心被扎了，就能接受生命的供应，否则，就不能接受。能接受供应的，就像加了肥料。</p>
+<p>你有感觉，就是坐在那里，也很清楚...</p>
+<p>你有这个需要，就可以得这个供应，没有这个需要，就不能得到。信徒，教会，乃是主的，有这个需要，也会得到这个供应。</p>
+<p>今天，假先知，假传道的很多，他们到处跑，打乱教会。他们为利往巴兰的路上直奔。</p>
+<p>有人要听，却听不到，因为他们听了，以为只是雷声。但是向那些清心的人，属灵的东西却越擦越亮。神的工作、荣耀的地方就在这里。</p>
+<p>有很多人正寻求这里面道路的交通，这样的人一天比一天多。</p>
+<p>补：回来后，又有新的十字架。在属灵的工作上，也有好多的十字架，因为即使在大陆，共同有一样认识的不多哩！所以路就简单了。但是不会说：&quot;这么简单！&quot;因为反正跟随主就是孤单的。十字架的路就是孤单的，命定如此。命定了你跑也跑不掉。以后的工作，不是神要我们作的，我们是作不来的。我们的工作，只能跟神。</p>
+<p>我们回来了，但是倪弟兄还没有回来。倪弟兄死了，他过世时，并没人抚棺而哭。这光景在他二十年前的文字中已经明言（十架吟语）。当时他那个心志，今天果然成就。有很多人过去是大热闹，死送殡，多少人去送行，不能与倪弟兄相比！他们是今天享受，倪弟兄是将来享受。&quot;我们&quot;的交通也不在今天，是在那天，因为还要带到那天，所以我们的工作，事奉都必带到永世里。出于神的都要带进去，出于人的，就只能带到今世。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

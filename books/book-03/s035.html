@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-二月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月四日</h1><p class="meta">03.无比的爱 · 第35/366段</p><p><a class="btn" href="s034.html">上一篇</a><a class="btn" href="s036.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s035.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月四日</h2>
+<p>（怎样在家庭里作丈夫？）</p>
+<p>这没有一定的答案，只能依每个家庭个别来对待。原则上，丈夫是妻子的头，作弟兄的要站好地位。你不站好地位，妻子就&quot;站&quot;，结果不好。丈夫一定要站住地位。你有这个地位，也该有这个风度。作官的有官的风度，作主工的也有作主工的风度，丈夫也该有丈夫的风度，没有风度，妻子很难佩服你。丈夫对妻子也要有爱，这个爱妻子的爱是很自然的。亚当见到夏娃就说：&quot;这是我骨中之骨，肉中之肉。&quot;（创2:23）就爱她。作丈夫的也当如此。宇宙中最大的力量就是爱，爱能征服人心，感化人心。只要有爱，妻子较易顺服。你爱她，她在家中有多大的担子多辛苦，还是甘心情愿。</p>
+<p>一个家有三方面很重要：夫妻间的爱情、经济的问题、个性的问题。</p>
+<p>夫妻该有专一的爱。因此不能有&quot;第三者&quot;，第二感情会破坏你的家庭。如果容让第二感情，行为方面虽未犯罪，却向着罪而去，真犯了罪就更难挽回。有作妻子的发现别人对自己的感情比丈夫好，以后问题就来了。所以我们和弟兄姐妹的来往要清洁。夫妻间的爱情要专一，不能有第三者，我们的感情要学习不浪漫。专一的爱会减少很多的难处。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

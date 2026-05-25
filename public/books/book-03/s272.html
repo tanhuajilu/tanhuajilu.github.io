@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-九月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十八日</h1><p class="meta">03.无比的爱 · 第272/366段</p><p><a class="btn" href="s271.html">上一篇</a><a class="btn" href="s273.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s272.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十八日</h2>
+<p>聚会里，虽然弟兄少，但你们几位弟兄却是比较稳定。在聚会里有一、二位稳定的在，就靠得住一点，若更多几位在，聚会就更有力量把大家带起来。加上姐妹们虽然多，都肯站在她们的地位上不随便作什么，主要看弟兄们带头作，这现象就是好的、正常的。是主的怜悯，才有这情形出现，以后，主还要不断作工。</p>
+<p>如果姐妹们多，有些姐妹很强，左右教会，难处就很大。若是弟兄们的属灵情形稳定也同心，即便有一、二位弟兄姐妹的情形不对，问题也不大。不是看人多与否，是看有没有同心。爱主的多几个在一起，就增加属灵的份量，在聚会中有一些唱诗，有一些祷告，大家带到主的面前就满足了。</p>
+<p>在家庭里聚集，是过渡时期，一到时候，教会就会成形。现在，先不要管教会怎样显出，暂时，你们才几个人，挂不上去，只要有追求，会进步；彼此间也有饶恕，到了时候，不必谈怎样设立教会，教会自然显出，自然成形，就像拼图般，很清楚的。因为教会就是显出来的见证。</p>
+<p>聚会，大家在一起很甘甜，就是你没有开口要说什么，也觉得甘甜。大家交通不必要人多，我们怕人多，人多话也多，就很困难。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

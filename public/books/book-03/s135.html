@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-五月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十四日</h1><p class="meta">03.无比的爱 · 第135/366段</p><p><a class="btn" href="s134.html">上一篇</a><a class="btn" href="s136.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s135.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十四日</h2>
+<p>对儿子，你不要讲父亲的坏话，你讲这些，做儿子的会很气：&quot;你们说他坏，这个坏的也是我的父亲。&quot;反过来，你们对儿子要跟他说：&quot;父亲好，父亲好。&quot;他就会转达：妈妈说父亲好，就叫你们夫妇的感情更巩固。如果家庭有矛盾，丈夫对儿子说：&quot;你母亲多坏。&quot;作妻子的也对儿子说：&quot;你父亲多坏。&quot;在无形中，自己就拆掉你们中间的&quot;爱&quot;。如果你想：是自己的家庭，再坏也是&quot;好&quot;的，这个就叫儿子从小得到个印像，父母是相爱的，叫儿子有了榜样；这个也叫孩子没有一个印象：你们夫妇是吵架的、是矛盾的。</p>
+<p>智慧的父母，如果有吵架，都怕儿子知道，不会给他们讲。因为夫妇吵架是房间里面的事，天一亮到客厅里来，大家都笑嘻嘻的。你们两个人吵了一个晚上都不讲话，但是到客厅来，带着笑脸，两人都好好的，人家就不知道你们吵架。这是实际要学习的。不然，有客人来，你们一个人一个脸，客人要马上跑掉了，这个家就总给人家一个坏印象。</p>
+<p>我们这样的顺服，这样的站好地位来对他好，实在也是难，这个就要出代价，你自己要出代价。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-七月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月七日</h1><p class="meta">03.无比的爱 · 第189/366段</p><p><a class="btn" href="s188.html">上一篇</a><a class="btn" href="s190.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s189.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月七日</h2>
+<p>&quot;清清楚楚活在主前&quot;有里外两方面。</p>
+<p>外面在钱财方面必须先清清楚楚，男女关系，要清清楚楚。我们已信主，大家还在肉身里，男就是男，女就是女，不要搞不清楚。不管老少，这方面都要清楚，尽量避免男女间随便的接触。</p>
+<p>&quot;清清楚楚&quot;从外面学起，就是在家里面，家庭也要清清楚楚。一个家庭乱七八糟，心就乱了。这清清楚楚包括很多呢，要讲也讲不清楚（众笑）。穿衣服要清清楚楚，钮扣一个上一个下的，扣歪不好看。</p>
+<p>你的内心世界呢，&quot;清清楚楚&quot;！思想要清清楚楚，乱的给他整理一下。乱的人，很难跟他讲话。这要长期对付的，思想像头发一样，乱了，要给它梳一梳，就整齐很多。</p>
+<p>再者，感情也要清楚！感情不清楚，任意浪漫就会吃亏。没有结婚的人，你的感觉不要随便；结了婚的人，感情要专一。丈夫爱妻子（[弗5:28](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=48&amp;chapter=4&amp;verse=27&amp;highlight=1#P27)），妻子也要爱丈夫（[提多2:4](http://www.gbcoventure.com/OnlineBible/?type=content&amp;version=0&amp;book=55&amp;chapter=1&amp;verse=3&amp;highlight=1#P3)），不能在丈夫之外再有所爱。有第三者进来，家庭就受破坏。弟兄不要对老婆说：&quot;某姐妹漂亮。&quot;讲的时候，她心里就不是味道的：&quot;她漂亮，你去娶她！&quot;你再多说，就发生问题。妻子也是。讲话不小心会破坏你这美满家庭。别人的漂亮是他的，不是你的分，你不要去羡慕她。你这丈夫（妻子）是最好的，因为是你的。不是我们的，我们不要！</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

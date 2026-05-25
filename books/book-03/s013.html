@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03.无比的爱-一月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十三日</h1><p class="meta">03.无比的爱 · 第13/366段</p><p><a class="btn" href="s012.html">上一篇</a><a class="btn" href="s014.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-03/s013.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十三日</h2>
+<p>我们要看清楚：见证乃是连于元首基督；肢体的建造乃是建造教会------基督的身体；合一是在圣灵里并在基督的爱里。或许大家对道理的见解不一样，里面领受的却是一样，我们还是同作基督合一的见证。</p>
+<p>保罗说：基督的生命在我们里面，就是宝贝放在瓦器里，要显明莫大的能力出于神，不是出于我们（林后4:7）。但我们常常注意瓦器过于里面的宝贝。神要作工，使我们越过越像保罗一样，以&quot;认识我主基督耶稣为至宝。&quot;基督太丰富了，认识基督是没有尽头的。我们经历的每一件东西，都当与基督相连。比如受浸，若没有认识基督，就与洗澡差不多...当与基督连起来。</p>
+<p>信徒若没有具体的经历，一直停留在&quot;感觉&quot;里，就不自然。嘴巴对苦味、甜味会有感觉，在吃东西的时候就感觉出来，这是很自然的。若没有吃东西，嘴里却感到苦或甜就不正常。</p>
+</article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

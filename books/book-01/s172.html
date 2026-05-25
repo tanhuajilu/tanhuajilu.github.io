@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01.天窗365-六月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十日</h1><p class="meta">01.天窗365 · 第172/366段</p><p><a class="btn" href="s171.html">上一篇</a><a class="btn" href="s173.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-01/s172.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻到下一页并自动播放</label><span class="speed-control">播放速度：<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十日</h2>
+<p>约翰跟随主，跟随得最紧，他也没跟到底呀！所以**主耶稣这条道路是孤单的道路。**（约16:32）</p>
+<p>好多人说：&quot;这条道路很孤单。&quot;是，跟随主真的孤单，你要认定孤单。你不认定孤单，就是盼望人来作伴，盼望这个来，那个也来。但是必须孤单！</p>
+<p>**不孤单，我们就没有群众。孤单，我们才有群众。**这话怎么讲？</p>
+<p>一粒麦子最孤单了，主耶稣这一粒麦子从天上掉下来是最孤单的。麦子落在地下死了，长起来就产生许多的子粒。主耶稣从天上到地上来，就好象一粒麦子，落在地下死了、埋葬，复活后却长出很多子粒。（约12:24）</p>
+<p>主第一次来，只祂一个，祂第二次来时，就不是独生子，乃是神的长子显现，要带众子进入荣耀。（提后4:8，西3:4，罗8:29）</p>
+<p>主第一次来，是独生子，独自一个来，走了孤单的道路，死而复活、升天，就成为神的长子；主第二次来是神的长子，要带着我们------神千千万万的众子，同到神那边去。若没有孤单，就没有神那么多的众子了。</p>
+<p>同样的原则，**我们若没有经过孤单，我们就不能得人**。所以凡要建立自己的，结果，他得着的人也散掉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>
