@@ -1,0 +1,5 @@
+audio/
+__pycache__/
+*.log
+uploaded_state.json
+generation_log.csv
