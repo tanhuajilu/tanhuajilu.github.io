@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十二日</h1><p class="meta">主耶稣基督的见证 · 第142/365段</p><p><a class="btn" href="s141.html">上一篇</a><a class="btn" href="s143.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s142.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>大家一同来交通，结果竟是他们二个人自己起了矛盾。那年青的弟兄原是X派出来的，再转到灵恩派里去，后来又再出来。他对老弟兄说:“带我去交通，盼望你帮助我。”这位年青人多少是有碰到。但老弟兄对他总有一个不平，有一个不服气，二边一讲，就矛盾。先前，他们在那边，从来没有遇这样的态度，反而来到这里，老弟兄对他竟当场发脾气。谁也不明白他怎么会发这脾气？</p><p>经过神的工作，有位姊妹描述说:“当场看见他在那里转变！”这转变叫他的态度、笑容、脸色全都改变。这是说明:人的东西一旦碰到主，就都软下去。以后，回去，大家就好好的回去。</p><p>有的弟兄说:“原定要送书给他，见他们矛盾的样子，想不给他书！已经准备不给他了，因为不知道怎么应付！等他一转，我说:”还是给他。“因为神怜悯他，我们就不能给他计较。在他那边，他总是带头一点的。</p><p>他怎么这样，我们心中有数。因老弟兄带着他来，总是要显出一种带领的态度。有的人就是不高兴自己带来的人摆在他前头。老弟兄当然是已经摆在前面，因你是年长的，他是年幼的。但我们不能当场这样去讲这个。反而对一些软弱的，我们总是会一直帮助他，所以就着重了一点。</p><p>你是比较年长的，本来应该同心合意来带领他啊。像很熟悉的，我们的表现当然是比较一般，初来的，事实上，就要多给他一些交通。好像客人，愈熟的客人，你愈不要客气，就是像一家人一般随便也可，那新来的客人，当然要客气点，不客气，你要把他赶跑了！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

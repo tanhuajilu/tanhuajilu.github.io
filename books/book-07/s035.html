@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月四日</h1><p class="meta">主耶稣基督的见证 · 第35/365段</p><p><a class="btn" href="s034.html">上一篇</a><a class="btn" href="s036.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s035.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>交通:摸到理论的，都是知识、是非的问题，大家不过在议论对不对、道理高或低。若是从生命出来的就不同，有从里面带出来的话，话语简单，大家里面阿们。我们到乡下去，看到些没有文化，也没有多少圣经知识的老姊妹、老弟兄，跟他谈一谈，交通交通，没有理论，但有生命，在爱主上能彼此供应，彼此响应。</p><p>我们也碰到过许多大布道家，与他碰面总感觉不调和，感到他与我们认识的水平是他高，我们太低。到农村去呢，我们和老姊妹、老弟兄很调和，这个叫生命的故事。生命才能供应生命，生命才跟生命相和。不是生命的，文化愈高，愈配不上来。</p><p>问:你坐牢时，神怎样对你说话，怎么在牢中受教，有什么话神跟你讲了？</p><p>答:神讲话。神对我们讲话我们相信，神没有讲话我们也信，所以就凭信心相信神。有的时候，我们这边也不十分清楚，不清楚也信神。</p><p>在一切遭遇中，思想上也是说，神若对我说一句话，就有路走，就有力量。有时，神不说话。我说，我们也还是信神。从理智上说，好像没有道理，一直信神，信什么？我们信神负责到底阿！神对他儿女负责，像我们要对我们孩子负责一样。</p><p>神对待我们，他负责。我们相信神是这样负责我们的。在过程中，我们求神对我们说话，给我们几句话，但是却没有话，没有话，我们还是信神。</p><p>所以，我们才说信神不讲理由的，就是“信”。信就没有看环境了，看环境就信不下去。可以说，神对我们工作的过程中，在理智这个面，实在很难领会神的工作。但是我们一直信，一直接受，就产生属灵的果效，叫我们得着属灵的东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

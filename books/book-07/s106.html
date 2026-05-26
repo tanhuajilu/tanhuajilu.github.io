@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十六日</h1><p class="meta">主耶稣基督的见证 · 第106/365段</p><p><a class="btn" href="s105.html">上一篇</a><a class="btn" href="s107.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s106.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:在等候神，顺服神的旨意上，是主动呢还是被动呢？</p><p>答:有人带了一本叫《等候神》的书来，里面就讲到关于等候神。</p><p>若是被动的等候神，就是盲目的了。你说要等候神就在这里一直等候，但是等神要动了，你还不知道呢！</p><p>你在企业里，对有些问题，上级说:要等候。你就在等候，但到了时间，上级会把通知给你，你说这是主动呢还是被动？若是你主动，心里必会想:我要等到几时？你在那里急呢！但你不要急，到了时候，上级会通知你。</p><p>神也像这样的来考验我们。究竟我们这等候是怎样的等候呢？等候神不是叫你被动，以致等候到无知里去。等候是要叫你在那里警醒。</p><p>你等候主的再来，必须听主来的动静，看主来不来？你一直在那里注意。有些人是等候到懒惰了，结果什么都不作，什么都不注意，不警醒了。</p><p>等候，要看在什么时候等候。你坐车等候，等了人个钟头，车还没有来，你等到急起来了。你等车，要看车有没有在那边，如果你不管，车已经过去了，你还不会知道呢！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

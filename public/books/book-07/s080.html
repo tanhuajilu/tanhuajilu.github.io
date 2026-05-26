@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十一日</h1><p class="meta">主耶稣基督的见证 · 第80/365段</p><p><a class="btn" href="s079.html">上一篇</a><a class="btn" href="s081.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s080.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:新酒装新皮袋怎样的？</p><p>答:新酒装在旧皮袋里，一定破了。新酒一定要装在新皮袋里。主这个生命，必作在经十字架作过工的器皿身上。</p><p>新布不能补在破衣服上，新衣服要拿来穿。教会补丁那么多，不要再拿来补。神是说:人的义在神面前就是破烂的衣服。你舍不得丢，补了给你穿，你穿了也不象样。</p><p>同样作工、传福音，你这样去传福音，这样去工作，你自己有饱足。感谢主，今天我这样传福音，不只他得救，我也吃了一餐饱。你在那里，看到圣灵在这里作工。所以我们要一直不断的活在这样的光中，就是活在我们常说的异象中。异象就是主本身。但是有许多人，他们活在道理里面，活在思想里面，活在感情里面，不是活在圣灵里面。</p><p>问:伯大尼之家是教会的缩影，大家都作马利亚吗？，这怎样？这关系到对弟兄姊妹的接纳。</p><p>答:讲道理，就是要去怎么作。你说:“我要作马利亚。不作马大。”有姊妹反应说:“我才不作马大，在厨房忙死。我要作马利亚。可是没有那么多马利亚给你作。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

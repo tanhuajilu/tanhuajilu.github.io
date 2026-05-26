@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月九日</h1><p class="meta">主耶稣基督的见证 · 第68/365段</p><p><a class="btn" href="s067.html">上一篇</a><a class="btn" href="s069.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s068.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>一个地方，在那里有教会，其中就有比较带领的人（不是大家都带领，总是神有托付的），有问题就告诉那些人，这些都是具体的。至于教会的长老执事，怎么产生？这是个大问题了。今天，在公会有选举长老执事的，在聚会处派别的也有。X弟兄到X处去，看见一个会所，外面就写着选举长老的事，有一个选举长老执事的名单。这个摆出来就已经是跟公会的一样。已经落到这个选举长老的情形中去了。</p><p>长老、执事那里来？圣经说:“圣灵立你们作全群的监督。”就是圣灵所设立的，意思是使徒、是圣灵设立的，也是圣灵与使徒一同设立的。（“圣灵与我们---使徒---设立你们长老。”）这是圣灵的工作。而使徒如保罗、巴拿巴出去作工，传福音，他们就在各地教会选立长老。使徒是圣灵所差遣出去，而且回来也是圣灵带领回来。他们所作的，离不开圣灵。使徒的意思就是神所差遣的。在那里，提摩太也是使徒。使徒不是个恩赐，使徒是因为被神差遣。好像国家差派一个大使在外，你没有受差遣，而称大使，恐怕要被拉去关牢了，因是假冒的。有差遣才有权柄。没有差遣就没有权柄。这权柄也是生命的。没有生命就没有权柄，死了，还有什么权柄，是活的，有生命的才有权柄。</p><p>长老的产生是由使徒按立，使徒的产生是受差遣。好多人说:“我是使徒。”简直是乱来的，就很少说他是有受差遣的。</p><p>使徒也非单单有差遣就够！他以为他有受差遣。使徒有差遣，也有印证。保罗说，他有使徒的凭据。作使徒有使徒的凭据，就是有印记。如果有假使徒，也要被试验出来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

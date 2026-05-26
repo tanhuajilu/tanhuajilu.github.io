@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十一日</h1><p class="meta">主耶稣基督的见证 · 第42/365段</p><p><a class="btn" href="s041.html">上一篇</a><a class="btn" href="s043.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s042.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>提到道理，有很多人可以讲道理。有人对宾路易师母说:“你是姊妹，怎么到处讲道？你不要去讲。圣经说，女人不要讲道。”宾师母说:“神今天不是用男人或用女人，神乃是用他所用的器皿。”神如果使用器皿在工作上，男的可以作，女的也可以作。所说的站地位，是指在教会中说的。</p><p>所以有教会，也有工作，在工作方面，你个人要作什么，没有人干涉你；在教会方面，教会是大家的，不是你一个人讲算数。像倪弟兄说的，就是男的弟兄，也没有人说能自己去全包的，也是大家一起作肢体，成为基督的身体。</p><p>对一些人问:“怎么宾师母讲道，有灵赐给她，比男的更好呢？”宾师母说:“你们男的要检讨自己，姊妹为什么比你讲得更好？”你说你不如他讲得好，你要怪自己说:“我不够。我应该要加倍追求。”你不追求，你就够不上，够不上，神不要你了！</p><p>你说，人不喜欢你，你不到各地方交通，只在这里。人不喜欢你，这个要问你自己:“为什么弄到一个地步，人不喜欢听你，跑到别处去？”你应该这样想:“我今天已经差劲了，人不要我，我还到神面前追求！”如果你在神面前追求，真的碰到神，你不要苦没有人，神自然而然安排感动人受你的造就。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

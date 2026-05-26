@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十日</h1><p class="meta">主耶稣基督的见证 · 第314/365段</p><p><a class="btn" href="s313.html">上一篇</a><a class="btn" href="s315.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s314.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>电视这个东西很吸引人的。一个姐妹很爱看电视，有一次，某弟兄就说，看电视怎么怎么样...劝她不看电视。姐妹就说了:“我们也知道看电视不好。做完家里的事情了，不看电视，在家里很难过啊！我就去看看就是了。”到底怎样？叫不要看电视，这又很难有什么标准。</p><p>后来姐妹就问我说:“这样，是不是不可以看电视？”我说:“不是！”姐妹说:“有什么办法？”我就说:“这样，看不看电视，是根据你的生命。羊要吃草，猪喜欢吃的东西，你不能叫他张嘴去吃；猪看起来很好吃很好看的东西，在那羊来看呢怎样？羊看那个东西，看起来很讨厌的！对于你，要看电视不要看电视，没有给你规定！但是你自己里面会有那个感觉。”</p><p>像盖恩夫人，她自己是法国的贵族，上流社会穿得那个样子，是无可厚非，是很合适的，可是她对着镜子看，看了很不高兴，就去改，改到主满意才算。她这个“可以”、“不可以”是根据他里面的生命。他还没有那个生命，你强逼他不要穿，强逼他不要爱，他也不肯。</p><p>有人说:“他没有看到，你强迫他没有用。”这话也是不错，但是，你应该供应生命，带领他。你要首先定罪这个是不对的，然后按照主的要求供应他生活，改变它这些现状。你只是采取迁就的态度，这在神面前就不是站在绝对的态度上了。</p><p>你说:“没有关系啦，让他去啦！”你这个就是容让罪！教会里面是一点酵都不能放下的！不然，酵要叫全团都发起来。所以问题并不是没有看见，就是因为不绝对！不绝对，到最后就是不但不能用生命来供应肢体的需要，连自己也就慢慢堕落下去，模模糊糊的。现在普遍情形就是这样。我再说一次，今天问题是:对神不绝对！都在迁就信徒，迁就听众，讲“他”喜欢听的。若不讲他喜欢听的，他们就不来了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

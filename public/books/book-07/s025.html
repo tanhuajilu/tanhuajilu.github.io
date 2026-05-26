@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-一月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十五日</h1><p class="meta">主耶稣基督的见证 · 第25/365段</p><p><a class="btn" href="s024.html">上一篇</a><a class="btn" href="s026.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s025.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>很多人就是:要作，要作，他自己没有摆上去作。X说得更离奇:“教会不复兴，是你们信主的人的问题，我已经告诉你们了。你都不去作。”他讲这个！复兴不是这样讲的！复兴是你个人先有路，忠心先走上去，有一个带头，作带领的人。现在，他自己不带人，自己在发号司令。“你”作什么！他自己就不要作了。这就是法利赛人了，法利赛人坐在摩西的位上，教导别人，自己却一个指头都不动。</p><p>所以一个教会不复兴，圣徒就怪传道，传道就怪信徒。有些信徒讽刺传道人，“教会不复兴就是你们这些人工作懒惰。”把这不复兴归咎于工作，怪工人。工人又说:“你不作工！我一个人那能作那么多？”都彼此相怪。</p><p>我们都要在圣灵里！带头的人先给主得着，信徒自然而然跟上去，给你同心合意，不然，不会同心，还会把你赶出来。所以在教会里事奉，一定要同心合意，同蒙主怜悯，走在神的路上，神就负责作工。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

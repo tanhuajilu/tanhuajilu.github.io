@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十五日</h1><p class="meta">主耶稣基督的见证 · 第46/365段</p><p><a class="btn" href="s045.html">上一篇</a><a class="btn" href="s047.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s046.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>话很简单，但这里面的学习几年也学习不完。有一个弟兄，他家庭在聚会处，现在在公会里。我跟他很熟:“你要认识主，主是道路、真理、生命。”他初信，听了，对母亲说:“这些我自己会讲，什么道路、真理、生命，背圣经背得很熟！我不再来！”他说不来就算。后来又来，我就告诉他:“这位主是道路，真理，生命，你讲一讲，道路是什么，真理是什么，生命是什么？”他讲不出来。我说:“你讲不出来，但却知道了，你知道主是道路，真理，生命。这个，你清楚圣经是这样讲，你会讲给人听的！你讲讲，主是怎么作我们道路！”他只知道字面的道理，他不知道里面属灵的东西。那时我说:“这属灵的东西你不知道，你去讲也只是道理。”今天，他还在那里讲道理。主是真正道路、真理，他摸不着。</p><p>所以对圣经所讲的东西，我们都要去摸到内容。有内容，出来就不同，没有内容就只是个道理。道理出来只会起争论起争辩，你是真碰到生命就必俯伏在神面前，因为神就是“是”。在旧约里，神告诉以色列人，“因为我是耶和华，要怎么样怎么样，因为我是耶和华。你要怎么作、怎么做，因为我是耶和华。”“我是耶和华”就指着耶和华是那个我是。就是神是。所有道理，都必须有神的实在在里面，才有属灵的价值和内容。没有这个神作我是，其它的道理就是没有一个实在在里面。</p><p>真理有一个所是，如果跟神的所是一样就有福气了。如果你所做的东西没有神的所是，而是你自己的所是，就跟神没有关系。所以我们在神面前，一切都跟神挂起来，神就能够借你帮助别人。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

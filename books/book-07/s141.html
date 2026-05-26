@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十一日</h1><p class="meta">主耶稣基督的见证 · 第141/365段</p><p><a class="btn" href="s140.html">上一篇</a><a class="btn" href="s142.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s141.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>信就是信入主里面的开始，以后，圣经说:“义人必因信而活”那个路还是因信－因着信这一条路而活。</p><p>没有了“信”，才去靠人靠自己，靠到今天还是软弱。己愈靠是愈软弱的。</p><p>你去碰一个“人”，不过活在“自己的原则”里，要转变过来，需要主的大光。光在里面有工作才行。</p><p>所以好多的工作，是神来作才有办法，我们一点把握都没有。有些人来交通，经过一次二次的谈话，就很叫人失望，因好像打不进去，究竟是什么原故，没法搞清楚。我们也对弟兄说:“你也要祷告，你不祷告，这次就空跑了。到了最后，一、二天，主作工，情形变好了。</p><p>那次，X地那边的弟兄来，交通过后，二个弟兄产生矛盾，老弟兄说:“我懊悔带你来。”当着面说这话，说过，脸就转过去，发脾气！已经来了几天，最后的一天，态度就是这样！这两位弟兄，我们都跟他们谈了话，我们就观察，神要怎么作工。</p><p>后来，我们再谈话，谈到那位老弟兄，脸也转过去，连听也不听。那时，我们就说份量多一点的话，也奇妙的，灵的分量也多一点的出去，他听了就再俯伏在主面前，流着眼泪回应。结果，他就跟刚才那年青弟兄和睦起来。</p><p>这若不是神的工作，我们怎么能吃得消这种情形？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

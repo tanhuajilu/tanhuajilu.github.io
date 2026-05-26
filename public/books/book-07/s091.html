@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月一日</h1><p class="meta">主耶稣基督的见证 · 第91/365段</p><p><a class="btn" href="s090.html">上一篇</a><a class="btn" href="s092.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s091.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>许多人误会我们什么都不作，他们来，就看看我们有没有作。神在作，他看不见。如果我们要像他们这样作，也一大堆人。一大堆又有什么用，他们不要听主的，是要听舒服的东西，不是跟从主的。不管那一方面也是互相效力，他作了那么多，其中真要寻求主的，也会走在主的路上，他们不会停留在那宗教的世界里。但能转的还是主的怜悯，不然就很难。因先入为主的东西很难改变！</p><p>最近初信的人有这样的话:“有的老信徒，很多先入为主的东西，要叫他转，转不回来。我们讲，给他听，他听不懂！我们所看的书很好，叫他看，他看不进去。”就是先入的东西占在里面。初信的人会讲这话。所以五千两的是要做生意，但要懂得做。有些人恩赐很大，但愈大愈容易漏掉，做到后来自己倒了。</p><p>《主工人的性格》就是为着工作本身，不是为着讲道给人听，做工的人该把自己做到建立性格这里面去。有的性格我们是没有办法都有，没有办法十个性格都有，但起码有一、二个性格，神就从这一点做起。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

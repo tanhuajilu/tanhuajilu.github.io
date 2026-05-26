@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十二日</h1><p class="meta">主耶稣基督的见证 · 第265/365段</p><p><a class="btn" href="s264.html">上一篇</a><a class="btn" href="s266.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s265.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有很多所谓的事奉，很多社会服务，很多外面的热闹，是主没有要求的。你是做到了，做了很多这些，等将来见主的时候，主说:“我不认识你。”你说:“我奉你的名传道，赶鬼，行许多异能。”主却说:“我从来不认识你！”</p><p>因你作这些事是按照你的意念去行的，不是按照主的旨意。“凡遵行神旨意的才能进去”。所以教会必须干净:圣洁、没有瑕疵、遵行神的旨意。</p><p>要作到“自己”满意，这个，要当心！我们事奉，要作到自己满意，就危险了。我们要做到、事奉到“主满意”，那就有福气，是不是？</p><p>我们做到主满意，荣耀就归给主；如果做到自己满意，魔鬼就在笑！我们常常是在荣耀魔鬼！</p><p>当我们常常自我欣赏，就是荣耀魔鬼。你若谦卑，你自己一无所有的时候，这个荣耀就是归给神了。</p><p>所以事奉，我们的灵要干净。倪弟兄说:在教会里，要破碎了才有用。在教会里，我们要圣洁，才蒙神的悦纳。所以我们事奉，不是出我们的名字。一点的酵也都不可加在里面。</p><p>利未记说:献祭要献平安祭，献上无酵饼。什么叫作无酵饼？</p><p>我们事奉是传基督，不是传自己。对这个要小心。圣经说，我们要做成自己得救的工夫。圣灵已经在教会里作工，你向圣灵怎么作？这个你不要去猜，圣灵所作的是我们猜不到的，想不到的。我们就要去相信顺服。相信祂会作，顺服圣灵所作的，顺服祂的带领。祂要使教会圣洁没有瑕疵。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

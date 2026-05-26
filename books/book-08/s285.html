@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百八十五段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百八十五段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s285.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>献祭原是撒母<br>耳的事。扫罗是君王，管君王的事，他竟去管祭司的事，越分了。他是凭自己去想的，凭自己去作的。有人恐怕要说:＂你不要我作，我现在不作了！＂态度摆出来，就像本地话说的:＂不作就不作！＂这，神也不需要你作。<br><br>神要你作，还是神抬举你呀！你古里古怪的，使你的脾气没有用呀！这是要对我们说:我们还是要作，但不是凭自己，不是用自己力量作，是要谦卑，倚靠神来作。倚靠神是要谦卑的，骄傲的人是不会倚靠神的。骄傲的人总是想:＂我什么都会做。＂谦卑的人才会觉得自己不行，自己最需要恩典。<br><br>所以，你热心爱主不是不对，追求长进也很好，受浸擘饼这些作了，不是不对，但是你里面那个属灵的东西有没有呢？这就是个问题。你传福音，做一些属灵的工不是不对，对！很好！但是有时却作到像保罗说的:＂我传福音给别人，自己反被弃绝了。＂）怎么会传福音给人，而自己被弃绝呢？因为你凭自己作，热心去作，别人得救了，你却灵性不长进！恐怕，你所救的人，已经进步很多，你还追不上！你想:＂我作了，这么多人得救了。＂你却就停在那边！并且你还用这个作本钱来骄傲！这样子，你哪里会进步？<br><br>如果你传福音救人，同时自己进步，你就不只进步，还会把所救的人带上来，这才好啊！不然所带的人，你不会带，你救了他们还要别人去带。可能，你带得救的人比你更清楚，还要你带他吗？</article><footer class='nav-links'><a href='s284.html'>← 上一篇</a> <a href='s286.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

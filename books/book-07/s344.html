@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十日</h1><p class="meta">主耶稣基督的见证 · 第344/365段</p><p><a class="btn" href="s343.html">上一篇</a><a class="btn" href="s345.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s344.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>交通:不要说其它的时候，其它地方，就是现在这个时候的交通，也不是他讲的这个话对不对，这个话有什么不完全，更是你听、你讲那个话，有怎样一个灵出来。</p><p>我们听一个人讲道，也不是说他道理讲得怎样？是看他讲话的灵对不对。这个大家都很熟悉了。他的话或许没有错，但是他那个灵错了！</p><p>保罗在讲道的时候，那个使女说:“啊，他是神的仆人呀！传永生之道，传神的道！”这个话完全是没有错。但保罗知道这个不是圣灵。他的话没有错，但是那个灵出来，那个灵错了。因此，我们都要使用灵，要能用灵去辨别。不会用灵辨别，神的工作不会作得起来；你不会用灵辨别，就只是公说公有理，婆说婆有理而已。他说了，但还要看他说得对不对！</p><p>你问，为什么摩西发了一个脾气，就犯了个死罪呢？你发了脾气，神也不会以为你犯了个死罪，神对你的要求不一样！都按照各人的情形。你说:为他祷告，还是不为他祷告？我说；“将来，到审判台前，考试的时候，这考卷是一样的。答案只有一个，但是学生七、八十个，每个人都以自己认为对的，才写下去。最后，还是老师评分，是五十分，还是三十分，对不对都不是你说了算，或我说了算的。</p><p>考卷发下来了，就按着你认为对的去写就行了。你认为很平安，认为没有错，就把自己认为对的写上去，但对不对，最后的分不是你给的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

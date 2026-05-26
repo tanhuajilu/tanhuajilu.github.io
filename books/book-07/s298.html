@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十五日</h1><p class="meta">主耶稣基督的见证 · 第298/365段</p><p><a class="btn" href="s297.html">上一篇</a><a class="btn" href="s299.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s298.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>主耶稣钉死在十字架上。我们可以传这个，来表明神，来表达神，但是，主耶稣在十字架上的苦，我们没有尝到，主耶稣那个客西马尼，那个孤单的祷告，我们不能体会。直到有一天，经过孤单，我们才体会主那个孤单的味道。十字架的苦难，你可以理解一点，对他身体的痛苦也可以体会一点，连他的魂受苦，你也可以体会。门徒离开主，否认主，在精神上是多受刺激，这个也给你学习，也给你同感于主耶稣的苦难。但不只如此，主耶稣的灵也受苦难，他在十字架上受苦说:“我的神、我的神，为什么离开我！”神的儿子从来不离开神，但为担当我们的罪，神离弃他，你看多深刻阿。</p><p>身体苦、魂苦、灵苦，我们属灵道路上，身体固然痛苦，精神也受好多的痛苦，灵呢？灵也是要受好多灵里面的痛苦，我们要经历神这些道路。十字架的道路不是用理论来讲的，十字架的道路是叫你本身去经过。所以盖恩夫人说:“我欢迎十字架，我爱十字架，我亲十字架。”因为十字架是神为我们所定规的路。</p><p>那么在过去，在中国，好多圣徒就真是为着主摆上，经过一些的难处，多少有了一些学习。没学习就漏掉，有学习就开始有属灵的丰富、有属灵的恩典。所以不是只看外面，还有人所看不见的里面，因为神在人身上的工作都是凭着主自己所作的来作。神在你身上所作的，在我身上所作的，都是根据祂跟我们中间的那个秘密！所以好多，像弟兄说的，许多人在外面拿受苦来作见证，我们可以说，我们虽然已经经过了一些事，却没有对弟兄姐妹作什么见证。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

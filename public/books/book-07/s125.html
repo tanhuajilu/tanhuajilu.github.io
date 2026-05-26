@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月五日</h1><p class="meta">主耶稣基督的见证 · 第125/365段</p><p><a class="btn" href="s124.html">上一篇</a><a class="btn" href="s126.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s125.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有一个时候，我们看见弟兄姊妹却不能说话，他看一看，头点一点，我们也看了看，头点一点，就这样借着这个眼神，彼此交通到里面去。</p><p>在那些时候，我们没有看见弟兄姊妹，一直想知道有什么人是信主的。有信主的，总是会哼诗歌；结束听到有一个在哼，就知道，啊！这是基督徒。那时候，呀！很宝贝。</p><p>有这一个出来（有过这一个经过），你看见弟兄姊妹就不会讨厌，会宝贝弟兄姊妹。如果见到弟兄姊妹在困难里，会很难过，会同情安慰他...情形就像有时要我们把小孩送到亲戚家里住几天，小孩从那边回来，特别有一个感觉，看见亲人或母亲，满有亲切感，赶快抱着。因为有温暖。</p><p>有时，在夫妻中间，在国内，在福中不知福。遇到弟兄到国外去，作妻子的常收到国外的电话说:“我来这里很苦，找不到交通。”就回想在国内当时交通是多甜蜜的。如果不是生命的，一离开，就什么都没有了，什么都冷下来，没有这一个东西。</p><p>从我们得救起，这些，大家都有经历。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

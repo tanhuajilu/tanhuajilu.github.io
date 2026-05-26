@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月五日</h1><p class="meta">主耶稣基督的见证 · 第64/365段</p><p><a class="btn" href="s063.html">上一篇</a><a class="btn" href="s065.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s064.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:神会负责一切，这情形，我用比喻说，就像小寄生蟹长大，把壳脱掉，再找大的。</p><p>答:这就是，生命有这个，外面就脱掉，里面又长又长。现在这个壳已经把自己绑得死死，再怎么长大？树也是这样，树皮的脱下，是根据它里面的长，长了就自然而然脱离。如果不是长出的，要把树皮刮掉，树就刮死了。所以工作不是外面的，是里面出来的。树叶会自己落掉，因生命在那边要顶出来（新叶要顶出来），所以旧的就脱掉。</p><p>如军队，新力军已经来了，旧的就要退伍。不然老兵怎么打？要有新力量！现在教会都停留在那边，照一套去作，作到你自己都觉得没有意思了。要有一种新力量，这种新力量就是要更新，常常更新，你个人对主要更新。</p><p>盖恩夫人的进步，就是她天天更新她的奉献，这奉献愈奉献愈彻底。是愈过愈彻底，你就愈进步。好像螺蛳里面一长，壳就一直长，不是你作一个大大壳子给它在里面。如果是这样，这就会变有一个组织没有内容的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

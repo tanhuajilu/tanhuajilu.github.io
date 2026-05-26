@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十三日</h1><p class="meta">主耶稣基督的见证 · 第113/365段</p><p><a class="btn" href="s112.html">上一篇</a><a class="btn" href="s114.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s113.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你感觉自己得胜不得胜，撒但不怕你，撒但是怕你所信的这位荣耀的主、荣耀的君王。所以不是你怎样，乃是基督的生命在你显出来。保罗在腓立比书说:不论是生或死，总叫基督在我身上照常显大。你是面对基督也反照基督。我们就像一面镜子面对主如同面对太阳，主就反照他的荣光。镜子本来是空的，它是反射阳光，我们每一位也是虚空的器皿，你向着主，仰望主，反照主的荣光。当镜子反照光时，你自己看不见镜子，你却看见光，看见光，你是受不了的。</p><p>小孩子顽皮常用镜子来照我们，有时照到我们的眼睛也模糊了。</p><p>所以，我们理想的得胜，跟圣经里的得胜不同。我们是说，一个部份一个部份能够得胜。现在基督已经在我们里面，你在那个程度就作那个程度的人。你要去做，要一条一条地去得胜－这不过是人的行为。</p><p>神却是把基督整个的给了我们。</p><p>林前1:30说，神又使基督成为我们的公义、圣洁、救赎，是基督成为我们的，不是我们这个人去作去修行，把得胜做出来，不是！</p><p>今天，人把基督教贬值了，以为基督教就是要去行好做好的，这不是圣经里头说的，因主来不是作教主，乃是作救主。他名称为耶稣，就是要把他的百姓从罪恶里救出来。你在罪中，自己无论怎样搞也是失败的，你要先脱离罪恶。主救我们脱离了罪，把我们从罪恶的世界救到他的国度里。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

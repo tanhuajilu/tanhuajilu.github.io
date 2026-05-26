@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二日</h1><p class="meta">主耶稣基督的见证 · 第306/365段</p><p><a class="btn" href="s305.html">上一篇</a><a class="btn" href="s307.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s306.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>那次一位弟兄来，讲到传福音。我说，讲到传福音，好多事给你学习。他问传福音是怎么样呢？我说，第一，传福音是生儿子，“我用福音生了你们”------是生儿子。生儿子要受生产的痛苦。不是就去传说作奋兴家，不是，要在神面前，付出祷告，出生产痛苦的代价------生儿子。一个人没有怀孕怎么去生？是里面有生命。保罗说；“我不传福音就有祸了。”因为里面的东西一定要出去。好像产妇------孩子在里面要生出来，你不生，他也要生，因他要出来。所以福音的工作是要有大能的，没有大能，传福音就没有力量，人不会给你救得来，福音是生儿子。</p><p>如果教会正常，人得救就彻底，福音传得更深。因个人的工作，个人会满意，但弟兄姐妹这么多人同心合意，就把高的福音带出来，把生命带出来。所以我交通，只一个二个不够，若多请几位弟兄同心，就不同，只你一个，你吃不消。...N弟兄说，作属灵工作是摔跤。你对罪人传福音是摔跤，对不信的人是摔跤，你要估算一下，你自己若软弱，没有内容，你自己先倒，一来就倒。所以要请弟兄姐妹同心合意在一起，来交通来供应。全教会摸到传福音，是一件大事。能力就藉着教会彰显，不是只藉个人彰显。传福音工作就是生儿子。</p><p>第二:传福音是播种。好多人盲目乱传福音，种子拿到大马路上去播，种子种下去都干掉了，失了。你哪里有收成。播种一定要挖深土，杂草、石头给它弄掉，种子才种下去。这就很实际。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

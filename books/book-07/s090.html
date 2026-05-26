@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月三十一日</h1><p class="meta">主耶稣基督的见证 · 第90/365段</p><p><a class="btn" href="s089.html">上一篇</a><a class="btn" href="s091.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s090.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>需要这么大，如果真的有东西，都会去寻找交通，不是说只有我们。我们也是想，有地方有交通，我们愿意去，国外有东西，我们也愿意去找交通。有些人像能有交通，但一碰到都没有。</p><p>香港人是很多，你要交通都没法交通，因为他们那一套只认为自己才对。年长弟兄说:“你作工、传福音不可单独行动。这是种属灵的摔跤，一个罪人摆在我们面前，我们单独去作，给他顶二句，我们都没有了。一个信息冷冰冰，你要给他转过来，不行。你的热气不够，怎叫他能热起来，因为生命的帮助是你里面的火点他的火，用你的灯去点他的灯。自己都糊里糊涂、黑暗，怎么去点他？愈讲愈糊涂。</p><p>传福音，是你有福音的灵，有那个恩典能把罪人转过来。不然讲三天五天也转不过来。</p><p>有一位弟兄说他传福音要三点钟，从有神讲起。三小时完了，他还没有把人转到神面前去。你如果有福音的大能，你碰到，他就得救。这一个要我们去学习，但我们还不够有福音的大能，因福音在乎福音的大能。</p><p>如果每个人都有福音的大能，他碰到罪人，罪人就得救。如果没有福音的大能，租一个会场多少钱，怎样准备，到时唱诗，作了很多，也没有人得救。要认识原则，认清工作所得的价值效果。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

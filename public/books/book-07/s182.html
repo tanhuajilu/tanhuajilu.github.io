@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月一日</h1><p class="meta">主耶稣基督的见证 · 第182/365段</p><p><a class="btn" href="s181.html">上一篇</a><a class="btn" href="s183.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s182.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>改教的时代，马丁路得为着因信称义，这是一个主流。稍后，英国的弟兄们（弟兄会）兴起又是一个主流；到倪弟兄的时代，在关于教会这方面也是个主流。聚会所这系统在当初（倪弟兄还在的日子），是有神的祝福，到了第二代，在全国受了很大的打击，但是个别方面还是有它的实质。我们知道，1956年聚会处受了很大的打击（其它的公会却不怎么样受到打击）。</p><p>今天，我们知道我们所信的是什么，所走的是怎么样的道路。你说:“我们要合一，不可分开。”就是这样作，也没有路走。因为这里有两个原则，一个是该隐的原则，一个是埃布尔的原则，这方面你认识了才不会模糊。原则就是生命各从其类的原则。</p><p>个人传福音还比较容易，要维持教会的见证，就不那么容易，因为很多传道人不会听你的。维持教会的见证，必须要有圣灵、有生命、有神的能力托住，因为有这个，神的权柄才能彰显，圣灵才能掌权，人会敬畏神而好好顺服神，叫神和人的关系没有拦阻。如果没有圣灵的工作，人这么多，意见多，争论多，大家就会出头而分宗分派了。</p><p>所以“己”就是我们最大的仇敌，正如马丁路得所说的:“外面天主教教皇还不可怕，可怕的倒是我们里面的教皇。”所谓里面的教皇就是我们的己，己是跟神相抵的。以道理来说，大家都有道理，实际上却是不通。外面的做法虽然不同，但你摸到属灵的实际，属神的就是属神的，不属神的就是不属神，正如主所说的:“该撒的物当归给该撒，神的物当归给神。”这些都不必争，都是自自然然的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

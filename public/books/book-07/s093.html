@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月三日</h1><p class="meta">主耶稣基督的见证 · 第93/365段</p><p><a class="btn" href="s092.html">上一篇</a><a class="btn" href="s094.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s093.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>《属灵人》讲主再来，是看你有没有上升被提的灵。有这灵，一讲主再来，你马上反应。你这灵下沉下沉，流到世界里去了，你怎么去提。你在遵守进天国的条件，做到这条，忘了那条，爬也爬不进来。是里面有上升的灵，轻松的灵，释放的灵！若你的灵沉重，挑一大堆担子会上升吗？只会掉下去！</p><p>被提上升，也是根据基督。泉州得胜聚会弟兄讲，我们有被提的生命，是主在里面我们才有被提生命。要保证被提，你一定要活在属灵正常的里面。所以，\<正常的基督徒生活\>所说的正常就是得胜。我们一向以为，得胜是做到多突出的，好像怎样都没做到！不是，是正常，能正常就不简单。</p><p>做人正常，属灵正常，就是基本的问题，还有生活正常。好多人在家里生活不正常，家好像不像家，这很实际。这个要学习。神的工作，是把我们转到正常、转到对。所说的对，并非你做好、行好，所说的对，是向神的态度对，对，神就施恩。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十五日</h1><p class="meta">主耶稣基督的见证 · 第319/365段</p><p><a class="btn" href="s318.html">上一篇</a><a class="btn" href="s320.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s319.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>（对某弟兄交通的回应）</p><p>交通:今天所说的绝对，不是这样子，今天所说的绝对是顺服圣灵的带领。在圣灵里面，完全顺服圣灵，这是活的，不是死的。每个人都可以绝对。如果要他们懂得达秘的，懂得倪柝声的，那初信的弟兄姐妹就好像不能绝对了。他（初信的）也是要绝对，他要按照圣灵给他的带领，他要有顺服圣灵的态度，这一个叫他绝对。</p><p>我们所说的不绝对，是他看到了错误的地方，是圣灵感动他看到的，但他不顺服圣灵。说“不绝对，”是这样的定罪，并不是他不认识倪柝声的，或他不研究达秘的，并不是这样。“绝对”，不是这样子的用法，不是这样子的说法。</p><p>答:我们是说，好像你讲，他讲，很容易都讲到外面的情形里去。所以，我们要有感觉。你有感觉了，你对这东西还要定罪！不只你要定罪，还要离弃！不然，你对这东西就会模糊，信徒也模糊。</p><p>讲到绝对，因神是绝对的，我们这边也要绝对。我们的绝对，好像你讲的，是相对的。你认识多少，就相对的有多少。如果连起码的绝对，你都没有办法绝对，其它的道路，就更没有办法去走。</p><p>所以，像你这样，你在那里面已经受不了，你以前进去了，现在又出来，这就为给你经历。你已经受不了，你受不了就是说问题已经存在了。这都不需要你去祷告说要怎么样，情形已经清清楚楚地摆在你面前了，但你还在留恋，还是舍不得，这样子，你就是在那里打圈子了。</p><p>我们所说的绝对，不是“我绝对是对的”那个绝对。所说的绝对，我们是说，对一个东西对还是不对，我们自己要明朗。我们态度是明朗的，才表示我们里面的灵是正直的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

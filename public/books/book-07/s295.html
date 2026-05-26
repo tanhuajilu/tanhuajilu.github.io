@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十二日</h1><p class="meta">主耶稣基督的见证 · 第295/365段</p><p><a class="btn" href="s294.html">上一篇</a><a class="btn" href="s296.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s295.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>刚才，你讲了这么多的情形，大家听了，就有总结的一个反应------“这样，怎么行呢？”在我们自己，清楚了这些以后，就是要定罪！凡是出于肉体，出于血气，出于人的，不是出于神的，就要定罪！</p><p>因为没有定罪，我们的道路没有绝对！或许你们那边跟这里不一样！我们有很多事情，五十年代就已经定罪了，到今天，我们还不改变这个态度。如果我们改变这个态度，今天我们的工作，可以作得很大。因为他们喜欢我们出来讲道作工。</p><p>为什么我们不作？是神叫我们作工，我们就作，别人叫我们作，不作！因为世界的东西就是这样，他要利用你。而你也想利用这个世界，但是，你还没有利用它，他已经利用你了，你属灵的东西已经漏光漏完了。</p><p>神是忌邪的神，神是轻慢不得的，你种什么就收什么！</p><p>凭着圣灵就收永生，凭着肉体的就是死。我们讲到这些，是有神那个气愤的，因为在过去，撒但用各种手段进行摧残和消灭，神的名受了亏损。特别是一些背叛者，他们要讨世界的欢喜；这样的人，他的灵非常的残酷，他巴不得“你就死”，他们是这样的。</p><p>你若碰过这些，你的灵就不活，你的灵不能去碰到主。因为受压，压到像圣经所说的，“力不能胜，甚至连活命的指望也没有了。”到这个地步，就叫我们去倚靠那位叫死人复活的神。神就给你碰到。</p><p>所以属灵的东西不是给你道理、理论去讲，不是很轻松的，属灵的东西是叫你经过这些道路，经过死荫的幽谷，也不怕遭害。神把你带过来。你经过枯干，也经过了苏醒，反正经过各种的道路，有困难的一面，叫你经历一些痛苦，也有恩典的一面，叫你里面更碰到神，更认识神。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十七日</h1><p class="meta">主耶稣基督的见证 · 第270/365段</p><p><a class="btn" href="s269.html">上一篇</a><a class="btn" href="s271.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s270.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>从起初（二十年代）到五十年代，这系统也已经经过一些变化，五十年代至今天，这个变化就更多。那些变化包括了变好的，也变坏的。它有进步，也是变化，是退步也是有起变化。有的变化更好，有的变化更坏。倪弟兄在这个教会真理方面，从起初讲的那本《聚会的生活》跟以后的《工作的再思》，以后再讲的耶路撒冷工作的路线，都在原来的亮光上，一直愈讲愈深入，愈讲愈清楚。</p><p>一般人说:“似乎矛盾。《聚会的生活》讲到没有使徒，没有长老，到《工作的再思》就有长老，有使徒。”这一个就是在圣经的真理上，愈看愈清楚，愈讲愈清楚，也不是说矛盾。这也是说，在他那一个基础上，一直发现得更清楚。在N弟兄，不管在他个人，或在教会真理各方面，实在是神赐给中国的一个很少有的作工的人。他的话在今天还在说话，人虽然死了，还照旧说话。因为他的话有膏油，所以连看书本，人也会受感动，得着膏油。如果不是膏油，只有道理，你今天去看，就没有味道。好多有属灵感觉的人，去看他的书，是愈看愈有感觉，愈看，里面会看进去，碰到它里面所讲的东西。</p><p>看他的书，与听过他讲话的也有不同。看他的书，只是在文字上拿来看，你听他讲，就不一样了。我们面对面的交通跟听录音就不一样啦！因录音机，就只一个声音，面对面谈话，不只讲话有声音，里面还有灵的交流，有感情的交流，有思想的交流，有灵的东西的交流。</p><p>他这样的话，书本上记很多，去看，好象差不多，如果面对面听他讲属灵的东西，听的人，在那里都站不住的。“只不过平平常常开一个特会啊。好呀好呀！”不！《人的破碎与灵的出来》这本书，讲了十多天，我们听的时候约一百人左右，他的话讲出来，没有一个人站得住，都是俯伏在神面前的。就不是听道理说道理好道理坏的，乃是整个人俯伏在神面前，在那个属灵的尊严气氛中，一个人要骄傲也没有办法骄傲，都给神打下来的。这个就是属灵的内容。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

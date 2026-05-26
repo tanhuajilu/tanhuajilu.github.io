@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-一月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月三十一日</h1><p class="meta">主耶稣基督的见证 · 第31/365段</p><p><a class="btn" href="s030.html">上一篇</a><a class="btn" href="s032.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s031.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>大概97年以前，有香港的弟兄来，他说:“糟糕。”我说怎样呢？他说:“一些大传道、大牧师都跑了，都离开香港，到国外去了，教会怎么办？”我说:“跑了更好，跑了，你们更会去寻求神、追求神。我们不是有牧师、传道才能活，我们每一个人都会活，因我们是信神跟从神的。我们跟从主，不是跟从某一个人。没有讲道也不要紧，没有道理听也不要紧，因为教会不是建立在讲台上，是建立在基督的盘石上。</p><p>看乡下弟兄姐妹，没有人带领，他们自己追求，你看了都受感动。他们感觉很敏锐，对一些事该作不该作，看得很清楚！谁教出来的？是圣灵、生命在他里面带领的。</p><p>这些话在乡下讲比较容易，在大都市讲就讲不通，会说:“你们讲道像什么？”他们一定要有一个出名的人来讲才好！好也是暂时的，以后你不满意，还要请一个更好的。请人，请了人，也赶不出去。</p><p>英国有一个聚会，只几十个人聚会，没有请人讲道，交通了自己来作，大家觉得很宝贝。后来想，还是请一个人来作，代替我们来讲道、事奉，就到台湾几千美钞请一个人。几个月过去很受不了，一方面这么多的工资，信徒没有钱供养，一方面讲道听道也不如我们大家交通、祷告那么实际、甘甜。要赶也赶不走，就挑重担。我说:“是了，这就是人的思想观念，一定要会讲道的作工。”我说，你们还是跟从神最好。有时，是神的工作，你不要赶快去代替神。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

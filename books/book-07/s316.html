@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十二日</h1><p class="meta">主耶稣基督的见证 · 第316/365段</p><p><a class="btn" href="s315.html">上一篇</a><a class="btn" href="s317.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s316.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>基督是头，教会是身体！但这是不是能改变阿！</p><p>讲同工，不是同工来管理教会，是要让基督来掌权。对他们的情形，我看，不要叫他们全摆出给基督，他们二十几个同工，每个人手上都有一点权利，谁都不放掉，那么，基督有什么主权呢？是不是？你态度若不绝对，你迁就下去，那么，神就不负责了；要不然，你要让基督掌权，宁愿死也要死在主手中，神就负责！</p><p>在巴比伦，亚伯尼歌等三个以色列人，人家要他们拜像，他们就是不拜。神救他们不救他们呢？他们想:不救就不救，死就死在神手中。你也是，你要死在神手中，神就负责。</p><p>你是神的仆人，没有亮光之时，要仰赖神。以赛亚书说:“你们当中，谁要仰赖自己的神阿？如果你要点灯照路，这个也可以，但我没有命令你这样作，你去作，必定倒在悲惨之中。”</p><p>你要点灯也可以，也不是不可以，但是你要倒在悲惨之中！现在，很多人态度不绝对！教会没有路，教会实在没有路。</p><p>应当定罪的，很多人是明明知道了，他会讲，讲了以后就说:“哎呀！哎呀...”就迁就过去，所以就没有路。他自己没有路，教会也没有路！</p><p>现在呢！神就要兴起一些人，不管多少，就有一些人，能够同心合意，像盖恩夫人说的，那怕只有二三个人，只要同心合意，站在神的一边，世界的历史（属灵的）就要改变。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

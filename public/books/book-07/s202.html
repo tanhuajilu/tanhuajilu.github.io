@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十一日</h1><p class="meta">主耶稣基督的见证 · 第202/365段</p><p><a class="btn" href="s201.html">上一篇</a><a class="btn" href="s203.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s202.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:我感到和他们不通，他却说需要我们留下，他们说，还需要我们生命供应这一份。</p><p>答:配搭若不同心，怎会同工作行呢？不通就是因没有办法同心，这很现实。两个人不通，要一起聚会是很难的。跟相通的人在一起，越交通就越通，和里面不会通的就没有办法。</p><p>（应:他们口里还说，需要我们那一份。）我们是问，主需要呢，还是人需要？要说到主这边来。要提到主这边才是事奉主，才是作主的工。</p><p>对于我们，要是主带领和主托付的才行。你在他们中间听他们说:“要听教会，听身体的。”你不要单听这些话，还要看讲话的人里面亮不亮，清楚不清楚。他不清楚，就喜欢对人乱说话，要你听他这样、那样，叫我们变成受人利用去作事了。</p><p>所以，不要从理由、理智去看问题，要从里面的感觉看神怎样带领。若你在他们中间产生作用，就会把很多人带到属灵的实际里，叫他们属灵的感觉更加敏锐。多一些人有强的感觉跟从主，带出来的影响更多，他们会怕。像你这样，若里面刚强，要跟里面走，他们对你就没有办法。因为你能不受外面的约束，不受外面的框框条条绑住。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

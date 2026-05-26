@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百十二段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百十二段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s112.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>有劝人的说:"你现在年青，先得学位，为主作工，就有人要听你的。"这样去帮助人，就是叫他走该隐的道路。圣经称这样的道路的事奉，叫作私意事奉──私意崇拜)，就是凭自己的意思去事奉神，因为不是用神的原则──凭基督事奉。基督在我们里面，我们是凭着基督事奉神。保罗说:"我是凭着基督讲话。";<strong>帖前<br>4:2</strong>）你凭基督讲话，这基督就进到人里面。如果你凭自己讲，人就会说:＂好呀！这人的学问高，道理讲得好。＂但你无法把生命带给人。<br><br>有一位年青弟兄的叔叔去布道会，回来说:＂讲的福音很好，我从没看到一个人这样讲道的，人数也满满的，上千以上。＂年青弟兄说:＂你说好，我觉得不好。＂叔叔说:＂不如，你跟我去一回。＂年青弟兄说:＂不用去，我觉得不好。如果好，你得救了。＂<br><br>好多人赴特会也说好，我看他的情形，不太好，因他回来连一点味道都没有。像你从菜馆出来，身上带着香喷喷的味道；你到化妆品店出来也带点香味，如果到洋油店，也有洋油气味的。属灵也一样，属灵是千真万确的，你有属灵的东西，就有属灵的味道，你没有东西，出来也没有这味道。这是很自然的:你到一个场合，还会带出那种场合的味道啊。我们不抽烟，到有人抽烟的场合回来，家人也闻到香烟的气味，因我把烟味带回来。<br><br>神属灵的东西跟世界的东西完全是两回事。我们信徒，排在神这一边就觉得舒服，若排在世界那边，就觉得很痛苦。</article><footer class='nav-links'><a href='s111.html'>← 上一篇</a> <a href='s113.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

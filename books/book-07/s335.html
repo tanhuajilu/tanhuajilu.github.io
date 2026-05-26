@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月一日</h1><p class="meta">主耶稣基督的见证 · 第335/365段</p><p><a class="btn" href="s334.html">上一篇</a><a class="btn" href="s336.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s335.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们道理可以讲:“不要骄傲。”道理说了“不要骄傲”，我们本身还是骄傲。我们道理上也可以讲谦卑，但实在不能谦卑，如果能谦卑，也是装作的，不是真的。所以，道理是一件事，里面的东西又是一件事。里面的东西就是对付的问题，就是灵经过了对付，才能有用。</p><p>所以在《话语的职事》里，倪弟兄说，话语职事就像厨房里煮东西，一碗一碗端出来。话语有内容，就叫人得饱足，如果没有内容，你这话语职事就是空的，没有东西的。今天教会贫穷，就是话语职事不够，供应不够。话语的供应不够，信徒里面就是瘪瘪塌塌的。这一个东西从五十年代开始至现在，我们学习了五十年了，愈学习愈觉得实在。我们如果停留，今天就不够了，没有了。</p><p>就是因为找到属灵的路，我们虽然到了另一种环境，虽然有压迫、有紧张、有劳动，哎呀，就真的更要靠主，更去靠近主。人家问我说:“你有没有圣经念？”又说:“一个基督徒，十多年没有圣经念，怎么样做基督徒。”我说，虽然我们外面的圣经没有，但我里面有一本圣经，就是神的话刻在我的心版上，圣灵在我里面教导我，“你”不管作什么，都活在主的面前，连睡觉也是睡在主的面前，时时刻刻活在神的面前。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

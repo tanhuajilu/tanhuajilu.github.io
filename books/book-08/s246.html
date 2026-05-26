@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百四十六段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百四十六段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s246.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>很多在外地打工的人，他们的老家打电话叫他们不要打工，说:"主耶稣七月份要再来，你回来等候主再来。"家人已经把牛，把拖拉机卖掉，等候主来。但为着主再来，我们还要有一天，就作一天的工<strong>帖后3:10</strong>-12）。因主再来，我们自己该作的，还要去作得更好。<br><br>你要回去了，回去怎样？你里面感觉怎样？回去，不是叫别人怎么作，如果这样，我们就越过圣灵在人身上的带领。<br><br>祷告:主，我们感谢你，我们这些人都是蒙你所爱的，蒙你宝血所赎的，都是神家里的人。因你爱我们，给我们能在一起有交通，谢谢你的恩典。主，但愿借着交通，你带领我们真认识你，也认识自己。愿天向我们打开，愿你向我们显现。主阿，但愿我们都有一个对的情形，有一个蒙怜悯的情形，愿水流运行在我们中间，也求主带领我们以下继续有的交通。我们也把出口的弟兄交在你手中，你加添他身体、精神和灵里的力量。求主叫我们在此不论听的、讲的都一同在你面前蒙恩典。主我们感谢赞美你，因着你丰富的同在，我们献上感谢、赞美和敬拜。感谢主，赞美主，荣耀归给主。祷告奉靠主的名。(229-242选自2000年2月10日上午交通)</article><footer class='nav-links'><a href='s245.html'>← 上一篇</a> <a href='s247.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

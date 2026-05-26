@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十四日</h1><p class="meta">主耶稣基督的见证 · 第175/365段</p><p><a class="btn" href="s174.html">上一篇</a><a class="btn" href="s176.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s175.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:与基督在死的形状上联合，实际的经历是怎样？</p><p>答:我们得以在基督里，都是神的工作。工作也可翻作杰作。在客观方面，神的工作在基督里已经完成，所以主耶稣在十字架上说:“成了。”（就是成了神所有救赎的工作。）这是神所已经作的。圣灵来就要把神在基督里所作的，作成在我们身上，这面是神主观的工作，要叫我们跟主有接触，有关系。只有客观的道理，不能叫我们摸到神自己，因为基督的工作在两千年前已经成就，我们要看也看不到，但是，借着圣灵，却把基督成就的再成就在我们身上。</p><p>基督已经死了，我们借着受浸也已经与祂的死联合。罗马书说:“我们既在祂死的形状上与祂联合，也要在祂复活的形状上与祂联合。”这些都是客观方面神所作的。受浸就表明我们与基督联合，和祂同死同埋葬同复活了。但是，在我们主观的经历中，却不是一次过的，乃要天天经过。这个“经过”，并不是我们自己可以怎样挑选去经过，都是接受神安排才成的。神安排我们各有各的环境，各有不同处境，我们就学习在现在所遭遇的事上，接受神的工作，让神借着环境和难处来对付我们，叫我们死，让我们去经历神。</p><p>这是神的工作，因为这些神的安排，我们逃避也逃避不来。实在没有办法，一定要尊重现实，不能脱离现实，我们只能在现实里去经历神，接受祂的对付。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

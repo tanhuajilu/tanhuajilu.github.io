@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十七日</h1><p class="meta">主耶稣基督的见证 · 第107/365段</p><p><a class="btn" href="s106.html">上一篇</a><a class="btn" href="s108.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s107.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>讲主的再来，就要我们等候。</p><p>从保罗起，讲主的再来，至今已经二千年了，主还没有来！这叫信徒忍耐不了，但还要等候。历世历代教会都在等候主的再来，等候到实在难耐，难挨过去。但是到了时候，主就来，那是想不到的时候！等主来，不是像今天许多人所说主于某时某刻会来的那一种。九十年代说主再来，现在九九年了，主还没有来，这样子的推测都是多余的。这一个对信徒不但没有帮助，反而打扰信徒，迷糊信徒的心。</p><p>我们虽然不知道主何时再来，就是爱主等候他来。如果你爱主，就有等候，你没有爱，听到主来才会很焦急的，就是说爱心叫人忍耐等候。</p><p>小孩子生出来，要把他养大，需要几年的时间，都因爱心所成的。因你生了他，不养不成，这就是爱心。过程中虽然受了许多的苦，也还忍耐还养他。我们等候主也是神所需的东西，圣经说:那等候耶和华的必重新得力。他奔跑并不疲倦。得救在乎归回安息，得力在乎平静安稳。你要安静，有等候，必定有属灵的能力！不能等候的，就没有能力。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

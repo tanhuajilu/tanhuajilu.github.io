@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月九日</h1><p class="meta">主耶稣基督的见证 · 第190/365段</p><p><a class="btn" href="s189.html">上一篇</a><a class="btn" href="s191.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s190.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有些人带着负担讲话，话讲出来，人会看见在他身上有创伤，有十字架的伤痕。所以经过十字架的工作，每个人开始有学习，感觉就有变化。</p><p>没有经过创伤以前，我们认为很多基督徒都很好，他讲话细语温柔，我们巴不得像他。但是今天的感觉不一样了，因为觉得他这些都是人的东西，不是出于神的。人的东西是好，却没有力量，不会在他身上产生功用。那有出于神东西的就不一样，或许你不佩服他，但是他有一个东西是从神那里出来的，叫你不能不服在神面前。你不是服在人面前，你是服在神面前。</p><p>所以属灵的东西是超越过人的。人是受造的，神是非受造，超越过受造的。在我们身上，我们这个人是父母所生，是受造的，是天然的，有的是属魂的生命；但是我们信主重生所得的是神的生命，是超越的，有的是神创造的生命，是基督荣耀复活的生命。这两个相比差太远了。现在，很多基督徒把这两方面混在一起，搞得糊里胡涂，不伦不类，因此我们需要神十字架的工作，为要把我们掺杂的东西和纯正的东西分开，若是搞在一起，就是不通的。</p><p>有些人研究原文，所讲的都是原文，道理讲偏了还讲原文。若研究原文就属灵，犹太人、希腊人最懂原文，他们个个都属灵了。不！认识一点原文，是为辅助用的，不能以这个为主！世界上有很多希腊文权威，但是在他们身上，人碰不到属灵的东西。有两位弟兄就因讲原文，结果闹意见分开了，这样研究原文就是帮助他们各走各路。很多东西都会产生破坏，只有生命才把死亡吞灭。要手术割除的是那些死细胞，割除了死的就消除，用布包裹以后，过几天就恢复了，因为身体是有生命、能医伤的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

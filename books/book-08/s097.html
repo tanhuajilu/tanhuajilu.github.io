@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第九十七段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第九十七段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s097.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>今天，我们在这里顺服神的权柄，这一个就叫撒但受羞辱(<strong><strong>林前</strong><strong>11:10</strong></strong>）。<br><br>人背叛神，是从里面到外面背叛神的，就是说，人的里面到外面都背叛神了。我们信主得救了，才开始让神一步一步的有工作-32），把我们这个人征服，我们这个人的思想、情感、意志就慢慢顺服神。;<br>16:19;<br><strong>腓2:12</strong>）<br><br>顺服神，先是在思想上。我们的心思、意念顺服神，再次在情感上被神征服，叫我们的感觉、感情带回归向神。在意志方面，人的意志本来就是人的自我，要走自己的道路，求自己的喜欢，这意志也要被神征服，使我们投降在神面前。<br><br>人最难被征服的是他的意志。很多人性情固执、顽固、顶撞神。他们的思想虽然容易顺服理由，可以有一点向神顺服，可是意志却仍然刚硬，和他的思想相违背。他们的思想或许要爱主，意志却不要爱主，他在感情上或许被感动要相信主，意志却不肯相信。<br><br>所以整个人最要紧的是他的意志，意志被得着了，人也被得着，因意志是人定规道路的一个器官。</article><footer class='nav-links'><a href='s096.html'>← 上一篇</a> <a href='s098.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

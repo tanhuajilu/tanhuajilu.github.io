@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月三十日</h1><p class="meta">主耶稣基督的见证 · 第211/365段</p><p><a class="btn" href="s210.html">上一篇</a><a class="btn" href="s212.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s211.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>主耶稣说，人家唱歌，你不跳舞，人家吹笛，你不哀哭，就是指彼此没有反应。如果是属灵的东西，大家走属灵的道路，彼此都有响应，里面都会通，会响应。属灵的东西就是这一个，叫人彼此吸引，能把人抓住。</p><p>不然，思想的东西给你，你抓也抓不住，人的心灵若是被主得着了，你就会得着别人。我们跟从主，就会得人，你不跟从，里头也没有什么吸引人的。主耶稣告诉彼得说:“你来跟从我，我要叫你得人如得鱼一样。”会得“鱼”是因为跟从主，不跟从主，这边有“鱼”也会漏掉。你要做这个工作，就给工作压死掉。怎能有办法去作？乃是你跟主挂起来，才能做出要作的那一点点！</p><p>教会是基督的身体，就是说你跟保罗，跟彼得都可以有交通。怎样交通？圣经也有圣经的灵，彼得、约翰写圣经，有那个灵，摸到了，就有那个灵的感觉，没有摸到，自然没法有感觉。</p><p>当我们讲身体，你就有身体的感觉，讲到神的爱，里面就有爱的感觉，去传福音时，讲到罪，我们自己要有罪的感觉。能把罪的感觉讲出去，就叫人在感觉上感觉到罪，因为圣灵乃是要叫人为罪为义为审判，自己责备自己。圣灵的工作，要叫人有罪的感觉。如果我们讲到罪却没有罪的感觉，就要问:我里面怎样没有？讲到罪，我们的灵要让圣灵叫我们有那个为罪忧伤痛悔的感觉。罪的感觉讲出去，才会感动罪人的心。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

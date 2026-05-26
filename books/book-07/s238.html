@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十六日</h1><p class="meta">主耶稣基督的见证 · 第238/365段</p><p><a class="btn" href="s237.html">上一篇</a><a class="btn" href="s239.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s238.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>谈到神的旨意，第二点要认识神的话。话表明心意，人的话表明他的意思，神的话也表明神的心意，但是否全领会，也根据人里面生命的长进，像小孩常不理解大人的意思，成人就对他的意思比较能懂。神的话表明神的心意，你读神的话，就能领受所表明的意思。所以圣经的话，你看得懂的都要相信、接受，且在生活中行出来，或说要跟你连在一起。</p><p>所以要多读经，因为圣经所记的，不管历史，教训都要显明基督。亚伯拉罕的故事，并非故事而已，这是神的话。故此，作话语职事的，就要能从各种所记的事里，看出神的话来。亚伯拉罕因信从吾珥出来，以后进入迦南，这不是为讲故事，是神对我们显出祂的心意。在我们，有神感动带领，我们也会凭信心走上去，是主负责带领我们，不是去学亚伯拉罕。以后，艾萨克的事、雅各布的事...每一个故事都是神的话。因为神是亚伯拉罕、艾萨克、雅各布的神，这些都是神的话，不只是故事，是神在那里讲话给我们，叫我们懂得神的心意。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

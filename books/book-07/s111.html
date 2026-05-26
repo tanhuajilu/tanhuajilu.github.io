@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十一日</h1><p class="meta">主耶稣基督的见证 · 第111/365段</p><p><a class="btn" href="s110.html">上一篇</a><a class="btn" href="s112.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s111.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>这属灵的东西是很奇妙的。农民种花生，种稻子，每年都有新的出产，因此，都很新鲜。所以去年的花生和今年的花生摆出来，吃的时候就感到有不同。去年的没有今年的香，没有今年的好。新的就是新的。所以我们在神面前都不得不一直要有生产，有新的东西。没有的话就是老旧的，老旧的东西拿出来，就跟那些新鲜的不一样。</p><p>祷告:主耶稣，我们感谢你，你带领我们下午的交通。愿主带我们在你的光中更深的认识你，也更深的认识自己。主阿，让我们的心思更向着你，时刻尊主为主，让主作主，在我们的生活中，叫我们的腰是束紧的，话语是受约束的，里面的灯是点着的，器皿里的油也是预备好的。主，你来的日子近了，总要听我们像那聪明的童女，不只点上灯，也预备好油。当你来时，我们可以和你在一起，进入你的快乐。主，你怜悯我们，你祝福弟兄姊妹，凡到你这里，寻求你面的，都被你所遇见。我们再仰望你的祝福。祷告奉主耶稣基督的名。</p><p>选自见面记录二（6）1999年12月26日午</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

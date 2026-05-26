@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第五十九段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第五十九段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s059.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>所说的实际，并不是具体有什么实际的东西；这实际就是基督本身。基督在你身上是浓厚的，那个味道就是浓的，如果是淡薄的，味道自然也是淡薄的。你认识了真理，不过给你认识真理的原则，为要去受真理的规格，受真理的约束，叫你更巩固；所以，我们一面会在生命上更有长进，一面对神的话会提高认识。<br><br>好多人是在对主的实际上赶不上去，也有些人是有实际了，却认识不够，所以才需要有交通，给各人都有调整。我们好多的农民弟兄，道理不会讲，普通话也不会听，他们却是一直的＂要＂，一直要，要到结果主给他们得着了。;<br><strong>弗4:23</strong>;<br><strong>雅4:8</strong>;<br><strong>彼前3:15</strong>;<br><strong>约一2:15</strong>）他虽然不怎么领会真理，但他里面有的那个东西出来，就跟别人一样，能交通，彼此生命有交流。虽然他表达不出来，里面的东西和我们却是有交流的！<br><br>事实上，我们今天，讲出的许多属灵的东西，也没有办法能很清楚的把里面的东西讲得完全，实在是:属灵的事情很是奥秘！话语去讲也讲不清楚──里面知道清楚，外面讲不出来。所以，还要学习！学习到能够用适合的话把东西讲出来，用适当的话把神的道表达清楚。所以，话语职事不只要灵里认识主、灵里清楚，也须要讲话清楚，把神的话表达清楚。如果表达不清楚，就是说，我们还要再学习。</article><footer class='nav-links'><a href='s058.html'>← 上一篇</a> <a href='s060.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

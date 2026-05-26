@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十八日</h1><p class="meta">主耶稣基督的见证 · 第362/365段</p><p><a class="btn" href="s361.html">上一篇</a><a class="btn" href="s363.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s362.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>他说:“你的好多交通，我从来都没有听过。”我说:“这些属灵的东西，你们外面就有了，慕安得烈的书、宣信的书、宾路易师母的书、盖恩夫人的书，有好多属灵的书，你要注意去看，你从这些要得到帮助。我们是从这些得到帮助的，不只看，还要经历。没有经历就只有外面LOGOS（劳高斯），你有了经历，就有RHAME（雷码），因为你有经历，就对上这些东西了。”</p><p>好像学医的，他要去实验。这里有一块骨头，那里有一块骨头，这块骨是什么骨？每块骨都有名字的，不能含糊，他都要知道，要认识人的生理，认识这个骨头怎么要紧？这就是实际，实际的东西有那么多。对属灵的东西也是这样，如果外行，你就不知道，就摸不着了。</p><p>所以，神要给我们破碎，神借着他的道来分开我们，但是我们这么硬的人怎么办？神就藉着外面的东西来击打。但有的人有击打没有伤，好像小孩子顽皮，打不痛，还要打。神有他的目的，就是要一面击打，一面建造。神同时击打，同时建造。</p><p>神击打你这个骄傲的人，有一次击打，叫你的骄傲受伤了，不只一次，骄傲必须要一生来对付，因骄傲是一辈子要对付的东西。这是相对的东西。另一方面人心也很诡诈，但是神知道人的肺腑心肠，他认识你，他也对付你。如果在你身上有那一个是突出的东西，神就来击打。他是藉着环境来击打，一面击打，一面建造。所以，弟兄姐妹有半年来一次的，有几个月来一次的，一见面大家都有感觉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

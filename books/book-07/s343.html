@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月九日</h1><p class="meta">主耶稣基督的见证 · 第343/365段</p><p><a class="btn" href="s342.html">上一篇</a><a class="btn" href="s344.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s343.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们不要怕说，年青人比我们更好，更好就好，更好就证明这里有祝福，教会有长进。如果是把我们大家都弄下去，我们一死就完了，没有用。</p><p>所以讲到这个“独一职事”，这个是很可怕的事，很可怕的！这一个一推，就不知道把别人放在那里去了。所以我们还不是讲他说了什么道理，很多都是原则性的问题。他讲到，灵要出来，要去喊，“哦，主耶稣”，灵就出来了，哪里有这个原则？这样都不要去讲，你去喊几声就出来了，这是释放魂的潜势力。像跳神的，就念咒念到跳起来的。基督教也有这样念念的吗？这个原则是什么原则？说是圣灵充满，其实是邪灵来了，因为他在那里站被动的地位。</p><p>圣经事实是，有十字架才有五旬节，这是历史。没有十字架，就没有死、复活、升天，就没有五旬节。要经过各各他才有橄榄山，他那个道路违背了这个原则，他没有了十字架。没有十字架，你从那里去走？没有路走。所以我们不是反对他这人，是说他讲这些不对。而现在，你如果连这些不对的都不敢讲，你站在什么立场？对，你可以讲对；不对，你也不可以讲不对。这就是说“对真理的态度”，我们要绝对。绝对并不是说很好了，绝对乃是真理有它的绝对性，我们要表态说:这是真理或说这不是真理。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

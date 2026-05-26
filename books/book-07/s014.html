@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-一月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十四日</h1><p class="meta">主耶稣基督的见证 · 第14/365段</p><p><a class="btn" href="s013.html">上一篇</a><a class="btn" href="s015.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s014.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>主耶稣降生在伯利恒，是很微小，只一点，看也看不清，但是能够吸引博士去朝拜，因为他是神的儿子。以后他还要经过苦难，经过死而复活，才把生命种子种到我们里面。我们要把这工作做出去，人在神面前就要走这一条的道路。这跟人去读神学读三年二年完全两样。</p><p>以前，是看你讲就是，现在是会讲，还要看你里面能否带出属灵的东西？有没有内容？所说的那些奋兴家，那些讲道书，今日再拿来看，我们就感到不能满足。</p><p>只要你尝过属灵的味道，遇到过属灵的东西，你再去看，就感到完全不一样，里面会有一个感觉。</p><p>我们不是在这里说那本书怎样，只是提醒一下。我们已经在神面前摸到属灵真实的东西，就不是在外面去讲这个怎样、那个怎样！有时，这样的讲反而是愈讲愈模糊呢！</p><p>讲属灵的东西，没有时代性，没有地方性。这个（属灵的）东西出去，在什么地方在什么时候，碰到什么人，神若作工，每个人都要这个。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

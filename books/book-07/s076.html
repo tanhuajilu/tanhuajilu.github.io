@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十七日</h1><p class="meta">主耶稣基督的见证 · 第76/365段</p><p><a class="btn" href="s075.html">上一篇</a><a class="btn" href="s077.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s076.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>智慧就是基督，基督给你有智慧。撒都该人问主耶稣:，“纳税给该撒可以不可以？”如果没有智慧，没有见识，你怎么回答？主说:“你拿钱币来，是谁的号？”他们说:“是该撒的号。”主说:“该撒的物当归给该撒，神的物当归给神。”这就是智慧，基督就是智慧。</p><p>许多初信的人，碰到事情本来不知道该怎么应付，到那时候，神就给他智慧，讲得好好的。这就是圣经所说的:你到审判官面前，不要先顾虑讲什么，到时，神会给你应该讲的话。这就要信心了，不然你给他审问，不是审问你一句二句，他今天问，明天问，问一大堆。你要准备，也准备不及，就是要主给他学习有智慧。</p><p>像我们交通，问出来的问题这么多，我从来没有听过的，我怎么去应付？就是神给我们有智慧。我们本来没有那个光，一问我们就有光，本来不知道的，一问，就知道。有时，不一下答复他的问题，就接到主里来，什么问题都拉到基督这边来。一拉到基督面前，神作工了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

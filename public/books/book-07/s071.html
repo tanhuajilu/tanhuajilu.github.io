@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十二日</h1><p class="meta">主耶稣基督的见证 · 第71/365段</p><p><a class="btn" href="s070.html">上一篇</a><a class="btn" href="s072.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s071.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:我提这长老执事，不是单问这个职分是什么。这时代神有一个工作，这长老就是教会负起责任的长老，这时代里，长老该有怎么样正确的服事。</p><p>答:这主要就是有生命的认识。好像一个家庭，几个小孩，长子、次子...不是你设立的。长子，自然要帮忙带弟弟。还是小孩子的生命时，说:“你要作什么、作什么。”就不现实。是根据长出来的。</p><p>一家有大有小，彼此帮助，也是自然的，作弟兄有何问题，弟弟马上帮忙，不必去吩咐他怎么作。所说的配搭，生出来就配得好好的。你这个手伸出来，自然与肢体配搭的。所谓的配搭就是生命的东西，你有那一种功用，就自然作那个工作。你不是那种功用而要勉强去配，就像手配在脚里，脚怎么走路？是脚就是脚，是手就是手，是自然的，配搭都不是勉强的。</p><p>所以我们看见神的工作一出来是很自然的。今天的问题就是，人作到被组织绑得死死的。好象你这个身体，站起来就是这样走，你不必考虑是左脚走，还是右脚走。你这样一停，就走不上去了。生命的东西就是圣灵会带领，每一个肢体自己有感觉。好象我们配搭，不需要吩咐:你该作什么，我该作什么，没有这样！连煮饭都是个别他有负担来作，不会说:“你要作什么。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

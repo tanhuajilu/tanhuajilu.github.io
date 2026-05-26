@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百八十三段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百八十三段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s183.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>我们很认识你们那边的情形。最近风声好多！有人来问:"你怎么了？"我很平安。他们又说:"我们听了很怕，说安静派的头头怎么、怎么。"从八十年代至二千年都有那么多的风声。我们却相信神掌权，不管这些。如果我们良心有亏，就是没有风声，自己也怕。所以只要我们清楚在主面前，对神对人存无亏的良心，害怕什么？撒旦也没有办法，牠只能来试探。那些人能做什么？今天大声讲话只一下子，能给人什么？<br><br>所以，我们要清楚我们的异象。你的异象越清楚，你对基督就越有认识，越有把握。因为主在你身上带领你；就是你不知道，主在那里还在带领。我们相信，很多危险主都把我们带过去了，我们却不知道。主的手在那里一直提携！我们一直以来的道路都在祂的排布之下。所以，只管把自己奉献给主，主都负责！<br><br>要学习知道:<br>主负责，不是我们负责。教会在地上，一切由主负责。保守真理，主自己负责。在过程中，有人脱出去了，没有了见证，我们只有蒙主怜悯恩待！在这里，有很多人是主所要的，他们走跟从主的道路，这是很荣耀的。荣耀是什么？这就是荣耀！有难处，主给我们带过去，这就是荣耀。所以，我们认定:主不改变。昨天、今天，主不改变;<strong>13:8</strong>)。既然有一位不改变的主，你还信谁？人靠不住，但是主可靠。</article><footer class='nav-links'><a href='s182.html'>← 上一篇</a> <a href='s184.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

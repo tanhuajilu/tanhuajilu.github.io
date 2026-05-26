@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百二十五段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百二十五段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s225.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>一个人得救了，他就开始经历神，经历生命。怎么经历？第一，他里面对神有感觉，觉得神实实在在，可亲可爱。没有信之前，他对神一点感情也没有，有时听到"神"，都有反感:"神在哪里？"就反对。信了，就有亲切感，"原来，神是我的神，是我的父。"可以凡事祷告。信主以后，就有这些经历。<br><br>你问:怎样祷告亲近神？我先问你，有没有神？）有！这就开始了。你信主以后，出去接触人，你得罪了人，亏欠人，里面就不平安，感觉要跟他和好，把事情弄清楚。信主以后，讲一句谎话，做一件错事，心里有不平安感觉；信主以后，有些事占了人家便宜，就觉得应该弄清楚。这就是经历神。<br><br>你做得对的时候，心里很平安，有得救的喜乐。还有，信主以后，你对弟兄姐妹也有亲切感，喜欢找弟兄姐妹。对没有信以前的好朋友，现在去看就不一样了:<br>你的讲话不一样，里面的感觉不一样，倾向也不一样。所以，你自然去找信主的人。这就是经历神，经历生命。<br><br>信主以后，你会祷告，有时没有祷告，你就觉得好像事情还没有做。有一个初信的，他说:吃饭祷告，有时忘记了，吃了两口，发觉没有祷告，就先放下碗筷来祷告。这就是生命的经历。</article><footer class='nav-links'><a href='s224.html'>← 上一篇</a> <a href='s226.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

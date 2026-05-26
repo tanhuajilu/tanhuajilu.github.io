@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月一日</h1><p class="meta">主耶稣基督的见证 · 第244/365段</p><p><a class="btn" href="s243.html">上一篇</a><a class="btn" href="s245.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s244.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>关于神的旨意，如果我们的情形是正常的，对神的旨意，我们的反应也必正常。相反的，一个人的灵是乱的，神的旨意就很难给他摸着。人的里面若是平静的，他反应神就清楚，就像一片平静如镜的湖水，倒影是清清楚楚的。如果湖面是波涛澎湃的，自己的影子也看不清楚哩！所以，我们的心，向着神是平静安稳的，对神的旨意就能清楚，如果受了激动，紧张而没有安息，要反应神也反应不来。</p><p>我们跟随神，神要作工，祂也必给我们有随时的带领。使徒行传里，彼得祷告，哥尼流也祷告，在哥尼流那边，神就借着天使给他说话，要哥尼流差人到彼得的地方请彼得来。彼得也在异象中听见神的说话:“神所洁净的你不可当作俗物。”一连三次，天上有声音跟他说，他还不懂得是什么意思。</p><p>但是神工作不到这里为止，马上外面有人叩门，彼得开门说:“你们找谁？”哥尼流的仆人说:“我们找那称呼西门的彼得。”彼得说:“我就是，你们为何而来？”仆人说:“我们主人看见异象，蒙天使指示叫他请你到家里。”犹太人跟外邦人从来没有来往，在彼得观念里外邦人是不洁净的。这时候，他才清楚看见，神要叫他到哥尼流家，他就带一位弟兄同去。这是什么？是神的荣耀。这荣耀就是外邦人与犹太人的隔墙被拆掉了。这是神工作的彰显与荣耀。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

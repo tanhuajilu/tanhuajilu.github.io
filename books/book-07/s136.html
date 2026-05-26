@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十六日</h1><p class="meta">主耶稣基督的见证 · 第136/365段</p><p><a class="btn" href="s135.html">上一篇</a><a class="btn" href="s137.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s136.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>祷告:爱我们的主耶稣，我们感谢你，我们仰望你的祝福，因只有你的祝福，才能带我们在属灵的道路上走得更正直。</p><p>各地教会的难处，我们倚靠你，仰望在你面前，你有怜悯，有恩典，你是我们的亮光，是我们一切的一切。</p><p>主，因着倚靠你，因着你作我们的中心和元首，我们站在你给我们地位上做你复活的见证。主，你需要有更多认识你的人在各地作你的见证，求你兴起你的工作，求你为我们败坏魔鬼、除灭魔鬼一切的作为。在这黑暗、混乱的世代里，求你的光更显明出来，所凡渴慕你要你的弟兄姊妹，都能够来寻求你，并且得着你。求你祝福各地的教会。</p><p>主，你给我们这样美好的机会，使我们得着你属灵的交通，接受你属灵的照顾，但愿这些话叫我们里面有属灵的转机，叫我们真实的遇见主，里面得以打通。我们所有的下沉，所有的受压、软弱、可怜的情形，在基督耶稣的恩典里都被带过去。</p><p>主求你祝福从弟兄姊妹，叫我们的灵能够借着交通被提升，叫我们能够有一个敞开的心向着主。主，愿你祝福。</p><p>主，弟兄姊妹在你面前的光景，只有你能够解决，因为所有属灵的难处，只有你能够解决，我们完全来倚靠你。这两天还有的交通，你亲自看顾我们。主，将你自己的话，将你自己的恩典更多借着你元首的丰富，流到众肢体里。主我们真需要你的保守。愿一切荣耀都归给你，这样的祷告，乃奉主耶稣基督的名。</p><p>选自见面记录二（7）1999年12月26日晚</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

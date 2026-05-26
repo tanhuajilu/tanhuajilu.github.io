@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月五日</h1><p class="meta">主耶稣基督的见证 · 第156/365段</p><p><a class="btn" href="s155.html">上一篇</a><a class="btn" href="s157.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s156.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>摩西时代，本来神呼召全以色列人做祭司，他们拜金牛犊以后，情形就改变了。结果，只剩下利未支派作祭司。因摩西说:“谁愿意站在神的一边，就出来，拿刀杀自己的弟兄。”利未支派就用刀杀弟兄，叫神的公义满足了，所以祭司的职分就归利未。</p><p>以后，利未支派又失败了，神再拣选撒督作祭司。到了新约，当整个教会达不到神的要求，神又在教会拣选少数人作神荣耀的见证。</p><p>在人来说:人的心是要“合一”，这是人呀！但神的心是要耶稣基督的见证，这见证是纯洁的。教会是基督的身体，这身体完全是属灵的东西。启示录不只有七个教会的问题，到了以后，乃是新妇之于淫妇、新耶路撒冷之于大巴比伦的对立问题。这对立产生的就是两条道路和两种结果。</p><p>一条路，是纯洁摆在主手里作基督的新妇，等候主再来；另一条路却什么都混杂的，结果成为大淫妇、大巴比伦－－要各宗派联合，甚至各宗教也搞在一起。这就是大巴比伦。所以，你们看，现在已经出现基督教大联合了，以后还要发展，发展到各宗教大联合，目的要大大混乱神的教会。</p><p>今天，神在地上要得着人为他作见证，所要得的见证就是耶稣基督，一切的中心就是这万人的主，教会是这位充满万有者的丰满。教会要充满基督，教会不是些属于人的东西，乃是完全属灵的，才跟基督相配。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

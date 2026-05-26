@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-一月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十三日</h1><p class="meta">主耶稣基督的见证 · 第23/365段</p><p><a class="btn" href="s022.html">上一篇</a><a class="btn" href="s024.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s023.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>第四，属灵的事，若不是继续蒙怜悯，一直去进步，或许起初带得很高，以后还会慢慢掉下来。像开西的聚会，以前开西的讲台是最高的，讲的东西很新。以后再来、再来，恐怕跟不上了。</p><p>像N在中国，讲的道也很高，现在，从1921年至现在，经过几十年了。我从三十年代至现在，根据所看到的，好多情形离开当初属灵的情形很远。道理并不是不知道，乃是灵跟不上，像我们所讲这些东西，在当时来讲，都影响很大。</p><p>N也没有到全国去，每个礼拜主日讲台讲了（十二篮里的信息），一个星期讲一篇，就印出送给全国所有的聚会。那时自然而然跟着圣灵的那个工作。</p><p>但是时间过去，同工变化了，只拿来当作道理讲，里面的东西摸不着，没有了。怎么知道没有了呢？因为当时那个圣灵的工作，没有了。当时带出来的话语，有吸引力量，每个教会有吸引力量。一个礼拜过去，人都等着星期天快来。现在却已落到人很苦，去聚会也没有什么，讲的人也苦－又要讲道，道讲出去，讲的人里面也枯干，听的人也枯干。因为离开了活的东西！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

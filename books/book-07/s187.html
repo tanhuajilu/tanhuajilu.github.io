@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月六日</h1><p class="meta">主耶稣基督的见证 · 第187/365段</p><p><a class="btn" href="s186.html">上一篇</a><a class="btn" href="s188.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s187.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们今天在这里所交通、所追求的，不是别的东西，乃是要有分神今天在这个时代拣选人为着祂的名作见证这一件事！我们是被神所选上的，但愿在这神拣选的路上不被漏掉！我们在神面前所祷告祈求的，就是让神在这里选出一些祂所要的人来！蒙召的人已经那么多了，神要再拣选一些人，这些人到底怎么选出？</p><p>人若把自己交在神手中，让神作工，给神有路，这在生命上的价值是多么的高呢！神的眼光是看有没有属灵的价值。在神看，没有价值的工作已经很多，做来做什么？就像哥林多前书所说的，有金银宝石的工作，也有草木禾秸的工作。一大堆草，价值还比不上一只小小的金指环。那么，什么是金银宝石的工作呢？这里的金银宝石就不是指物质的，乃是指着属灵世界的事物说的。金表明神，银表明救赎，宝石表明圣灵的工作。所有我们今天事奉神的工作，如果离开神，离开基督，离开圣灵，都不能算为金银宝石。</p><p>草木禾秸的工作又是指什么？圣经说，世人的荣华都如草上的花，草必枯干，花必凋谢。所以出于人的工作都是草木禾秸的工作。</p><p>宝贵的和卑贱的就是两方面。今天，我们的交通是要那宝贵的东西。什么是尊贵和宝贵的？什么是卑贱的？出于神的就是尊贵的，属于人的就是卑贱的。人若脱离卑贱的事，就必作贵重的器皿。人若能把两者分别出来，神说:“我就要把你当作口来说话。”一个分别为圣的人，神才会借着他说话。不是有道理就讲，还要看他的口有没有经过神的教育。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

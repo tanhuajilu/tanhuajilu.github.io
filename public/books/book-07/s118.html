@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十八日</h1><p class="meta">主耶稣基督的见证 · 第118/365段</p><p><a class="btn" href="s117.html">上一篇</a><a class="btn" href="s119.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s118.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>得胜不是人作的，得胜的不是人的生命，乃是主的生命。人作的，作出什么？拉撒路已死在坟墓里，给他复活的不是人，给他生命的不是人，是主耶稣，是主能作一个工作。主耶稣说:把石头挪开。石头挪开是人可以作的，但叫拉撒路出来就不是人作的，只有主作。我们今天让神作工，只有把那些拦阻神工作的东西对付掉，其余的就让神作了。拉撒路从坟墓里出来，人能帮忙把大石挪开，供应生命的却只有神。这边除掉了一些拦阻，得胜的生命就显明出来。</p><p>在这条道路上，有人说，最大的难处就是我们人的自己，人的自己把神所要做的都堵死了。所以神要对付人。十字路的工作就是要对付人，要把拦阻生命出来的东西都给打掉。这就是破碎的意思；有破碎，里面的才能出来。没有破碎，就没法出来。你这完整的人在那边想要得胜，可是，再得胜的还是完整的人。神就要叫你有一个打击，好有一道伤痕，可以把生命供应出来。所以受了打击，也是生命的问题。</p><p>1935年倪弟兄在泉州讲得胜的生命，整个礼拜就讲:“不再是我，乃是基督，一直讲这得胜的生命。若用理由去讲，三句话已说清楚了，但在生命里，我们就被带起来，而且愈带愈高。没有摸到生命的人，会以为太啰嗦了。</p><p>那些懂查经解经的人，有条有理，一条一条把圣经解释得清清楚楚，你在听，也听得很清楚，甚至可以一篇一篇传给别人，可是，自己就是软弱，没有力量。但是生命的东西出来，就给你彻底的带起来。像我们吃饭，天天都要吃，你说:“我不要吃”。说不吃也没办法，因肚子饿，总是要吃。生命的东西就是这样，并没有甚么新奇的，如果有新奇、有变的，就是生命更新了，生命更新，你得着新的了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第三百四十五段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第三百四十五段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s345.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'># 因为对象不同，传福音的人就要先制造一些对方的需要来，然后，再把福音的话讲出，一针见血的讲到他身上，才产生效果。有的人不是那种的需要，你讲那一种就没有结果，所以传福音先要看他里面有那一种情形，福音讲进去，才应对他的需要。那位跟你出去的人，就是要学这个功课。<br><br># 这就像别人跟你学按摩一样，你要叫他学按摩的术语、穴位名词；你也要叫他去练习按摩。他去尝试按那一个穴位，就知道其它别人的穴位也在那里。他继续练习和接受你的指导，就能学会正确的，摸到要按的部位。我们带一个人出去，就是为要叫他来学习你是怎样做工的。　　<br><br># 起初他们都是在看，看你怎样去摸，怎样治疗；看了，他就会了。但是看也不如做，他们看了要再去做，不然，看是看了这么多，做下去还是没有路。做下去没有路，还要做。做对、做错并不要紧，再做再做，越做就越熟练了。这一点也是以前年长的弟兄常讲的。你带同工，并不是说叫他讲，叫他跟你的样子，乃是学习 ; <strong>提后3:14</strong> ;<strong>西1:7</strong> ; <strong>提前2:7</strong> ;<strong>多3:14</strong>;<strong>林前14:31</strong>)，看你怎么样去跟人谈话。对什么种人，谈什么，对什么人的情形，怎样给他突破。同工就在那里学属灵的技术，一次二次，三次五次，自然而然就有印象，他的里面就有一个底子。到了一个时候，你试试放手，对他说:"今天，这个人就交给你了。"你就在看，看他怎么做，做得对的，你就肯定这个"对"。做得不对，你就说，这个不够是在什么地方。这样，对他就有实际的帮助。</article><footer class='nav-links'><a href='s344.html'>← 上一篇</a> <a href='s346.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

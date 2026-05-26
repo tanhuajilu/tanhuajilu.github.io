@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十八日</h1><p class="meta">主耶稣基督的见证 · 第352/365段</p><p><a class="btn" href="s351.html">上一篇</a><a class="btn" href="s353.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s352.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>交通:弟兄你来过这里吗？是几次了？（应:是。）你如果来过这里交通就知道。因你经常有交通就会明白，圣经是给我们相信接受，圣经不是给我们研究的。饭是给你吃的，不是给你研究的，你肚子饿就吃饭，你研究研究，你饿死了。有谁食饭去研究？你先吃，吃下去，那圣经也是要给你接受，给你相信，不是给你研究的。圣经说什么，你就接受什么，不需要去调和。</p><p>比方圣经说，神愿意万人得救，不喜欢一个人沉沦，这是圣经说的，你就相信这个。神喜欢万人得救，不喜欢一个人沉沦，这是圣经的真理，那你就这样相信接受。那么圣经又说，凡得救的是预定的，使徒行传说:“凡预定得救的都相信...”就是凡预定的人都相信了，就是得救的都是预定的。但圣经又说相信的就得救，到底那一个对？都对。你要去调和吗？不需要调和。你相信神愿意万人得救，不喜欢一个人沉沦，你又要相信说预定的就得救，你就相信两面！真理是两面的，你相信就没有错了，你不要把它调和起来。你没有这样的能力。钠跟氯是毒药，合起来变作咸的盐，你有这个能力吗？氯是毒药，钠也是毒药，合起来变成盐，缺乏是不行的，你要调和起来吗？不需要你去调和，这个不需要我们去调和，我们就是相信。</p><p>答:相信就是跟神的话调和。“他们没有用信心与所听到的话调和。”这是信心的话。所以这本圣经是神的话，不是给你去研究，这本圣经－神的话要叫我们相信，把圣经拿来研究，愈研究愈落到人里面，去研究，就脱离属灵的那个味道。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

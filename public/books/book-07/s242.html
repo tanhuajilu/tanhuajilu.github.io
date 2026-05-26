@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月三十日</h1><p class="meta">主耶稣基督的见证 · 第242/365段</p><p><a class="btn" href="s241.html">上一篇</a><a class="btn" href="s243.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s242.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>如果我们被动，不知道所得的感动对不对，没有和弟兄姐妹交通，环境也没有印证；去寻求神的话，这句这样说，那句又那样说，用圣经印证都套不进去；我们的情形就是这样模糊，该怎么办？这时，我们要简单相信神的话。圣经说:不要消灭圣灵的感动，对我们里面圣灵所给的感动，我们就简单相信。圣灵既然给你感动，是出于神的，反正神负责为你安排，简单相信就好！</p><p>对弟兄姊妹给你的印证，这里面也有很多学习。如果给你印证的弟兄姊妹是糊里胡涂的，结果，你还是糊里胡涂。他里面是清楚的，不会给你代替，给你断定；他只会把他所看见的摆在你面前给你去做参考，最后，还是让你自己定规。唯有如此，在神面前才有真正的属灵价值，不然，我们就是被动的，人家说的就跟着做，自己就是没有看见。</p><p>认识神是一生学习的功课，越学习越会进步。现在，问题是生命没有进步，却用死套的方法。倪弟兄那篇“认识神的旨意”，里面提到圣灵的感动、根据神的话、环境的安排、弟兄的印证等，这些要点是基本的，我们要学习；但不是单单靠方法来套，这样套，套不进去。这是活的东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

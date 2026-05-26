@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百五十九段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百五十九段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s159.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>上面说以利<br>亚在罗腾树下求死，接着就睡着了，天使拍醒他说:＂起来，吃吧！因为你当走的路甚远。＂他就起来吃，仗着这饮食的力走四十昼夜，到了神的山。（王上19:4-8）在五十年代，有一次，有一张纸条递给了我，上面写一句话:＂弟兄，你要起来吃，因你当走的路还很远。＂那时平安，没有碰着什么，但神借这个对我讲话，就是说，当走的路很远，现在要起来充实属灵的东西。这事以后，不到一年，事情就发生。<br><br>当走的路很＂远＂，＂远＂到几十年之久。这就是要靠吸收属灵的东西，才能有办法走道路；不然，那里有办法！因人在环境中要活，也不能活呢！所以神的恩典真是超过我们所求所想的。<br><br>所以，你不要怕回去后失败不失败，你对主说:＂我永远是失败，但主你永远得胜。＂当撒旦控告:＂你又失败了。＂你要说:＂我的主永不失败！＂撒旦听到主的名就跑。牠要叫你灰心，叫你意志软下去，你就抵挡牠。<br><br>一面我们顺服神，一面要抵挡撒旦。撒旦控告你为要叫你软下去，你当高举主的得胜。主就是我们的得胜，主永不失败。失败都是我的，基督得胜！我失败，基督得胜！我们就是认自己失败，却高举基督的得胜。<br><br>主说:＂离了我，你们就不能做什么！＂只有里面有主，主就彰显祂的荣耀。<br><br>你对属灵的事情有感应:<br>感觉到属灵的事，你就舒服；另一方面，若碰到给你感觉不舒服的，你就要把它顶出去。因为有些人讲话，就是要挖苦你，叫你难受；凡控告你的，你不要接受他。像他把话推过来，你不要给它塞到里面去。他说:"我看你不发脾气，我被你绊倒了。"这就是挖苦你的话。你要心里说:"你是看不上眼，你说跌倒是你自己的事，我们也不亏损，是你受亏损。"他讲这话，是他自己吃亏。他因我这个跌倒，太不值得了！因我是人，"你"也是人，我也会失败。</article><footer class='nav-links'><a href='s158.html'>← 上一篇</a> <a href='s160.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

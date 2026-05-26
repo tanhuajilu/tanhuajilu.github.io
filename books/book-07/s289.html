@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十六日</h1><p class="meta">主耶稣基督的见证 · 第289/365段</p><p><a class="btn" href="s288.html">上一篇</a><a class="btn" href="s290.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s289.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>没有这个－－里面的，不行。因为制度是外面的东西，“能约束”是自己的东西，是圣灵的果子。圣灵的果子最后一个就是节制，节制就是约束自己。</p><p>“人的破碎”就是生命的破碎，破碎了，你就摸着生命。</p><p>除了《人的破碎与灵的出来》，还有《神话语的职事》的信息，这些话讲的很高啊！就讲到怎么摸着主的话，怎么传神的话，这都有一定的原则。你要找有这原则的人，很难找到，没有办法找到这样的人。</p><p>还有《权柄与顺服》。现在权柄都被滥用，情形已经乱七八糟。我们听倪弟兄讲的，和今天好多人讲的不同，别人还讲他的道，却心口不一！“我有权柄！”什么都是他讲话才算。这就滥用恩赐，滥用权柄。所讲权柄是做神代表的权柄。你这权柄是不是代表神？还是代表你自己？所以，今天，很多代表权柄，他代表神还是代表他本身？这里还是有不同。很多的权柄是代表的权柄，作神代表的权柄跟神的政治的权柄不同。</p><p>对神的权柄，我们是绝对顺服，对代表权柄是相对的顺服。向代表权柄绝对去顺服，你就会走错。因为人就是人，我是人，他也是人。而神给他一点权柄是根据什么？有生命才有权柄，生命不行了，就没有权柄。这是个原则。</p><p>摩西代表神的权柄，但是，摩西是世界上最谦和的人。最温和的人还会发脾气------击打盘石，难处怎么不会增加？为什么因为他受不了这么多以色列人向他争闹，他的灵被惹动。一被惹动，他就厌烦。所以，所有作神代表权柄的，更要战战兢兢。愈认识神的权柄的人，愈不敢随便讲话，因为讲的话，大家都听着，要去负责。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

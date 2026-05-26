@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月四日</h1><p class="meta">主耶稣基督的见证 · 第124/365段</p><p><a class="btn" href="s123.html">上一篇</a><a class="btn" href="s125.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s124.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>什么叫作福音？很多人以为福音就是一题又一题去讲。其实，福音就是基督本身。保罗说:“我当日所领受又传给你们的，第一就是基督照圣经所说，为我们的罪死了，而且埋葬了，又照圣经所说，第三天复活了...末了也显给我看...”（林前5:3---4）这就是福音。我们传福音，常是零零碎碎的，没有把整个福音，整位基督传出去。这福音，不只传给外邦人，更是传给信徒的，叫人碰到主。每一次人碰到主，他里面就活，当你里面疲累心烦，见到弟兄姊妹一交通，里面就光亮了。本来是忧忧愁愁的，像被乌云遮蔽，一碰到神，好像天开了，太阳出来了。</p><p>所以，这生命的感觉在愈孤单之时，愈是显明。你不要说，基督徒到了别的地方会跌倒。不会！他在孤单中，会一直想到弟兄姊妹的宝贝，在那边找不到弟兄姊妹，会感到很难受，爱弟兄的感觉会更强，在苦难中与神更亲近。这是神的安排，叫他暂时孤单一下。他到了一个地方，没有信主的人会感觉孤单，他总要找信主的，一直要见弟兄姊妹，所以外面这些环境，是要增加我们的感觉，爱弟兄的心就在那没有弟兄的环境起来，感觉弟兄姊妹宝贝。凡几年没有看见弟兄姊妹的，他心里会很难受。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

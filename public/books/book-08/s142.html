@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百四十二段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百四十二段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s142.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>有一位弟兄从国外回来说:"我23岁起，就专门全时间事奉、传道，到了美国，五十多岁时，再传不下去了。我转去做生意。"这传道就是他自己要的，不是神呼召他的！是主呼召的，主就负责，"你"自己要的，神就没有负责。结果，他没有路走了。<br><br>所以，你要认识神;<strong><br>11:9</strong>;<br><strong>耶31:34</strong>;<br><strong>约17:3</strong><br>,<strong>约一2:13</strong>;<br><strong>彼后1:3</strong>），祂是又真又活的），在各方面都可以给你经历；也给你对人有认识。祂在你里面，可以给你经历，你作生意，也给你经历。像这位弟兄作的见证，他欠人那么多债，来这里交通说，＂目前，就是这些钱，最为难了。＂我说:不要紧，首先，你活在主面前，你就说，＂我有心要还。＂你不要不还，不还，你的态度就不对。你要还，许多实际的问题，慢慢去考虑。第二，以前，你有钱，花费都没有限制，因为以前用钱就像用水一般。今天，生活要改变。要省钱，省钱为还债，再省再省，有多少，还多少，这个就实际。一方面欠债要偿还，一方面还要维持自己生活的开销。多一百就剩一百，够了就去还债。另一点，你现在能作什么就去作什么；你一定要像以前当大老板，没有可能！现在能维持生活，你就去作就好。<br><br>以后弟兄就回家去种菜，第一次挑菜去卖，得回十块钱，他心里充满喜乐平安。因他说:＂这十块钱是我劳动、流汗去得的，很光荣。＂他就从这里去经历喜乐、满足，虽然只十块钱。<br><br>再以后，他修理手表，神也一路祝福，叫他能维持生活，他的生活就比较舒服点；还债，就是有多少，还多少，慢慢还。到后来，他到广州去，那段时间，一直等在那里。他说，这一次，那欠他三十万块钱的就还了他，叫他有一笔钱去还债，还剩下一点，以后怎样，再看，慢慢来。大的解决了，小的事，神也一直带领他，给他解决；这都是现实，叫他摸到神是又真又活的。<br><br>所以，你经历主，主不会叫你吃亏，神会给你恩上加恩，都超过所求所想的。</article><footer class='nav-links'><a href='s141.html'>← 上一篇</a> <a href='s143.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十六日</h1><p class="meta">主耶稣基督的见证 · 第146/365段</p><p><a class="btn" href="s145.html">上一篇</a><a class="btn" href="s147.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s146.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>在教会中，我们请人作事，不是用命令式的，是交通。提到权柄，就是说，当你交通出去，有属灵的权柄，接受的人会马上阿们，事情就由乐意的人去作。因此，对一些弟兄姊妹，我们不敢说:“你要作什么。”最多跟他说:“有这一个需要，你祷告祷告，看主有没有带领。”我们尊重他那自由意志向着神。</p><p>连神也尊重他的自由意志，要他对神的爱是甘心乐意的。如果是勉强的，神也不要。所以圣经说:“他要我们的奉献是甘心乐意的，事奉神是甘心乐意的。”不是人叫我作，我去作，是我听了他，我里面有同感，觉得是出于神，出于圣灵的。我们这样去作，甘心乐意，就有膏油。</p><p>神对以赛亚说:“我可以差遣谁呢？谁肯为我们去呢？”以赛亚说:“我在这里，请差遣我！”神不说:你一定要作什么，以赛亚你必须作什么。不是。神说:“我可以差遣谁呢？”神尊重人的意志。人的意志愿意配合说:“请差遣我！”你有这个态度，神就差遣，不管到哪里，你总是要去。因你对神表示说:“请你差遣我。神，你差我到哪里，我就到哪里。”所以一切都离不开跟神有这个接触。</p><p>选自见面记录二（8）1999年12月27日上午</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

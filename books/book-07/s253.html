@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十日</h1><p class="meta">主耶稣基督的见证 · 第253/365段</p><p><a class="btn" href="s252.html">上一篇</a><a class="btn" href="s254.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s253.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>圣灵若充满教会，教会就有光、有生命。神这生命也是爱，神不要我们在外面制造爱出来，因为爱不是外表的一种行为，爱是有位格的。神本身的生命就在我们里面，神就是光，神也是爱。碰到神就碰到光，你被神充满，人碰到你，也碰到光，人就在光中。光作什么？光是为着显明，人碰到光，光就把人的东西（实际的情形）显明出来。什么是光？责备就是光。</p><p>圣经说，凡受责备的，就给光照出来。所以一个人能接受人的责备，就是接受光。人若接受神的光，看见自己的说话是七讲八讲的，无形中，他里面的生命已经长进。光发出去就产生作用，对这个，很多人不会理解。我们讲这些，没有什么道理，但在你里面就有这些经历。你里面蒙光照，在以前，会问为什么、为什么，现在不问了。因为已经找到答案。基督就是一切问题的答案。找到答案，一切问题就过去。</p><p>本来，你和人过不去，碰到神就过去了。在经历中，你碰到神，什么消极的东西都会过去。若是你没有碰到神，在这一点上，你过不去，在那一点也过不去，你就走不过去。只有在生命里，生命要吞灭死亡，一切看法都消失在生命里，消失在光中。所以教会的需要就是需要生命的充满，充满神的光。不然，你到各地，就会找出里面的分歧，找出一大堆“不同心”的情形。不必说信徒们的情形，就是一地三个、五个负责人中间，已经不同心了。因为在教会里，许多人就要突出他的个人。在教会中乃是为着身体的见证。神的教会，不是为着我个人的，是大家的、是共同的。在教会里我们共同有一个东西，就是基督的生命，这不是你个人的，乃是大家的，在这里没有一点是自己的，都是大家的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月七日</h1><p class="meta">主耶稣基督的见证 · 第341/365段</p><p><a class="btn" href="s340.html">上一篇</a><a class="btn" href="s342.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s341.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有人说:“N弟兄写《属灵人》。后来，他看见很多念《属灵人》的人，都停在道理上去讲，去分析。分析这个属灵或这个属肉体，每天都用这个去批评人，愈讲愈死。”在此，我们也要指出，很多讲这个的人，他也够不上。他讲灵，但灵是什么，他不懂得；魂是什么，他也不懂得。里面的东西，他不懂得！所以这属灵的事离不开圣灵的启示和光照，没有圣灵的启示，属灵的事你就不懂得，你外行！圣灵的启示，需要圣灵给你看见。</p><p>但是，你有心摆在主的面前，摆在身体里面，圣灵运行作工，你才会从肢体给你看见好多你所没有看见的。我们从各处来的弟兄姐妹也学习好多功课，除非没有说话，一说话大家都有帮助，增加我们的学习和增加属灵的丰富。你有丰富，你的学习有增加，你就有恩典流给别人。若只有出去，没有进来，就只到用完为止，就了了，没有了。</p><p>所以，象我们有年纪的人，虽然留下年岁不多，还要尽我们所能的，学习得更有认识，我们还有好多功课学习。</p><p>因为人很会片面，一片面就会有偏差。有学习，彼此就有帮助，就会有校正，这样大家都有益处。对属灵的问题，历史上都发生过很多困难，难处就是人看错了、人领会错了。“随灵引导”，对随从灵引导这句话，好多人走错路！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

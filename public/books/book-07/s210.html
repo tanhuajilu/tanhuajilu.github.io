@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十九日</h1><p class="meta">主耶稣基督的见证 · 第210/365段</p><p><a class="btn" href="s209.html">上一篇</a><a class="btn" href="s211.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s210.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>教会是基督的身体，但是，每一个个人却是和身体对立的，所以，每一个个人都必须接受神的对付而倒下，身体就要出现。因此基督徒应该学习认识:神的教会、基督的身体有一个对立的东西。有这一种观念，才叫你发现教会的仇敌在那里。所以人越多，和基督身体对立的东西也越多。你和基督的身体对立，就是在走自己的道路。</p><p>十字架的工作要把人的单独、独立打掉。人犯罪就是因为独立，不倚靠神，不接受生命，而接受“分别善恶”。人天生就有跟神对立的倾向。十字架的工作，就要把这些对立除掉，叫人与神和好。而我们对立的思想也叫我们和教会对立和基督的身体敌对。</p><p>所以我们愿意摆在交通里，在交通中，我们会有“身体”的学习。你交通，他交通，越讲越和谐，都没有相反的。有些人一讲，就是相反的，他专是:大家讲一路，他另讲一路。灵就是不和睦，这样的人常凭着律法教导人怎样怎样。</p><p>不只能讲“身体”的道理，还需要我们本身有破碎，叫我们和别人，灵跟灵有交通，自然而然就感觉彼此有需要。能通才有交通，几天没有交通，就感觉有失落感。一有交通，我们里面会有恩典。平常没有和人有属灵交通的人，不能代替来和你交通，因为你跟他交通，他没有属灵的反应。所以交通也是双方面的，不是单方面的，是双方面有反应的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

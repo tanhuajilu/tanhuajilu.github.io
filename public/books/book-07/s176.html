@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十五日</h1><p class="meta">主耶稣基督的见证 · 第176/365段</p><p><a class="btn" href="s175.html">上一篇</a><a class="btn" href="s177.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s176.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有很多真理，人听了感觉太高，好像没法经历，好像摸不着似的。这都是人思想的烦恼，对神的经历就是“高”的！因为神是至高的神，祂不是低的。祂的话是高的，没有人能摸得到，做得到，但你得着祂的生命，祂的生命起点也是高的。我们得救，就是因着这高的东西，以后，也因这高的东西去过基督徒的生活。这个，我们到经历里就容易懂，不然，深的道理即便听了，还是模糊，不懂得是什么。你听了，觉得真有供应就很好，因为有了一个底子，等到你经历，会叫你碰到实际。</p><p>好像有些人读到史百克的信息，道理是接受了，也会讲，但是那个实际拿不出来，只能叫人听到些道理而已。人虽然听了祂的话，在生命上却是没有力量，也没有生活的力量，结果是话归话，生活这边也只能照旧软弱。</p><p>圣经里的每一句话，都是圣灵启示写出来的，其中不只有话，话里还有灵。人读经除了摸到圣经的字眼，也会接触到那个灵。人若接触到圣经里的灵，读经就会懂得会亮，这就是圣灵、生命在人里面启示的工作。</p><p>圣灵若开我们的心窍，我们就能明白神的话。别人对我们的帮助只是一部份，最多就到人的帮助那步为止，除非我们本身再去进步，我们不会再有丰富。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

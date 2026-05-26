@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第三百五十九段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第三百五十九段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s359.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'># 主说:"你必须重生。")我们的子女也必须重生才行。因为人是空虚的，他里面需要主，要知道，我们的子女们也有这一个需要。他们会犯罪...因罪，如果不信主，有一天还会灭亡，丢在烧硫磺的火湖里。我们既然对儿女在作人方面，都有一个最好的期望，也必须对他们重生方面有责任，帮助他们。在这件事上，作父母的要和神有配合，因为神要救他们。曾有人因子女要信主，就害怕；怕子女信了主，就没有世界上的前途，结果不让子女信主，以后这一个家弄得很惨。我就和这一对作父母的弟兄姊妹说:"你们有这个后果，今天应该悔改过来。你要先悔改，才有路走。"<br><br># 福音的荣耀和需要，我们该好好对孩子说。福音的内容，下面所列的几方面，应当在合适的情形里，让他们明白，且进一步的相信、接受主。这几点就是:第一，给他们看见人有罪，他自己有罪。第二，给他们看见人生的虚空。第三，他们要接受主作救主，把他们从罪里救赎出来，今后更有永远的生命在他们心里。当我们里面有了这永远的生命, <strong>23</strong>），就有了一切。<br><br># 有某地的教授，一位姊妹带他来，我们就跟他谈福音，最后他摸到人生的虚空，愿意接受主，以后转过来为着主，因他的见证，很多人被带领接受主。<br><br># 你的双生男孩今年十四岁信了主。我是十三岁时信主。那时我是信了，却不知道自己得救，只是带领的弟兄对我说:"你是得救了。"我才说自己是得救的。当时，得救是得救了，这已经是属灵的事实，自己却不会感觉得救不得救的。我是有了主，信了主，里面有一个要主的心，心里就是要主。这个要主，要主，一直要到今天。我是自自然然这样过来的，这是神自己的工作。我们先前对主的话，都听不明白，不很清楚，但是神已经作工。神作了工，就是不明白，也没关系。</article><footer class='nav-links'><a href='s358.html'>← 上一篇</a> <a href='s360.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

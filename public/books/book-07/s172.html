@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十一日</h1><p class="meta">主耶稣基督的见证 · 第172/365段</p><p><a class="btn" href="s171.html">上一篇</a><a class="btn" href="s173.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s172.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>神就要得着我们的心。圣经说:“要保守你心，胜过保守一切，因为一生的果效是由心发出。”属灵的果效就是看我们的心对主如何。我们的心对主是对的，就会不断被圣灵充满，一直给神使用。今天，神是没有人用，一直等候着人。好多人喜欢给神用，但好多功课还学习不够。终有一天，神能在我们身上找着出口，所以不必着急，慢慢来，看神的工作。</p><p>神在各地正在作工，特别在教会历史上，有问题的就被淘汰，这很自然的。人类社会也是这样，一直有淘汰。属灵的存留就是属灵的淘汰，圣灵一直作这些工作。巴拿巴二人分开以后，使徒行传继续写下去，以后就专写保罗，巴拿巴的名字就没有再记。这都是神的原则。</p><p>哥林多前书是谈到教会问题的书，在哥林多教会，教会是讲清楚了（因为他们是口才智识都全备的），但是，实际情形就是他们跟“身体”配不来---不相称。在她里面，有淫乱的事发生，有告官司的事，还有其它的，问题很多...最后保罗说，她还是属肉体的，因他们中间有说他们属保罗的，有说他们属阿波罗的...这岂不是属肉体的吗？属肉体的就是神所定罪的。最后保罗说:“你们的聚会是招损而不是受益...”哥林多人就是乱，一乱就不是得益，乃是招损。没有主的同在就是招损了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

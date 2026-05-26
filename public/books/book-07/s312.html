@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月八日</h1><p class="meta">主耶稣基督的见证 · 第312/365段</p><p><a class="btn" href="s311.html">上一篇</a><a class="btn" href="s313.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s312.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:有人把圣经里的真理全翻作实际，我也用心查过，这里的真理，原文也有真实的意思，他翻作实际，这改动是否比较抽象一点。</p><p>答:对很多字眼名词，他就是标新立异，都是搞乱人的思想。字眼名词不小心会起争辩，争辩下去，血气就出来。就根据他们各人的理解，你要理解怎么样就怎么样，因为人的程度不一样。他能理解到那里就理解到那里。主要的还不是名词字眼，主要的是你真是碰到基督了。</p><p>认识基督，你碰到基督，认识基督，对基督就有把握的认识。因这认识不是风闻的，乃是亲眼看见的。约伯记说:“从前风闻，现在看见。”现在看见，就俯伏敬拜，后悔他的自己。理论上只能够我争赢，你失败的。只是到达到这个目的。但真是摸到那个实际，你会解决属灵的问题，只要你属灵的问题能够解决，所争辩的字眼就让他过去了。你去争辩，会争到你里面还糊里糊涂呢。</p><p>所以对一些道理，我们要辨别出一些对的，但不去给人家争辩。因为去争辩，你要校正他，也不是那么容易。你校正不来，反而给他反过去，你自己就吃亏，就受亏损。他说对，对就由他去对。因为真理，真实的东西，是有主本身出来作见证的。时间，会给我们证明你是对不对。忠心跟从那些出名的人很多，有人跟从了三十多年，他一碰到光，马上整个人转过来。这是主的怜悯，主的工作。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

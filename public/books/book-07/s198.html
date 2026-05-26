@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十七日</h1><p class="meta">主耶稣基督的见证 · 第198/365段</p><p><a class="btn" href="s197.html">上一篇</a><a class="btn" href="s199.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s198.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>属灵的东西就是这样，你讲好，有什么用？还要问，你本身有没有得到属灵的供应？里面有没有得到圣灵的打通？你说好，你听了福音，自己的罪有没有得到赦免？聚了会，你有没有得到属灵实际的东西？你说道理讲得好，不过是理论的东西好而已。</p><p>像这位弟兄，经过他的谈话，我们知道，他里面有那个属灵细软的感觉，不过他实在也是给一些道理模糊了！他说:“这里讲的，都是一些有权威的人讲的。”就是说，这些人的话摆在一起，就给他有了矛盾。</p><p>现在，W弟兄，你要听你里面的。像你昨天所讲的，有人说主耶稣是我们的司机，有人说是我们作司机，主坐在旁边教导我们。两班人有这两种说法。真正的情形是怎样的？我问他（W弟兄）说:你是怎么感觉？他说:“我认为两个都不通。”按理说，不是一个不通，就是另外的一个通了，但是他感觉两个都不通，真是莫名其妙！这就是里面属灵的反应了。我们里面有的感觉，就是最宝贵。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

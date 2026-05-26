@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十九日</h1><p class="meta">主耶稣基督的见证 · 第262/365段</p><p><a class="btn" href="s261.html">上一篇</a><a class="btn" href="s263.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s262.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>在美国的时候，一天去聚会，听了“基督是教会的头，教会是基督的身体”，这信息很好。我问讲道的弟兄:“这么好的信息，这些理论能不能改变局面呢？”他不答。我又说:“如果是同工管理教会，基督就不能作头，是不是这样？”他也不答。</p><p>是有这么好的信息，这信息是理论，还是生命呢？是生命，这局面就会改变，如果是理论、道理，你听了觉得好，我听了也觉得好，好是好，还是我行我素。你叫人听或讲给人听，听了就算，他还是照样！就不能解决问题。</p><p>但神今天的丰富、祂给教会的丰富，不在于理论、道理！</p><p>神给倪柝声的信息，在今天的实际里，就讲“人的破碎”这一点吧，经过破碎的，问题会解决！这就已经是最要害的地方，就这一点就够了！其它，关于教会的问题，还算是解经。神对一百个人都不用，就用这一个就够了。</p><p>（今天的情形）...要向圣灵呼求。你看，今天，什么同工管理工作，参加聚会（那些情形）...教会里面已经摸不到生命了！所以我说还讲什么生命问题？讲生命要有生命，讲圣灵要有圣灵！你看有弟兄讲了这些，还要看他是怎样的人？他有圣灵吗？要去看！讲圣灵的，到底有没有圣灵？</p><p>讲什么，要看他有没有，没有，就是没有生命。教会到底有没有生命，有了，就是有实际！神的丰富都是在生命里面！保罗传什么？他说:“我们传基督。”没有生命了，就是传肉体。</p><p>好多弟兄对我说:“你讲讲你的见证。”我说我最不敢讲见证。他说你为什么不敢讲见证。我说:“许多人讲见证，开头就讲基督，啊，为基督受苦，讲到最后，他说:没有什么见证好讲了。因为”见证“过去了。见证没有什么好讲”因为每个人都有见证，信的人都有神迹奇事随着，每个人都有，只要你有信心都有！见证不是让你拿来叫你当老师的。我说:“我们大家每个人都交通就好。”所以，我们所有的交通是这样，并不是那么属肉体！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

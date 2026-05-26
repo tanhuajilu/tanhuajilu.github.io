@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十四日</h1><p class="meta">主耶稣基督的见证 · 第205/365段</p><p><a class="btn" href="s204.html">上一篇</a><a class="btn" href="s206.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s205.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>以前倪弟兄到史百克那里寻求交通，发现有东西就继续的交通。弟兄会的人对他就有意见，可见弟兄会那时已落到人的情形里面去。倪弟兄跟史百克显然各有托付，但经过接触，到里面通了，就打成一片合在一起。这就是我们所说灵里的合一。</p><p>很多有属灵份量的人中，史百克是个摸着复活大能境界的人。今天，他的生命还在供应那些看他书的人。他是讲圣灵膏油涂抹的人，他虽然死了，他的书还是有膏油。倪弟兄往访史百克，在那里也讲道，讲的时候，史百克就坐在后面，用生命用灵供应他。这是真的同工。人的同工是你讲你的，我讲我的，你讲是你的事，哪里会在你讲之时和你同工？不会的。这就是生命的交通！</p><p>所以，你们如果彼此在生命上有交通，要学习一个人作工，大家同心。这样，工作就轻松。如果没有人同心，你自己去作，作到“讲完为止”，里面的负担就很重。这个同心合意是很宝贝的，不管大，不管小，你都和他同心。就像推板车，几个人推不动，多几个人（即使是小孩子），大家数“一、二、三，推”，就推动了，这是同心合意。若没有同心，各人做各人的，在讲台上都是“我要讲最好的，要做第一把手。”结果就是贫穷，不会供应别人。</p><p>我们相信神会作工。别人说:“这些人有什么东西？”人尽管讲你，不必理会，单单仰望主，神要作工，就借着你们供应生命。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

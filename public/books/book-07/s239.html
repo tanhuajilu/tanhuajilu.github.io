@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十七日</h1><p class="meta">主耶稣基督的见证 · 第239/365段</p><p><a class="btn" href="s238.html">上一篇</a><a class="btn" href="s240.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s239.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你们知道以扫和雅各布的故事，以扫是打猎的，雅各布在家安静。这故事说明:一个打猎，到处跑的，结果都漏掉，没有了；一个在家安静，好像没有作什么，他到父亲面前，父亲就把祝福给他，把恩典给他。所以说，不在乎人的定意，不在乎人的奔跑，只在乎发怜悯的神。这些故事叫我们知道神的怜悯。祂喜欢怜悯，不喜欢祭祀。你奉献了吗？神不真正喜欢，神喜欢怜悯你。什么人神怜悯他呢？谦卑的人。骄傲的人，神不喜欢，更不怜悯。骄傲的人不肯接受人的可怜，心想:“我何必得你的帮助？何必要你可怜。”因此神不怜悯他。</p><p>但是，神却恩待怜悯那些无依无靠的人，好像神恩待孤儿、寡妇，神恩待那些需要祂的人。你不需要神，你什么都有，你就不能得神的祝福。</p><p>你读圣经，从圣经里可以认识神的话，你也可以从话语职事得着神话语的丰富，就是说，你可以从圣经的预言、故事各方面去看到神在那里讲话。有的时候，神也借着环境讲话，环境也对我们讲话，显明神的心意。</p><p>很多人背圣经，背得很熟，就是不知道神的话，因为他只背字句，不知道里面有什么属灵的东西。所以，用记忆死背字句的，或用思想去分析圣经，这个怎样那个怎样的，属灵的东西都摸不着！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

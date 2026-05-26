@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月八日</h1><p class="meta">主耶稣基督的见证 · 第39/365段</p><p><a class="btn" href="s038.html">上一篇</a><a class="btn" href="s040.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s039.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>一位青年问我倪弟兄的事，讲到他的灵性和工作。我告诉他:“如果你要了解倪弟兄，了解一点历史，了解他讲的道理，可以，但有一个东西你没有办法了解。”他说什么东西？我说:“你看他的书，了解他是什么神学观点，看看他讲什么道理，但是倪柝声讲道他的灵出来，这一个你没有办法了解。他讲这个话，我们也讲这个话，但不一样！我们讲倪柝声那些道理，是字句上的，能清清楚楚去讲，但是他讲的话，里面有东西，会把你这个人摔倒在神面前，那个灵你没办法去了解。所以，你只了解表面，讲他表面的，但他里面有一个东西、有一个内容，你无法了解。”</p><p>因着他有这一个生命能力，反对他的人到他面前，一谈就都服下去。他有这个转变的力量，而我们没有。一个人如果到他面前，一谈话就转到神面前；我们呢，谈了三点钟、五点钟，甚至几天，别人还没有办法转。就是这一个不能学，这一个，是神恩待他的。</p><p>你听他讲道跟看他的书，就完全二样。你若听过他讲道，再看他的书，一看就很彻底。还没有见过，还没有听过的，去看他的书，就是看，好像看别的普通的书一样，有道理，有理由而已。你听他讲道，就带你到神面前，这个能力不是人的能力，乃是神在他里面生命的性情带出来了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

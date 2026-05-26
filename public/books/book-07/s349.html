@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十五日</h1><p class="meta">主耶稣基督的见证 · 第349/365段</p><p><a class="btn" href="s348.html">上一篇</a><a class="btn" href="s350.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s349.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:林前6:17，保罗说，但与主联合的，便是与主成为一灵。</p><p>答:某弟兄说我们跟主联合，就是这里的二灵成为一灵。这是他的讲法。</p><p>交通:没错。成为一灵就是人的灵顺服神的灵。人神合一，正如主在客西马尼所说的:“你如果可以，父啊，求你把这杯撤去。”主耶稣是神的儿子，主耶稣作神儿子，不会死，他来作人就会死，他作神的儿子哪有什么软弱？一点也没有。他作人就要汗流如血，极其难过。这个时候，他可以背逆神，魔鬼就要叫他背叛神，这时候，是最好的时机叫耶稣背叛之时，但是他完全在顺服的地位，他那人的灵完全顺服神。这不是调和，这是顺服。什么是调和？调和就像刚才说的，电通到电线里，变成“线电”，但是，事实是电还是电，电线还是电线，不是合在一起。所以我们怎样得胜？是人与神一同得胜，不是单独去得胜，不是圣灵得胜，也不是人去得胜，是圣灵还是与人一起去得胜，完全一致。</p><p>问:主耶稣在宝座上还带着人性，在宝座上，他不是带着人神混合的灵！不是非神非人，他还是神的儿子，也还是人的儿子。人的灵跟神的灵合一和谐顺服。</p><p>答:是人的灵跟神的灵和谐。正如两夫妻，二人成一体，但是还是二个人，婚姻生活如果吵闹就没有意思了。和谐，所说弟兄姐妹们的合一也是和谐，甚至圣父、圣子、圣灵，也是和谐，三而一的神也是和谐，没有互相关连，但是和谐的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

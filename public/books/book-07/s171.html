@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十日</h1><p class="meta">主耶稣基督的见证 · 第171/365段</p><p><a class="btn" href="s170.html">上一篇</a><a class="btn" href="s172.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s171.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>教会不是用意见、用表决、用选举出来的──不是少数服从多数。不是！今天，许多教会拣选长老、执事就用这个，为着选举要去争选票，到这里运动、到那里运动，叫别人选举他。这么多聪明人出来，圣灵没有地位啊！一个好好的属灵生命委屈在这里面，要怎么样去长进？不只不会长进，有时生命也枯死呢？</p><p>像我们这样交通，很多人很反感，他们说:“你们就是不作工，只是讲而已！”我们说:“我们去作工，还要讲给你听吗？真的，神的工作也是要有神的眼光才看得到，没有神的眼光也不会看到。因为神工作都很奥秘的。历来神的工作都是奥秘的，神作隐藏的工作。越显露的工作越肤浅！越隐藏的就越深。有一位弟兄说:”国外的工作都是广度很大很多的，但国内主的工作，所见到的，却是有深度的。“就因为有这等深度，在这里神的工作才经得起许多难处。</p><p>确实是环境不一样，国内的工作如果没有深度，就都给“打”垮了。国内面对那抵挡基督教的压力，人是没有办法的，但是对那真实的教会，压力越大，能力也越大，压力越大，产生的动力更大。因此，神借着属灵的人受压，越有力量从他们里面出来！不只从他们深处的灵里出来，还冲到人外面的身体，冲到人的魂，最终冲到人的灵里去，叫他们的灵给神得着。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

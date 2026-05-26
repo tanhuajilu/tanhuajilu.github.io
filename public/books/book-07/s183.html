@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二日</h1><p class="meta">主耶稣基督的见证 · 第183/365段</p><p><a class="btn" href="s182.html">上一篇</a><a class="btn" href="s184.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s183.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>属灵的就归属灵的，属肉体的就归属肉体的，大家无所争，就很简单了。</p><p>人若要属灵，也要属肉体，就都混在一起。正如旧约以色列要拜巴力，又要拜神，就是不行。神要他们，要么就拜耶和华，要么就拜巴力。在我们基督徒也该这样，要么就要神，不能又拜神又去事奉玛门。这就是立场，我们不能把两者混在一起。</p><p>今天，很多人喜欢妥协，要用妥协的方式把大家搞通。好多好人在教会的事上，就是做妥协的工作，找一条路怎么妥协。但是这是很严肃的，你妥协，神就没有路，神没有地位了！你要妥协，还会有什么神的工作呢？没有的啊！</p><p>今天，人已经把教会变作机关化，把教会当作企业---一种宗教事业，如同世界上的人作事业一样！难怪有人说:“要赚钱吗？在教会里就最好赚钱了！”他们用恩赐去卖钱，把神的工作当作一种职业去作，这些都是违背圣经原则的。他们为了维护他们所作的，用了许多理由去讲，但是讲归讲，却碰不到生命，碰不到主。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月九日</h1><p class="meta">主耶稣基督的见证 · 第99/365段</p><p><a class="btn" href="s098.html">上一篇</a><a class="btn" href="s100.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s099.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>因此，长老执事不是人去选的，乃是神在他们里面有光，有负担，有恩典，自然而然在他们身上就有属灵的东西出来。因别人从他们会得到供应。大家碰到神会彼此顺服，谦卑相待，不去争你小我大的。</p><p>你对灵、魂、体有认识有经历，就是对至圣所、圣所、外院都有经历了。你经历过，就知道凭着灵的带领，和凭着血气或凭着我们自己，是何等不同。你的路走过来了，就愈来愈清楚。这些在《属灵人》里都有提及，你且慢慢去看。《人的破碎与灵的出来》这一本书也要去看。</p><p>我们的灵既是神住着的地方，这就是至圣所。在这里，我们是坦然无惧的与神有交通，在此敬拜神，也在此事奉神。</p><p>神是灵，是我们事奉的对象。用灵事奉神就是要在我们的心灵与诚实里敬拜神，因神是真实的，是真理。这些都是看不到的，所以必须用信心。信神住在我们里面。我们在灵里敬拜神，我们事奉的对象是神，所以，事奉必须用心灵和诚实去事奉。圣灵也是我们事奉的能力，圣灵会给我们有力量去事奉，这些都是在属灵的世界里的。</p><p>这条路走通了，什么问题都会带过去，就是外面的难处也带过去；因为神比一切都大。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

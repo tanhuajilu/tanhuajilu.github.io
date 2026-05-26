@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月七日</h1><p class="meta">主耶稣基督的见证 · 第280/365段</p><p><a class="btn" href="s279.html">上一篇</a><a class="btn" href="s281.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s280.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>好多人是背向着神，不是面向着神，单单这个态度就不对了。好多人是取巧的，可以作就利用来做，他不是跟从神，不是在主的路上。所以，神才多方面来考验我们，来对付我们，看我们向祂的心是绝对还是不绝对！看我们的心向祂忠诚还是不忠诚。祂还考验我们:这个用下去，会骄傲不骄傲。神要知道你这个人用了以后，你怎么样？如果经得过时间的考验，在神面前都有学习，用处就愈来愈大，从一个到二个、三个，用处就会愈来愈多。如果你自己骄傲，自己就停在那边，死了，没有办法了。</p><p>因为神对我们的要求，是我们对他有一个绝对的心，有绝对的态度。对真理呢，对就对，不对就不对，没有妥协的。我们今天对神的真理，那个绝对性要认真对待，不要不纯。不纯就是不纯洁，不洁净。我们人不纯洁，给人家的东西也不纯净，所以彼得才说，要用“纯净的灵奶”来喂养，人是不纯净的，道理也不纯净，人是不纯净的，从人出来的都不纯净。</p><p>很多青年人来交通，追求主，一交通路就直，不然，十年或几十年或几年看看，就跑不上属灵的道路。所以我们现在藉着交通，共同向着属灵的道路奔跑，不是突出谁，都是大家向着主------要主，这些人合起来才有办法。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

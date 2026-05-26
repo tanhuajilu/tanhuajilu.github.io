@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十二日</h1><p class="meta">主耶稣基督的见证 · 第53/365段</p><p><a class="btn" href="s052.html">上一篇</a><a class="btn" href="s054.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s053.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们人不能作出什么，作出的，常过于自己能力所能作的。你若知道主要求我们作什么（主告诉我们作什么），我们去作，主就负责赐恩典，负责给供应，负责我们的工作。</p><p>主跟工作二者相比，认识主是谁，更为要紧。我该作什么，是在我这一边，认识主是谁却是“充实主，充实基督”。在每个时代，好多人对主的认识是一直往前的。如果停在盖恩夫人，停在路德马丁，停在过去一些人所看见的，就不行了。这些东西在当时是最好的，但是事过境迁，在主的工作上，主是一直拣选器皿来作他所托付的工作，所以才不能把死一套一直维持下来。许多人、许多老年人没有进步，就是因着没有新鲜，在主面前，他们离开了当初的，所以愈作愈漏掉、愈作愈漏掉。</p><p>公会起初都很好，看教会历史，长老会也很好，后来就一直漏掉；弟兄们也是很好，但今日普遍都漏掉。好像聚会处本来也很好，今日，在全国、在海外都漏到不像样。对这些（自己）的漏洞要认识，不然你最多维持现状。</p><p>你在属灵世界所经过的，跟起初的不一样。不管怎么做都没法摸到起初所摸到的，所以，赶不上神今天的工作，就漏掉。道理再多，没有什么希奇。历史上伟大的真理这么多，我们也不能作，不然，也跟不上神的工作。所有的问题就是人够不上的问题。人若能够上，今天神荣耀工作是更荣耀，带得更荣耀。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十九日</h1><p class="meta">主耶稣基督的见证 · 第149/365段</p><p><a class="btn" href="s148.html">上一篇</a><a class="btn" href="s150.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s149.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们也是这样，主是爱，我们没有亲近主，里面就空虚。所以不是去追求神，神就住在里面和我们同在，作我们的一切。我们写信常常用“以马内利”做祝福语，以马内利就是“神与我们同在”阿！</p><p>神与我们同在，现今在我们里面。神与我们同在，就叫我们有内在的生命，因此才会感觉有爱。如果在外面讲爱，口里讲起爱，里面还是没有爱。一般讲爱，都指着外面要有个什么东西，在外面作了什么才叫爱，但我们作这些，能力和果效还是很有限的，因为“人”有限。人如果碰到神，爱才是无限。圣经说:“耶和华的慈爱遍满大地。”（诗篇119:64）</p><p>只有神与我们同在，神的慈爱才会显明。神若同在，我们就是神所要得着的人。祂不只充满这个，充满那个，当我们一起的时候，祂还要再充满。一个团体里，每个人都有自己的看法和意见，要去讲，不会听得进去。但是，神作工，就把拦阻撤去，然后建造。</p><p>如果没有拆毁就没有建造，所以神把人从自己里面拯救出来，也叫人从许多的东西里面出来。因为人的自己是最不服神的。虽然我们在这里有交通，别人也可以说:“到目前，你们还没有作出什么？”实际上，我们也不能作什么，更不会作什么。但神作了工！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

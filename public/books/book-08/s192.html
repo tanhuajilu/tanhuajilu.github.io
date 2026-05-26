@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百九十二段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百九十二段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s192.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>以利，他的儿子就不像父亲，连撒母 耳的儿子也不跟撒母 耳走。这能不能怪撒母<br>耳？你能作先知，你儿子怎样？大卫，他儿子还要追赶他，夺他王位，这怎么说？这就是神藉此来造就祂的器皿。<br><br>所以，大卫诗篇写得这么高，就因他有外面的反对，有儿子的叛逆。圣经记，大卫经历被扫罗追赶，那时能写出那样好和神亲近的诗篇。他有儿子做他的仇敌，要夺他的王位，他藉这个来跟神更亲近。这一个就是属灵的荣耀。人是用道德来衡量，用人的观点来衡量，但神的工作是超越的，就是这么荣耀。<br><br>现在，很多人问，孩子不听话，怎么教孩子听话？怎么办？我说:＂你对主这方面，先弄正常，先弄好。怎么办？他不听你，你没有办法。你只能到主面前去，你蒙恩典！他（你儿子）这样的摆在那里，你只有去仰望神;<br><strong>诗59:9</strong>;<br><strong>诗146:5</strong>;<br><strong>赛45:22</strong>;<br><strong>犹1:21</strong>)，求神给你认识你自己不会做，不会传。"不然，很多人给人家传福音，好像这边一大批信主，那边也一大批信主，其实，自己没有做什么的。神就用"你"家里的人来对付造就你。</article><footer class='nav-links'><a href='s191.html'>← 上一篇</a> <a href='s193.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

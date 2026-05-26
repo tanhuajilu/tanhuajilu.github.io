@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十六日</h1><p class="meta">主耶稣基督的见证 · 第75/365段</p><p><a class="btn" href="s074.html">上一篇</a><a class="btn" href="s076.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s075.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:现在这时代这情形，主要求我们的，不只有忠心，也要有见识，具体方面见识是那方面？</p><p>答:见识，也是没办法定规几条几条的，是看你这个人里面灵活不灵活。一个东西给你看，你就懂得说怎么对待，这是见识。也可以说见识就是智慧，所罗门有智慧，案子一来，他就知道怎么样办。不要等三年五年，他就可以懂得！</p><p>你在神面前在属灵上有学习，属灵的眼睛擦亮了，问题摆出来，你就有见识。</p><p>主说要有见识！什么见识呢？按时分粮。我们都是只有一个东西，大家来吃。好像老人家要吃，你炒菜炒半熟，他咬却咬不动。你有见识，煮菜给老人家就要煮烂一点。给年青人吃烂的也不行，他要炒一炒就端出来，爽爽脆脆的，才合味道！小孩子刚生出来，也没有办法吃干粮，小孩子需要喂奶给他吃。这就是见识。没有见识的，会什么都给他（小孩子）吃，结果吃不下去。属灵的东西，有见识就是有智慧。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

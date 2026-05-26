@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十一日</h1><p class="meta">主耶稣基督的见证 · 第284/365段</p><p><a class="btn" href="s283.html">上一篇</a><a class="btn" href="s285.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s284.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你所提的问题，这问题是普遍性的，到现在还没有一个好的方案、方法来对付。即使有，也不能对付，因为人是“滑”的东西，要抓抓不住。明天都变了，你哪里有办法。以前很属灵的，1949年，过一个年就变，就跟世界跑，站在属灵的对立面了。人是很滑的！</p><p>自己在黑暗中，不知道在那里，他还以为“我这个是时代的光，跟着时代的光走。”他这光是从天上来呢，还是从地上来呢？所以五十年来这么多经历，也是叫我们学习功课------不灰心。按着人是要灰心，里面不灰心！神也不灰心，神的旨意一定要达到。神不灰心，神还是作工，神在各地已经留下一些遗民忠心对神作见证，这个见证只是少数的人。</p><p>我们盼望说我们的复兴是人多的观念，一般人对复兴的观念就是:人多就是复兴。神的观念不是，神的观念，复兴乃是神的灵、神的生命能够藉你流通出去。复兴是神能藉着教会、藉着信徒彰显他，来发挥它的光辉。因为神造人的目的，乃是要住在人里面来彰显神。</p><p>人堕落，神就来救赎人。神救赎人也是叫人盛装神，让神从里面出去。神得着教会，也是要藉着教会来彰显神，彰显基督，让基督在凡事上居首位。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

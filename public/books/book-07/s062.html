@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月三日</h1><p class="meta">主耶稣基督的见证 · 第62/365段</p><p><a class="btn" href="s061.html">上一篇</a><a class="btn" href="s063.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s062.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:讲到神所作的，救恩是完整的，丰满是完整的，经历上、时代上都有这个层次。地方也有不同情况。主要是按里面圣灵工作而作，但神也有外面显出来的东西。</p><p>答:像卫斯理公会，神带出来的复兴也是很大的，后来，组织就很严密。也是在四十年代，教会在各地方有安排配搭，有一个牧师就讲:“这一套卫斯理会老早就讲了。他们同工的组织、教会的配搭很严密的，但是一代一代的塌下来。”因为有这一个就停在那里，就不是继续去向着生命再有认识了。以为有这一套来作就最好！</p><p>所以倪弟兄在《圣灵的水流》里就说，今天作盖夫人还不够，作宾师母也不够，做马丁也不够，圣灵的水流是往前的，并且是更丰富的。为什么丰富？因我们现在因信称义也接受过来，宾师母那属灵东西也接受过来，弟兄会的好东西也接受过来。现在接受属灵遗产已够你用不完，很丰富了。我们不懂得应用，许多东西却变作用来作死教条，好像浪子把家产分过来，给浪费完了，贫贫穷穷的才再回来。所以神在每个时代，他都作出反应，都作工。今天在这个时代是普遍生命贫穷的，不是说没有，是贫穷。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月八日</h1><p class="meta">主耶稣基督的见证 · 第189/365段</p><p><a class="btn" href="s188.html">上一篇</a><a class="btn" href="s190.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s189.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你所不知道的，经过交通就知道，不通的经过交通也通。不是把道理讲清楚有用，道理讲清楚也不会通的。如果有伤痕的，话出来，光也出来，话出来，灵也出来。主的话就是灵，就是生命，主的话叫我们里面满足，主的话出来，就要像刀戳在人的心里。</p><p>有人说:“我碰到某人，很受伤。”我说受伤就好，好多时候，我们心里是硬板板的，要打，打不破，一旦受伤就好。所以有一首诗歌说:“你怎没有伤痕。”那些经过破碎的，他里面的东西能出来，没有破碎的，他的灵不能出来！</p><p>今天需要的，不是道理怎么讲，道理讲对了，还要问有没有灵出来，就是说我们的灵要出来。因为这灵是神居住的地方---“圣灵和我们的灵同证我们是神的儿子。”你怎么知道自己是神的儿子？（应:因圣经说。）圣经讲归圣经讲，现在，还有圣灵和我们的灵同证，因此我们呼叫阿爸父，这是圣灵里的实际。</p><p>圣灵不是给人研究的，不要去研究圣灵，要碰到圣灵，充满圣灵，活在圣灵里，交通在圣灵里。没有圣灵就没有交通。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

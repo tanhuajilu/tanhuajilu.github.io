@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十八日</h1><p class="meta">主耶稣基督的见证 · 第59/365段</p><p><a class="btn" href="s058.html">上一篇</a><a class="btn" href="s060.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s059.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我碰过一个奋兴家，他说倪柝声太啰嗦，什么灵魂体...他说，叫人热心爱主、去做工就好！还要这样分别？我说:“是可以这样。但你作你的，你没有底。”他作奋兴家，解放前，还到国外纽约，是一个很出名的中国布道家。但是，他的工作就到布道为止。信徒的问题，他没有办法帮助。因为差得很多呀！所以，他写出来很多的书，就否定灵魂体的分开。我说这个人，他只能作一点工作，讲一点道理，属灵方面，没有路去带领人。这是肯定的。</p><p>《人的破碎与灵的出来》，就是比《属灵人》讲得更具体的。因为《属灵人》是倪弟兄二十多岁把属灵人的亮光集中、综合起来写的，也是借着别人的光和他所看见的连起来再讲出的。到《人的破碎与灵的出来》这一本，已经经过一段时间了。那时，N已经四十多岁（经过二十多年），这些年，他经过了不平凡的道路，经过反对、攻击、误会、教会的对付等，就是经过这些东西，出来了，就有这个东西。</p><p>国内，很多人经过一些不平凡的道路，多多少少总会带出一点属灵的东西。没有过去这些道路，就没有他们今天的东西。这是很现实的。他们有这个，摸到实际的东西，对讲出来内行与否，里面有东西否，马上感觉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

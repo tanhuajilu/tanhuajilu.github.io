@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月三十日</h1><p class="meta">主耶稣基督的见证 · 第89/365段</p><p><a class="btn" href="s088.html">上一篇</a><a class="btn" href="s090.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s089.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>所以你那里的某弟兄，要训练、要查原文，当局不许他乱搞。不能把香港的方法带来大陆，带来，就为别人带来困难。有一次，发现了问题，就影响整个地方，因着他就去追查。这就是他“工作”的结果。如果你没有这些，无声无色的作，也不会管你的。</p><p>国外没有这些环境问题。许多人在我们国内做了那么多，在属灵的价值上却没有很多。这样说起来，或许人就说:“你这么骄傲！”我们不过讲事实。如果你不小心，自己大吹大擂，讲些没有实际的话，当然不踏实，你自己也觉得。如果讲事实，你得救，你就说这事实，不会怎样。</p><p>二十年代时，人说:“你这么骄傲，你说你得救！你得救，恐怕到天堂再敢说，怎么敢说你得救？”现在，“我得救了。”这很平常，因这个是一信就白白得到的。以前像中世纪的修道士，要受什么苦，吃苦、苦待自己来作一个属灵的人，所以，神让人一直作，作到没有路了。（属灵的东西都落到人为里面去了！）</p><p>你还有路，神还让你去作。人对神的工作，凡是神的工作，人就不服气。不服气的他就会讲话，斯文的就说斯文话，不斯文的就讲粗一点，讲比较露骨的话。外面很多人一直评论、议论，给人模糊，乱在一起。如果是清楚的就不会乱。N讲一句话，“我知道我所讲的是什么。”我们对真理，要知道所讲的是什么。我们也知道别人所讲的是什么。这就是个很实际的东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

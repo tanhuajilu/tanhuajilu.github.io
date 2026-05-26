@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月三日</h1><p class="meta">主耶稣基督的见证 · 第123/365段</p><p><a class="btn" href="s122.html">上一篇</a><a class="btn" href="s124.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s123.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有作农民的弟兄，信主以前，别人田里的大地瓜，都给他挖回家去，到他信主以后，就一个一个归还，这就是得胜。不归还是不行的。这就是对付罪的经历。有这经历就是因着得胜的生命。</p><p>你信主以后，说错了一句话，良心就感觉不平安，要赶快给人赔不是。这就是得胜的生命。得胜的生命并不是什么奇怪的东西，以为你有了，就给人家感到你很清高，不是！你还是很正常的去做人，不过，实在你里面有一个东西，别人（没有信的人）是没有的。你有了这一个生命，若多拿了别人一点东西，就会不平安，你会去对付。这就是属灵的感觉。若没有感觉就是死的，是木头人吧了，人家把他摆到那里都无所谓。</p><p>所以宗教徒就像模特儿一般，他里面没有东西，如果有东西，他一下子就有反应，一谈就交通，就接起来。没有生命的，都是讲宗教的，讲外面的，里面没有东西。</p><p>神给我们的，是完全的救恩，这救恩就是基督耶稣。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

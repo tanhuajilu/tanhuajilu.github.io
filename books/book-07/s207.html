@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十六日</h1><p class="meta">主耶稣基督的见证 · 第207/365段</p><p><a class="btn" href="s206.html">上一篇</a><a class="btn" href="s208.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s207.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>现在有人反对倪柝声，用这个来作文章，“这个不对，那个不对。”你说不对吗？你自己要讲出来:一个教会在地方上是为着做什么的？教会在哥林多就是哥林多的教会，在以弗所就是以弗所的教会，在别迦摩就是别迦摩的教会，总是一个地方就有一个地方上的教会。一个地方没有两个教会，这是神的教会在地方上出现的情形。</p><p>另外一方面，教会是基督的身体。身体包括多大呢？包括所有有基督生命的人，过去，现在，将来，中外所有有生命的人都包在这身体里面。所以擘饼之时，这一个饼就是基督，也是代表基督的身体。我们记念主，不只记念他，爱他，也见证这是教会的见证，这是基督的身体。若不分辨是基督的身体，就是吃喝自己的罪了。</p><p>所以擘饼记念主时，不是只代表我们几个人，这饼也是代表基督的身体，包括了保罗、约翰...以及所有信徒。我们是在基督的身体里。擘饼聚会就是这样的一个见证，是个严肃而伟大的事。</p><p>我们在基督里成为一体，就是指着我们在身体里，这身体是彼此有感觉的。脚痛时，全身都有感觉，因为同在一个身体里。我们是基督身体里的一部分，大家一同受苦，一同得荣，大家都有生命的感觉，别一个基督徒，他生命的情形怎样，你也会有感觉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

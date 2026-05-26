@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十二日</h1><p class="meta">主耶稣基督的见证 · 第224/365段</p><p><a class="btn" href="s223.html">上一篇</a><a class="btn" href="s225.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s224.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有一张文字数据把中国忠心爱主的弟兄姐妹的名字都列出来。我说，现在天国还没有到，你已在这里发版，圈出得胜者来了。你会发版吗？这些话，就是不自量力的。连你自己也糊里胡涂的，你竟会把哪几个是爱主的姊妹，哪些在中国的弟兄是忠心到底的写出来。（其中有些人，我们是清楚了解他们实情的。）这些，你也敢这样写！</p><p>所以，无论人家讲好的，或讲坏的，你们都不要随流。坏或好，我们不要讲他。我们有真理讲真理，若不是真理，我们就表态说:“这个不是真理。”就让它过去。天天在争这个对，那个不对，争得了吗？这些都是无了无时的。国外，许多人就是喜欢争，争了那么多，争几年都争不了，教会塌下去了，还不知道，还在那里争。</p><p>争谁对，谁不对，又把倪弟兄的历史拿来翻，要问到底是怎么样的？你还这样，就没有路了。他就是不对，也没有关系，神还会对付。你要争，自己也不懂得多少，就只是凑热闹，讲讲而已，搞这些做什么？</p><p>有一位姊妹，一面反对倪柝声，一面又在国内要为倪要求政府给他平反。不反对已经好了，你还平反，究竟作什么？这都是矛盾的。一个对属灵的事不清不楚的人，就是做了事，也是矛盾的，矛盾到自己也不知道。他还公开说:“我跌倒是因为怎么怎么。”我说，千万的基督徒，都不会像你这样跌倒。</p><p>倪弟兄归倪弟兄，你跌倒归你跌倒，你不要把跌倒归倪柝声。她就是这样讲，又说要给倪柝声平反，你看，这个矛盾不矛盾。这个就是两面派，在属灵上，就是双重人格的，今天变，明天又变，怎么会一心一意呢？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

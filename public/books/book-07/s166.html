@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十五日</h1><p class="meta">主耶稣基督的见证 · 第166/365段</p><p><a class="btn" href="s165.html">上一篇</a><a class="btn" href="s167.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s166.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>今天，我们在学习讨神喜悦，让神使用我们，不要自己用自己，因为我们不会作什么。凭自己的，到最后还是没有路走。我们不是作人的工作要给人用，乃要学习给神用！以前，进贡皇帝用的东西，只能给皇帝用，别人不能用，这些都是分别归皇帝。今天我们分别归神，也归神用！别人没有权用我们。</p><p>要作大工、要热闹也可以阿－－那些人请我们到教堂去传。但是，我们觉得这不是我们要作的！因现在情形是那么复杂，我们没有能力改变它；我们估量自己不够份量改变它---要帮助一个人也没有办法，哪能改变那么多人呢？</p><p>我们能作的，就是在生命里能通，在生命里通了，大家合起来，如水流般汇合，可以成为大一点的水流，慢慢汇成像长江出口才显出能力。长江水流那么大，都因上流千条万条支流汇流，所以到出口处水流就大了。神的工作借各支流汇在一起，力量就大，无论传福音、造就信徒...作工有冲激力，能把人冲倒。</p><p>现在很多人传福音都在背重担，初信的信了也半死不活；还要他们怎么传福音抢救灵魂？还要他们作，死得更快。传福音就像生孩子，必须出代价，有神带领才有用。所以要认识神，清楚生命的路。你开始有点清楚，以后就更清楚。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

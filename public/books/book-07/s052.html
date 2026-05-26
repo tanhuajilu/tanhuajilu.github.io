@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十一日</h1><p class="meta">主耶稣基督的见证 · 第52/365段</p><p><a class="btn" href="s051.html">上一篇</a><a class="btn" href="s053.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s052.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>旧约里，从会幕到圣殿，到新约，圣殿就被拆了，教会却是圣灵的殿。这些信徒聚在一起就是属灵上神同在的地方，就是圣殿，就是神在这时代的教会。这教会是一个奥秘，这奥秘是由基督加上教会，这奥秘，以前没有叫人知道，现在却向人显明。</p><p>以前的先知要看看不到，现在都显现在人间。所以主耶稣说，你们比先知更为有福。</p><p>教会的历史也是一个时代比一个时代更靠近天。以前是杀羊、杀牛去拜，现在不要，因基督一次赎罪，永远赎罪，这永远赎罪指明基督的工作没有改变。</p><p>人得救了，而在这边常常是起初是新鲜的，后来搞来搞去，在我们这边也慢慢地褪色。所以圣经才要我们不要离开从天上来的异象。从天来的异象，是当初我们得救时，这个对主的认识，这是个基础，你不要离开主。</p><p>那天，X福音堂的弟兄讲一句话很好，扫罗问主说:“你是谁？”这太无限了，讲不了。这认识非常的大，本身就是进步。因以前认识主是谁只认识他是历史上的耶稣，那天，他觉得这话很伟大。第二句:主阿，我该作什么？这也是相对，今天我该作什么，明天我该作什么？对这个该作什么，也是一直一直有要求，一直高的。你以为作传道就作到这里，但根据你的长进，该作什么，是你有多少，要求你多少。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

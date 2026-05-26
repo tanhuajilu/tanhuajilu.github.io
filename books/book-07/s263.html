@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十日</h1><p class="meta">主耶稣基督的见证 · 第263/365段</p><p><a class="btn" href="s262.html">上一篇</a><a class="btn" href="s264.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s263.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我说:倪弟兄确实是在二十世纪神大用的仆人。什么大用？就是他讲人要被破碎这个问题，“人的破碎”，这是给二十世纪神的仆人一个最大的帮助。最大的就在“破碎”，这点就够了！其它的，倪弟兄还讲了“教会的道路”，还有很多关于解经的也很好。</p><p>我说神用他这个就够了。</p><p>神用每一个人不同，有一点就够了。我们都是肢体吗！他有他的价值，我有我的价值，鼻子跟眼睛就是不同。鼻子有鼻子的形状，眼睛有眼睛的形状，神造出来都是丰富多彩的，叫大家在教会里彰显他的能力，彰显他的荣耀。你不必模仿我，我也不用模仿你。但是，若要效法人，就要像保罗效法基督。各个人都有他的工作。</p><p>有弟兄祷告说:“主阿，求你的话说到我们里面。”你这样祷告了，主的话说到你里面了，但是，弟兄姐妹，主的话有没有给你摸到？到底主的话说到你的思想呢，说到你的感情呢，说到你里面那里给你摸到？说到每一个人里面这一个，每一个人是不同的。菲律宾的一位弟兄，他是负责弟兄，他说:“这一个，保罗也不会分辨呢！”我说:“保罗怎么不会分辨？保罗说，神的话如同两刃的利剑，会刺入剖开。”有意见是出于自己的，还是出于神的，保罗会不会辨别？所以今天你所交通的，你必须能说:是从灵里出来的，就出于灵。如果缠了一些事情，人就不干净。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

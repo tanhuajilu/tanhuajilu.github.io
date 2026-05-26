@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十六日</h1><p class="meta">主耶稣基督的见证 · 第360/365段</p><p><a class="btn" href="s359.html">上一篇</a><a class="btn" href="s361.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s360.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>基督复活的能力，第二个方面是有吸引的力量，有粘的能力。你会给这复活的能力粘住。什么时候，你看到一位弟兄有属灵的路，你就很宝贝，你被粘在一起。你跟一些有这生命的在一起，大家都会粘在一起，这很自然。</p><p>你没有摸到这个复活的能力，跟弟兄姐妹见面，里面就没有跳动。很多人说:“我来找你，怎样？”我说:“你来交通吗？”可是他来，有见面但是没有交通。什么意思？有见面，是一般的见面，谈很多平常的事，但讲到属灵的事，他谈不下去。</p><p>在我们中间的交通，所有交通出来的，谁能通，谁不通，你就有感觉。所有能通的，有个东西给你对流。象这门开起来，会对流，那边就没有对流，因那边塞住了，这很实际。我们的交通，能交，就要能通，还不通，就忍耐，以后再交通，就愈来愈通。不通的就塞在那里？塞住的，就只有这么一点点。</p><p>愈交通，就愈开阔，不然，都是心底很窄的。心底窄的，都是在道理看法上去转的。心底宽阔的，度量宽阔的，就能在客观方面接受他能接受的。属灵的东西很实际。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

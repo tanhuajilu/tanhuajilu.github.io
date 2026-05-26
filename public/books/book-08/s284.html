@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百八十四段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百八十四段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s284.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>凡是人自己，要用人的手参与神的工作，代替神的工作，他的生命都在那里发死。所说到的"死"，不是指永远沉沦不得拯救的死，是指人在属灵上失去功用，没有了功用。<br><br>有时，人送我一点药品，提醒我:要常注意有没有过期。我都没有注意，药品已经过期一、二年了，却拿来吃，吃了没有功效。一过期就已经失效了，已经变质作废了。属灵的东西是很容易失效的。肉体一渗透，人的意见一渗透，就失效了。因如果不失败，让人做成功了，要将神摆在哪里呢？人都是凭己意、凭肉体，＂我来做＂的。神参透一切，监察人的心，监察我们的工作，神在遍地观察谁是向祂心存诚实的人，神也向他正直。<br><br>说到我们的灵在神面前，最主要是跟神有正常的关系，里面是排对摆正的，这样一来，要作什么，问题都不大，如果用外面的来作，怎样也要作，越作就越胡涂。<br><br>扫罗就是这样，撒母<br>耳已经跟他约定七天，看着时间快到，还没有到，就自己勉强献祭。献祭有什么不对呢？道理上没有不对，但刚献完祭，撒母<br>耳就到了。撒母<br>耳说:＂你做的是什么事？＂扫罗说，＂我看你没有来，看时间差一点就到，我就来献祭。＂撒母<br>耳说:"你做胡涂事了，现在你的王位必不长久，神已经寻着一个合他心意的人，因你没有遵守耶和华所吩咐你的。")你看，献祭是好事，扫罗却因此把王位都牺牲掉了，为什么？因为他越份。</article><footer class='nav-links'><a href='s283.html'>← 上一篇</a> <a href='s285.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

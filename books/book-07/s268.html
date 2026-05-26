@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十五日</h1><p class="meta">主耶稣基督的见证 · 第268/365段</p><p><a class="btn" href="s267.html">上一篇</a><a class="btn" href="s269.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s268.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你是不是看在地上的？是不是看在地上要受人家的欢迎？若是，我们的财宝就不能带到天上去。</p><p>如果我们看到这个，有一天，神会夸奖我们说:“好！你这又良善又忠心的仆人。”</p><p>不然，那一天，主会说:“我不认识你。”</p><p>现在，你看到哪些是真的，哪些是假的吗？哪些你能抓，哪些你不能抓？你看到了，道路就清楚了。</p><p>如果你糊涂，自己就入迷路了。是不是？今天，迷路了，就没有路走。所以，今天，主要求教会，主要求我们，就是要我们“干净”。你的灵干净，教会干净，我们来做人，就是宝贝。</p><p>我们不是为着吃，为着穿，要快乐，吃吃喝喝穿穿就完了。我们是以主为千万人中的第一人。没有比这个更好了。你知道，有一天，你要复活，你就好像主耶稣一样。那是属灵的，属天的，是复活的。到复活的时候，我们都必像祂。</p><p>选自见面记录四（1）2000年4月21日晚上</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

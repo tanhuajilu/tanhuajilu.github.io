@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月六日</h1><p class="meta">主耶稣基督的见证 · 第96/365段</p><p><a class="btn" href="s095.html">上一篇</a><a class="btn" href="s097.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s096.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:圣殿分作至圣所.圣所和外院子三部分，预表我们对主的经历，具体怎么去经历？</p><p>答:在经历上，很多真理，在讲说上有先后之分，但在神的工作上，却常是同一个时间的.比方说，你一得救，就有神的生命，就有光，就有启示。启示一来，有一个新的力量给你，你的魂也得着更新，在好些方面，自然而然有分别为圣。你且看好多初信的弟兄姊妹，他们的生活就有分别为圣的感觉。</p><p>许多弟兄姊妹，一信了主，要到庙里，脚已在门口，心里已经感到难受，因他知道这身体是圣灵的殿，他不敢进去。像这样的经历，都没有分甚么层次的，没有什么是先后的，一方面灵跟主有交通，一方面魂的部分因悟性更新也懂得一些神的事情。就是在外面的一些事，在好多方面，都会懂得。你说吃什么，说不吃什么，他们会懂得。拜偶像的东西就感觉不要吃，不只道理上是这样说，（道理还没有听呀！）他里面会有感觉:我信主了，拜偶像这些东西我不可以吃。他都会懂。</p><p>我们的生活常常同时有里面的感觉，有思想里面的明白，也有身体上的一些行动，这些都加在一起。当然，其中也有掺杂的情形，因此，神就继续在我们身上作工。神作工是借着他的道。神的道是活泼的，好像两刃的利剑把骨节与骨髓剖开，连我们的心思和主意都能辨明。剖开就是分开。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

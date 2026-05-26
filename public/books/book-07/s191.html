@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十日</h1><p class="meta">主耶稣基督的见证 · 第191/365段</p><p><a class="btn" href="s190.html">上一篇</a><a class="btn" href="s192.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s191.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有一首诗歌说:“复兴你工作，主，叫生命供应出来，医治众人。”属灵的东西不是为着给你道理，是要产生属灵的医治叫受伤的痊愈。</p><p>因此，在交通里，要有属灵的敏锐感觉，你里面敏锐，对事物的反应就会清楚。有些人在这件事上是有点学习，但是也有危机，因为他们有一点感觉，就用这一个来夸口，分析这个，分析那个；这样自己就落下去了。在我们，知道了也不随便讲，在这里，要学习快快的听，慢慢的讲。现在的问题是，听，听不进去，讲，却讲了很多。</p><p>其实，每一个人都有神的工作，神作了工，我们都不知道，我们天天经过的都有神的工作。像你们现在所听，所交通的这些情形，也是神给的功课，叫我们去学习，叫你们在其中认识，有所学习。这就是哥林多书所说的:分门别类的事发生，都为叫我们被显明。谁是对的，谁是错的，分门别类的人增加是要把有经历的人显明出来，要在这混乱的时候，给人找到有属灵东西的人。</p><p>这么多人摆在这里，就给你分别谁对谁不对，谁有真理，谁的不是真理。不然不对的当作对的，对的也当作不对，乱套乱搬就不行了。在里面有学习的，就有从里面来的感觉。我们碰到什么东西都会有感觉，碰到冷就是冷的感觉，碰到热就是热的感觉，碰到肉体你知道，碰到属灵的交通，你也会感觉，你的深处会给你打通，这就是奥秘的东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

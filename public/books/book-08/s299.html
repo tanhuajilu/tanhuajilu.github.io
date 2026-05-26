@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百九十九段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百九十九段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s299.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>问:工作和见证有什么不同？<br><br>答:你所说的见证是指教会的见证吗？（应:是，就是指主的心意所要得着的。）这有分别。我们个人是基督徒，教会就是基督徒的家），基督徒合起来就是教会。至于工作，有分为个人的工作，和有教会认识的工作。例如:差会，它不是教会，它只是一个工作。如果把这个当作教会，就乱了。今天有好多聚会讲道，也是工作性质的。他那个讲道的工作，跟教会见证的性质不一样。好像在中国有好多出名的聚会，我们就认定它是工作性质的聚会。<br><br>工作的对不对是一件事，它不过是工作。也可以说，它是个人的工作，因为他个人就包罗了一切；一个讲道的人就管理了整个堂，那一个会所也是他的。教会就不是了，教会是大家的，我没有辨法没有你，你也没有辨法没有我，彼此都觉得需要。这个才需要同工，一同事奉才能摸到身体。所以工作跟教会或是见证，性质是不同的。<br><br>那么我们个人的路，一定要认识清楚，也要走通，才会真正认识教会，才会跟众圣徒一同事奉。只要我们每一个个人都差不多上了轨道，合起来就强了，见证才能出去。一个、两个强，也不会解决问题，是大家都强才行。像衣服的布是一条一条的纱线织起来的，纱线质量好，布的质量才好，如果纱线有好有坏，布由大条、也有小条的纱线纺织起来，衣服就不会平，穿起来很容易破。</article><footer class='nav-links'><a href='s298.html'>← 上一篇</a> <a href='s300.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

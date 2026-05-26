@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月七日</h1><p class="meta">主耶稣基督的见证 · 第127/365段</p><p><a class="btn" href="s126.html">上一篇</a><a class="btn" href="s128.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s127.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>没有人告诉你，这就是得胜，你不知道也好，如果知道，你会以为自己是得胜者，自己要挂上得胜者的头衔了。头衔戴到头上来成了个冠冕！不！你不知道，就有这个经历，有这些经历就是叫你得胜。所以，得胜就是基督，不是我们去作。将来被提，也是提“基督”，不是我们去作好。</p><p>以诺因信被提，他与神同行三百年，并且生儿养女。他在没有被提以先，已经得了神喜悦他的明证。什么种的人能得着神的喜悦？希伯来书说:“人非有信，就不能得神的喜悦。所以人的信，就是神最喜悦的。希伯来书第十一章，你好好去念，这些跟从神的人，都是因信，因信...因信！</p><p>参孙，是大家都不喜欢的，可是，他还排在信心伟人之列。作者说，如果要列举，还有很多，大卫、参孙...一个一个举列，他们都是因信，因信...所以神对我们是凭着基督，神因着基督而看我们。</p><p>如果神按我们人来看，不行！再好的人在神面前也是破布，破烂的衣服。神是看在基督脸上来看我们。我们每一次到神面前，都是借着基督的宝血，借着基督作我们的义，坦然无惧到神面前。不管谁，到神面前，都是靠着主耶稣，我们是靠着主耶稣到神面前去，而神也是在基督里来看我们。</p><p>我们常有失败，为要叫我们承认人是失败的。可是，我们常不只不承认失败，还要去面对得胜（要得胜）。我们想:今天失败，明天不会失败！事实是，我们一次又一次的失败，想下一次要得胜，下一次还是失败。这些经历要叫我们认识得胜是主，叫我们转向主。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

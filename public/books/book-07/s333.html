@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十九日</h1><p class="meta">主耶稣基督的见证 · 第333/365段</p><p><a class="btn" href="s332.html">上一篇</a><a class="btn" href="s334.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s333.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>灵与魂分开了，你自己对灵、对魂就清楚，不会混在一起，不会搞在一起。它们的功用分开，才能使用灵来作工，才能对付我们的讲话，对付外面的做人，才会对付思想，对付我们的感情，然后让我们里面的东西能反应出来。就像照相机，外面有镜头，里面有底片，二面都要好。如果里面的底片不好，外面镜头好，形像照了，还是模模糊糊的。如果里面的底片好，外面的镜头不好，形像照进去，也一样模糊。</p><p>所以，我们外面的思想要被对付干净，才会把神的话，正确的领会到里面。我们里面神的话能清楚出来，也是要通过更新的悟性，才把它发表出来。</p><p>这样一讲，你里面通了，外面也通，听的人里面通，外面也通。不然，你讲，大家都“阿们”，但是里面不会通，矛盾不会解决，这是肯定的。</p><p>某地有二位弟兄来交通，早上来，晚上就回去。他们说，他们里面就是黑暗，怎么样都没有办法解决。到了我们中间时，他们二个人都没有说什么话，我们也没有给他们说什么话，就让大家讲，大家谈。莫名其妙，他里面的重担反而脱掉了，就轻松的回去。这道理怎么样讲？大家晓得，这是生命出来的问题。所以我们工作的把握，不是靠我所讲的。我们工作的把握，就是圣灵。如果我们靠圣灵作工，圣灵必定作在弟兄姐妹身上。这是我们作工，事奉主多年，所得着的一点结论。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

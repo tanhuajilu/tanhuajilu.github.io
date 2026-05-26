@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月三日</h1><p class="meta">主耶稣基督的见证 · 第337/365段</p><p><a class="btn" href="s336.html">上一篇</a><a class="btn" href="s338.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s337.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>因为那个时候，我们不是自己的人，就是当作一个机器来使用，是不是？都是靠主的恩典能力。按照人看，我们的体力，到那里面去，不久就要报销了。后来回来，那些人说:“啊！你还活着啊？”我说我还活着。</p><p>我想，回来了；如果主给我恩典，就像希西家，给我再活十五年。我今天想一想，神已经给我再加一倍了。这十年，表面上，我什么都没有作，实际上又是神给我们好多恩典---可以给我们好多人彼此一起交通。</p><p>这是神的工作，不是我们作的。</p><p>我们很少出门，就在这个家里，我也很少出这个家门。在我八平方的小房子里，活在那里。但是在这八平方的地方，来见面的交通的，也是上万上千的。这就是神作的工作。我们到哪里去请人来？人也不让你请来，哪有这么多人到这里来找你这个无名小卒？来的，他们都是要求来接受交通。因为一个人来，我们要负责任！有时，我们也不敢；一个人来，为着安全，提心吊胆---还有环境的关系。但出于神的，神就负责，所以这几十年，就是学习了神负责这三个字，不管生活、家庭、遭遇、工作，都是神负责。很多难处，主带过去，恩典是超过我们所想的，这个是神的工作。如果我们没有摸到无限里面，而在有限里面，就是太小了！只那一点点！摸到无限，就用不完，因为他是主，他负责。</p><p>我们这样交通，是把一种大概，给大家有一个印象。以后你们回去可再看一些属灵书。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

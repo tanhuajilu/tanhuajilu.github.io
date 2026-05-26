@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百八十八段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百八十八段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s288.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>答:我们要不断的接受交通。借着跟主的交通，主自己会给你越看越清楚，另一面，也借着属灵书叫你得到交通，越过越看得清楚。还有，借着弟兄姐妹见面，也帮助你得着交通。另外，你还会借着在现实的环境中所碰到难处，叫你去认识神。神就是用多方面的来叫我们认识他。<br><br>现在会更清楚吗？我们还要继续让神借着时间，借着事情，借着光照，多方面来带领我们往前走。＂刚刚接触＂，就是叫我们要重新起头。重新有一个起头，就像重新上了轨道，开始有一条路走。<br><br>问:人数增多是祝福吗？会否教会有问题，在人数上，神不祝福。<br><br>答:什么叫作神的祝福？神的祝福是在人不够以外，神作工。祝福就是说，在我们人这方面，在人以外，为着神的需要去作工。像五饼二鱼，只够一两个人吃，五千人怎么应付？就在人够不上之时，经过神的手祝福，就满足了需要-16）。所以这个祝福，都是在人不够之外，神自己作工。<br><br>好多人数的增加，人的得救，是神在我们这个器皿不够用以外，去祝福去作工，是为着神要救他们。但是人本身还是有问题。人在工作上有点祝福，不一定他这个人是很好，被神大用。因为神在人不够以外，去祝福去作工，所以在工作上，我们就是要仰望主的祝福。根据我们这器皿，实在没有办法去作那些工作，是神在祂自己的喜欢里，作祂的工作。</article><footer class='nav-links'><a href='s287.html'>← 上一篇</a> <a href='s289.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第三百十二段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第三百十二段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s312.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'># 问:主说:"我要将我的教会建造在这盘石上"这个建造，是不是在祂复活的时候，已经完成了？<br><br># 答:这是另外的一方面。主说:＂你们拆毁这殿，我三天要建造起来。＂; <strong>约2:19</strong>）是指着主经过死而复活说的。所以祂复活了，圣殿就已经建起来。　　<br><br># 圣经说，＂基督受苦害＂），另一处，保罗也说，＂要在我肉身上补满基督患难的缺欠。＂）基督那样的苦楚，保罗也有份，他也已经受过了。教会是基督的身体，基督受苦，身体也要来受苦。这个＂为教会在我肉身上补满基督患难的缺欠＂，就是表明头已经受过苦，身体也要受苦；在这个苦上，主的受苦已经完成了，但是教会（基督的身体）的这个苦还没有完全经历。如果你有经历，你这个经历跟基督受苦的经历才能够套得来。所以就这一方面说，是已经成了，另一方面是还要增加，还要丰富，还要更丰满。教会是不断丰满的，对的东西是已经连在丰满上，不对的东西就要脱掉。　<br><br># 历来，教会都是有上有下，有进有退的。这是一定的历程，跟上去的就跟上去，不跟上去就退下来，那些退下来的，也包括了那些说我没有退，却没有跟上的。神是一路的拣选，也一路的陶汰。神要拣选的，就是那些代表身体的。那些多数的不跟的，神不做什么，神却从这多数的人中得着少数。那少数的，还是可以让神得着一个身体在这里，于是，就有一个代表在这里做祂的见证。现在，是没有办法要求某一个团体是最好的，这里面，总是有一些不合格的东西。(插问:得胜者的原则就是这个吗？)就是这个拣选出来的！因此，我们才向主求说:"主，在拣选人的路上怜悯我，也不要漏掉我。"这是多荣耀的！因为主若不拣选，我们没有办法去"跟随"，没有办法去"侍候"，也没有力量。主拣选了，就会负责把我们带上去。</article><footer class='nav-links'><a href='s311.html'>← 上一篇</a> <a href='s313.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

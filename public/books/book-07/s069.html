@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十日</h1><p class="meta">主耶稣基督的见证 · 第69/365段</p><p><a class="btn" href="s068.html">上一篇</a><a class="btn" href="s070.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s069.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>使徒也有假的。有些人作使徒，以传道为得利的门路，假使徒最特别的点就是贪财。财愈多愈好，这是贪财，是假使徒。</p><p>巴兰就是这样，以恩赐来卖钱，虽然他讲的都不错（他去咒诅以色列，反而变作祝福以色列，这祝福的话是对的），但他贪财！人家给他钱，虽然经过神拦阻，以后他还要去。他去，连不会说话的驴也要向他说话。他不知道神在拦阻，还在打驴。所以有些假使徒就是不听神的，凭自己的。人家阻止他，他还攻击别人的，这是很清楚的。</p><p>现在的长老怎么产生？这就是问题。长老并不是这人派另外一个人来取代的。这都由于圣灵的权柄，而非人作的。你说有一个长老有问题，怎么办？你敬畏神，就不要急。你真走在主的道路上，三个长老在一起事奉，有一、二个不行的，也不要怎样随便对</p><p>今天告长老，是严肃的事！圣经里有告长老的问题，这长老被告，要二三个人作见证。这些其它长老对这问题要慎重，不能随便搞，随便去搞就吃亏。有的时候，你自己去对付，对付到自己显露出来，自己站立不住。如果教会强，长老强，就给他劝勉，他不听，也要开除，这是严肃的事！这就要跟属灵对得起来，不然，连信徒开除都不敢，一个长老还敢作吗？这都要看属灵上强不强。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十三日</h1><p class="meta">主耶稣基督的见证 · 第296/365段</p><p><a class="btn" href="s295.html">上一篇</a><a class="btn" href="s297.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s296.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>神在中国做了荣耀的工作，但是人看不见。我记得八十年代，菲律宾有几位姐妹他们是到“在全世界”事奉的，是某人得力的同工，他们一来，就来找我。他们就讲:神今天做了什么工作...他们要把神自己带回来，正如五旬节那时，那么多人。又说:那些弟兄，几多个到德国去，几多个又到那里，这些人出来，就是一些接班人，神在外面作了恢复的工作。他讲这些作什么。他讲这些，就要来带领我们去跟他走一条路，这是他的目的。不然，他来作什么？</p><p>后来他再讲，他讲了一点多钟，以后，我就讲，我说:“你所讲的恢复就是使徒行传那个情形了。一天三千、五千人得救。今天你们在国外，现在五大洲把它搞的大热闹的，你就说，这样就是神祝福。但是，（我说）神在中国所作恢复的工作，比你所讲的这些更荣耀！”他听了这些，听不进去，就傻了。“你们给关起来，圣经都烧光，信徒好长好长时间都没有做礼拜了。神还在中国有什么恢复的工作？”</p><p>我说:“神在中国所作恢复的工作，比你所讲的更荣耀。荣耀在那里？我说神的工作不是人眼睛能够看得见的，神荣耀的工作对眼睛瞎了的人，也看不见。神也不跟他讲，因为他没有属灵的感觉，没有属灵的眼光。”他问:“那么，你说在中国神更荣耀的工作是指着什么呢？”我就说了一段，以后，他说:“啊，这么大的事！”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

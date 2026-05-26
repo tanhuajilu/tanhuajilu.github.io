@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第三百二十四段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第三百二十四段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s324.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'># 问:在教会中姊妹也是祭司，她们那一分如何被成全摆在教会中？姊妹几占三分之二，若他们中间有作先知的一份，有怜悯人的一份，如何去帮助她们尽功用？她们要守住她们的地位，但也要尽祭司职分才行啊。<br><br># 答:这也是属灵的问题，不是道理讲讲可以的。在属灵的工作上，弟兄姊妹自己都会有感觉，他们会知道有哪一份，也会把那一份拿出来。<br><br># 也有的人在生命的基本认识上不清楚，他有哪一份，自己不晓得；去做都凭着自己做，不按原则做，就越做越乱。因此对怎样配搭、事奉，也不是说人要怎样做的问题。　　<br><br># 你说:要给她知道她的地位。这个也是圣灵的工作，凭着的，也是生命的感觉; <strong>罗8:6</strong>; <strong>约5:12</strong>; <strong>林前2:15</strong>; <strong>罗8:14</strong>）。不然，她有什么地位，她也不清楚。你信主，她也信主，都一样；她该站的地位，都是因着碰到权柄，碰到那个实际才懂得呢。这样，她才可好好的站在她的地位。不然，恐怕她还要站在别人的地位了。　　<br><br># 我们这些人排起来，自然就站好自己的地位。排对了，前面都是一层层的，非常清楚。要不然，你就觉得有高有矮，像很乱的样子。你是乱排的，排到这一面就发觉别人比你高，排到那一面，就突出来，觉得不好意思，于是，到处跑来跑去，跑得很多。　　<br><br># 所以属灵的东西、身体的感觉、权柄的东西，都有属灵的＂排队＂。<br><br># 就是你们那边长老、负责弟兄、同工有几十位，也是要"排队"。这个排队，并不是人老了，就一定是在前面；有的老了还很胡涂的。这个排队是根据属灵的东西。有了属灵的东西，在工作中，大家就知道谁的份量大。根据属灵的东西，大家都知道，份量有多少，自己要站在哪个地位上；大家就会站牢自己该站的地位。如果你这个不认识，就会有意见，摆在配搭里，意见就出来。配搭的人那么多，这有意见，那有意见，意见就多。如果大家都在属灵的实际里，人多意见多也不怕，因为出于神的东西，意见多，也不会把属灵的东西推倒。如果是出于人的，几个意见来，就撑不住。</article><footer class='nav-links'><a href='s323.html'>← 上一篇</a> <a href='s325.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

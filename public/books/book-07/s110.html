@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十日</h1><p class="meta">主耶稣基督的见证 · 第110/365段</p><p><a class="btn" href="s109.html">上一篇</a><a class="btn" href="s111.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s110.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>很多属灵书本，已经把这些属灵经验讲出来。史百克的书就是把经历摆出来的，它就清楚地说了。他们的书，都增加我们的认识，每次看了，都增加我们属灵的认识。</p><p>这里的弟兄有一个特点，就是把属灵的书看了，交通的时候，可以把所看见的讲出来。原来里面看见光的人，他把话传达出来，也带出光。</p><p>我因眼睛差，很少看书，没法看，但他们看了，把史百克弟兄的书所讲的几点交通出来，我也得了供应。不只得供应，还把这些当作话语职事去讲，讲出去就帮助人，彼此得到激励。不需要自己想一篇来讲，因我们再讲也不会讲得比他好。</p><p>在这里，已经有了启示的话，拿过来，就是我们的。你不要怕讲别人的道，道理是别人的，但灵是你的。配上你们新鲜的灵把别人的道讲出来，可能书里所传达的道，还不及你们讲的更感动人。</p><p>道理是我们拿来讲的，只要我们的灵新鲜，你不要怕没有道理讲。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

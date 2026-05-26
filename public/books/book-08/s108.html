@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百零八段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百零八段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s108.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>你若有信心，相信神会养活你，照顾你，而你却天天忧愁苦恼想着今天可能有雨，明天或许没有雨，怎么办？又想:今天神养活你，或许明天祂不养活你，怎么办？你就变得愁容满面了。如果你有信心，主耶稣已经说了，不要为明天忧虑，明天自有明天的忧虑，一天的难处，一天当就够了)。你能相信就好，你可对神说:"神，你说不要挂虑，我现在就不挂虑。"本来你为吃为穿挂虑，主既说不要为身体忧虑穿什么，为生命忧虑吃什么。这时你就相信神而不挂虑。为什么可以不挂虑？因我们所需用的这一切，神都知道。<br><br>你要相信神都知道你的这些软弱...你就祷告:＂神啊，你都知道。我是软弱的，软弱到一个地步，以为生活所需没法供给，神啊，我相信你要供给我所需要的。＂主说，天上的飞鸟，不种不收，天天早起唱歌，赞美荣耀神，而我们人呢？人总是有挂虑。今天挂虑，明天挂虑，今年挂虑，明年还挂虑，事情还没有到，就一直挂虑。今天我们却要相信说，＂我活在今天的现实里，昨天的，过去了，我再不想，因它也不再回来，明天的还没有到，我不必为明天愁苦。今天，我过一天，就靠主去过。主，有你就够了。我是一天新似一天，我今天信，明天信，一直还信，我就是＇本于信以至于信。＇）＂<br><br>基督徒就走在神这一段信的路上。如果没有信，就会靠眼见，明天没有来，也看不到，明年没有来，也看不到；但我们只要信神，凭着这个信，就叫我们有安息了。</article><footer class='nav-links'><a href='s107.html'>← 上一篇</a> <a href='s109.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

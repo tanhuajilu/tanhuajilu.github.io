@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月五日</h1><p class="meta">主耶稣基督的见证 · 第186/365段</p><p><a class="btn" href="s185.html">上一篇</a><a class="btn" href="s187.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s186.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>来的人不只有交通，一同来摸着天上的东西，他们也能在他们的地方来事奉神，为着神的见证。这些是属地的人所看不见的，反而他们会反对抵挡我们。但是，我们不灰心，因为认定只有这个，才有属灵的前途。</p><p>一九五○年以来，很多人都反对我们，直到今天，还有人在反对。他们说:“就是你们这几个人在作见证吗？”我们说:“是。”表面上好像只有我们这十几个人，但是，神在各地都作了祂的工作，人却不会知道，也摸不着。</p><p>我们专门交通生命这个东西，对生命这个东西不会去分你在哪个宗派。只要你里面有生命，大家都注意这一个就行。盖恩夫人是天主教徒，我们不要他背后的天主教，我们要的是他那些属灵的东西。劳伦斯，我们也是要他和神同在的东西，并不是要他的背景。</p><p>今天，神对人有呼召，蒙召的人是很多的，但是神还有拣选，如圣经所说:“蒙召的人多，选上的人少。”所以神的工作有一般性的，也有特殊性的。一般性的问题不大，譬如传福音就是一般性的，大家都会做，但神还有他特别的工作，这特别的工作，要从得救的人中拣选出来，为要作更强的见证。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

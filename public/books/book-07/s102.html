@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十二日</h1><p class="meta">主耶稣基督的见证 · 第102/365段</p><p><a class="btn" href="s101.html">上一篇</a><a class="btn" href="s103.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s102.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:有时看到难处，叫自己不容易活在灵里面，就想象保罗有三年在亚拉伯旷野，我也应该有，这想法是否也错了？</p><p>答:这就脱离现实了。我们先得在现实里去学习。有人说:保罗有阿拉伯的一段经历，但你在家庭里就是在阿拉伯的经历里。你的环境就是你的阿拉伯。你有这些环境，就是为叫你有学习。凡神安排给你的环境，都是为叫你在神的手中被造就。神借着这些来带领人，就是要达到一个共同的目的，叫你摸到追求到属灵的生命。不要说:你有的我没有，我没有你的环境！当你有环境的时候，恐怕你比我们更感困难！我常想，那些睡在病床上的弟兄姊妹，比我们更困难。我们是困难，还可以自由走路吃饭...他们却没法自由，连吃药也需要别人去喂，什么都不能自理，烦得不得了。如果落在其中，就要靠主去承担。这些要去学习，生命才会成熟，不然就会烦死，要去求死了，这都是人的反应。如果我们是认识神的，就知道神会替我们安排，会向主说:我需要你的怜悯。这样，才学习了功课。学习了功课，心里就会平，不会不平。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

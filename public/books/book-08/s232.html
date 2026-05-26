@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百三十二段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百三十二段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s232.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>你顺服神，在奉献钱财上，奉献到你心痛，就扩充你的心。前面的弟兄说:"奉献到你心痛，就摸着你。"你买很多东西不会心痛，平平常常的奉献却叫你心痛。这痛就是叫你受伤，像祭物被摆在祭坛上)，就是要受伤，被刀割，要分开。你去奉献会心痛，才摸到你的心！<br><br>奉献会心痛。痛很好，表示你已经作在主的身上，这是一个奉献的人的经历。你也许已经经历，还会再经历，这些经历会综合性的造就你。有一天，你就对这些一个一个的都清楚。现在不清楚，到一个情形，回头去看，都清楚。现在还有你的观念、看法，且保留下来，暂时不会要求你打掉。以后，等你进入实际，自己也会看见，会改变原有的观念。<br><br>目前，你们两夫妇同心就好！盼望你们多找弟兄交通。如果他不开口，交通中他会开口，一开口，就有东西出来。你也要学习讲话，越讲越通，越有内容。<br><br>祷告:主耶稣，我们感谢赞美你，每逢我们聚集一起，不是外面谈论零碎的事，在我们生活当中，你用各种各样带领、教育我们，叫我们在你的生命中长进，有所看见。我们等候在你面前，你藉每次的聚集，向我们的弟兄姐妹的心说话。今天晚上短短聚会，你引领我们平安过来。主啊，当弟兄姐妹分散，你仍与我们同在，一天过一天叫我们的心更在你自己的面前，更在你的面光当中。感谢、赞美、祷告奉主耶稣基督的圣名。(阿们)(219-228选自2000年2月9日晚交通)</article><footer class='nav-links'><a href='s231.html'>← 上一篇</a> <a href='s233.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

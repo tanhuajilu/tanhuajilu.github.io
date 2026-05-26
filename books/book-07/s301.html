@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十八日</h1><p class="meta">主耶稣基督的见证 · 第301/365段</p><p><a class="btn" href="s300.html">上一篇</a><a class="btn" href="s302.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s301.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>姐妹交通，有伤痕的，他是经历过主的工作了。若是没有，你也感觉他没有伤痕。这都是属灵的实际情形。所以在这一条道路上，早上，我们弟兄就谈到异象是什么。好多人说他看见什么光，看见什么异象，这都是人的观点。</p><p>异象就是主耶稣本身。摩西在山上所看见的异象------会幕和会幕的每一件东西都是预表基督。大马色的大光照耀保罗时，圣经说，“光四面照耀他（保罗）”，这光一来，保罗就说:“主阿，你是谁？”主说:“我就是你所逼迫的拿撒勒人耶稣。”他在那里扑倒了。这个异象是叫你碰到主阿！你碰到主就有异象，没有碰到主就没有异象。所以基督是一切的一切，是一切属灵的事物。没有基督，你没有一切，你有基督，你就有一切，是肯定的。</p><p>凡是肯定的道理，就绝对而没有改变。对真理若有妥协，说这也可以，那也可以，你的道路就会摇摆，你的见证就站立不住！所以我们对异象清楚，对真理清楚，就不会受到摇动。因为到了试探的时候，就看你有没有力量去挡住。</p><p>像大水泛滥时，什么都被冲走，但是有些东西“站住”，大水冲不了，这就是我们所说的“中流砥柱”。今天教会这么的失败，没有什么可以希奇，更奇妙的是在这样的失败里，还有少数的人在这里“挡住”作中流砥柱，来见证“正面的真理”，说:“神在这里，基督在这里！”这个可以叫人碰着基督。无形中，这一个见证的态度就抵住一切不是出于神的。所以要计算属灵的价值，没有价值的东西一大堆，没有用。有价值的，有这一点点，就是大事。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

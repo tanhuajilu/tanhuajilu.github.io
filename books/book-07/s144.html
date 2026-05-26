@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十四日</h1><p class="meta">主耶稣基督的见证 · 第144/365段</p><p><a class="btn" href="s143.html">上一篇</a><a class="btn" href="s145.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s144.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们以前在五十年代，也是重点在带领青年人。有一个老弟兄脾气很怪，常说:“都是青年人、青年人；我病了，你们的爱心在哪里？”我说:“你这话，对初信的来说，还差不多！一个老弟兄，信主几十年，一病没有人看他就怪－怪别人没爱心。你这爱心，就是要爱自己了。”</p><p>如果他也有爱心，会想:“我老人家，你来看我也可以，不来看我也可以，因年青人工作忙。”他会体谅别人。作父母的也常是这样的，儿子上班，他就想:“我有事情，儿子都没有来看。”但你也要体谅儿子忙呀！你一直自怜自爱说:“没有人爱我！”你又有否体谅别人？你要有点改变。现在，你是要人爱你，不是你去爱别人呀！所以，我们的爱心，不是单爱自己，我们也要对别人有爱。</p><p>有两个弟兄去看一个肺痨患者。几十年前，肺痨病人比现在患癌症的更可怕，叫人更不敢亲近。这两位弟兄先后去看他，一个去时带口罩（因他是医师），另一个没有带口罩。那病人就啰嗦了，说这弟兄最没爱心，到这里来带口罩，没爱心。其实他（病者）更没有爱心，你有病会传染别人的，你的病传了给别人，就苦了，要问你的爱心哪里。你不单看到自己，也要看到别人才对。如果你有爱心，最好要对弟兄说:“弟兄，你不要靠近我，你最好把口罩戴起来。”这才对，否则，爱心只归你这一边，你没有爱别人！你若叫别人得了病，你就有爱心吗？是害死人！</p><p>所以不是去讲一番道理，要从多方面去学习。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

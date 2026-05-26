@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月三日</h1><p class="meta">主耶稣基督的见证 · 第215/365段</p><p><a class="btn" href="s214.html">上一篇</a><a class="btn" href="s216.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s215.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>答:主在约翰福音十六章说:“我若去，就差他（保惠师）来。”主复活以后，对门徒吹一口气说:“你们受圣灵。”主应许要差保惠师圣灵来，主复活以后向门徒吹一口气说:“你们受圣灵。”这位主应许的保惠师就是主复活以后所吹的一口气－圣灵。</p><p>主耶稣不只死了，埋葬了，也复活了，祂不只解决我们的罪，也解决了我们的旧人，赐给我们新生命。新生命就是主复活的灵，也叫基督的灵，也叫圣灵，现今住在我们里面，成了我们内住的保惠师。</p><p>主升天的时候，告诉门徒:“你们要在城里等候，等候从天上来的能力，这能力要叫你们在耶路撒冷，到撒玛利亚，直到地极作我的见证人。”所以，五旬节圣灵降临，乃是一个能力。在主复活后，主向门徒吹一口气，门徒所受的圣灵-保惠师，是有位格的，就住在我们里面。神是有位格的，主耶稣是有位格的，圣灵也有位格，我们人也有位格。我们所接受的，不是没有位格的道理，乃是一位有位格的神，主、神、圣灵住在我们里面，来作我们的生命。但是在工作上，我们却要有能力，所以圣灵的浇灌是一个能力，是没有位格的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

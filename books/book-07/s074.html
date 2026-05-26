@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十五日</h1><p class="meta">主耶稣基督的见证 · 第74/365段</p><p><a class="btn" href="s073.html">上一篇</a><a class="btn" href="s075.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s074.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>所以，这几年，除了你们外地进来的，在当地，我都很久没有参加他们的聚会。为什么？是让他们彼此交通，不然，他们说:“老弟兄，你讲你讲。”他们怎么能进步？到有一天，外地的人不在，他们还会讲，所讲的，相对，有多少就讲多少。你们会讲就彼此帮助，彼此进步，没有突出你，也没有突出他，是突出基督！这个在全世界都走得通！如果我们只讲这套道理而否定别人，那我们就要碰壁，结果是喧宾夺主，那就不行了。</p><p>这个就是某人失败的点，他是喧宾夺主，将人排挤，把他自己突出。这喧宾夺主不行。主人不对，你还是客人，你只管把属灵的东西供应出来，但对人当地的东西你不要插手。当地教会行政方面，你不要去摸。我们就是把生命供应，持定这一个中心。生命一起来，好多东西他自己会有看见，也会要去对付。</p><p>每个地方，常常存在二个东西而有矛盾。有的活在道理上，有的活在生命上；有的活在组织里，有的活在圣灵里面。这生命圣灵的水流在各地方都存在，都一致，如果继续保持在生命里面，就有属灵的前途。没有属灵的前途，就是问题。</p><p>回想过去，有人说:“过去地方教会是那么多，长老执事那么多，回想起，说他是长老，到时还是够不上，所以没有办法继续带领。在以前，是差不多了，现在看回来差很多啊。本地以前几个长老，现在想起来，那个时候可以作长老，因为圣徒幼稚，现在，那几个来再来作长老，作不下去，因为年青的起来比他看得更清楚。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

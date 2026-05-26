@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第五十三段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第五十三段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s053.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>你在聚会中学习听，也要在那里学习慎思明辨)，要了解他所讲的是怎么一回事，他讲的是什么，是对的呢还是不对的呢。我们听道的要负起这个责任，不是"不负责任"。对所听到的，对的，负责！不对的，也负责！是对的，我们会得到帮助，得着供应；是不对的，听了，也给我们得到认识──知道这些东西讲错了，讲出来的讲错了。<br><br>我们都可以从各方面去学习。这学习是从日常生活中去学的。所学习的这个道，就是活的道，在什么的环境、什么地方都可以在那里学习。<br><br>特别你们已经从＂宗教里＂出来，对自己的东西，都不能有自己的理想！理想怎样才是属灵，怎样才是进步，怎样才是爱主...都不是想的！这些属灵的东西都是自然的。是生命的东西就是自然的），自然的，你有多少，就是有多少；再去假装，所进去的都是多余的。我们都自然的活在主的面前。<br><br>问:（略）<br><br>答:我们讲经历，不会帮助人。我们是借着经历去认识基督──从经历中去认识基督！能够帮助人的就是＂基督的生命＂。因从人来看我们每一个人，没有一个是行的，都是不行的；但是通过失败，通过一些道路，叫他去认识神、去认识主。他自己认识主，就已经把问题带过去了。<br><br>我们所能给人家得帮助的，就是"基督从我们身上出来"；别人碰到基督，也把他们的难处都带过去。如果要把道理去排进一个东西，越排只会越排不进去。乃是基督给人摸到了，人家的难处才可以被带过去。所以，我们才说，"不必多去注意我们的经历。"因为我们的经历都不一样。实在，能帮助人的，并不是经历的本身，乃是你经历以后，能够产生出一个属灵的东西。这所有的过程都为要达到一个目的，就是你能够得着基督-14)。我们得着基督，基督在我们身上就能够得着彰显。</article><footer class='nav-links'><a href='s052.html'>← 上一篇</a> <a href='s054.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

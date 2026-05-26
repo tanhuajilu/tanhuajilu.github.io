@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月四日</h1><p class="meta">主耶稣基督的见证 · 第94/365段</p><p><a class="btn" href="s093.html">上一篇</a><a class="btn" href="s095.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s094.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:你觉得为主工作，是生命的工作。这工作不是他（仆人）的，是主把他家业交给三个仆人。我们是受托的，我们实在要忠心。不清楚这工作，就是乱作。我们跟主要有关系，要交帐的...</p><p>答:我们做大生意的人是钱生钱，没钱就没路。神的工作、福音的事奉是生命生生命。有生命才产生生命。传福音没生命就不能生福音孩子，都是生出来的。你没生命，很多话出来没生命。在生命，神的话是生出来的，不是你准备出来，是里面有话。话生话，神的道在你里面是丰富的，神的光在你里是愈照愈大的。光愈生光再生光，是在光中才见光，是丰富的。</p><p>五千加五千，不是等到将来，今天在主祝福路上，就是双倍的，你本来只有这个，还给你五千。那得一千的，若不忠心，连他的一千也没有，完了，所以那凭着人的，愈作愈没有。一位弟兄说，肉体没对付，自己做一丈，拆掉一丈二；你这讲台不必人替你拆台，你自己做自己拆台。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

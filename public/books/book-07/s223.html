@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十一日</h1><p class="meta">主耶稣基督的见证 · 第223/365段</p><p><a class="btn" href="s222.html">上一篇</a><a class="btn" href="s224.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s223.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>在五十年代，很多基督徒跌倒，做了很多反面的工作，到我们回来，对每一个基督徒，我们都不敢随便信任。因为我们的话让他们听了，又七讲八讲出去就遭殃。此情此境，你不敢随便接受，这是切合实际情形的。像写《倪柝声殉道史》的作者，我们一看这书，就能看出他不知道“殉道”是什么意思，他只写出一些话，都没有内涵。若是叫国内受苦受难的弟兄来写才差不多，他们去写还有一点感觉，有一点属灵的东西。</p><p>所以，写殉道史这种书，外面的人没有办法写，因他没有这个味道，写出来不过是些白白的、淡淡的话而已。如果有属灵份量的人去写，那些话就不同了。X弟兄写的那一本关于倪弟兄的书写得很有份量。他写所发生的事说:“一夜之间，全都被抓，一网打尽。”这些话，人看了都有感觉，人听了都会感动。</p><p>若是写些不是事实的，强套进去的，这写法更差。所以这本“殉道”的书，很多人对它反感。虽然写作了倪弟兄的事，事实已经跟倪弟兄连不起来。</p><p>某弟兄写他舅父的传记，也是用倪弟兄的名来出名，里面很多东西都唱反调，这是事实。人就是这样，能利用的，他就利用。现在，还有些文字出来反对倪弟兄，他们把他的话减去，断章取义，硬凑在反对倪柝声的言论里。所以生命各从其类。这类人凑起来，他们交得通，把事情讲到面目全非，其实在跟属灵的东西唱反调。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

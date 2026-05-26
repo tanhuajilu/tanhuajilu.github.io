@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十八日</h1><p class="meta">主耶稣基督的见证 · 第138/365段</p><p><a class="btn" href="s137.html">上一篇</a><a class="btn" href="s139.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s138.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>\］至于教会，不是一个名词，教会的见证摆在那边是一个实际的东西。身体是有彼此感觉的，是有关连的，不是我来听一篇道就是身体，所以不是那么一句话就能了解清楚的。</p><p>在身体里，就给你经历，而且经历不了。在身体里，彼此会了解，会感觉，会有行动，这是生命的一个东西，不是个道理的。弟兄姊妹一交通，会彼此感觉到，到底属灵的情形是如何？</p><p>有一位弟兄来交通，我们说:“你的灵受了伤！”他说:“你怎么知道？”我说:“你是受伤了，你受了伤怎么能承担属灵的托负呢？所以，你的灵要健康。”这一个道，若去研究，能研究出来吗？</p><p>因着一些东西，你受伤了，就会自怜自爱，对别人或对很多东西放不过去，会抓得紧紧的。如果你的灵是刚强的，就以为是小事了。</p><p>好像我们人是软弱的，给人打一下就受不了，但是有学过功夫的人，被人打，自己不容易受伤，打他的人，手反而痛，因他这一来，他的手比什么都壮。所以属灵刚强的人，你打他，他无所谓，但是反对的人，他自己要受伤。若是软弱的，就会受他的伤，你刚强就不会怕。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

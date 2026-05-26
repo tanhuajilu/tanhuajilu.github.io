@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十二日</h1><p class="meta">主耶稣基督的见证 · 第346/365段</p><p><a class="btn" href="s345.html">上一篇</a><a class="btn" href="s347.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s346.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:讲到分别为圣的圣，福音书说有一个人撒种，仇敌暗中撒稗子进去，这分别的时间是怎样的？</p><p>答:田地指世界，撒种是传福音。整个世界，基督徒是跟世人排在一起，你怎么拨得干净，拨不了。但是在教会的内部，你可以分别，可以把稗子拿掉。</p><p>今天在世界里，稗子混在麦子里面，神让这两个一同存在，到审判的时候，麦子要收在仓里，稗子就要摆在火里面去烧。但是，在教会里面，基督的身体却是要分别为圣。今天天主教、基督教都要大联合，将来全世界的宗教都要有更大的联合，对这一个，我们不是马马虎虎的碰到里面去。</p><p>在基督的身体里，神对我们的号召是说:“我的子民要从巴比伦出来。”巴比伦包括宗教的世界。今天好多人模模糊糊，他们是无所谓的，因为他们没有碰到身体的实际，他们只是在外面，看到一些现象，从理由上理解这些现象，他们不是从本质去看问题。因为我们今天所要作的是建造在基督的根基上，我们不作在别人的根基上。你说:“教会到底是什么？是谁在这里作元首？”如果我们从总的去看就很清楚了！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

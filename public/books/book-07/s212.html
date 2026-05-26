@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月三十一日</h1><p class="meta">主耶稣基督的见证 · 第212/365段</p><p><a class="btn" href="s211.html">上一篇</a><a class="btn" href="s213.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s212.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>讲到约翰福音三章十六节“神爱世人”，你必须在神面前，先有爱的感觉，去讲福音，福音传出才有爱的感觉。不然，嘴巴讲爱，心里动也不会动，别人听了也只是听，不会感动他的心。神的工作会叫祂的话和人连起来。</p><p>有人喜欢听录音，但是听录音跟见面谈话不一样。因为录音只有声音，见面谈话，人讲的时候有感情、思想，更有他的灵出来。我们交通，主要是灵出来把人的灵抓住，就够了。人的灵只有神的生命才会满足，你的灵出来，有生命出来，才叫人的灵感动，也得到满足。平常有一句话说:经过灵出来的就新鲜。所以，我常说，深也好，浅也好，有圣灵出来，深也是浅，浅也是深。因为都会叫人的灵得满足。</p><p>知识的东西就不是，人听知识越是新的越喜欢听；看报纸，旧的报纸今天看了，明天不再看了。神的话，我们天天看，每天看都不一样，因神的话有灵有生命。一本属灵的书，你去看，看得宝贝，以后再看，还是有帮助，很奇妙。倪柝声的书我们看了再看，还要看，为什么缘故？因为他讲话有膏油，有灵，有恩典。真的，我一生最大的福气就是能亲自听他讲话，听他讲话跟听别人不一样，听了，不只供应里面，连外面也有力量。听着也有能力叫你继续听下去，不然一天三次，一次两三个钟，坐也累呢！他有那个供应给你！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

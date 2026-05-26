@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月四日</h1><p class="meta">主耶稣基督的见证 · 第155/365段</p><p><a class="btn" href="s154.html">上一篇</a><a class="btn" href="s156.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s155.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>至于聚会处这个系统，1951至1956年这段时间，在中国就已经有几百处聚会，信徒很多，约十万多人。现在，聚会处这系统为什么又不行呢？这不行，不是道理的，乃是人的问题！是因人没有办法跟从神工作的水流，所以掉下来了。</p><p>五零年代，H地的聚会，也是很有神的祝福。后来，为何变成不行的样子？因弟兄发生问题，搞到整个聚会所系统乱七八糟，都是一些人带出来的难处。在人这个系统里，他就是要管全世界，这跟天主教的教皇是一样的。在这个组织里，不能脱离人的管理---他要作元首---这事实逼着许多人不能不离开。</p><p>现在我们并不鼓励你离开，你要对准主，跟从主的脚步。我们从来没有叫人离开，就是对x弟兄，我们还一直讲:“你要保持现状，因为一时冲动出来，会增加很多难处。这要你在生命上看清楚。”这一个分开不是意见上的，是要脱离组织化的团体，脱离成为宗派，落在人手里，也脱离人在掌权的情形。</p><p>在组织里，什么事都问人的意见，你在里面怎么能活动，怎么去帮助弟兄姊妹，没有路去帮助！很多人还想在里面帮助人，今天都已经塌下去，没有办法。神的工作是作分别的工作！说分别出来也不要求全部的，因为不现实。这就是你所讲的，每一个教会都有得胜者的呼召。七个教会各有各的情形，都不一样，但是有一样相同的，就是都要作得胜者。得胜者跟得胜者合起来，力量就强。今天，要将整个教会带好，不可能！属肉体的比属灵的多，对比之下，没有办法。只有你作得胜者，你被分别出来才行；今天，就是这些得胜者来代表教会作见证。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十二日</h1><p class="meta">主耶稣基督的见证 · 第193/365段</p><p><a class="btn" href="s192.html">上一篇</a><a class="btn" href="s194.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s193.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>外面的组织很严密又怎样？玉瓶很漂亮很完整，香膏却没有给人闻到。直等一天，为着爱主把玉瓶打破，香膏才流露阿。“宝贝放在瓦器里”，瓦器本来是不值钱的，但是宝贝藏在里面－－神在我们里面，也要透过我们的卑贱无用，显出祂莫大的能力来，这就是神的荣耀。神的荣耀就是因着我们的不配、不像，因着我们是瓦器而显明，虽然如此，我们却不能有一点夸口。我们只为彰显神的荣耀，这一切都是出于祂的。</p><p>我们这边很多人看史百克弟兄的书。这些只能作为参考，为要得着一些真理作为指引，重要的，还要自己去看清楚。</p><p>我没有到过你们那边。如果到你们那里，即使把你们当地的地图给我，我看了，还是没有路走。你是当地人，不靠地图，随便出门就有路走。假若我到你们那里，我跟你走就最好了，因你是当地人，路很熟，不会走错路。</p><p>经历属灵的东西，先辈留下许多属灵的遗产可以帮助我们，但当我们走路，这些留下的遗产，有时也用不上，拥有了这些，还是没有路走。追求的人必须经过一些经历。神会安排环境，安排各种遭遇给你认识、学习。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

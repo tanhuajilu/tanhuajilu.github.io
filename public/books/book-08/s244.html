@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百四十四段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百四十四段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s244.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>既然你有一个家庭，有一个责任，虽然有好多为难的事，但你靠着基督的能力就能承担。按我们的感觉，都没有什么祝福，但你所碰到的就是祝福的本身。祝福就是在你这些难处里面，就因难处给你破碎，带出了祝福。<br><br>有一位弟兄，买了一栋房子，起名叫＂擘祝＂。就是源自主耶稣拿着五饼二鱼，望着天＂擘＂开、＂祝＂福，分给五千人吃饱，还有余的的神迹）。这名字很好。我问说:＂你怎么想到这名字？＂他说:＂我愿我这个人交给主，经过主给我擘开，因为擘开的饼会成为祝福。＂那时，我们还没有听到破碎的道理，却已经认识＂这饼要擘开，才成为祝福，给人供应吃饱。＂今天，我们对这两个字就更能理解了。我们一生要被破开、破开，粉碎、粉碎，无形中，成为许多人的祝福。<br><br>这在当时没有看见的，现在就看见了，因这祝福在你身上，是经过神祝福的，不会溜走！祝福在你身上，所以你在神的手里，复活生命大能要借着我们经历破碎来显明。以后，你还会经历更多奇妙的事。因许多时候神祝福我们，我们不知道、不认识，但祝福已经显明，虽然我们看不到。<br><br>就是因信！你说你看不见，因信，相信神的祝福。有些比较贫穷的信徒，人家问他们，他们会说:"神祝福我，可以，可以，很好，很好。"但若说；"哎呀！我有这个困难。"讲困难，就越讲越困难。你讲祝福，你就经历越来越有祝福。所以破碎，就是带出主。只要有破碎，你要相信:"有祝福。"看不见不要紧，因为神讲话算数！你有"十字架"的经过，就有生活的流露，你有死亡的经历，就有生命的水流。</article><footer class='nav-links'><a href='s243.html'>← 上一篇</a> <a href='s245.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

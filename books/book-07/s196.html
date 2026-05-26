@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十五日</h1><p class="meta">主耶稣基督的见证 · 第196/365段</p><p><a class="btn" href="s195.html">上一篇</a><a class="btn" href="s197.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s196.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>每一位人的情形也不一样，有的人灵能出来，但是出来的是狂傲的灵，狂傲的灵就带出死亡，有些人的灵是硬板板的，是刚硬的灵。还有人带出干净的灵，或带出温柔的灵、爱的灵、谦卑的灵。这些都需要人实际经过十字架的工作。灵的本身是没有问题的，但是灵通过我们这刚硬和骄傲的人，就带出刚硬和骄傲来。</p><p>神为什么要这样作工，因他要在我们身上有一条路出来。这条路就是希伯来书说的“神的道是活的是有功效的，比一切两刃的剑更快，甚至灵于魂，骨节与骨髓都能刺入剖开，连心中的思念和主意都能辩明。”骨髓在骨里是看不见的，刀剖下去，也要看见。神的话一来，就像刀一样给我们剖开，借着圣灵的管治，神再进一步给我们剖开，直到我们的魂、我们的心思意念都给辨明，清楚显露。不然，我们的心思意念，谁能知道？连我们自己也不知道。</p><p>当你给神剖开，知道自己的心思意念，你或许也会知道人家的心思意念。心思意念都会借着人的谈话，表明出来。他经过十字架或没有经过都会给表明出来！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十五日</h1><p class="meta">主耶稣基督的见证 · 第135/365段</p><p><a class="btn" href="s134.html">上一篇</a><a class="btn" href="s136.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s135.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>神愿给我们里面的祝福，神也要我们去求里面的祝福，就是说，我们这个人要成为一个蒙祝福的人。所以他所到的地方都会带祝福给人，他脚步所留下的，都是祝福人的。</p><p>一个受咒诅的人，他留下的都带着咒诅，一个蒙祝福的，他所走的脚踪都带出祝福。有的弟兄，到别人家里，就带祝福到家里，叫人家庭更加和谐美丽；有的人到别人家里，是叫别人家庭不平安，因他到那里，所散布的空气，是死亡的空气。所以正规的家庭都不随便接待人。</p><p>以前，比较正规的家庭，接待人不会随便，不三不四的人不会接待，因为会影响他的家庭。不三不四的人到了人家里就问七问八，什么都问，到那里作客，就讲来讲去，散布是非，搞乱人家。</p><p>事奉主的人，他在聚会或到人家里，都会带祝福。如果，那里面不清楚的，所带出的人也是不清楚的，他们话语很多，到人家问来问去，就会搞出事情来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

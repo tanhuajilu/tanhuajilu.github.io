@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十日</h1><p class="meta">主耶稣基督的见证 · 第232/365段</p><p><a class="btn" href="s231.html">上一篇</a><a class="btn" href="s233.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s232.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>《主工人的性格》这书所提到主工人很多方面的性格，没有一个人会全拥有的。有些人有一个两个，神就按他有的特点来用他。有的人性格是殷勤，有的人对真理绝对不马虎，神就用他那个绝对。有的人的性格是清楚认真，他管理钱财清楚认真，神就用他这个认真的性格。反正人有哪一个特点，神就用他那个。</p><p>所以，我们要认识在每个人身上，都有每一个人的特点。哪个特点能用，神就用，就从那点上来用。别的人不够用的，神就从你这点来用。</p><p>要去拣选一个全有十种性格的人（像《主工人的性格》书里所记），我们找不到一个，没有那个十全十美的！但是你若有几个性格，神就会用！每一个人都有他不同的性格，所以每一个人都有他好多的情形，神就根据他不同的情形来用他。各人各有他特殊的一个性格，如果合起来，就很丰富，每一个人的一点点都合起来，就是丰富的。像你们那边这么多弟兄姐妹，每个人都有他的特点，这一个恐怕他自己也不知道。但是，在无形之中，他们都从自己那里点去发展，去进步，神就用他会那一点。</p><p>以地方来说，各地也是这样，各有各的特点，神就用他们那一个点。认识了这一个，同工之间，大家就会彼此觉得需要，因为你所有的，我没有呀！工作必须要有这一点补上去，这样，才可以去成全圣徒，建立基督的身体。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

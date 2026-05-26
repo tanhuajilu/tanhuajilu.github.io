@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十四日</h1><p class="meta">主耶稣基督的见证 · 第45/365段</p><p><a class="btn" href="s044.html">上一篇</a><a class="btn" href="s046.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s045.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>八十年代，有一个姊妹性格很强。讲的话自己都有矛盾。她责备我:“人家请你来，你不出来，现在门打开了，你还不抓机会做工！”她说:“我在这方面，教堂请我出来讲道理，一直是二千、三千人在听的，这个工作你怎么不作？”如果我们没有受对付，也会想:那姊妹平常讲道也有三千、二千，那我们弟兄讲出来，要比她多！就很容易受试探，但是我们里面觉得不是这个路。神所给我们托负的，不是她那样的。</p><p>今天，她已经做了二十年，我认识他们，却跟她没有见过面，只是听说，她说；“什么样？能作，又不要作，一直请，请不出来，你就是不作。怎么不像我这样做？”“像你这样做”？以后你就知道！今天，不知道她有没有这样作。恐怕没有这样作。如果他是敬畏神的，恐怕也觉得这样做也不是路。</p><p>他说:“我这样做，要占满这个市场，利用这个来作工。”我们也知道许多人利用他。但他利用人，却被别人利用，自己空空没有了。所以要从实际看问题。这个路，属灵的路，所有全世界的基督徒，都要去认识的。你不走属灵的路走什么路？走人的路？</p><p>这路就是主耶稣说的:“我就是道路。”“道路”就是我们去跟从主，他就是真理。我们向着他，他就是真理。他就是生命。主说我就是道路、真理、生命。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

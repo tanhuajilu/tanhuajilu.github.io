@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二日</h1><p class="meta">主耶稣基督的见证 · 第122/365段</p><p><a class="btn" href="s121.html">上一篇</a><a class="btn" href="s123.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s122.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>那一位弟兄说，他有把握。恐怕他没有得胜者的份！今天，不清楚，将来那一天还会清楚吗？</p><p>其实，每个信徒都经历了这得胜的生命。每一个都有！不过，我们常常忽略过去吧！</p><p>你怎么知道你经历得胜？初得救之时，很多人讥讽你，你脸皮厚厚的就承认了主。这就是得胜！你在众人面前还敢承认神，这不是得胜？得胜已经有了！当时，很多苦难临到，怎么压不倒你？许多诱惑摆在你面前，你怎么能不要？这些是不是你经历得胜了？魔鬼对主说:“只要你拜我，全世界的荣华富贵都给你了。”主说:不要！当拜主你的神，单要事奉他。这就是得胜。</p><p>得胜是在你各种情形里显明出来的。</p><p>家里的人说:来喝酒。你不喝，就是得胜。人告诉你:去赌钱。你说:我信主，我不要赌钱。这就是得胜。如果没有得胜的生命，没有主，人不用去请，你自己喜欢，你要跟他去了。以前你是贪便宜的，现在信了主，一分钱都不肯欠人的，这就是得胜。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

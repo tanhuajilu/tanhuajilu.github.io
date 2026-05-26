@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百九十一段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百九十一段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s191.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>神每一个时代都根据每一个时代的需要来讲话，来带领人；因为盖恩夫人的属灵经历有她的背景，她的背景跟我们的就已经完全两样，所以你学不来。但共同有的一点却是:要在生命里来认识神;<strong>箴2:5</strong><br>;<strong>伯22:21</strong><br>;<strong>何6:6</strong>;<strong>彼后1:2</strong>;<br><strong>加4:8,9</strong>）。我们也在生命里去共同认识神。你认识了，你就不会以为盖恩夫人是多稀奇的，她多了不起的，而自己在属灵上摸不着。不会。因为同样是基督。<br><br>和受恩教士当时，摸着认识神。她的特点是认识神。但是她的脾气很急，对好多东西很有成见。所以，不是单去学她一点。她有很多方面都有神对她的怜悯。神在我们身上也有神对我们的工作的特点。<br><br>所以看属灵书，不是去学什么人。因为要去学别人，我们以往也学过了，世界有名的属灵伟人，司布真、卫<br>斯理、慕迪、穆勒等，我们也去学，也看他们的书，甚至把他们的相片挂起来贴在房间里。我们要学他们，但学不成功。你就是你，学出来是另一个味道。是神给你的，你就没有办法传送给别人。<br><br>学中医的可以传中医给他儿子，属灵人却没有法子把属灵传给儿子。各人都要去跟神自己。不然，这些属灵人就可以传下去，但是没有，没有这回事。因为属灵是一个一个对神的。认识了这一点，你就不会奇怪，他这么热心，儿子为什么不信主？就有这个。这个好像讲不通！好多热心的基督徒，他儿子都不信主，儿子都不跟他！这怎么讲得通？但这确实是圣灵的工作，因为圣灵喜欢这样做。</article><footer class='nav-links'><a href='s190.html'>← 上一篇</a> <a href='s192.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

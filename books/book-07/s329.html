@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十五日</h1><p class="meta">主耶稣基督的见证 · 第329/365段</p><p><a class="btn" href="s328.html">上一篇</a><a class="btn" href="s330.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s329.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>讲到李某人，我们本来不喜欢讲，不喜欢讲谁对谁不对，但还要分开来讲，他个人的事，这一个我们不去讲，但是，他说的道理对不对，这个我们不能不讲！他所讲的道有问题，不是小问题，他勾消十字架！这是大问题。神的旨意是藉着十字架来完成的，如今他把神这十字架道理勾消，这是严肃的。如果我们够得上保罗，就要正如他所说的:“我所起的愤恨是神那样的愤恨”。这样抵挡真理、违背真理的，比犯罪更坏！</p><p>你看，扫罗王按人看他没有犯大的罪，不过献了一个祭；大卫按人看，犯了大罪，占人妻子，谋害她的丈夫。但是，在神面前，大卫还作王，扫罗却被废去，以后更死掉！为什么？因为大卫犯罪，在道德上，种的是什么，就收什么果子，这是神政治的对付；但是扫罗王这个是违背神，是背逆神！献祭不是他作的，塞缪尔叫他等十天，时候没有到，塞缪尔还没有到，扫罗等不住了，刚刚献祭，塞缪尔就来了。塞缪尔对扫罗说:“你作了糊涂事了，神已经拣选合乎他心意的人作王。”这是很严肃的。圣经说塞缪尔到死，都不肯见扫罗的面。你看，这是神的政治，是神严肃的对付，因为他在神面前背逆，不听命。</p><p>许多人，今天，在奉献的事上，就是带着背逆的原则而事奉，不是带着顺服的原则来事奉。什么是得胜？顺服就是得胜，不顺服就是抵挡，就是失败。</p><p>主耶稣是怎样胜过撒但？他一直站在人子的地位，忠心顺服到死，且死在十字架上。没有死就不行，要死，他也要死在十字架上，因为这是神所命定的。就因这顺服，主耶稣得了权柄，从死里复活，主宣告说:“天上地下所有的权柄都赐给我了。”这是主复活以后说的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

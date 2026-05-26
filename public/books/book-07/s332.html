@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十八日</h1><p class="meta">主耶稣基督的见证 · 第332/365段</p><p><a class="btn" href="s331.html">上一篇</a><a class="btn" href="s333.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s332.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>一块地不能播二种种子，播二种种子就是掺杂。所以讲到教会，属灵就是属灵，不属灵就是不属灵，如果掺在一起，属灵的就受亏损；从来，从古到现在，都是属肉体的压迫属灵的，今天更是这样。你跟他属肉体的在一起，你不能不受亏损。</p><p>所以，一块地不能种二种种子。做衣服，也不能用细麻跟羊毛一同织造。因为祭司要穿细麻布衣服到至圣所，如果掺有羊毛，就会流汗。流汗表明受咒诅。</p><p>牛跟驴也不能同负一轭，牛表明干净的，驴代表不干净的，都有属灵的代表性。牛跟驴一起怎么同工？高低不同，脚步不同，大小不同，一起同工就苦死了。所以一个属灵的人跟属肉体的人同工，这属灵的人一定吃亏。你讲属灵的，他起来说属肉体的，岂不就把你属灵的拆掉？所作的都不够给破坏。</p><p>“分别为圣”是从创世记开始的。神起初创造天地，地是混沌，渊面黑暗，都模模糊糊的。第一天，神说要有光，就有了光，光暗没有办法不分开。光就是光，暗就是暗，没有妥协，没有掺在一起的，因为性质不同。这个原则要记牢。</p><p>创世记还说，有空气以上的水，有空气以下的水。好像是一样的水，却有空气以上的跟空气以下的分别，就是有属天的，也有属地的。第三天，神要叫陆地从海里出来。陆地就是陆地，海洋就是海洋。以后还有，神所造的每一样东西都各从其类，没有混种的，都各从其类。混种、套种是人的思想；神的造物都各从其类。属灵就是属灵，属亚当就是属亚当的。所以，在我们身上，为什么需要十字架，十字架就是要我们这个人有“分开”，就是希伯来书说的，要把我们的灵与魂分开。魂与灵必须分开！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

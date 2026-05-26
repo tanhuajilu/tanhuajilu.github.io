@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十三日</h1><p class="meta">主耶稣基督的见证 · 第82/365段</p><p><a class="btn" href="s081.html">上一篇</a><a class="btn" href="s083.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s082.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:马大的服事是外面的服事（外面追求事奉），马利亚的服事是里面的服事（里面追求事奉）。</p><p>答:今天在我们本身身上也有这两方面。都有里面的事奉，马利亚在主脚前，就是接受主的交通，她是接受里面主的交通。马大，难处不是在乎她外面的煮饭、炒菜。主说:马大心里忙乱。是心里叫她发怨言、暴躁，还控告马利亚。</p><p>主不是说她外面做这些不对，是说她心里忙乱。在我们身上也存在心里忙乱，外面很忙，心里也很乱，里面也要主，心里很矛盾。这乱吵到我们这个人里面来。所以我们才说，魂的生命必须对付，就是要对付这些扰乱我们的。所以《人的破碎》里面，N弟兄有一个比方:家门口挂了一个钟，经过，打一打就走，天天这样打，很吵，很扰乱，受不了。你去禁止，不要打钟，但当你看不见的时候，小孩还是跑来打，没有办法。最好办法就是:你把钟拆走，拆走了，扰乱、吵闹就去了。</p><p>你说:“为什么给我这么多打扰？”这打扰是心思问题。这个对付了（这个钟拆了），外面的事就不会打扰我们。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

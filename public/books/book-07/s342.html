@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月八日</h1><p class="meta">主耶稣基督的见证 · 第342/365段</p><p><a class="btn" href="s341.html">上一篇</a><a class="btn" href="s343.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s342.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>对随从灵引导这句话，有人领会错走错路！怎样走错路，就是“被动”，被动就不行了。你有圣灵引导，里面还要去作定规，还有你自己的意志，你要定规。你要知道，什么是对的，要去选择，就是要使用你的意志。用你意志来定规、察验，才能断定情形如何。好多人看《属灵人》，愈看愈没有路，就是愈看思想愈乱，思想乱的人，特别没有路，因为他里面乱，里面没有条理里面是乱的。所以要先对付我们的思想，思想乱，思想也就被动，思想没有控制，思想也是散漫。读圣经思想开小差，散漫，这都不是你读经祷告才有的，就因你平时不管理思想。你让这个思想漂流，让这个思想散漫，临时要用，就没法起作用了。</p><p>在日常生活中，我们的思想要受对付。</p><p>我们在十多岁时已经看《属灵人》，从小孩子开始，就去看《属灵人》，以后就讲呀讲，讲给别人听，而自己不知道讲什么。名词是知道，名词那东西是什么却不知道。到了有了年日，有了学习，也有些交通，也有人把我们点一点，才越清楚越清楚的。到现在，我们说，还需要恩典。我们盼望下一代那个属灵的路，要比我们更清楚，这样教会才有前途。如果说，到我们老了，没有下一代，教会就完了，没有了！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

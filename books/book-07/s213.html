@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月一日</h1><p class="meta">主耶稣基督的见证 · 第213/365段</p><p><a class="btn" href="s212.html">上一篇</a><a class="btn" href="s214.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s213.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>四八、四九年，倪弟兄再出来作工，和他对立的人就苦了，因为他们说:“原来的教会平安无事，他出来，就叫我们乱。”难怪对立的人都大大反对他，说倪弟兄怎么不好。但是，倪弟兄出来作工，福州只一百位的信徒，在二年内，信徒擘饼就到一两千人。这不是神的工作，难道是世界的工作？那些对立的人会作吗？神的工作他们都看到，却把看到的作为挑剔的借口来攻击，他们的眼睛就是没有看见神。</p><p>当日对神的工作有对立的，有反对的那些人，他们到老了还在反对，还不愿自己吃亏，他们这样做却没有带出什么来。倪弟兄虽然死了，神的工作还在那里。我们今天就是宝贝他那些属灵供应的东西，不然，我们跟他也很少接触，很少有什么感情来往，有什么人情的，所有的关系也是很平常的关系。就是宝贝他所出版的刋物书籍，神藉他涌流出来的生命能力临到我们，我们要站也站不住。</p><p>有一段时间，上海有很多人反对他，直等他有机会上讲台讲，带出生命供应的话来，没有一个人站得住，听的人都流泪大哭。这不是生命的工作，是什么？（X弟兄当时也在场，他说人哭，不知道哭什么？这话就说明他对神的认识是怎样了。他还不能很深感受到神的工作。）因为这是圣灵的工作，叫一个人哭就不容易了，是不是？在那里，有上千的人，那时是冬天，人人都围着围巾，围巾变做擦眼泪用的，都擦得湿湿的。不是神的工作，倪柝声有这个本事吗？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

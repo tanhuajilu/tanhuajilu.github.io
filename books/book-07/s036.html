@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月五日</h1><p class="meta">主耶稣基督的见证 · 第36/365段</p><p><a class="btn" href="s035.html">上一篇</a><a class="btn" href="s037.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s036.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>属灵的东西怎样来的？我们也不懂得，就是你跟神连起来。你跟神联合起来就有东西。好像电，电线通到发电站就有供应，电线没跟它连在一起，再好的电灯，也不会发亮。我们每一个人的环境可以不同，只要里面跟主有交通，跟主接近，会不一样。</p><p>属灵的事实，用自己的思想求解决，就是主耶稣所说的，你们信，必因信看见神的荣耀。希伯来书11章记，以诺因着信、挪亚因着信、亚伯拉罕因着信，摩西因着信，所有走这条路的人，都有同一个东西:“因信”。所有这些人各有他们的特点，特点不同，原则一样，就是“信”，在看得见的环境里因着信，在黑暗的环境里也因着信。</p><p>所以，诗篇23篇是我们属灵的道路的描写，在青草地－因信，疲倦得苏醒－因信，幽谷中－因信，不怕遭害，在仇敌面前－因信，也可以饱尝筵席，最终我们在耶和华的殿里，也因着信。</p><p>信有牧人同在，就不缺乏，因为相信牧者牧养他的羊。我们对的主认识是认识不尽的，我们思想别人是怎么经过的，要按别人的去学，但神量给各人的功课不同，各人都有不同学习。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

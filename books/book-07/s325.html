@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十一日</h1><p class="meta">主耶稣基督的见证 · 第325/365段</p><p><a class="btn" href="s324.html">上一篇</a><a class="btn" href="s326.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s325.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:是圣灵呢还是人的灵？</p><p>答:得救重生了，圣灵就与我们的灵同证我们是神的儿女，所以在我们里面有儿子的灵，就是基督的生命，就是基督的灵。</p><p>讲基督的灵也可以，讲圣灵也可以，因为是三而一的神在里面。这是个起点。你有重生的灵以后，你有良心的感觉，因为良心复活更新了。还没有得救时，这良心没有标准，信主得救以后，最明显的就是良心的功用显明了，你讲错一句话，良心就有责备，就告诉我们。初得救的人能够顺服良心，就是不简单了。不然，就会凭着自己刚硬到底。</p><p>以后，进一步，就有生命的要求。生命的要求，就比良心更高。好多合法的事，良心不会知道，不会指引。神如果要求我们撇下，我们也要撇下，这就要凭里面的生命。这比良心的要求更高。</p><p>从天上来的生命就在我们里面，自从我们得救开始，就在我们灵里，给我们学习。圣灵要光照、感动、启示我们，另一面，圣灵还安排环境，管治我们，叫我们学习，受破碎。一个经过破碎的人，灵出来就比较顺，所以破碎是免不了的。破碎，却也不是我们要破碎就破碎，是神把我们摆在各种的环境之下，叫我们外体破碎。多破碎，就多有明亮，多清楚。这是圣灵在我们灵里基本的工作。这些年，神就叫我们一直去认识圣灵的道路。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

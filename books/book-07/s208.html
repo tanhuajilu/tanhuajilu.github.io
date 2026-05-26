@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十七日</h1><p class="meta">主耶稣基督的见证 · 第208/365段</p><p><a class="btn" href="s207.html">上一篇</a><a class="btn" href="s209.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s208.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>身体上一个地方有伤，各细胞、血液马上供应它，基督的身体也是这样，一个人受伤，我们这些人就有一个看不见，超过思想的生命会流通到他身上去，叫他得着供应，给他得造就，身体是那么实际！所有身上的肢体，都是头在这里支配。一处痒，马上有感觉，不必先通知，手指自然去扒，所以身体是一个很实际的东西，彼此是有感觉的。</p><p>以前，我们听陈则信讲道，他说:有一位同工讲道，他的灵很软弱。我觉得奇怪，那同工讲话很大声怎么会软弱？当时我们不懂，现在回想就感觉对！因为他虽然讲道，但是里面没有东西，没有内在的力量。这就是身体的感觉。因为身体有感觉，你感觉得到，才会去帮助他。你感觉不到，就没法帮助。</p><p>有的人在交通，你怎么知道他有什么？你会感觉他有什么！因为他里面是什么，他就有什么种情形出来。身体不是一个道理，身体是一个实实在在的东西，也不是一个理论，乃是个现实的东西。所以我们如果真懂得身体，活在身体里，就不会像今天零零碎碎，散散漫漫的了。说到身体，就要说到牺牲个人。一个人不肯舍己，不肯受对付，对他不必说到身体。因为他跟谁都没有办法合在一起，他没有能力与人共同相处，他作什么都是古里古怪的，什么都是自己。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十日</h1><p class="meta">主耶稣基督的见证 · 第222/365段</p><p><a class="btn" href="s221.html">上一篇</a><a class="btn" href="s223.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s222.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>使徒行传十三章，圣灵说:“要为我分派巴拿巴和扫罗去作我召他们所作的工。”以后，圣经就记“保罗和巴拿巴”，这就是神的荣耀。按人看，巴拿巴是老练的弟兄，扫罗是初信的，但是圣经起初写“巴拿巴和保罗”，以后保罗已到前面去，进步了。圣灵再写就记“保罗和巴拿巴”。这一个就要巴拿巴是谦卑的，若不谦卑，早就吵起来，怎么还让“你在我前面”？这就是主所说的，在前的要在后，在后的要在前了。</p><p>所以，我们读经，看一些事物要用活的、荣耀的一面去看，才有一条路走。不然，彼得曾叫三千、五千人得救，又曾为主被抓去坐牢的，以后保罗责备他，他就因此掉下去吗？把事情说成这样，就讲不过去。彼得愿接受这个责备，这就是荣耀。</p><p>信徒在神面前的情形都是赤露敞开，没有不显明的。神常常通过一些事情、一些话语和人的议论，把我们显明出来，考验出来。所以我们解释圣经应该在圣灵里。若不按着真理的正意去解释，会叫人产生错觉。有一本书说:“保罗得救以后到了耶路撒冷城，信徒都不肯接待。”你说他怎么解释？他说:“约翰、彼得都是渔夫，是捉鱼的，没有很多的学习。保罗大有学问，他们若接待，保罗将来做了第一把手，不是无地可站吗？”他这样解释圣经，都是用人的思想头脑解释的。圣经并没有这样的解释，他们不是怕保罗有学问。</p><p>若由我们解释，我们会理解这种情形。因为保罗一直拿了公文去抓基督徒，带到祭司长那里受审，今天，他反过来说他是基督徒，谁会相信？这很自然。耶路撒冷城里，发生了很多事，死的死（雅各布死在刀下，司提反被石头打死），坐牢的坐牢，逼迫、为难、痛苦都有。这一个由我们来讲就差不多！因为我们在这里，也经历了这些。对一些反对主后来又说信主的人，我们不敢接受。这不敢接纳还是对的，因为怕教会还会受害---不是怕他再打，乃是怕他进来破坏。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

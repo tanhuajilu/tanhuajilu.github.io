@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十四日</h1><p class="meta">主耶稣基督的见证 · 第297/365段</p><p><a class="btn" href="s296.html">上一篇</a><a class="btn" href="s298.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s297.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>说到以往的一些，我说，这不是什么了不起的事啊。当时使徒们被圣灵充满，里面有圣灵充满，外面有圣灵浇灌，听的人在那边有圣灵感动说:“我们怎样才能得救？”使徒说:“你们要奉主的名悔改，奉主的名受洗...”说了一些话，就叫他们相信，三千人得救了。这没有什么了不起，这是圣灵的工作。可是，使徒行传不是只记到这些，接下，司提反被圣灵充满，被石头打死。传福音，三千五千得救容易，司提反被人活活用石头打死，这一个“打死”，就是血的种子，------殉道者的血的种子。</p><p>再下去，雅各布被刀杀掉。这是当初教会恢复的情形。你要恢复到当初，就要有:“司提反被石头打死，有雅各布被刀杀死，这些血的见证。”你羡慕这一件------彼得传福音三千五千人得救，却很少有人羡慕像“司提反被石头打死，雅各布被刀杀死。”人没有这个羡慕。所以你看，这荣耀高不高？以后还有，彼得、约翰被下监牢，保罗、西拉下监牢，这一个就是教会当初的情形阿！教会要恢复，就一定有这些事情发生。</p><p>我们人愿意殉道，爱主！但是真的情形摆在这里却看不见。你看不见这些是为着主的，出于主的！好多基督徒还批判说:“是什么是什么。”我说:“这些荣耀不荣耀？”但是，你们在外面，讲到受苦二个字，你们没有感觉，你们讲受苦，话是可以讲，可是没有感觉。我说，每种苦都有每种苦的味道。像吃东西，每一种东西都有每一种东西的味道。为着主贫穷也好，为主受苦难也好，被关监牢也好，受击打也好，每种的苦都各有一种的味道。神叫你经历这些道路，就为叫你让神藉着这些给你得可用的感觉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

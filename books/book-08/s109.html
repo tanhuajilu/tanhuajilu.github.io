@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第一百零九段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第一百零九段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s109.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>挪亚因着信，为什么？因他信神用洪水灭世，挪亚听神的话去造方舟。他相信神而造方舟，造了120年，并且他相信在这120年，神宽容人的罪，给人悔改的机会。挪亚造方舟，今天造，明天造，全家都集中力量造方舟，等到120年过去，方舟终于造好。他就是因信去造方舟。若不相信神的话，看着天天大晴天，还有什么洪水会来，他的心就起疑惑。但他相信神的话。等方舟造好了，神说，要把活物一公一母的，或七公七母的都带进方舟，全家也要进方舟。挪亚就这样去做。挪亚是因着信。以后进到方舟里，也因着信。)<br><br>若不是因着信，面对这么舒服、广大的世界，怎么会认定必须进方舟？进方舟不知要关在里面多少的日子。方舟四围是封得密密的，只有一个透光处在上面。普通房子也有四边的窗，方舟却只有上面的透光处。挪亚一家进了方舟，神就给他关起来，只有透光处通天---在方舟里，虽然四围没有别的路，却是有一通天的路）。<br><br>像新约，使徒约翰被囚在拔摩海岛），四面是海，无处可逃，只能往天上去；他得着往天上去的路，因而得启示，写了启示录。这是个最高又跟天最近的一本书。他看见天上的荣耀，看到将来要发生的事情，在那里，他都看得清清楚楚的。怎么能看到清楚？因他虽然没有路，却有天路叫他可以往天上去。<br><br>神也常常这样带领我们，在孤单、受压没路可走，无人同情、同心和理解之时，我们可以向着神。经过这些遭遇，就得着天上的异象。</article><footer class='nav-links'><a href='s108.html'>← 上一篇</a> <a href='s110.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

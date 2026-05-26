@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十一日</h1><p class="meta">主耶稣基督的见证 · 第254/365段</p><p><a class="btn" href="s253.html">上一篇</a><a class="btn" href="s255.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s254.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>神把上好的给了我们，就是把基督、他的独生子给了我们，你接受了，他就是我们整个的救恩。今天你有这个生命在里面，从你出来的就说出那个东西。主耶稣说你心里所充满的，口里就说出来。你的嘴巴所充满的，就代表你里面所充满的。今天在基督教的世界里，很多道理，但是每一个道理都有它的一个出发点，一个中心。今天，我们不去争辩一个道理对不对，世界的意见那么多，怎能一件一件给它弄清楚？去争，争不完。我们要从神来看，因为唯有神是真实的，他永远不改变。人会改变，但神不改变，神的信实已经在圣经里、他的话里显明是可靠的。神的信实也要显明在你里面。你能知道我们的神是真实的。</p><p>神是实实在在的。虚假的东西，就没有办法代表神是实在的。神是爱，残忍的就无法代表神是爱的，神是温柔的，硬板板的也无法代表神是温柔的。所以不是我们的嘴巴说什么，乃是我们这个人的情形到底怎样。那本《人的破碎与灵的出来》的书，若能够摸到要点，你属灵的工作和事奉，就能从有限出来，投入无限里去。</p><p>因为我们人就是有限的，现在，你的工作就只在于你自己那一点点上的。凡碰不到神，遇不见神的，凡不是出于神的工作，都是人作的工作，做出来，别人都会感觉到。好多人的工作昙花一现，起初好看，过一阵子，也没有了。这说明出于人的只暂时兴旺，出于神的，圣灵要见证他的工作。所以今天我们要学习，不从外面看问题，要从我们里面去看问题。你对神怎样认识，就看你对我们里面的灵有怎样的认识。现在你可以看到属灵的一些原则了，这些给你学习不完啊！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

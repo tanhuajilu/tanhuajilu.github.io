@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十七日</h1><p class="meta">主耶稣基督的见证 · 第351/365段</p><p><a class="btn" href="s350.html">上一篇</a><a class="btn" href="s352.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s351.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:在使徒行传2:38，彼得对扎心的人说:“要奉主的名受浸。”保罗也说奉主的名受浸。</p><p>答:奉主的名受洗是圣经讲的，奉父子圣灵的名受洗也是圣经讲的。没有什么争，你要奉圣父圣子圣灵的名受洗也可以，你要奉主耶稣基督的名受洗也可以，不用争的。李某人就专门搞这些东西来争来辩。主耶稣说，我们奉主的名祷告主就听，他就偏偏创一个不奉主耶稣的名祷告。他在圣经之外再加一些奇奇怪怪的东西来搞乱，一条直的路不去走，反弄这些东西来搞，制造麻烦！为着这些不必有的麻烦，信徒为此问很多，辩很多。</p><p>特别呼喊派的人，好多人要找我，我都拒绝，不与他讲，因为讲不清楚。现在就是，你感觉是对，你就认为你感觉是对。不过你没有光，你里面不敏锐，你又真怕，怕有没有讲对，里面又是存在矛盾！所以没有光的人最可悲，听意见这么多，跟这又不行，跟那又不行，自己找不出断案来，断案了又糊涂，你给他出主意，他才会定。我们就放手喇，就让每个人到主面前去看属灵的事，才会实际把属灵的情形摆出来，彰显出来。这些东西再辩，辩不清楚，所以这些东西我们学习不辩！你怎样信就怎样行。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

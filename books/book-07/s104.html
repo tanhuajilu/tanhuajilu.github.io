@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十四日</h1><p class="meta">主耶稣基督的见证 · 第104/365段</p><p><a class="btn" href="s103.html">上一篇</a><a class="btn" href="s105.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s104.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有一个以前的地主，在跟我们一同劳动时说:“我作地主时，十个指头带十个戒指。”我说:你现在劳动，还讲这些吗？讲来作甚么？讲来有甚么用，这是你过去的，不是现实的。就是以前有过，今天也不敢讲，因要考虑到:别人还认为你在夸口。你讲从前作地主的事，你是还留恋作地主的生活吗？“这就脱离现实了。</p><p>有一位破了产的姊妹也是这样，今天已经连饭也不能开，房子已经抵押，她还在夸口以前怎样。是不现实了。</p><p>所以，一般我们都不说我过去怎样，主怎么用我，我怎么热心。这是已经过去了的，今天已经没有这些。现在，我们就是重新起头。</p><p>你们就从这里去学习功课。</p><p>有生活的困难也叫你去仰望神。反过来就是更认识自己。要看到自己有没有骄傲。认识神，反过来就是认识自己。我们认识神，同时也认识自己。你对自己没有认识就是对神也没有认识了。</p><p>新约圣经说，神就是光。你摆在神面前，摆在神的光中，被鉴察，就看到自己什么都不行。所给你的光愈强，你对自己的认识也愈透，愈清楚知道。</p><p>这几年来，在实际上，你们多少在认识上被提高了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

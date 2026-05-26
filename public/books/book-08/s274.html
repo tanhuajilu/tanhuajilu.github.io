@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百七十四段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百七十四段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s274.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>因性质一样的才会连在一起，性质不一样的，没办法连起来。属灵的就供应属灵的东西，正如主说的:"从灵生的就是灵，从肉体生的就是肉体。")有"从灵生的"，所以需要养活这从灵生的生命。主不只重生了我们，主自己也是生命的粮生命的饼,38,51)供应我们。<br><br>肉体的生命既从肉体生，也接受肉体的供应。属灵的人对属肉体的没有口味，属肉体的人对属灵的也没有口味，因为接受不了。属灵的功课，实在也是无穷无尽，我们虽然得到这个概念，也有一点经历，在我们身上，却是越经历越纯净越单纯。这单纯不是一下子就单纯，是我们长期在神面前，一直不断有看见，自然而然不断有单纯，纯洁度越来越高。不然，我们这＂人＂就是混在一起的。<br><br>一个没有重生的人，他的魂、他的体是搞在一起不清楚，模模糊糊的。当你得救以后，你里面有光，这光就是神的生命，所以，这光进到里面来，你自己就可以懂得，＂啊，我多了一个东西。＂所以，凡信主以后跟信主以前是一样的，恐怕他的重生有问题。因为凡是信主的人，他的前后就不一样。上一分钟还没有得救，下一分钟得救了，一分钟前后，就不一样，还不是他的行为怎么改变。<br><br>若问:刚信主，会有什么行为呢？就有不一样；这不一样，乃是你里面内心世界的，你有一个救恩的喜乐、平安。你里面这一个救恩的喜乐平安，就是诗篇所说的:"有得救的乐歌四面围绕我。"这得救的前后实在是太奇妙。</article><footer class='nav-links'><a href='s273.html'>← 上一篇</a> <a href='s275.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

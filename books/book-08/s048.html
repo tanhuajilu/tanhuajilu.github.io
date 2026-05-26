@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第四十八段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第四十八段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s048.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>有的人，神一下子给他大光，也有好多人，神慢慢作，一直的光照他。神作工，都按各人的情形作工。神对我们也一样。因着祂的爱子耶稣基督，我们在祂面前都一样宝贝，各人就照各人的度量去经历。你度量小，等一回，给你更多，你也没法装完。你经过好多道路，经过难处、失败、许多的矛盾...就藉这些来扩充你的度量。你的度量越大，对人就越能宽容，对别人就有赦免之灵。<br><br>如果你里面的度量是狭窄的，就只有自己，没有别人──有一个人得罪你，你只会忿他，不会赦免他，因为你的心窄小，常怀不平。所以，神要扩充我们的度量。你如果没有度量，别人讲你一句，你就受不了，有度量的，别人讲更多，你也不会难受。你经得起人怎样对你，对你怎么讲都可以。<br><br>因为我们都是人，人讲我们好，我们高兴，讲我们一句不好听的，也会几天不能睡觉，心里难受；这就是，里面浅，里面窄，里面小之故。所以神通过一些经历，要扩充我们每一个人的度量，叫我们有度量来接受恩典;<br><strong>弗3:19</strong>）。<br><br>恩典要有个地方摆，但常常，神找不到一个地方来接受恩典！不然，恩典必要给你满溢出来。度量大的，就有更多的恩典给他。人的思想总是要怎样去作，神的恩典却不要你作，是要你相信，要你信他。主在地上时，人问祂说:"我该作什么才算作神的工？"主说:"信神所差来的，就是作神的工。")这跟人的观念全不相同。人去作工，就结出人的果子，像他这人一样。神作工，却叫人像神。神也借着人去作工，为的是把每一个人带到神面前去像神。</article><footer class='nav-links'><a href='s047.html'>← 上一篇</a> <a href='s049.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

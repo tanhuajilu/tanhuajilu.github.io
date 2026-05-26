@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月六日</h1><p class="meta">主耶稣基督的见证 · 第340/365段</p><p><a class="btn" href="s339.html">上一篇</a><a class="btn" href="s341.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s340.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:宾师母非常着重与撒旦争战，晚年光景却很不行。</p><p>答:尽管宾路易师母有一些情形不对头，这也没有什么奇怪，因为她讲的话给撒旦打击很大，撒旦要来攻击“她”。这是灵战，交战总是会负伤的，不是说你包赢，你会受伤！这受伤更荣耀。打仗打到连伤都没有，你打仗打仗，伤都没有，你是逃到什么地方了？（你是逃避争战。）你愈是冲锋陷阵，你愈会受伤。所以那打仗回来没有手，没有脚的，在欢迎会中更荣耀，更受欢迎。</p><p>我们的蔡老弟兄，晚年的时候，思想也是受打击很厉害，批斗得那么多。我跟你说，你不要想歪了，个中情形、原因，你不知道，神知道！他这个是怎么来的？他被人斗，他受刺激，人给他斗，斗到他神经都不正常了，这个还要带到神面前！你不要给他随便批评，神的工作我们不知道。这是严肃的。所以，你对宾路易师母什么书怎样，我们不随便去断定。</p><p>真理不对的，反而这个，你们要弄清楚。我们要去讲，一直争辩！你要为真道争辩，你不争辩，神给你知道作什么？你知道的，不是为你，你知道的也是为教会。凡是你所受的恩典也是为着教会，若为着别人，单单给你，有什么意思？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十二日</h1><p class="meta">主耶稣基督的见证 · 第163/365段</p><p><a class="btn" href="s162.html">上一篇</a><a class="btn" href="s164.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s163.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我们这个人从里到外也像会幕一样，有至圣所、圣所和外院，就是我们的灵、我们的魂，和我们的身体。我们的灵在里面和神不住有交通，也让神作光，借着我们的灵照亮整个的人，神的荣耀就从我们显明。所谓属灵的路，就是从我们的灵出来，通过我们外面，把神带出。像我们传福音，什么时候福音从我们灵里出来，一定有人得救，因为神的道、神的生命借我们的灵带出来，人碰到就得救。若没有从灵出来，圣灵就没法同工。</p><p>圣灵的同工是在人灵里面同工；邪灵的工作却在人的魂里做工。所以那些搞心理学、静坐冥想的，乃是作在人的魂里，这些人很容易犯鬼，因为他们是与鬼相交。鬼就是利用人的魂来发展牠的工作。在基督徒中间，魔鬼喜欢你认识属魂的东西，不喜欢你认识灵。很多人只懂得用魂的东西，这方面牠喜欢你去作，因你作这些就叫牠有机会作工。牠要你用这一个（魂的东西）来传道理、来作工；作了很多，还是落在牠的原则里。牠借这个，就叫人没有办法真的得到福音，即使有几个信的，也信得不清不楚的。且看受浸了多少人，要主的没有几个，因没有得着实际的东西。</p><p>但神的工作却是实实在在的，神的工作要在我们灵里，通是我们的魂带出去。人信主得救必然有重生的生命；那没有重生的，里面就是虚的。这一个基本的东西，大家摸着了，教会的面貌就会大大改观。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

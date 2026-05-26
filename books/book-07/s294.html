@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十一日</h1><p class="meta">主耶稣基督的见证 · 第294/365段</p><p><a class="btn" href="s293.html">上一篇</a><a class="btn" href="s295.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s294.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>答:现在外面的都是假象。我们所谈，什么人什么人怎样，是有些感觉说出来了。如果这些感觉合乎事实------他们竟模糊到这样子，我们对这些与主不相合的东西，就要定罪。你不定罪，就会跟他走。社会上平常说:“对待问题，是不对的，你要批评。”这是社会的用语。我们是说:“对不合乎神的东西，我们要定罪。”</p><p>讲到定罪，就是因为我们要保持我们神的尊严。我们的见证是尊严的，却给地上的人搞到乱七八糟，糟蹋到“不像”了，所有忠心爱主的人，愿意来维持祂的真理，祂的见证。对这些不合乎神的就要定罪！</p><p>所有不肯定罪而妥协的人，都没有属灵的前途。这是我们几十年从各方面观察到的。我们看到好多人，对这些都有感觉，他们应该有转机，好好的面对！但是，他们里面的那个原则却没有改变！有背叛原则的人，他怎么搞，都是背叛。里面的原则要能够改变，属灵上才有起头。人里面的原则是非常紧要的。</p><p>那一天，我对弟兄姊妹说:“某弟兄怎么会跟某某弟兄同工呢？很奇怪！难道他没有感觉？”因为有些人在讲台上讲的，都不是讲圣经的东西，完全讲科学，讲知识。我说:“若是这样，就叫科学会好了！不要说这是什么属灵的特别聚会！”本来的目的是讲属灵的东西，他却一直在讲科学，整篇道理，只在讲台讲几节圣经，他不是在作主的工作，这样讲会与神同工吗？</p><p>他存着这个东西去作工，他的工作都是一面在做，一面在拆毁。我说:“我们同工是讲属灵的东西，而你讲起一个东西是跟属灵无关系的，把属灵的东西冲淡。这就受破坏了。你想是吗？”是属灵的同工，一定是同有一个灵，并且在灵里和谐的。如果里面不和谐，你讲好，他就嫉妒！有这样存心出来，在属灵上就什么都漏掉了！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

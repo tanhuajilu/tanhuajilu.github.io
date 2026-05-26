@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十三日</h1><p class="meta">主耶稣基督的见证 · 第143/365段</p><p><a class="btn" href="s142.html">上一篇</a><a class="btn" href="s144.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s143.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>老弟兄都要学习，不去想:“你们带领的弟兄，只注意青年人，把我们老的放在一边。”你自己已经要带领别人了，还要我们去带你吗？作为老弟兄，你应该同心去作，去服事，不应该怪我们注意青年人，以为我们把老的就放在一边。不是的，这样想就不对了。</p><p>五十年代时，就有一个问题，有些姊妹起来控诉说:“他注意青年人中间的工作，就把我们老信徒都撇下在一边。”</p><p>如果没有青年人兴起来，老的死了，不就没有人继续上去吗？教会哪有前途？所以教会应该注意青年的工作，如果没有这些年青人，我们八十多岁（你们三十多岁），就没有这些人出来了。八十多岁的、七十多岁的死掉，都空空空的，哪里还有人？是不是？这都是很主要的原则。</p><p>五十年代，我们到X地去作工，那时也很年青，有一位弟兄苦得不得了，经过五十多年，他说:“老弟兄那时30多岁，他就说:『年青人来，年青人起来。』如果都是老年人，哎，我们年青人怎么爬起来。不鼓励年青人，我们都没有用了。”</p><p>如果是正常的情形，年青人就有年青人的用处，老年人也有老年人的用处，因教会没有老人家也不行。</p><p>好像在家里面，若都是年青的，常忘掉关门，忘掉门要锁好，锁了还不安心！有一个年老的父亲在家，就比一个锁更厉害。是吗？</p><p>老弟兄的一份就是负责看守，这都是教会的财富。年青的，没有父老不行，所以圣经里有年青的，也有年老的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

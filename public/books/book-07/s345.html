@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十一日</h1><p class="meta">主耶稣基督的见证 · 第345/365段</p><p><a class="btn" href="s344.html">上一篇</a><a class="btn" href="s346.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s345.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>答:你们在他们中间，觉得他不对。但是在我们，客观方面，对中国，他带给中国的遗害很大。起初他们有长老来谈话，我们一直没有提到李某人的名，交通中，后来长老说:“你对李某人弟兄有什么感觉？”我说:“你没有问，我不讲，你问，我就讲。”我说:“他这样作，带出好多难处来。我们中国从五十年代开始到七十年代，特别是在聚会处这个系统所受到的打击、所受到的伤害，所受的就是一种外伤！而现在，如果你们这一套搬到这边来作，给我们的就是内伤了。所以，我还是希望你们要儆醒，如果你们来，我们受伤害还更厉害！所以我们对他抵制。”</p><p>在中国，就是汕头和我们这里一致对他抵制。呼喊派在这里得不着什么，因我们在这里有主在管理。</p><p>其余的地方，好多地方，好多人都写信来，这个问题就搞到糊里糊涂的。一些年青人碰到他这个东西，就热乎乎起来；有老弟兄在台上讲道，年青人就把老的从台上拉下来，“老头子，没用了，靠边站。”他们当场这样做。这是什么东西。我们看他实际作的这些事，这些举动，就知道完全不是属灵的东西。这个情形，今天还存在，呼喊派已经分作二三派，各地方都有，福州最厉害，大家都争大。看见这些果子，就知道源头是什么！还是神保守了一些人，不受他影响，不然，就会像其它地方，很多人崇拜他，喜欢看他的书籍。我们后来，才看到他变了，所以，不是听片面的，是要看事实。</p><p>神藉着这些，给我们学习认识主。有人想，巴别塔好像做得更高、更出名了，但等到语言语音一混乱，巴别塔就盖不起来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

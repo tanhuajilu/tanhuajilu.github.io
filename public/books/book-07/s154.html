@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月三日</h1><p class="meta">主耶稣基督的见证 · 第154/365段</p><p><a class="btn" href="s153.html">上一篇</a><a class="btn" href="s155.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s154.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:我以为所在的团体有问题，我们也不必走出去，如果你走出去了，不过又多一个分开吧！是吗？我是这样受教的。</p><p>答:只用道理讲，很多道理讲不通。问题是，我们要照神的工作。每一个时代，神都有祂所兴起的工作。天主教落到这样堕落的情形里，要改变改变不来。人没有办法把天主教整个改过来。因为势力很大，忠心爱主的人只好受逼害、反对、监禁、审判；但是到了时候，就带出因信得救这真理。如果没有分别，在天主教里，哪有办法做这工作？他不许可你做！所以，当时神兴起马丁路得，把因信称义讲清楚，这是最基本的福音。</p><p>脱离天主教以后，又落到各种复杂的情形里。名是教会却不是教会，所以不久就兴起“弟兄们”（弟兄会）来。当时“弟兄们”却是神所兴起的，许多真理亮光都从他们出来，而且他们同心合意。他们到处带出弟兄运动，影响当地神的工作，也影响整个世界。</p><p>后来“弟兄们”也发生变化，这变化不是真理方面的，乃是人这方面的。人够不上属灵的东西，就落在看法的争辩里。</p><p>到一九二一年，在中国就有倪柝声等弟兄姐妹起来。他们发现，所说的教会连救恩都没有讲清楚，只变作一种宗教的团体。当时的情形没有办法叫人看见教会，就是说没有教会的见证出现。他们就开始传福音，把救恩讲清楚，也把教会真理释放出来。见证在当时是很强的，影响中国沿海地区，影响整个中国，也影响到国外去，这是历史事实。当时，在一般公会里都是死沉沉的，倪柝声等人就把救恩讲清楚，把教会真理讲清楚。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第五十四段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第五十四段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s054.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>问:(略)<br><br>答:你所谈的＂我来这里交通，恐怕只是头脑的接受。＂对这一个，你不要去考虑！交通的接受，就是要通过你的耳朵，又通过你的思想。你思想接受了，神的灵会不断给你作工，作到进入你的灵里面去。对这一个，我们自己不会知道，这是神荣耀的工作。<br><br>就像我们吃东西，吃下去了就消化，会把各种养分吸收。营养的成分会给吸收去，其它的东西就给排出来，这都很自然的。东西吃进去，通过一道一道的过程，营养的成分就吸收了。至于吸收到哪里？你也不知道。你的身体总是感觉得很正常的。只要我们缺少了一个什么元素，身体自然会感到软弱无力，或没有精神，对这些元素（像什么维生素，矿物质吧），你有吸收，就显出精神饱满，体力充足。所以这一个吸收，是生命的一种自然律！东西吸收了，就产生一种变化。所以，你不必考虑这个怎么样，那一个怎么样。你简单的去＂注意神的话，接受它＂就好。<br><br>我们小的时候养牛。牛吃草是一直不停的在那里吃，一直吃一直吃。我们小孩看牛就怕牛吃不饱，牛吃不饱，回去了，就会给大人说:＂你为什么给牛吃不饱，牛还是饿饿的，不饱的。＂我们小孩就给牠们尽量的吃，吃得牛肚子都满满的，吃饱了才把牠牵回来。回来了，那些牛嘴巴还是不断地在动！哦，这是倒嚼，牛吃下肚子的东西，还要给它去翻去倒嚼！<br>现在，你把主的话丰丰富富的存在心里，却并不是到这里为止！还倒嚼。<br><br>牛经过在草场第一道把草吃进去，还要倒出来，倒嚼，嘴巴再倒嚼，把草搞成牠可吸收的养料。当我们在听神的话，圣灵也在里面作工。所以主耶稣说:＂保惠师圣灵来了，要叫你们想起我对你们所说的一切话。＂;<br><strong>约15:26</strong>)主耶稣的话讲了很多，圣灵来，就把主的话叫我们想起，使我们记得──再翻一翻，倒嚼！</article><footer class='nav-links'><a href='s053.html'>← 上一篇</a> <a href='s055.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

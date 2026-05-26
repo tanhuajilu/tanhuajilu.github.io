@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十七日</h1><p class="meta">主耶稣基督的见证 · 第229/365段</p><p><a class="btn" href="s228.html">上一篇</a><a class="btn" href="s230.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s229.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>对和教士，我们明显看到一点，就是差会不要她，后来她还是凭着主的引导到中国来。她的特点就在这一点上，她听从神的话，听从神的差遣，肯听主的命令。这一方面是我们要学习的。不是人叫我们怎么样做，是要神在我们里面带领，有圣灵才把我们带上去，这种态度很宝贝。</p><p>其它别人的讲道，提到和教士的很少，几乎没有。王峙的讲稿，王连俊的书，还没有提到过和教士的事，王载也没有介绍过和教士。只有倪柝声的讲道讲到她，书本里也多处提到她。这就是里面深处响应的问题。和教士一死，有一些反对倪柝声的人就说:“和教士是给倪柝声气死的，和教士给倪柝声气到死。”这是我亲眼看见，有人这样说的。如果和教士是为着倪柝声而气死，就更有问题了，怎么一个属灵人会给一个年轻弟兄气死？</p><p>提“气死”的这些人，都以为人崇拜某些人（崇拜和教士或崇拜倪柝声），他这样说，要叫人头脑一转。他们提出和教士，是要藉和教士的事来反对倪柝声！人的东西是最复杂了。我们在这里要说的是:属灵的东西是超越“人”的，在人的这一个水平，都不会讲他好讲他坏的...许多人跟和教士常常聚会，至少每个月有一次，但很多人都是不清不楚的。而倪弟兄每次到和教士面前，都有所得着---得着亮光，得着供应，却不是因人这方面的。在人这方面有人的感觉，有不同的成见，但是他是宝贝双方认识神的东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

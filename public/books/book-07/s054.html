@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十三日</h1><p class="meta">主耶稣基督的见证 · 第54/365段</p><p><a class="btn" href="s053.html">上一篇</a><a class="btn" href="s055.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s054.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>每一个信徒都要求摸到属灵的东西，大家有共同的认识，虽然没有多大恩赐，但是合起来力量就大。所以不管是工作，不管是长老，没有办法跟圣徒脱节。这不脱节是在生命里，不在生命里，人是很容易独立的。每个人都很容易独立，需要服从在生命圣灵的规律里。好像每一个细胞需要服从在身体生命的规律里，离开这个，你就单独分离出来了。</p><p>所以，道理上是没有多大的问题，你就是把史百克、达秘所有弟兄会好的道理都拿来用，用不下。用不下不是因道理不对，也是我们这边够不上，听不来。所以主说:你们听是听了，却不明白；看是看见，却不懂得。这一个工作就没有人能做，这个能看见，能懂得，是圣灵在人里面的工作。圣灵在人里面的工作怎样？因为神说，他的话向聪明智慧的人就隐藏，向婴孩就显明出来。所以我们无依无靠，只依靠主，主就一直带领。</p><p>问:这一个最好，其实就是...</p><p>答:最好就是主耶稣，因神把最好的给我们，把独生子赐给我们，是最好的。你说最好的接受了，是出于主的，宝贝。你感觉这个是出于人的，就不宝贝，都是次好的，最好的就是宝贝。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

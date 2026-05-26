@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十四日</h1><p class="meta">主耶稣基督的见证 · 第55/365段</p><p><a class="btn" href="s054.html">上一篇</a><a class="btn" href="s056.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s055.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:每个时代都有它的一个特点，这个特点是不是最好呢？这个不一定？</p><p>答:神是根据时代来作工，好象先知讲话，每个先知都根据时代讲话。以赛亚讲的，以西结讲的，或每一个先知讲的，都根据当时的时代。</p><p>今天你讲话，也根据今天的需要，不能主观。讲道若是主观，到一个地方去讲，讲过，仍然不知那地的信徒有没有这个需要。像做生意也不能主观，货物到那边几个月都销不出去，因他那边同样的货比我们更多。你是要供应他没有的！</p><p>这次天津天气寒冷，最好卖的是什么？是卖暖气机，天天都有人去买。一台暖气机三百块、一千块，大赚钱，因适合天气（接近零度）。大家冷得受不了，暖气机最有销路。至于冷气机，不需要买，冷气来就不对头了。到夏天才刚相反，冷气机最有销路。</p><p>今天教会这个情形，好多人都是主观的讲道，不知道客观的需要，需要不需要都不知道！你讲这么多道理，客观讲已是不对了，而且又不是每个人主观的需要。</p><p>神今天就在人失职的情形中作出反应。怎样反应？像我们国家的运动，每个运动都有客观需要，现在是走私多，受贿赂多，用这个重点来打击了。所作的是根据每一个需要来作工。</p><p>为什么要传福音，因人需要主。人需要主、需要福音，他就接受。医学、卫生也是这样；根据今天需要什么，给他去对付这个病，有什么病就作这一个。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

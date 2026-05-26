@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十七日</h1><p class="meta">主耶稣基督的见证 · 第300/365段</p><p><a class="btn" href="s299.html">上一篇</a><a class="btn" href="s301.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s300.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>如果见证是我们的见证，今天如果我们讲自己的故事，就变作宣扬自己，为自己作见证，这个见证没有什么意思。所以好多经历是为着我们自己个人的，不是为别人。这样，我们经过这些做什么？有这些，为叫我们灵性的素质被提高，叫你性格被提高，叫你“属灵”踏实。好多人浮浮浅浅，受一点苦也不行。好多人浮浮浅浅的，但是经过了一些打击，他就谦卑，都不要你说:“你要谦卑。”凡是到神面前的人，自然就谦卑。神是圣洁、伟大，我们一到神面前就谦卑。谦卑，不是去与大人物比较，“我不如他！”这不是谦卑。这意思是“我比你差，我还胜过你。”但在神面前，不管你是谁都要俯伏！所以只有碰到神的人才会谦卑，不是因一个道理服，你能谦卑。道理上讲谦卑，自己在讲谦卑，讲的时候就是骄傲，还是骄傲。神的工作是藉着我们每日的生活来打击我们，在我们身上，叫我们在他里面，旧的东西一直衰微，主的东西一直组织在我们里面。</p><p>从生命来的就不会忘记，因为你经历过，你经历过的东西不会忘记。你会讲得很清楚的，若不是经历，是想出来的道理，这道理讲过以后又想不起来了，又忘记了。所以每个基督徒都要在实际生活中学习，因为经过实际生活的学习，在每个人身上都是会留着的，像铁钉钉下去，会留着痕迹。十字架的工作在人身上会留下钉痕、留下伤痕在那边。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

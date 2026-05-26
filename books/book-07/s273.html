@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月三十日</h1><p class="meta">主耶稣基督的见证 · 第273/365段</p><p><a class="btn" href="s272.html">上一篇</a><a class="btn" href="s274.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s273.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>菲律宾有一个姐妹来这里，她说:“为什么缘故，礼拜天，我都准备虚空的心到会所去接受供应，但是结果，我是饥饿的去饥饿的回来，为什么？”我说:“有二个原因。一个是听的人自己的问题，一个是讲道的人的问题。有的人去听，不是要听，是应付，不是要接受，当然，这个就虚空。另一个是，”我“真正自己禁食祷告，但是得不着！你这边有饥饿要去，但是你得不着，这是另外一面，是讲道的人的问题了。”</p><p>讲道的问题是什么问题？是他出来的话，不是生命出来的，他是头脑出来的，是人的道理。人的道理怎么会供应人属灵的需要？那为什么缘故，人讲道理讲道理，而不会帮助人呢？就是属灵的那个东西不够，没有属灵的力量。他没有，但是，要用代替品，用自己的聪明、智慧讲道，加上他自己魂的力量来代替神的力量。用代替品，人就不能得供应了。</p><p>姐妹说:“属灵的事有这么的情形？”我说:“这是真实的情形！不是很多年青人所想那么容易。”以前，很多年青人说，作负责人有什么了不起，很简单呀！年青人讲这个。他拿属灵的书来看，拿原文的书来看，拿N弟兄的书来看，都拿来看，看了记得，拿来讲，“怎么样管理教会...”真叫他管，却管不来！因为不是他想那么容易，其中有实际的东西。我们不要说管一个教会，一个家给你管，已经管到头疼，教会几百个人，你管得起？二个弟兄在一起，就有意见了，就有纷争，你能管那么多呢？</p><p>这些是属灵的东西，属灵的你没有，你就什么都没有！属灵的你有，就开始能够摸到属灵的东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

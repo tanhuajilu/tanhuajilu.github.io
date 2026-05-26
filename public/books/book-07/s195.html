@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十四日</h1><p class="meta">主耶稣基督的见证 · 第195/365段</p><p><a class="btn" href="s194.html">上一篇</a><a class="btn" href="s196.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s195.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你们在H地，能接触到很多人，讲道的人更多，都为给你们学习功课。有些人讲道，你越听越得供应，有些人，你越听越漏掉，这是一定产生的两个结果。就是保罗在他所租的房子里，凡来的人都接待，传福音给他们，结果，圣经还是说，他所讲的有信的，也有不信的。</p><p>今天，我们接受好多交通，有的人得帮助，有的人不得帮助，这都是很正常的，没有什么奇怪。这里，要叫我们学习不灰心。他今天不得着神，如果神怜悯他，有一天，他会得着，这是神的工作，不是人的工作。</p><p>所以，让每一个人都有他自己的感觉，也相信每一个人都会进步，只要有进步就好。小孩子常为几片花瓣儿争吵得打起来，到长大了，还会争这些吗？都会放下！好多信徒常为一点小事去争，为些小事就过不去，但是，一年过一年，这些东西都会扔掉，无所争的。</p><p>总的就是要积极，不停留在消极方面去争，消极的东西让它过去，要从积极方面去追求。同时，要祷告，求主给我们对能辨别真理，还要求主给我们能辨别诸灵。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

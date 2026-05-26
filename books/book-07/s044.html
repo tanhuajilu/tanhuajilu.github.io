@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十三日</h1><p class="meta">主耶稣基督的见证 · 第44/365段</p><p><a class="btn" href="s043.html">上一篇</a><a class="btn" href="s045.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s044.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>这生命的道，是在四十年代开始讲的，人看见生命，就转到生命上来。但是那时讲生命也是摸得不多，到了四八、四九年，才有一个强烈的东西出来。就是鼓岭所传的信息，话语的职事、工人的性格、人的破碎、权柄的问题等。这些一出来，就向着生命的路一直向前去追求。</p><p>接着，我们在外面就有一个改变，外面一改变了，继续在生命上去走的人就很少了。因为教会都已经通过这个有些妥协，跟世界的东西妥协，属灵就漏掉，漏得光光的。</p><p>还有少数人维持这一点，维持了，他们里面就被充满。有这一个，在各地才有一些影响，来寻求交通。现在神的路重点就是带我们走在生命里。因为这条路是叫我们有内在的东西。你没有内在的东西，外面势力这么大，一弄你就倒了。所以，你讲香港世界的吸引这么大，你没有这个生命能力，慢慢被诱惑，一个子就倒了，没有办法。</p><p>国内也是一样，外面宗教、世界的势力很大，如果你里面没有东西，你马上受影响。因为外面宗教、世界的路很舒服，有名声，有地位，你到教堂讲道，是上千人听你的，多荣耀。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

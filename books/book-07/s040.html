@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月九日</h1><p class="meta">主耶稣基督的见证 · 第40/365段</p><p><a class="btn" href="s039.html">上一篇</a><a class="btn" href="s041.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s040.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>N这个能力从里面到外面，都反应圣灵的能力，不然，他一连讲四个月，一天三次，都是他一个人去作。你看，这不是神的同在，谁能作？有的人作几天就要休息整个月，倒下去了，这是他里面的神带出来的。这就是宾师母所讲的，复兴是神的灵借着人的灵出来。</p><p>神的灵借着人的灵出来，这工作就是实际的，就是永远性质的，因我们所有的工作都要带到灵里面，带到永远里面去，不是今天作今天完了。还要在永世里蒙记念！至于在今世，我们先预尝来世的权能，在今天就已经先活在永世的味道里。</p><p>弟兄姊妹如果能天天都把神带出来，聚会后就轻松。你来，你的灵是敞开的，每一个就都带到神面前来。祷告大家到神面前来、唱诗到神面前来，里面敞开向着神没有间隔，接触到神，愈有愈讲，愈讲愈把道理吸收。你跟聚会的灵打通，好像窗户与窗户相对，空气会流通，这个叫作交通。</p><p>如果他关得死死，你跟他讲，讲不出去。讲不出去，你就要有冲击力，把门冲开，叫他在神面前站不住。倪柝声那本《顺服与权柄》是在鼓岭讲的，他第一次一讲，没有人站得住，个个都服在神面前，平常人人都说顺服神，在那个光底下，就觉得我们是多么背叛神，我们的心思、意念是多么的跟神不相称。是这样子的，整个人都给照倒下来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-九月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十一日</h1><p class="meta">主耶稣基督的见证 · 第264/365段</p><p><a class="btn" href="s263.html">上一篇</a><a class="btn" href="s265.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s264.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>N弟兄曾说:从灵里出来的，还要经过他的魂。但你的魂能给灵出来，叫灵得到加强，灵的负担就带着思想工作。所以说话要用你的灵，也用你的思想和你的嘴巴！</p><p>若是思想、嘴巴不干净，灵出来就带掺杂。在我们的事奉和交通里，如果还有些肮脏的东西，也会一起被带出去。</p><p>今天，如果说:我的灵很干净。事实却不一定。如果是，我们可以给接到天上去了。我们还有很多地上的东西，很多天然的东西。就是我们在这里交通，还需要把那天然的、属己的、人的东西舍去，要舍己！</p><p>主耶稣要不要舍己？主耶稣自己还要舍己，他有他自己魂的思想，他还要舍己。主取了顺服的地位，还要顺服神，所以基督来作人，他还要完全的顺服神。</p><p>是，要舍己，我们这个人就要舍己，这就是我们所要交通的。要看见这个，这是个无限的东西！这在基督身上已经成就了，也就说明，在我们身上，也要成功。就是以弗所书说的，基督要用水藉着话把教会洗净，洗净到最后一个地步，成为荣耀的教会，是圣洁没有瑕疵的。</p><p>好像作丈夫的向妻子都有要求，丈夫向妻子所要求的，不是她能干，乃是妻子忠贞。妻子很会作事，但若不干不净，这不行。人很会作事，却不干净，在基督面前这就毫无价值。</p><p>淫妇，她还有丈夫，但巴比伦的组织是淫妇吗？还是连丈夫也没有的？所以，主对教会的要求，首先是“干净”，是圣洁没有瑕疵的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

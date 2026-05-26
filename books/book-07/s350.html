@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十六日</h1><p class="meta">主耶稣基督的见证 · 第350/365段</p><p><a class="btn" href="s349.html">上一篇</a><a class="btn" href="s351.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s350.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:关于三位一体，圣经没有这名词...</p><p>答:圣经字面讲这方面是有的。主嘱咐门徒到普天下去...“奉父、子、圣灵的名给他们施洗”（太28:19），原文讲圣父、圣子、圣灵。还有哥林多后书末了祝福的话，“愿主耶稣基督的恩惠，神的慈爱，圣灵的感动，常与你们众人同在。”也是明指三一神。司提反说，看见主站在父右边。主也说，他去了，就求父差另一位保惠师来。就说到主耶稣在神的右边，说到保惠师圣灵；神是三一神。</p><p>神是三一神，但这有三个位格，父、子、圣灵，三个位格是和谐一致的。将来教会跟主在一起，也是合一的，也是和谐的。所以，今天教会就是走跟神合一的道路，因跟神不和谐就是背叛------背叛这一个合一。主耶稣来，建立顺服的原则，因为权柄没有顺服，就等于没有意义。主顺服神，我们在基督里也是顺服神，教会要顺服神。所以三个套在一起，原文是很清楚的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

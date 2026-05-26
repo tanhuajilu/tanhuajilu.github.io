@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月七日</h1><p class="meta">主耶稣基督的见证 · 第219/365段</p><p><a class="btn" href="s218.html">上一篇</a><a class="btn" href="s220.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s219.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>主的死、埋葬、复活和升天，还有圣灵的降临及将来主的再来，这整个的救恩已经赐给我们，我们要把整个救恩接受过来，多有认识并能应用。关于认识圣灵，叨雷有一本叫《认识圣灵》的书，你们回去看一看，会认识这些东西。</p><p>倪柝声也有一篇叫《认识圣灵》的讲话，也曾讲到圣灵的内在和外在方面，这本书把主复活以后向门徒吹了一口气，和五旬节时圣灵降临，都很清楚的讲出。在经历上也是这样，我们倚靠神的时候，面对什么人，我们里面都很坦然，需要能力就有能力托住我们。如果我们是糊里胡涂的，还要求能力充满，邪灵就有机会作工，这是错误的东西。</p><p>特别是初开荒的地方，圣灵的能力更加明显，常常借着神迹奇事来证实所传的福音。直等圣灵要带我们经历更深一点的时候，很多外面的东西就都减少。对属灵东西的认识，神也要带我们提高。有一首诗歌说:“神的恩典要一一的计算。”后来，我唱的时候，就常把几个字改了。我说:“神的恩典我无法计算”，真的，神的恩典那么多，我还计算得了？如果能够一一的计算，也就太有限了。神的恩典是无法计算的！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

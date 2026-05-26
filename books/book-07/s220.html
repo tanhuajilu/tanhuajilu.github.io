@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月八日</h1><p class="meta">主耶稣基督的见证 · 第220/365段</p><p><a class="btn" href="s219.html">上一篇</a><a class="btn" href="s221.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s220.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:有人说使徒行傅七章是个新起头。徒二章彼得有能力，传福音有三千、五千人得救，但他仍然摆脱不了犹太教的影响；行傅七章，司提反殉道，有很强的见证，他完全脱去犹太教的影响。我有一个感觉，若还不脱离宗教遗传，我们就会失掉见证的能力，像彼得一样。在加拉太书二章，他（彼得）甚至行出与福音不相配的行为，被保罗责备。</p><p>答:彼得若不从圣灵得着能力，就不能叫三千、五千人得救。他说:“你们钉在十字架上的这位耶稣，神已经立他为主为基督了。”他把见证带得这么高。听的人都扎心。这就是神复活大能的工作。所以对圣经不是去分析故事、历史，是要摸到神的大能。彼得本来是不敢承认主的，甚至在婢女面前否认主的，今天（五旬节那天）却有这圣灵的能力，在这么多人面前大声见证主，这就是神的大能。</p><p>司提反对着犹太人讲道，由上古讲到主耶稣，他向主的忠心表露无遗，听的人都很扎心，咬牙切齿，结果用石头把他打死。彼得的话叫人扎心是出于圣灵，司提反的话也叫人扎心，因为摸着了他们的要害，他们甚至咬牙切齿，把司提反打死，这也是神的荣耀。</p><p>彼得的见证荣耀，司提反所作也是荣耀，以后雅各布被刀杀死也很荣耀。彼得曾坐牢，神放他出来，还继续为主作见证，这些都是神的荣耀。圣灵一来，什么犹太教都脱掉，使徒行传就是一直给人看见，圣灵在作祂荣耀的工作。如果把使徒行传中这些“荣耀”拿掉，你就看不到什么东西了；你还讲到底是进步还是退步，也是要掉下来的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

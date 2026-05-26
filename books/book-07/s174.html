@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-六月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十三日</h1><p class="meta">主耶稣基督的见证 · 第174/365段</p><p><a class="btn" href="s173.html">上一篇</a><a class="btn" href="s175.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s174.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>我对弟兄们说:“现在你不要问这些，你也不要问神在某地要做什么？问了你也不知道。但是你现在要学习、要清楚，主在你身上要作什么？”这问题你解决，够上主了，就影响别人，主会借着你们叫别人跟从主。这才是主的路，不然，大家只靠牧师解决问题就很被动。</p><p>现在是，大家都主动跟从神，彼此有交通，在交通中彼此有校正就好。我们有一颗心向着主，主就喜悦，道路怎么走，主会带领，他必带领到底。这些方面，我们不必定什么计划，神要作，一下就行。像神要得着扫罗，神要作工，在大马色的路上，扫罗就仆倒神的大光中，俯伏在祂面前。</p><p>外面的问题，暂时不去动，让里面先认识主，里面先清楚怎样事奉主。你有一颗要主的心，其它的不要介意，这才轻松，不然，那些问题留在心，就叫你背负重担。你只要向主说:“主阿，我要你，我要的是你的带领。”就是这样，我们去跟从主。别的，暂时给它放下，因道理是太多了。</p><p>（147-174）选自见面记录六（1、2）2000年8月21日午</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

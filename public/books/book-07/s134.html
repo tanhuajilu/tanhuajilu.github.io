@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十四日</h1><p class="meta">主耶稣基督的见证 · 第134/365段</p><p><a class="btn" href="s133.html">上一篇</a><a class="btn" href="s135.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s134.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:我们还要求恩典呢！</p><p>答:都可以呢！我们在恩典里面，我们也在神的祝福里面。</p><p>问:旧约里，神说:你出你入，我都赐平安，扞盆里的面也不减少。这是祝福，新约还求这个祝福吗？</p><p>答:这里有很多的祝福。有外面的祝福，也有里面的祝福。</p><p>雅各布也求祝福:“神若与我同在，在我所行的路上保佑我，又给我食物吃，衣服穿，使我平平安安的回到我父亲的家...”</p><p>我们有一位弟兄说:“我到深圳时只八块钱，经过几年，神祝福我，现在我在香港有房子，生意也做得不少。”他讲这个。讲完了，我们就说:“祝福有外面的，也有里面的。外面的就是刚才说的，起初只八块钱，现在有这么多物质的。又是像雅各布的情形，空空的出去，回来带着一双双的牛羊，得到祝福。</p><p>至于里面的，什么是里面的祝福？就是雅各布到了雅博渡口哩，他跟天使较力，给摸了大腿窝，瘸了！他抓住神，要神给他祝福，不祝福就不让神过去。他已经这么多了，还求祝福？神的使者对他说:“你的名不要再叫雅各布，要叫以色列。”这就是里面的祝福。</p><p>因雅各布是个人的，以色列是带进国度了---带进以色列国。国家的富有，跟你个人的富有，你看，差多远啊！所以是里面的祝福。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

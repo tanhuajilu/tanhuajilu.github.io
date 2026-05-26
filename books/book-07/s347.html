@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十二月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十三日</h1><p class="meta">主耶稣基督的见证 · 第347/365段</p><p><a class="btn" href="s346.html">上一篇</a><a class="btn" href="s348.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s347.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:哥林多教会里有分争。另一处圣经说“你们要从他们中间出来。”像哥林多教会有那些分争，信徒可以不可以从其中出来？</p><p>答:现今时代的教会，还比不上哥林多教会哩！哥林多教会在恩赐、知识上都全备，就是因为纷乱、结党等属肉体的情形而受责备。今天许多教会还比不上哥林多教会，连哥林多教会都不像！</p><p>问:保罗的心意是不是要他们合而为一来事奉神。</p><p>答:保罗的心意就是认定元首，认定基督。有人讲:“我属保罗、我属矶法、我属阿波罗。”属肉体的人听了很高兴。彼得如果肉体没有对付，就会很高兴，“哦，有人是属我的。”好多信徒说:“我属你的。”我们听了很高兴，“有人属我。”保罗说，人有所属，这是属肉体的。很严肃的！</p><p>问:比方说，我生活所在的教会，分好几个派，我是站我的地位呢，还是我出来好？</p><p>答:这要看具体的情形？也在乎你本身所看见的是什么，有客观具体的，也有主观你对肉体的认识。有的时候，这样的时间是过渡。到遇到什么问题，那时到底该怎么作就怎么作。过渡时间，比方说，你还没有清楚，没有把握，信徒会跟到属灵的路来，到一个时候，情形愈来愈坏了，该怎么作就怎么作。该怎么作不是人家告诉我们，是你自己清楚，该怎么作，你自己断案。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-四月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月三十日</h1><p class="meta">主耶稣基督的见证 · 第120/365段</p><p><a class="btn" href="s119.html">上一篇</a><a class="btn" href="s121.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s120.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>死，给你经历了，无形中，生命就在你身上流露出去供应别人。得胜，不是我们所作的。乃是你把基督活出来。</p><p>有一个姊妹，别人怎么骂她，她也一直喜乐，这不是人能装的。里面的生命自然而然会流露。圣经说，人若辱骂我们逼迫我们，就有福了。你多骂，我多有福气，我心里不会苦也不会难受，这就是生命的问题了。有生命在里面就喜乐了。有生命你自然有喜乐、有忍耐。</p><p>得救不是我们作的，得胜也不是我们作的，是基督作的。一切都由他完成。有一首诗歌说:请听，宝座有声音说:成了！主在十字架上也说成了。所有的救恩都包括在成了这话里。得救是主作的，得胜也是他作的。我们只能对付一些拦阻。显出得胜的东西，拦阻除去了，自然显出他的得胜。</p><p>有很多人本来很挂虑的，但摸着主，挂虑没有了。有人米缸还有米，却常挂虑没有米。这就是多余的。</p><p>公司裁员叫很多人心里很苦，但你有主，一切都由主负责。有信徒挂虑公司裁员:我会不会给裁呢？事情还没有发生，已在挂虑。你要去想:就是到这地步，神也不会让你饿死。</p><p>你相信神就安息了，不然事情没到，你已苦起来。事情还没有变动呢！即使变动，你也要相信神，不然，会苦得不得了的。</p><p>别人已经战战兢兢的在那里，我们信徒又应该怎么生活？我说:有命就能活，若没有命，怎么活。只有命是最宝贝了。无论怎样，都一样，围绕着主去，就是以主作中心，什么问题都可以过去。回去把《得胜的生命》这本书去看一看。（应:还没有看过这本书。）去看一看！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-三月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十八日</h1><p class="meta">主耶稣基督的见证 · 第77/365段</p><p><a class="btn" href="s076.html">上一篇</a><a class="btn" href="s078.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s077.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有一个大学生，他研究哲学，又研究佛经，要解决他的问题。有人把圣经给他看，他试试看，后来又带他来。他问我，亚当的儿子怎样娶媳妇，人建巴别塔，神怎么不给他成功？</p><p>后来，我问他:“有没有神？你肯定了没有？”你打断不答。我说:“这问题没解决，以下问题，问也没有用。”他给我讲得都傻起来了。他说，有神有什么证明？我说不用证明。凡是实在的东西不用证明，凡有问题才要人来证明，假的才要证明，真的不要证明。我说神的存在这问题，不因你主观认识有没有而改变。他有没有存在，这是千真万确的，你相信他有，他存在，你不相信他有，他也存在。人反对他，反对到嘴巴坏掉，神还在。</p><p>我说:“你是你的父母生的。（应:是啊。）你有什么证据？你拿证据来，不然我不信。恐怕你是买来的。”</p><p>我说:“你是父母生的。”你没有证据，谁生你，你也不知道，从头出来或是从脚出来，你也不知道。但这事实就是事实。别人说:“你没有证据。”还说:“我看到你是买来的。”这就要你相信，虽然你无凭据，但你心里很踏实，你父亲说你就信。</p><p>“你看不见，你也是父母生，因看见你。你有祖宗，你有父母生。对这东西就接受。问到你有没有罪，我不说你有没有，你自己知道自己有没有罪。你有没有罪？客观的不说那么多，主观的，你知道你有罪。你有罪，你才虚空...”说到这个，摸到他的心了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

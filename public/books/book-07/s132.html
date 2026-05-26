@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-五月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十二日</h1><p class="meta">主耶稣基督的见证 · 第132/365段</p><p><a class="btn" href="s131.html">上一篇</a><a class="btn" href="s133.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s132.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>有一个专门钻原文钻字眼的弟兄到X地来，对X弟兄说:“我们一起同工最好。”X弟兄说:“我要祷告一下。”</p><p>X弟兄就知道有一位弟兄为着原文，为着看法和人争得面红起来，以后觉得不对头，就停止，宁愿输他；过后里面还觉得很难受，觉得很失败:“怎么这么失败！”。这就叫作碰到死亡。生命叫人舒服，肉体的东西叫人死亡，叫人心里很不是味道。所以，凡在道理上去争去辩的都带着死亡。这样子，二个人就碰到死亡。</p><p>这一位弟兄有感觉，不知道那一位弟兄有没有感觉。若他也感到里面不舒服，就开始会碰到生命，若没有感觉，就摸不着生命，一争一辩，他里面就失败了。本来在神面前的交通，结果，竟落到外面去，交通变成争论，他就觉得很难受。</p><p>只有体贴圣灵的，就是生命平安，体贴肉体、属肉体的就是死。这生命、平安以及属肉体的死亡，在每个信的人的经历里都会经历到的。虽然没有注意，还会有经历。</p><p>问:我们信神的话，就是实际呢？还是我们有实际，把神的话讲出来，才是实际？</p><p>答:神的话是有位格的。神的话对马利亚说:“你要怀孕生一个儿子。”这不是一句空话，这话里有“道成肉身”在里面。真的把神的话说出来是有内容的。这也是生命的问题，也就是有生命的分量。那么，人就要经过神的工作了。</p><p>神要怎么做，我们不知道，然而，你一有神的工作，有神的恩典，自然而然会有神的组织，有神的加增。这不是用方法怎样做去做出来，也是生命自然流露的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

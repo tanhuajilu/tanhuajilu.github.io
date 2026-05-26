@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-七月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月四日</h1><p class="meta">主耶稣基督的见证 · 第185/365段</p><p><a class="btn" href="s184.html">上一篇</a><a class="btn" href="s186.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s185.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>你能体会主的心肠，很好！没有主的心肠，要爱人就不会爱得来。因为你喜欢的时候，才爱，不喜欢，就不去爱。这一个不是道理讲得来的。我们人就是这样。</p><p>你说要跟全世界的基督徒交通，跟天主教的也要交通，说这话就太笼统了。原则上，天主教徒，是有生命的、爱主的，可以和他有交通，各宗各派里那些爱主的弟兄姐妹，也可以交通；但这是跟个人的交通，我们不是跟他们的团体交通。今天各地方的背景很多，我们的交通不是跟他的背景交通，只是跟他个人交通。如果有交通，也就为着把他拉到主面前来，叫他看见属灵的道路，以致多有一个清心祷告主的人，共同做见证。</p><p>保罗说:“要和清心祷告主的人，一同追求。”你若和那些糊里胡涂的人追求，一下子就给他影响，给他拉下去了。在香港，如果你要和一千三百多大小宗派交通，要跟谁交通？你一个人真要和一千三百多宗派交通，就要给你分化完了。你若寻求各宗各派那些寻求主人交通，还比较实际。</p><p>来我们在这边交通的，有神召会，新约教会，呼喊派背景的，也有宣道会，以及各宗各派来的，来交通的是越来越多了。但是，我们只是和他们个人交通，不是和他们的背景交通，他们的背景是另外的一回事！所以我们的态度是，凡要交通的，我们都没有拒绝，他们都可以来。那么交通的目的是什么？就是要叫他们认识神，让神在地上得着人，叫他们在当地把主的见证带出来。神的见证是什么？就是主耶稣基督。基督复活产生教会，教会与基督联合就是为要在地上作神的见证，我们所说的见证就是这一个见证，叫神在这个黑暗的罪世里，有神的灯台在这里发光作见证。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

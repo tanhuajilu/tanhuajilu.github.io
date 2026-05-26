@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-十一月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十四日</h1><p class="meta">主耶稣基督的见证 · 第328/365段</p><p><a class="btn" href="s327.html">上一篇</a><a class="btn" href="s329.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s328.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>交通:（略）</p><p>答:关于生命，我们要承认生命是同一个的，就是主的生命。这生命的反应也是同一个的。在你信主的时候，就已经知道，有反应了。你有喜乐，有平安！信主以后，你有的，我也有，都共有的。</p><p>当你的灵沉闷，经过交通，我也知道你这个沉闷的灵。你的灵疲乏、黑暗，我也知道，因为都是彼此感觉到的。但是，一经交通，就消除了，减轻了。所以生命的感觉是非常奇妙的东西。作农民的弟兄，他们没有很多的圣经知识，但他们的反应很敏锐。你若去问:“他们究竟对不对？”这样问，就是外行的。他对不对，你会知道，因为他里面有这个东西，可以跟你对号。你里面会阿们，深处会阿们。深渊跟深渊会反应！不反应就有问题。</p><p>所以生命的感觉不是你去明白的，是神给你的一种自然感觉。好多人就称他们这样子的叫“奥秘”派。属灵就是奥秘，不奥秘就不是属灵。属灵的才会摸到属灵，人的观念就是不能明白属灵的事。这是绝对的。为什么读史百克的书，我们能够接受？因为读了，我们走得通，里面有很多很多的东西。如果人里头没有感觉，就不能看得懂，感觉模糊的，他不知道里面的东西。</p><p>真是求主怜悯，求主给我们的感觉能够更清楚，不然，就会给许多似是而非的东西所模糊。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《谈话记录八》，(366天交通记录选文) · 第二百六十六段</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'><header><a href='index.html'>← 返回</a><h1>《谈话记录八》，(366天交通记录选文) · 第二百六十六段</h1></header><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-08/s266.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div><article class='content'>你热心去做，不小心还会遭很多麻烦，所以帮助人也要有智慧，对这些事要去注意。有一位弟兄，老师替他孩子补课，他很感激，(老师是寡妇)，他也尽量帮助她，像送开水，送所需要的。我们就提醒他，最好让你太太去作，免得老师想，你是男的，做那么多，到底想作什么？太太如果多疑也会有意见，"会有什么交情"。最后反而变成反作用。这就要有智慧,12;<br><strong><br>4:11</strong>）。一提醒，他说:＂对。就堵住别人的口。＂态度就是接受。<br><br>因许多人没有话还要生话，有一点现象，就去说。你跟老师多说几句，人家说你跟她搞名堂！你去怪他乱讲也没有用。如果小心点，人家会乱讲吗？还有，有些人还会追着问:＂他讲什么？＂我们要保护自己的家庭，不要有破口，不给家人、外人讲闲话，这是实际。<br><br>很多人很热心，男女都不分，一大堆来来往往，聚在一起。起初，我们见一些外来的人，一来就跟人很熟的，在一起嘻嘻笑笑，这不敬虔就会落到情欲里去。所以带领青年人，讲道很快，但一落到生活里，就不那么容易，不小心，一件事情发生，要叫人三年也补不回来。实际不对付，你所追求的，都从这没有对付的漏洞、破口，漏掉了。</article><footer class='nav-links'><a href='s265.html'>← 上一篇</a> <a href='s267.html'>下一篇 →</a></footer></div><script>(function(){
+  const audio=document.getElementById('daily-audio');
+  const toggle=document.getElementById('auto-next-play');
+  const nextLink=Array.from(document.querySelectorAll('a')).find(a=>a.textContent.includes('下一篇'));
+  if(!audio||!toggle) return;
+  const KEY='book-08-auto-next-play';
+  const RATE_KEY='book-08-playback-rate';
+  const rateSel=document.getElementById('playback-rate');
+  const saved=localStorage.getItem(KEY); toggle.checked=(saved===null?true:saved==='1');
+  toggle.addEventListener('change',()=>localStorage.setItem(KEY,toggle.checked?'1':'0'));
+  const savedRate=localStorage.getItem(RATE_KEY)||'1';
+  if(rateSel){ if(Array.from(rateSel.options).some(o=>o.value===savedRate)) rateSel.value=savedRate; audio.playbackRate=parseFloat(rateSel.value||'1');
+    rateSel.addEventListener('change',()=>{audio.playbackRate=parseFloat(rateSel.value||'1');localStorage.setItem(RATE_KEY,rateSel.value||'1')}); }
+  const params=new URLSearchParams(location.search); if(params.get('autoplay')==='1') audio.play().catch(()=>{});
+  audio.addEventListener('ended',()=>{ if(!toggle.checked||!nextLink) return; const u=new URL(nextLink.href,location.href); u.searchParams.set('autoplay','1'); location.href=u.toString(); });
+})();</script></body></html>

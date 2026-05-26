@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十九日</h1><p class="meta">主耶稣基督的见证 · 第50/365段</p><p><a class="btn" href="s049.html">上一篇</a><a class="btn" href="s051.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s050.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>X起初也不错了，只是六十年代以后就变了，一变，许多地方打官司，告会所（某地告会所，告十三次失败，还用钱去告，不甘愿），这是肉体。</p><p>X地很复杂，里面很多人摸到道理的东西，如果不是摸到生命的东西...。现在还是很多难处，现在虽然已经离开某人，但许多东西、味道还是他的味道，什么做法...是他留下来的。</p><p>某人也有来过他是在八十年代来，来见面都是一班交通，没有提到X这些问题。后来他先问:“你对X有什么感觉、看法。”我说:“你不问，我们不说，你问，我就说。”把我们看法给他交通。</p><p>我说:“陈、李，大家都认定是属灵人，1973年，他们为着会所告官司，花几百万，这怎么说属灵。”我说:“都是打官司的钱。六十、七十年代，很多人食都吃不饱，很多信主的人相当困难，你们那边那么多钱告官司！你把告官司的钱用出来还可以再盖一个会所，去告官司没有什么意思！后来，就协议共同用，一个上午，一个下午，后来，...我说，你们香港教会对大陆实在是没有爱心，这边困难，困难得没有吃，信徒抓去关，还在监牢里面，你们钱那么多去告官司，这些钱用到那里去了？”他们说，实在是没有关心大陆！。</p><p>“我说，你们那一套，不要再来，来就给我们有影响。二十多年来受苦难，外面也有压力，你们一来也给我们里面受伤，好像身体有外伤，再加内伤。外面是环境对我们的压迫，你们来是搅乱里面。所以你们最好不要来在这里插手。”</p><p>但是他们是把人把钱把书送来，设中心站，全国到那边去拿，什么都从那里拿，到八三年全国都抓。我们很明白，七十年代进来，我们就抵制，所以这里没有受多大影响，只几个受影响...。</p><p>选自见面记录二（4）1999年12月24日上午</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

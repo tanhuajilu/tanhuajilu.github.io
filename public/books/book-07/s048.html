@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十七日</h1><p class="meta">主耶稣基督的见证 · 第48/365段</p><p><a class="btn" href="s047.html">上一篇</a><a class="btn" href="s049.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s048.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:（关于整理文字）这个谈话，我们想记一点，如果变成文字，对一些我们想交通的弟兄，可能有所帮助。整理出来了，会给你们先过目。</p><p>答:文字里面的一些内容，讲到某某人的，不用提名字。我们对事不对人，我们也是人。有名字的，就把那名字给他打上×××，不把名字、地名讲出来。讲里面的东西就好！</p><p>问:史百克1955年到57年在聚会所的讲话，谈到保罗的祷告，他提到二个问题，第一个，“主啊！你是谁？”，第二个问题，“你要我作什么？”我感觉到第一个问题，关于基督，我们一生都认识不了。不要谈第二个，就只第一个已经学不完。第一个是首要的，第二个不是不重要，而是第二个问题。</p><p>答:这一点给你看见光，就学不了。</p><p>问:得胜是个经历的问题...</p><p>答:不是谁告诉你不参加那个，是你里面告诉你，是吗？（应:是）。这是恩膏的教训，以后还会经历更多。因为有好多事情我们会碰到。你要请教说:这个可以不可以，请教不完，事情太多了。主在你里面会引导你，主会不住的带领你，这带领包括各方面，主都会带领。</p><p>问:这是神光照的问题。</p><p>答:这个无形中就是神的光照，因光照耀，就不会走在错误里。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

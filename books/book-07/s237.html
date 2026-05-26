@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-八月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十五日</h1><p class="meta">主耶稣基督的见证 · 第237/365段</p><p><a class="btn" href="s236.html">上一篇</a><a class="btn" href="s238.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s237.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:基督徒常常寻求神的旨意，请谈一下这问题。</p><p>答:谈到神的旨意，反应神的世界是最基本的。人与人彼此会有反应。人与不是人的就没有反应。彼此有同一个生命才有反应，有神生命的跟神才有反应。如果对神没有反应的，他对神的旨意就是猜测的，碰着看的。谈神的旨意，基本也要谈到生命上来，也要认识神，生命是很奇妙的！</p><p>母亲生了孩子，过几天，孩子会反应母亲的意思，他要吃奶，至少要懂得母亲的意思（母子的心意必然有个默契）。在每一个人里面，他都有他的反应，不过他不注意。他没有注意，或没有这个知识，所以不懂得。</p><p>有一个收买旧货的人信了主。平常，他也收买拜偶像的硝金硝纸的灰，灰收起来，因里面有含金的份量，很值钱，加上便宜买来就很赚钱。他问我，可以做这个否？我说:“你里面感觉可以不可以？”他说:“我心里不平安才问。”他初信主，没人告诉他可以否，但总觉得跟他信主不相称。因为这些是偶像的东西，是人献与偶像烧成的，他以为不能作。我说:“你听这里面的去作就好！”</p><p>这就是最基本的，他有神的生命，他对污秽的东西有感觉。这是起点。在我们每个人里面都有感觉，对于神做这些事对不对，里面有感觉，但有时，说不出来。我们总是里面平安就觉得舒服去做，不平安就不敢作。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

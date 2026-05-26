@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主耶稣基督的见证-二月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十八日</h1><p class="meta">主耶稣基督的见证 · 第49/365段</p><p><a class="btn" href="s048.html">上一篇</a><a class="btn" href="s050.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-07/s049.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><p>问:上一世纪福音传到中国，戴德生是内地会的弟兄，与弟兄会有点关系。弟兄会是上一世纪恢复的起头，达秘、马金多等，带来很多亮光，还有顾特也很有亮光。到本世纪是教会真理陆续发表的时代，接着又有生命认识的进步，是很大的亮光。为什么那时有那么多亮光，有这么大的光临到？</p><p>答:这是累积起来的，又与弟兄们有各方面广泛交通得着有关。我们一相信就丰富了。还有，我们也观察一些东西，并且自己也经过一些难处，慢慢的才走出这一条路来。我们也得到宾路易师母的帮助，不过，以后没有再扩展。盖恩夫人也是，莫林诺也是。莫林诺的就是他《灵程指引》这本书。</p><p>新的道理不容易讲，因新的道理是要人里面有路，听的人也要有一条路，不然就称不起来。别的道理好讲，生命道理不好讲，因为看不见，想也想不来，所以要人有学习，要圣灵同工。</p><p>1948年，倪弟兄有这东西出来，起初热乎乎，后来因时代改变，好多人就跑到外面去，就把这个东西停掉，没有了。这属灵的东西也是要有弟兄们去寻求的，好像电脑第一代、第二代...一直不断的进步，不然停在某一阶段，现在用起来就不够用了。属灵的事也是一直不断的进步。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>
