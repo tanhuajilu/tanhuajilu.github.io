@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十一 · 第一段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g011.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十一 · 第一段</h1><p class="nav-row"><a class="btn" href="s082.html">上一篇</a> <a class="btn" href="s084.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s083.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>问:对教会的建造、正统的教会，今天怎么去看待这问题。怎么看地方教会。</p><p>答:今天我们说，地方教会是一个地方的神的见证。所以地方教会立场的这个道理是没有错的。好像茶盘，茶杯放茶盘里是对的，但问题是一杯一杯，摆出的杯，里面装的是什么。我们都站在教会的地位上，但我们里面的是什么？茶杯放在茶盘里，是要装茶的，因为装茶，人才会得到供应，如果装别的东西，就是不对。这不对不是杯放在盘里不对，这不对是指里面的内容不对。教会的地方立场是对的，比方说，我是地方教会，我立场是对的，但若里面不对，就是内容不对了。</p><p>N弟兄说过，属灵的路对，还要对的人摆上去。不然，路是对，给不对的人走上去，一走就走偏、走歪了。</p><p>我们怎么办。难处是二方面，一方面对，地方教会真理是对，但人在神面前也要正常，也要对，摆上去才相称。</p><p>以往只注重教会怎样，内容减少了，停在外面的作法里；里面属灵的内容不够，没有注意。属灵的内容不够，而安排一些工作，就变教条。同时，碰到为难时，也没法去带领。比方说以前，分组分区，每一个组，每一个服事都有一个人负责，好去关心弟兄姊妹。外面这样的安排也做了，但是实在的难处还很多。以前看望，看望到一个家就用一个表登记，那时印很多表格。姊妹到一个家看望，问那家姊妹:“你一天祷告几次，你一天读多少圣经。”要调查。有一次看望一个姊妹，姊妹一句就顶出来:“我一天读多少圣经，几次祷告，你不要问，问这些没有意思。这是我跟主的事情。”他碰到这情形，来问我怎么办。难处是二方面的，一方面，接待方面，态度硬了一点，另一方面，去看望的人里面也可能是虚的，没有什么东西。接待的人根本不服气，她不服气，你还要讲她，她就给你顶。要怎么办？这样就给我们学习，我们在神面前该有学习才有办法去看望别人。</p><p>以前N弟兄讲好多道理，教会是他很多道理内容的一个。还有很多其它的，他的重点是十字架的对付，生命的出来。教会的真理跟这些都要平衡，不平衡就畸形了。属灵的东西要平衡，生命有多少，就跟上多少，这叫作相对。</p><p>历年来，L最注意地方教会，但是越注意就越分开。他说，不要十字架，公开这样讲。这个人都不受十字架对付，都是肉体，教会最对也给他搞坏。</p><p>经过十字架才认识属灵的生命，这也要不断突破。好像第一代飞机，飞了就掉，一代又一代，越来越先进了。就是历代搞飞机的人都有新突破，有新的发现，新的看见。所以N弟兄才讲:“圣灵的水流。”他说，今天我们作马丁路得不够，马丁路得看见因信称义。天主教当时落到赎罪券去，因信称义都没有了。为这因信称义，人听了就接受，听了就反对天主教的败坏，给她定罪、审判。今天，讲因信称义，初信的人也会讲了，讲得很清楚。真理是越过越有看见。今天圣灵的水流往前去了，甚至，我们今天作盖恩夫人也不够，因她只看到生命这一面，教会问题她看不到，所以她在天主教里，也没有感觉要从天主教出来。就是说每个时代都有它的那个特点，我们就要跟着那个水流、那个特点。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

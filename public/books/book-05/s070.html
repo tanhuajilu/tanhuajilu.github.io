@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十 · 第二段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g010.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十 · 第二段</h1><p class="nav-row"><a class="btn" href="s069.html">上一篇</a> <a class="btn" href="s071.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s070.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>我看过一本书，讲浪子故事（路:15），我们过去对这段经文都是注意他怎么离开，又回来，重点放在浪子身上。但这本书的重点放在父亲身上。他说:什么时候叫作浪子，不是他花费钱财，什么都花光，那时叫作浪子，乃是从他离开家起已经是浪子，只要他离开家就是。还没有花光钱财，还是丰丰富富的，离开家，他已经是浪子。</p><p>浪子是从离开父家开始，浪子在外任意犯罪，以后才回头。但是做父亲的，从他离开，没有一天不想念儿子，天天盼望他回来。</p><p>怎么知道他天天等候儿子回来？那里说，相离还远，父亲看见他。这看见不是偶然抬头看见，这就是父亲天天在门口那里看他，最后看到浪子回来。这就是父亲的心------是神的心------都是盼望我们回到他面前，回到他怀抱里。父亲看见儿子远远看到他回来，圣经说:“就跑去”，年青人跑还可以，老人家去跑？表明父亲的心很切，今天看见儿子回来，他“就跑去”。一跑去就抱着他，连连与他亲嘴，一个破破烂烂，脏得要死的，父亲竟与他连连亲嘴，这是父亲的心，是神的爱。儿子觉得非常不配，“我得罪了天，又得罪了你，从今以后，不配称为你的儿子...”下一句没有讲出来:就作你的的雇工吧！父亲已经吩咐仆人了...</p><p>父亲用亲嘴表明赦罪------你所有的罪恶我都赦免你。这一个赦免只有儿子知道，这恩典、这爱太大，他能领会。什么是恩典。恩典就是不配得的得到。我们说要报恩------报答神的恩，这话是不对的，因为这恩报不了，不能说报，唯有俯伏在赐恩的神面前。</p><p>浪子才回到家，赶快叫仆人，拿新衣服拿鞋子，用金戒子给这儿子重新作装备，这个就是“不只回来归回来，父亲还给他荣耀。”把脏脏破破的除掉，给他荣耀。接着还“把上好的肥牛犊拿来杀，大家欢喜快乐。”为什么？因这儿子是失而又得，死而复活的。他不看死那边（不看他是坏儿子），只看复活这一边，这一个儿子是复活的，是荣耀的儿子。</p><p>我们在基督里借着基督复活，也是如此。神悦纳基督的复活。神今天也悦纳我们这一些人，因基督是死而复活的生命。神喜欢我们，不是因为我们行为好，神是把他的荣耀覆盖在我们身上。所以，我们将来在神面前，也不是我们在作什么，乃是主，一切都是主，是主的荣耀。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

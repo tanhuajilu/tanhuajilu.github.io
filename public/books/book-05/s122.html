@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十三 · 第十三段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g013.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十三 · 第十三段</h1><p class="nav-row"><a class="btn" href="s121.html">上一篇</a> <a class="btn" href="s123.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s122.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>问:（关于人的相貌。）</p><p>答:这件事，我们要看见一个东西，新造与旧造，什么叫做旧造？亚当被造在先，犯罪以后，就变成罪人，以后，在亚当里的人，就成了旧造。另一个是新造，基督降生，从死里复活，这是新造。现在就存在着旧造和新造。在亚当里面是旧造，在基督里面是新造）。人从哪里来？从土造出来，是旧造。新造怎么来？是基督从死里复活，重生了我们，是新造的人。</p><p>神有两种能力:一种能力是创造的能力，从无创造到有；另一种能力，是神叫基督从死里复活的能力，这个能力比创造的更大。我们对死是没有办法，但却与基督一同复活了，这是新造。</p><p>我们没有信主前，是在旧造里面，旧造自然就有旧造的形象。你好相或坏相都是在旧造里面，这个相的好与坏在旧造里是存在的。但在新造里面，我们是跟主联合，跟主联合是怎么样的呢？跟主联合，基督的死是我们的死，祂埋葬是我们的埋葬，祂的复活是我们的复活）。旧造都在基督里面死了，你好相也死，不好的相也死，统统都死了，所以我们不相信这个相，因为我们这个人已经死了，并且我们受洗埋葬了，看也看不见了。</p><p>并且，基督在我们里面，这生命是好生命，个个都有好相；我们已经穿上基督，成为新人。所以我们再去讲那些好相或坏相，就是退后，就是倒退着走，再没有路了。我们的相已死，已经了了！这些与我们再无关系。受浸的经历对我们很要紧。</p><p>我们这个身体是土造的，亚当犯罪以后，神就咒诅蛇（象征撒但），要牠终身吃土）。撒但受咒诅，用肚子走路，终身吃土，尘土就作了牠的食物。人是尘土造的，所以人的肉体，人的旧造，是撒但要吞吃的对象。受洗归入基督以后，这个就看不到了。</p><p>现今撒但是在空中，牠的食物就是在地上的罪人------土造的人。常有好多人自杀，这就是撒但在那里吞吃人。我们已经受洗归入基督的，就脱离了亚当、脱离了旧造、脱离了撒但的权势、脱离了世界一切风俗；我们在基督里是多安息的，所以我们的《诗歌》说:“现在新造，何等满足。”</p><p>现在有的弟兄姊妹，特别老弟兄，很注意自己的相，“我的相，我的相怎样!”这是宣传魔鬼的东西。在基督里，这些都已经了结。有些人喜欢看相，今天这个，明天那个；所以对看相这一点，我们跟它决绝。[]{#anchor-15}因为我们在基督里，这些东西就不再存在，已经死了，我们是在新造里，我们都披戴基督），当我们复活的时候，我们都穿上基督，我们地上的帐棚已经倒了，我们已经穿上天上复活的帐棚。这是神的荣耀，穿上了就荣耀。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

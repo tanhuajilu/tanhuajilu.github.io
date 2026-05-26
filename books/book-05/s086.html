@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十一 · 第四段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g011.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十一 · 第四段</h1><p class="nav-row"><a class="btn" href="s085.html">上一篇</a> <a class="btn" href="s087.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s086.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>有一个作工的人在国内有一点名气，作过官，又到澳洲又到别的国家，我说他不能作，单一样东西就说明他不能作，因他到外面去跟同工不同心，也连不起来，这是个最基本的东西。不同心，就没有路走，作什么都没有办法。</p><p>有一位弟兄到某市，起头，大家都欢迎，后来他就凭自己一点看法对付当地一些同工的难处，对付到自己也站不住。因为他要对付，却没有那个分量。一直讲我是怎样怎样，大家听了都讨厌。“一直讲这些，听到我们都讨厌。为什么不讲其它神的真理？”开始同工欢迎他，后又分开。他出来聚会，不久又分开又站不住，就跑掉；跑掉又想回来。回来，圣徒对他说说:“你回来，只作信徒，不能大作工。”为何这样，因他都在道理上讲，没有属灵生命的东西。如果有，把一个一个信徒转到主那里就好，不是你也不是我，一切都是主的。</p><p>我们要承认说，人到底有限，到底算不得什么。神的工作超过我们以往的工作。我们这器皿摆在神面前，如果神怜悯，他的工作还会超过我们这个人作的。神作这一点点就比这个人作的更大。像五饼二鱼在一个人手中只那么多，摆在主手中就变祝福（可6:41）。我们恩赐只那么多，经主手擘开就成为多的。不是我们有多少，乃是经过主的手祝福，这祝福要祝福到人里面。</p><p>今天是主的祝福），在工作上在乎主的祝福。主祝福你这个人，祝福就能通出去。像雅各，舅舅说:“我已算定，耶和华赐福与我是为你的缘故。”（创30:27）雅各也说:“耶和华随我的脚步赐福与你。”（创30:30）约瑟也是这样，虽然卖到埃及作奴仆，他主人见耶和华与他同在，就派他管理家务，把一切所有的都交在他手里。圣经说:“耶和华就因约瑟的缘故赐福与那埃及人的家...”（创39:5）并且以后在监里，耶和华与他同在，连牢狱长也把监里的囚犯交给他。“耶和华使他所做的尽都顺利。”神随他脚步祝福他。</p><p>所以，一个蒙神祝福的人，他的脚踪到处带祝福与人，祝福不只在他一个人，他走到那里，那里都有祝福。圣经说传福音报喜讯的人，他的脚踪何等佳美（罗<br>10:15）。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

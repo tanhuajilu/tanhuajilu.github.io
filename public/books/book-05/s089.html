@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十一 · 第七段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g011.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十一 · 第七段</h1><p class="nav-row"><a class="btn" href="s088.html">上一篇</a> <a class="btn" href="s090.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s089.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>一个家庭，要好好保持家庭的美满。怎么会美满？有三个因素:第一，对付性格。性格、性情不一样，脾气不一样，如果没有对付，会破坏彼此的感情；第二，经济问题。一个家庭如果经济有困难，家庭为这困难就容易带来矛盾，甚至吵架；第三，家庭最怕有第三者。有第三者就把你美好家庭破坏。</p><p>彼此的个性要对付，大家都好强，把彼此的个性抓得紧紧，要生活在一起，天天都会产生矛盾。所以，都要对付个性。彼此个性不同要彼此对付。</p><p>怎么对付，要认识自己，对自己要有点认识。人总是眼睛看别人清楚，看自己看不见。怎去看自己？去对镜子。看见镜子就看见自己，看别人只见别人，看不见自己。圣经就是镜子。圣经说:好像镜子，面对镜子。所以我们常常对照圣经，对照生命，对自己就知道我们不对的地方来对付自己。</p><p>家庭生活从结婚起，一生都有彼此对付的功课学习。比方说有些人生性干净，有人比较随便，这相处就很难。你干净到什么都很整齐，你弄好，他一下子给你弄脏，乱七八糟，你受不了。受不了，你就学习这功课；他也很为难。一随便，一认真，二人都要调节一下，你不要那么认真，他也不要那么糊涂。折中！差不多，过得去就好，这样就省去许多重担。</p><p>脾气、个性是天天要学习的。十字架是天天背负的），你把他当作十字架来学习，他也把你当作十字架来学习。</p><p>另一方面，有事情也要让他，忍受他。不然，因一个事情他要发火，你还加上一个火，二个人就吵起来，打起来也会的。所以彼此的脾气要彼此学习忍受。得罪的地方呢，要认罪。认罪好象比较快，要赦免就比较不容易。对待人的脾气，常常要有恩典。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

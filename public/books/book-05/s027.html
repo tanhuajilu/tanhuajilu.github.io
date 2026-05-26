@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选五 · 第三段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g005.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选五 · 第三段</h1><p class="nav-row"><a class="btn" href="s026.html">上一篇</a> <a class="btn" href="s028.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s027.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>在杭州我们碰到一位出名的人，他出一本书叫《轮椅上的画家》，他到我们中间来。他到北京到上海，到处谈道理，那天，他也来杭州交通，我们要看看他是怎样的人。他英文很好，是个专家。聚会时，我告诉负责的弟兄，我们请他讲。他说:“你来讲。”我说:“不，既然不是过路人，你讲。”请他讲，他就讲了。听了以后，我想:像他那样子讲道，还传什么道，不知道他讲什么！好像开水淡淡的，一点味道都没有。他还很出名！</p><p>他讲完了，负责的弟兄再交通。我们一交通，就感觉我们像在冷空气间里（空调间）出去，一出这门，空气马上不一样，里面空调冷冷的，外面是热乎乎的，前后就分别得清清楚楚，弟兄姊妹都有感觉!</p><p>我说，这个实际的教育比我们讲道更好，讲道理还会讲有属灵的，有不属灵的，讲这个还是理论，现在排上下先后，不一样的都排得很清楚，弟兄姊妹都有感觉。感觉就是说，这里有属灵的东西，这个跟属人的东西能辨别出来。所以外面这些人，不交通我们就不说，一交通，对每个人，我们都要给他有感觉。有就是有，没有就是没有。我们的工作不是要讲大道理，是要把人带到神面前去（西12:8），叫他碰到活的东西，才会在灵里面有东西。你没有东西，你怎样作也是没有东西出去，有东西了，东西才有办法出去。</p><p>你说栽培信徒，母亲喂小孩，连奶水都没有，怎么喂...如果母亲身体好，有奶水，你不给他吃，你自己也难受，因为奶还要挤出来。小孩子越吃，你越舒服。真的里面有负担栽培信徒，你讲，你舒服，弟兄姊妹里面饱足。</p><p>所以那一次到杭州，X弟兄与我们一起，回来了，大家说:“弟兄，聚会怎样？”他说:“没有话说，句句话给吃到一餐饱。就是我们里面饱，主在我们里面也饱。”如果没有主，越讲里面越软，有主，讲道越讲里面越有。就是碰到主、碰到神。就是这个东西。</p><p>如果有感觉，碰到真实的东西，听到的人就软下去，所以你不要看只是小数。以利亚单单一个人，有一个以利亚，巴力先知上千人都站不住（王上18:22到40），都死光。你不要怕，这么多人在这里，你真有一个东西，一切不出于神的就站不住。这就是要认识神，认识神了，对工作对教会才有信心、才有把握，不然连自己也打问号，还会作会讲吗？认识神，你越作越讲，越有把握。对的，讲出来就是对的，你讲不对，他就像心给你一把刀插进去。因神的话像一把刀，如果扎不进去就没有办法，神的话就像一把刀要扎你的心。希伯来书说神的道是活泼的，如二刃利剑要剖开人的魂与灵，骨节、骨髓都给你破开（来4:12）。骨节、骨髓在骨里也给你打开，骨髓也要给你拿出来。神有办法。人走让他走，他要什么让他。因我们讲，他也不会听我们的，除非他真的有心追求。对人，我们真的是没办法顾面子。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十 · 第十二段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g010.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十 · 第十二段</h1><p class="nav-row"><a class="btn" href="s079.html">上一篇</a> <a class="btn" href="s081.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s080.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>问:“你们作恶的人离开我。”这班人是否指用魂作工的人？</p><p>答:是指不在神旨意里的人。比方说，有些人说我不怕，我要去闯，我要为着主。</p><p>连受苦都要在神旨意里，不是你自己去找苦来吃。主耶稣说你们受逼迫，就从这城逃到那城。可以逃还是要逃，不能逃，现实碰到就去承担。如果可以逃你不逃，自己去负责，真理是二面的。现在好多人是死板板的，“我要热心爱主。”都在破坏主的工作。如果我们在主旨意里，主就负责。50年代很多抓去的人有二种情形。有的人，我为主被抓，这个荣耀!我要热心顶，顶到被抓。他们表现都不一样，这样的人在牢里，常要求家人和弟兄姊妹:“我是怎样，我需要什么...（求帮助）”这就有问题！若是出于主，主负责，还要传给儿子告诉人吗？</p><p>需要是有，但他这个叫手段，用人的办法手段。应该无倚无靠去倚靠神，是出于神，神要负责，要感动人顾念你。你这样是用人的方法来得到供应。所以盖恩夫人说，你若想办法找供应，神的供应就停止。</p><p>有一个比较软弱的弟兄，家庭孩子多。他有什么困难就跟一位比较接近的弟兄谈（很熟的才这样）。后来他写信给妻子，妻子回信说:“一切不求人，不仰望人。”就被妻子鼓励！这态度与那态度太二样了。我们的诗歌说:“若稍微偏离正路，我要立刻舒服；但我记念我主基督，如何忠心受苦。”</p><p>不只工作要忠心，受苦也要忠心。这都很实际。现今时代，各方面都要带到实际里，教会工作要带到实际里，有实际才有基础。基础才牢固。各人基础都要好、都要牢固，摇摆就是不牢固。所以信就是要有经历。越经历，你就越信。当我们出来作工，有些人，一得救，为着事奉主，什么都不要，事奉主也没有工资。人说工资是根据文化程度。你没有文化，你有工资也是很低的。你如果念中专或大专的神学，才吃得开。那时，不顾什么，也不想什么。什么叫作主的呼召，那时也没有像现在那么多好道理去听，或和弟兄姊妹交通。</p><p>那么要作主的工，有一个最现实的，就是生活的现实这一关，就凭信心事奉!个人没有做什么，单单靠信心，工资怎么来？想是想，又不知道，不知道，就信。这信很小，但信得下去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十 · 第十段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g010.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十 · 第十段</h1><p class="nav-row"><a class="btn" href="s077.html">上一篇</a> <a class="btn" href="s079.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s078.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>问:N弟兄如果留下，不回去，功用就更大。</p><p>答:这一类事情，我们只能说，每个人跟神关系只有他跟神知道，别人不知道。别人都觉得他应该像L平安到外面去，也作那么多的工作。L到了后期，要跟N比就差了很多，N虽然死了，还继续讲话，借着他那些书，并且借着他那个态度！讲话比活着是更大的事。他虽然死了，仍旧说话------还在那里讲话。所以戴致进（台湾一个作工的人）在《肢体交通》里，讲到什么叫作使徒，他说，使徒是死了还讲话的。他说保罗死了，话还在讲。彼得死了，话还在讲，N弟兄死了，话还在讲。好多神用仆人，慕安得烈...死了，话还在讲，书本留下来还在发生作用。</p><p>有的人虽然出名，他的书在那里没有发生作用。宋博士最出名，他的书，你去看，都很浅，他的福音道理都传错了，他的道理是风行一时，这就是恩赐。生命的东西是长久的。所以属灵的书都是在生命上影响很久的。大布道家像中国宋博士，美国的慕迪，比较出名的布道家，他们主要布道的材料，写的东西没有一篇是深的，都浅。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

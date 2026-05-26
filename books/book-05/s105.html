@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十二 · 第十三段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g012.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十二 · 第十三段</h1><p class="nav-row"><a class="btn" href="s104.html">上一篇</a> <a class="btn" href="s106.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s105.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>问:（祷告的事。）</p><p>答:有一位说，祷告时，那位某某小姐，眼睛都不闭一下，睁着看。她当场说:“圣经那里说祷告闭着眼睛？你给我找。”用这个回答牧师。</p><p>我们为什么要闭眼睛祷告？因为我们的思想常常因着看东西就容易分散，闭上眼睛，是叫我们更专心。不是说不闭眼睛就怎么样，没有这回事。祷告生活，是多年功课作出来的。我们在劳改时，没有圣经，圣经也没有念，祷告也没有那个机会，哨子一响大家就起来。吃饭也定时间，吃完赶紧去干活。整天督工跟在你后面，没有自由的时间，从那时候就体验里面的生活。有人说，听说拜上帝要祷告，怎么没有看见你祷告。我心里想，我整天祷告你也不知道。有一次有人要祷告的时候，一个老姊妹说，你不能祷告。禁止他，不让他祷告。他说:“我向我的神祷告一千次，你也不知道。因为我祷告是里面向主交通，也不一定要向着你，叫你知道我在祷告。”这个就是里面的事。</p><p>我们在那次服刑期间，全体传道牧师都要到戏院看电影，我从出生到那一次看电影，三十五岁，从来没有进戏院去。领队说，大家都要去，不去不行。我没有去，后来他又赶到我那里，来带我去，他说:“一定要去，大家等着你。你一定要去，因为你去、没有去都表明你一个思想改造的实际行动。”没有办法，那次我被勉强，被俘虏去的。好多人很为难说:“我从来都没有到这个地方。”他们说:“你是小群里最顽固的，什么都是超政治的，今天看你怎么样。”那一次我推测判断:这是《白毛女》剧，要我们看看旧社会是什么样式。但在那里，我也没心看，就在那里跟神交通。我们的思想都不在那里，就跟神交通。这个东西我要对弟兄姊妹讲，不是外面的，脱离环境，是里面跟主交通。</p><p>有一位弟兄，在那里初得救，到现在四十多年，他跟我们讲，没有这么好的机会！他也想有机会来见我们看我们到底住在哪里？</p><p>后来，有一个姊妹很年轻，她下乡到各地传福音，带领人信主，后来见到我。最后一次她说:“记得你曾说，虽然在电影院里，人家强迫你看电影，里面跟主还是交通的。”这句话给她经历，不管做什么，里面都跟主交通。</p><p>基督是在里面不是在外面，这是个功课。经历让我慢慢看清楚什么是属灵的世界。我们信主，就是接受主，那一位弟兄，他讲了一句话，他说:“我信主，将来我不论到什么地方，主都与我同在。那我就自由，不一定要到什么地方。”无论在哪，随时随地都经历得到，因为他充满一切。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选八 · 第四段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g008.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选八 · 第四段</h1><p class="nav-row"><a class="btn" href="s054.html">上一篇</a> <a class="btn" href="s056.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s055.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>基督徒最难对付的就是恶毒的灵，什么叫恶毒的灵？对一个人不赦免，对一个人妒恨，对一个人越想越不甘愿，这就叫我们灵中毒。所以我们为着我们自己，什么事都让他过去，不去计较。家庭也这样，一个家庭，如果去计较，事情就多。</p><p>比如说我们作长辈的人，要求你媳妇孝敬，要拿茶我喝，都有一个要求，他作不到自己里面就不高兴。那么，我们就要想:你有也好，没有也好，我们心里平安。这样，我们心里多爽快!作下辈的，你也不要要求老人对我要怎样，有就有，没有就没有，给他平淡过去，有这一个，就会和谐共处。如果今天也记，明天也记，你那里有喜乐？对方再好也不会喜乐。有一个作媳妇的人，几年前已过去了的事，几年后还拿起来讲，这苦不苦？</p><p>在教会也是这样，一件事不行，对付过去就过去，过去就好，像这疤留在那边，时间一久会平的，会好的，不会说一个伤在这里，过几年还在痛。如果你一直动，一直摸，它不但不会消失，还更利害。所以要在生命里，生命吞灭死亡。</p><p>我们做小孩时，挺顽皮，一棵棵树给它割了皮，但到一个时间，又生合起来，所以生命是有愈合能力的。弟兄姊妹们之间有什么意见、隔膜，在生命里，生命会给你愈合起来。弟兄姊妹要去认识属灵的生命，在生命里，你才有路走。摸着生命是最好用的，什么都在这里------万灵剂，什么都行。如果不是多功能的，一茶壶，只能用这方面，如果是多功能的，一下用这方面，一下用那方面，什么都可以用。基督就是多功能的，用他事奉、传福音，家庭、事业，都用上，这能力叫你凡事都能作，你就轻松。</p><p>所以第一，你要释放，把里面这挂虑脱掉，你的生活也要释放。因你是她最爱的人，你身体不好，比她身体不好更难过，所以你要释放，祷告:“主阿!...”你不要挂虑她的身体。挂虑也不会医好她的病，病情还会增加；因她看你挂虑，她也挂虑，她挂虑你也挂虑，彼此挂虑，挂虑一直增加。如果你释掉重担，重担脱掉就轻松。所以我觉得，你不只有这重担挂虑，连你师母都挂虑，都在那里挂虑，你要交给神，把一切卸给神。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

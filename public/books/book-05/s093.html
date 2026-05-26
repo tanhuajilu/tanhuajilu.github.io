@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十二 · 第一段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g012.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十二 · 第一段</h1><p class="nav-row"><a class="btn" href="s092.html">上一篇</a> <a class="btn" href="s094.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s093.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>我们讲地方教会，就是说，神要兴起一些人来代表全体所不能达到的，神在全体上得不到的，神从少数中得到。像以色列人，神是要全国为祭司的（出19:6），但全国失败，神就拣选利未支派作祭司来代表全体事奉神（出28:1-4）。利未支派失败以后，神拣选撒督的子孙代表（代上29；22，结43:19，44:15）；神一直拣选，一直拣选，越拣选越精细越纯洁。在这条路上，神把人一直带上去。跟不上的就淘汰，跟上的就跟上去。这是严肃的。</p><p>今天，年长的很多都停在那边；这就是严肃的事，若不小心，会被淘汰。主说:“在前的要在后，在后的要在前。”这都是神的恩典、神的怜悯。</p><p>是神的恩典，有时，也是神的怜悯。我的转机，也是听到弟兄的话。他说:“你有几位弟兄在你前面，还有姊妹。我起初不服气。”外表看，大家（弟兄们）都是作工的，那姊妹还是我们带领她的。他们在我前面，我接受不来，听不进去！但如果神怜悯你，（不知道神怜悯不怜悯！）神怜悯你，而且盼望你能跟上来！这一点给我一个大转机，很大的转机。虽然不服气，神叫我要跟。他在我前面，那我是在哪里？！好像...按我想，应该我在他前，他反在我前！就是看法不一样。我们就是从人的观点去看，时间上我在他以先，传道我比他久，他怎么在我前面！神的看法是:他摸着属灵的东西，就是活的，而我是摸着死道理呀！活的却没有摸到！是这一个。</p><p>“人就是一跟上去就看自己的。”真的，若不是弟兄的这一句话，我今天还是落在很多老弟兄一样的情形里，在那里不只不会带动别人，反而作了个绊脚石在那边。没有路走。这是严肃的！所以属灵道路不是从人的眼光来看，是从神的眼光来看，从真理来看，从多交通来看。</p><p>东西从人里面出来的都一样。我们碰到这东西，连起来对一对，呀！这个对。如果大家都对，我一个人不对，我就是不对。如果，大家都错，我这个对的，有少数是对的人就会跟你同行。因为“对”常常还是在少数人身上。但是神会兴起人跟你这对的人能够里面共鸣，能够响应交通。属灵东西学习是无限量的，只要我们肯摆上。</p><p>人跟我们说:“你有生命的光，有生命的路。”对这个话，我们也是要有学习。我们如果真活在生命里、在主的光中，我们仍然一直会有以前的观点:谦卑，谦卑！。你如果有了，你在说没有，这是虚假、弄虚的。但有，“有了”也不是有什么了不起的。有，也是如此；有就有，没有就没有，应当谦卑，谦卑到死。今天不是人跟人争对不对的问题，今天是你活在主里我也活在主里！巴不得每个人都活在主里，这弟兄那弟兄，巴不得给神用，比我们更给神用。神用他比我们更大用，更好。如果他蒙神大用，你在想应该我走在他的前面，你要强也强不来！因神用他，争也争不来的。这都是要在神面前根据属灵的实际。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

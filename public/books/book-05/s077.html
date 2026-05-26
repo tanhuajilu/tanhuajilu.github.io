@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十 · 第九段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g010.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十 · 第九段</h1><p class="nav-row"><a class="btn" href="s076.html">上一篇</a> <a class="btn" href="s078.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s077.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>答:圣经说，主救我们就救到底。爱我们就爱到底。主给门徒洗脚时说了这句话:“他爱世上属自己的人，就爱他们到底。”所以主的爱是到底的。主的拯救也拯救到底。我们就相信他。只有一个条件:遵行神旨意不离开轨道。离开轨道就会翻车，不离开圣经这条轨道，你这生命也正常，这些不正常的情形就减少。好像讲话，你正当的话多了，不正常的话就不想去讲，因讲了你自己不相信。好像你一直吃高品的东西，低品的东西你不会吃。你吃好的东西，不好的东西即使摆在这里一大堆，也不敢吃，怕他污秽肮脏。所以积极方面，我们跟神是正常的；消极方面的，自然减退------淡了。</p><p>有些人，人家问他:“你得救没有？”他说他不敢说得救，其实他已经得救。在公会里的人，他已经得救，但是他不敢说:“他说我尽量做，将来得救。”他不敢保险，实在已经保险了，正在得救的范围里。好像你这电线已经接好，连在发电厂，跟电源已经连起来，你问:开了，电灯会不会亮？不会不亮了!心就是像开电灯一样。因你开，电就来，你如果不相信，那里会有电通到里面。因这都安装好，线路都有电通了，你给他开，马上有了。信心就是相信。本来我有一点点，我没有准备一大篇的话才来讲。忽然你问一些问题，我怎么答复你？就是已经连上，这边就自然连着了，他给你供应什么，都是活的。生命是活的。像教数学，数学原理他都懂，什么题目、怎么算，拿上来他就会算出来。如果没有这个，就是算死帐，每一条，你都要搞得头很大。</p><p>像唱诗，你不认识歌谱，唱诗歌也是很重担，每首你都要唱，都要学，很吃力。但你能看谱，这首诗歌你没有唱过，看谱就马上唱。有一个人说歌谱如果不认识，唱歌不会唱叫乐盲就像不认识字的人叫文盲一样。</p><p>好像戴德生，他就因不认识一个真理，迟延了很多日子，没有路走。他说:主阿，如果有一天，我作你枝子，你作我葡萄树，多好。你只要求连结于主，作树的枝子。到一天，他自己念圣经，约15章，主说:“我是葡萄树，你们是枝子”。他活过来了。“我已经是枝子，还求作枝子!这是枝子也不是我自己想的，是主说的，所以不是求作枝子，乃是已经是枝子，那就轻松。一切的供应都是葡萄树供应，供应你水分，供应你养份，一切由他供应。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

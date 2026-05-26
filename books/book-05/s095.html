@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十二 · 第三段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g012.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十二 · 第三段</h1><p class="nav-row"><a class="btn" href="s094.html">上一篇</a> <a class="btn" href="s096.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s095.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>问:弟兄姊妹过教会生活，照你说的，一个是新耶路撒冷，一个是巴比伦。</p><p>答:这是指，到启示录末了才有这二个。</p><p>今天教会的模样是这样，今天教会有属灵的内容的，这模样自然产生，不是人去组织的。许多人所说的教会生活（身体生活）就是受浸、按手、聚会、蒙头、擘饼、爱宴、配搭、看望等等。这叫教会生活吗？人都注重这外面，这些也是身体生活，这也是不错的。但现在，已经落到...受浸，己经落到形式里，属灵那些东西没有摸着！还有，是已经失掉当初的内容。聚会处在二、三十年代，那时都没有盖会所或立正式长老，所兴起的是自然的负责人，到每次聚会交通都碰到主。好多公会信徒都跑出来到聚会处，感觉到神的同在。好多好的牧师、好的传道人，都丢掉他们的职业来到我们中间。</p><p>后来，盖会所，去组织人、设立长老，就慢慢落在外面，那属灵的空气内容没有了。这是一路从二十年代我们看过的...至四十年代，我们也见过。到五十年代开始，就落在外面。一路下来，我们主要的内容，还不是教会事务，地方教会的组织；这些还不是主要的内容。我们主要的是十字架的工作，破碎的工作；人在神面前转得对，这一个（神荣耀的工作）就出来。有这一个内容，把教会配搭的情形拿来做才有用。好象这手套，千万套都是软的，有一个人拿二个来穿，这二个才有内容:有手穿到套里。今天教会外面的见证没有内容，没挺起来，都是软弱的。现在就是这个情形，已经软弱下去了；因为离开了本质的东西，已经落到地位的、争权夺利的里面，变成现在这样子。</p><p>今天，大家争有权争着管理，又拉拢一些人，独立山头；这都落到属肉体里。如果在属灵里就无所争，大家来就敬畏主。所以不是要否定过去地方教会，现在是要在对的道理上要加上内容，没有内容就没有办法。交通，也是为把内容充实在人里面，不是带出看法，去叫人跟我们的看法。如果是这样，看法越多，就越分裂。</p><p>比方说，如果国内的信徒到国外去，要强加看法给别人，别人有他的看法就不服你，自然就分开。如果我们去不是把我们的看法加在别人身上，是带生命去供应他们，就没有问题。因为这是生命东西，他供应生命，就放在生命里面，外面的，什么都可以过去。有这里面的内容，有爱心，即使外面的组织观点不同，问题不大，因为生命合一了，想法也合一。生命没有合一，想法在各人里面都是各有各的，因为程度参差不整。是在生命里的，好像一个家庭，老人、中年、小孩，他们的程度、看法都不一样，但在家庭里有血统关系，这家就作得美满有爱。没有爱，这个家，家就不成家。教会也是这样。比方，有一个弟兄最近来开会，他到某地就跟另一些弟兄意见不合、不同心，这情形下，工作就作不出去了。到外地去作也同样没有路。除非当地的人跟他在生命上同归于一，同心合意，才带出祝福。</p><p>如果要把这些道理去讲，讲出去也是空的，不能给人生命，不能叫人碰到神。不过只有一点道理、看法、新亮光，跟旧的就有矛盾；多一亮光多一个乱，多一个看法也多一个乱。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

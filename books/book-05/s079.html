@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选十 · 第十一段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g010.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选十 · 第十一段</h1><p class="nav-row"><a class="btn" href="s078.html">上一篇</a> <a class="btn" href="s080.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s079.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>香港弟兄找我，问:九七要收回香港，应该怎么办？他们考虑这个。我说:可能九七，你们香港属灵的实际会更实在。“这怎么讲？”还没有到九七，大牧师、大传道、大神学家已经跑了，怕将来受为难。有的已经向外跑，有的像聚会处也好，公会也好，那些领头现在已经办手续出外定居，办好，留在这里安定作工，将来一变就跑。</p><p>不能跑的就留着下。这些留下来，修整大局，那时，可能神兴起一些受托付的人起来跟主。大陆跟香港比较多来往，那些有分量的也可以到那边。那些被留着的人还比较容易。跑的人就不容易，因他说:“我们高高在上，大陆比不上我们，还要听你的吗？”</p><p>我说，九七以后香港还会有一个变化，这个变化就是属灵的东西会摸得更高，更实际。</p><p>这说明一个问题:香港传道人都说关心大陆，要来大陆作工；是虚伪的。你们来大陆作工，比较自然，现在又跑走；不是属灵的，而是人的东西了。你跑什么？你没有关心，却说我关心大陆。这都是实际的问题。</p><p>N弟兄虽然死了，但还在那里影响，还不住影响国内的信徒。但是有些人反对他，讲得很多。尽管他们反对，越反对，属灵越黑暗，越死！这些被反对的，在属灵上越看得清楚，生命越丰盛。所以不怕人反对。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

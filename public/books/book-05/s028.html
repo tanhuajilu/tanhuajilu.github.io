@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>九四年记录选五 · 第四段</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="g005.html">← 返回本组目录</a> · <a href="index.html">本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九四年记录选五 · 第四段</h1><p class="nav-row"><a class="btn" href="s027.html">上一篇</a> <a class="btn" href="s029.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="/audio/book-05/s028.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></p></div><article class="article"><p>我们（弟兄三个）从小就建立一个“再有困难要去克服”，和不愿借钱的习惯。有问题就自己克服。为什么？因为我小的时候家庭很贫穷，到我出生（弟兄中我排第三），父亲那时负好多债，欠好多大白洋。在旧社会，大白洋是很大价值的钱币。我生出来的时候，负那么多债，家人心里不平安，一直苦:我们家的是什么什么的环境！后来想到:三个男孩，二个就留着做种，一个卖掉好了，所以就一直叫母亲把我背到外面，看看有没有人要买。因着这个，我们从小就有一个印象:“哎呀，负债是这么痛苦，要把孩子卖掉!”后来，我家拜上帝了，信主了，教会的弟兄姊妹就说:“不要卖孩子，孩子是神赏赐的，不要卖。”不卖，欠债怎么办呢？弟兄说:“女儿等到十一岁就可以提亲，可以介绍一个拜上帝的给你。提亲了，你就先拿一些钱去还债。”后来我姐姐十一岁就定亲，定亲，就拿了三百块大洋。三百块大洋拿来没有在我家留过一个月，一拿来，父亲马上把债还清楚。他说:“很轻松呀！”就是这样，家庭贫穷还是轻松，你负债就很痛苦!所以弟兄姊妹啊，有困难，就尽量克服困难，不要去负债。</p><p>厦门有的弟兄姊妹，他没有房子，找到房子，还要搞装修。我一直告诉他们:“如果钱是自己的，你可以装修到怎么样也可以，如果钱是要借的，我劝你不要装修呀！”你要借钱去装修...你住得那么好...，别人就说:“没有钱，还借钱装修!”身价就跌下去！借钱来住得那么好，你的心却不会舒服。虽然装修得那么漂亮，因你是借钱来的，反而住得不舒服，住得不自在！所以宁可我们简简单单、舒舒服服，到有了钱才来装修。</p><p>很多人就是要走在前面，借钱借在前面，走在前面。你一直借钱，走在前面，永远不会踏实，所以，基督徒对经济问题也要有正确的观点。钱若走在前面，你就担重担。担重担!</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+  const KEY = 'book05-auto-next-play';
+  const RATE_KEY = 'book05-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>
