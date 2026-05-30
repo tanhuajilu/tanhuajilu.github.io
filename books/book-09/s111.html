@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十日</h1><p class="meta">深渊与深渊响应 · 第111/366段</p><p><a class="btn" href="s110.html">上一篇</a><a class="btn" href="s112.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s111.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十日</h2>
+<p>有人问:老弟兄，我要学你，要学到什么时候？我说:“你不要学我，你今天才二十岁，你再经过六十年，那时你比我更好！”因为他还有六十岁可以学习。我今天到这时候，没有太多机会了，而你有机会，那时比我更好更进步哩！这进步是没有限量的。</p>
+<p>所以我今天羡慕年青的弟兄姊妹，因他们还能更认识主，更进步。而我们，还有几年？都不知道什么时候就要去了。因此，不是去跟别人学，像保罗说，我是从主耶稣启示的。(加1:12，16;2:2;弗3:3)这启示，每个人都有，神都会借着这个启示，给我们认识祂。</p>
+<p>认识祂多少就得多少，我们不要贪多，有多少都感谢主。主再给我，我感谢祂再给我，这样，我们对主才有一种感谢。你会感谢，就会满足，不会感谢，你就永远不会满足。要以你所有的来满足，来感谢神，神就会恩上加恩，一直加给你。所以我们去读经，就存着这一个态度，我是虚空的器皿，要到主面前去接受恩典。</p>
+<p>你想，要钻研就愈明白，却是愈离开圣经，因为我们的思想常一下想这，一下想那，就想去钻。念圣经念到这里，思想却又想到别处去。我们念圣经都不能专一，所以我们要用一个专一的思想去念，用你的思想进到圣经的思想去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

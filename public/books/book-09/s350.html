@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十五日</h1><p class="meta">深渊与深渊响应 · 第350/366段</p><p><a class="btn" href="s349.html">上一篇</a><a class="btn" href="s351.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s350.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十五日</h2>
+<p>交通:主说:“我就是道路、真理、生命。”(约14:6)我想在这方面，照我所经历的，交通一点。</p>
+<p>我从小就一直在寻求该走的道路。在我年青时，外面的变化非常大，所处的环境都很复杂。从小时候起，我就在面对道路的问题。以国家民族来说，我盼望寻找出一些能行的路来，结果叫我失望，我们找不出来，有些路是走了，也发觉不是路。</p>
+<p>我也是个基督徒，对教会，也盼望能找出一条路来，很多以为是路的都不是，我感到中国的教会也没有路走，我非常的懊丧。我们是走投无路，路该怎么走，我们又急又无奈。现在国家社会所面对的已经不是我的事情，因我们只是社会上最小的成员，我也退休了，在这方面已经成为过去。但是属灵的道路，我们该怎么走？</p>
+<p>今后的路该怎么走？主说:“我就是道路。”起初，我以为问题在乎我有多少的追求，以为是:我要看哪一条路可以走，哪一条路我们不可以走，总是要拣一条可走的路来。譬如我们会问说:“家庭教会，是否就是该走的路？”我们总向主求祂给我们开路，总要祷告主说:“这样可以吗？是不是那样就不可以？”我们总以为借着环境的显明或圣灵给我们那样的感动能清楚那一条路是我该走的。</p>
+<p>但圣灵逐渐带领我们看见:神的路并不是那样的一条路。﹝史百克弟兄的书，或N弟兄的书就帮助我们认识这一个。﹞主说的意思是:“我就是道路。”并不是“我们不走这条路，就另挑其它一条路”，也不是“我们走投无路时，就找出一条可行的路”；乃是主耶稣自己就是我们的路，每一位信徒都当以主作路。</p>
+<p>现代化的东西也很可以使我们明白这一个真理。我们常坐升降机，你上某一层楼，在升降机里，你不必一定努力去跑去走，它就可以安安静静的把你带上去。</p>
+<p>我们怎么到父神里面去？主就是天梯，在主里，祂就带我们到父面前去。自从那一天，主让我看见这个，心里就有了一个很大的安息。只要我是在主里面，我不用再去考虑，祂都为我安排一切。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

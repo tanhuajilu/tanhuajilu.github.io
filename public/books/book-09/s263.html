@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十九日</h1><p class="meta">深渊与深渊响应 · 第263/366段</p><p><a class="btn" href="s262.html">上一篇</a><a class="btn" href="s264.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s263.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十九日</h2>
+<p>汹涌海浪不能超过它的界限(诗104:9;耶5:22)。海浪虽然汹涌，海沙虽然软，海浪却也不能超过。界限就到这里为止，就阻住了。所以好多为难，好多危险，有软的海沙作界限，它们不能越过这个。海浪虽大，但恩典超过这些，神的恩典永远超过临到的艰难。“十架不会重逾他恩典”，神给你的十字架，就是量出你能承担的。凡是你碰到的事情，是神看你能承担而给你安排的，因此，你里面就有安息，就有力量给你承担了。保罗也说，我们所能承担的不是自己，是出于神，是凭着神来承担所不能承担的。</p>
+<p>(应:我碰到为难的事情...。)</p>
+<p>你不要注意你有没有。你说，反正你是在神手里，生为着神，死也为着神，有福气是为着神，有灾难也为着神。存这个心态，我们就平下去，不然，好多事情来，你会感到突然。好多事情虽然不好，你要认识也有神的关系在那里，神在那里工作。</p>
+<p>有为难会感觉痛苦，这是很正常的，如果不会感觉痛苦，你就没有感觉了，没感觉就变成木头，没有情感了。就是因有情感，才觉得苦，又觉得有甘有甜，才有意义。</p>
+<p>你说反省。基督徒不是要反省，基督徒有光照(来10:32;弗5:14;启22:5)。反省不会解决问题。世界上的人才有反省，反省不会解决问题。反省愈多，事情排在那边，不会得到解决。基督徒有神的光，神的光一照，会把那个东西除掉，因为这光有医治能力。我们反省，愈看愈多，困难愈多，没有办法解决，是神的光照才解决问题。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

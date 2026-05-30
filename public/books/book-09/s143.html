@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十二日</h1><p class="meta">深渊与深渊响应 · 第143/366段</p><p><a class="btn" href="s142.html">上一篇</a><a class="btn" href="s144.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s143.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十二日</h2>
+<p>有人说他自己讲道很有能力，他什么都很有能力。你们年轻的也很有能力，但你的能力跟我的能力不一样。因为你年轻，身体健壮，我这个身体比不上你，所以，我们人有一个力量叫身体的力量。</p>
+<p>我们还有一个力量，就是精神的力量，这精神的力量也就是魂的力量。这个魂的力量，你可以说是天然的力量，因为是从亚当出来的。这天然的生命有他的力量，意志，有意志的力量。有的人他很有魄力，力量很大，他演说能把人说服下来，这个力量叫做魂的力量，也叫做天然的力量。好多歌星有好多歌迷，歌迷一直追着他，喜欢听他。他怎么有力量？这个力量就是人感情的力量，也就是魂吸引人的力量。还好多人有理智的力量，他把好多东西讲得很活，又很吸引人，这些就是魂在各个方面所表现的力量。</p>
+<p>我们还有一个力量，就是灵的力量。属灵的力量，是出于灵发出来的力量(林后4:7;10:4;12:9;弗1:19-20西4:11)，叫灵力。我们刚才讲人有能力。现在，我们要进一步去看这个能力是什么能力。你认识这个就不会受欺骗，就不会糊里糊涂，认为有能力就好。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

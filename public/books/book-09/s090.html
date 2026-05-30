@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月三十日</h1><p class="meta">深渊与深渊响应 · 第90/366段</p><p><a class="btn" href="s089.html">上一篇</a><a class="btn" href="s091.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s090.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月三十日</h2>
+<p>问:略</p>
+<p>答:我们所谈的，不只关系个人，也关系到团体。个人方面比较简单，却是必须的，因每个人先清楚认识神，合起来问题就不大。教会包括很多“个人”，每个人都复杂，连起来，不会有清楚的情形出现。所以每个人和神的关系比较清楚，合起来才清楚。因神有祂的规格，每个人是有规格的，合起来才套得起，若没有规格，只乱套，不会套得起。今天的难处就是每一个人的情形都没有规格。</p>
+<p>圣殿被建造，所建造的每块石头已经在山上按规格打好，所以盖圣殿时，都听不到铁锤、凿子的声音(王上6:7)。每块依规格预备好的石头，安设上去，圣殿就建成。</p>
+<p>今天我们在这里，也是神拣选的一块一块石头，神都按规格在我们身上作工。合规格的安设上去就很好，不然，就倒下来。所以有好的个人，才有好的团体，每一个都有对付，摆在一起才建得起来。几百几千信徒若各有自己样子、类型，不会叠得起来。为此，神从我们得救起，就作对付，作规格的工作。每一个都合乎规格，彼此相配就很和谐。</p>
+<p>常常二位弟兄在一起已经没有办法同心，特别意志刚硬的，个性强的人----谁都不和谁和睦在一起。个人还没有对付得了，而盼望教会能达到怎样，作不到。只是人的理想，勉强作是脱离现实。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

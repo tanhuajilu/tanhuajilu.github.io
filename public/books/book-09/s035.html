@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月四日</h1><p class="meta">深渊与深渊响应 · 第35/366段</p><p><a class="btn" href="s034.html">上一篇</a><a class="btn" href="s036.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s035.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月四日</h2>
+<p>弟兄姊妹在一起事奉主，彼此间会有很多矛盾，这矛盾也帮助你更经历主，更进步，再高一点。如果你没有进一步，只在此感觉矛盾就一直在转来转去没有路走了。每一次有这些，为叫你更认识主！(来8:11;耶31:34;何6:3;哈2:14;赛11:9;代上28:9)</p>
+<p>别人反对你，叫你更认识主；人跟你不同心，叫你更认识主；人对你有攻击、批评、反对，也叫你更认识主。就是这样，你走这个路，别人才有路走。不然，你跟别人争，你争，我也要争，都掉下去。你不跟他争，你一直进步，他对你没有办法。他再反对你，自己也感觉没有意思了。</p>
+<p>我们看到许多弟兄，愈受反对，神愈有祝福给他。反对别人的，反而掉下来，得不到祝福。他反对别人“这个不对，那个不对。”他这人也跑到所反对的那边去了。</p>
+<p>所以今天我们最怕神不祝福。神若不祝福，你对了也没有用。神一祝福，即使你作错了也不要紧，因神祝福。我们总不会十全十美的。对人的要求，无论要求到多完全，这要求是最虚空的，因他要求别人“要多好多好”，自己也没有达到。你不要去要求别人，你要求你自己，你要求自己敬畏神、认识神。你在神面前有一条路，别人都来了。</p>
+<p>有光，别人都跑到光这边来，没有光，就是黑暗，你还说有光也没有用。你落在黑暗中，暗暗淡淡，哪里有光呀？真有光，也不用你说有光，光出来，大家都看见。特别在三更半夜，只要有点光就很突出，就会看到“这里有光。”</p>
+<p>今天教会是落在一种不正常的情形里，要找主，没处找。如果弟兄有一点，大家会说:“这里有光。”就跟上去，跟在一起。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十二日</h1><p class="meta">深渊与深渊响应 · 第225/366段</p><p><a class="btn" href="s224.html">上一篇</a><a class="btn" href="s226.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s225.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十二日</h2>
+<p>某弟兄那里的聚会，原来的聚会不行，某派也在那里搞到乱七八糟。他在那边的某派里也有好几年，教会没有路走。他一直到某地，后来到X地和弟兄姊妹交通，一交通，里面愈倾向主，打电话说，他们要来交通。我们起头很怕，来人是怎么样的？他们的弟兄也来交通，一来，一交通就通。</p>
+<p>还有某地一个姊妹，这姊妹，那边某某弟兄也去作工，很热心在少数民族的家庭聚会------他专门去作主的工，热心得很。交通以后，他说他过去是很幼稚，都是草木禾秸。他马上就有这个看见，所以在某地就有一点种子。</p>
+<p>不久以前某某地有二三个人来，我们从来不认识，信徒有八千多个在他们的范围内，同工上百个的，他们说工作已经作到人崩溃了。因人一多，什么都要找你，个人的事、家庭的事、工作的事都找你，找到睡觉也没办法睡觉。电话一来，讲我家庭怎么样，我事情怎样。他说:“我要逃避了！承担不了！”没有工作就找工作，有工作，却作到崩溃。(彼前2:25;徒9:2“这道”原文作“这道路”;彼后2:21;犹11)他说:“如果没有找到这个路，我们哪里有路走？”(约14:5;徒2:28;提后4:11;来10:20;来12:1)</p>
+<p>现在就是有些人，他们就是要作，作到他不能作了，他那时才有起头。这几年，我们碰到这些弟兄姊妹，各种各样的情形都有。虽然各种情形不一样，我们就带他们找出共同的道路，就是主！</p>
+<p>主就是我们共同有的。一个人走一个路，哪有办法同归于一。所以同归于一，不是道理、看法一样，同归于一乃是在生命里，因为生命一样。有说:“我有亮光！”这亮光都不是从神来的，不过是人想出来的一些东西。真是生命跟死亡的斗争呀。今天，生命要胜过死亡。如果被死亡遮盖，就死死地压在里面了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

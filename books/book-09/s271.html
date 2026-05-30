@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十七日</h1><p class="meta">深渊与深渊响应 · 第271/366段</p><p><a class="btn" href="s270.html">上一篇</a><a class="btn" href="s272.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s271.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十七日</h2>
+<p>以前我们做堤坝，要把土一担一担挑上，堆压起来，把土堆压得实实在在，并且要严格，一根草也要拿起来，不容让有一根在里面。因为虽然只一根草埋在里面，有一天会腐烂，水无孔不入，一点窟窿，水都能进去，窟窿愈来愈大，外面看还好，里面有窟窿，就会塌下去。</p>
+<p>教会的根基很紧要(林前3:11)，建造也紧要(林前3:12-14)，有这性质不一样的东西在那里，建造下去，从这里有破口，就给撒但有机会进来。所以，罪恶要对付，世界要对付，肉体要对付，魂的生命也要对付。人的魂，神可以用。魂如果有对付，神可以用，人自己也可以用；若是没有经过对付，这个魂撒但就可以用，特别是那大魂的。</p>
+<p>有时我们说，某弟兄是个大魂的人。起初听，大魂，大魂在那里？什么叫作大魂？像小孩子群中，常有一个孩子头，每一个都听他，这个就是比较上一种大魂的人。魂有一种魄力，很厉害，讲话有控制力量、有“控制”的气氛，好像你不听他不行的，但是听了又很难受。这就是魂的魄力，会强逼人，是会强制人，压制人的。</p>
+<p>圣灵却不是这样，圣灵是感动的，是温柔的、有膏油的。出于人的就是，你不听他不行，你听他你也难受。他给你在魂里有一种强迫。一个基督徒就是要在各方面，相对地有不断学习，是要有不断地进步。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

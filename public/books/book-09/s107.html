@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十六日</h1><p class="meta">深渊与深渊响应 · 第107/366段</p><p><a class="btn" href="s106.html">上一篇</a><a class="btn" href="s108.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s107.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十六日</h2>
+<p>帮助岁数多的人，通常比较困难，因为一方面要把东西装进去，同时也要把不对的先一点一点搞出去。把不对的搞出去是很难的，因为里面给很多东西填满了。对很多不知道的、没有听过的，他们非常不容易接受，除非圣灵作工。</p>
+<p>所以读圣经的问题，也是跟十字架的工作、跟破碎有关系。同一节圣经，今天你有理解，几天后的理解又不同又有进步。同是我们念过的经节，以后再念，那个好的感觉愈来愈增加，清楚的度数愈来愈多。</p>
+<p>对约翰福音三章十六节，你今天的理解，就跟以前的理解不一样。以前是一句话带过去，现在明白里面包括的意思更多，愈感受愈明白。有一个传福音的人，每一个礼拜都讲约翰福音三章十六节。同是“爱”这个主题，这个主要的内容，发表到这个爱，每次去讲，都有新鲜的东西。若没有对这个爱有领会，他哪里有这么多话去讲。所以单一个“破碎”，一生就给你学习不完的，这是真的。</p>
+<p>这一个“十字架”也是给你学习不了(林前2:2)。教会这一个问题(弗1:23)，也给你愈看愈伟大。用头脑去看，看到头都大，看不清楚。就是一点点，我们才在这里讲，到了“多”，我们就不知道从哪里起头了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

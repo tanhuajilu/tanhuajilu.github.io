@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十三日</h1><p class="meta">深渊与深渊响应 · 第267/366段</p><p><a class="btn" href="s266.html">上一篇</a><a class="btn" href="s268.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s267.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十三日</h2>
+<p>主说，我不撇下你。(约14:18;来13:5;申31:6;代上28:20)他总是收留的。主说，凡到他面前来的都是父所吸引的。如果不是天父吸引，没有人到主耶稣这里来。神安排，神祝福，恩待你，带你到主耶稣面前来。同时你是生在信主的家庭里，父母亲信主，这一个就是一个很荣耀的条件。</p>
+<p>生在拜偶像的家庭与生在信基督的家庭就有所不同。我们信主家庭的人，虽然没有办法把生命传下，但是神会直接在你里面作工，因为他纪念你父母敬拜神，他恩待你。所以从信主家庭信主的人，他的意念就比较单纯一点。从不信的家庭出来的很复杂，里面很复杂。所以现在，你信主，把自己交给主，奉献给主，至于对主要不要你这问题，答案是:要！主要你。主要作。</p>
+<p>祷告:感谢主，在我们身上，你有工作，你恩待好多人，主我们把这两位青年人交在你手里，把我们中间的年青人交在你手里，叫他们蒙主保守。他们的前途、道路，求主祝福他们；特别他们的婚姻，在每一个信的人身上，你有好的安排，这些都交在主手中。他们几个弟兄姊妹就要离开，回家去，求你看顾他们平安回家，带领他们以后的道路，在你手中蒙你的保守。带领他们走亲近主的道路，主与他们同在。奉主名感谢、祷告。阿们。</p>
+<p>(9月17-23日，选自2001年1月29日晚上交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

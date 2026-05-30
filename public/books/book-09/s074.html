@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十四日</h1><p class="meta">深渊与深渊响应 · 第74/366段</p><p><a class="btn" href="s073.html">上一篇</a><a class="btn" href="s075.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s074.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十四日</h2>
+<p>今天人擘饼，擘到迷信里去。今天擘饼，你没有来，就有人把饼送到你家里，给你补“吃”，这作什么的？这是因他想，“你吃，才会平安，才会长进”。“你没有来，我送到家里去给你吃。”这又是什么意思？失去属灵的意义啊！</p>
+<p>按人的观念做的就是死套，他一直作，做到死了，还不知道。所以对这些，你也可以把它放下。你不放下，就挑重担。你不放下，就没有办法。你想改变他，他不给你改变，你要这样，他却要那样，你没有办法。因“人”不是那些乖乖，你讲，他就听你的。连神讲话，人都不那么容易听。人讲话，谁要听。</p>
+<p>现在怎么去起头呢？从你身上起。你更清楚去认识神，和神更有交通，叫你里面多一点充满神的分量，别人碰到你，就碰到神，他碰到神，就去寻求顺服，寻求认识神。(约一1:3)只有去认识神，他自己才有路，我们也没有办法帮助。都是瞎的，瞎子带瞎子不能走得更好。眼睛明亮的去带瞎的，是很困难的，因为瞎的，什么都看不见，什么都要问，听到一个声音也要问，你已经跟他讲了，他还要问。问题很多，你讲讲不完，那么，就去帮助他眼睛开起来吧(太6:22-23)。他看见了，你就成功，不需要天天去回答他的问题。</p>
+<p>今天我们和弟兄姊妹交通，也为让他们属灵的眼睛开起来。眼睛开了，问题通通解决。眼睛没有开的，随便去摸，摸到的东西都按印象去想，根本不知道实际客观存在什么，跟事实离开很远呢！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月三日</h1><p class="meta">深渊与深渊响应 · 第155/366段</p><p><a class="btn" href="s154.html">上一篇</a><a class="btn" href="s156.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s155.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月三日</h2>
+<p>彼得对百姓和官府说，你们不要以为我们凭自己的能力和敬虔叫这瘸腿的人行走，你们要知道，这是因你们所杀生命的主，神叫他从死里复活，我们因祂的名------拿撒勒人耶稣的名，便叫这人起来行走。</p>
+<p>(徒3:11-4:12)所以，我们今天不是见证自己，乃是见证基督，见证基督的复活。</p>
+<p>使徒被关，就是为着讲基督复活。众人说:“耶稣明明死了，你却讲他复活，你是迷惑人，是欺骗人的。”但使徒说，耶稣基督实实在在复活了。这给我们看见，他们为着见证基督的复活，受了这么多的危难，受了这么多苦。(徒5:17-42)</p>
+<p>一般的见证，不是摸到基督复活的，他不会受打击，但你如果把主的复活、把生命带出来，人就开始反对。不只世人反对，基督教的那些教友也反对，因为他们不知道主复活，只知道教条。他们说，要怎么样做，怎么样行，只停在人与人道德的这一层。今天我们的见证，是见证这位从死里复活的耶稣，是超过万名之名的耶稣。</p>
+<p>提到耶稣的名，好象浇了膏油叫人舒服，所以盖恩夫人她经历到一个地步，不敢再提耶稣的名。为什么？因为她一提起，心里就受不了。主耶稣这么爱我，他的名这么甘甜，他的名象膏油一样，叫人很受感动。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

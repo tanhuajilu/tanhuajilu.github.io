@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十四日</h1><p class="meta">深渊与深渊响应 · 第227/366段</p><p><a class="btn" href="s226.html">上一篇</a><a class="btn" href="s228.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s227.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十四日</h2>
+<p>某地一些弟兄出外作工，到礼拜天，他还要坐飞机回去擘饼。他们那边当地有擘饼聚会，出外去作工的弟兄，每个礼拜天他们都要坐飞机回到家里去擘饼。这是死教条。不过，他们心还是好的，这个心是对的。坐飞机回去就为着去擘一个饼。</p>
+<p>那某姊妹，她在一个聚会里，什么人都有，新约教会的、灵恩派的、聚会处的、呼喊派的都有。他们有擘饼，有祷告。就有人祷告说:主阿，怎样怎样...。擘饼聚会就祷告这些。他们说:“糟糕，叫他不祷告也不行。我们擘饼聚会是记念主，他这个，把牛头和马屁接起来，要停也不能停。”她干脆每个星期花一点钱过香港去擘饼。</p>
+<p>后来她说:“聚会是在我的公司，在我的家弄得意见那么多，有矛盾，我也没办法去对付。”她就想要停，要停，就安排工作，房子出租给别人，说:“我这房子有改变，这房子不可以有聚会了。”她人就到别地去。以后，她再来交通，这又碰到实际了。</p>
+<p>上述姐妹家的聚会，起初说大家同心，到停止以后，到呼喊派的，去了一部分的人，到灵恩派的，去了一部分的人......。只二、三百人，都各走一路。哪里会摸到属灵的东西？</p>
+<p>好多时候我们讲交通，个人也好，教会也好，讲那些实际的情形，更会显明真理。因为讲出了不对的东西！(林前11:19;林后2:11;弗4:17)这些讲出来，你就觉得这个是实际，不讲出来，你不知道它有那个情形。人的观念就以为有聚会就好，“有聚会比没有聚会好”，有的人这样讲，讲起来好像很对，实际是:这个聚会，若不是给人好的影响，就给人坏的影响。给了坏的影响，要纠正更困难。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

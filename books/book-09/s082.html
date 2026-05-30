@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十二日</h1><p class="meta">深渊与深渊响应 · 第82/366段</p><p><a class="btn" href="s081.html">上一篇</a><a class="btn" href="s083.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s082.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十二日</h2>
+<p>讲道的人说教会好像基督的身体，我说:“不对，教会不是好像基督的身体，教会就是基督的身体。是身体！”身体不是一只手摆在一个地方，一只脚摆在一个地方。各肢体都要长在身上，肢体是长出来的，不是外面插进去的。</p>
+<p>有些人的脚用木头接起来变成一个肢体------义肢。但是木脚没有生命，这木脚，你去打它，不会痛，打断也不会痛，因它没有生命，只是外面接在人身上。若是从身体长出去的，你打它，它会痛，因它有生命有感觉。所以你对主有感觉，对信徒有感觉，对整个教会也有感觉，彼此都有感觉。你碰到弟兄姊妹就有感觉，他们里面会跟你有交通，你会感觉他的灵是强还是弱，他里面是光明的还是黑暗的。你自然对他有感觉；就是有彼此的感觉。(林前15:25-27)有彼此的感觉，就会彼此供应，身体就愈来愈健壮。</p>
+<p>所以一切单独作基督徒，单独作工的，他愈作，他那一点愈作愈没有。如果你是在身体里同心合意去作，摸到身体的，你愈作愈恩上加恩。你给人给不完，因神会再给你。所以你个人要在原来的基础上去再进步，再认识神，并且，你还要去带几位和你同心的一起事奉。你有这几位同心的人，工作才作得开，单独一个人就没有办法。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

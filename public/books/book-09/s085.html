@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十五日</h1><p class="meta">深渊与深渊响应 · 第85/366段</p><p><a class="btn" href="s084.html">上一篇</a><a class="btn" href="s086.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s085.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十五日</h2>
+<p>我们作工，要算价值，究竟“结果”多少？这是因为随后有一个数目，加上一个数目，再加一个数目，以后就有一个结果出来。如果一个零多加一个零还是等于零。作属灵的事，如果没有基督就没有内容，所得就是零，这些零加起来(虽然很多的零)，还是零。</p>
+<p>如果有主在中间，就有一个数目，比如有一个“1”在这里，零加在后面，就变成十了(10)，如果随后再加一个零，就是一百了(100)。没有前头的“1”，就变空。今天我们所作的就要有主在其中，没有主在其中，就没有“内容”，没有价值。</p>
+<p>四福音书里，主耶稣行许多神迹，回来感恩谢恩的人很少。十个患大痲疯的被治好，回来感恩的只有一个，其它九个不知跑哪里去？(路17:11-19)行神迹，按人看，人应该会相信，但主多行一个神迹，反招来多一个反对。神迹可以行，但反对的始终要反对，即使主使拉撒路从死里复活，反对的人竟想连拉撒路也要杀掉，人就是这样坏。</p>
+<p>你想好事多做一点，神迹奇事多做一点，人会信主。一时或许是，却经不起考验。考验一来，都倒，没有了。有时，可能神也有例外的恩典，但不是凭这一次叫他病好，就使所有知道的人都要神，还不一定的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

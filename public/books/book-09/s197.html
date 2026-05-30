@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十五日</h1><p class="meta">深渊与深渊响应 · 第197/366段</p><p><a class="btn" href="s196.html">上一篇</a><a class="btn" href="s198.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s197.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十五日</h2>
+<p>怎么敢讲这些？一面我们认识真理，一面我们过去也追求这一套，也追求充满，当时我们那个追求比他们更厉害。一位弟兄一“充满”，祷告完出去，一直认罪，一直打自己的脚，打到发黑。我们认为这就是圣灵叫我们为罪自己责备自己。但以后，他离去了，不知他到那里去。因他里面没有一个生命抓住他，他靠着的这一种是被动的，这就是一种被动的能力。</p>
+<p>我们那时讲方言，也不是现在“啦啦啦”舌音的“方言”。我们一讲方言，那个“方言”，声音拉得好远，好像很超然，听到的人，里面的心都震动。后来我们就发现问题了。是有这个能力，我们人听到，整个身体在那里都震动不停，好多人都这样。不知道主要怎么用他，“圣灵”充满他，他一直整天在那里像人“跳神”那样，阿，很危险呀，这“跳跳”，跳下了，一下子就犯鬼。从这现实，我们就醒悟过来，就停止讲“方言”，停止追求“圣灵充满”。</p>
+<p>那么，这个追求为什么缘故有错呢？为什么这追求不对？因为人还属肉体阿，圣灵没有办法充满属肉体的人。圣灵是充满那些里面在神面前正常的人。里面、外面要正常一致，所以我们很注意说:要经过十字架(路14:27;林前1:23;林前2:2)。因为经过十字架才有五旬节。从历史上，耶稣基督先经过“各各他”，然后再有“橄榄山”。升天，就是经过了加略山十字架完成神的工作，才再有橄榄山的升天，有各各他，才到橄榄山。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

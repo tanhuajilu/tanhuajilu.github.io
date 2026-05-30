@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十三日</h1><p class="meta">深渊与深渊响应 · 第114/366段</p><p><a class="btn" href="s113.html">上一篇</a><a class="btn" href="s115.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s114.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十三日</h2>
+<p>唱诗歌对我们属灵方面是有很大的帮助。一个聚会里有唱诗歌、有祷告、有讲道，还有接待(客人来听福音，有人负责接待)。这四个方面同样要紧。</p>
+<p>但今天，人却只突出讲道为要紧。但是祷告也要紧，唱诗歌也要紧，接待人也要紧。这几个若是能平衡，聚会就会带得很好。</p>
+<p>因为唱诗就是释放我们心灵的，使我们能以敞开。本来是闷闷的，里面关得紧紧，讲道听不进去；一唱诗，心就释放，再唱一首，心也开了。(太26:30;徒16:25赛25:1，20;12:2上行之诗\--诗120-134)</p>
+<p>接下去祷告，祷告带到神面前亲近神，再讲道。所以这唱诗、这祷告是准备给讲道的人有一条更宽更畅通的路出来。如果独立讲道，无论如何讲也讲不出去。所以愈唱诗愈祷告，大家就有一个敞开的心去听，讲道出来的，就会有人反应来接受所讲的话。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

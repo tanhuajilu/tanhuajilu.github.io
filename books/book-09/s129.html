@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月八日</h1><p class="meta">深渊与深渊响应 · 第129/366段</p><p><a class="btn" href="s128.html">上一篇</a><a class="btn" href="s130.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s129.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月八日</h2>
+<p>你到乡下看一下，好多人家孵出好多小鸡，要是养鸭的，孵出好多鸭子。这些鸡、鸭在一起，生活习惯不同，一个走一路。鸭子呢，母鸭带小鸭到水里面去游，鸡呢，母鸡带小鸡去啄吃的。若是小鸡到水里去，马上要死掉，因为没有那个本能。(创1:12，21)</p>
+<p>基督的生命活在基督的境界里，亚当的生命活在亚当的境界里(约3:6，7)，你叫亚当迁到基督里面，他很难受，不能活。有一个属灵的空气在这里，大家有交通，你觉得很舒服。如果没有摸到属灵的东西，你到我们中间来，很苦啊！</p>
+<p>从前有一个弟兄从好远来，后来他不得不回去。怎么会回去的？他说:“你们讲的我听不懂，好难受啊。”可能他的时候还没有到，如果主怜悯他，有一天他会摸到，如果主不怜悯，错过机会，以后就没有这个机会。这是很严肃的事啊。今天你没有得着，可能没有机会。时间是天天有，机会就不是天天有的。那位弟兄难得从陕西那么远跑到这里，路费要多少啊，来一个晚就回去了。你看他要得着什么，他说:“我所要求的不是你们所讲的。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

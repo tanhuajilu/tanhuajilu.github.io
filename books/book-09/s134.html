@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十三日</h1><p class="meta">深渊与深渊响应 · 第134/366段</p><p><a class="btn" href="s133.html">上一篇</a><a class="btn" href="s135.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s134.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十三日</h2>
+<p>你现在不要去注意自己，也不要注意外面的环境，要一直注意神。如果你没有注意神，只注意环境，就会可怜自己:“我做人这么可怜，这个不通那个不通。”你看到别人经济好，心里一边羡慕一边嫉妒，只会自己苦恼自己。</p>
+<p>别人好坏、贫穷富足，不关我们的事。他再丰富也没有我们的份，我们羡慕他做什么？我们要的是尽我们的份，有多少都感谢，有多少都要去面对。现在有衣有食就知足(提前6:8)，我们已经满足了，还有什么要求？我们奢望、要求，要求达不到就会苦，要求只会叫我们多受些不必要的苦。如果你认识主，好多东西就能过去，不认识主，越跟人家比越苦。</p>
+<p>过去，有弟兄姊妹去香港回来，都叹。我说你叹气什么？你到那边，弟兄姊妹们热心聚会，去交通多好呀。这边在前一段时期都没有教堂也没有聚会，香港有聚会多好呀。他还说很苦。我说:“苦什么呀？”他说:“他们一作见证，都是小孩大学毕业，读博士，挣大钱。我们在那边是穷鬼啊，读书也没有办法读书，做工也没有办法做工，穷到死。哎呀，我们跟人家香港人比，比不上呀。”我说:“你错了。你用这个去比，是你不认识主呀。他以为他有一点就这样自豪吗？”我说:“属灵上最贫穷就是这些。”他不相信。他说:“看见他们比我们富得多呀，恩典这么大，我们一点都没有，多贫穷的。”我说:“你得的恩典更大。你经过这么多的苦，还会存留，还信主。如果这些临到他们，他们早就倒了。你这个恩典更大，是不是？”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

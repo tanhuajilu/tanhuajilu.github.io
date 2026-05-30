@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月三十一日</h1><p class="meta">深渊与深渊响应 · 第152/366段</p><p><a class="btn" href="s151.html">上一篇</a><a class="btn" href="s153.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s152.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月三十一日</h2>
+<p>保罗说:“我当日传给你们的，原是从主领受的(林前11:23)。”都是从主领受的，都一样。好多人就说，你领受你的，我领受我的，我们领受不同。但是，如果源头一样，怎么领受不同呢？保罗从主耶稣领受，你也从主耶稣领受，我也从主领受，从主来的哪里会不一样呢？有的人是从人领受的，从人领受的就跟从神领受的不同了。不一样的就凑不起来。所以我希望每个人都从主那里有领受。有从主那里领受的而来交通，谁都会通。从自己讲出来的，怎么样讲都不会通。</p>
+<p>所以你要重新在主面前再考虑:“主，我要从你领受。”那么当圣灵感动你的时候，就像希伯来书说的，圣灵感动你的时候，就不可硬着心(来3:8;15;4:7;诗95:8)。感动你的时候，你硬着心，以后就不再感动你了。圣灵的感动动不了你，神就不感动你。神不感动你，你就是死路一条的。好象你讲的，讲道感动不了自己，也感动不了人，里面是硬梆梆的。这就好象农民种东西一样，种下去久了，地已经硬梆梆，植物在地里长不起来，你浇肥料，一倒就流走了。</p>
+<p>有一次，我们在农场浇菜，浇肥料，忽然干部来说，停止，不要浇肥料。我们说，浇肥料有什么不对？浇肥料叫它长啊。他说:“你们先停下，不要浇了。先把锄头拿来，松一松土。你不松一松，肥料都流走，都不会吸收。要先给它松一松。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

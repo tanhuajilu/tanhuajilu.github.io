@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十一日</h1><p class="meta">深渊与深渊响应 · 第71/366段</p><p><a class="btn" href="s070.html">上一篇</a><a class="btn" href="s072.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s071.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十一日</h2>
+<p>今天很多人把工作当作事奉。但工作归工作，事奉归事奉。事奉是事奉神本身，工作，我们是从神这里来领受带领去工作。</p>
+<p>事奉与工作就是两个不同的性质。你不要把工作当作事奉神，你是事奉神，然后神再带领你去工作。所以主耶稣说，仆人作完了工，回来，众人去坐筵席，他还在那里事奉主人(路17:7-10)。工作不是事奉主人，工作是去作主人的工，事奉是事奉主人本身。对于工作，主是工作的主，你作主的工作，回来还得事奉工作的主人，就是主。所以我们的事奉是向着主的。</p>
+<p>那么事奉在何处事奉？在我们的灵里面。所以主耶稣对撒玛利亚妇人的那番谈话就说明白了。妇人说:“我们祖先在这山上礼拜，你们(犹太人)却说，礼拜的地方是在耶路撒冷。”主回答:“时候将到，如今就是了，那真正拜父的，要用心灵和诚实里拜他，因为父要这样的人拜他。神是个灵，所以拜他的，必须用心灵和诚实拜他。”(约4:20-24)这样一谈，你清楚了吗？(应:清楚。)</p>
+<p>这灵在我们里面，我们在灵里事奉神，没有受时间、空间的限制，随时随地都事奉神。你忙工作，你在那里事奉神，跟神有交通，你在厨房里做许多工作，也是事奉神，因为是在灵里面事奉神。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十五日</h1><p class="meta">深渊与深渊响应 · 第116/366段</p><p><a class="btn" href="s115.html">上一篇</a><a class="btn" href="s117.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s116.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十五日</h2>
+<p>我们今天所得着的救恩(来2:3;彼前1:5;提后2:10)，不是只得着一半，不仅仅得救，是接受基督整个的救恩，因为基督包括一切。那每一个在救恩里的是已经在基督里了。因基督，我们信就得救。神已经应许在基督里，这些人都得到救恩，得到国度。但是，我们这一边有一些道路要走，神要带我们过渡到国度里去。今天教会在地上，是一个过渡，过渡进入天国，进入神的国。</p>
+<p>那么，什么是天国？天国就是神在掌权，有神的权柄。今天我们在这里做什么？我们活在神的权柄底下，在神的管理下。神的权柄就要求人顺服。如果一个权柄没有人顺服，必定给人家推翻。神有权柄，神的权柄却没有得到维持。所以，顺服说的是什么呢？顺服的对象不是道理，顺服的对象是神的权柄。你碰到神的权柄，你就整个倒下来；没有碰到权柄，你只有讲道理------有理由就顺服，没有理由就不顺服。但你碰到神的权柄，你通也顺服，不通也要顺服，因为神的权柄是没有讲理由的，神的权柄是绝对的权柄。</p>
+<p>宇宙中，有二个东西没有讲理由。第一个是神的权柄，没法讲理由。因为神的权柄托住万有，神用权柄创造万有，又用这权柄管理万有。没有权柄，没有管理，宇宙就乱，神还能托住还能管理吗？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

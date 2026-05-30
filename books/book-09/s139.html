@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十八日</h1><p class="meta">深渊与深渊响应 · 第139/366段</p><p><a class="btn" href="s138.html">上一篇</a><a class="btn" href="s140.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s139.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十八日</h2>
+<p>所以，不要以身体健康夸口，也不要靠着有钱来夸口，不要靠着有智慧来夸口。他本身有智慧，但一天会变成痴呆，就乱七八糟的，是吧？不要靠自己的意志去说，“我要健康，我要有智慧，我全要保留”，但不能。所以，你想要去挣钱，挣钱是可以，如果你不小心贪钱(路12:15;21:34;林前10:6;提前6:10)，要越多越好，钱就把你俘虏过去。</p>
+<p>一个俘虏，手铐一铐，以后就越铐越紧，特别现在的手铐是活铐，有齿的，你越挣扎，这个铐就铐得越紧。所以如果钱把你铐住了，你就爬不起来。因此，要求主救我们脱离金钱，求主叫我们脱离自己，就是说要主施拯救。</p>
+<p>讲得救，“得救”两个字，就包括多方面的。信耶稣得救，叫我们得救了。等我们有软弱失败，还要蒙主怜悯，要从这里救出来。你在困难中，主要把你救出来。主的拯救是随时随地做我们的帮助。主是我们患难中随时的帮助，也就是我们在患难中随时的拯救。所以“得救”，从一信主开始一直要用，用到见主面，还要蒙主拯救。保罗说:“他曾救我们脱离极大的死亡，现在还要救我们，我们指望他将来还要救我们。”所以主的救恩是过去、现在、将来的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

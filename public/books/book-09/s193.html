@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十一日</h1><p class="meta">深渊与深渊响应 · 第193/366段</p><p><a class="btn" href="s192.html">上一篇</a><a class="btn" href="s194.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s193.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十一日</h2>
+<p>他们少数人有一个心向往锡安，神知道他们每一个人的心，会藉着他们带祝福给别人。现在有没有跟弟兄姊妹交通？(应:有，常常！)你们怎样聚会。(应:主要是交通，有唱诗、读经、祷告。)主有没有同在。(应:有。)有主同在就好，问题不大。你们距离很远吗？(应:不远。好近，心很近，外面也不太远。我们这里的距离也不远。主预备的就是好，都不远。)你们彼此交通聚会就比较轻松了，不会再挑重担。(应:好多经过交通都清楚。外面的我不去想，也不去看。就跟主保持关系。好像我们各人都抱住这位主。)</p>
+<p>交通:我们感觉，现在有一个属灵的气氛，跟以前不同。初一我们有交通，有一个共同的点。看见一些地方，总是觉得属灵的气氛很浓。今天也是盼望对我们自己有一个约束、有一个要求，就是说，我们在一起有一个要主的心，大家被基督吸引，看见神有恩典有祝福。这方面是以前所没有的，看见神在我们这边有更多的恩典。(下略)</p>
+<p>交通:这是第二次来，上次来，听了很多话，我心里总是要跟着基督。当日很多人拥挤主，只有那血漏妇人要摸主，就得着。我九零年信主，要上去上不去，不知问题出在那里，这次经过交通，转向里面，不在外面。这次来，我就更坦然，要更认识基督。我祷告主给我能听的耳、渴慕的心，跟上主的要求。感谢主给我这么好机会。基督是活的，我不是守教条。我每天立一心愿，每天把自己摆上，就如罗马书十二章所说。我想问怎样可以得到圣灵的大能。</p>
+<p>答:有一点就是说:我们是在主的手中。我们在主手中，就有安全感。主又说，在主手中，没有人能从他手中夺去属他的人。每一个人都在主手中，主的手在带领我们、保护我们，并且安排我们的道路。(约10:28-29;13:7)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

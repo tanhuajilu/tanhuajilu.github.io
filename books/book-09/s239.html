@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十六日</h1><p class="meta">深渊与深渊响应 · 第239/366段</p><p><a class="btn" href="s238.html">上一篇</a><a class="btn" href="s240.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s239.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十六日</h2>
+<p>因为你已经不能挑一百斤，你说你还要挑。不要挑了。国家定规到六十岁退休，就是给你休息了。上了六十岁退休，你还挑重担。里面的重担还在挑，应该把一切的挂虑卸给神(彼前5:7;诗55:22)。现在藉着彼此的交通，里面的重担也好，外面的重担也好，都交给神。你交托给神，神是天天背负我们重担的主。只要我们肯交托。圣经彼得书说，你当把一切的重担卸给神，因为他顾念你。诗篇也说，他是天天背负我们重担的主。有主给我们挑，这样，我们多轻松。</p>
+<p>现在，你挑的重担有多重？按人想你最轻松的，两个女儿有工作，夫妇俩也退休，是享清福了，还有什么重担？是我们自己拿来挑的。(应:有一样，是有益健康的事，应当去作，不要去浪费时间。)这是说，你锻炼身体，可以，但你说你挑重担，这重担也要放下。所以，这重担先脱落，不然，你这样锻炼就变作挑着重担锻炼。</p>
+<p>你认为身体要锻炼就锻炼，认为没有需要就不要，都很自然，并不是说锻炼不可以。你肯不肯把重担交给主。(肯！)</p>
+<p>祷告:主阿，求你怜悯我们。我们原是用泥土做的，本来毫无价值的，倒是今天你用你的命来满足我们这些不可爱的人，我们人生才有一个盼望，得到你给我们将来的赏赐。但愿你厉害地吸引我们，更能够为你放下属地的，来追求属天的。我们不会爱你，是你爱我们，我们带着这个本相来到你面前，来蒙你更大的怜悯。感谢你，你祝福我们这里的交通，让我们愈来愈认识你、认识自己，谢谢你的恩典，我们在这里同心的祷告，是奉主耶稣的名，阿门。</p>
+<p>(8月16-26日，选自2001年1月28日晚上交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

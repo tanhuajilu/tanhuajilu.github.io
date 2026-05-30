@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十七日</h1><p class="meta">深渊与深渊响应 · 第108/366段</p><p><a class="btn" href="s107.html">上一篇</a><a class="btn" href="s109.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s108.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十七日</h2>
+<p>好像数钱，去数几块几块加起来才几百块，还可以去数。到了钱很多，必须用机器来算，你自己也算不来了。我们所领受的恩典，起初只一点就去讲，到了很多，我们就没有办法去讲了，你到哪里去讲？</p>
+<p>有姊妹对另一姊妹说，她出门拿钱是不数钱数的，随便就抓一把放在口袋。花了多少，吃了多少，就用多少。但对那没有钱的人会惊讶:“你的钱是那么多。我们一块二块钱还小心的去数点。点了，安排好好，那一块钱怎么用，另一块钱怎么用。你用钱却不数，用钱用出去像用水一样。”因为她有钱，没有钱的才算着，失掉一块会知道，有钱的人失掉十块八块也不会去找，也不知道。</p>
+<p>我们在神面前的度量如果大一点，恩典如果多一点，对好多东西就不会计较。会去计数，就是我们的度量小，所受的恩典少。如果恩典是多的，恩典也白白出去。神的恩典既是白白给我们，恩典也会白白流出去</p>
+<p>(罗3:24;启21:6;22:17;8:32;太10:8)。</p>
+<p>我们得赦免是神赦免了我们千万的债，别人欠的十两钱，我们会白白的给人免去。但小器的人得别人千万的赦免，他对人家一点的赦免却作不来。即使话怎么讲了，里面的心还是这样窄，对别人没有宽容，没有赦免之恩。他是这样的人。方法用上了，方法用了这么多，但这个人却不对。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

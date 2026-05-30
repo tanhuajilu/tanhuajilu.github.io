@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月三日</h1><p class="meta">深渊与深渊响应 · 第185/366段</p><p><a class="btn" href="s184.html">上一篇</a><a class="btn" href="s186.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s185.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月三日</h2>
+<p>我们自己能有一点感觉，实在是神的怜悯。好多时候，接触到弟兄姊妹进步，我们自己反而退步。有的人是讲客气话，但是你有感觉讲这个话，就不是客气而是事实。我们认识弟兄已经二十年了。他在念书的时候就很追求，很熟圣经，小本圣经放在这里，每个时候都看。有事情，站在门外等，就看圣经。他有追求，能照他自己所感觉的。在船上，只有他是基督徒。他也可以很无聊的过日子，他就是读圣经，看属灵的书。他看属灵的书看了很多，整年都是一个人孤独在船舱底。</p>
+<p>他虽然有追求，主也保守他，但是有一件东西失去了，就是长久孤独。他就是再追求，总比不上那些有交通的人，因为没有彼此的供应。有人从外地来，他会觉得里面还不够，拚命去追求。事实就是跟弟兄姊妹少有交通。愈少交通，就愈把自己关死，如果跟身体有交通，无形中，他里面就有力量。</p>
+<p>生命的供应是很厉害的，没有供应就缺乏。他的工作实在很艰难，修理船上的机器，四十多度气温，都要在那里度过。在船上，他是最突出的，就是这样艰难地经过那些日子。都是神保守他，叫他还是向主有一个“要”。</p>
+<p>他差一点的，就是跟弟兄姊妹少有交通。整年才回来一次，回来几个月又要出去。还有一点，每逢回来，他都要去某地，也到这里找交通。他对交通很渴慕。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

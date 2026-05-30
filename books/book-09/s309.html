@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月四日</h1><p class="meta">深渊与深渊响应 · 第309/366段</p><p><a class="btn" href="s308.html">上一篇</a><a class="btn" href="s310.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s309.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月四日</h2>
+<p>在宗教世界的人，都是一样的。年初就编排一年的节目计划，一年的都编定，不必靠圣灵了。这些都是人在做的，哪有圣灵的工作？没有圣灵，人还在那里安排。没有圣灵就没有权柄，但是他们还在那里讲权柄，哪有权柄？</p>
+<p>马丁路得的时代，天主教的权柄是很厉害的，但是马丁路得看到这权柄是违背神的，还是顶撞主的，就勇敢的站起来。今天，你就可以看见，人还在那里排次。“这些是神的仆人，这是第一，这是第二，这是第三...”。在宗教世界里，圣灵找不到出口。直到今天，圣灵仍然在找人作出口、作器皿(徒9:15;罗9:21-24;提后2:21)，叫人去摸到神，叫人能把神带出来！</p>
+<p>在宗教的世界里，很多人很会讲。会讲没有用，他们愈讲，教会愈乱。会讲的人，彼此有一点不同，愈讲愈不通，彼此都是你争我争的。你争我争，就叫属血气的更加属血气。争到属血气，你就掉下来，还会属灵吗？</p>
+<p>有人在讨论怎样被提，几次被提，就争起来。其实不必争，主要是看你会否被提。我们的难处就是管别人的事太多。几十个人的事就争论很多，几百个人的争论就更多了。有些情形还落到投票表决里去。</p>
+<p>关于教会的负责人就是长老，圣经论到长老就说:“圣灵立你们作全群的监督。”所以长老是圣灵立的，圣灵立的才是。此外，也有经文说到，长老也是使徒立的，那些使徒就是指那些会看见圣灵工作的人。凡自称使徒的，都是假使徒，因为真是使徒的都会谦卑。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

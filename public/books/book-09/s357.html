@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十二日</h1><p class="meta">深渊与深渊响应 · 第357/366段</p><p><a class="btn" href="s356.html">上一篇</a><a class="btn" href="s358.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s357.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十二日</h2>
+<p>你比别人还好的，是你没有一个系统的组织给你管住。今天，你个人的路是走清楚了，就能把弟兄姊妹一个一个的带到这路上来。你也要知道，不会每一个人都很乖的，他们不一定要听你的。你不要以为那小小的聚会是你开始的，就被累住。这一个能存在就由它存在，不存在也没有什么大不了。能相聚交通就是好的，也不必怕“名堂”只挂得小小，就感为难。能自己几个人，﹝主内的几个信徒﹞聚在一起，虽然没有什么经济上的支持，聚起来是多轻松啊。</p>
+<p>问:我们这样交通，别人总要问:“你们有什么名堂。”向弟兄姊妹我们怎么交待。</p>
+<p>答:如果是有“名堂”就麻烦，这问题，你们恐怕没有遇见过，很多东西还是会改变的。你不见全世界都不断在改变吗？几年间改变多少？若不是靠神跟着去走，也来不及呀！</p>
+<p>人常会想:“或者妥协一下吧，打打交道也未必怎样，只要那样做一下，就可以。”但是，我们是爱神的，受神的限制不能自由。如果要妥协，要作受人尊敬、作带领的，也是可以的，可是，“属灵”就落下去，在神眼中会怎样呢？</p>
+<p>罗得原来也是跟随亚伯拉罕的，但是他没有异象，后来也离开了(创13:7-12)。以色列人是出了埃及，就是因他们中间的闲杂人(出12:38;民11:4)，惹了耶和华的怒气(民10:4)。我们这里只有几个人，要实实在在的去碰到主才有作用，这个是实际的问题。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

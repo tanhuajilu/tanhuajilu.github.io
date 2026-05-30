@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月九日</h1><p class="meta">深渊与深渊响应 · 第283/366段</p><p><a class="btn" href="s282.html">上一篇</a><a class="btn" href="s284.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s283.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月九日</h2>
+<p>为什么要使用灵？因你要事奉神！事奉的对象是谁？今天好多人把事奉的对象搞错了，以为作一点工作，就是“我在事奉神！”。“打扫聚会所，我事奉神。”，“招待，我事奉神。”，这就是对事奉神的对象没有认准。事奉的对象是神自己。所以，事奉神跟作神的工，是两件事。</p>
+<p>主耶稣说，仆人日间作工，回到主人处，还要侍候主人。这工作是他作仆人该作的，主人派他作，他去作。至于事奉主人，是他作完了工，他还要去侍候主人。这时，他更是直接去事奉这位主。我们的工作是根据这位主人的差派而去作的，我们却常是把作工，说是事奉神。那些工作，你若作到离开神那么远，你是在事奉工作呢，还是在事奉神？所以，我们不是事奉工作，我们是事奉神。(路17:7-10)</p>
+<p>我们也是等候主再来，我们不是在那里作一些工作而已。我们等候主再来，工作是为他作的，我们把事奉神摆在第一。好多工作是主叫我们作，我们才作，如果神喜欢，叫我们不作，我们就不作，他也不会怪我们，因为我们事奉他。</p>
+<p>神叫我们作，我们去作，他高兴。他没有叫我们作，我们不作，他也高兴，因为事奉跟工作不一样。工作不是按我们喜欢的，常常我们高兴作就作，我们不高兴作，我们一个指头都不动。但神叫我们作的，神高兴我们去作，等到神不高兴我们作时，我们就不作，因这个工作不是出于神的。所以，事奉神是在神面前，不是在工作上，这个我们要清楚。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

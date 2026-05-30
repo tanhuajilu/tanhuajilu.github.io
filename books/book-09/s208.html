@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十六日</h1><p class="meta">深渊与深渊响应 · 第208/366段</p><p><a class="btn" href="s207.html">上一篇</a><a class="btn" href="s209.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s208.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十六日</h2>
+<p>“一下子几千人得救，你消化不了！”以前N弟兄讲这个话，我们都不理解。上海一次受浸几百个，一下子，一、二千人聚会，N弟兄当时说，如果人再多，要消化不了。这二千信徒，你要去带他，帮他翻译等等，已经不容易，再多再多，你要累死了。</p>
+<p>儿子生那么多，而经济困难，你怎么养活？这是现实！就是维持一个聚会，维持初信的信徒，也是很浅。</p>
+<p>菲律宾一个地方的信徒，一年一定要受浸几百人，每年都几百人受浸，受浸的人一时那么多，没有办法养活。一下子热心，一下子就看不见了。这就是因为里面没有实际的东西。如果我们要有实际，就需要彼此交通。主给属灵的供应，大家被主吸引，不然，都漏掉。</p>
+<p>这就是教会复兴的历史，每次都由少数人带出，真的带出复兴来。可是，第一代很好，第二代停了，到第三代就落下去，因为没有继续走在生命的路上。这就是因离开起初的异象(启2:4-5)，离开对主那起初的认识。所以我们对主的认识要认识深，时间再久还可以保持。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

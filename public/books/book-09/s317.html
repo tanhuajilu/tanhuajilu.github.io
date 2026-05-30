@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十二日</h1><p class="meta">深渊与深渊响应 · 第317/366段</p><p><a class="btn" href="s316.html">上一篇</a><a class="btn" href="s318.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s317.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十二日</h2>
+<p>问:旧约记载，约柜离开了会幕，在示罗会幕的事奉仍然继续。圣经是让外面的事奉和里面的事奉同时存留和出现。在今天，我们该怎么看这一件事。</p>
+<p>答:神只要人在祂面前是正常的时候，才显出祂的同在。人在祂面前不正常的时候，神的同在就失掉。我们看旧约就会看到，以色列人正常的时候，神就同在，若是不正常，就失掉神的同在，甚至神的约柜也被掳去(撒上4:11，22)。</p>
+<p>依据圣经，人还可以讲很多道理，不过，实际的情形还得要看人在神面前是正常或是不正常。</p>
+<p>其实，会幕里所有的东西都是表明基督。你可以从其中的每一件东西看到基督。祭坛、洗濯盆、金灯台、陈设饼、金香炉、约柜、施恩座，没有一样不是指着基督说的(西2:16-17)。最外面盖圣所的东西－海狗皮，也是指着基督；因基督也有外面是人的一面。会幕里的器具无论大的、小的、都预表基督，海狗皮也预表基督；它预表基督成了一个卑微的人。</p>
+<p>圣经中出现很多预表的事物，它们都预表基督。如果人把这些规条道理，几点几条地来讲说，就不会叫人碰到神。人若不把这些当作规条，其中的意义自然就容易显明出来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

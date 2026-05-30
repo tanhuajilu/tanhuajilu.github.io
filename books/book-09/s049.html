@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十八日</h1><p class="meta">深渊与深渊响应 · 第49/366段</p><p><a class="btn" href="s048.html">上一篇</a><a class="btn" href="s050.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s049.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十八日</h2>
+<p>这些你们遇到的环境，为着什么呢？为叫你们进步，叫你去认识神。如果你们认为前辈的人都热心作出口，在这里讲道给你们，如果真是这样，你们就永远浮浅不会深了。进到属灵深度去的，就是要经过这些不平凡的道路。当众人都离开主时，主对彼得说，你们也要去么？彼得说:“你有永生之道，我们还归从谁呢？”(约6:68)认识主有永生之道才会牢牢地连于主，不认识的人今天好，明天要变了，非常的浮浅。</p>
+<p>你们要感谢神，借着这么艰难的环境(赛30:20;徒14:22)，自己感到非常黑暗、孤单，却无形中把你们带到主面前去要主。能感动人把人带到属灵道路上的，不是那些轰轰烈烈作奋兴家的人能作的，他们只能作在外面。神给你经过黑暗、难处、孤单，叫你碰到神，去向主要，就无形中把神的荣耀带给了人。</p>
+<p>听到你们谈话，我们感动流泪，并不是因为你们可怜、孤单，不是。我们是觉得神太荣耀。若非神荣耀大能托住你们，你们恐怕跟他们一起走了，因他们是前辈。</p>
+<p>属灵的，只有一个中心。我们要注意的，就是仰望耶稣，因祂是为我们创始成终的(来12:2;)。起始于祂，也终结于祂(西1:18;启1:17)。再年长的弟兄也会变，因还是人。我们自己也是人。对人，我们不要存有盼望。他们还在，到明天就变了，你说他们的好坏，讲了出来，已经收不回去了。所以，圣经说，夸口的当指着主夸口，你不要指着人夸口。你指着一位弟兄夸口，他过几天跌下去了，话就落空，自己也觉羞耻，“何以坏到这地步”。没有什么希奇，人就是坏的。所以我们寻求属灵的路，不要把我们的希望寄托在任何弟兄姊妹身上。仰望神，一切出于祂，祂是我们的开始，是我们的继续，最终一切荣耀也归于祂。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

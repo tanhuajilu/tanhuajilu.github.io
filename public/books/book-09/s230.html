@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十七日</h1><p class="meta">深渊与深渊响应 · 第230/366段</p><p><a class="btn" href="s229.html">上一篇</a><a class="btn" href="s231.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s230.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十七日</h2>
+<p>你对你父亲的感觉跟对别人父亲不一样。你是你父亲生的，所以提到父亲，你有一个亲切感，提到别人的，你没有一个亲切感。我们是神生的，提到神都有一个亲切感:“神是我的父，我是他的儿子。”(罗8:15;林后1:3;加4:6)所以有这生命，就对神有亲切的感应和反应。</p>
+<p>再者，信主以后，还不止你有神的生命，你也喜欢那同有神生命的人。所以约翰一书说，你得着神的生命，你爱神，也会爱凡从神生的。所以你一得救，看到另一个基督徒，你会很宝贝他，因为他同是父神生的。不然，他跟你没有关系。虽然他跟你没有关系，你知道他信主，就觉得你跟他有亲切感，因为他里面的生命和你的一样。因着神的生命，我们跟神一样，他也跟神一样，我们彼此也就一样，因为都是从父神生的。</p>
+<p>所以一信主，你对所有信主的人就有感觉、有亲切感。这就是属灵的反应。你只要听到他信主，你就有一个感觉，这一个，跟不信的人是不一样的。</p>
+<p>我们对“我们跟神有关系”，会觉得很奇妙。怎么以前跟神没有感情，现在有呢？用土语说，以前一直跟神都没有缘分，怎么现在一信主，对神就有缘分，感觉神很亲切？另外，你跟神有感觉，还会跟弟兄姊妹有感觉。这些都是正面的。</p>
+<p>反面的呢？信主以后，你犯了罪，心就过不去，讲一句不合适的话，里面就没有平安。你做不义的事，或贪人家的便宜，里面就难受，马上要去弄清楚，不然，不能过得去。有没有这个经历？有，就是你跟神有关系。所以从信主以后，你这个生命跟神有关系。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

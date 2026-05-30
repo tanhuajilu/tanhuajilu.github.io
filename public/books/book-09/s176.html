@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十四日</h1><p class="meta">深渊与深渊响应 · 第176/366段</p><p><a class="btn" href="s175.html">上一篇</a><a class="btn" href="s177.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s176.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十四日</h2>
+<p>撒但的工作是借着魂去作工，神是借着灵作工。神工作与撒旦的工作是二条不同的路。所以我们说要对付魂的生命，因为不对付，就是给撒但有一个路口逃跑，也有一个缺口进来。有了对付，就堵死撒但的路，叫我们身上没有撒但的地位，牠自然没办法做工。</p>
+<p>我们如果不管理自己，是放松放松的，就什么思想都会来。你自己什么思想都会去思想，就给它拉着走而不知道。信徒实际的功课就是要从得救起，慢慢的有好多学习。你有学习的话，在各方面就会进步。</p>
+<p>你说“没有主的话来讲”，这些情形，今天是普遍存在的。信徒应该有话讲，没有话讲就应该仰望主。弟兄姊妹应该来探讨一下，可以从那里学习起。</p>
+<p>不管他们讲什么，在大家的谈话中都会得着一个话题，得着一个破口，能带进去就有话说。你里面一出来就有话说。圣灵的工作很奇妙，本来你没有光，你给弟兄姊妹一讲，就有光了。对这个，你不要主观，不要想他们能讲出什么，他们讲的可能比你想的更为巧妙，更奇妙。所以，每一个人都要有接受别人帮助的心。(来10:21-25)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

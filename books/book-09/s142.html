@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十一日</h1><p class="meta">深渊与深渊响应 · 第142/366段</p><p><a class="btn" href="s141.html">上一篇</a><a class="btn" href="s143.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s142.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十一日</h2>
+<p>如果袋子是有破口的，你一直装它也是漏，没有用。所以我们受主恩的，要把主的恩典保持住，能管好。该做的才做，不该做的我们就不做。该要的我们就要，不该要的我们就不要，不然我们没有目标。</p>
+<p>我们这里有好多人到国外去，他说:“我到国外，一定要寄钱回来奉献，至少十分之一。”讲得很响。一直到现在七、八年了，百分之一都没有呀。不止说钱没多少，他的灵性也落下去了，很软弱的。</p>
+<p>所以我们讲“到国外去”，有些人一听到就不想去，到外面没有看见是差不多的。有些传道人去，也变样了，没有了。在这边，他还传些纯正的道理，到那边，却去传那些不合圣经的道理，他在那边也不是走在正路上。我亲眼看见好多人到那边都变了，钱是挣了点，但是里面漏掉属灵的东西了。所以你要感谢神，你住在这边，神给你安排的环境最好。</p>
+<p>答:弟兄从菲律宾来，他过去跟着某一派跟三十多年，后来领头的变了，他很想走正路，没有路走。以后就到这边来交通。起初交通还观望，看看到底怎么样，搞什么名堂，他不停地观察观察，问题很多，一直问问题。(应:很多次了。这一次是正月头几天就赶来。)我们也没有答他的问题，我们只是把主给他交通交通(罗5:8；6:11；8:1-2，34-39)，以后他再来，再来。</p>
+<p>(4月25日-5月21日，选自2001年1月26日下午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

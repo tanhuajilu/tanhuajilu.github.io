@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十一日</h1><p class="meta">深渊与深渊响应 · 第326/366段</p><p><a class="btn" href="s325.html">上一篇</a><a class="btn" href="s327.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s326.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十一日</h2>
+<p>早上我们在这里交通，为何还要交通？交通叫人更清楚地看见。你们接触这里每一个人，都会有一个印象。你有了印象，才会讲出来，因为这是你的心灵自然反应出来的。过半年以后，你的属灵感觉和今天比较也不一样。所以属灵的事，不是只听你怎样讲，更是要看你属灵的眼睛有没有打开。(太6:22-23)</p>
+<p>在中国，你可以到处跑，但是，眼睛如果没有打开，就只是听很多事物而已，并不会察觉到神的工作。</p>
+<p>有一个小瞎子问:“太阳是个什么来着？”人回答说:“是个圆圆的东西。”后来，小瞎子摸到一个炉头，就说:“这是太阳。”炉头当作太阳是小瞎子猜想出来的，事实根本不是。想用道理去认识属灵的事也是这样。</p>
+<p>我们不懂的事，干脆就说不懂还好，不要去猜。主对尼哥底母说:“地上的事你们尚且不信，若说天上的事，如何能信呢？”我们只讲自己所知道的。宇宙这么大，我们不可能全知道，科学家也只是讲他所知道的一点点而已。把全世界的科学家集合起来，他们所知道的也是一点点吧，宇宙这么大，人去听也听不完...</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

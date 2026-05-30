@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十四日</h1><p class="meta">深渊与深渊响应 · 第55/366段</p><p><a class="btn" href="s054.html">上一篇</a><a class="btn" href="s056.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s055.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十四日</h2>
+<p>你为别人属灵的情形焦急，只有到主这里告诉主了，相信主的手作工。</p>
+<p>神会带领你走前面的路。因为我们的路不是一条二条的，我们的路就是主耶稣。主耶稣说，我就是道路、真理、生命(约14:6)。他就是路，他随时带领你。不是把一套道理当作路，今天用，明天就不能用了。因道理是死的，环境是活的，你把死道理用，环境会改变，情况会改变，要准备几十套去应付这些吗？也应付不了。</p>
+<p>今天有今天的情形，主会带领；明天有明天的情形，主又会带领，主的带领是灵活的。因为主的带领是活的，是进步的，叫你觉得希奇。这次交通，大家都认识了这情形，下次再交通，就发现有些情形已经进步，有些停留，有些退步了。不是说进步的就永远进步，进步的也会退。在前的不是永远在前，主说在前的也会在后，在后的也会在前的。(太19:30)今天你前我后，你坐在前面，后一天，我前，你坐在后面了。这是活的，不是像念书毕业，我够了。不是。</p>
+<p>我们念属灵的“书”，学习属灵的功课，没有毕业的。某弟兄打电话来，说了一句话很好，“一些弟兄，他属灵上已经&#x27;封顶&#x27;了”。房子“封顶”就不再盖了。属灵的道路、属灵的认识，长进是没有封顶的。神是多高的，相对的，我们应该一直长进，没有封顶。这样你也进步，我也进步，大家向着这个进步都来不及了，还有更多时间讲闲话，批评这个批评那个吗？批评会减少。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

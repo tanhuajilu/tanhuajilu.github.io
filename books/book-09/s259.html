@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十五日</h1><p class="meta">深渊与深渊响应 · 第259/366段</p><p><a class="btn" href="s258.html">上一篇</a><a class="btn" href="s260.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s259.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十五日</h2>
+<p>问:(家庭里的学习。)</p>
+<p>答:夫妻间要注意三件事:一、不可有第三者；二、经济问题，要坦诚；三、个性不同，要学习。</p>
+<p>我今天听到年青的弟兄说:“家庭是没有挂牌的神学院。”好多神学院挂一个牌，XX神学院。家庭是没有挂牌的神学院，在这里给你训练功课，给你训练活的东西。你有学习，家庭就一定蒙祝福。</p>
+<p>我说，我感谢神，就是神给我一位好的母亲。我们是大家庭，她一个人管理家庭。做一个媳妇的婆婆已经很难很难，她一个人对着三个媳妇，每个媳妇对她都服服贴贴的。为什么缘故？她有办法来带领，她敬畏主，什么都敬畏主。那个敬畏摆上去，叫人能够碰到主。以后，我们下一代再出来，人就很多。我们是大家庭，人口很多，第二代、第三代，中间几乎很少有什么矛盾。有什么矛盾，几乎都很容易过去。有什么困难，大家都帮忙，不要叫，大家就一起彼此关心。这个就是神的祝福。</p>
+<p>有一个家庭摆在那边，就是见证神。所以，并不是没有学习，一个好家庭就会从天掉下来，愈学习，家庭愈有和谐。各人有对付，家庭矛盾就少。如果没有对付，家庭搞不好。你第一年结婚还满理想的。有人笑说:结婚之前，男人好像天使，结婚后好像“魔鬼”。不要紧，要学习，有学习就有恩典。</p>
+<p>你问我:“你现在学习什么呢？”我现在还在学习。家庭有许多功课。师母的脚不能走，总是要去帮忙她。去帮她，病人是很烦呀。不小心，她烦，你也烦。烦，不作也得作。本来，我们老了。老了，还要作护士，是吗!(应:难怪你身体强壮起来。)按照我们人，我们老了，怎么去服侍别人呢？事奉的工作是靠恩典，服侍人的工作也是靠恩典(来13:9;提后2:1;彼前5:10)。靠神的恩典，就得去学习。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十日</h1><p class="meta">深渊与深渊响应 · 第162/366段</p><p><a class="btn" href="s161.html">上一篇</a><a class="btn" href="s163.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s162.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十日</h2>
+<p>今天，神要我们顺服祂。但神不勉强我们。我们要奉献给神，但神却没有勉强我们奉献。勉强的就没有价值，甘心乐意、自愿才有价值。好象婚姻，不能勉强，勉强的婚姻，结婚以后都是死婚姻，天天难受。如果是甘心乐意的，再苦，他里面没有意见，因为甘心乐意就有爱在里面。神对我们也是这样，祂等候我们自愿，特别雅歌书讲，不要惊动爱情，等到他自己情愿。</p>
+<p>(雅8:4)</p>
+<p>所以今天我们的主等着我们这样自愿爱他，这才有价值。如果是勉强的，碰到事情，才要爱主，这个爱常常会改变，因为会忘记。你里面若跟主有这一个亲密的关系，你情愿爱他，他也情愿爱你，就是彼此情愿的。不然主从天上下来做什么？主是甘心情愿从天上到地上来爱我们，所以神爱我们，就表现在基督身上。</p>
+<p>你说神爱我，我说没有看见，但你看见主耶稣，你就看见神的爱，因为主耶稣是神的独生儿子。神把这个独生儿子为着爱我们赐给了我们，这个爱大不大？如果你只有一个儿子，我十万块跟你买，你要不要卖？十万块很快用完，这个儿子是亲生的，怎么能给？没有办法。那么，叫你送给我，那更难了。有钱都买不到，怎么会想他来送你！神却是把独生子送给你呀！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

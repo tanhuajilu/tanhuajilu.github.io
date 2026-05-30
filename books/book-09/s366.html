@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月三十一日</h1><p class="meta">深渊与深渊响应 · 第366/366段</p><p><a class="btn" href="s365.html">上一篇</a><a class="btn" href="index.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s366.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月三十一日</h2>
+<p>问:在我们那边有外国人来传福音。传福音是传恩典的福音，把恩典的话传出来，不就够了吗？也有人说福音必须要有圣灵的带领，这二方面是统一的呢，还是有不同之处？</p>
+<p>答:传神的话是要有圣灵的工作，才有力量去得着人。(圣灵的工作:林前2:4;彼前1:12;约16:8)最难的就是“得着人”。把人踢开容易，带到主面前就难。但是传福音的人，常把他这个“人”摆出来，就叫别人反感，叫人有不好的印象。</p>
+<p>外国人来传福音，他们有热心，这个我们不否定他，但是他们也有野心:“这是我的。”他带了人得救，会用很多的关系去维持。这个就是不对头的东西。外国人来这里，都有他们的事业。他们的宗派很多呢。在政治上说，他们这样作，就给中国的信徒带来难处。中国人信主，信了主的人，最后还归你们国家，或其它外国吗？这样做都是增加麻烦。我们知道好几个外国人带人信主，结果都跑到安息日会去。他们都是盲目地在那里做。他们花了很多钱，结果很多钱都给人骗去。</p>
+<p>在城市里，我们知道，那些从外国来作老师的，也有带人信主的，人信主以后，都放在那边而已。当然，另一面说，他们去传，基督毕竟被传开了。我们没有种的，确实收的比那些种的更多。</p>
+<p>祷告:亲爱的主，谢谢你给我们有交通，这是你荣耀的工作。弟兄们将要离开，你的恩膏在我们里面还一直的教导我们，使我们在属灵的道路上正直的往前去。求你叫他们在你的带领下，能够带出你的恩典，供应许多的人。祷告奉主耶稣基督的名。阿门!</p>
+<p>(12月17-31日，选自2000年7月27日上午交通)</p>
+<p>深渊与深渊响应(366天交通记录选文)</p>
+<p>目录:</p>
+<p>1-290(1月1日-10月16日)</p>
+<p>选自2001年1月24-30日交通(20篇)</p>
+<p>291-366(10月17日-12月31日)</p>
+<p>选自2000年7月25-27日交通(7篇)</p>
+<p>说明:</p>
+<p>《深渊与深渊响应》，这本小册子是从一位八十多岁的老弟兄同弟兄姐妹的见面交通中摘录出来，整理编辑而成。其内容丰富，紧扣属灵生活的实际。相信对有心寻求神，追求生命丰盛的弟兄姐妹，会有很好的帮助和启发。愿圣灵在每位阅读的弟兄姐妹心中作引导，使更多的弟兄姐妹认识并走上这条生命成长之路。懂得在每一天的实际生活中，如何顺从圣灵、对付己，操练属灵生命的长进。从而对这位爱我们的主有更深的认识，并且能从内心:与主更亲，爱主更深。在实际生活中见证荣耀神的名。</p>
+<p>注:</p>
+<p>本小册子括号内标注的圣经章节，不一定是指前文的内容是圣经的原文，而是说圣经在这方面有相关的内容。目的是让弟兄姐妹可以参看相应圣经章节的内容，便能更清楚地领会、明白。</p>
+<p>談 話 記 錄</p>
+<p>(九)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月七日</h1><p class="meta">深渊与深渊响应 · 第342/366段</p><p><a class="btn" href="s341.html">上一篇</a><a class="btn" href="s343.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s342.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月七日</h2>
+<p>怎么能辨别是神的事或者是人的事呢？</p>
+<p>其中，你不要用人的理由去辨别。像外面的热空气和这空调间的气温，一下子就能感觉出来。辨别神的事、人的事也是这样。是神的事，我们里面的生命有属灵的感觉，我们可以辨别出来(来4:12;5:14)。在道理上讲，我们只能知道有分别，要把它们感觉分辨出来就做不到。要感觉它们出来，不只一个人去感觉，其它弟兄姊妹，也可以感觉出来。借着交通，大家里面的生命，里面的灵都可以被打通。像水沟不通，一桶水冲下去还是不通，几桶水倒下去就通了。</p>
+<p>有人说:“只有你们这里有神吗？我们那里就没有神？”是，客观的说，神是无处不在的，但神在这里，你们却碰不到。问题就在这里。这属灵的工作，是神自己去作的。</p>
+<p>问:天主教、基督教里都看重受恩之法这问题。该怎么去看这方面。</p>
+<p>答:讲这方面，都有很多人的观念，所以在观念上大家都该要有点改变。天主教以弥撒的饼、杯为耶稣的真体真血，这本身就是迷信。当日，天主教时代，不愿按此去做而被关牢、被杀的人也很多。人把擘饼变作迷信，把这些作为成圣的途径。他们把基督摆到哪里呢？真的受恩之法，就是基督十字架的工作才对。擘饼、聚会、读经和祷告等等，加起来也比不上圣灵的破碎，圣灵在人生活中给人的管治。没有读经、祷告，神的工作并不因此停止，因为是神的生命才活出这些东西。只要有生命就有一个生命的要求，自然带出基督徒属灵的生活。很多人却用许多手段，外面的东西作为受恩之法。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

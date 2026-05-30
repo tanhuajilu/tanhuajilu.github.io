@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十三日</h1><p class="meta">深渊与深渊响应 · 第104/366段</p><p><a class="btn" href="s103.html">上一篇</a><a class="btn" href="s105.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s104.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十三日</h2>
+<p>有一个人来找我，他说:“老先生，我问你一个问题，中国两个出名的神学教师，一个是贾玉铭，一个是陈崇桂。前者说一次得救永远得救，后者说一次得救，没有永远得救。你认为怎么样的？”我说:“你问，但你自己是怎样讲？”他说:“我倾向陈崇桂的。”我说:“那好！我也不用答复你，你自己已经答复，你赞成他就好了。”我还告诉他作什么？他已经拣选“一次得救不是永远的得救。”那时我说:“就到这里为止，因你的问题自己已经解决了，还要问我？”我如果跟他争辩三、五点钟也争不来，因他已经定了要跟从这。因我们也不是拥护某人，我们就是服从真理，不是服从人。我们相信圣经。</p>
+<p>不只这样，在我们的经历上，的的确确，这生命在我们里面是有永远性质的。(约3:16;4:36;6:27;林后4:17-18)我们有这永远性质的在我们里面，所以我们的事奉、工作都有永远性质，要把这些工作带到永世里去，就因为是出于神，神是有永远性质的。我们所作的工作也是有永远性质的，才会带到神面前。</p>
+<p>如果是出于人，就是草木禾秸的，今天就让它烧掉。你到主面前，你是两手空空的，现在，就因为我们的工作不是今天作今天完了，事奉不是今天完了就过去了，我们这些就都要带到永世里面去。我们一生的道路在神面前，都有我们的档案在主那边。将来，神不会亏待你。</p>
+<p>你有心为着主，为主花上了代价，神不会亏负你。你要相信，你为主所损失的，虽然只一点点，神给你的祝福比之更多。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十日</h1><p class="meta">深渊与深渊响应 · 第254/366段</p><p><a class="btn" href="s253.html">上一篇</a><a class="btn" href="s255.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s254.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十日</h2>
+<p>有的人说:“我怎么办？”我说我也没有办法。该怎么办？“求主作工。”所以刚才X弟兄提出的，跟Y弟兄所交通的，都没有矛盾，都能够“相辅相成”起来看问题。我讲这些，免得我们有误解，以为这交通有矛盾，其实没有矛盾。</p>
+<p>因为很多具体的，也都这样。像有人没有饭吃的问题，没有饭吃就给他吃了，如果要借钱，又不是说每次他借钱，你都答应。因为借钱的性质很多。一个真正困难的人到你面前，有时我们说:“不要说借，这一点就当作我所得的送给你。”免得他有一个负债、挑一个债的负担，负债，也是挑一个重担。</p>
+<p>他要借钱，我们也要问他，你这个借钱是为什么？借来作什么的？因为有些人借钱是要作七作八的，借钱来，就是挑重担。有的人是有病借钱，不只我们要借他，做得到还要帮助他。有的人买房子，差一点，那你能帮助就帮助他，或借给他。</p>
+<p>有的人借钱不是这些，他借钱去搞不正当的事情。有个弟兄，他以前有一些钱，但是他买股票，可是股票降低了，就一直想把这损失的收回来，就去借钱。借钱时，人看他很忠厚，一借借十多万，所借的钱都弄在股票上------是个骗局。他一个钱都收不回来，很多人没有再借给他，而这里有一个看他老实就借他。结果收不回来就找我们了。我们就给他说:“一万几千还好解决，这十多万，谁能拿出来帮忙？怎么办，你要解决。”他哭了，他说:“我听你的话就好。”因每次来交通，就提到“最好不要借钱”。钱存在银行好好的，现在拿出来买股票，又用七折来买------他是贪心，一直的要，就...------他一直在那里哭，哭也来不及了。</p>
+<p>那时我说:“你现在有一个情形，就是你要说:&#x27;我要还这个债。&#x27;你不要说不还，要还。从哪里还起？第一，你的生活要减少开销，借的，有一个还一个。按照你的手中的工作，正正当当去作，求主祝福。”(弗4:28;多3:8，14)</p>
+<p>但这些话，他没有听，现在他破产了。他有这个发财的心，就愈过愈苦，所以现在，他再不能翻身，就是给这个财买去了。并且，他再没有一个地方去讨钱了。这样的人，人没有办法去帮助，困难就摆在那里！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

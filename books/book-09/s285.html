@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十一日</h1><p class="meta">深渊与深渊响应 · 第285/366段</p><p><a class="btn" href="s284.html">上一篇</a><a class="btn" href="s286.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s285.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十一日</h2>
+<p>我们用灵事奉神，用灵作神的工，用灵一起交通。所说的教会就是要用基督的生命，也建造基督的生命。所说的交通就是我们里面的灵与别人的灵有交通。</p>
+<p>如果一个人的灵不和谐，马上就有不和谐；如果灵是和谐的，大家在一起，彼此都会感动，感到很通，彼此都会阿们(林前14:16;16:24;林后1:20;启1:7)。阿们不是乱叫乱喊的，阿们是一个很奥秘的东西(启3:14;5:14;7:12;22:20)。“东西”是对的，大家阿们很自然；“东西”不对，大家阿们不出来。因这个阿们，就是真实，阿们是“真的这样”，是碰到真实的东西(约5:24;6:47“实实在在”\--原文就是“阿们”)。</p>
+<p>所以，讲到基督徒的实际，不是讲行为说的，基督徒的实际就是基督本身，你没有基督本身就没有意义了。好像今天你宴请一个人，主要是请那一个人，其它都是陪伴的。今天他不来了，对着其它的人，你就没有意思。这个人没有来，就变成枯燥的，没意义的。</p>
+<p>讲到我们的家，主要是要有基督，没有基督，就没意义。我们在一个场合中，没有碰到基督，只碰到人，里面就有失落感，没有什么东西了。所以我们里面就是要碰到神，我们的祷告要碰到神，我们的聚会要碰到神，我们读经要碰到神。以前N弟兄说，聚会主要的目的就是要碰到基督、碰到神。你一个聚会碰不到基督，碰不到神，就是空空的去，空空的回来，没有内容的。</p>
+<p>接着很重要的，是要学会使用灵。这使用灵，有时会使用不好。因为在我们除了有灵，我们还有魂，还有体给它(灵)围着，有时没有路出来。没有路出来，就要开路。此外，你也要有生命带出来。生命在里面，灵在里面。生命、灵能够带得出来，我们就必须受打击、受破碎。十字架就作这个工作，今天打击一点，明天再打击一点。一次一次地打击，十字架一次一次地作工，在我们身上就有破口；这破口愈大、愈大，流出来的东西就愈多。所以你不要怕难处。难处是会带出生命、带出祝福的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

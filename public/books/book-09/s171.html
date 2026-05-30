@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十九日</h1><p class="meta">深渊与深渊响应 · 第171/366段</p><p><a class="btn" href="s170.html">上一篇</a><a class="btn" href="s172.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s171.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十九日</h2>
+<p>好象你买东西，你要买到第一手的东西。你如果买到第二手的，东西就贵了，因为每经过一手，别人都要赚一点钱。属灵的东西最宝贵的就是得着第一手的，因为第一手是跟源头挂钩的。如果是第二手，就是间接的，间接的东西常常会走样，会变样。经过我讲，经过你听，转来转去不知道变成什么样，离源头很远。(约1:1;约一1:1;启2:4)</p>
+<p>我们每一个人碰到神，每一个人都是从神得着一手货。我们这个做出去并不是为讲给人听，乃是把他带到神面前，让他碰到神，或他从神得着，这个也是一手货。约翰福音三章十六节是我们最熟悉的，你从神那里得着感动启示，讲出来就是第一手货。你讲出来，好象没有人讲过没有听见过一般，也好象没有人带出来过的，带出来就是新鲜的。你明天再讲这一节，还是第一手货，还是有恩典。</p>
+<p>如果你来，以为我们讲道理，你也不必听道理。因为几十年你都已经讲道理，到这边来交通，如果是讲道理，常常是讲原来那个道理，还是讲那起初原有的道，生命的道。有人讲生命的道，讲到人很讨厌啊，出口入口都是生命、基督，好象很讨厌。但是，你这一个话真是从生命、圣灵来的，虽然是很熟，再听还是新鲜的。“哦，神的爱原来是这样，我以前都没有想过，没有领会过。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

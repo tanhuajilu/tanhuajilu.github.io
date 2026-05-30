@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月五日</h1><p class="meta">深渊与深渊响应 · 第279/366段</p><p><a class="btn" href="s278.html">上一篇</a><a class="btn" href="s280.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s279.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月五日</h2>
+<p>生命也有一种要求生存的定律。那些最苦的人，就是讨饭，他也要去，要来维持他的生命，因为他要生存。所以生命这个东西，它有要求，要求生存。</p>
+<p>我的晒台，水沟里长草，要清理，手伸不到。我想，用开水去烫，草烫了就枯干。烫了，但不久草又长出来，因为根还在里面，我连烫几次，草才死掉。草有一种要求生长的律。生命要生长，植物要求生存，基督的生命也要求生存。</p>
+<p>亚当的生命要求生长，基督的生命也要求生长，在我们里面，就有二个生命在斗争，就是新旧生命在斗争。保罗说:“我所不愿意的恶，我反倒去作，我愿意行的善却作不来，我真是苦呀！谁能救我脱离这取死的身体呢？”(罗7:24)</p>
+<p>这旧生命要生长，所以，我们就要靠着圣灵治死旧生命(肉体)，这一点我们要清楚。我们自己没有对付过旧的生命，就没有办法帮助别人对付。我们自己一下子就发脾气，一直发脾气。小孩子不听话，马上把他绑起来，“你再不听话，我就罚你。”你这个就是没有对付。</p>
+<p>所以，我们自己要先经过一些道路，才会帮助人走上这个道路。问题是怎么去走，我们要知道。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

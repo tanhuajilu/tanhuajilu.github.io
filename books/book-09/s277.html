@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月三日</h1><p class="meta">深渊与深渊响应 · 第277/366段</p><p><a class="btn" href="s276.html">上一篇</a><a class="btn" href="s278.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s277.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月三日</h2>
+<p>主耶稣为了给我们生命，要经过痛苦、疲累、饥饿，经过人生，被鞭打，戴荆棘冠冕，钉十字架的痛苦。有这些身体的痛苦，还不够，他被讥笑，讥笑比鞭打更痛苦。所以殉道者，不只是要死，更是殉道。殉道者要有殉道者的灵，虽然还没有死，却有一个殉道的灵，能忍受各种羞辱、各种精神上的痛苦。精神上的痛苦比身体上的苦还痛苦。死一下子就完了，但精神上的痛苦不给你死，要你今天痛苦，明天痛苦，更难受的。</p>
+<p>像有长期病患的，更是苦，他对医生说:“我早死好了。”精神上的痛苦就是这样。五十年代有一个青年受痛苦说:“如果不是恩典，我早给征服了。”怎么受得了。主耶稣钉十字架怎么痛苦呢？平常我们说:“哎，给人出卖。”给人出卖是怎么的味道呢？你看多苦呢？平常只说一句“给人家出卖”，到你真被人出卖，就更痛苦哩。这痛苦叫你经历一种魂痛苦的情形。</p>
+<p>像主耶稣说，我的魂几乎要死！</p>
+<p>(太26:38)在客西马尼园，撒但全军的攻击也是叫他的魂痛苦。客西马尼那种情形还有天使来加他力量，到钉十字架，主耶稣灵里的痛苦就比魂的痛苦更深。</p>
+<p>主耶稣说:“我的神，我的神，为什么离弃我？”(太27:46)心里的痛苦还有神安慰。神离弃他哩，这痛苦多深刻，是多深的！就是经过神的离弃，把他带到最深的死，他受这痛苦、孤单，经过死里复活才能够满足我们这一个灵里的需要。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月六日</h1><p class="meta">深渊与深渊响应 · 第97/366段</p><p><a class="btn" href="s096.html">上一篇</a><a class="btn" href="s098.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s097.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月六日</h2>
+<p>好多人理解错了，以为安静就是什么都不做。好多人对我们反感，“你们说安静安静，就是要什么都不作。我们都没有看见你们作什么。”我说，是啊，他看不见呀。为什么他看不见？因为没有属灵的眼睛不能看见神的工作。他只有理想，想他那套才是神的工作。他那一套主观的理想，把他的眼睛遮蔽起来，看不见神的工作。</p>
+<p>如果神的工作给你能看见，就有福气，没有看见，就是被漏掉的。主耶稣在地上的时候说:以前好像人要想听你们所听的，要看你们所看的，但是他们没有办法听到，没有办法看到。今天你们有福气，因为你们听见了，看见了。听见了什么呢？听见了主耶稣讲话；看见了什么呢？看见了主耶稣向他们显现。但却很多人没有听见，没有看见。所以主耶稣才说:凡有耳的，就应当听。(启2:7)</p>
+<p>以前很多人说:“我们都有耳朵。这一句话是多余的。”但是你有耳朵，有耳朵却听不见。你摸不到神的生命。所以，如果不是神怜悯，就会像主耶稣说的:“你们听是听见，却不明白，看是看见，却是不懂。”(徒28:25-27;可4:17)给你看，你却看不懂，给你听，你却听不懂。如果神的话出来，你听得懂，你看得到，就有怜悯。这里，有神讲话的一面，也有你反应的一面。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

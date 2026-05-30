@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十八日</h1><p class="meta">深渊与深渊响应 · 第302/366段</p><p><a class="btn" href="s301.html">上一篇</a><a class="btn" href="s303.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s302.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十八日</h2>
+<p>问:人告诉我，灵恩也是有作用的。灵恩对属灵的生命是否还有一点作用？这点该怎么看？</p>
+<p>答:圣经的真理只有一个中心，就是基督。基督是律法的总结(罗10:4)，神的话都集中讲基督(约5:39)。所有的真理都不能离开中心而独立使用，一离开就没有用了。正如一台机器，没有一颗螺丝钉是没有用的，但都要配在机器上来才可以。一个真理如果不与基督连起来也是没有用。受浸与基督要连起来，有基督才有受浸。受浸也是信徒一生要经历的，不只受浸那一次，他的一生就要经历与基督同死，同埋葬，同复活，一直要经历基督复活的大能。</p>
+<p>灵恩运动就是要人经历圣灵，但是问题就在信徒在他的经历之前，很多东西并没有注意。像杯是用以盛饮料的，杯如果是污秽的，如果是有裂隙漏水的，都不能装东西。信徒里面必须是洁净的，是没有缺裂的，圣灵才会充满他。</p>
+<p>从历史来看，十字架总是在先，十字架就是各各他。是先有各各他，才有橄榄山，先有十字架，才有五旬节。主的一生就是受苦和卑微的一生，再后经过了死亡、埋葬。如果只停在此，就没有“基督教”，以后，还有复活、升天、坐宝座、圣灵降下来...整个是有一个过程。我们的经历也必须经历死、埋葬、复活、升天...这些都是在基督里，都没有单独去用的。我们也必须先经历十字架，以后带出复活。至于圣灵，祂是赐与顺服之人的。如果不是顺服的人，求圣灵也不会被充满，可能招致邪灵充满。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

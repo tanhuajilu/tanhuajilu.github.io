@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十七日</h1><p class="meta">深渊与深渊响应 · 第209/366段</p><p><a class="btn" href="s208.html">上一篇</a><a class="btn" href="s210.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s209.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十七日</h2>
+<p>问:有弟兄来交通，谈到某弟兄。我们跟他们交通，有这意思:“是为他急，但要耐心等待；要学习等候，不能快。”</p>
+<p>答:就是说万事互相效力(罗8:28)。因为他有一个特点，他觉得好，带这个来，带那个来。可能所带的人还比他刚强，也不知道。神的工作，不是照我们所想，很多来交通的人的情形已经摸到属灵的东西。他喜欢别人得着，但不够深入，这个要有时间。他要不断交通，自然就不断的蒙恩典。也可以说那么多人来，也是他一个人，他也会受很多为难、反对，这也叫他去摸属灵的东西。他把职位辞掉，把职位辞掉也不简单。有人争执事争得很努力。人是争这一个，他已经有，却不要，也是不简单。就从多方面看问题。</p>
+<p>至于那弟兄，原则总是通过交通，最少他本身起震动，最后倾向属灵的路，且喜欢别人得着交通。这个很好。如果有人不通，又拦阻别人，叫人不要，这就厉害。因拦阻别人，别人要，他就嫉妒。他叫别人来，别人肯走这个路，他会高兴。他能想:今天我带领的人给他交通，这个我做不到，如果找身体交通能够供应他，我也得到帮助。过路的人来，他得帮助，所带的人都带来交通得帮助，这就不简单。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

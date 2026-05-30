@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十二日</h1><p class="meta">深渊与深渊响应 · 第103/366段</p><p><a class="btn" href="s102.html">上一篇</a><a class="btn" href="s104.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s103.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十二日</h2>
+<p>如果孩子不相信母亲说的，给人家说，你是父母捡回来的，或买回来的。单一句，他就烦死了，“到底是母亲生我的，还是她买我的。”他里面就搞不清楚。你讲生的有理由，讲不是生的也有理由，有时讲不是生的理由比生的理由还更大呢，是吗？所以我们对神的关系就是去相信神，“不管如何，神阿，我是你的儿女，你总是要负责的。”你死死的去相信祂，神向着我们所存的意念是赐平安的意念(耶29:11;赛55:7-9)。</p>
+<p>现在，很多人总以为自己懂得圣经。原文也懂，预言也懂。好多的预言说主某年某月要来，都失败了，都没有一个实现，他还在讲。我们从三十年代就听说主耶稣某时再来，四十年代时也说了，现在还没有来。近来也一样，有人说九几年主耶稣要来，最后说九九年要来。九九年也过去了，今年是二零零一年了，现在还没有来。他这已经失败，还讲这东西。这是愚昧。</p>
+<p>有人就说:“那么，你讲主什么时候来呀！”我说:“我哪里知道。”主已经告诉我们:他来，没有人能告诉。你却要预料，要知道。这是不是就越过了圣经的教训？我们要认我们这边不知道，就是不知道。明天怎么样，你也不知道，主几年几月来更不知道。</p>
+<p>所以解释预言的，这些书如果综合起来，会看到他们的矛盾。我们不要把注意力放在那里，我们就准备等候主再来，去爱主。这就是最现实的。</p>
+<p>像一些人提一次得救不是永远得救，你跟他争辩也没有用，由他。你认为一次得救永远得救，就得救，你认为不得救，你信这个，就让你去信吧，反正有得救的也跑不了。你要争这个，让你。求圣灵作工，让他自己去定规吧。不然，这也很花人的力量的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

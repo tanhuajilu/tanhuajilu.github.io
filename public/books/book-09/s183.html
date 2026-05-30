@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月一日</h1><p class="meta">深渊与深渊响应 · 第183/366段</p><p><a class="btn" href="s182.html">上一篇</a><a class="btn" href="s184.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s183.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月一日</h2>
+<p>问:我要问你关于“和谐”。我在菲律宾，主是这样带领我的...好像还找不到和你冲突的地方，你能指出一点吗？</p>
+<p>答:有没有冲突的地方，也有。但这冲突不是在道理上的冲突，乃是在属灵的感觉上的，是属灵的感觉上有不同。有的人，他里面有个不和谐的灵，他就不能敞开自己与人有直接的交通。他里面有一套东西，他要搞通那一套，里面会有一个自己“独立”的东西。生命的东西是倚靠，人的东西是独立，“我不要倚靠，我自己会作。”(倚靠:撒下22:19;诗9:10;37:5;徒14:3;罗11:36;提前6:17)</p>
+<p>有的人，虽然没有讲，他里面有一个跟人家不和谐的灵。很奇妙，他里面深处有一个东西，没有表露。这样的东西、这样的矛盾，我们不怕。一方面，我们够恩典，会把它转过来，如果转不过来，他仍然要单独，有一天他会发觉，他的生命是愈来愈枯干的。就是这个枯干要叫他受不了，要他回头来走这条路。如果路不正确，他走他的，我们走我们的，不会继续交通。这是一个离开生命，或者脱离身体、脱离属灵交通，脱节的情形。脱节了，看你有多大的本事？因属灵上没有路，你一点力量都没有！</p>
+<p>所以，说矛盾就是这里的矛盾。至于道理呢，道理上矛盾，我们不争，我们尊重你所看的，让你保留，让你保留是因为你自己要保留。我们没有勉强你放掉。因为属灵的东西如果是勉强的就没有意义，是要人甘心乐意去仰望神。出于神的，神会印证。</p>
+<p>道理的东西，我们不去争，让他讲，讲完了反而更好。弟兄姊妹觉得:“哦，你这个不对！”他说了，没有和谐，大家都有感觉。因着这个，他会顾虑。他还要自己走他的一条路，他是会枯干的。</p>
+<p>你谈话中提出一些反面的东西，对很多人很有帮助。因为很多人对反面的东西都没有感觉，以为一切都很好，你提一提，大家的眼睛就开始开起来，知道反面的东西是什么。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

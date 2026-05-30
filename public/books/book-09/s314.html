@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月九日</h1><p class="meta">深渊与深渊响应 · 第314/366段</p><p><a class="btn" href="s313.html">上一篇</a><a class="btn" href="s315.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s314.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月九日</h2>
+<p>今天，基督教就是祗有死道理，没有活的话。主要拣选人(林前1:27，28;弗1:4;彼前2:9)的时候，我们也要求主拣选(彼后1:10;帖后2:13)，才不会被漏掉。神的话可以借着人出去，是多荣耀的事，但是在其中，人也要经过痛苦，经历十字架。人有痛苦也是荣耀。因为觉得自己被算为配，能出一些代价，依然拣选主，都是祂的怜悯。</p>
+<p>钱再多也买不到神来用我们，买不到供应人丰富的生命。你求外面的东西，到头来，外面的也没有了，你若求里面的，你里面有，外面也有。我们不是看神外面的那些祝福，乃是看里面的祝福。</p>
+<p>神已作了一定的工作，叫你们有生命的复兴，叫你们可以去供应别人，作生命的运河。但是，以后的学习还多。</p>
+<p>有一点要留意的，就是不要灰心，要有信心。没有信心，就不说，一有信心，要作就作到底。神祝福你向着这条路走去，你会更蒙神的祝福。你们回去，你们的灵被点活，里面就发亮了。你有光，他也有光，合起来，这个光就大。如果许多人是黑暗的，他黑你也黑，黑暗的人聚在一起，还是在黑暗里。</p>
+<p>通过交通，大家认识基督作内容，其它的问题，就让它过去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

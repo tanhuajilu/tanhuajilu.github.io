@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十五日</h1><p class="meta">深渊与深渊响应 · 第25/366段</p><p><a class="btn" href="s024.html">上一篇</a><a class="btn" href="s026.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s025.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月二十五日</h2>
+<p>一个东西不死，就还在这里，要给他治死，治死一次就少一次。十字架的工作在我们身上就作这治死的工作，也就是作减掉、除掉我们旧造的东西。我们在地位上，已经与基督同钉十字架了，在经历上怎样呢？在经历上，就是要借着圣灵来治死肉体的东西。这功课是一辈子的。</p>
+<p>在我们身上，就是有圣灵和肉体的相争这件事，这是加拉太书所说的。肉体的事都是显而易见的。肉体的事包括争竞、嫉妒...等，在圣经都给我们列出清清楚楚(加5:19-21)。至于圣灵所结的果子，也排得很清楚(加5:22-23)。一些从肉体这源头出来的，包括很多东西，一些是从圣灵出来的，也包括很多。所以所结的果子，仁爱、和平...等等，不是你去作，不是你一件一件把它做出来，乃是圣灵在我们身上所结的果子。</p>
+<p>什么树就结什么果子，这是定规的。你既有神的生命在你里面，这生命就结出生命的果子来，这也是定规的。在我们身上有亚当的生命，就结亚当的果子，没有什么希奇的。因为亚当的生命就活出亚当，基督的生命就活出基督。在我们身上，这两个生命并存在我们身上。为此，在我们生活中间，才有矛盾，有争战的这些经历。这些就叫我们经历这事实:一面有肉体的活出来，一面让圣灵活。</p>
+<p>神借着圣灵安排环境(不管什么环境)，都是为叫我们得利益。在过程中，我们不懂得有什么利益，但是每一次的管治，或说每一次神的打击，每一次神做破碎的工作在我们身上，都叫我们得着利益。这一边有打击、有十字架的工作，必然的，在另一边就增加属灵的东西。按着比例，你在此学习多少，那边就显明多少。</p>
+<p>十字架的口号是“除掉他，除掉他”，等到十字架的工作完成，主就喊说:“成了”。神的工作在基督里成了，再加上我们的信心也说“成了”，就成了主观在我们身上的经历。我们有客观的一面，这一面神在基督里已经做好，但在我们主观方面，却才经历了一点点，还有很多仍未经历，等着去经历。客观上，你接受神所有的工作，把它接受过来，主观上，你接受圣灵借着环境管治我们，叫我们经历客观所讲的东西。因为圣灵的工作是一面把客观的真理来启示来感动你，叫你相信，一面圣灵又把神客观的工作(也是主的工作)完成在你身上。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

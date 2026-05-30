@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十日</h1><p class="meta">深渊与深渊响应 · 第223/366段</p><p><a class="btn" href="s222.html">上一篇</a><a class="btn" href="s224.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s223.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十日</h2>
+<p>谈到某弟兄，因弟兄的个性很强，你不小心都会受伤，一句话就给他顶出来。我们就对待这样的情形，他一直来。有时，弟兄姊妹请他来，他一直来，在聚会的场合，他对这个圣灵的东西没有反感。我们也把一些初信的，差不多都介绍过去，去找他。他就发现，凡我们介绍的这些弟兄姊妹，里面都是很清楚的。他会交通，他作下去会和谐一致，不会唱反调。</p>
+<p>这几年来，他都在交通中，和弟兄姊妹会和谐。他里面这个通了。后来他到外面去，就觉得这边很宝贝。在外面，苦到要死，没有一个能找到交通。他巴不得回来。他说，在这里很轻松，在那边很苦。</p>
+<p>弟兄在那边(国外)，大家碰在一起，都在辩。他说:“灵跟魂要分开。”那些人却说:“那里有分开？”他问:这怎么说？那位弟兄把《人的破碎与灵的出来》这本书，一直作注解(作他自己的解说)，这句话怎样，那句话怎样。我听了，我就说:“你不如另写一本书，你不要把这本书乱改乱讲。你有本事，可以写一本比这本更好的。你不用辩(解说)，人家会跟从你。”</p>
+<p>在那里，一个聚会七百多人，三十个负责人，一个人一样的，这已经分化、已经瓦解，哪里还有属灵的东西？我们的弟兄在那边，出来讲话，人家不接受，还跟他辩，多没意义。我劝他说:“不要紧，保持耐心。能够得着个别的，就从个别开始。他那几百人也是糊里糊涂的，让它去乱，我们不要乱在那里。神如果作工，那就会有起头了。”(林后4:1-2，5)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

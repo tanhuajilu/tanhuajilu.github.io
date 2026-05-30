@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十二日</h1><p class="meta">深渊与深渊响应 · 第72/366段</p><p><a class="btn" href="s071.html">上一篇</a><a class="btn" href="s073.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s072.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十二日</h2>
+<p>劳伦斯说，他在厨房里作工事奉神，跟他在记念主的聚会中事奉神是一样的，他同样敬拜神，与神有交通。所以我们所得神这荣耀的生命是太荣耀了，藉此，我们可以一直在这里跟神交通。</p>
+<p>你在车上可以跟神交通，不管你在何种情形，随时随地，都可以跟神交通，因神是无限的。神就是灵(约4:24，罗1:9;7:6;林前3:16)，无所不透，这一点你要认定。</p>
+<p>你到一个地方，去也空，回来也空，为什么呢？因为你灵里的要求是跟神交通的，你在那里碰不到神。即使他们在那里传一些认为是神的道理，还是有名无实的。这像请客，客人来了很多，如果没有东西给人吃，就是空的。那地方没有东西给你，你就是空空去，空空回来。人家去为要吃东西，你走进去没有吃的，走出来时，感觉更空，更感饥饿。去是为要得饱足，不饱就只会增加饥饿的痛苦。但你真要寻求神，神就给你寻到，因为神是监察人心的。</p>
+<p>你的心如何，自己也不知道，但神知道，你只有将心归向神。因圣经说:“我儿，要将你的心归我。”(箴23:26)神要我们的心归祂。你向着祂，那就像你所说，神会满足你，叫你里面充实。</p>
+<p>你们有假期，环境许可，可约弟兄姊妹交通。</p>
+<p>有些人很有爱心，但是有一天你会发现，人的爱心是有限的。很多人为着他自己的意见看法，要得到人跟他一样，从这里就有一个爱心出来，他们用这个来吸引人。但是，一些人慢慢就会看到:这样的人的爱心很可怕。这一些人看到这个，他们是有进步了。</p>
+<p>(2月17日-3月12日，选自2001年1月25日下午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

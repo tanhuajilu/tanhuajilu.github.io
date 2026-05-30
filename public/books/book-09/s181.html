@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十九日</h1><p class="meta">深渊与深渊响应 · 第181/366段</p><p><a class="btn" href="s180.html">上一篇</a><a class="btn" href="s182.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s181.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十九日</h2>
+<p>我们要去观察。有时候我们观察别人，会知道他们的态度，会感觉到这个人打通了还是没有打通。没有人告诉你通不通，但是你这个灵会感应，知道他是通的或是不通。</p>
+<p>你在那一带地方责任很大，因为神对你有托付。自然，以后还有更多的人找你交通。我们巴不得神在各个地方都有这样的人兴起来，不然，你们跑到这里来很辛苦的。神在各地方都有这样的人，多荣耀的！神不偏待人(徒10:34;罗2:11;弗6:9;西3:25;彼前1:17)。你们都希望有人来，其实好多弟兄比我更认识主，我们可以去找他交通，因为神要恩待谁就恩待谁，不是我们包下的。</p>
+<p>如果是我们包的，我们就会塌下去，就没有了。所以弟兄姊妹们在各个地方共同追求的时候，就是要学习不嫉妒。嫉妒在教会中也是个很大的难处。大家一同追求，总不服气，一同追求，就想“我要比你好，比你属灵。”这样，问题就出来。</p>
+<p>大家都要看别人比自己强。如果神让他比你进步，你要感谢。你比他进步也感谢神，你比他进步，你还要带他。他比你进步，你要让他来帮助你们。这样的态度蒙神祝福。因为神赐恩给谦卑的人，抵挡骄傲的人。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

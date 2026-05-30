@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月五日</h1><p class="meta">深渊与深渊响应 · 第187/366段</p><p><a class="btn" href="s186.html">上一篇</a><a class="btn" href="s188.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s187.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月五日</h2>
+<p>某省来交通的人也很多。十多个县聚会，人数是有上千上万的。一讲起来同工是几百人的，来交通的，零零碎碎，个别的来，差不多一百多人。整个属灵的工作都有转机，这不是我们去作的。(林前15:58;16:16;林后6:1;腓1:6;2:25)他们有人要请我们去，我们觉得那是神的工作，你去，他们看你是老弟兄，都依赖你了，就不会进步。倒是我们不去，他们就进步。</p>
+<p>那一次，有人要请我们几位到某某地方。我说，我们不去，因为去也不能解决问题。去作一点，回来还是可以的，如果当地弟兄姊妹起来，就比外地的去还好。(来6:10;)只要让弟兄姊妹们去追求就有进步。</p>
+<p>所以，我们这里的弟兄姊妹并不是怎样聚会栽培。平常，我都没有参加他们的聚会交通，是等有外面客人来交通，我才来参加。因为我在这里参加，也是在靠我一个人。在这里他们不讲，我没有在，他们就讲，比较有胆量去讲。我摆在这里，他们不好意思讲。而我跟他们谈起来，就觉得他们进步。隔开一个时间，彼此再接触，你就发现进步了。好多人来交通，每次都有进步。这进步不是能讲道理，乃是他属灵的分量踏实、进步，就是属灵这东西才叫人得到满足。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

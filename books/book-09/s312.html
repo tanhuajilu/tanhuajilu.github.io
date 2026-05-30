@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月七日</h1><p class="meta">深渊与深渊响应 · 第312/366段</p><p><a class="btn" href="s311.html">上一篇</a><a class="btn" href="s313.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s312.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月七日</h2>
+<p>七九年《基督囚徒的一封信》写下了来，到今已经二十一年，信里所讲的，今天看来，更是清楚。那时我们写着:“余下的日子，我们当走的路还远，凭着我们以往所学习所认识的，是不够应付我们自己与教会以及工作的需要，当我们看到神儿女属灵的贫乏，众多迷羊失丧，广大工场零落，这一切的需要摆在我们面前的时候，就要更感到我们自己是多么的贫穷，没有什么可以给人，这怎能不叫我们向主呼吁:主啊，怜悯(罗9:16;林后4:1;犹21;路1:50;可5:19)。”就是说:根据今天属灵的情形，我们不够应付所需。</p>
+<p>在今天，生命是名词，爱心是个道理，讲合一也叫人摸不到。人不靠着圣灵都变作没有用。但是圣灵在作工，初信的人得救，一年、二年就胜过以往追求二十年，三十年的人，这就是圣灵给人生命、能力，在人身上作的工作。圣灵作了工，人才有变化，有力量，有进步。这像种子一样，种下去就长。若不是生命的东西就不会长(可4:28)。</p>
+<p>盼望神怜悯，虽然是少数的人，这少数的人摸到生命，复兴就带进来。宾路易师母关于复兴的意义，所说的话是确实的:“神的灵能借着人的灵出来，复兴就带出来了！”因为神祗有一条复兴的路，就是借着灵带出来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

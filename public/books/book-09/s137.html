@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十六日</h1><p class="meta">深渊与深渊响应 · 第137/366段</p><p><a class="btn" href="s136.html">上一篇</a><a class="btn" href="s138.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s137.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十六日</h2>
+<p>有钱人拿几个钱奉献，他的心不痛，好象碰到街上讨饭的拿几块钱给他一样。今天人对神，一般也好像这样，就拿一点给神算了。这不是敬畏神。所以，不是你拿钱财出来就算，其实，这个钱代表你的心，代表了你的意。我们奉献给神，不是拿几个钱帮助穷人。因为贫穷的我们可怜他，还要有一个可怜的心去给他，你给神就不是用这个心情。</p>
+<p>神是可敬畏的，你的奉献是他要收！他收就是你的光荣，他不收，那你就会苦死啦。如果那是不值得的，神不收你的钱。神不要你的，就不会喜欢你啦。所以我们奉献给神，神肯收纳是一个荣耀的事。今天，不是要看外面的，是要看你里面的主。</p>
+<p>如果按照外面所讲，你要读博士，你会传道；你有钱财大发热心事奉主。你要这样才事奉神，那么彼得就不能事奉主了，因为彼得是没有学问的小民。如果在今天，彼得要传道，人家不会给他传呢，“你没有神学博士学位，这个礼拜堂没有你的份。”那么，彼得什么也没有呀。他只有神。一个蒙恩典的人，他能说:“金银我都没有，只把我所有的给你。我奉拿撒勒人耶稣基督的名叫你起来行走。”(徒3:6)这一个，金钱还买不到！能够叫瘸子起来走，这个就是属灵的能力，属灵的恩典。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

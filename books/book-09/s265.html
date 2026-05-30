@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十一日</h1><p class="meta">深渊与深渊响应 · 第265/366段</p><p><a class="btn" href="s264.html">上一篇</a><a class="btn" href="s266.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s265.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十一日</h2>
+<p>答:你就把自己奉献给主(罗6:13，16，19;12:1林后8:5)了？(应:没有。)这个奉献给主是每一个人的。不是说叫你奉献给主作传道，是奉献给主事奉主。一个人有奉献给主就有转折，因奉献归主，主就负责。不奉献，好多事情，我们自己负责。奉献给主，主负责！所以我们得救是得着主，奉献给主是主得着我们。</p>
+<p>主没有勉强我们奉献给他，我们奉献归他，他就作工。如果我们没有奉献给主，还是我们的，主就在那里等候。当你奉献，主就作工，因为奉献就是交出主权，把自己完全交在主手里，神就在你身上有工作。你现在在主面前要有一个奉献，“主，我将全人，我一生的时间，我的前途都交在你手里。”主接受，他负责，你一生都在他手中。</p>
+<p>讲完了吗？你再讲。带着我们的刚硬到主面前去！也奉献给主。当前，我们的心若没有刚硬，时间不知道还有多久？因为你只要到主面前奉献给主，你就是带本相，带自己的情形来交给主，才有办法。你只有奉献给他，他就能显明他的工作。</p>
+<p>你就是预备奉献，不只要来信主，进一步就是奉献给主。你说主耶稣来了，会不会不顾我？你可以打消这个顾虑，主耶稣不会不要你。因他的话说，凡到他面前的人，他不丢弃他。是我们人不要耶稣，主耶稣不会不要我们。因为他从天上来到地上，就是要救人，要得着我们。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

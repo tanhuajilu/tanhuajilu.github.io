@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十六日</h1><p class="meta">深渊与深渊响应 · 第351/366段</p><p><a class="btn" href="s350.html">上一篇</a><a class="btn" href="s352.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s351.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十六日</h2>
+<p>以上讲了“道路”，至于“真理”怎样？</p>
+<p>以前我们读了很多家学──什么家，什么家，每一家都说自己的理论最好，大家都说他们所发现的理论是放诸四海而皆准。可是，要用的时候，都用不上。讲时不变，用时就变。经过这么多年，我们对这些都失望了，对所谓的“真理”也灰心了。直到后来，我们找到主基督，活在祂里面，才确定下来，祂在我们里面才是不动摇的真理。自己感觉到，我们年青时候的思想是太复杂了。</p>
+<p>现在谈主就是“生命”这一点。</p>
+<p>我小的时候想，一个人几十年就死，算能活一百年吧，长寿的年岁和神无限来相比也不过是在无限线上的一点吧。对主来说，祂的生命是永生，永世才能和它相连结。我们即使活一万年相比这个永生的生命，也不过短暂的一秒吧。</p>
+<p>亚当在伊甸园里吃了善恶知识树的果子，神说:“你吃的日子必定死。”为何这样说？因为他和神这位造物主断了关系，和神断了就是死。</p>
+<p>新约使徒行传记载，当司提反被人用石头打死时，不是悲悲惨惨地哀求，乃是面对更辉煌的生命，他所得的生命是更有价值的。他“看见神的荣耀，又看见耶稣站在神的右边”，我相信他的脸就像发光一样的。</p>
+<p>人生最大的不幸，最悲惨的事，就是这三件事:走投无路、一切落空，最终死亡。没有生命就是最惨的。哦！何等的丰盛，主就是一切，主就是道路、真理、生命...。</p>
+<p>在伯大尼，马利亚已经选上那上好的福份，她已得到主耶稣自己，得了这个，就再没有人能夺去了(路10:42)。一生几十年来，我走了许多弯路，神把我一切的努力都打岔没有了。但所经过的日子，却稍为给我看见:主就是我们一切的一切，谈起主是道路、真理、生命，我就稍为交通这一点点。</p>
+<p>祷告:亲爱的主耶稣，我们感谢你！你是何等的荣耀，借着这个交通，你向我们显明了，我们敬拜你，荣耀都归给你。</p>
+<p>你安排了这次的机会给我们，求你祝福弟兄姊妹，叫他们对你的道路看得更清楚，对你的认识愈过愈深。前面的道路，我们各人都在你的手中，求你记念我们，不要忘记我们，也拯救我们脱离一切的凶恶、试探和网罗，保守我们直到见你的面。主啊，我们在此一同仰望那一天永远在你的宝座前一同向你敬拜；那时我们将每一个时刻都能与你相亲，得以靠在你的怀里。</p>
+<p>明天还有的交通的时间交托给你，你亲自带领我们，把恩典赐给我们。祷告奉主耶稣基督的名，阿门!</p>
+<p>(12月10-16日，选自2000年7月26日晚上交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

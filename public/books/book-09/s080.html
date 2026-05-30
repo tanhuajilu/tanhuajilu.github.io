@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十日</h1><p class="meta">深渊与深渊响应 · 第80/366段</p><p><a class="btn" href="s079.html">上一篇</a><a class="btn" href="s081.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s080.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十日</h2>
+<p>在这里单我一个人，光很有限，但加上弟兄们和我一起，光就更亮。这几次我们交通，X弟兄也讲话，无形中，这光就“光再加上光”。莫名其妙，教会奥秘的东西就在这里，这东西，讲道讲不出来。我们虽然交通，有弟兄再讲，如果有学习的，他讲不会离题，他一讲就跟着圣灵已经作的跟上去，让所讲的再带高一点，这一来，人就得到属灵的丰富。</p>
+<p>我们说，弟兄们在这边是很有福气，有什么福气？有外面弟兄姊妹来，叫我们从里面得着供应。这是事实，连我本身也从里面得到供应。有些人说:“你天天都要讲话，你累不累？”实际会累，但是在聚会中，大家在一起，无形中个人疲倦就没有了，恩典还是在我身上，照样扶持我，托住我。</p>
+<p>如果自己以为我会作工，里面不响应，不阿们，脸长长的，我要讲的也讲不出去，因这是彼此互相的关系。若不同心就自己拆掉，教会同心，就是要让祝福在我们中间，不会漏掉。不同心，这漏洞一来，什么都没有。圣灵的工作在我们里面出来，大家灵里会和谐的，和谐就是同心合意。(诗133篇)</p>
+<p>同心合意并不是提出个口号要怎么同心。不是！你会喊同心，反而愈不同心。同心就是基督给人摸到，大家都以基督耶稣的心为心(腓2:5)，你的心是基督的心，我的心也是基督的心。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

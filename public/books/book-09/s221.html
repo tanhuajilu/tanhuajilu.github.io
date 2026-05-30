@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月八日</h1><p class="meta">深渊与深渊响应 · 第221/366段</p><p><a class="btn" href="s220.html">上一篇</a><a class="btn" href="s222.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s221.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月八日</h2>
+<p>因为现在国内外，已经显明一个情形，就是属灵的东西、属灵的实质，人摸不着，只有个壳子，情形已经塌下去。有这么多的情形，不只个别地方有相反的这一面，各地方都有这情形。他们一交通回去，就产生同样的看法，人就以为我们走错。</p>
+<p>他说异端，根据什么呢？又是没有根据。他们就根据:“与我们过去领受的不一样。”其实不是不一样，还是一样，而是他们里面的东西漏掉，只摸到外面的，所以不一样。我们说，要聚会也不是不对，对！要擘饼记念主，要聚会。但是实际的情形差很远。像某地的弟兄讲的，他讲到流眼泪，说:“还是热心，还是聚会，还是擘饼，现在这饼要放又不能放，要维持也不能维持。”是这样，这样去维持擘饼有什么属灵的价值？是个重担。</p>
+<p>你都不知道这擘饼的责任多大，这是代表基督的见证(徒2:42;46;太26:26-30;林前11:17-34)，你要负责任的。到这样乱做乱套，什么都套上，那么谁来负责？就是你要负责，好坏你都要负责。不是开玩笑，三个二个来擘饼。有的人甚至在那里说:“我们姊妹二、三个人，就有主在我们中间。我们二、三个人来擘饼，代表主的身体，来作这个见证。”讲得很好听，实际都没有想过，你三个人怎么代表教会？而且还是姊妹，怎么代表教会？</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

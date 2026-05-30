@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月三十日</h1><p class="meta">深渊与深渊响应 · 第274/366段</p><p><a class="btn" href="s273.html">上一篇</a><a class="btn" href="s275.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s274.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月三十日</h2>
+<p>今天所说的教会，里面的成分很复杂。起初，发明化学布料，做衣服，大家都要用它，现在大家却都要纯棉的。我们有一个亲戚，身上一直痒，一直抓，痒得很难受。看医生看很多次，涂药膏涂了好多，都不见好。有一天，医生忽然问:“你有没有穿化学原料做的衣服？”他说:“有”。医生说:“你不能穿，因你这皮肤对化学布料敏感。”他不穿，就穿纯棉的，不用吃药就好，不痒了。</p>
+<p>因有杂质、有化学的东西，一过敏就不能用。属灵的东西有了混合品也不行。这些都会破坏属灵的，你怎么搞也搞不好。所以需要纯净，不能混合。</p>
+<p>祭司在圣所事奉神，不能穿细麻混羊毛的衣服，要穿纯细麻的(出39:27)，因为羊毛掺进去会叫祭司出汗，穿细麻才轻松凉快。穿了羊毛混的衣服会出汗，出汗就是受咒诅的记号。所以，在神面前，神要基督作我们的义(林前1:30)，基督是我们细麻布的衣服。人的东西、肉体的东西都不能带进教会来。教会是纯洁的，所以圣经才称信徒为童女，童女就是纯净的。圣经也称为教会为新妇，新妇的要求就是纯洁的。这是说在神面前，我们要纯洁，好像童女，也是新妇。</p>
+<p>在人这一方面呢，我们好像寡妇，什么人都要欺负你，看你不起。所以在属灵方面，我们要愈单纯愈好，但在人这一面，人对这一个就看不见、不重视。因为人总以为愈多做愈好，人看不见属灵的价值在哪里。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

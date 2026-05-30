@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十一日</h1><p class="meta">深渊与深渊响应 · 第234/366段</p><p><a class="btn" href="s233.html">上一篇</a><a class="btn" href="s235.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s234.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十一日</h2>
+<p>圣经说，求主给我们智慧，懂得怎样数算自己的日子(诗90:12-14)。我们的日子有时还要计算一下，不然，也会忘记:“我们快要过去了”。一计算起来，里面就有一个紧迫感，啊，那么多日子过去了。“什么时候主叫我们去呢？”面对这个，我们不能说，我“没有空”去。要去就要去，哪里有办法等你准备好？这个，当然我们要敬畏主啦。一下子，一年一岁，年日一直加，年日很快就过去。</p>
+<p>好多年青弟兄姊妹问起几岁，答说:“二十几岁，还没有结婚。”年青对前途还有要求。但是，一下子，他结婚了，接着，小孩子又长大了。那一天，有一个弟兄到我家，他说儿子到美国去，现在儿子念初中了。不久之时，我们才在鼓浪屿，我们为他儿子作勉励。现在，儿子已经念初中，当日的情景，就好像在昨天一样！</p>
+<p>所以，要求主给我们有智慧，会数算自己的日子。要求主给我们智慧，来知道我们有个结局。世界快要过去了，如果不认识主，不认识主作至宝，不认识世界是空的，我们还会说“还活着，这也是我的，那也是我的”。有一位老弟兄告诉我，年青的时候，人就是会两只手一直抓，一直要。到了老的时候，就一直放手一直放手。以后到死，东西放在手里也拿不住了。</p>
+<p>所以到死的时候，人所控制的就要“撒手”。什么都过去。活着，什么都有用，死了什么都没有用。所以讲到虚空，是有客观的虚空。你想，这些东西都看得见，活着的时候就是宝贝，到了一天，我们完了，这些外面的什么都是空的。这就是外面的虚空。所以传道书说，虚空虚空，凡事都是虚空，外面看得见的都是虚空！(传1:2)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

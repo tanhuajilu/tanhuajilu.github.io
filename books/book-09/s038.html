@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月七日</h1><p class="meta">深渊与深渊响应 · 第38/366段</p><p><a class="btn" href="s037.html">上一篇</a><a class="btn" href="s039.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s038.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月七日</h2>
+<p>我们祷告，是祷告主为我们作什么，有一个目标。像哈拿祷告，有一个中心，就是她没有儿子，所受压力很大，人轻看她；她在神面前，圣经说她倾心吐意把里面倾倒出来，把意思倾吐在神面前，要神记念她。以利看她嘴巴在念，就说:“你要醉到什么时候？”她说:“不是，我是在神前倾心吐意，向神求。”以利说:“神听了你祷告，回去吧。”她就相信，回去就怀孕。所以，祷告是向神倾心吐意(撒上1:15;诗62:8)，把你最需要的告诉神，这才接触到实际。</p>
+<p>祷告要先求神的国和神的义(太6:33)。什么叫作神的义，就是神认为对的事。不义就是不对，义就是对。什么叫“神的国”，就是神掌权的范围。求神的国，为要叫我们学习顺服神，因神有祂的权柄，我们要顺服祂。</p>
+<p>所以我们在神的路上，就是顺服神，顺服祂的权柄。我们在属灵的路上，要寻求神所喜悦的，神所以为对的，或寻求祂的所是。神不问我们作多少，神问我们里面所是跟神所是的一样不一样，这是在实际上去追求祂的国和祂的义。你活在神的权柄里，活在祂所认为的所是里，你一切的需要，神都给你，因你要神所是，神就赐与你所需要的。</p>
+<p>你提到神国和天国。神的国包括很大，从永远到永远，都包在神国里。至于天国，指千年国度。神预备给信的人和主耶稣一同掌权作王，这是天国。分别就在，宇宙万有都在神掌权之下，称为神的国。天国是这时代过后，另一个要来的国度，称为天国的时期，天国要实现在地上。那时，圣经说:“世上的国成了我主基督的国”，就是说在国度里基督作王，我们也要和他一同作王，这是基督徒所得着的赏赐。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

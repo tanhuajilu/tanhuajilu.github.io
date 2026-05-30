@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十七日</h1><p class="meta">深渊与深渊响应 · 第322/366段</p><p><a class="btn" href="s321.html">上一篇</a><a class="btn" href="s323.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s322.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十七日</h2>
+<p>鼓岭的交通至今五十多年了，人不进步，所听的东西也不能带你进步。属灵的长进就是要有实际的东西在你里面叫你刚强起来。同样的皮袋，何以一个倒下，一个立起来？对换位置能改变吗？还是不能改变。为什么还是你倒下而我站立？因为里面有内容，我里面装满才能站立。</p>
+<p>就是你有内容，有属灵的份量，里面的浓度还要再浓。属灵是有浓度的，像泡茶要泡出浓香。不然，没有一个人会受你的影响。浓度不够，泡一杯供应一个人还可以，要供应几百人，就“泡破”了。讲道的人属灵的浓度如果不够，向几百人讲道，人家就只能听到他的声音，里面的内容就得不着。</p>
+<p>谈到今日的情形，特会年年有，都没有带出什么属灵的影响来。就是浓度不够，欠缺生命的内容。如果神的儿女能做实际的工作，都由自己开始，一个影响一个，一个得着一个，五年、十年下来实实在在的有点内容，属灵的情形才不一样。</p>
+<p>当初以色列人就是有属灵的影响，还未到耶利哥，耶利哥的人就已经害怕，紧紧地把城门关上。祭司抬着约柜，领着以色列人，把城绕一绕，共绕了七次，神作工，城就倒了(书6:15-20)。</p>
+<p>你要认识神，你就会经历神。圣经说，敬畏神的人必得平安。我们可以从经历中、从启示上去认识神。神是认识不完的。</p>
+<p>我们在这里就是事奉神。但是，不能把事奉神当作企业、事业般去做。这样做，只会成为宗教的企业，并不是事奉神。我们事奉神是卑微地事奉神，很多人把这个当作职业去做，去赚饭吃，我们不做这个事。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

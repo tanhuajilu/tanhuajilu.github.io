@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十九日</h1><p class="meta">深渊与深渊响应 · 第242/366段</p><p><a class="btn" href="s241.html">上一篇</a><a class="btn" href="s243.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s242.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十九日</h2>
+<p>我想路德马丁恢复因信称义，在当时是最突出的。当时在天主教里，人要得救，要向神甫认罪(告解)，要买赎罪券，以为要这样，人的罪才得救赎。那时，路德马丁指出:这是异端，不合乎神圣经的原则。他看到圣经里的原则是因信称义(罗4:11;5:1;加3:8;3:24)。</p>
+<p>这个“因信称义”讲出来，有人赞成，有人反对。为着这个，他受反对，他受审判，坐过监牢。每一次，一个真理出来，总是有牺牲，有代价。到现在，“因信称义”已经很普遍了，我们听了也没有觉得什么希奇，但在当时是个大事。以后英国弟兄们出来，讲出好多真理，很多是过去没有讲的，因过去很多真理都埋没了。他们把真理一个一个再发现。</p>
+<p>二十年代，又有N弟兄等，把救恩在中国清楚地传开，又把教会的问题明白地摆出来，就把教会的定义、教会的内容，释放出来(身体\--林前10:16-17;11:24-29;12:13;弗1:23;新人\--弗2:15;4:24;西3:10)。N弟兄服事最大的特点就是《属灵人》这一本书，讲到圣灵在人里面的工作。没有这个内容，教会就不过是个壳子。一直到今天，教会的恢复就集中在这条生命的线上。这一个，其实老早就有，像莫林诺、慕安德烈、盖恩夫人等已经在讲。虽然盖恩夫人当时是在天主教里，但她带出这生命实在是供应人的。最主要就是叫人碰到神这个生命。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月八日</h1><p class="meta">深渊与深渊响应 · 第190/366段</p><p><a class="btn" href="s189.html">上一篇</a><a class="btn" href="s191.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s190.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月八日</h2>
+<p>这些在慕安德烈《基督的灵》里讲得很清楚。你传福音，讲基督的爱，要有爱的感觉才会把人感动。你讲罪，有罪的感觉，才会叫人知道罪。你讲谦卑，有谦卑的灵，才叫人摸到谦卑的东西。你讲什么，就要有那个东西。这一个，若不是圣灵活泼的工作，讲完也就过去了。这工作虽然很难，也很难学到去作。你若是打通了，就很容易。打不通，只有挑重担，得不到属灵的果子。因为道路通了，圣灵的能力要覆庇你，叫你的灵刚强(弗3:16;提后1:7;来11:34;约一2:14)，叫你心思、感情也健康。</p>
+<p>你思想软弱，话出去就软弱，思想散漫，话出去也散漫。但你思想集中，如圣经说用真理束腰(弗6:14;1:13;4:24)，有约束就有能力。像水流，潺潺流水没有能力，如果把水集中，就有能力，有冲击力。我们的思想、感情，要被对付到可集中，专一跟灵同工。思想一用，就有能力，冲击到人里面去。所以这功课年青人是要学的。</p>
+<p>这些真理，我们也是三十几岁才碰到。虽然碰到，也是模模糊糊，只看道理。到经历里，自己也是糊里糊涂。到底是怎样？今天经过这个困难，明天经过这个困难...这些连到诗篇上说，就好像约拿已经到鱼肚子里，暗摸摸的，在那里已经糊里糊涂，因为热度很高，鱼吃下的海草很多，这海草把“我”缠得全身很为难的。这环境是最黑暗的。但究竟是神的工作，有一天，大鱼把约拿吐在滩上，就在光天化日中了。所以就因这个“复活”，约拿去传福音，叫全城的百姓，披麻蒙灰，认罪悔改。基督复活的能力就是这样！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

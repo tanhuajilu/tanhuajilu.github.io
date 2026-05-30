@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月十六日</h1><p class="meta">深渊与深渊响应 · 第229/366段</p><p><a class="btn" href="s228.html">上一篇</a><a class="btn" href="s230.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s229.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月十六日</h2>
+<p>讲到生活，有属灵的生活，也有做人的生活，如果搭在一起，会有很多矛盾。你有属灵的生命，就有属灵的生活，有人的生命，就有人的生活。生命各有他的性情，各有他的生活。属灵的生命有属灵的生活，因你的生命是从灵生，就是灵。从肉体生就是肉身。你本来是从父母生的，从亚当生的，亚当的生命就有人的生活。这些人的生活，也不是人叫他这样的，自然而然，他是人，就活出人的样子。</p>
+<p>好像农村有人养猪，有人养羊。猪有猪的生活，羊有羊的生活，因它们的生命不一样。猪有猪的生命，叫猪有羊的生活，它过不来，叫羊过猪的生活，也过不来，因为生命不一样。鱼在水里，因鱼有鱼的生命，它在水里活得自然。鸟的生命飞在空中，在空中飞很自然。不要把鸟的生命跟鱼的生命套在一起。换一个环境，它就不能活了。</p>
+<p>那么我们信主耶稣得着什么？信主耶稣不是作好、行好，不是改良自己。我们信主耶稣是主的生命加在我们身上。(约3:16)</p>
+<p>我们从人出生的生命还存在，我们是人，有人的生命，很自然过人的生活，对人的东西很晓得。你也是人，我也是人，你感觉什么，我也感觉什么，因这是人的这一层。现在我们信主耶稣，主在我们里面。主在你里面，就是主耶稣所讲的“你们必须重生”。(约3:7)主进到我们里面来，我们就得重生。有了这重生的生命，就有多一个生命进到里面来，我们就多一个感觉。这感觉跟以前没有信主以前的感觉是不一样的。</p>
+<p>重生的生命的感觉显明在那里？显明在你跟神的关系上。你有神的生命，对神才有感情，没有神的生命，神对你不过是一句话，或是一个名词而已，你与主没有关系。你重生了，你对神就有感觉。一个没有信耶稣的人，提到主，他就忿怒，提到神就反感。等到信了主耶稣，一提到神，他心里会有感觉:“神就在我里面，神就是我的父。”就有这感觉。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

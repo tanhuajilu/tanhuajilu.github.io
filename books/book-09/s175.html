@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十三日</h1><p class="meta">深渊与深渊响应 · 第175/366段</p><p><a class="btn" href="s174.html">上一篇</a><a class="btn" href="s176.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s175.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十三日</h2>
+<p>你里面若对神有认识，你就认识这些是神的话，而且认识神的话是神的本身，因为神的话代表神的本身。话是代表人里面的心意的。神的话不论在圣经上，不论在我们身上感动我们，都是把祂的心意向我们显明。所以我们多亲近神，就多摸到神的心意，得到神对我们说的话。</p>
+<p>我们里面经历了，有神的话，当讲话的时候，里面就有神的话出来，里面有话，外面有话，神这个话语出来就丰富了。但是，有的时候你里面有话，却不知从哪里说起，不知道要怎么样讲，因此我们需要学习，我们的灵要冲出来。我们的灵没有冲出来，自己会关死在里面。我们先冲破自己这一层，也会冲破别人的，没有冲破而讲出来的话是没有力量的。叫我们冲破自己出来的，就是灵，而破碎的紧要就在这里，我们借着这个破碎就能够把灵带出来。</p>
+<p>有的时候，灵要冲出来，就是它要突破。我们常说要突破，突破就是灵出来。能够冲破你自己，你就能够冲破别人。因为别人也是跟我们一样的，他们里面也是有一些阻碍与隔膜，当我们冲破自己的隔膜的同时，也会把对方的隔膜冲破。隔膜冲破了，话就讲得进去。</p>
+<p>本来，别人里面这无形的阻隔，我们怎么样讲也冲不进去，但从里面出来的，这个话有穿透力，就穿透到人灵里面去。这个穿透力不是我们口才、智慧，这个穿透力乃是神的大能，借着人的灵出去，也就是圣灵的工作借着人的灵出去。(林前2:1-5)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

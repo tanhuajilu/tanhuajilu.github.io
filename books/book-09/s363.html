@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十八日</h1><p class="meta">深渊与深渊响应 · 第363/366段</p><p><a class="btn" href="s362.html">上一篇</a><a class="btn" href="s364.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s363.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十八日</h2>
+<p>如果我们表示是跟别人一样的，他们都会欢迎我们，但是，我们总是要认定神的道路。现在，你们那方面还是要回到神的面前，要静下来，神会带领你们。你们能在神面前多考虑，时候一到﹝到比较成熟、稳当的时候﹞，神就有新的带领。</p>
+<p>你们的路要怎么走，这问题迟早是要清楚的。问题、矛盾仍是会一直存在。前面一步，就是要有进步。我们自己不进步，问题不能解决，问题先在自己身上解决，再一步才能解决到别人身上去。</p>
+<p>某地的弟兄，七、八年前已经说要离开那个组织，但是，还要等他成熟了，才有力量去面对这问题。这次他们来交通，我就问他的工资有多少，他说有二万块钱。他能够放得下，也是不简单，因为金钱也是很实际的。他对神有信心，神就会作。</p>
+<p>在以往，五十年代以前，我们有五百多人同工，带职业的同工也有几百人，大家都学习相信神(罗10:15;14:22;腓4:11-20)，仰望神，都没有领工资的。但是今天，却弄到领工资里去。</p>
+<p>我们的X弟兄，到了美国那里，有人送款给他，他就是不要。这是我们的态度，是我们的见证。他是孤单的，但是他的路是通的。弟兄起初是反对我们的，但是，我们不介意他的反对，还维持和他有个人的交通，后来再供应史百克弟兄的书给他看，他里面就一直的发亮。后来更常来交通，再来就不一样，是新鲜的。到了国外，他就感觉到这里和外面完全是两个不同的世界。他回来，到这里来，即使没有谈话，坐在这里就已经很舒服了。</p>
+<p>交通过后，里面有东西的，你也不必勉强邀他，他会再来。所以只要有东西的，就能产生属灵的作用。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

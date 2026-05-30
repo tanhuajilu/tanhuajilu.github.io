@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十四日</h1><p class="meta">深渊与深渊响应 · 第115/366段</p><p><a class="btn" href="s114.html">上一篇</a><a class="btn" href="s116.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s115.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十四日</h2>
+<p>接待是聚会的另外一面。聚会前后，有些人在那里接待新来的人很要紧，因为要把他们接待到主里面，要把诗歌拿给他们，散会后也有人给他们打招呼，有彼此见面。这个接待，会吸引人。不然，人到我们中间来，大家都冷冰冰的，谁也没有人问，就没有意思。这一个接待也是个很紧要的。(罗16:2;林后7:15;腓2:29;来13:2)</p>
+<p>前面提到的这四方面，大家都要学习。你个人唱诗，会得到释放，在聚会中唱诗更会得到释放，使灵提得更高。这边因环境的关系，我们没有唱诗，但是神也怜悯，还有祷告，有交通讲话。如果再加上唱诗，就还会有另外的一个味道，感觉更不一样了，就是会把我们带到神面前去。</p>
+<p>所以，诗歌在基督徒生活中是很重要的一部分。在聚会中，诗歌也是很重要的一部分。特别是这些诗歌，我们去唱，就训练我们的心灵能够细软------柔细、柔软。</p>
+<p>诗歌的意思是很柔细的，不是粗的。粗的东西，你会觉得很粗，软的，你会感觉细软。有细软的心，有细软柔和的灵，就使我们对属灵的感觉更敏锐。所以唱诗会帮助我们心灵细软，属灵的感觉敏锐。</p>
+<p>(3月30日-4月24日，选自2001年1月26日上午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

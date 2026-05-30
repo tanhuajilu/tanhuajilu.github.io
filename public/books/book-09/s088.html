@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十八日</h1><p class="meta">深渊与深渊响应 · 第88/366段</p><p><a class="btn" href="s087.html">上一篇</a><a class="btn" href="s089.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s088.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十八日</h2>
+<p>(续)在这附近X地有一个弟兄死了儿子，死了也埋到坟墓里了，弟兄听别人说:“某青年弟兄(那时我们才二十岁左右)，他能祷告使死人复活。”就叫一个传道人赶快写信给我:“那弟兄要请你来，叫他儿子从死里复活。”孩子已经埋葬，他们要叫我使孩子从死里复活。我不敢去，也没有那个信心。</p>
+<p>如果我们是愚昧无知的，以为“我能叫孩子死了几点钟再复活”，愚昧就来(也去叫埋葬了的孩子从死里复活)。我说:我的下场就是羞耻的回去！我还比主耶稣更本事吗？主耶稣能叫拉撒路死了四天复活(约11:1-44)，我却不能叫人在床上刚死的复活呢。若还以为好，可以有这个胆量，有这个胆量还是羞辱主的名。</p>
+<p>所以关乎这些冒险的事，我们尽量不作。我们常常说:“你信耶稣，病就会好。”许多人信了耶稣还是死，哪里会好！“你有病，按手祷告就好。”按手祷告后，他死掉，你怎么办？</p>
+<p>我们曾在泉州，那时，大家追求圣灵充满，好像今天灵恩派一样，我们那时真的无知。刚好有一个人的师母病得快要死了，打电话叫弟兄们来，为病人祷告。那两位弟兄就来，照圣经所说，为病人抹油祷告，因信心病会好。来了，就替病人抹油祷告，但抹油祷告一完，病人死掉了。两位弟兄回去时说，怎么办？</p>
+<p>这就是我们按死教条做，他已经要死了，你才过去替他抹油祷告，你哪里有这个信心？这都是作愚昧的事情。所以凡是这些事情，我们没有把握，我们不要做。我们要做，还要有一点把握。我们讲我们所知道的，讲所不知道的就不现实，就虚了。所以一直做，一直注意神迹奇事的工作的，工作都做得很浅。</p>
+<p>北方，河南地方，很多人过去医病赶鬼，很灵。现在，他们说:“不灵了。”我说很好。就是这不灵，就叫人进到有深度里去。因为没有福音的地方(福音初传之地)，起头有神迹来证明福音，那时必须用神迹带出来，以后一直行神迹也没有什么意义了。再下去，不是神迹了，乃是要得着生命，得生命去认识神。不要有神迹就信，没有神迹就不信。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

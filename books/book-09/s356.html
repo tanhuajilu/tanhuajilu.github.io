@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十一日</h1><p class="meta">深渊与深渊响应 · 第356/366段</p><p><a class="btn" href="s355.html">上一篇</a><a class="btn" href="s357.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s356.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十一日</h2>
+<p>问:这两条的路，人在错的一方，是从头来走呢，还是从这条路跳过那条路呢？</p>
+<p>答:我们把这两个原则讲了，你会通吗？简单说，你已经认识以往是走了冤枉路，现在只有回头，只有把旧路，就是自己的意念、自己的道路丢掉。你肯丢掉旧的，就摸着新路、摸着神、摸着神的旨意，马上就转了过来，对这一个，你要绝对。</p>
+<p>那属肉体之人的爱也是要绑住你的。你爱主，跟从主，那些基督徒马上就反对你。他们说:“何必这么认真？”你就受为难了。这才是刚开始哩，以后还有很多的情形，他们都要反对你。如果他们中间有认识高一点，没有成见，也肯寻求真理的，都会因着你的持守，反过来走上去，因为这些实在是出于神的。过去不清楚的，今天，在神这边就清楚了。</p>
+<p>行内的人告诉我们，做手术的医生是不能有阴影的，故此在手术室里，总是有多头射灯四面的照着，不然做手术就做不好。在光中就把阴影照去了。所有有成见的人，就是因为有“自己”，是自己把光堵住了。</p>
+<p>保罗在大马色的路上，就因着四面而来的强光，光照了他而转向了主(徒22:6)。现在，你有决心，能“一刀两断”，不是要作他们的仇敌，也不是只靠着边，乃是要对真理绝对，就能转上路来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

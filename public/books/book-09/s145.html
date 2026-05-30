@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十四日</h1><p class="meta">深渊与深渊响应 · 第145/366段</p><p><a class="btn" href="s144.html">上一篇</a><a class="btn" href="s146.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s145.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十四日</h2>
+<p>(续)上述那布道家讲故事、讲感情、讲刺激的话，叫人一听就感动。女的先感动，感动后男的也哭起来，他说圣灵充满、圣灵做工了。</p>
+<p>一位弟兄听见他说这个，就说:“不对头啊，这个人是抓住人的心理去激动人啊。”提到圣灵的感动，圣经说，圣灵来了，“就要叫人为罪、为义、为审判，自己责备自己。”(约16:8)这是圣灵的工作，叫人为罪责备自己。是他知道自己在神面前有罪而流泪，不是用情感去刺激他，叫他触景生情那个感动，圣灵做工在他身就叫他莫名其妙为罪责备自己。</p>
+<p>这个为罪是为什么罪呢？圣经说为罪是，“因为他不信(主)”。这个不信主就是最大的罪，这个罪若不是圣灵感动人的，没有人会承认说:“我不信耶稣基督就是罪。”还会说:“我没有杀人、放火、奸淫，我没有罪。”没有信基督有什么罪？你跟他说你没有信主耶稣就是罪，他不服啊。你说他偷东西是罪，他服；你说他欺负人是不对，他服；你说他侵犯人权，或者欺负人，他承认是罪。而你说他不信耶稣是罪，他就不承认了。但是，圣经是说，“为罪”是因为他不信主，不信耶稣就是最大的罪。(约3:18)</p>
+<p>有一天圣灵就感动他，叫他为着不信耶稣这个罪来懊悔。所以，所有得救的人都有同样的一句话------如果我早信主就好。过去好多机会他应该信，但他没有信，到他信了主以后，他又说如果我早信就好。他后悔信得太迟了，这个是圣灵的工作。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

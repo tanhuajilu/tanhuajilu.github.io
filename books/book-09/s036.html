@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月五日</h1><p class="meta">深渊与深渊响应 · 第36/366段</p><p><a class="btn" href="s035.html">上一篇</a><a class="btn" href="s037.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s036.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月五日</h2>
+<p>问:福音书谈到神的国、神的义。讲到国，有些讲“神的国”，有些讲到“天国”。为着神的国，我们要怎样学习祷告，叫我们祷告时，心灵能与神通在一起？祷告不要应付，不是操练祷告也不是为世界上的事祷告。另外，神国与天国有否分别。</p>
+<p>答:你这问，连带讲到几个问题，讲祷告，又联系到神的国、天国等。我们先简单说到祷告。</p>
+<p>祷告最主要是跟神有交通。对祷告，许多人的印象和理解不尽相同。简单地说，无论对神也好，对信徒也好，祷告最重要的一点是我们与神交通(撒上1:10:2:1;王上8:54;诗32:6;拿2:7;太6:9;26:39)。很多人以为就是去祈求，求很多。是，有需要，可以尽管求，但祷告最重要的，就是与神交通。</p>
+<p>有些人有祷告而没有交通，求很多，有没有通到天上去？不知道。就像打电话，打好多次，没有人接听。打电话是要找到要找的人，要接通，重要的是两个人的通话，重要的事谈妥就好。如果电话里讲两点钟，讲不完，就没有意义了。主要是要通话，跟神交通。</p>
+<p>交通最要紧了。因借着交通，生命会通到你身上来，神的能力、恩典等会供应到你身上来。祷告是要跟神交通，求什么，再另外说。初信的人也如此，你简单祷告是为跟神交通。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

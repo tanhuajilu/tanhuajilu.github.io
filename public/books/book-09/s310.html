@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月五日</h1><p class="meta">深渊与深渊响应 · 第310/366段</p><p><a class="btn" href="s309.html">上一篇</a><a class="btn" href="s311.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s310.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月五日</h2>
+<p>今天很多的问题，都要重新提到神的光中去看。在光中才会明确，明确了，去讲才有把握。你要清楚也不是一下子可以，也是要一生学习的。</p>
+<p>神的话是经过锻炼，像银子在泥炉中经过七次锻炼才出来的(诗12:6)，所以一点杂质都没有。我们也要被神锻炼，人被锻炼得“清楚”，他的话也会“清楚”。所以，人必须是清楚的。不是神不用人，乃是没有一个人能用。神要用一个人堵破口，但是没有一个人能用(结22:30;诗106:23\--“当中”，原文是“破口”)！</p>
+<p>今天，神从人群里拣选人出来，这些人合起来，就带出祝福，带出恩典。所以，不要怕人少，原子本来是最小的，能力却是最大的。主降生在马槽，马槽是最小的，影响却是最大的。你真的摸到生命，就能叫你显出复活的大能。这复活的大能有炸力。在历史上，一直炸去那些阻碍的东西，所以今天教会还存在。如果没有这个，教会早就消灭了。圣灵是一直在作工。</p>
+<p>复活的能力，也有黏力，自然会叫人合一。基督的生命的这个能力，已经把我们合起来了。教会合一，不是用篱笆隔住、围起来的，如果是这样，祗要有一个漏洞，羊群就跑光了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

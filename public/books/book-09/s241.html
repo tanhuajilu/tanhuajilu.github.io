@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十八日</h1><p class="meta">深渊与深渊响应 · 第241/366段</p><p><a class="btn" href="s240.html">上一篇</a><a class="btn" href="s242.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s241.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十八日</h2>
+<p>那得救不久的弟兄来交通，他说，他看《属灵人》，感觉太深奥。但N写《属灵人》，才20多岁，他有多大的经历？怎么他写得那么多？这就是圣灵的启示。他有启示，把真理综合起来，参考别人的，加上他自己一点看见，然后写出来。</p>
+<p>后来，那弟兄看《初信造就》。《初信造就》很具体，是经历出来的东西。如果用启示来讲，《属灵人》可以说讲得很高，N弟兄还没有经历怎么写得那么高？就是启示。有圣灵的启示，有启示，有光照，他写出来的东西就是比较有实际，可以给人去认识。这本书就给人主观方面去经历属灵的东西。</p>
+<p>而《初信造就》就是很具体的。</p>
+<p>保罗虽然没有结婚，却能讲夫妇的道理、家庭的道理，怎么样作妻子、怎么样作丈夫，这都是从上面启示他的。有一些我们所讲的，是我们没有经历到的。同时，还可能有时，我们也不知道所讲的事实是怎么一回事。像旧约先知讲预言，预言主耶稣降生(赛9:6)，也预言主在地上的过程(赛53)，但是他们还没有经历，要等主耶稣出来了，才显明出来。</p>
+<p>旧约先知讲预言，恐怕他自己也不懂得将来过程如何。但是，他在神面前接受多少，就讲多少，有的时候，也讲了他所不知道的。这是指旧约先知那些写圣经的人。好像《约伯记》，他讲到那么多东西，他也不懂得。《约伯记》那边讲到地球是圆的(伯38:14)。以前的人怎么可以理解地球是圆的？一转，都掉下来了。《约伯记》讲到地球是圆的，他不知道怎样。后来经过历史，经过哥伦布发现美洲，以及以后，我们就知道地球是圆的。讲好多真理按照神的话去讲，讲了我们自己也不知道，但是神的话──圣经已经讲了。因为在客观上，是有这些东西，我们所理解的，不过就是一点点而已。</p>
+<p>所以，圣经的话语、神的真理是那么多，我们所经历的只是一点点。那么多的道理，我们可以讲，但很多时候，我们理解不够。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

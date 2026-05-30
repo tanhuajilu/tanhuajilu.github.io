@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十七日</h1><p class="meta">深渊与深渊响应 · 第301/366段</p><p><a class="btn" href="s300.html">上一篇</a><a class="btn" href="s302.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s301.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十七日</h2>
+<p>问:三个星期前，在灵修的时候，主清楚的告诉我，在教会中神要作新的工作。对前面的路我不怕，我也愿意主来重新起头。</p>
+<p>答:从外表来看，是看不到什么，但是在实际里来看，就能看出神的工作。历代是如此，今天也是如此。在外表看不到，但有属灵眼光的人，会看到神的工作，没有属灵眼光的人就看不到。像你们十数人，人是看不见你们，但从里面看，就看见这些人在无形中就已集中在一起。除了你们，还有其它聚会的人来交通，彼此里面都通。</p>
+<p>前几天有从某地的年青人来交通，有在高考的，也有念大学的。他们碰到一位弟兄被介绍来交通，其中有一位才信主一年左右，他家里兄弟有十二人，福音在他兄弟的家中传开，家人就得救。所以，人一碰到主，就会找“里面的”交通。慢慢的，他们听那些条文、宗教的道，就会感到厌烦，因为里面的需要得不到满足。</p>
+<p>问:怎么帮助人去认识这个里面的生命？</p>
+<p>答:要带人认识，必须我们自己先有认识。你有东西，自然就会带领。不然，怎么教也教不来。</p>
+<p>我们十多岁出来作工，作到三十多岁，也作了许多自己也不知道的工作。后来，我们碰到属灵的交通，才认识什么是灵，什么是生命的交通。我们就是从这里开始去向主要，去经历，去学习。到后来，就碰到了。自己走通了，才会通，才能去帮助人。你通了，别人讲话，你就知道他的情形、他的需要，按着他讲什么来带领他。像我没有去过某地，我就不能跟你讲，因为你们是从某地来的。又如吃东西，这个东西你吃过了，就会介绍给人。(约一1:1-4)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

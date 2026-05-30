@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十一日</h1><p class="meta">深渊与深渊响应 · 第132/366段</p><p><a class="btn" href="s131.html">上一篇</a><a class="btn" href="s133.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s132.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十一日</h2>
+<p>你说，广州有一个人要到外国才能传道。这样的人很多。不久前，汕头有一位弟兄说:“我一直想办法到香港。”我说:“怎么要到香港？”他说:“在这边做主工都不自由啊，我到香港可以大做主工啊，”我说:“香港好多人在那里也是大做特做，做出什么东西来？”</p>
+<p>所以，不是地点问题，是你本身的问题。你在这边不能做，在那边也不能做，这是肯定的。你在本地不能事奉神，到普天下也没有办法事奉神，因为事奉神不是地点问题。事奉神是心的问题，你心里事奉神，在这里事奉神，或在别处事奉神，无论在那里，你也事奉神，不管什么环境你都会事奉神。</p>
+<p>有人问我:到了“那个环境”里面，有没有念圣经。我说:“哪里有办法念圣经！”“你没有念圣经，怎么做基督徒啊。”我说:“还有一本圣经，是里面的圣经。外面的圣经是字面的，里面的圣经是圣灵、生命。”所以我们有两本圣经，一本是外面的、字面的，一本是里面的、心灵的，就是主在里面。</p>
+<p>所以你现在多念圣经，到了一个环境你不念圣经也可以，圣灵在你里面会对你说话，神对你说话。好多圣经都忘记了，但碰到一个环境，我们就记起圣经的话。圣灵在你里面会叫你记起主对我们说过的话。主说过的那么多的话，你可能会忘记，但圣灵在你里面，会给你记着。(约15:26)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

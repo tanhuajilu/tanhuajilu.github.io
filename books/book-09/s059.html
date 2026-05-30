@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十八日</h1><p class="meta">深渊与深渊响应 · 第59/366段</p><p><a class="btn" href="s058.html">上一篇</a><a class="btn" href="s060.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s059.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十八日</h2>
+<p>换过来说我们爱神。主问彼得说:“你爱我吗？”彼得不是说:“我爱你。”他说:“你知道我爱你。”(约21:15-17)就是我爱不爱，主你都知道。我讲爱你，心却不爱你，你也知道。我嘴巴没有讲出爱，你也知道。主接连问三次，彼得不好意思，因为主爱是没法讲清楚的。恩典是没有办法讲完的，爱也没法讲完。</p>
+<p>所以属灵的东西很奥秘，就因是奥秘才需要圣灵启示，没有启示，就不知道内里的奥秘。启示，就是给你看见。一给你看到，你就觉得宝贝。没有看见，只听说，不会觉得宝贝。看到才宝贝。怎么看到？通过大家的交通看到。</p>
+<p>交通不是来交流道理。你已经有很多道理，里面还是很乱。交通是叫大家彼此无形中在生命中有交流，这是交通。很多弟兄姊妹都讲了话，里面那个话、圣灵那个话，都会讲到我们里面去，这是心里面的反应。</p>
+<p>人要造就人，不可能。如果可能，今天大家都很属灵了。是人给神用，是神借着人来造就人。好多人是“自用”去造就人。“自用”的都是从“人”自己出来的。他用什么来造就人？最多造就成像你这样子。我去造就人，就不过像我这个人，这没有什么希奇的。我们所说的造就人，是让基督的生命增加在人里面，让他愈来愈像基督。像我们诗歌说的:“哦主，我要像你。”愈来愈像主</p>
+<p>(约一3:2)。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二日</h1><p class="meta">深渊与深渊响应 · 第93/366段</p><p><a class="btn" href="s092.html">上一篇</a><a class="btn" href="s094.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s093.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二日</h2>
+<p>你讲到用水借着道把教会洗净的问题。(弗5:25)</p>
+<p>以色列人到会幕去，第一个看到的就是祭坛，祭坛就是牺牲流血、献祭。所以一到祭坛，表明我们第一个碰到的就是主耶稣的十字架。我们就从十字架开始。在十字架上，主为我们流血，所以我们信主第一个碰到的就是因着血，我们的罪行已经赦免。赎罪祭表明我们的罪因羔羊的血，得以赦免。祭坛也说出主耶稣为我们作了燔祭。燔祭的香气升到神面前，神闻到燔祭的香气就满意，就是说，神因燔祭悦纳了我们。</p>
+<p>一面我们的罪因羔羊的血给担当去了，所以施洗约翰说:“看哪神的羔羊，背负世人罪孽的。”另一面，进前一点，就有一个用铜做的洗濯盆，擦得亮亮的。到洗濯盆这里，你就得以认识自己，看见自己。</p>
+<p>因此到圣所的人都要经过洗濯盆(出40:30)。人要在此洗洗脚洗洗手，这就是“用水洁净我们”。这水就是以弗所书说的:用水借着道...洗净。如果我们里面有感觉亏欠，有感觉“不够”...你跟弟兄姊妹一交通，真理一出来，你就觉得很舒服，再一次在真理上得着真理的洁净。你有真理，他有真理，真理出来了，几句真理的话就叫我们很舒服很畅快。所以我们该常常有真理的交通，这就是彼此洗脚的意思。</p>
+<p>我们常天天在外面跑，跑回来，脚不舒服，经过洗脚就很舒服了。我们经过在世上的每天的生活，难免有一些尘埃，有一些叫我们感觉污染的东西，一回到主里面，有一点交通，就在神的真理、神的灵里面，我们又觉得干净了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

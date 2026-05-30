@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十九日</h1><p class="meta">深渊与深渊响应 · 第29/366段</p><p><a class="btn" href="s028.html">上一篇</a><a class="btn" href="s030.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s029.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月二十九日</h2>
+<p>全世界最大的罪就是“不信”(约3:18;36;8:24)，无论什么罪，只要信主，悔改就可得救。若你不信主，以为自己是好人，这不信就是你最大的罪，因你不信。你不信就是在抵挡神，不要神。基督徒的道路也是这样---信神。</p>
+<p>不信，你心里没有胆量。好多人要求神喜悦，要照自己的道路作到神喜悦。但叫神喜悦很简单呢！希伯来书十一章说，人非有信，就不能得神喜悦。你相信，神喜悦！一个人对神不信，是对神最大的侮辱。我们人是有人格的，一个人做到没有人信他，人格就很低的。所以被人注意的人，他一直要作个有信用的人。人没有信用，信用破产，这人就没有价值了。神是信实公义可靠的，而人不信，这人对祂是多么侮辱，神是多么难受。儿子如果对你不信任，你作父亲多伤心的:“父亲也不敢相信！”所以神要我们信。</p>
+<p>希伯来书十一章，“因着信”，从亚伯开始一直讲下去，这些都是信心的伟人。他们共有一个突出的东西，就是信。参孙那么堕落，却还排在信心伟人行列中。按人看，他失败了，还排在这里？因为神不看人落下去，是看你“信”，信神、信神的儿子。所以我们一生的道路是因信而活，因信而行主路。</p>
+<p>什么叫你与主联合？信就联合，没有信就没有联合。“开关”不开，就跟电源不能交流。电源一通，一百瓦光的亮，五十瓦光的也亮，五瓦光的也亮。电源如果不通，就是一千光的也不会亮。所以今天我们要认识，我们是需要主，除主以外，我们无所求。因为主就是一切，有主，主就按照我们的需要安排一切给我们。所以，我们的要求不要奢望，不必奢望求多，神会根据你的需要给你，安排一切给你。</p>
+<p>这几年，我们一直讲一个中心，就是“认识神”，“认识神的中心---基督。”你认识这个，碰到这个，在各方面就给带上去。总的给主抓住了，什么都带上去。不然一件一件的，零零碎碎的，去抓也抓不住，要守也守不住。要去认识主。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

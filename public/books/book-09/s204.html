@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十二日</h1><p class="meta">深渊与深渊响应 · 第204/366段</p><p><a class="btn" href="s203.html">上一篇</a><a class="btn" href="s205.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s204.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十二日</h2>
+<p>姊妹们知道，一件衣服做好就好，如果做不好，去改，怎么改也改不好。裁缝不会给你改衣服，你要他改，要多付工钱给他。裁缝直接作出来，轻省又没有困难，若是改，就要给你拆掉，有时给你剪，那时更难。</p>
+<p>所以，如果不是出于神，人作的工作就给神多添麻烦。(太15:9，16:23;林前3:20，7:23)很多不正确的东西，填在人的思想里，将来，那正确的要进去，就给顶住，他不接受。我们看到一些初信的人接受很快，一年、二年、三年下去，胜过好多老信徒、老基督徒。老的，几十年之久，他还不清楚得救，你怎么去造就他？没有办法造就。</p>
+<p>至于你，在主面前，你再去学习。你既转到生命的路上，就多接受生命的书。你会通吗？(应:会通。)</p>
+<p>祷告:主阿，谢谢你，你有无限的怜悯，无限的爱。我们蒙你吸引来追求你。以往走过的路，因着你怜悯，我们重新有了调整，有了认识。今后，让我们每天在你面前都是新的，恳求你给我们新的亮光，叫我们更满足你的心。你恩待、祝福我们在这里的见面，借着交通愈过愈认识你，各地有一班人蒙你怜悯，被你兴起来走十字架的路。因为你所作的工作是荣耀的，你的教会也是荣耀的，当你回来的那一日，愿地上有一班人更多地向你降服，与你配合。我们感谢敬拜你，将一切荣耀归给你，这样祷告，奉主耶稣基督的名。阿们。</p>
+<p>(7月10-22日，选自2001年1月27日晚上交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

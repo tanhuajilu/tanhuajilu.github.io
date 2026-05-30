@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月六日</h1><p class="meta">深渊与深渊响应 · 第158/366段</p><p><a class="btn" href="s157.html">上一篇</a><a class="btn" href="s159.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s158.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月六日</h2>
+<p>要经历生命。我们的问题就是有好多模糊的东西。我们有生命的一面，所以对主有渴慕；也有热心的一面，我们都喜欢为主做一些。我们的问题就是对属灵的东西比较模糊，不够明朗。</p>
+<p>基本的东西是有的，就是生命在我们里面(约3:16)，圣灵也有感动有带领。但是，如你所说的，“我经过成功，也经过失败。”这就是说，你有圣灵的带领，就成功，凭着自己时，就失败。经过这样，你对自己就有一种认识，其中有成功的，也有失败的。成功，就是你单单相信神，那时也不知道胆量从哪里来，做了，事情就有效果。有的时候就有失败，凭着自己去做，凭自己经验，以为我有这个本钱，但就没有效果，因为这是从自己出来的。这样，你是一直在模糊、矛盾的路上走。</p>
+<p>你有的一点，就是你有寻求主的心，寻求的心就是不够。你的自我感觉与对客观现象都有不满，有一种讲不出来的感觉，心里象失落什么东西的。你里面有一个渴慕:“还要还要”，但是又摸不着，其实你已经有了，不过被外面的东西模糊了。这就是我们所讲的:你的灵跟魂没有分开，都含糊在一起，一直矛盾。</p>
+<p>现在，通过交通，就有一条路，就是神做了分开的工作。这就是真理，它给你一点光，光一来，光暗就分得清清楚楚。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

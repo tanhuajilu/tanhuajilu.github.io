@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十五日</h1><p class="meta">深渊与深渊响应 · 第177/366段</p><p><a class="btn" href="s176.html">上一篇</a><a class="btn" href="s178.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s177.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十五日</h2>
+<p>如果说你一直帮助别人，结果自己不接受别人的帮助，就不会进步。因为神常常借一个你看不起的弟兄或姊妹来造就你。如果我们没有受教的心，就没有办法得着造就了。</p>
+<p>就是像我们这么有年纪的人，在神面前也是要受神的教育，让神借着弟兄姊妹们的交通来叫我们得着教育。所以，我们向神的态度，第一，要有一颗受教的心(耶6:8;32:33)，第二要有受教的态度。有的人的态度不是受教的，他是傲慢的。还有，第三要有受教的耳朵(伯36:10;赛50:4)，耳朵没有受教，也没有办法听神的教训。有这些态度，进步就快。</p>
+<p>那么我们讲神话语的人呢？圣经是说，要有受教者的舌头(赛50:4)。我们的舌头没有受过神教育，没有受教，就没有办法传神的话，所以舌头要对付要受教。这也不是说，道理讲一遍，我们就能够解决受教的问题。</p>
+<p>我常听一些人过去交通，常常讲:“弟兄啊，你接触这么多弟兄姊妹，你会知道每个人的难处，那么，我来这么久，你对我也很懂得，请你也把我的缺点给我指出来吧。”这多好呀。这个话好多人都讲，但是，我们不会做改正人家缺点的工作，因为这个不会解决问题。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

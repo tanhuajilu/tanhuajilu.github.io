@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十七日</h1><p class="meta">深渊与深渊响应 · 第291/366段</p><p><a class="btn" href="s290.html">上一篇</a><a class="btn" href="s292.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s291.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十七日</h2>
+<p>答:我们讲属灵的东西、属灵的事情，正如你刚才所说，很多人听不进去。你说:“你讲属天的，人听不懂，讲属地的，他都听懂。”属灵的东西需要启示，不然，我们自己也不懂。自己不懂，还怎么讲叫人懂呢？</p>
+<p>刚才你说到，得救以后，你对主有心，要事奉主，所以去寻找许多的地方聚会，找过以后觉得不合适，就设立ＸＸ教会，说明你对主有一颗心。你向主有心，也作了一些工，以为是为主作的，这就是凭你所知道的一点点去作的。但是在这里，你有一些观念都要有点改变──因为这都是一般的观念。要办好教会，管理好教会──这都是人的观念。</p>
+<p>人可以办医院，办学校，办公司，但不可以办教会。因为全圣经都没有人办教会的观念。圣经的思想是:主自己亲自建立教会。主说:“我要把我的教会建造在这磐石上。(太16:18)”这磐石就是神给彼得的启示。主是说，“教会不出于你，教会乃是神所启示的”。这磐石就是神所启示的基督，神乐意把祂的儿子启示在人里面(加1:16)。</p>
+<p>每一个得救的人，都有神启示在他里面。教会是建立在启示里面的，不是出于人的。有了这个看见，人才不会有一个思想:要办好教会。今天就是人愈办教会，愈多问题产生，愈办教会，教会愈分。我们不是都凭着自己的观念去为神办教会，乃是大家都摸着同一个源头，同有神的观念才行。若“办好教会”这观念一直存在，就还没有教会出来，即使办出来了一个所谓的教会，也是乱七八糟的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

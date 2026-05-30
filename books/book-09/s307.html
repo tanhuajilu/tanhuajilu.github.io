@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二日</h1><p class="meta">深渊与深渊响应 · 第307/366段</p><p><a class="btn" href="s306.html">上一篇</a><a class="btn" href="s308.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s307.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二日</h2>
+<p>我们今天就是负责去经历主，去把主带出来。</p>
+<p>现在，我们的工作就是开荒，没有生命的供应，开荒就不可能。今天的问题就是，人要作工却没有力量，没有生命的东西给人。工作一大堆，但是作工的人很弱，没有生命，没有属灵的能力，就像人挑行李挑不动，拿不起一样。</p>
+<p>属灵的饥荒是全世界性的，各地的弟兄姊妹来交通，一谈都看见饥荒。在粮食缺乏上，很多人只能用代替品。但是用别的代替神的，他们的愁苦必加增(诗16:4)；代替品不能解决问题，必须神出来供应人才行。有人心里说</p>
+<p>“我行”，神必显明，他就是不行。他的道理还可以讲一点，办法也很多，就是不能供应人属灵的需要。</p>
+<p>我们是认定，神才是路！神也是得着我们作祂的路，神的工作也要借着我们得着路出去，所以我们必须有破碎。我们人破碎了，才带出灵来。祷告就是为要带出灵来，带出灵来，就有供应。简单的就是这条路，神先得着作工之人的灵。人的灵是耶和华的灯(箴20:27)！</p>
+<p>所临到你的各种遭遇，你不认定是神的手，就不能顺服神，你要跑出神的手是跑不掉的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月六日</h1><p class="meta">深渊与深渊响应 · 第311/366段</p><p><a class="btn" href="s310.html">上一篇</a><a class="btn" href="s312.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s311.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月六日</h2>
+<p>我们的交通，若是叫一个小弟兄通了，就是好的。这样去得着一、二个人，要比向一百个人讲道更好。有弟兄从老远的地方来交通，就是在火车上也要三天时间。他们来如果没有打通，没有得着而回去，就是最亏欠他们的。讲几篇道理，讲完就没有了。但是属灵的东西是要作到人的生命里。这里的交通你不必勉强去记，重要的是:让神的话点着在你们里面，发亮在你们灵里，不是套在思想、感情里。几星期前，有四位弟兄来交通，结果，他们拣到生命里的东西，就把外面的东西丢掉了。</p>
+<p>有一位弟兄信主以后，奉献给主，花时间去接受神学训练，有人介绍他来交通，一见面交通就通。因为他得救的基础就是:“认识你独一的真神，并且认识你所差来的耶稣基督，这就是永生。”(约17:3)经过交通，他说:“这就是他当初从主所领受的，这五天半是我最蒙福，最荣耀的日子。回去后，我要好好跟别人分享。”</p>
+<p>我们是从主领受了，我们觉得我们的责任很重。不要忘记，你得着了，也要为着别人，不祗是为自己。我认定一切都归给主，荣耀、权柄都归祂，(太6:13;犹25;启4:11;5:12)就没有宗派产生的余地。袛要是圣灵掌权，圣灵能有通路，有属灵的配合，接受引导，就能把在对立面的人转过来，归到神这边。</p>
+<p>一直以来，有很多人反对我们说:“某人一天到晚在房子里能做什么，就是偷羊。”我说:“我没出去，怎么偷羊呢。来的都是人自己跑来的。”许多人我们都不认识，他们还要跑来交通。</p>
+<p>他们(反对者)这样做，没法叫人得到圣灵的引导。我们说这些话都是有根据的。三十年前所看见的，今天，很多事情都显明了。显明我们以前所看见的没有错，反而更加确定。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

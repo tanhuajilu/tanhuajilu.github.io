@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月二十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十四日</h1><p class="meta">深渊与深渊响应 · 第298/366段</p><p><a class="btn" href="s297.html">上一篇</a><a class="btn" href="s299.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s298.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十四日</h2>
+<p>人毕竟是人，人一多就出现问题。因为人多，意见也多，碰到属肉体的，就会出问题。但是活在灵里的人，就会经历器皿里有宝贝。正如保罗所说:“我们有这宝贝放在瓦器里，要显明这莫大的能力，是出于神，不是出于我们。”(林后4:7)</p>
+<p>在基督的生命里，老人家和年青的就能打成一片。若是老归老的，年青归年青的，就是世界里的情形。是这样的话，教会就变了老人会、青年会，或幼儿园了，这不是教会。不，教会是神的家(提前3:15;来3:6;10:21)，有老的，有壮年的，有青少年，也有小孩子(约一2:13)。</p>
+<p>虽然教会有年长的，但是年长的要愈老愈清楚，就带给教会祝福。如果变了老先知、老以利、老糊涂就带难处给教会。很多年老的人糊涂，就因他们年青时是糊涂的。所以我们从小就要“清清楚楚”。不清楚的，做人也不清楚，做事也不清楚。是清楚的，他就有信用，可信托。可信托的，你才会听他。</p>
+<p>年青人不单要清楚，也要不轻浮。有人是轻浮的，传福音也轻浮。福音是神的大能，叫人死，也叫人活，摆在轻浮的人手中，却没有了能力。福音若实实在在地去传讲，就能救人，显出神的能力。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

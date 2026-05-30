@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十一日</h1><p class="meta">深渊与深渊响应 · 第163/366段</p><p><a class="btn" href="s162.html">上一篇</a><a class="btn" href="s164.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s163.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十一日</h2>
+<p>以前讲这个独生子，我们没有体会，今天体会了。因为今天，你要多生也没有办法，就只有这一个。独生子女给你生出来了，你再生就罚款了，是不是？所以你这独生子舍不得把他送给人。</p>
+<p>最多是给你做干儿子，干儿子却是假的呀，不是真的，是不是？所以今天我们不是神的干儿子，我们是神的儿子，因为神把他的儿子主耶稣赐给我们，叫我们从他得着重生，使我们成为神的儿子。这种人不是从人意生的，不是从血气生的，不是从情欲生的，乃是从神生的(约1:12-13)。所以我们要感谢神啊，我们这些人都是从神生的，好多人对“我们是从神生的”，他也不认识。</p>
+<p>我们是从神生的，就是说，我们将来要到神那边去。因为主耶稣说，他是从天上来，要回到天上去。从地上来，都回到地里去，人是土造的(创2:7)，所以就归土(创3:19)。但我们得着神的生命，这个生命将来要归神，归到神那边去。因为各从其类！</p>
+<p>那我们的神跟人就是有这么密切的关系。从主耶稣就理解到神的爱，所以一提到主耶稣基督，就想到神这个爱。独生子也赐给我们，这个爱是太大了！所以圣经说，我们所得的救恩是这么大的救恩。你说“主耶稣哪里爱我？”他钉十字架，就是爱你(罗5:8)。虽然二千年前主耶稣钉十字架，这个爱还不断告诉我们:他爱我们。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

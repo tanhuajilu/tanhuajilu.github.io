@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十日</h1><p class="meta">深渊与深渊响应 · 第192/366段</p><p><a class="btn" href="s191.html">上一篇</a><a class="btn" href="s193.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s192.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十日</h2>
+<p>交通:感谢主，主爱我们，抓住我们，主时时抓住我们。这次又来见弟兄姊妹，见到老弟兄，很高兴。一个目的:受教，并且认识主。就是这句话:受教。接受老弟兄给我们交通...(问:你在那边几个月学习了什么？)天天有功课，天天有学习，天天有对付。我们在主里面总是平安。一天过一天，一步走一步。感谢主，头一次来，回去，我就给他们讲，抛锚。我来这里以前，锚是不抛下去的，像一只船在海上转，在河上漂一样。来这里以后，锚就抛下去了。这一次来，很奇妙，主又告诉我一句话:要登山，上山。登上锡安山跟随羔羊。就是刚才说的，来受教，听弟兄姊妹的交通。(问:这段时间有没有看属灵书？)有，看《圣灵的水流》。还有《十二篮》的“深处与深处的响应”，看得很好。(问:孩子怎么样？)也给我们学习功课。小孩子追求爱主的心还是不行。感谢主，主在保守他。</p>
+<p>答:你提到要向着锡安，往锡安山这条路走。圣经说，到锡安这条路，有流泪谷(应:要付代价)。也就是说，往锡安这条路是有福气的，要经过流泪谷。经过流泪谷会碰到生命的泉源(诗84:6)，神是藉锡安来祝福耶路撒冷(诗48:2;50:2;赛18:7;24:23;40:9;31:12;亚8:3)，有恩典来给耶路撒冷。耶路撒冷可以代表教会，锡安代表得胜者。神藉着锡安赐福耶路撒冷，神也藉着少数得胜者把祝福带给教会(启2:7，11，17，26；3:5，12，21；21:7)。</p>
+<p>神在各地做的工作，是叫少数先走上锡安大路，这“少数人”在神面前的价值是高的，但数目不多。不多不要紧，一、两个人就把祝福带出来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月一日</h1><p class="meta">深渊与深渊响应 · 第92/366段</p><p><a class="btn" href="s091.html">上一篇</a><a class="btn" href="s093.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s092.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月一日</h2>
+<p>只有神是绝对的，人在神面前准确的度数不是绝对的，只是相对的。绝对的是神，你认识多一点，素质就提高一点，再认识再提高。世界上的人说要提高认识，属灵的事，也要提高属灵的认识，认识清楚就不会乱套，不会模糊。认识不清楚就会乱套，套到乱。许多人愈多听道理愈乱，因好多道理不伦不类，不清楚的，有时甚至把真理歪曲，就走样了。所以你不要去说教会“怎么样”，要说:“现在，我怎么办？”个人先走，因有一个起头，就会带动别人。</p>
+<p>两百多万的以色列人，一个一个做，做到何时？神先对付摩西、亚伦二个人。祂叫他们去带，从少数人做去，再来带动多数的人。我们只要跟从主，跟从主就有一个脚踪在后面，人跟从主就会跟从这个脚踪去(就是跟从羊群的脚踪\--歌1:8)。现在的脚踪都是乱七八糟的。如果路是直的，羊群跟从牧人一条路直去，就好跟。今天我们都像迷路的羊，各人走各人的道路，脚步(脚踪)到处是，到底哪一个才是主的道路？今天的情形就没有一个好跟从的。</p>
+<p>今天这道路上的脚踪已经给好些人践踏，叫人看不到路在哪里。神如果在各人身上作工，就影响到整个教会。让神的工作藉少数人通出去，也就是神的旨意在我们身上行通，在教会行通，神的旨意就在地上行通。</p>
+<p>主耶稣教我们的祷告:“愿你的旨意行在地上如同行在天上。”(太6:10)神的旨意今天在你身上受拦阻，在教会里也受拦阻，又怎能通行在世上呢？所以神的旨意必须在你身上通行，在教会里通行，也带到整个世界可以通行。今天，神的旨意受了我们限制，没有办法通行。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

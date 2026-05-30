@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月十六日</h1><p class="meta">深渊与深渊响应 · 第76/366段</p><p><a class="btn" href="s075.html">上一篇</a><a class="btn" href="s077.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s076.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月十六日</h2>
+<p>这种情形不单你那边有，都有代表性的，各地也这样，擘饼擘到一天，不知这擘饼做什么。都没有什么内容。你若说要照主的吩咐，七日的头一日要去擘饼，道理是对的，但这具体现实，跟道理相称不起来。现在，就因外面的东西已经太多，一直在外面撑住，现在就是要在内容上充实。</p>
+<p>我们并不是反对擘饼，反对聚会，我们是说你在你已经有的事情上，要加上内容，有内容是多美丽的。你在这里记念主，主的见证借着我们这些微小的人见证出去，是多荣耀呀。问题是:现在只剩下一个壳子，里面内容都没有了；内容没有，就是空的。</p>
+<p>像会幕，会幕的内容就是约柜。约柜已经不在示罗，不在帐幕里，你到帐幕那里，只剩下个空空的外壳。约柜表明神与人的会合点，至圣所里的约柜表明神跟人在此讲话。约柜不在了，就是说，神已经不在那边，你到了一个空空的会幕里，都摸不着一个实际。(撒上4:3-12，22诗78:60-61;耶7:14;26:6)</p>
+<p>今天不管大教堂、小教堂，或者家庭聚会，都在这样的情形里。并不是家庭聚会就是好的，不要那么理想，家庭聚会也很复杂。大教堂还有总的一个来管理带领，来左右一切。而家庭聚会，分成几个家由几个人负责，这几个人也是闹矛盾，也是要作大，跟大教堂的也差不多一样。因为都停留在人的一层，没有摸到神这一层。摸到神了，人的东西就脱掉，没有摸到神，就会把人的东西抓得很紧，因他再没有东西了。没有抓到主，就会抓别的东西来代替。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

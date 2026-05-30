@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十六日</h1><p class="meta">深渊与深渊响应 · 第57/366段</p><p><a class="btn" href="s056.html">上一篇</a><a class="btn" href="s058.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s057.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十六日</h2>
+<p>如果用人的行为来说，大家都有看法。二位弟兄彼此有矛盾，他们来交通，一个说:“我知道你的底。”另一个也说:“我知道你的底！”我说:“知道这个底就好。因为都知道大家的底不好，二个底加在一起都不好。但现在不是底不好的问题，乃是你加上基督，他也加上基督，基督跟基督在一起，矛盾就没有了。是不是？”所以，我们的交通就是在生命里，在灵里，不是看法，不是个人的主张，不是个人的观点，都不是，乃是基督。</p>
+<p>虽然我们看法、观点不同，对这些不同，神还有办法对付掉。你愈有理想，这理想，神就给你对付。所以属灵的东西没有办法理想的，理想都不会实现。你想怎样作才好，这些想法要破灭。不是照你所想的，乃是按照神的计划，按照神的定规。我们需要认识神，摸到神的心意，照神心意去作。基本问题就是跟神这源头要接好</p>
+<p>(诗36:9;耶2:13;约4:14;来5:9)。</p>
+<p>学习的功课太多了，千头万绪。十字架的功课是不让我们放松，不给我们喘息的，一波未平一波又起，“十字架又来了”，就是这样你才会向前。过去有十字架，今天有十字架，将来有十字架，许多的十字架，你要想想不来，神会按照我们的需要安排给我们。应该在每一个遭遇里去学习敬畏神、接受神和仰望神。这样，你就满有恩典溢流给别人，你有生命去供应别人。所以不是方法，不是怎么去作，不是，乃是认识基督，跟从基督。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

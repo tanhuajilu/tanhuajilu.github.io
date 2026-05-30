@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月六日</h1><p class="meta">深渊与深渊响应 · 第280/366段</p><p><a class="btn" href="s279.html">上一篇</a><a class="btn" href="s281.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s280.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月六日</h2>
+<p>你到厦门游玩，要我去带就不行，因为许多地方我从来没去过。郑弟兄就可以。弟兄姊妹一个一个给主带来，属灵的路你已经走过，现在由你这内行的人去带，就把弟兄姊妹带得又快又直。</p>
+<p>今天一个人因走对了路，他得救三年，就等于过去那些得救三十年的追求。如果走了不对头的路，就转来转去，也转不出路来。所以什么时候弟兄姊妹碰到有交通，走了对的路，就是这样。因为出于神的与出于人的是不一样的。好像人力与电力相比，人力生产与电力生产的相差多少？你自己要走路到美国，怎么走？坐飞机去就好快。</p>
+<p>属灵的追求，就看你靠自己呢，还是靠神。好多作神工作的人，如果靠自己那套去作，我看还是这样，不只说不会进步，反而愈走愈往下坡去，到错误里去也不知道，因他失去了那些基本的东西。</p>
+<p>如果有一个人，他摸到神，向着神心存诚实，历代志下说，“神的眼目遍察全地，要显大能帮助向他心存诚实的人(代下16:9)。”神藉他会帮助人。但是，神要找这样一个人都很难，好像以色列人，神要找一个人可以站破口的，却找不到一个。今天，神在各地方，若找到一、二个人，这一、二个人就是神工作的起头。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月十四日</h1><p class="meta">深渊与深渊响应 · 第349/366段</p><p><a class="btn" href="s348.html">上一篇</a><a class="btn" href="s350.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s349.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月十四日</h2>
+<p>有一首诗歌说:不是人的劝勉，不是本分的催促，乃是无价之宝的一现。若不是主的吸引，也很难，因为金钱的吸力很大。对祂的子民，神有对付，也必管教。但是有些人，有打却没有伤。神打他，他也有伤，就会有冲击。有打没痛的，可能没有用，有痛，他才有深刻的印象。这个要神作工才行。我们自己也要肯让神作工才行。</p>
+<p>在使徒行传，我们看见门徒受逼迫，受到打击、分散，福音就出去。福音的出去，有些是神差出去的，有些则是神借着苦难分散出去的。借着分散，就把福音带到各地去。</p>
+<p>神在环境中兴起苦难把福音带出去，就比差会的工作更厉害了。在中国大陆，因着上山下乡，许多没有传过福音的地方，福音就出去到了那些地方。这都不是看我们这一面的，乃是看神那一面的。神的工作是综合性，从各方面来作工的。</p>
+<p>当初使徒传福音，三千、五千人得救，是多荣耀的工作，但是过一阵子，司提反被活活打死，为主殉道了(徒7:57-60)，这就是见证；也散下了福音的种子。主就曾借着流血，死在十架上成就了福音。从前有老弟兄说过，十字架的路乃是由血铺出来的。钉十字架的路是如此，背十字架的路也是如此，都由血铺出来。历代的殉道士就是借着流血把福音传出去。</p>
+<p>古田的基督徒是最多的，为什么？庚子事变年间，基督徒在这里被杀的最多。当时像埋没了看不见的，但是，当长起来的时候，就很多了。所以，我们不要去看假像，以为人多就好，反而要看神的工作。生命是会产生果效的。</p>
+<p>如果我们没有学习，本来是三十多人的，变作三百多人，这时会吃不消，因为消化不良呀。今天全世界信徒最大的困难，乃是信徒多却没有得到牧养。在信徒中消极的事多，信徒本身也争起来，也辩起来，自己本身也在杀死生命，所以我们得把这么多的问题放下来，人人都从自己开始做起，这才是比较实际的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

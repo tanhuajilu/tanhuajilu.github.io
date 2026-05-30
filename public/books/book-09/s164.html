@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十二日</h1><p class="meta">深渊与深渊响应 · 第164/366段</p><p><a class="btn" href="s163.html">上一篇</a><a class="btn" href="s165.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s164.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十二日</h2>
+<p>“他是爱我，为我舍己。”(加2:20)，主耶稣的死是为着我，这个爱大不大？你认识这个爱，就觉得你的心太小了，不够装。对世界，我们的心又很大，全世界都填不满，然而，主在我们的心却不够装，神就是这么奇妙。好象空气，你呼吸的空气就那么一点点，但是空气给你用不完。你也呼吸，我也呼吸，都呼吸同样的空气。进到你里面，也进到我里面，都是一个东西。神在我们里面也是这样，我把神接受在里面，他也把神接受到里面，拿出来都是一样的，都出于神。</p>
+<p>神在我们里面，他要充满占有，所以我们要空出空间来给主，他越有地位，就越充满。好多人把主关在门外，敲门都不能进。主住在我们里面，他的生命要长大，要一直的扩大。我们要满有基督，这个你知道，就轻松。</p>
+<p>所以，你去仰望主，就不会怕。如果看环境你会怕。有一次，一个调皮的小孩子爬楼梯，那是只有两条竹子作成的楼梯，爬到上面，想下来时怕得要死。这么高，不敢下来。怎么办？最后，他眼睛往上看，一步一步爬下来。看着上面就安稳的一步一步下来。如果看地下，头晕晕的就要掉下来。今天我们走天路，眼睛要看在上面。如果不看主，就这个环境可怕，那个人也可怕，没有路走了。所以经过再艰难的环境，你的眼睛也不要离开主，主会保守你。我们在主的手中，掉也掉在主手中！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

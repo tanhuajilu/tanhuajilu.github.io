@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月四日</h1><p class="meta">深渊与深渊响应 · 第217/366段</p><p><a class="btn" href="s216.html">上一篇</a><a class="btn" href="s218.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s217.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月四日</h2>
+<p>如果我们要代替这些老人家，要改变他们，也是很难的。老人会说:“我传道时，你还没有生出来！”如果他态度对，会说:“啊，神作工了，年轻人起来，我安心了。”他怕你们年轻人走在他前面。神已经定规大卫作王，已经废弃扫罗。妇女说，千千归扫罗，万万归大卫。就是这句话，扫罗受不了。从那天起，他就想方法要害大卫。如果他谦卑，他要说，神虽然废弃了他，但有一个大卫起来，他要敬拜神。他没有这个态度，他嫉妒。</p>
+<p>大卫说，我像一个跳蚤，你要杀我象杀跳蚤(撒上26:17)。好像说:“你这大人物何竟这样？”大卫保持在神前有一个对的态度。扫罗曾落在他手里，就是他还在那洞里面时，扫罗进去，他可以报复，却不敢去。大卫的勇士说:“神已将他放在你手里，我去把他杀了。”没有恩典的人，就会听这样的话，大卫却不敢</p>
+<p>(撒上26:6-12)。</p>
+<p>今天我们对这些，在态度上要学习功课。他反对属灵的东西，属灵的人在忍受他的反对，但属灵的人心里很平安。他反对别人，他心里不平安。好多时候，反对别人的人，他所带领的人，却跑到他所反对的人那边，这是他的痛苦。所以不要争说:“你不对，我才对。”这些都不要讲。我们如果认识神，神是最公正的。如果不认识神，对许多东西就不清不楚的，因为神会作，神会自己作的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

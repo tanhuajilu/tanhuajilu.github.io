@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十八日</h1><p class="meta">深渊与深渊响应 · 第200/366段</p><p><a class="btn" href="s199.html">上一篇</a><a class="btn" href="s201.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s200.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十八日</h2>
+<p>有一个呼喊派中的姊妹很热心，常常找我。我说你不要来了。她说她还要来。“你来作什么？”她来把这一套跟我讲。我说:“这一套我老早知道，你要再讲，你再讲也比不上李某人讲的更好。他的书，七十年代进来，我们一看就把它烧掉，你今天还用这个东西说服我们？”她说:“我工作，我带领几个人来，请你来讲道。”我说:“不讲。”我去讲，就变作我听她的，变作我不是听神的。拒绝她以后，她就再不来。你要对真理绝对，不是真理的</p>
+<p>“我不要！”你不要客气。这不是爱心不爱心的问题。</p>
+<p>新约教会的也是这样，他们一个带领人来找我，还写信给我，我把信退回。你讲这些东西都是不对的东西。什么圣灵充满，什么讲方言，我们也求过了，也作过，后来觉得不对。我问他:“你的方言，你懂得吗？”他说不懂得。不懂得就没有意义。</p>
+<p>圣经说，你要讲话就是要人家懂得(林前13:1;14:6)，你不懂，这个就像敲锣打鼓，不知道讲什么。我们唱歌是有谱的，你唱歌乱唱乱唱，没有意思，就太幼稚。所以得救以后，你的路正直，就走很快，不然给这些搞到头晕，混混沌沌。还是神的怜悯，有一些人透过交通能够转向比较正确的东西。</p>
+<p>所以你看到一些书，羡慕圣灵充满，这是对，但是去追求，就要小心，会走错。所以你把这个东西摆出来谈，这一点就是你需要帮助的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

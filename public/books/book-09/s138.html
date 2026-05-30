@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月十七日</h1><p class="meta">深渊与深渊响应 · 第138/366段</p><p><a class="btn" href="s137.html">上一篇</a><a class="btn" href="s139.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s138.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月十七日</h2>
+<p>所以今天我们不要羡慕有钱的基督徒，你不要去羡慕。他们里面的痛苦好多呢，你不知道。有一个姊妹她很有钱，有上千万的，她说今天骑虎难下，苦得不得了啊。她羡慕说:“没有钱的更好啊，因为我越有钱，亲人都向我要钱，这个也要钱，那个也要钱，好象这个钱是大家的，就要我的！”她心里苦得很，现在要了结不能了结，骑虎难下。她在那里苦啊，因钱是会改变的。</p>
+<p>有的人在厦门有分公司好几间，一下子宣布破产了。钱靠不住。所以圣经说，夸口的当指着主夸口(林前1:31)，要敬畏神来夸口，不要因为有钱来夸口。也不要因着你强壮来夸口，不要因着有智慧来夸口，因为钱会改变，健康会改变，知识也会改变。你现在年轻力壮，很有知识，很牛，到老的时候变痴呆呀，连吃都不懂得吃，你还夸口？没有办法了。有的人很强壮啊，但好像不会思想，到有一个事情来了，他就受不了啦。死就定规了，没有办法讲了，健康也不可以夸口，要靠神。</p>
+<p>有的人很健康，却比我早死。有人早就要死的了，今天他还活到八十九岁，还在！因为生命在神的手中，不是你要保养保养。人最怕死，你去吃补药，去保养，也会死掉，补药还没有吃完就死掉了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十日</h1><p class="meta">深渊与深渊响应 · 第355/366段</p><p><a class="btn" href="s354.html">上一篇</a><a class="btn" href="s356.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s355.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十日</h2>
+<p>这里是有两个原则，一个是属灵的原则，一个是人的原则。人的原则就是属肉体的；属肉体的总是逼迫属灵的(加4:29)。</p>
+<p>你说到W和N两位弟兄，从他们两人的表现就可见他们在神面前的情形。一个为主殉道，至终在牢里没有出来过，一个是到老了，还在定罪别人。在我们这里也有另一个人，到老了还在反对N弟兄，逢人就讲N弟兄的坏话。别人听了得不到造就，他自己也因凭肉体漏掉生命。今天，你定罪别人，那一天到审判台前都要一一去认罪。</p>
+<p>以前，属灵的受属肉体的逼迫，今天也是。</p>
+<p>亚伯拉罕生了以撒，以实玛利就逼迫以撒，逼得亚伯拉罕没有办法，就把以实玛利赶出去。以扫追杀雅各，但是雅各要神，神祝福他，一面赐与牛羊仆婢，一面摸了他的大腿窝，他要求祝福，就被称为以色列。“以色列”这名字，就是个祝福，因为“雅各”无论得了多少还是个人的丰富，但是“以色列”是个国家的名字，国家的财富不比个人的多很多吗？</p>
+<p>到撒母耳的时代，有扫罗和大卫。神虽然立扫罗为王，但他不照神的旨意行事，结果被神所废。以后神膏立了大卫。大卫杀了歌利亚，妇女们歌唱说:“扫罗杀死千千，大卫杀死万万。”扫罗听了万万归大卫，千千归自己，就开始追杀大卫，但神保守大卫，大卫经过危难却没有被杀死，一切都在神的管理之下。圣经说，扫罗家天天衰落，大卫家天天兴旺。</p>
+<p>所以，不要看人多，要看神有否祝福。我们要看的就是这个原则。你这样子去衡量，才能把全世界的人看清楚。不然，只看聚会的人多，属灵的事就不会看得清楚。这里一直摆出两条路来，一条通天，一条连系着地。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

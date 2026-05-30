@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月六日</h1><p class="meta">深渊与深渊响应 · 第250/366段</p><p><a class="btn" href="s249.html">上一篇</a><a class="btn" href="s251.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s250.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月六日</h2>
+<p>祷告也会变成迷信。一些人去看望，要走的时候，就给人祷告。没有祷告，他就说:“你要给我祷告。”这是什么意思？就是你们要给我祷告，祝福我这个家，不祷告好像没有祝福。刚才，你的弟兄对你说:“回去祷告。”这很好。神每个地方都在，不是我来祷告你才得平安。主耶稣要到大臣的家，大臣说:“我不敢当。”主才说时，那家的仆人就好了。仆人好的时间跟主耶稣说话的时间相对应。主在这里说好，那边就作工(约4:52，53)。</p>
+<p>神是无限的，每个时间都在那里。好多基督徒把神的东西变成一个东西------我替你祷告就有，没有祷告就没有------变成没有神的。你能带平安给他，他就看在你身上。如果没有平安呢，他就说你怎么不给我祝福，没有带平安来？</p>
+<p>我们到深圳时，有一位老姊妹，她说她这身体不太好，凡是人来，她都请他祷告。“今天你老弟兄来，我也盼望你来按手祷告”。她见到面，马上就跪下去，我们也马上跪下去。祷告归祷告，我没有给她按手。这个按手不是迷信说给她按手，病就好。若不是圣灵给你医病，给你按手，马上就会好起来，没有这件事。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

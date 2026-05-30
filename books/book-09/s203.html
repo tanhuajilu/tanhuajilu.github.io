@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十一日</h1><p class="meta">深渊与深渊响应 · 第203/366段</p><p><a class="btn" href="s202.html">上一篇</a><a class="btn" href="s204.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s203.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十一日</h2>
+<p>你现在还年轻，你的道路由今天再开始。我们不管老少，从今再起头，再重新做。你不重新起头，不舍得改变以前许多观念，工作就不会做得好。</p>
+<p>像妇女织毛线衣，已经织错了，舍不得翻工，不肯拆掉重新再织。你舍不得，那么，就是给你织完成了，错误的成品也只能摆在那边。不如，你一知道错了，就把它拆了重新再织。</p>
+<p>这个“重新”(诗51:11;赛40:31;摩9:11)，都是每一天的。昨天的过去，今日重新起头。不断的重新起头，你的路就一直向前走。所以，我们的进步是带着艰难、失败，带着十字架跟从主来进步的。</p>
+<p>你今年几岁？(应:三十六岁。)还算年轻。前面乃是为着你去学习。若你有学习，按照年长弟兄说，如果有学习经过二十年，就开始给主用一用。所以你不要焦急说:“我今天要给主用。”主看能够用，就用一用，主看不能够用，就留在那里受造就，直等时间到。</p>
+<p>有时，弟兄姊妹们来找交通，或者到别地交通，是有需要；我们说:有什么弟兄姊妹来交通？谁合适？有的人是可以，他有负担就去。有的人想作，但我们认为还不可以，因他道理会讲，分量还不够，能做外面，里面的没有。里面没有的还不要紧，如果他来做一个根基的，作一个起头的工作，做了，将来别人接着作，还要经过一个手续去改，这个“改”就比再作还更困难。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

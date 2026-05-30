@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月一日</h1><p class="meta">深渊与深渊响应 · 第32/366段</p><p><a class="btn" href="s031.html">上一篇</a><a class="btn" href="s033.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s032.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月一日</h2>
+<p>每天的经历里，我们会碰到一些人一直讲话。你不只听到他们的话，话里还带出来一个东西，里面是充满肉体的。他讲好话也是肉体，还是充满己的，他讲什么都是己的味道出来。</p>
+<p>但是人如果是充满生命、圣灵的，他讲什么就有圣灵在里面。</p>
+<p>前次某姊妹说:“我现在很烦，不想弟兄姊妹找我。”我问为什么？她说:“这个人来讲一套，那个人来讲一套，讲他们的过程困难，要我帮他解决。”她就受不了。因为这些东西一讲出来，都把她压死了，这个(自己)就崩溃，没有办法。</p>
+<p>这就是要给我们学习的。有些话他讲了，你不要听，因为这些话都是要把你带到黑暗里去的。里面没有光的人就讲黑暗的话，黑暗的话一出来，你里面厌烦。你跟里面是光明、是释放的人交通，就得释放，就有亮光。这些就给你经历，使你在经历上能够辨别属灵的，也叫你更认真地对待属灵的东西。(约3:6;6:63;罗8:5-6)</p>
+<p>问:(略)</p>
+<p>答:首先，我们有里面的感觉，以后经过学习，这种感觉愈过愈敏锐愈清楚。我们如果认识神，作了不对的事情，不要大惊小怪，因为亚当的生命就是这样，没有什么奇怪。因我们是这样的，才需要基督。我们的问题不是一次性去解决的。得救的问题是一次性解决了，基督徒生活的经历却是不断的。因着不断的经历，我们才有主观对神的认识。对神的认识不是被动地听人家讲的，是自己在那里有看见。这个一来，每个弟兄姊妹都主观地看见神的工作，聚在一起，教会就丰富。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

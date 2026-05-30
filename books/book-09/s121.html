@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月三十日</h1><p class="meta">深渊与深渊响应 · 第121/366段</p><p><a class="btn" href="s120.html">上一篇</a><a class="btn" href="s122.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s121.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月三十日</h2>
+<p>神这个爱是没有理由的。它就像母亲爱儿子，是没有理由的，也像丈夫爱妻子是没有理由的。有的人，他的妻子死了，还是爱她。曾有丈夫见妻子，说见面要大骂她一顿的，但是见面后没有骂出来，反而更加爱他。哦，这个就是受造的爱。神给我们对爱，都有这样的感觉，非受造的那个爱，更区别于人的爱了，它超过人的爱。(诗21:7；23:6；33:5；36:5；90:14；103:17)</p>
+<p>所以对神的爱要有认识，对神的权柄要认识，认识以后，你的顺服就容易。因为爱感动你，因为你认识这个权柄，不敢背逆这个权柄，你就会顺服。这个你不认识，你要顺服顺服不来，想爱也爱不来，没有办法爱出来，是里面有那个东西，才让那个东西活出来。</p>
+<p>今天对神要有认识，对主要有认识，因为一切都出于他。连我们爱主，都出于祂的感动而回应祂的爱。我们不敢说报答，报答不了啊，是他有这个爱，我们才有这个反应给他。他爱我们这么多，我们爱他这么少，他爱我们是这么大，我们爱他只这么一点点。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

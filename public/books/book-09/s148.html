@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十七日</h1><p class="meta">深渊与深渊响应 · 第148/366段</p><p><a class="btn" href="s147.html">上一篇</a><a class="btn" href="s149.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s148.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十七日</h2>
+<p>撒但邪灵最会做欺骗的工作，说:“我就是圣灵。”其实牠不是，牠是欺骗者，因撒但是撒谎者(约8:44)，专门做欺骗的工作。牠什么都要假。圣经说，连撒但都假装光明的天使。牠假装的目的就是要搞乱圣徒，苦待信徒，要拦阻信徒，叫人不认识真实的东西。圣灵是真理的灵。你认识圣灵，圣灵会叫你认识真理。你没有圣灵就不认识真理，所以真理的灵就是圣灵。</p>
+<p>有圣灵给你启示，你对圣灵就认识，你对真理就认识。好多人讲道理，但讲的不是真理。你可以讲许多的道理，却不是真理。你可以讲真理，但是在辩论方面会输给一个理论家，毕竟你还是真的，因为你碰到真的东西。所以我们对圣灵要认识，你不认识，邪灵就会欺骗你，把你拉走。</p>
+<p>有一次，有一个人问和教士说:“和教士，我要求能力。祈祷求主给我能力。”她回答说:“你要感觉得到的能力，还是感觉不到的能力？”这个人给问傻了，他想能力还有感觉得到的与感觉不到的分别吗？</p>
+<p>如果你要感觉得到的能力，你就不大认识圣灵的工作了。好多时候对圣灵的工作，圣灵的同在，圣灵的充满，你自己是没有感觉的，你感觉到的就不是从圣灵来的能力。倒反你没有感觉，你是走在正路上，走在神面前，走在圣灵的轨道上，你越作，圣灵越同工，圣灵越作工，连你自己都没有感觉。你虽然没有感觉，但是圣灵的工作确实作在你身上。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

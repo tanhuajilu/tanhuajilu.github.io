@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十六日</h1><p class="meta">深渊与深渊响应 · 第26/366段</p><p><a class="btn" href="s025.html">上一篇</a><a class="btn" href="s027.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s026.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月二十六日</h2>
+<p>属灵的道路就是神把客观所定规的道路来完成在我们身上。所以没有一个罪人可以凭自己得救，也没有一个基督徒可以凭着自己来作基督徒。罪人得救是圣灵把神的儿子启示在他里面，叫他认识耶稣基督是他的救主。圣灵也照样启示我们，叫我们知道耶稣基督是我们的主(林前12:13)。</p>
+<p>他不只是我们的救主，他也是我们的主。他作救主，因我原先在罪中，他把我救起来。他作我主，是他住在我里面。“主住在我们里面”，这就是新约跟旧约不同的地方。旧约，人碰到神是外面的，一下子就过去了；旧约，圣灵会落在他们身上，也会离开，人情形不对，就离开了。但是在新约，圣灵是住在我们里面，永远与我们同在。圣灵是内住的，住在我们里面。在旧约，圣灵的彰显都在外面------神的灵感动人，神的灵降在人身上；在新约，圣灵是住在人里面作保惠师，在我们里面与我们的灵同证我们是神的儿子，因此，我们呼叫阿爸父(罗8:15;加4:6)。</p>
+<p>一个真的基督徒，他里面就有圣灵。我们称神为父，里面很亲切，很自然。若是一个没有重生的(即使称为基督徒)，要他呼叫神，要他说:“我是你的儿女，你是我的阿爸父。”即使说也不自然，因为他没有对神的感情。所以，我们不只认识客观上在圣经里神的真理，也认识这位真理的灵住在我们里面，我们能从我们的里面去认识他。</p>
+<p>这位保惠师圣灵要叫我们明白真理。“明白”两字也可翻作“进入”，圣灵要在我们里面带我们进入真理。明白是在思想上，进入真理却是在经历上，在灵里面的。我们不只里面得到一个新生命，我们外面的这思想，也得着圣灵的更新。有更新的思想就会接受圣灵的光照，接受圣灵把新生命传递出来，就是能在我们的里面打通一条路。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

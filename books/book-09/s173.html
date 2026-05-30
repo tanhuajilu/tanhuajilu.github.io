@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十一日</h1><p class="meta">深渊与深渊响应 · 第173/366段</p><p><a class="btn" href="s172.html">上一篇</a><a class="btn" href="s174.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s173.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十一日</h2>
+<p>这个宝贝就宝贝在内容。今天我们传扬基督，单有外面来传扬是不够的，因为外面的话就是讲外面的事情，讲好多理论、知识，都是人的东西。要用人有限的知识去讲论神，实在没有办法去论。因神是一个事实，是一位又真又活的，超过我们不知多少多少倍的。我们太有限了，但你信祂，就什么都解决了。你没有信祂，怎么研究，也研究不清楚的。因为神太伟大了。</p>
+<p>神给你清楚，就会一点一点的给你看，不然，你也受不了。摩西要求神给他看，神也给他看，但是只能看到祂的背，因为神荣光灿烂，这个荣光人受不了(出33:21-23)。那么，为什么祂要去成为肉身呢？因为这个荣光、荣耀、公义、圣洁的神借着道成肉身成为一个人(约1:14)，就跟我们一个样子，我们才能亲近祂。</p>
+<p>所以主耶稣道成肉身成为人了，跟我们才有交通。神是借着主耶稣来跟我们交通。主耶稣基督是我们与神之间的会合点，好象旧约的约柜。约柜就是神跟人讲话的地方，在那里人跟神有交通。我们跟神交通就是在基督里，基督作为人与神之间的会合点。主耶稣也叫作是我们的中保，祂在神与人中间作中保。没有祂作中保的话，我们到神面前就要恐惧战兢，站不住了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

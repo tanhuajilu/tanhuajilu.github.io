@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月二十九日</h1><p class="meta">深渊与深渊响应 · 第211/366段</p><p><a class="btn" href="s210.html">上一篇</a><a class="btn" href="s212.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s211.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月二十九日</h2>
+<p>有一个这样的人，喜欢讲道理，到神要复兴的时候，神差人到他那边，在那个场合，他就感觉到神。所以，一个有神同在的交通，人来到这里，就会感觉到神(林前14:25)。他所要找的就是这个，觉得这个好像失落了，好多年没有碰到，有一个失落感，如今碰到。</p>
+<p>从国外回来的那个姊妹，要打通也不那么容易，我们就没有请她。但她知道了，说:“我也要去。”就来。这就是神一个工作的信号。我们带她到一个家见面，交通交通。后来她讲:“我离开鼓浪屿四十多年(当初那鼓浪屿的属灵情形还是可以的)，以后到外面经过新加坡、美国，到了加拿大。我四十年来要找鼓浪屿那个属灵的东西，客观的没有，主观的也摸不着。今天，我已经摸到从前鼓浪屿的那个东西了。”她在外漂流四十多年没有找到，今天找到。她到外面只讲外面的东西。</p>
+<p>所以，你们不要怕。</p>
+<p>某弟兄第一次来，那时，我们这边没有几个人。但是我们不灰心，有一个得着一个，有一个得着一个。后来就介绍他们认识，有交通。弟兄姊妹也去带人认识走上这条路，都不必我们催促，他们自己就会了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

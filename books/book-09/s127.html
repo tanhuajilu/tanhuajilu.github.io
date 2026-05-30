@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月六日</h1><p class="meta">深渊与深渊响应 · 第127/366段</p><p><a class="btn" href="s126.html">上一篇</a><a class="btn" href="s128.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s127.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月六日</h2>
+<p>在你的工作单位，也是如此。反正神安排一个管我们的，我们要学习顺服。先顺服是我们的该有的态度，顺服其实也是最美的。一个人调皮，排出来是最丑的，骄傲是最丑的，这个在光中就看得见。并且，神还借着我们的十字架来大力做工，叫我们各方面去认识神，认识神的原则、神的法则(诗103:7;箴6:23;耶8:7)。</p>
+<p>我跟弟兄也谈过了，你不顺服神的原则，你不顺服神的规律，你去祷告再多也没有用。顺服神的规律，要胜过你的祷告。你知道手放在火里会烧伤，你就让手给火烧伤，还一直祷告说:“神啊，医治我。”这个祷告也没有用，手已经烧伤了，因为你违反神的规律。所以，我们一定要认识神在宇宙中的规律。</p>
+<p>属灵上有属灵上的规律。你规律、原则很通啊，但违反规律，你就没有办法。神在属灵上的规律，我们要顺从。顺服神，顺服神的规律，你就轻松自由，违背神的规律就很不轻松，你里面就很难受。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

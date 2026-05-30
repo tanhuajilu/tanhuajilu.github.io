@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十九日</h1><p class="meta">深渊与深渊响应 · 第89/366段</p><p><a class="btn" href="s088.html">上一篇</a><a class="btn" href="s090.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s089.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十九日</h2>
+<p>问:一个人的道路，怎样才回到神面前，走在神旨意上呢？</p>
+<p>答:你原来所感觉的，有否连在神的旨意上？(应:过去在外表上，给人家看还热心，但内心，神不允许。)有这个空虚感，就叫你要有选择，要选择那叫你的心不空虚的。选择什么？(应:选择希望能回到神心意里。内心在神面前得满足。)是！这“希望”就是说，“还没有得着。”得着就不是希望。你是希望得着，是吗？(应:是。我希望能回到神面前。)你回到神面前了没有？(应:今天的交通对我内心是很有帮助。现在还是在争扎。)你要回到神面前，但仍有很多东西拦阻你。你如果真的要，就必须冲破这些打岔的东西，不然，永远在那边跑不出来。</p>
+<p>对于你在那边的一些工作、一些人情，若主跟工作摆在一起，你是喜欢主，还是喜欢工作？(应:喜欢主。)如果你喜欢主，从主出去的工作，要比你原来的工作，要更荣耀，价值更高，因是从主这里去作的。从人去达到主，这是很困难的，对主，你会摸不着！你现在跟主的这个关系先要去弄清楚。如果你在原来的地方，对那些人，你有负担带领他们，必须你自己对主先通，才会把他们带上属灵的路。(五饼二鱼交在主手里\--路9:10-17)我们并不是说，你要离开你本来的教堂。我们没有这个要求。要求，你也作不到。我们不要求你这一个，我们要求你里面这一个跟主没有间隔，跟主是打通的。</p>
+<p>祷告:爱我们的主耶稣，我们俯伏敬拜你，因为看到你自己荣耀的作为，许多地方见证了你的得胜，你也兴起了许多渴慕要你的弟兄姊妹，愿意来寻求你。虽然外面是一片黑暗，但你还得着对你忠心的人。主，你祝福这一班弟兄姊妹，寻找的就寻见，叫他们真实的走上你自己的道路。求主藉这交通叫我们里面眼睛被开启，真实的看见属天的呼召，给我们有厉害的转机，从外面混乱的情形里带到更深的认识你。主，把弟兄姊妹都交托在你全能手中，求你继续引领，叫我们里面给你开启对你有认识。我们对你有认识，一切就都明亮。主阿，求你带领我们，所有属灵的问题，你自己作我们答案，带领我们走在这条道路上。愿弟兄借着这交通被带领到你面光中，愈过愈有看见，在光中遇见光。你继续给我们恩典，愿一切荣耀都归给你。还有的交通，你继续保守看顾。祝福众弟兄姊妹，但愿我们成为你配蒙怜悯的人。这样祷告奉靠主耶稣基督的名。(阿们)</p>
+<p>(3月13-29日，选自2001年1月25日晚上交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月二十一日</h1><p class="meta">深渊与深渊响应 · 第112/366段</p><p><a class="btn" href="s111.html">上一篇</a><a class="btn" href="s113.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s112.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月二十一日</h2>
+<p>我们常用不是圣经的思想来套圣经的思想，其实是我们自己的思想。原来，神的话有神的思想，我们的思想若进入神的思想，跟神合起来，神的话就会成为我们的话。若我们的思想跟神思想相背，对神的话一直打问号，神的话在我们身上一直碰到抵挡，我们哪里能理解神的话？永远不能！</p>
+<p>对神的话理解不理解是另一回事。我们必须先接受属灵的话，对神的话要阿们(申27:18，26;诗89:52;罗11:36;门1:25)。明白的要阿们，不明白的也要阿们，因为神的话不会错。你这样相信，就会愈看愈对，愈看愈清楚。所以读经是要我们这“人”先有学习。</p>
+<p>那一本书《读经之路》，你们有机会该去看一看。在《文集》里，它叫“读经之路”，以前，初出版时(50年代)，本来叫《怎样读圣经》。它分两部份:第一是读圣经的人---注意读经的这个人，另一个是读圣经的方法。方法有二十多个，你适合哪那一个，就从那一个去念。因为一个人没有办法把二十多个方法全用，要接受也接受不完。就从你喜欢哪一类，你就从那一类去用。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

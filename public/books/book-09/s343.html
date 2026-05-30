@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月八日</h1><p class="meta">深渊与深渊响应 · 第343/366段</p><p><a class="btn" href="s342.html">上一篇</a><a class="btn" href="s344.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s343.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月八日</h2>
+<p>神常常把那些人看重为受恩之法的，给他们剥夺得光光的。很多时候，这些东西都没有了，实在是脱得光光的，神却叫你长大起来，叫你在属灵的生命上踏踏实实的。许多人很看重恩赐，可是他们的恩赐愈发展得大，生命愈空虚。过渡时期里，我们不反对发展恩赐，你可以照所得的恩赐去应用(林前12:1，4，9，28;彼前4:10)。但若你的生命一直不长进，恩赐就不会懂得去用了(林前7:7;12:30)。再者恩赐也是会错用的。所以，信徒要在神的亮光中一直有长进。</p>
+<p>天主教是只有一个团体，问题就产生在这里。更正教的团体有很多，但是只有散漫。在更正教中，许多道理都讲得不错，却都没有力量，只把人捆在一起，像漫山遍野的尸骨摆在那里，都是死的。这种光景必须神来吹气，等灵气一来，才成为神的大军队。这是神的工作。</p>
+<p>问:神的工作起头的时候，可否有一些外面的凭借，特别是为着初信的。</p>
+<p>答:你所说的，也是个过程。因初信的幼稚，起头可以用一下。但不能一直这样幼稚下去。《初信造就》一书，起头拿来应用比较好，却不能死死去用。每周规定一篇的用法也是个死教条。里面一篇作三次、五次用也可以，不要死用，限用。每一篇都可以再充实一点内容，每一篇也可以等到生命长进了，再增添一点造就。因为人是丰富的，是活的，就不会一直这样浅的。长进了，人就是深的。</p>
+<p>我们以前用《初信造就》时，许多年长，有事奉的弟兄，听到这些信息就很感动，里面每一题的信息都能穿透到人里面去，叫人俯伏。但许多人把它当作神学去讲就是死的。就是N弟兄讲的《人的破碎与灵的出来》，若是从道理去读也读不通。如果人有属灵的窍，这信息愈看就愈通。人能摸到属灵的东西，就有神的怜悯。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

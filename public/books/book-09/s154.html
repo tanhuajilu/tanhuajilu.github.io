@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二日</h1><p class="meta">深渊与深渊响应 · 第154/366段</p><p><a class="btn" href="s153.html">上一篇</a><a class="btn" href="s155.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s154.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二日</h2>
+<p>所以，当你祷告寻求神，当时你受圣灵感动，圣灵感动你，你就要跟着圣灵作出来，走上去跟从神。你在这件事上受感动，就一直一直地感动，但若你不动，你就是消灭他的感动了(帖前5:19)，圣灵就停止工作。所以圣灵如果对你感动，要听从。希伯来书说，如果你们今天听见圣灵的话，就不可再硬心(来3:7-8)。圣灵对你们说话，会比我们说的更好，所以你们这一次来，盼望主给你一个转机，看见新的东西，看见属灵的东西。</p>
+<p>弟兄交通(略)</p>
+<p>祷告:亲爱的天父，我们来到你面前敬拜你。你虽然在最高的宝座上，却与我们同在，这是你对我们的恩待。这次弟兄姊妹到这边来交通，主啊，因着你的怜悯，求你继续作你里面的工作，让我们能够同样地在属灵上有长进，在道路上走得更清楚。我们弟兄，明天要先离开，求主继续与他们同在，也借着他们在当地把你的荣耀越过越显明。让一切新的人从他们身上找到属灵的道路，求你祝福他们，也祝福一切凡是有需要的人，叫他们都能够碰到主，求主在这些日子做你更荣耀的工作。主啊，一切荣耀归给你，因为都是你作的，你继续与我们同在，救我们脱离所有的试探，为我们站在破口的地方，保护你所有的儿女，能够敬虔平安来度日，并敬拜你。把所有的弟兄姊妹都交在你手中，但愿一切荣耀都归与主，奉主耶稣的名祷告。阿们！</p>
+<p>(5月22日-6月2日，选自2001年1月26日晚上交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

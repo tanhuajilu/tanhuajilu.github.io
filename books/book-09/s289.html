@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月十五日</h1><p class="meta">深渊与深渊响应 · 第289/366段</p><p><a class="btn" href="s288.html">上一篇</a><a class="btn" href="s290.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s289.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月十五日</h2>
+<p>神的爱有没有凭据？神的爱在哪里？我对他说:“主耶稣是神的独生子，这就是神爱你的一个证明。耶稣基督降生，他是神的独生子，为着爱我们世人，神把他的独生儿子赐给我们，把主耶稣赐给我们。主耶稣摆在这里，就是神赐给我们的爱。”</p>
+<p>这个独生子，以前我们不体会，今天体会，因为今天国内，夫妇只能生养一个------独生子。我要你将独生子送给我，你不肯。我愿拿十万块给你买，你也不要，是吗？因为千万金银也没有办法生一个独生儿子。所以，一个儿子是很宝贝的。有的人说，什么是爱？主耶稣降生在伯利恒(提前1:15;路2:4-7)，神把他的独生子赐给我们(约3:16;)，这个已经把爱宣示出来。神的爱宣示出来了:“神爱世人”。</p>
+<p>“主耶稣爱我们，怎么说呢？因为他在十字架上为我们舍己，为我们牺牲自己，这个十字架就讲明他的爱(林后5:14;加2:20)。独生子来是表明神的爱，主耶稣上十字架是表明主耶稣的爱。爱谁呢？爱你。你把这个话套在你自己身上，这乃是为着你的。”他里面有感觉了，他说:“是，他是爱我了。”</p>
+<p>神把独生子赐给你作什么呢？“叫一切信他的。”我说:“你信不信。”他说:“信。”那么，信就包括在这“一切”里面，“一切信他的”。神爱世人，也爱你，“叫一切信他的”，你信他就包括在“一切”里面。我问，你现在有没有信神，有没有信这位主耶稣？他说:“有，现在信。”我叫他每一个字都念，他念“神爱世人，甚至将他的独生子赐给他们...。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

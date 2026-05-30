@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月八日</h1><p class="meta">深渊与深渊响应 · 第282/366段</p><p><a class="btn" href="s281.html">上一篇</a><a class="btn" href="s283.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s282.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月八日</h2>
+<p>我们里面有这位圣灵保惠师(约14:16-17)，外面还有圣灵的能力(路4:14;罗15:13，18)，里面、外面是相配起来的。像使用电器，你不懂得使用电，会运行不正常，就把整个电器破坏掉。这就是为什么有追求圣灵充满的人会犯邪灵，因他不认识圣灵的规律、原则，他自己乱搞乱作。他既要被充满，就有充满他的，邪灵就作工，因为他里面没有内容。</p>
+<p>所以，怎样追求圣灵充满？只要你正常。你正常，圣灵施恩就会作工，你不必祈求。你是正常的，他就给你充满，你工作到那里，圣灵的能力就跟着你到那里。主不会让你滥用能力，是你有需要，圣灵就随时作你的帮助。我们靠着神，随时随地都有圣灵的工作，不必禁食三天、五天，求圣灵来充满你。而是你是正常的，圣灵就不断的与你同工。这都是因为你里面正常，外面才有这个恩典。</p>
+<p>你里面若是没有即使禁食祷告，也没有圣灵充满。我们弟兄到国外去看，对外面的光景很看不惯。弟兄说:他们禁食，做完了，还等着圣灵充满------“哦，主耶稣！”大声祷告。有的人就躺在地上滚，这不正常。</p>
+<p>我们作人就作正常的人，作基督徒也作正常的基督徒，愈属灵愈正常。主耶稣做人正常，不是古里古怪的。他在船上也在睡觉，风浪起，门徒叫醒他说:“夫子，我们丧命啦”主就安静起来，不紧张。一站起来，他说一句话:“静了吧！”风浪就停止(路8:24)。但是他不是一直叫风浪停止，不是，乃是有需要就做，没有需要，他就不做。</p>
+<p>主耶稣做人正常，我们也是这样，在人群中也是平平凡凡，差不多的，不是说属灵的东西要特别与人家的不一样。那么，就平平淡淡吗？不是！到了有神的工作，提到神严肃的事情来，神就在那里出来。所以属灵的事情在人里面是一个事实。要怎么样去经历，要使用灵。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

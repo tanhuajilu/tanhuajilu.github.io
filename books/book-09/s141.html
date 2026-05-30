@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十日</h1><p class="meta">深渊与深渊响应 · 第141/366段</p><p><a class="btn" href="s140.html">上一篇</a><a class="btn" href="s142.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s141.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十日</h2>
+<p>如果我们不三不四，污污秽秽的，虽然讲有生命，实际就没有发生效力。但若你讲话有能力，人就有所得着。你讲话没有东西，人就没有得着，这很实际。</p>
+<p>所以基督徒要讲感恩的话(太11:25;罗7:25;14:6;林前1:4)，讲感谢的话，常感谢，常赞美。你若都是埋怨神，叹息，哪里有平安喜乐？你感恩，别人听见了也跟你感恩。你说苦，别人听的人也跟你一起苦了，你这个苦不止自己苦，还会把苦带给人，叫别人更容易苦。所以我们要帮助人，自己先得被主充满。</p>
+<p>让我们有属天的生活，把这个生活带给弟兄姊妹。所以从你里面要有一个转折，或是思想里面要有一个转折。好象船有舵，这个舵要对准你要去的目标，你才能到达。如果你的船一下子这样，一下子那样，那你的船就没有一个目标，你就达不到目的地了。</p>
+<p>所以现在你要认定主，主要给你的钱一个都不会跑掉，不给你的，你今天得着，明天也会飞掉了。还有，圣经说，钱会长翅膀飞走的。你这么多钱，用到哪里去呢？你住医院就花掉了那么多钱。有些人说，他住医院花掉的钱够他应该奉献的钱。应该奉献而不奉献，会有一个东西给你漏掉！或许是给病漏掉了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

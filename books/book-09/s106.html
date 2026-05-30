@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十五日</h1><p class="meta">深渊与深渊响应 · 第106/366段</p><p><a class="btn" href="s105.html">上一篇</a><a class="btn" href="s107.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s106.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十五日</h2>
+<p>如果人这主观思想、好多的传统思想经过了破碎，他就会比较客观地去读圣经，对圣经的印象就比较会清楚一些。</p>
+<p>比方说:一个有主观思想的人，他对圣经，就会解释为他主观的看法。以受洗为例，圣经明明说，受洗是受浸，受浸的人是从水里上来(太3:16;太8:39)。他却接受不下，总以为他那个是最对的了。他对圣经怎么会懂？读到安息日，他以为一定要守。你说这是个影儿(西2:17;来10:1)，象征主作我们的安息。虽然你说了，他怎样都不肯接受。他就是，我要守安息日。这样的人对圣经所记载的，关于主日、安息日的分别，又怎么会清楚呢！</p>
+<p>所以什么种的人，传什么种的思想，他就会出怎么样的解释。如果我们没有他那些，能比较客观的去看神的话，就不会有这样的成见，使圣经的真理，因经过我们主观的思想而变了样，叫自己也接受不下。</p>
+<p>所以一个多受神对付的人，客观对神的话就很容易接受。特别初得救的人，他没有那些宗教的东西装在里面，接受神的话很快，一得救，他就像一张白纸，以后怎样写上去，就很重要。写上去的是好就显出好，写上去是不好的，就显明是不好的，要改也改不来。所以我们对初信的人的帮助，一定要谨慎，不谨慎的话，他们好好的一个人，就给我们带领带坏了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

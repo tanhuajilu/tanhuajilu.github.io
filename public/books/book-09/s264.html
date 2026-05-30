@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十日</h1><p class="meta">深渊与深渊响应 · 第264/366段</p><p><a class="btn" href="s263.html">上一篇</a><a class="btn" href="s265.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s264.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十日</h2>
+<p>交通:我对主说:“主阿，我一生这么寻求你，你让我遇到这种环境！”神像把十字架强压在我身上，叫我勉强背他十字架。我说:“主阿，我感谢你，你给我安排的是要命定叫我走这个十字架的道路。我愿意背你的。”原来，我在里面受压，这时，主爱的甘甜出来了。主是在我里面为我背十字架，与我同走这天路，我里面的生命就出来。虽然里面艰难，但是里面很喜乐很平安。</p>
+<p>答:她(妻子)信吗？(应:信。)也是神的怜悯。如果迟几年，她不信，将来的困难就更多。</p>
+<p>交通:愈跟神争，愈没有路走，愈早谦卑在神面前，神会带我们过去。我也知道，神用家庭的问题来对付我的个性和剥夺我天然的东西。一年以后我自己省察一下，外面的东西少了很多，里面的东西就多了，这是我感觉的。对顺服主的道路，现在就比较通一点。</p>
+<p>在世上是很短暂的。弟弟跟我同年同月同日生，他回天家的时候，我想，活在世上没有什么益处，有主的恩典，有主的怜悯才有用。活在世上最大的目的就是讨主的喜悦(帖前2:4;4:1;西1:10;来12:28)，尽我们的本分。我们的心向着主，一直亲近主，为主活才有意义。我想到我们的主耶稣，他也是走这一条十字架的道路，顺服父神的旨意。这条路愈走，心里面愈喜乐、平安，愈感觉值得。这是我的感觉。</p>
+<p>答:你弟弟过世了。他有很多属灵的书，这些书，你要跟他保管。他每次来交通都是要书、要书，他的书很多。既然这些书留下来，你要给他保管，留着自己看。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

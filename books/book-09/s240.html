@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-八月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>八月二十七日</h1><p class="meta">深渊与深渊响应 · 第240/366段</p><p><a class="btn" href="s239.html">上一篇</a><a class="btn" href="s241.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s240.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>八月二十七日</h2>
+<p>交通一:最近渐渐有一点学习。以往，以为自己懂得多少，或知道多少，就能够给别人，今天感觉不是这样。因为我们如果把知识给人家，就跟里面圣灵给的不同。让我们学习，给人家的是由里面感动出来的话，这给人家听起来的感觉，和不是感动给人家的，听起来不同。你给我们交通一点，怎样去摸到别人家里面的需要？</p>
+<p>交通二:我们以前大多数有一个认识，就像刚才弟兄说的，在交通中是把我们在经历中所认识的说出来，这比较踏实。但如果还没有经历，说出来虽然也是正确，在真理方面就缺少那个扎实的感觉。</p>
+<p>答:我们对真理的认识，一方面，真理有客观的，一方面也有主观的。客观的就是在圣经里神的话，他的话已经讲出来，这些话都是神默示人写的(提后3:16;彼后1:21\--“被圣灵感动”或作“被圣灵移动、被圣灵驱动”)，也就是:圣经都是神的话，你把它拿来讲，就是讲客观这些真理。当我们有点经历，这些客观的也成为我们主观的。</p>
+<p>但是客观的真理，是很大的，无限的，而我们主观认识的，也只是那么一点点。所以才不能主观讲:“我已经看到的，都完全、都对了。”因我们还有很多没有看见。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

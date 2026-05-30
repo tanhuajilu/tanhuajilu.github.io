@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十八日</h1><p class="meta">深渊与深渊响应 · 第28/366段</p><p><a class="btn" href="s027.html">上一篇</a><a class="btn" href="s029.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s028.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月二十八日</h2>
+<p>我们想:我要多好，才敢到神面前来。我不行，就不敢。昨天某弟兄说的对了，他说:“我反正是神的儿子，浪子也是神的儿子，不象样也是神的儿子，就用这心态到神面前。”不然，你一直内疚，不好意思。</p>
+<p>若今天得胜，我们晚上祷告，胆子就大，声音顺畅；若发脾气，祷告就没有胆量，不敢讲什么。这些都是人的感觉。但我们到神面前不是凭自己，是凭着耶稣基督的宝血(彼前1:19)坦然无惧的到神面前来(来10:19)，我们是穿上基督作义袍，坦然面对神。每次到神面前都靠着基督，不凭自己。</p>
+<p>我们为什么穿衣服？为遮盖羞耻。亚当夏娃犯罪，在神面前觉得羞耻，就逃避，用无花果叶子作裙子遮羞，风吹就破，羞耻显露出来。所以神用皮子给他们作衣服，叫他们可以到神面前。我们自己没有办法用行义盖罪，所行的义在神前不过破烂的衣服。或许我们想，破衣可以补，结果愈补愈破，没有办法。那么，我们把破衣全丢吧！全然穿上基督作衣袍、作新衣，坦然无惧的来亲近神。我们可以时时刻刻在基督里见神，不是凭着自己。</p>
+<p>我们这些人，长得漂亮的要穿衣服，长丑的也要穿衣。不能说:“我漂亮，不用穿。”也要穿。到神面前，你觉得好，或觉得不好，都要穿上基督，没有基督，就没有胆量到神面前去。所以，我们每一次到神面前都凭基督，每一天都在基督里活在神的面前，有不如意的事，都在主宝血洁净下过去。</p>
+<p>我们有很多软弱、犯罪，在基督宝血里，只要我们承认，就过去。得救全靠恩典，得救以后的一生，还靠恩典。人的观念是得救靠恩典已经太好了，以后很多事情，我要做好行好来补充。神不要你补，神只要你用信心去信。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

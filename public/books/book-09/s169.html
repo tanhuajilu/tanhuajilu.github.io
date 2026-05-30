@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十七日</h1><p class="meta">深渊与深渊响应 · 第169/366段</p><p><a class="btn" href="s168.html">上一篇</a><a class="btn" href="s170.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s169.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十七日</h2>
+<p>所以你不要苦说，灵与魂怎么样分开？神会做工，会给你分开，给你分开了，你就越清楚，越有认识。你越认识肉体，越认识神，就有一直不断的进步。所以我们的进步，都有一个程序，但我们这个进步是无底止的，这样才会丰富。</p>
+<p>你有进步，就有恩典带领你，没有进步，只会停在那边。今天你已经看见，但是还要在光底下，你还是要多参考属灵的书籍，多找弟兄姊妹交通。</p>
+<p>在你那边也是很有福气，因为有几个弟兄姊妹里面是通的，好几个弟兄，他们里面是比较有交通、有认识的。你回去跟他们接触交通，我相信再过半年，你里面感觉更不一样。这起先只是给你有个接触，但是不要停在这里。好象主耶稣医好了一个瞎眼的人，医好以后，主问他:“你看见什么了？”他说，我看见人好象树木走来走去。以后，主再作工，他就看得样样都清楚了。</p>
+<p>一次明亮，再一次明亮，我们的交通是越交通越明亮的。好象铜镜越擦越亮，不擦就有灰尘，就模糊了。我们的交通是灵里彼此再擦一擦。交通交通，你就有光，看得更清楚。你有时间，可以拿一些属灵的书来参考，你就从交通，从圣灵的带领，从主的恩待，得到属灵生命的帮助。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

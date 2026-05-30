@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月五日</h1><p class="meta">深渊与深渊响应 · 第340/366段</p><p><a class="btn" href="s339.html">上一篇</a><a class="btn" href="s341.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s340.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月五日</h2>
+<p>许多的奥秘，时间一到，就会显明。今天，因为我们还幼稚，就明白不来。至于过去的，现在的和将来的事﹝就是在历史上的事﹞，启示录也有说到，这里面就有很多关于表号的。有人很注意这些，日夜留意世界大事。至于我们，我们要生活要追求主，这些宇宙中那么大的事情，我们是没有时间理会。他们在这方面有注意的，我也听他们讲，但只是听而已，参考参考。</p>
+<p>讲到看属灵书籍，要看书是谁写的，就是要注意写书的人。呼喊派的人，我们一般把他们的错都归到他们的带头人身上。我看也有很多的错是那些跟随的人搞出来的。</p>
+<p>论到启示录，在认识上我们有把握才说，没有把握的，就不说。不过，读启示录，是有一个概念，就是主要再来(启2；25;3:11)。至于国度时期，城内城外的是什么人等等无谓的争辩，我们不争。只有涉及基本真理的，我们持守，像基督是道成肉身等，我们是要持守(约1:14;约一4:2;约二1:7)。</p>
+<p>保罗遇过“假弟兄”的危险，我们在这里却经历过“真弟兄”的危险。当巴拿巴把扫罗带来，门徒听见他﹝扫罗﹞就怕，这个“怕”，我们理解。司提反被害时，扫罗是受命看守衣服的，接下去，彼得坐牢、雅各被刀杀害，扫罗又拿文书捉拿门徒。现在他竟成了基督徒！</p>
+<p>有些信徒听启示录，听到灾祸就怕，我说:“你听到主耶稣要来，你反而怕吗？你是怕灾难，怕审判，怕没有预备好吗？如果是这样，就是没有得着造就。”主就是爱，主再来，我们爱主才对。主必快来，不爱主的可咒可诅呀！念启示录的人该是等候主再来的人。以前N弟兄出版基督徒报和复兴报，末了常有“致各等候主再来之人”的话。我们在这里，也要成为等候主再来的人。所以我们不要顾虑那么多，或许主今天就来，或许明天要来，在这里我们是讲现在的事，就是讲爱主的事。那些人讲很多但以理书里什么的，我也不懂得。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

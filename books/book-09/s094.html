@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月三日</h1><p class="meta">深渊与深渊响应 · 第94/366段</p><p><a class="btn" href="s093.html">上一篇</a><a class="btn" href="s095.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s094.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月三日</h2>
+<p>我们不只有宝血叫我们干净，洗去我们的罪恶(启1:5)，我们也有圣灵(林前6:11)，就是水借着神的道洁净我们感觉污染的东西，而得到洁净。</p>
+<p>我们彼此交通也是彼此洁净。有时我们心里很下沉、内疚，但有弟兄一交通，就带过去了。所以一切污染的东西，只要去洗一洗，就够了。(约13:14)</p>
+<p>我们这双手天天作工，总会被污染，若去洗一洗就解决。沾染了，不是说给它砍掉，砍掉就没有了。所沾染的肮脏是外面的，洗一洗就掉下去。</p>
+<p>但若身体里有毒，这要洗也洗不掉。身体有毒，就要从根本去治疗。你看，那患了病的，该做手术就做手术，该用激光就用激光，该用什么治疗就用什么治疗，用各种方法来医治里面的病。所以，很难把里面外面去分。有时，外面一点点要求，就叫人里面好像不能过去的。</p>
+<p>至于外面的污秽，你洗一洗就干净了。所以，我们每天都需要宝血；你知道的罪或不知道的罪，在宝血底下，神没有看见我们的罪。如果我们感觉有亏欠怎么办？有亏欠就到神面前来，神用水借着道来洁净我们。基督的宝血有功效，也洁净我们，什么都会过去。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

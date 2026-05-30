@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月三十日</h1><p class="meta">深渊与深渊响应 · 第335/366段</p><p><a class="btn" href="s334.html">上一篇</a><a class="btn" href="s336.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s335.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月三十日</h2>
+<p><strong>问:年青人很容易受社会、金钱等诱惑，以前爱主热心，现在读经也变表面化，甚至离开了主。这样的基督徒愈来愈多，尤其是年青的。这情形下，我们可以作些什么？</strong></p>
+<p><strong>答:是，在各地都有很多青年基督徒。不过，还是先从我们个人说起，别人我们暂且把他们放下。对待这些情形，我们都有自己的想法，我们常一直问说:怎样，该怎样？路很简单:先从自己开始。</strong></p>
+<p><strong>首先，要肯定你是信主得救的，主住在你里面，这是个事实。主既在你里面，祂不改变。我们这边改变，他也不改变(</strong>来1:12;13:8;雅1:17<strong>)。主不会改变，是不是个事实？﹝应:是。﹞所以，每当我们到主的面前，要相信他不改变！</strong></p>
+<p><strong>提问(一对新婚夫妇):信主以后就该想怎样奉献给主，为主作一些事，是吗？</strong></p>
+<p><strong>答:我们要奉献给主，作个奉献给主的人，你有否奉献？(略停)讲到奉献，人的理解是要去作传道，要献上钱财。不一定是这样。你奉献给主，就是让主得着你。主在你里面，主是你的。你奉献给主了，你就是主的。结婚前，你是你，她是她﹝指弟兄新婚的妻子﹞。你们两人结婚了，二人便成了一个，这是个事实。以后，两人会有矛盾，但你们还是夫妇；以后，矛盾还很多呢，这是以后的事。</strong></p>
+<p><strong>以前你是一个人穿，一个人吃，现在你在吃，也想到太太要吃，你在穿，也想到太太要穿。你的生活一切，都和太太连在一起。照样，你去奉献给主，一切就都是主的(罗6:5，11;7:4;</strong>林前<strong>6:13，17，19)。这关系要先把它理好。像火车在铁路上开行，火车头跟车厢的钩要先挂起来，火车一开，都带往前去了。</strong></p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

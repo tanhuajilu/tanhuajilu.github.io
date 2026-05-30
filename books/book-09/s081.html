@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十一日</h1><p class="meta">深渊与深渊响应 · 第81/366段</p><p><a class="btn" href="s080.html">上一篇</a><a class="btn" href="s082.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s081.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十一日</h2>
+<p>性质一样的，才能同心合意。就是有个别古怪不同心的，摸到了这一样性质的也得同心，因为在这时候，那不同心的也不能违反这条路。如果违反，不同心的人数目多，那要同心的也没有办法站住，因他们的力量大，这都是力量的对比。我们是相信:神的力量要胜过人的力量。所以，我们是靠着神，才有胆量来讲神的话，没有靠着神也讲不出去。连保罗也说:“也为我祈求，使我得着口才，能以放胆，开口讲明福音的奥秘”(弗6:19)。神的道若没有力量去见证，愈见证只会愈软弱，愈沉下去，听道的人会听到睡觉。讲的也许尽力讲，但更需要圣灵的工作，圣灵会给人有胆量。没有胆量，力量就少。有胆量，靠主壮胆，就不怕听众的情形，因你里面有主的托付，要把主的托付带出去，把一切障碍扫倒。若没有能力，你扫不出去，也不能把它拉上来。这一个你自己要学习，要有进步。另外的一面，你还要有几个人和你同心。</p>
+<p>很多人羡慕有“五千银子”的恩赐，我们没有“五千”，就是“两千”也没有，只有“一千”(太25:14-30)。一个人“一千”，但十个“一千”就成一万，要胜过一个“五千”的了。这就叫作“身体”。身体是我缺少你不行，你缺少我也不行的。左手跟右手，没有了左手，右手难受，没有了右手，左手难受。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

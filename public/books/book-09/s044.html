@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十三日</h1><p class="meta">深渊与深渊响应 · 第44/366段</p><p><a class="btn" href="s043.html">上一篇</a><a class="btn" href="s045.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s044.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十三日</h2>
+<p>问:教会是基督的身体。教会会变？怎么会变质？今天教会很乱，可以说是教会变质吗？因教会是基督的身体阿。</p>
+<p>答:教会的本身就是基督的生命，这性质永远不变，只是教会到了人的这一面来，有变，变的是人阿。所以“人”要对付。如果没有对付，就会把世人的东西拿来，愈作愈离奇，离开教会的本质。教会的本身不乱，甚至教会的本质不变。但，出现到人这边来，常常变，变的是人。所以神要对付的就是人。所以，讲到教会，也有两方面。一方面，讲到本质方面，是有复活的生命。有这种内容在我们里面，自然有一种外表</p>
+<p>(教会:太16:18;弗1:23;5:23;提前3:15;弗2:15;4:24;西3:10)。另一方面，教会的内容失去了，就落在一个组织里头，没有主作元首，没有圣灵掌权。人也很复杂，只有一个教的外表(就是教会的表面)(太13:31-33)。所以，我们不去注重外表。外表做得最好，如果里面没有内容也是个空架子。教会的内容是什么，就是基督的生命。我们注重基督的生命。人有几个，就这几个同作见证。有几个属灵的人代表教会作见证，这个见证就是有代表性的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月四日</h1><p class="meta">深渊与深渊响应 · 第125/366段</p><p><a class="btn" href="s124.html">上一篇</a><a class="btn" href="s126.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s125.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月四日</h2>
+<p>无知的人就会做好多无知的事情，神也没有计较我们。好多时候因为神有赦免之恩，神的慈爱永远长存(诗118:1;136:1)，神的怒气一下子就过去(诗30:5)。所以，只要爱神、认识神，好多我们这边不好的，一下子就过去了，神会把我们带过去。</p>
+<p>神有赦免之恩，大卫犯那么多罪，神一下就赦免他了，这个就是赦罪的恩典。至于神政治的手，神做到一个时间够了，神会解除这个政治的管治，就释放了，得着政治的赦免。所以一定要从神这边去认识神，才不会把我们所想的来代替属灵的东西。我们的东西，出于自己的越走越无路，越走越难，就是要有神的光。只有神的话才有光照，神的话才是真理，才会释放我们，光照我们。</p>
+<p>以前，我们认为我们是顺服了，在家庭里面很顺服了。当弟兄们讲到这个的时间，我们就觉得，唉啊，我们是那样的悖逆神啊！悖逆神表现在哪里呢？神，你是绝对看不见的，悖逆是表现在我们对这些代表权柄、间接权柄身上。在这一层上，神的权柄，你还不容易碰到，但是神把间接权柄排在我们身上。我们对这些神代表的权柄是什么态度呢？这个就是实际。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

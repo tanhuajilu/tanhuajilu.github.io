@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月一日</h1><p class="meta">深渊与深渊响应 · 第61/366段</p><p><a class="btn" href="s060.html">上一篇</a><a class="btn" href="s062.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s061.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月一日</h2>
+<p>神学院教授给你说:“我们要称呼上帝，不要称呼神。”(应:祷告时就改称上帝。他们说，神太多了。)看这问题，他(教授)就是从字眼来看问题------神哪、上帝哪。我们这边是说:“神。”我们说神，他们提出什么神字的大写、小写。小写是众神(gods)。其实圣经里(英文里)，有大写有小写，大写就指着独一的神(GOD)，小写是指邪神(gods)。大小写就分别神及诸神。他们说要翻译为上帝。中国人也有拜“上帝宫”的。偶像中有一个叫作“上帝宫”的，要人去敬拜这上帝！他叫人称呼上帝，这情形又怎么去分别？</p>
+<p>我们现在，用上帝也可以，用神也可以，就是指这位创造万物的主(赛44:24;诗86:10)。因为心目中讲的上帝就是这位创造万物的主，讲神也是指创造万有的神，你认定这个是真神，名称讲得不一样也不要紧，是不是？好多人叫我柯老先生。有人对柯字不认识，就念作“何”，他不懂这两个字，以为差不多就称我何老先生。我知道他对这二个字不认识，我也答应他，因他认定是我。有人还写可先生，我也知道他在称呼我。</p>
+<p>神是万能的，你用“神”、用“上帝”都可以。就像你用中国话祷告，祂会听，你用英文，祂也听，你用土话讲，祂也听，什么话，神都听得到。祂不理你用什么名称，祂知道你指着祂祷告。因你跟祂有关系，祂就听。所以人用这些做文章，太没有意思了，因指着的就是同一个东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

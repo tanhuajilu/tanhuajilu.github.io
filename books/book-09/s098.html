@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月七日</h1><p class="meta">深渊与深渊响应 · 第98/366段</p><p><a class="btn" href="s097.html">上一篇</a><a class="btn" href="s099.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s098.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月七日</h2>
+<p>有个人问我说:“神在这里有什么心意？你有没有得到启示亮光？”我说:“神如果今天有启示有话语，这话即使讲出来，人也没有耳朵听。今天你要得到交通，你问很多问题，耳朵却没有办法听。”那个人也是很热心作工的，他说:“现在机会那么好，门已经开了，你还不作。”我说:“恐怕没有耳朵听。单单你就没有耳朵听！”</p>
+<p>神一有工作，人里面会有听见，会有看见。神在那里！他们说:“我都没有看见你在做什么？”我说:“是呀！我们作的，也不用告诉你。神今天做的工作，你都不知道。神在隐藏里作的，你不知道。”如果是粗俗的东西，满地都是，如果是贵重的东西，你找不到地方去看这些东西。神的东西是高贵的、尊贵的，而人的东西是卑贱的，是低的。神作工，你摸不着。</p>
+<p>所以，从各地来交通的人，我们看到各不一样。有些说不过如此，因他们有他们的观念，有帕子盖在脸上。这帕子如果除去了，就看得到。(林后3:13-16)</p>
+<p>起先，我们几个人有这样的交通，后来，有通的人也变不通，但也有不通的人变成通的了，都是我们想象不到的。这是神的工作。但是我们不因着不通而灰心，我们要为着通的人来感谢神，因为神在这里有工作。这些不通的人，如果他要寻求神，迟早是要走这条路。因为路只有一条，主耶稣就是路，通天的路就是主耶稣。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

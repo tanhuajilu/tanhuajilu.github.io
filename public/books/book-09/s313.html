@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月八日</h1><p class="meta">深渊与深渊响应 · 第313/366段</p><p><a class="btn" href="s312.html">上一篇</a><a class="btn" href="s314.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s313.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月八日</h2>
+<p>人用魂不能带出属灵的工作，灵工必须要用灵来做，正如思想的工用思想做一样，一点不能混。体力与思想不能混，魂与灵也不能混，因为生命都是各从其类的(创1:11，12，21，24，25;6:20)。灵的、魂的、体的这三方面，你要弄明白，弄清楚才有路走。属灵的路就是里面的路。圣灵要覆庇我们的灵、魂、体。属灵的道路，这个要去走通。如果看得不清楚，就求主开心窍，心窍一开就明白(路24:45;来5:14)。像有些人讲方言，我们不懂，经过翻译，我们也可以听懂。</p>
+<p>在交通中，得着一、两个人能通，就比对很多人讲道更好。得到的这些人回去以后，无论他们在那一方，神继续地作工成全，以后再见面交通，就更通了。因为神是无限的，人是有限的，有限的人被无限的神充满，也变无限了。</p>
+<p>交通就把我们这个人带到光中，且被光照倒，像保罗在大马色路上的经历，他在光中就被打倒。叫人服人，这是太低了，人俯伏在神的光中才是真的服下来。N弟兄说:“最怕神的话向我封闭。如果神的话向我们开起来，我们就能听懂神的话，看懂神的话。所以不在乎人，不在乎人的聪明以及人天然的能力，乃在乎发怜悯的神。人的里面被主打通了，这才是宝贝。</p>
+<p>你自己通了，就能运用神的恩典，你问讲道要不要准备？人问N弟兄这问题时，N弟兄说:“讲道要准备，也不要准备。”如果准备，要准备二十年，不准备，是因为里面己经有这么多的学习，己经有这么多活的话了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

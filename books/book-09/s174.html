@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月二十二日</h1><p class="meta">深渊与深渊响应 · 第174/366段</p><p><a class="btn" href="s173.html">上一篇</a><a class="btn" href="s175.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s174.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月二十二日</h2>
+<p>圣经说，若有人犯罪，在神与人之间有一位中保(约一2:1-2)。所以我们每一次到神面前都靠这位中保。主耶稣今天在天上就是做我们的中保。祂在地上的时候，祂做罪人的朋友，做罪人的救主。今天，祂在天上做我们的中保。主作中保，也作我们的祭司。一方面他作祭司事奉神，一方面做中保叫我们跟神亲近。他叫我们靠着祂坦然无惧到神面前，所以，我们到神面前不再恐惧，可以坦然无惧。</p>
+<p>我们不再惧怕根据什么，根据基督。主耶稣今天在天上为我们做大祭司，做中保(提前2:5;来8:6;9:15)；他为我们祷告，代祷(来7:25)，为我们讨神的喜悦。有的圣经译文说，中保就像律师一样，帮我们处理我们有问题的东西，好象律师处理案件。我们这些案件包给律师处理，有问题，他就用律法来解释清楚。我们就有这样一位伟大的律师，就是中保主耶稣。不管神怎样与我们算帐，就有主耶稣为我们做中保，为我们说好话，为我们处理，我们可以坦然无惧到神面前。</p>
+<p>因为主耶稣曾经做人，他会体贴我们的软弱，我们好多的软弱，他能体恤我们。祂曾经经过做人的软弱，所以祂体恤我们的软弱。他会替我们祷告。我们有这样一位大祭司，我们可以靠着祂来亲近神。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

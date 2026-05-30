@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十七日</h1><p class="meta">深渊与深渊响应 · 第58/366段</p><p><a class="btn" href="s057.html">上一篇</a><a class="btn" href="s059.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s058.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十七日</h2>
+<p>你们乡下人特别纯朴，各方面比较简单(知识分子就想得很多)，而属灵的路就是简单的，复杂是我们自己弄出的。我们的意见、我们的看法，都要参与在神的道路上。圣经说，神不用人作祂的谋士(罗11:34)，给祂提议，帮助，神自己已经弄得好好，我们只要顺服、听命就是。虽然理由不通，我们还顺服</p>
+<p>(顺服:雅4:7;王上11:4;腓2:8;腓2:12)。</p>
+<p>理由不通不要紧。理由不通是思想的问题，神的事很多却是心灵的问题。许多时候，心灵的问题能通，你却讲不出来，但你里面碰到主。你虽然没有办法把感觉讲清楚，自己里面却很通，你会说:“神阿，我们很亲近，虽然不能理解。”因这是每一个人对神的关系，每个人都跟神有那个亲密的关系，也可以说每一个人都有跟神的秘密。你跟神秘密的关系，你自己知道，我不会知道；同样，我跟神的关系，你也不知道，只我自己知道。这就是奥秘。</p>
+<p>你感觉神多爱你，你也讲不出来神多爱你。神怎么爱你，你会讲清楚吗？讲清楚的只是外面一件一件的，还不是爱的本身，只是爱的一点表露。祂爱你怎样，就给你怎样。这爱乃是里面的一个奥秘！</p>
+<p>有些小孩，我们问他:“你妈妈爱你吗？”他说爱！“怎么爱，讲一下。”他说:“讲不出来，就是爱！”我说:“恐怕没有爱，不然，怎么讲不出来？”他说讲不出来。我说:“你再想想看。”想不出来，就是妈妈爱他！小孩不必说...有爱就温暖，母爱很温暖，所以他感到母亲很亲。爱是个奥秘、奇妙。神的爱是怎样的爱，讲不了。如果讲几件，爱也太小了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月二十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月二十日</h1><p class="meta">深渊与深渊响应 · 第51/366段</p><p><a class="btn" href="s050.html">上一篇</a><a class="btn" href="s052.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s051.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月二十日</h2>
+<p>在主复活以后，不只马利亚，还有别的门徒，都先后碰到主。圣经说，“门徒看见主，就喜乐了。”(约20:20;16:22)能够叫我们喜乐的，就是主本身、主自己。当他们在那边找主，天使说:“祂已经复活了，不在这里。”他们是在死人中找活人，哪里找？祂已复活了。</p>
+<p>在很多的宗教场合，你要寻求主，就是在死人中找活人，找不到！但是当你找到我们里面有一个东西的人，你找到；藉弟兄姊妹的一句话，或是遇到一件很平常的事，都会带你去认识主。所以你们今天对神的寻求，不是从人这边想怎么追求，就是要有一颗要主的心。圣经说，寻找就寻见(太7:7)。主就在你里面。盖恩夫人就是从外面去找，好久没找到，后来她有一点感动:“我怎么在外面去找我里面的主？回到我里面不就找到，我何以在外面去跑？”但是今天的人，却在外面整天去跑去找，他忘记主已经在他里面。</p>
+<p>因主在我们里面，盖恩夫人才称之为里面的道路。属灵的道路，就是里面的道路。因我们得着主的生命，在我们里面是一个新人，是新造的人，圣经称之作里面的人。外面的人天天朽坏、衰败，里面的人却天天更新。外面的人就是我们的天然生命，是日渐衰败的；里面的人是基督，是天天更新的。不是外面去作，乃是里面活。所以基督徒不是人用人工去作的。基督徒是基督的生命在我的身上，越来越丰满，并且这些满出去就是神的生命，叫人碰到神，不是碰到人。人没有什么希奇，没有什么宝贝。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十九日</h1><p class="meta">深渊与深渊响应 · 第303/366段</p><p><a class="btn" href="s302.html">上一篇</a><a class="btn" href="s304.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s303.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十九日</h2>
+<p>问:是否要把这个给弟兄姊妹解释清楚？</p>
+<p>答:要解释，也只会变成一个理论。所以对圣灵，也是要认识圣灵。要认识神﹑认识基督，也要认识圣灵。不然，就只能是一种理论，因为圣灵是谁，他不知道。</p>
+<p>我们认识神，因为我们可以经历神。我们认识基督，因我们可以经历基督。我们也可以认识圣灵，因为我们可以经历圣灵。这一切，我们都可以认识，因为都不是理论，都是可以经历的。</p>
+<p>我们可以经历五旬节，因为主耶稣已经钉十字架﹐就不必再钉。主已经坐在宝座上，圣灵已经降下来。主耶稣死了，你信就得救。他的宝血已经流出，你信，就得救赎。他已经复活，你信就经历复活的生命。他的圣灵已经赐下，你信，就得着圣灵(加3:5，14)。</p>
+<p>所以，我们是凭着信去经历，就能认识。我们是凭着信心，不是凭着感觉，凭感觉就有危机！</p>
+<p>(10月17-29日，选自2000年7月25日上午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

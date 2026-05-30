@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十九日</h1><p class="meta">深渊与深渊响应 · 第364/366段</p><p><a class="btn" href="s363.html">上一篇</a><a class="btn" href="s365.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s364.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十九日</h2>
+<p>问:生命如何吞灭死亡。</p>
+<p>答:圣经说，有生命就吞灭死亡。像人的身体有抵抗力才灭掉细菌，没有抵抗力，细菌一来，人就患病。</p>
+<p>什么是属灵的死亡？</p>
+<p>说话最容易散布死亡，一下不小心，话出去，就把死亡带进来。如果人听了话，里面感觉不很舒服，就要留意了。我们若顺从灵，圣经说，结果就是生命、平安，就把死亡吞灭。(罗8:2，6;林后5:4;提后1:10;约一5:12)</p>
+<p>有一个地方，几位弟兄一同负责，一同交通，但是彼此有意见。后来，有二位在他们中间的弟兄先来交通，他们来了就讲理评理，讲了很多。我就说:“这些意见看法，要学习放下。”他们问:“怎样放下？”我说:“你们都各自带来一团东西，在里面放不下，一直彼此存在着意见，神在你们中间的祝福就漏光漏掉了。”他们说:“是，我放不下。”我说:“你放不下，就因你这个人，这个&#x27;己&#x27;。你要到主面前和主交通一下，把一切都归纳到主那里，就会释放。”</p>
+<p>经过交通，他们就释放地说:“什么问题都不存在了，大家都通了。”对方的弟兄还不能相信，后来也来交通，又是说他们的理由，说彼此对或不对的事。我说:“他们既然说通，就是通了。他如果不通也不会说出&#x27;通&#x27;的话来。如果是不通的，去讲也是很勉强的。他们听了话，就说:”我通了。“我却说不行，听别人的话去作的，都是被动的，只是给人家面子，这个不行。后来他们回去了，不久，又打电话来说:”我们通了。“以后，他们彼此的配搭，关系就更紧密了。经过交通大家都是低下头来的﹝都是谦卑的﹞，就和谐了。对一些事，常有弟兄说:要怎样怎样，大家要说清楚。我说:”通了就是通了，不必再讲。“</p>
+<p>十字架是不讲理的。像约伯的三个朋友，他们愈讲，愈增加约伯的痛苦。约伯也在辩白，但是辩不清楚。只等神一显现，约伯就厌恶自己，厌恶自己所说的话。因为在光中的，都会厌恶自己的话。</p>
+<p>也有一位弟兄，多次来交通都说到某弟兄。我严肃的跟他说:“你再说这个话，一直怪这个怪那个，就是苦待自己，再讲，讲多了，自己也堵死了。”</p>
+<p>说许多理由的人，你跟他讲，讲不了。一口二舌的人，你讲输他好啦，正直的人是不会讲的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二十三日</h1><p class="meta">深渊与深渊响应 · 第83/366段</p><p><a class="btn" href="s082.html">上一篇</a><a class="btn" href="s084.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s083.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二十三日</h2>
+<p>问:(讲为别人生孩子祷告的事。)</p>
+<p>答:我们今天是在新约里，不是在旧约里。新约，保惠师圣灵住在我们里面(约14:17)，是每个信徒都有的。每个人对神都有直接的交通，神也在每个人身上有直接的引导(约16:13;罗8:14;加5:18;帖后3:5)。所以，每个人都要到神那里去和神打交道，去祈求。</p>
+<p>代祷是可以的，但为着“那个事”代祷，并不是我们去把那个事包下来。你要把事情说得很清楚，包下来，不是的。有时，因神的怜悯，就把事情给我们带过去了。有些时候，我们有一点“很难下场”似的，不好意思，像这一类的事(事情略去)，不是我们经常作的。这次成功，就感谢神带过去了，这次失败也感谢神带过去了。以后怎样？以后这些事最好不要作。(应:我已经放下去了。)</p>
+<p>因为很多人知道你的祷告有这样的本事，他们不能生育的都到你这边来，说:“你替我祷告，给我生儿子。”你就受不了。像那些拜菩萨的，有一个是专为给人生儿子的，没有儿子的就去求这个。但今天我们不作这个！我们是叫每个人去认识神，去跟从主，我们不替人家作什么。</p>
+<p>问:还有一件事(事情略)。</p>
+<p>答:我们事情作了，但没有得到属灵的价值。我们不是今天事情做好就好，乃是要得着一个属灵的价值。行神迹奇事要有一个价值，就是借着这一个来叫他归主，叫他认识主、爱主，叫他跟从主。没有这个，他病好，或病没有好，是一样的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

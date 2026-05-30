@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十八日</h1><p class="meta">深渊与深渊响应 · 第272/366段</p><p><a class="btn" href="s271.html">上一篇</a><a class="btn" href="s273.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s272.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十八日</h2>
+<p>人的思想，要怎么样去对付？要作，作不到。人是从“作”这方面去看问题。人按自己去作是作不到的，是神自己作。你说你要破碎，你有什么办法破碎？是神在作破碎工作。你自己要对付，要割下去(像做割除手术)，你割不下去，会痛。神给你割，就做了，等你说痛，一下子已经割掉了。你要破碎，真要破碎，舍不得。神要破碎，你挡也来不及挡。神的工作是叫你措手不及的，这个没有做完，那个又来，这没完，那又来，一波未平一波又起，作到你自己都糊涂。神就是这样作，叫你莫名其妙的去顺服祂。</p>
+<p>看你多本事，你想也来不及，一个难处来，怎么样把难处带过去？就是靠恩典了。神今天在每一个人身上要作工，但是人看不见神的工作，人在埋怨神，埋怨弟兄姊妹:“你竟给我做这个！”在讲七讲八，在埋怨。但如果你向着神，你会感谢说:“这是你给我造就，有你的工作。”这样一来，你就有属灵的路。</p>
+<p>属灵的路就是在实际的情形中，你认识神(何6:3;箴2:5;9:10;腓3:10;来8:11)。你想，怎样才不会发生分裂？防不胜防，防不了，因为人是会变的，今天这样好，明天又变了，今天看你通，明天又不通了，是无常的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

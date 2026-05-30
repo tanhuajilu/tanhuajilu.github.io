@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月六日</h1><p class="meta">深渊与深渊响应 · 第66/366段</p><p><a class="btn" href="s065.html">上一篇</a><a class="btn" href="s067.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s066.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月六日</h2>
+<p>因此，那个神学教授讲到的东西就是片面的。你跟了他那一套的，他才会阿们。那么，在全世界对神的称呼上，他怎么去包括去叫人成为一？这一点的不同，他就容不下，受不了，那么，更多的东西他更受不了。你想，这样的人怎样把人带到主面前，叫人在属灵上和谐合一？在这里，要有突破。对他，我们不必去争，不过，我们自己要清楚，免得受打扰，不然，我们听了以后会很烦。虽然不怎样，还会受打扰，去想:“我这样对神的称呼，对不对呢？”自己就受打扰。</p>
+<p>像哭重生派，你已经得救，他还说你没有得救。现在你清楚了，他们再讲也不会摇动你的信心，你也不因他而觉得烦。因为你对重生很清楚，而他还是说，要哭到重生才得救。有些哭重生派的人更说:“你哭一个星期还不够，还要再哭一个星期。”叫你哭了很久才安心。其实那样怎么会是得救，不过是撒但藉以苦恼人。撒但就是要造一些难处来叫你苦，叫你受一些无谓的痛苦。</p>
+<p>对一些事情，我们觉得矛盾，那就是要我们去认识真理。主耶稣说，你们必晓得真理，真理必叫你们得以自由(约8:32)。你不认识真理就受捆绑，事情对与否，你没有把握。认识了真理，你就很自由，已经有安息。对“神”、“上帝”这问题，现在清楚了，可以让它过去，以后，再不会打扰你们(自由:约8:36加5:1;林后3:17;雅1:25)。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

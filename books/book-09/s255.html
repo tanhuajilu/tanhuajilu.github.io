@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十一日</h1><p class="meta">深渊与深渊响应 · 第255/366段</p><p><a class="btn" href="s254.html">上一篇</a><a class="btn" href="s256.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s255.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十一日</h2>
+<p>有些还债的人，他有正当的开始，你能帮忙一点，就去帮一点。帮助人，你要了解他的情形，所以我们有爱心，要加上知识(腓1:9)，你没有加上知识，有时会受骗。好多人利用基督徒的爱心来骗钱。所以一方面要作，一方面要谨慎。我们所说不敢作，是经过好多事。你碰过，你就知道，连爱心都不容易爱。出于人的爱，到了一个地步，不敢爱。但以后还要爱，因这个爱是从神这边来的，因从神这边的爱跟人的爱不一样。</p>
+<p>人的爱都是从自己先想:“我真的没有爱心”，但出于神的爱，有的时候，你去爱，天天去爱，你会痛。因神叫你这么作，有的时候，超过你规定的，心里就舍不得。但是真正奉献的人，就是:你的奉献会摸到你的心，不是拿几块钱心里无动于衷，是你拿出去，心里面会给扎一扎。像亚伯拉罕要把以撒献上，心里面很难受，但是，爱神胜过自己爱儿子的心，就献上，这一个，就蒙了神喜悦。</p>
+<p>所以最好，不要作在人这一层，而是高举到“以神这个爱来爱人”，就不一样。我们常给神对付到不敢作。我们敢作，以后我们不敢作，却还要作。不敢作是因为我们靠着自己作不来，敢作是因为靠着神的大能去作。</p>
+<p>我们能帮助别人，是因为给神对付到不敢帮助。那时我们也不随便作了，因为敬畏神(林后7:1;弗5:1;来12:8;彼前1:17)。从神这边作出去，就有恩典，有效果，也叫去作的人，不只是帮助人事情解决，更是我们也被带出来，生命被高举起来。这个，一直去长，一面作，一面不敢作，一面不敢作，一面作。凭自己是没有办法，敢作是因为凭着主，藉着主来作。</p>
+<p>不管是属灵的，不管是属物质的，都是凭着主作，不是自己作。所以我们应该帮助的，去帮助。帮助不来也没有办法。人说，我这样有什么办法呢？我说:“我也没有办法。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

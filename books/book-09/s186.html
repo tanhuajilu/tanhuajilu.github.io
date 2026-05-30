@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月四日</h1><p class="meta">深渊与深渊响应 · 第186/366段</p><p><a class="btn" href="s185.html">上一篇</a><a class="btn" href="s187.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s186.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月四日</h2>
+<p>机会是不多，相信神还会怜悯，现在他那边跟以前的情形不一样，可以找到供应的弟兄姊妹。对那边，我们有一个祷告，有一个负担，求神兴起人来(徒6:7;16:6)。真的，我们也没有去那边作工，也不认识那边的人，但好多不认识的也找到这里交通。介绍交通，再带人来，神就作。我们不知道，神一工作，我们像来不及看神工作。一看，觉得神的工作实在荣耀。</p>
+<p>本来有一位弟兄在那边带领聚会，好几年了，他一离开，聚会就完了，散掉，就是情形不对头。现在，那边却一直有聚会，聚会的人都一直寻找交通。特别很多有心有兴趣的找到，有交通就打动，要求聚会、渴望交通。现在能聚二、三十人。他们自己交通，自己聚会，还能吸引人(林后4:15)。</p>
+<p>那次我们几个人到那边，还没有到，二十多个人已经等着。讲完了，我们就回来，无形中神的火在那里愈点愈旺，再有新的人来。这是谁的工作？是神的工作，在我们没有作什么，就看神在工作。有个弟兄来交通，我们也交通到这句话，“不是我们作，就看神作。”等第二次再来，他们说:“啊！真的不是我们努力作，真是看神作！”这里也通，那里也通，若不是神的工作，人哪里能打通这么多人。特别是他们的背景都是很复杂的，但是他们对一些东西，像对外面运来的书，对进来的人，他们有辨别。他们讲出很多这些辨别，都是圣灵的工作。圣灵的工作，人一碰到都通。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

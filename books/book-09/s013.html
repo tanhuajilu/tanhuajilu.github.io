@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十三日</h1><p class="meta">深渊与深渊响应 · 第13/366段</p><p><a class="btn" href="s012.html">上一篇</a><a class="btn" href="s014.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s013.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十三日</h2>
+<p>神定规好我们人的道路(耶10:23;箴16:9;诗25:12;徒17:26)，人却有自己的道路，神的路也给我们走弯了。神的路很简单，但人不简单。人是不简单的！但若神怜悯你，神就不放过你。如果神放过你，任凭你，祂在属灵上就不理你了。但神还要我们，祂就作一个工作，就是作打击的工作，也是作破碎的工作，这工作也叫作十字架的工作。</p>
+<p>因为十字架的工作是神独一的工作，也正是生命道路的原则。没有主耶稣钉十字架，就没有主耶稣带出复活的生命给人。我们本身呢，如果我们只是要讲道理，那我们只要到神学院去学讲道理就好了。我们却不要做这个。我们是要把生命带给人。要把生命带给人，我们自己就要经历十字架，才有办法把生命带给人。不同的地方就在这里。</p>
+<p>今天我们只把道理讲给人家听，这很轻松，工具书那么多，讲道理的书那么多，你拿去给它集中、综合，把好几个道理去讲，人家就说你是演说家，讲得很好呀！但是听完以后，他们没有一点儿影响，生命一点儿没有改变。出于神的话，虽然只一句话、二句话，却要解决听的人人生的问题，叫他得着释放，叫他认识神。今天存在着的，就是这两条道路；这两条道路是不同的。</p>
+<p>如果两条路差不多，就没有什么稀奇了。就是有出于人的，有出于神的。你碰到出于神的，里面会清楚，你对前面会有一个把握。一个人不知道该走什么的路，心里会好苦，因为他不知道还会浪费多少年日。年长的弟兄告诉我们，没有一个东西害我们会像“自己在浪费时间”的。</p>
+<p>人一生有几年?设若浪费了一半，剩下还有多少？你看看，有这么多东西把我们累住，把时间拉长(延误我们)。主快要再来了。主在今天加速做祂的工作，来叫信徒生命成熟，叫教会有一条路走，在基督再来这交叉点上，让教会可以把基督带进来。这需要信徒在神面前真实认识神，把基督带进来。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

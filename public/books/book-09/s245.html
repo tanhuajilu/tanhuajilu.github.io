@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月一日</h1><p class="meta">深渊与深渊响应 · 第245/366段</p><p><a class="btn" href="s244.html">上一篇</a><a class="btn" href="s246.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s245.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月一日</h2>
+<p>虽然在工作中熬炼，X弟兄从来没有埋怨他的环境，还顺服主(罗16:19;腓2:12;来12:9;彼前2:18;5:5-6)。不然，他就可以跟弟兄多交通。因他一直在船上，就差一个“跟弟兄交通”。有交通，带出的就更丰富，因他有个属灵的底子。好像这水池有一个底，水如果都干干的，你有多少水才满？有底，有一个“寻求主”的底，进步就很快。外面的人没有底，你给他再挖，很难。所以，我们觉得弟兄姊妹有心追求主，不论在那里、在什么时候，碰到交通有反应，进步很快，这是神的恩典。</p>
+<p>弟兄也介绍了一些人来，这些人就一个一个地被主得着。</p>
+<p>起初，要弟兄有点交通，他很感为难说:“我是要来听的。”我说:“你要讲，因为讲，会把东西摆出来，讲对讲错不要紧，敢讲就不简单。”以前，我们像他们年纪，叫我们讲，我们常常讲不出来。</p>
+<p>现在不管什么弟兄姊妹，有时没有叫他讲，他自己会讲；按人看，他怎么敢讲？因里面有一个生命的东西，也对自己没有感觉。</p>
+<p>自觉庄重的人，他怕讲，因为他在意讲，讲不好，就怕。如果他里面胜过自己的感觉，不顾面子，一讲出来，好也好，不好也好，敢讲就是不简单。</p>
+<p>昨天，我们请一位弟兄交通，他有一个爱主的心，就不顾一切。所以，有的人，叫他讲，他也讲，讲的也很顺畅。勉强讲也不要紧，多讲几次，就会自然。</p>
+<p>我说，这水路一开，水就出来，闸没有打开，就关死在里面。所以，你要敞开，就是你要讲话，你不讲话就把灵关闭。一讲话，灵才有出口。你这口都不开，话怎么出来。你要讲，什么思想感情，不要不好意思，向主敞开。你向主敞开，主就进去了，圣灵的工作就来了。人是会进步。每一个人都可以进步，你怎样进步，不要管，不要说“我进步多少了”。无形中就有进步。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

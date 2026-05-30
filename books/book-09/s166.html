@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十四日</h1><p class="meta">深渊与深渊响应 · 第166/366段</p><p><a class="btn" href="s165.html">上一篇</a><a class="btn" href="s167.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s166.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十四日</h2>
+<p>有一个弟兄，有人用木头车载他走。走到半路的时候，车出事，前面一个人，中间一个人，后面一个人，有人夹死了。他一个人坐在车后面，中间那个人当场就死了，他却还活着。他一清醒，第一个反应就感到:我有神保守啊。就是这样，不要去想，自然会想，有这个东西！</p>
+<p>好象你儿子离开你好远，有什么事情，他自然地想到父母，因父母跟他有密切的关系。他不会想别人。人碰到事情，第一个就是想家，想他的父母，因为有生命的关系。他不要思想思想，考虑考虑才想到父母，因为他的心与父母连在一起。我们跟神也是一样，一碰到事情，马上就想到神，想到我有神，越有困难越想到神。(诗63:5;107:43;申8:5;玛3:16)</p>
+<p>以前我们处在“那个环境”，连一个弟兄姊妹也没有，都是孤孤单单的，也没有一本圣经可以念，连一字都没有，碰到事情只是想神，在矛盾中，越是想着神，在生活中也想神。那时，我们哪敢随便跟人家多讲，只能点到为止。那敢多讲，因讲错一句话，要被斗三天二天，也斗不清楚，单单一句话你就要吃好多苦头。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

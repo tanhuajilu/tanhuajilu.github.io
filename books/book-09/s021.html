@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月二十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月二十一日</h1><p class="meta">深渊与深渊响应 · 第21/366段</p><p><a class="btn" href="s020.html">上一篇</a><a class="btn" href="s022.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s021.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月二十一日</h2>
+<p>答:“分开”对我们个人是很大的事情。你没有分开------没有辨别，讲道也不知在讲什么，都模模糊糊的。有分开，你去讲，信徒也讲，你很清楚。在过程中，是有实际。</p>
+<p>有实际的一些弟兄在交通，就愈讲愈单纯，不然就变复杂。有复杂是过程，出来的东西有灵的也有魂的，有对的也有不对的。但是，慢慢地反面的就减少，正面的就增加，经过众人一起学习就有。</p>
+<p>你真有分开，几个人排在一个地方，跟不分开的摆在这里，一同交通，就有光照出来，他(不分开的)站不住。因为他讲出来的，他们知道跟你们的不一样。听到的人也感到不一样。因为属灵的有属灵的声音，所以主耶稣说，“我的羊”(约10:14;21:16;结34:11)“听我的声音”(约10:27)。这里不是说，“我的羊听我的话。”话，你可以假，我也可以假，但声音就不能假。主的声音，属祂的人(祂的羊)会听见，不是属祂的，不会听见。你跟主联合，你出来，就把主的声音带出来。你出来，也把主的味道带出来，你里面那个味道就是主的味道。讲道就是讲那个味道，不是讲道理阿。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

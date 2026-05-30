@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月二十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十二日</h1><p class="meta">深渊与深渊响应 · 第296/366段</p><p><a class="btn" href="s295.html">上一篇</a><a class="btn" href="s297.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s296.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十二日</h2>
+<p>交通就是为叫我们知道这条路要怎么走。一面是有真理，但是对于真理，我们常常摆不上去。因为持守真理是要人付代价的。打仗是要计算花费的(路14:28-32)，不然，打下去，力量不够，就会全军覆灭。今天，问题就在人与他所讲的不相称，合不起来。许多情形是，恩赐归恩赐，生命却够不上去，所以靠恩赐的就都倒下来。</p>
+<p>许多出名的布道家，一出名就犯罪，属灵破产。他没有认识自己，没有认识人。神注意人是怎样的人。人是怎样的人，才作怎样的工。“人”是好的，才作出好的工。</p>
+<p>大工是大人作的。我们是小的人，只能作小工。作小工的人只作配合大工的工作，作小工的一出主意，一做大了，反而倒下来。我们每个人都只该作小工、小事，我们是配合着主来作的。所有神的工都是主来作的(约6:26-29;37-38)。所以我们不是为神出主意作工。</p>
+<p>我们在这里是顺服神，神对顺服的人所给的恩典是无限量的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

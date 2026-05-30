@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月九日</h1><p class="meta">深渊与深渊响应 · 第161/366段</p><p><a class="btn" href="s160.html">上一篇</a><a class="btn" href="s162.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s161.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月九日</h2>
+<p>我们说十字架，十字架就是要对付不规律的思想的，思想经过对付，就正常，思想正常了，你讲神的话，才会正常地用思想。没有正常用我们的思想，讲话就会语无伦次，乱七八糟。你思想对付得正确，讲神的话更清楚。一个思想清楚的人讲神的话就清楚，一个思想乱的人讲话就不会清楚。所以思想经过对付，神就会用。神要你的思想、要你的感情，但是，思想感情都要受过对付。</p>
+<p>神需要你的感情，因为感情发表感情。如果没有感情，就好象是木头人。讲神的爱，你没有办法把它传递出来呀。我们不是说，不要思想了、不要感情了，不是的！神还要用。</p>
+<p>我们的意志呢，那个刚硬、抵挡神、跟神敌对的那个意志，神要对付。魂的生命要对付，但是你魂的功用却非常紧要。为什么？因为我们灵里面的感觉要带出来，都要通过意志去定规、辨别。意志是人的真我，就是人的人格或位格，你没有意志就变成没有人格，没有位格，就跟动物一样。</p>
+<p>人的尊贵就是有位格、有意志，不是被动的，乃是主动的，然而，神要叫人主动的来顺服他，这个很不容易。因为背叛的人要他顺服神，顺服不来。所以，十字架在我们身上就做审判的工作，做定罪的工作，作致死的工作，叫我们抵挡神的这个生命被打掉，叫我们的意志甘心乐意的去顺服神。(加2:20)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

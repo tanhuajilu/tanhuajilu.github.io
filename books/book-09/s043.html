@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月十二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十二日</h1><p class="meta">深渊与深渊响应 · 第43/366段</p><p><a class="btn" href="s042.html">上一篇</a><a class="btn" href="s044.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s043.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十二日</h2>
+<p>很久以前，我不是这样。以前，我总想，聚会几天，要讲什么道理，去讲要有把握，要达到什么目的都要有把握。现在，一点把握都没有了，因为很多你有把握的，后来变成没有把握了。好多的交通，我自己想，很有盼望，交通后反而失望。有些本来没有盼望，反而超过我们所求所想的。我以为没有盼望的人，反而比我们以为有盼望的人还更通的。</p>
+<p>某弟兄起初来时，他自己也很难受，一直要跑(他不敢讲出来)，他很受不了。因以往的接触，跟现在的接触不一样。到了最后一天，他通了。他说他浪费了所有时间，他一直格格不入，后来突然他转，“哎呀，原来这样。”他一转就影响别人，别人也要找交通。对没有盼望的，主反而给他有恩典有盼望。所以，我们有一个信心，相信神安排，出于神的，每一个都有盼望。</p>
+<p>我们大家见面不是偶然的，都经过神的安排。神安排了，神总是有恩典，有怜悯。不是凭我们自己有多少，是神的怜悯。当你里面碰到神，就知道神，比我们告诉你的更清楚。你里面很清楚！这就是基督教的内容------里面有启示。(启示:加1:12，16;2:22;弗1:17;3:3，5)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月十三日</h1><p class="meta">深渊与深渊响应 · 第318/366段</p><p><a class="btn" href="s317.html">上一篇</a><a class="btn" href="s319.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s318.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月十三日</h2>
+<p>“基督徒”并非守规条，自己做出来的。</p>
+<p>别的宗教都是人为，人做出来的。像佛教就是叫人怎样做，那些和尚走路该怎样一步一步地走、小心地走，很敬虔的。但是，基督徒的敬虔并不如此。基督徒的敬虔就是像神。“大哉!敬虔的奥秘，无人不以为然，就是:神在肉身显现，...”(提前3:16)我们是接受基督的人，基督也在我们身上显现，这就是敬虔的奥秘。</p>
+<p>在我们孩子都像父亲，脸儿像父亲，说话像父亲，因为是父亲生的。我们信主的人就是父神生的，也像父神，如果不像就是假的。今天，儿子是假不来的，因为有了科学鉴证。我们是神生的，无论光景怎样也是神生的，如果现在不像，将来到了时候也要显明出来。(约一3:2)</p>
+<p>我认识一位在菲律宾的弟兄，自小不认识父亲。有一次，有人叫他马上回家去。原来，他的父亲回来了。等到见了父亲，他觉得很奇怪，父亲的说话、动作、态度竟然和自己一样。我们也是神生的，生活、态度、言语就有祂的形像。某弟兄说，他一得救，以前说话的方式就改掉了。有些男人一开口都是先骂人的，女人也好不了很多，都骂鸡骂狗骂人死的，这些人信主以后，就有很明显的改变。因为真有一个新的生命在他们里面。</p>
+<p>有了这生命以后，才谈得上有生命的交通。橱窗里的模特儿，你跟它打招呼，它不会反应。真的人，你跟他打招呼就完全不同，因为是活的。</p>
+<p>信和不信是个分水岭。就是信的人中，也有好多不同的人。有些象样的，有些不象样的，有些属灵的，有些不属灵的，更有些明显贪爱世界的。对待这许多不同情形的基督徒，该怎么办呢？应该帮助他们接受神这完全的福音。这个福音，首要的就是基督为我的罪死了，埋葬了，第三天复活。使徒们如此传，我们也如此信了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

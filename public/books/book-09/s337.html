@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二日</h1><p class="meta">深渊与深渊响应 · 第337/366段</p><p><a class="btn" href="s336.html">上一篇</a><a class="btn" href="s338.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s337.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二日</h2>
+<p><strong>人若被钱财迷惑，即使想从其中出来，却钻也钻不出来。像那些人，有了三十万再要一百万，以后还要一千万</strong>...，<strong>哪里有满足？</strong></p>
+<p><strong>有一位姊妹有肾病，去医院洗肾，每洗一次，付款二百元，这个费用一直要向她挖。如果要到广州做一次手术，使病情减轻就要十多万。她说:“我哪有那么多钱？”她想多赚点钱，这也没有办法。所以，有平安就是赚钱！</strong></p>
+<p><strong>你说自己没有家财，很贫穷，你却没有想到你的一双眼睛就值多少钱了？眼睛有事，要去看医生，要去治疗，也不知要花掉多少钱。何况，我们还有一对耳朵，还有</strong>...<strong>加起来多值钱啊。还有，我们有灵魂，这是无价之宝。</strong></p>
+<p><strong>你不要和有钱人比，要和贫穷的人比，就快乐多了。在乡下地方，苦的人还很多呀，一天要赚几块钱也没有地方去赚的也很多呢。从安徽来的弟兄很多都很穷苦的，但是，他们觉得够用就好，都没有叫穷叫苦的(腓4:11)。所以，你们要学习感恩(</strong>路10:21;17:11-19;林后2:14;帖前3:9;提前4:4<strong>)。</strong></p>
+<p><strong>年青的基督徒，在这个世代，要有智慧和外人交往。有些试探，我们也要防备。你只要站住靠主恩典就好。你不和世界同流合污，他们必定反对你。但是，他们虽然反对你，心里却佩服你。</strong></p>
+<p><strong>你们两位已经结婚，就要彼此代祷，彼此站住，二人就是成为一体的。你们虽然路过这里，还昐望你们经过交通，有一个突破，生命能从你流到别人。你们有这个心向着主，主必祝福你们。你们奉献了，就是主的人，主会负责你们到底。你们放心，是主的主就会负责。</strong></p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

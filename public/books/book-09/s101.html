@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十日</h1><p class="meta">深渊与深渊响应 · 第101/366段</p><p><a class="btn" href="s100.html">上一篇</a><a class="btn" href="s102.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s101.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十日</h2>
+<p>七九年恢复教堂至今，今年二零零一年，头尾已经二十二年，那些说“我要来做”的，做到今天人很多，但实际，连他自己也做到塌下去了。这是普遍性的，不是特别一类的。所以“热心做工”就是一个过程；我们以前也是这样，喜欢做外面的，做得热热闹闹的，到了一有试验，都倒得一塌糊涂。</p>
+<p>由五零年到今天，已经五十多年，我们以前一起的弟兄姐妹，今天还是站住，还同心合意。要热心，一年二年比较快显露，十年八年就不容易，如今是五十年！这是神的怜悯(路1:78;罗9:6，23;林后4:1)，是神的工作。所以你不要注意那些庞大的东西，反而要注意那些属灵的东西。你有这一个，就不怕说没有人了，一定有！</p>
+<p>你们就按照这样读经、祷告、唱诗歌，这样忠心维持下去，主有祝福。有一位弟兄在美国，他告诉我，他们起首就只几个人同心合意祷告，读圣经，唱诗，他说，神很祝福。人一直多一直多。没有道理听，大家就是去亲近神。</p>
+<p>后来人多，就想:人多，没有一个牧师，不行的。就想请一个牧师，就从台湾请了一个牧师，每个人给他多少钱。不到半年，他们就感到重担。这重担就是每个月要负担这么多钱。另一方面，牧师讲道讲道，愈讲道，里面愈塌下去，里面没有像以前没有牧师来那时候能跟神那么亲近。因为有人取代了神，代替了神。牧师要讲道，也要包做什么的，就让他包办好了。</p>
+<p>牧师没有来以前，大家还自己有点负担，彼此供应，还有负担彼此探望。他一来，就全部给他去挑了，挑到他(牧师)一个人也挑不动。道理愈多讲，他们里面愈软弱。到现在，要赶也赶不出去。我说:“谁叫你讨这来背呢？好好的去碰神吧。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

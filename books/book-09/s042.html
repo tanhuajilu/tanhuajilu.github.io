@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十一日</h1><p class="meta">深渊与深渊响应 · 第42/366段</p><p><a class="btn" href="s041.html">上一篇</a><a class="btn" href="s043.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s042.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十一日</h2>
+<p>人问主:“纳税给该撒可以不可以？”主叫他拿钱来看，钱拿出来，主说:“该撒的物当归给该撒，神的物当归给神”(太22:21)。主不答复可以不可以。问题在源头，源头是神的归神，要归该撒的就归该撒。主拿住原则性问题来看，不是有问题答问题。要看问题的原则是什么。该撒原则的归该撒，神的就归神。只有两条路，没有中间。</p>
+<p>所以试探有它的性质，它的性质是另外的一个东西。对于神，圣经也说，我们可以试试，“你要把当纳的十分之一归神，以此试试，神会为你敞开天上的窗户，(给你恩典，叫你无处可容。)”(玛3:10)对这一点，许多人试验过。以前抗战时候，很多人生活困难，有一位弟兄作买卖，他说:“主阿，在困难中给我恩典，我要把所得的十分之一奉献给你。”他一直有这样的奉献。他说，神祝福他，祝福到自己怕。“我才小小生意，为何赚钱赚那么多？”他试试看。好多事都可试试看，这就跟试探不一样。</p>
+<p>对很多工作我们没有把握，我们也是试试看。我们不敢想:这聚会要怎样作。我们试试看，神祝福，我们再继续。如果我们没有祝福就作空了。我们是灵活的。每次，很多弟兄姊妹来交通，我们都有考虑。有祷告，也没有把握，该讲什么，没有把握，就去看神怎么带，在各方面去观察行不行，试试看。不敢思想说:“我要得着什么效果。”不敢！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

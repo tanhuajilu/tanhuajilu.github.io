@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月九日</h1><p class="meta">深渊与深渊响应 · 第40/366段</p><p><a class="btn" href="s039.html">上一篇</a><a class="btn" href="s041.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s040.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月九日</h2>
+<p>某弟兄来交通，他说:“我们同工发生问题，情况很差，甚至彼此相吵相打。”我说有这个事吗？他说真的。我说这相打就是肉体，怎能说属灵呢？这是属肉体。如果你不懂得，这就给你懂得。神感动你不懂得，真理告诉你还不懂得，神就用现实的东西作教材给你懂得。你说灵魂体怎么分开。这就分开给你看，属灵的就是这样，属魂的就是那样，属肉体的就是那样。就是有属肉体的！</p>
+<p>保罗也把这东西指给信徒看。他说:你们说，我是属保罗，属彼得，属阿波罗...岂不知道这就是属肉体的嘛！分宗分派就是属肉体，这就是肉体(林前3:1-5)。你说你不懂，就因你眼睛没有开起来，神在里面给你感动叫你知道，神的话给你知道。今天还说不知道，祂就把活生生的例子摆给你看，这就是肉体。</p>
+<p>所以今日，神做了工，十年前跟十年后就不一样。我们以前都不敢说，什么对、什么不对，都不讲这些，因讲了还增加我们的麻烦。我们就讲正面。你说你这个不对，不敢随便讲，讲出去就招来些麻烦，又是对立，又是对抗，又是什么帽子就给挂上去。现在已经不用我们讲，来交通的人就讲:“我在什么地方，里面&#x27;什么事情都有&#x27;。这些事发生，我里面受不了，我不跑我就跟他们一样。要跑，跑哪里去呢？不知道哪里找。”因有交通，他就去听，到底光在哪里？神已经在他里面做了一定的工作，听了一下就通。</p>
+<p>所以必须让神作工，时间没有到，还得等神做工。神这工作不只在国内，也在国外。一些人都在寻找这属灵的交通。他们感到外面的东西很多，但里面吃不饱，没有办法，总是有一个要求，有一个东西讲不出来！</p>
+<p>真的不是我们作什么，我们在看神工作。真的，神在人身上一作工，那些老弟兄也受不了，他也要起来，不起来不行，因在后的要在前，在前的也会落在后。年青人被神兴起，我们老人家也要跟上，不跟，我们自己也漏掉，很严肃的事！若靠老本说:“我是老。”老就衰退了，还要进步，不进步不行。因为属灵的路只有一条，你不走，转一下，还要去走，就浪费很多时间了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

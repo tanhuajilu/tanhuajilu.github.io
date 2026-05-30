@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十六日</h1><p class="meta">深渊与深渊响应 · 第260/366段</p><p><a class="btn" href="s259.html">上一篇</a><a class="btn" href="s261.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s260.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十六日</h2>
+<p>你再学习五年，回头来看就不一样，家庭情形也会改观，把实际的情形显明出来。你通过一些学习，更认识主了，并且也会把恩典给人。没有学习的人，就会停留在那边。对属灵的东西，反应就不一样。所以好多坏事情，转过来就是好，就是十字架的工作。你们那边，通过一些情形，转过来就是好。其它地方也是这样，通过一些不如意的事情，转过来就高，就更高。不是摸到这个、那个，不然，矛盾愈来愈厉害。</p>
+<p>是神的工作。若不是神的工作，怎么挽回局面。神工作，大家放下自己，就在主这边碰头，碰到主，再大的事也过去。所以不管是家庭也好，教会也好，都要碰到主(弗2:13-16)。不是没有事情就好。有事情也好！那一天讲一句话说:有事情来，你是怎样处理事情？</p>
+<p>对这个，没有智慧是没有办法的。所罗门的尊贵就是他有那个智慧(王上3:9-28;4:34;10:4-24)。不然国家那么大，作王而没有智慧去管，不行。难处来了，用智慧去解决。所以今天，求主给我们有智慧来对待一切的问题。</p>
+<p>祷告:荣耀的主耶稣，我们感谢赞美你，不是我们拣选你，是你拣选我们，不是我们先爱神，是神先爱我们。今天儿女们聚集在你面前，各人带着自己的需要，带本相到你面前，你是我们的主。我们的元首，我们是你荣耀的身体，你安排很多十字架，这些都是我们的祝福，但愿我们顺服，背起十字架跟随你。叫每个弟兄姊妹，在自己方面能够胜过己，胜过黑暗的权势，彰显你得胜的生命。我们需要摸着你的祝福，你开启我们心灵的眼睛，叫我们能够看见你荣耀的自己，当你丰富彰显的时候，所有的问题都要过去。基督是我们一切的答案。主，你是我们的一切，我们再次高举你，因你是在宝座上的，你也在我们心里，也在弟兄姊妹的中间。今天弟兄姊妹的难处，事业、家庭、生活中所有的难处，都是主你给我们的功课，叫我们能够摸到属灵的路，并且能走上去。你爱我们就爱我们到底。真的，巴不得每个人都这样敞开心灵，我们完全的交给你！你托住我们，叫我们心里都发出感谢，无论环境怎样都感谢赞美！正如诗歌说:“一边流泪一边赞美！”主你爱我们，一定带我们到路终。你就是我们的主，我们感谢赞美。藉这个机会，我们来到你面前，仰望你继续带领，每个人都被你得着。同心祷告，奉主耶稣的圣名。阿们。</p>
+<p>(9月14-16日，选自2001年1月29日下午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

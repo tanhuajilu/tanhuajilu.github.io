@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十九日</h1><p class="meta">深渊与深渊响应 · 第273/366段</p><p><a class="btn" href="s272.html">上一篇</a><a class="btn" href="s274.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s273.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十九日</h2>
+<p>神在我们身上做的工作就要我们踏实、稳定。每个人稳定，合在一起，这个群体，集体就踏实了。如果是虚假的，神就做到人里面踏实。所以，教会这个问题实在奥秘，奥妙，不像我们想象的那么容易。</p>
+<p>神的工作在人这边，就要人服在神的工作的定律里，自然这东西就显明了。因为教会不是一个人，教会是多数人在一起，像这布不是一条纱线织的，是由好多纱线织起来的，是由一条条纱线横的直的织起来的。一块布，每条纱线都均匀，织起来就会平；如果一大一小的，织起来就不像样，穿起来很容易破。如果纱是均匀，规格一样的，织起来就牢固。教会也是大家的一个组成，这组成是在基督的生命里的。像一条纱一条纱，也是经过机器给纺起来的。我们都是在基督里，是神的一个杰作。</p>
+<p>神的杰作(弗2:10)，这杰作怎样讲呢？这杰作不是平常的，像画，一幅画是你的杰作，就是别人没有的。教会是神在基督里的杰作，这杰作是神作的。我们就接受神的工作，接受神的安排，而组织我们在里面。</p>
+<p>像房子的建造，你不是说:“我要显露在房顶上。”不！神可能把“我们”这大石头埋在里面，看不见的，这比显露石头还更荣耀。愈是根基，愈看不见。所以愈是属灵的根基也是愈看不见，因为隐藏在里面的都看不见，它是作根基的。下面有稳固的根基，在上面才有建筑。而我们的根基是基督，他是万古的磐石。所建造的是一样的，就牢固，性质不一样的就不牢固。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

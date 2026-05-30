@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月十八日</h1><p class="meta">深渊与深渊响应 · 第18/366段</p><p><a class="btn" href="s017.html">上一篇</a><a class="btn" href="s019.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s018.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月十八日</h2>
+<p>对《属灵人》这本书，有人读了，摸不着，甚至有人还反对。由他反对，不怕他反对，他反对是他倒霉，他没有路走。我们有学习，不怕他反对，因我们知道宝贝！你看得清楚，就不怕反对，因为你里面清楚。你真正忠心于主，主会祝福你的。</p>
+<p>我们不是凭着自己能作什么，乃要凭着主祝福。好多人讲自己很对，又反对别人，把自己讲得很好很好，但是没有了祝福，就是空的。也有的人虽然说自己这不行、那也不行，神却特别祝福他，你怎么说！如果你不平，只有自己心里苦，你不平自己也没有路走。神要恩待谁就恩待谁，要怜悯谁就怜悯谁(出33:19;罗5:15)。所以，我们的心只要向着神，神就给我们</p>
+<p>(恩待:诗73:1;109:21申13:17)。</p>
+<p>有这么多的讲法，不要紧。让他去讲，没有关系。即使有这么多的苦、试探临到你，如果你是真的向着神，你不会失败。因为只有一条路，除了耶稣以外没有别的路，只有祂是路。生命的路没有别的，只有十字架。历史上，有各各他，才有五旬节；有加略山，才有橄榄山。有十字架上主的死，才有复活，才有圣灵降临。这是确定下来不变的。神的救赎已经一定永定地定下来了。这定规就是神的计划，这计划就是祂的旨意。神的旨意不更改，所以祂的计划也不更改。只能人去顺从神，不是神来迁就我们。不是把真理来迁就我们的看法，只有我们来就真理。</p>
+<p>主观的人不会进步，他常以为自己最好，自己最对，没有办法接受更好的东西。所以在我们身上，经历总是一段一段的。不必去宝贝经历，因为过去的经历乃为叫我们进步，不要成为我们的负担。隔夜的吗哪，我们不能吃，别人也不能吃。我们要有新鲜的吗哪。我们天天要有新的脚踪，有新的日子，来满足神的需要。</p>
+<p>可以说，今天基督徒的要求要比过去的基督徒的更高。五十年代，那时我们所认识的同工，在今天，神不能使用，除非他进步。因为那个时代，所作的工是向人去的，信徒的追求也是向人去的，以前的是很低的。现在的要求却是很高的，凭着我们的一点点没有办法应付今天信徒的情形。所以愈接触信徒，愈发现他们的需要，你就觉得自己不够，觉得你自己要进步，不进步不行。这么多弟兄来交通，也是为叫我们进步！按照我们说，那一点原来的，真不够用。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

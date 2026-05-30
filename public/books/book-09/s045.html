@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十四日</h1><p class="meta">深渊与深渊响应 · 第45/366段</p><p><a class="btn" href="s044.html">上一篇</a><a class="btn" href="s046.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s045.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十四日</h2>
+<p>说到擘饼，这饼是有代表性的，代表这里有一个教会，来代表神的见证。但是人数一多，里面的情形一旦改变，就代表不来了，变成很复杂的。</p>
+<p>历世历代，就是教会这外表兴旺，但是神却隐藏了一些少数人(在这么多人中，这少数人被分别出来，去顾到神\--太13:44-45)。对这属灵的路，由亚当受造以后，神开了“拣选”这条路，这条路一直下来没有断绝。亚当以后，亚伯和该隐是两条路线。以后每个时代这两条路线一直带下来，有正面，也有反面，最后带出基督。</p>
+<p>在基督教里，神也在拣选，神一直维持祂拣选的这条路。圣经说:“蒙召的人多，选上的人少。”圣经记“家谱”，主要的就记起来，不主要的就略掉。特别是亚伯拉罕的后裔、大卫的子孙、耶稣基督的家谱。耶稣基督的家谱从亚伯拉罕的后裔，大卫的子孙这样写下来。亚伯拉罕是蒙拣选的，大卫是被设立为王的，就从这条线一直延伸到主耶稣降生。基督拣选教会，教会就接在神这拣选的线上，以后，一直带到国度的出现。</p>
+<p>所以历世历代，一直有一些人维持在神这拣选的见证里。在中国，二十年代，神兴起一些弟兄，不只传福音，也同时把教会这个神的工作讲清楚。到现在，在这个基础上，我们对这个真理就不只是单在道理上有看见，在属灵的实际上，也一路地跟上去。所以，有道理的知道，也有里面生命的领会，并且还在一直去充实教会这内容。教会的内容就是基督，神让基督充满教会，充满他的见证。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

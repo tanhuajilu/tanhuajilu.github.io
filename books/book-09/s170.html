@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-六月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>六月十八日</h1><p class="meta">深渊与深渊响应 · 第170/366段</p><p><a class="btn" href="s169.html">上一篇</a><a class="btn" href="s171.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s170.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>六月十八日</h2>
+<p>前年，我们就感觉神在你们那边做了工。因为以前你们也有聚会，但到一个时候，聚会没有了，就是因为以前落在一个听道讲道的情形里，后来没有人讲，就没有聚会。直至后来，几个人有交通有聚集，还跑到外地寻求交通，彼此就有交通，有那么多的人在那里。</p>
+<p>今天，不管有讲道没有讲道，你们都有属灵的交通。就是有这个属灵的交通，大家才感觉教会在那边有起头，并不是靠一个人讲道，乃是大家在那里顺服神，教会就显明了。所以不要急，在你们身上，神的工作会越做越显明。像那些画国画的人，刚开始你不知道，不清楚他画什么，但是随着时间过去，画就显出来，等到最后一笔画完，整幅画就完全显明，有立体感，都看得很清楚的。(林前6:15，19；10:17；12:12-18，12:24-27)</p>
+<p>神在你身上做工也这样。今天做、明天做，一直做，开始我们感觉有点乱，不知道神做什么，以后做到一个地步，就看出来，神越做越显明，全幅画就显明。</p>
+<p>祷告:亲爱的主，你要怜悯谁就怜悯谁，你要恩待谁就恩待谁，但愿我们是你怜悯的对象，是你恩待的对象。你不撇下我们为孤儿，你必定到我们这里来，带领我们跟从你，这些人都是有心要你的，求你记念他们对你的心情。你的手提携我们往前走，祝福我们每一个人。奉主的名祷告，阿们！</p>
+<p>(6月3-18日，选自2001年1月27日上午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

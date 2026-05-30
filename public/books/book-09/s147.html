@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-五月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>五月二十六日</h1><p class="meta">深渊与深渊响应 · 第147/366段</p><p><a class="btn" href="s146.html">上一篇</a><a class="btn" href="s148.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s147.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>五月二十六日</h2>
+<p>问:圣灵充满是怎样的？</p>
+<p>答:圣灵充满的道理，可以讲一大堆，但本身没有经历圣灵充满就不懂得。圣经说:“不要醉酒，酒能使人放荡，乃要被圣灵充满</p>
+<p>(弗5:18)。“一个迷醉在自己认为对的人，他就好象酒醉一样，什么都不懂，而且会讲很多的话，有很强的举动。这个是醉酒。那么不要醉酒，就是要受圣灵充满。一个基督徒迷醉于自己所爱的世界的东西那么多，都迷住了，叫圣灵怎样充满他。那些东西要先清除，没有清除，圣灵的东西就进不来。</p>
+<p>所以“圣灵充满”(徒13:9，52;11:24;6:3;7:55)这一个词，人听很多，仍然会不认识。圣灵是谁，你不认识。有好多人来跟我们交通，“我们现在追求圣灵充满。”我问他说:“圣灵，你认识不认识？”他没有办法答我。圣灵你不认识，邪灵来充满，你也不知道了，这是很紧要的。</p>
+<p>你要认识神，神是怎么样的？我们不单要认识神，认识主，也要认识圣灵。有一本书叫《认识圣灵》(迈尔作)，里面的内容很好。你认识圣灵，你才知道圣灵的工作是什么。你认识圣灵才不会给邪灵来假冒。我们过去没有见过你，不认识，现在见面就认识了。如果有一个人把你的名拿去用，对我说:“我就是某某人。”我不会相信，因为某某人，我见过了，“他不是你呀。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月二十七日</h1><p class="meta">深渊与深渊响应 · 第362/366段</p><p><a class="btn" href="s361.html">上一篇</a><a class="btn" href="s363.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s362.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月二十七日</h2>
+<p>问:如果有人问到:“你们是在作什么？”该怎么回答？</p>
+<p>答:对此，也不必作答复。因为这是你们跟从神的事。属灵的人只能和属灵的人去交通。属肉体的人去听也听不明白，最后还是要反对你。走十字架道路的人就要准备好给人反对。能有交通是很好的，但是反对的人也很多(林前16:9)。认识我们和不认识我们的人都会反对。只要我们知道，神也知道，就已经够了。</p>
+<p>那些大人物要问你们，你们也不必答复他们。他们问你们在作什么，就答说:“我们不是在作什么！”</p>
+<p>保罗到了罗马，在所租的房子里，凡来的他都接待，其中有相信的，也有不信的(徒28:24)。当主在地上时，那些到主面前的，也有人是不信的。这个我们都要看透。不然，七、八十公斤的压力都会压到我们这里。</p>
+<p>曾有某地的老弟兄来交通，问我们有什么安排，又问说:“有聚会吗？”我都说:“没有。”他感到很希奇。他出来就是要讲道，所问我们的话，就是要看我们有没有聚会，好给他在其中讲道。</p>
+<p>事实上，人家到这里，我们要给他们看见我们这里有的是什么东西。所以，我们的眼睛必须要去认识神，看到神。人家若说要和我们合作，我们就回应他们说:“我们不摸这些事，因为这是人的东西，不是神的东西。”</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

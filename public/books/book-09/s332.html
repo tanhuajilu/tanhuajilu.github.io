@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月二十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十七日</h1><p class="meta">深渊与深渊响应 · 第332/366段</p><p><a class="btn" href="s331.html">上一篇</a><a class="btn" href="s333.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s332.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十七日</h2>
+<p><strong>我们每天的生活，都是在带出经历。每次经历都成就神的话(</strong>赛55:10-11;14:24;路1:38<strong>)。神的话就是活道，就是在我们身上所产生的生命之道。(</strong>创18:18-19;21:1;民23:19;撒下23:5;王上8:15;赛38:7;结12:28;约13:19<strong>)</strong></p>
+<p><strong>神是灵，我们每天事奉祂是用灵，我们的工作是灵工，作工也用灵来作。唱诗口唱心和，也是用灵去唱。我们不是唱音乐，是唱出灵里的东西。诗歌是最细嫩的，必须用心灵感受去唱出来。</strong></p>
+<p><strong>作工的需要能力，所需的能力就是圣灵，我们作工是借着圣灵。圣灵是无所不入，无往不透的。圣灵的工作都是荣耀的。不然，我们所面对的人都是关闭得死死的，怎能应付？若是圣灵作工，用大能冲到人里去，才可把他俘虏，又把他释放出来。</strong></p>
+<p><strong>神的话就是借着圣灵，才能把人心思里的营垒攻破。教会如果有同心合意的情形，有同一个灵，工作就会轻松。所以，我们不要怕，乃要有同一个灵，有圣灵的能力，水流会涌流出来。</strong></p>
+<p><strong>在圣灵的工作里面，都是有一个主流的(却不是外人所说的流)，这个流的带动是从泉源流出来的。启示录末了给我们看见，这水流也在神面前合而为一(启22:1)，叫神满意。在神面前，工作跟事奉不一样。如果是工作，好多工作还没有作成，就被破坏了，事奉却是一直活在主面前。工作常是你作一丈，却拆掉一丈二。工作，很多时候，如果不是在启示里的，就都是人所想的，人所做的。</strong></p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

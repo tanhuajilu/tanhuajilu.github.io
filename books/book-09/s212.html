@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月三十日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月三十日</h1><p class="meta">深渊与深渊响应 · 第212/366段</p><p><a class="btn" href="s211.html">上一篇</a><a class="btn" href="s213.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s212.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月三十日</h2>
+<p>生命是会生长的。只要你碰到，生命就一直生，一直长。好多人传福音，以为自己会作就去作。传福音作什么呢？什么是传福音？我说福音不是宣传广告的传，乃是生儿女、传下一代的传。传------生孩子。你以为是“宣传”的传，是不会生孩子的。你是不是能宣传出孩子来？这是最现实的。</p>
+<p>你传福音，是说你会不会生孩子？因为保罗说，我是...“用福音生了你们。”(林前4:15)这“生”是要受生产的痛苦。他去宣传，轻轻松松的，又不会痛，会生孩子？不会。你知道这一个了，才有路去传福音。</p>
+<p>过去我们去传，有这个为难，有那个为难，受了好多痛苦，但是这个能产生属灵的生命。这是生产生命而受的一些苦。现在，大家讲起传福音好像是很浅的，其实，传福音真的是很深，能产生生命。</p>
+<p>我也要跟你讲，传福音是还债。保罗说，我传福音是不得已的。他欠的是福音的债。你欠债要还债，而你没有钱去还，你所有的抵押都不够还，怎样？还债是最实际的，你有钱可以去还，没有钱，单单嘴巴说，徒增人家麻烦。你口说:“我要还，要还。”却没有拿出一块钱来。欠人家一万块，还债起码要多带一、二千，恐怕人家要跟你算利息。你还债而没有钱，这就讲到实际了。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-二月十七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>二月十七日</h1><p class="meta">深渊与深渊响应 · 第48/366段</p><p><a class="btn" href="s047.html">上一篇</a><a class="btn" href="s049.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s048.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>二月十七日</h2>
+<p>问:(略)</p>
+<p>答:对这些情形，我们先肯定说:神的工作非常荣耀。神在你们的身上的工作是非常荣耀。(应:本来我们信主，主付了这么大代价买了我们，我们属于主的人，该荣耀主的名，现在的情形不是荣耀主的名，反而是羞耻主的名...)</p>
+<p>我说，你们的情形，就说明神在你们身上工作是非常的荣耀。怎么说？在外面的情形，愈来愈不像，一个一个溜走，剩下你们这几个人，按人看，都是没有学问，又不会作出口，但是神保守你们还有今天这样的心情向着主，这就是荣耀。(约11:4)四面黑暗你们有光，四围这样不忠不信，你们还向着主忠心，这就是荣耀。你们的感觉和情形都是从里面自然而然流露出来，没有人教导你要这样讲的，这就是神的荣耀，是神荣耀的工作。外面的情形一天不如一天，这里却有少数人向神忠心，这就是荣耀(徒7:55)。就是这神荣耀的工作，叫一切认识神荣耀的人，能俯伏向神敬拜。</p>
+<p>现在，我们感觉道路是这么孤单，但神却不撇弃我们。问题不从外面看，乃从里面看。前面的人，有些已经过去，你说那有恩赐作出口的，又跑到人的组织里去，你觉得孤单。但就是这孤单，带你们碰见神。人愈热闹，愈觉不孤单，却离开神远远的。好多外面工作作得很热闹，但不会满足人里面的要求，不能满足人的心，因凡满足人心的是主自己。你们经过这些难处，对主有这样的寻求，有这要神的心，就是神荣耀的工作。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

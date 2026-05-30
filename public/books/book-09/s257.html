@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月十三日</h1><p class="meta">深渊与深渊响应 · 第257/366段</p><p><a class="btn" href="s256.html">上一篇</a><a class="btn" href="s258.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s257.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月十三日</h2>
+<p>有一个老姊妹，突然心脏停止，死了。好多其它的老姊妹围绕在她床边，给她摸一下，还烧烧(还温)，就说:“我们祷告”。祷告时，她(老姊妹之一)讲道理给主听:“主阿，你叫睚鲁的十二岁女儿复活，又叫拿因城寡妇儿子复活，甚至拉撒路死了四天也叫他复活，你叫我们的姊妹也复活！”</p>
+<p>这样子祷告，祷告到世界末日，不一定神会听你祷告。这都是人的愚昧、人的思想。神如果叫她复活，叫她病不会死就好了。你这个老姊妹替她祷告叫她死里复活，来做你的宣传，到处替她祷告，祷告叫她复活，这些都是有你的动机目的。</p>
+<p>我们听说，几个人替人祷告病好，大家都感恩，说:“你这个信徒很好，来我们这里祷告。”就拿一点钱给他们。钱一拿去，三个月就不平静，发生矛盾了。这一个说“都是因为我祷告的能力。”那一个说:“我祷告有能力。”就为了这个钱争。这是什么东西，这是骗子。祷告好了，还要讨功劳，还要分更多的钱，这么低的东西。这是什么？</p>
+<p>所以我们都要把实际的情形，拿到属灵上来看，来对比，就显明。所以，并不是这么忠心、这么热心，却这跟神脱节。跟神脱节，就落在黑暗里面。(约15:5)</p>
+<p>祷告:主阿，谢谢你的怜悯，又带领我们上午在你面前的交通，实在让我们愈过愈认识你的自己。在属灵的事上，让我们有智慧，让我们有知识，免得在许多事情上得罪你。主阿，祝福我们在这里的时间。因着我们对你有渴慕的心，你带我们愈过愈碰到你的自己。得着你的自己才是上好的。有了你，我们就有一切。因为你是我们一切问题的答案。主阿怜悯我们，叫我们各人更加满足你的需要。谢谢你的恩典。我们这样在主面前的祷告是奉主耶稣的名。阿们。</p>
+<p>(8月27日-9月13日，选自2001年1月29日上午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

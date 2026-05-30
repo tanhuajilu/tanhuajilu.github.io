@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月二十三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月二十三日</h1><p class="meta">深渊与深渊响应 · 第297/366段</p><p><a class="btn" href="s296.html">上一篇</a><a class="btn" href="s298.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s297.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月二十三日</h2>
+<p>很多人作工就要作领头的。哦，我们今天不是要在摩西的位上去教导人，而自己一个指头也不肯动。我们是要顺服神。(雅4:7;罗16:9)</p>
+<p>如果我们不顺服神，我们要去“顶”别人，别人也会“顶”我们。所以谦卑的功课是一辈子的。人若骄傲，神就抵挡他。神抵挡他，他就无路可走。所以人不要说:“他能讲，谁不能讲？”</p>
+<p>神造就人，是要人反复通过不同的经历达到的。就是这样叫人反反复复的经历，人才被成全。在经历中，并不是单叫人把好的持守住，坏的除掉，更是叫你经过以后，更不相信自己，更信靠神。我们不该停在失败里，也不停在成功里。这个你要学习。</p>
+<p>在这里，你有一个开始，再过半年就不同了。可能，这半年的经历就胜过你以往五年、十年的追求。因为以前你是靠自己去作，今天起你是靠圣灵作。坐飞机，一下子就可飞回到你那里，要靠走路，就不知要经过什么时候才到了。</p>
+<p>在基督里，神所作的都为我们成就了(约19:28-30;徒4:11;林前12:13;15:10，45;西1:27;来5:9;启21:6)；若是我们要靠自己，爬也爬不上去呀。神的工作是荣耀的，超过你所想的。</p>
+<p>今天神叫许多年青人感觉需要。他们虽然热心为神作工，心里面总感到有需要。这次你来交通不是偶然的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

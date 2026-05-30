@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十月七日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十月七日</h1><p class="meta">深渊与深渊响应 · 第281/366段</p><p><a class="btn" href="s280.html">上一篇</a><a class="btn" href="s282.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s281.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十月七日</h2>
+<p>神的工作起头都从少数人开始。主耶稣是小小的，降生在马槽里，无声无息。这降生在马槽里的主耶稣，今天却充满宇宙，充满万有，是这么荣耀。但那些要作庞大工作的，他要作大，不要小的。小的，他看不在眼内。</p>
+<p>今天神在你这微小的人里面，神的生命要在你身上显大，复活大能要在你身上显明。所以，神的工作先要得着一些少数的人，就是那些里面认识神的人。</p>
+<p>从你信主得救开始，你的灵就从神得到新生命。圣经也写着说，你是从神得到新心、新灵的人，也是得着圣灵住在里面的人。圣灵就是你内住的保惠师。这圣灵－－保惠师就是主耶稣对门徒所说的，“你们受圣灵”的圣灵。这就应验了主所说:“我去，就差保惠师来，叫祂永远与你们同住，要叫你们想起我所说的话，给你们明白真理。”还不只，祂“还叫你进入一切的真理(明白也可翻作进入)。”就是进入到神的话里面去。你真的进入到神里面，你就可以把神的话带出来。</p>
+<p>五旬节，圣灵浇灌，那是圣灵外面的能力临到，因主说:“但圣灵降临在你们身上，你们就必得着能力，并要在耶路撒冷、犹大全地和撒玛利亚，直到地极，作我的见证。”(徒1:8)所以圣灵这能力浇灌下来是为着工作。而圣灵保惠师住在我们里面却为着叫我们得着生命。这一点我们要清楚。圣灵住在我们里面为要充满我们，带领我们一直在里面成形长大。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

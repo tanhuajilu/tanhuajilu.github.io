@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月三十一日</h1><p class="meta">深渊与深渊响应 · 第91/366段</p><p><a class="btn" href="s090.html">上一篇</a><a class="btn" href="s092.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s091.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月三十一日</h2>
+<p>像你那边聚会，三十个人有三十个样子，怎么同心？所以先从你身上做起！你先被规格好，有个样子摆在那边，个个也向这规格去学习，才现实。</p>
+<p>神用什么作标准、作规格呢？以基督。(太3:17;17:5;西2:6;3:11)神以基督来衡量。你有基督的生命，你也以这生命去衡量别人。你自己对自己有一点认识，就会认识别人，自然会衡量人。去衡量别人，自己先要比较合乎标准。尺子若少一寸，就是个问题，量起来一尺少掉一寸，愈量相差愈大。所以，神今天对付人，叫人成为一个规格，再用这个人去量别人。</p>
+<p>做房子的人有一个线铊，经水平测量，垂直测量，一量下去，就看出房子造出来直不直。神今天也对付人，造就人，叫人比较标准，才用去衡量别人，才能帮助人。所以我们在神面前，要被造就得准确。</p>
+<p>今天我们所讲的是否准确？里面的东西在神面前是不是准确？教会的实际怎样？人不准确，就会做不准确的事；人愈准确，在神面前就会做对的事。这不是人造就出来，是神对付人的一生对付出来的，叫人愈来愈准确。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

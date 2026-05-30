@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-三月二日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>三月二日</h1><p class="meta">深渊与深渊响应 · 第62/366段</p><p><a class="btn" href="s061.html">上一篇</a><a class="btn" href="s063.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s062.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>三月二日</h2>
+<p>像说“阿们”，有人用“诚心所愿”。指着这祷告就是我心里所愿的。所以“诚心所愿”你可以用，“阿们”，你也可以用，不要因这个去争说“我这个才对”，争就没有意义了。</p>
+<p>为什么他这样讲话呢？是落在神学里。他是从神学做出发点讲这话。因为他们以神学论神，是理论上的神。如神论或上帝论、基督论、圣灵论等，把上帝、基督、圣灵论一大篇，论了很多。神是怎样，他不懂得！基督是谁他还不懂得，圣灵是什么他不懂得，这就是个存在的危机。是个危机！</p>
+<p>神有祂的存在，有祂的位格。基督有位格，圣灵有位格，是客观事实存在的，任何人不可推翻的。他们去“论”那些，跟神那真实(祂是真神)也离开得很远呀。我不认识你，却拿你的名做文章，实际不实际呢？不实际！我以你为题目来做文章，一定要对你有认识。对你认识最清楚的是你太太，她来理论，对你就最清楚了。你不认识的，把他来作文章，主观虚拟的套进去，这都是虚的东西。</p>
+<p>今天很多人传扬神，他却不认识神。他传扬基督，对基督却不认识。讲论圣灵，对圣灵更不认识。口里讲圣灵，圣灵是谁，他懂得吗？不懂得，都在理论里。</p>
+<p>所以，你儿子要念神学，你说在国内不行，要到国外。国内不行，国外更不行，国外的情形更坏。好多人跑去念神学，有神念到没有神。如果还有神，就只是理论的神，不是信仰真神的神。真实的信神，不是一种理论、一种哲学，我们所信的神是千真万确的(约17:3；创28:16;王上8:27;诗43:3;王上8:60)，又真又活的神(来9:14;提前3:15;4:10)。真的，如果不是活的，没有用，是又真又活！</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

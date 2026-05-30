@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-九月二十六日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月二十六日</h1><p class="meta">深渊与深渊响应 · 第270/366段</p><p><a class="btn" href="s269.html">上一篇</a><a class="btn" href="s271.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s270.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月二十六日</h2>
+<p>我们知道我们所信的是谁，我们所信的是一位有位格、真实的主。所以，我们的神不必人去证明有神。如果是假的才需要证明。好多假的事反而盖印盖好多的，到追查下去，发现都是假的，不是真的。主耶稣是真的，不用去证明，他就是，你信，他是真的，你不信，他也是真的。神的存在，你信，他存在，你不信，他也存在。你不信神的存在，讲到嘴巴烂掉，神还是存在。</p>
+<p>看见异象就要出代价。不然，看了就过去，过去就没有，就完了。好像你的房子，终于买了，要去住。但你的房子还没有盖好，买了，还要等它造成。神的工作有那个异象，神的工作也有那个实际。异象是在这里有一个图给你看，实际是，在那里有该作的，你还要去作。</p>
+<p>好像所罗门建造圣殿，不是一个话讲过去，他要有一个准备。石头在山上，按规格打好，什么东西都按计划做好，到建造的时候，没有动一下锤，没有动一下铁器，都是把一块一块石头叠上去的(王上6:7)。</p>
+<p>神今天要建造他的教会，也把我们每一个人、每一个人去规格，规格了才能跟人家建造，不规格，建不起来。他一个是长形的，你三尖六角怎么跟人家建得起来？这个对付是今天的事，建造却是在将来。将来，把新耶路撒冷------基督的新妇建造起来。圣城耶路撒冷就是象征教会在那个时候被建起来。新耶路撒冷那里，每一块宝石都是透明的，一点杂质都没有。神今天在我们身上作规格的工，也叫我们透明，叫我们都有一个透明度，透明的建起来才会清楚。所以今天讲要怎样对待这个分裂，就是要认识神建造的原则。因你有一个不规格，神就要把它拿走。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-七月十四日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>七月十四日</h1><p class="meta">深渊与深渊响应 · 第196/366段</p><p><a class="btn" href="s195.html">上一篇</a><a class="btn" href="s197.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s196.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>七月十四日</h2>
+<p>有信徒找我们交通说，他最近参加聚会，聚会的人都说求圣灵充满。他也祈求充满，却没有被充满。“你怎么没有圣灵充满，我们已经得着，唯有你没有。”他们说。他自己求也求不到，看着他们被充满，里面也是不通，就为此感到很苦。他想:应该怎么祷告、禁食，让圣灵充满？</p>
+<p>我问:“你在他们那边，他们被圣灵充满是怎么一回事？”他说:“他们被圣灵充满，有的大笑，有的大哭，有的倒在地上滚。”是这样。</p>
+<p>这叫圣灵充满吗？我说，不对头！为什么说不对头，因这不是圣灵充满的表现。这是搞乱，是胡来，不小心，邪灵就出来。</p>
+<p>有一本书这样说，一位姊妹在厨房煮菜，忽然间圣灵充满，她把鸡蛋打到天花板上去。她说这是圣灵充满。我说:“若是这样，没有意义。”把鸡蛋打到天花板去就是圣灵充满？这就跟作气功的人一样，一发功，人就倒在地上翻来覆去。这一种能力不是从神来的。</p>
+<p>圣灵叫人安静。圣经中记司提反被圣灵充满，人看他的脸，好象天使的脸(徒6:10，15)。而他那些人倒在地上是什么？有什么体面？根本是胡闹，没有体统。连作人也不能没有体统，你基督徒这样作，就没有体统。信徒有作信徒的体统，我们行事为人要跟我们的体统相称。一个人人格愈高，他的生活、风度就有一个体统。低的人、乱来的人，什么都不用体统。属灵的东西更是这样，愈属于神，愈有体统，愈荣耀神。如果出于人的就会这样，没有体统、乱搞。所以这样的圣灵充满是不正常的，是乱搞的。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

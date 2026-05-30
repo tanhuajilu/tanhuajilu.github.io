@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-四月十八日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>四月十八日</h1><p class="meta">深渊与深渊响应 · 第109/366段</p><p><a class="btn" href="s108.html">上一篇</a><a class="btn" href="s110.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s109.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>四月十八日</h2>
+<p>几个研究原文的弟兄曾来跟我们交通。我们感觉“你在原文讲到这种情形，但在你排出来的东西看，却是这么幼稚。对神的认识这么的幼稚，只专去钻字眼。愈去钻字眼，愈钻到牛角尖里去。你就是没有一条路走。”在交通中，弟兄姊妹都讲，“你道理可以讲得很有理由，却跟生命连不起来。只要生命进步，对这些就会懂得了。”</p>
+<p>在家里，我跟小孩玩，小孩说:“你的胡须会刺人。”我说:“你为什么没有胡须？”他说:“我现在才七、八岁，到了成人就有胡须。”他知道到他成了大人，他会有胡须，还没长大没有胡须。</p>
+<p>好多生命的东西，是要到那情形，你才会有。没有之时，你愈去装愈失真。像做戏的人，本来没有胡须，做戏时挂上去，到做完戏下台，胡须就拿掉，没有了，因为是假的。好多属灵的东西，是幼稚就是幼稚，你不要去装老练，装老练反而更丑，不好看。你就是自自然然就好。不然，小孩子讲大人的话，不相称。所以圣经说:小孩子有小孩子的气貌，到了成人就脱开小孩子的气貌。你长进，小孩子的情形就过去了。</p>
+<p>所以你不必说“我不好意思”。小孩子有小孩子的气貌(林前13:11)，没有什么不好意思，“我就是小孩。”幼稚就是幼稚。到了一次幼稚，二次幼稚，一直幼稚，因时间、遭遇给你多经过，无形中，你进步了。你会进步。(林前14:20;弗4;14)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

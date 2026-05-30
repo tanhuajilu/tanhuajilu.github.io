@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-一月三十一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>一月三十一日</h1><p class="meta">深渊与深渊响应 · 第31/366段</p><p><a class="btn" href="s030.html">上一篇</a><a class="btn" href="s032.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s031.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>一月三十一日</h2>
+<p>所以，我们要认识主的救恩。认识基督的宝血，也认识十字架的功用。十字架把我们包括在他里面，与他同死，十字架有死的功用。我们也要认识圣灵在我们身上管治的功用，圣灵就作这个管治的工作。</p>
+<p>破碎，并不是自己来破碎，十字架不是你自己拿来背，乃是神的安排。好多人看见别人有十字架的功课，也向神要这个，但神不给你这个，神给你另外一个十字架，是别人所无的(可8:34;路14:27)。所以我们这许多人，每一个人的十字架都不一样，其中的难受也不一样，但所学习功课的结果却一样。大家从不同的道路经过，都碰到一个共同的东西，就是复活的生命。基督从死里复活，当我们经过死，我们经过环境时，也会摸到，也会得着这个复活，就是因为有这个复活的生命。</p>
+<p>所以，不要去要求弟兄姊妹都和你的意见、看法相同，没有这件事。你要寻求的是弟兄姊妹里头所得宝贝的生命和复活的大能，我们同拥有一样的是这个。碰到这相同的，各人个性尽管不同，问题也不大。我牺牲我的个性，你牺牲你的个性，大家都来共同摸到属灵的生命，结果就一样。</p>
+<p>因此，要学习认识复活的大能。这个会叫你经过你所不能经过的道路，叫你能够在矛盾中，把矛盾消化。因生命有吞灭死亡的能力。出于肉体是散布死亡，出于圣灵的是散播生命，释放生命。这是我们每天的经历。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

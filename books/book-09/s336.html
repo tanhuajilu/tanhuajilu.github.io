@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月一日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月一日</h1><p class="meta">深渊与深渊响应 · 第336/366段</p><p><a class="btn" href="s335.html">上一篇</a><a class="btn" href="s337.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s336.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月一日</h2>
+<p><strong>奉献给主的人，我们或活或死都是主的人。主不看你外面奉献多少，主注重的是你的心是否放在祂身上。人的钱财放在那里，心也放在那里，我们给了主，主在那里，我们的心也在那里。我们的心给主得着，才是最重要的(</strong>太15:8;13:21;22:37;路1:46;2:19;12:34约2:25;徒8:37<strong>)。</strong></p>
+<p><strong>前天，一个弟兄打电话来，讲了半点钟，把遭受的怨气吐出来。他以前都是谈这些，现在还是谈这些，说的都是别人对他不好，事事和他相违。说与主同死，你看他还是活的，怎么死也死不了。</strong></p>
+<p><strong>但是，另一位弟兄刚考过试，就很轻松地来交通。他说:“我父亲是博士，母亲也是博士，但是，我不是博士的材料，别人要我怎样、怎样，我就是不去。最近，他们要我也去当教师，可是，没有录取我。这事对我来说，是别人不要我，不是我不去尽力。”这位弟兄现在生活也过得很好。主是这样带领他，他就这么去过。你听他说的话是多轻松的。你去看保罗，他也是随遇而安的(</strong>腓4:11-13)<strong>。</strong></p>
+<p><strong>许多做老师的，要求他们的孩子都要达到最好的，结果就是最坏的。这个怎么说呢？许多的东西，我们是不能强求的。摆在我们前面很多的事情，先去作的，就要去作，很多事情发生都不是照你安排的。在这里面，你只要保持跟主的关系，世界什么事情发生，都可过得去。人的欲望是无穷的，如无底深潭，永不能满足。如果你没有从主得着恩典，对世界的事物，你就是挂虑。</strong></p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

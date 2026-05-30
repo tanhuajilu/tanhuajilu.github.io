@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十一月二十五日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十一月二十五日</h1><p class="meta">深渊与深渊响应 · 第330/366段</p><p><a class="btn" href="s329.html">上一篇</a><a class="btn" href="s331.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s330.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十一月二十五日</h2>
+<p><strong>事奉神一定要在灵里事奉。我们每天在这里，有时有人来，有时没有人来。我们作家主的，可以有外人来就认真一点，没有人来就随便一点吗？不可以。如果是这样，就和神对不起来了。我们在这里事奉神，有一班人来是这样地事奉，只有一个人来，也一样地事奉。这就叫作忠心(</strong>路16:10-11;太25:21;林前4:2<strong>)。如果一个人来，我就不讲，几十个人来，我才讲，就是不忠。忠心，就是无论怎样情形，我们都一样地事奉神。</strong></p>
+<p><strong>有弟兄说你对一个人是这样讲，对几十人，也可以照样讲呀。我说:“我的分量不够。”像一杯茶，有浓度，有茶味，倒在大茶瓶里，就淡得没颜色没味道了。</strong></p>
+<p><strong>这五十多年来，基督徒经历过各种的道路，今天还活着仍然保持忠心、爱主的人，神在他们身上都显出祝福来。他们一生向神忠心，不管将来，现在还向神忠心，不因环境改变而改变。他们就是神所看重的。死在他们身上发动，生就在别人身上发动。他们丧失自己，就得着主，损失脸面，就得里面属灵的丰富。</strong></p>
+<p><strong>说到这里，可以说属灵的话是难听的，但是，有耳可听的就应当听，没有耳朵的，就不会听进去。真的，有时神在说话，很多人只当作打雷。</strong></p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

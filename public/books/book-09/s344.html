@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深渊与深渊响应-十二月九日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>十二月九日</h1><p class="meta">深渊与深渊响应 · 第344/366段</p><p><a class="btn" href="s343.html">上一篇</a><a class="btn" href="s345.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-09/s344.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>十二月九日</h2>
+<p>交通:生命不能是讲的。有人把生命的信息拿去讲，讲到生命都漏光了。</p>
+<p>答:首先是说，你的灵对这些事是怎样反应的。所讲的都是现象而已。讲出来都为冲淡属灵的东西。不只劝勉人读经、祷告，鼓动人聚会、赞美，就是许多的讲道，也是在冲淡属灵的东西。不要忘记:撒但的工作就是要把教会的性质改变，把属灵的生命冲淡，这些东西的影响比起外面的逼迫更来得可怕。(林后2:11;11:14;启3:9;帖后2:9太16:23;可4:15)很多基督徒的聚会有人领着唱呀跳的，都是人的东西充满教会，叫人不跟在神的话里，只叫人跟随世界的风俗。所以神也作了些工作，祂在施行祂的审判。</p>
+<p>祷告:主耶稣感谢你的安排，给我们有机会在这里彼此交通。你爱了我们，把我们从撒但手中，从黑暗的领域迁到神光明的国里。今天，我们已成了属神的儿女。主啊，你今借着圣灵住在我们里面，恩膏在凡事上教导我们，叫我们知道什么是出于你的，并且也借着环境，叫我们被规范活在你的面前。赞美你，虽然我们生活在世界里，宗教的世界就摆在我们面前，但是你叫我们有生命的反应，得以看出哪些是出于你的和不是出于你的，叫我们来跟从你。主啊，我们常是偏左偏右的，求你用杖用竿引导我们，我们把自己交在你手中，你亲自引领我们，也把弟兄姊妹交托你，你爱我们必不撇下我们，你带我们一直向前，直到路终。祷告、祈求，奉主耶稣基督之名，阿门!</p>
+<p>(12月4-9日，选自2000年7月26日下午交通)</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>
