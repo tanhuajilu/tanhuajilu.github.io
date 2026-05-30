@@ -1,1 +1,36 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《谈话记录八》，(366天交通记录选文)-九月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月三日</h1><p class="meta">《谈话记录八》，(366天交通记录选文) · 第247/366段</p><p><a class="btn" href="s246.html">上一篇</a><a class="btn" href="s248.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-08/s247.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月三日</h2><p>我知道有些根本没有信的，人就给他施洗。那些人辩说：“使徒行传时代，彼得传福音，当天就给他们施浸。”我说：你不是彼得，彼得能这样作，你就不能这样作。为什么？因你作的是盲目的，你哪里知道他得救不得救，你学彼得不行。使徒行传时，彼得传出福音，那些人已经扎心悔改说：“弟兄们，我们当怎样行？”他们里面要归向主）。彼得有这个属灵分量、能力，懂得他们得救没有。 而你们那些人、胡里胡涂的，会懂得吗？你们是把不清楚的人接去受浸。他们听了不服气说：“我们都按圣经说的作，信而受浸的必然得救。”但他们这信是什么信，他们不知道！他们只用一个公式去作，不是活的去看问题。人是要赶快作，所作的都给他弄错。<br>所以有真理，还要尊重事实。你没有实际，一直讲道理下去，都没有一个结果一个事实出来。我们讲生命就有一个事实摆在那边，会给人有感觉。我们讲能力，也能够有一个生命的能力给人有感觉，不只是讲的而已，是有实际的一个东西。</p></article></main></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《谈话记录八》，(366天交通记录选文)-九月三日</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>九月三日</h1><p class="meta">《谈话记录八》，(366天交通记录选文) · 第247/366段</p><p><a class="btn" href="s246.html">上一篇</a><a class="btn" href="s248.html">下一篇</a></p><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-08/s247.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></div><article class="article"><h2>九月三日</h2><p>我知道有些根本没有信的，人就给他施洗。那些人辩说：“使徒行传时代，彼得传福音，当天就给他们施浸。”我说：你不是彼得，彼得能这样作，你就不能这样作。为什么？因你作的是盲目的，你哪里知道他得救不得救，你学彼得不行。使徒行传时，彼得传出福音，那些人已经扎心悔改说：“弟兄们，我们当怎样行？”他们里面要归向主）。彼得有这个属灵分量、能力，懂得他们得救没有。 而你们那些人、胡里胡涂的，会懂得吗？你们是把不清楚的人接去受浸。他们听了不服气说：“我们都按圣经说的作，信而受浸的必然得救。”但他们这信是什么信，他们不知道！他们只用一个公式去作，不是活的去看问题。人是要赶快作，所作的都给他弄错。<br>所以有真理，还要尊重事实。你没有实际，一直讲道理下去，都没有一个结果一个事实出来。我们讲生命就有一个事实摆在那边，会给人有感觉。我们讲能力，也能够有一个生命的能力给人有感觉，不只是讲的而已，是有实际的一个东西。</p></article></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = Array.from(document.querySelectorAll('.hero a.btn')).find(a => a.textContent.includes('下一篇'));
+  if (!audio || !toggle) return;
+
+  const KEY = 'book01-auto-next-play';
+  const RATE_KEY = 'book01-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') {
+    audio.play().catch(() => {});
+  }
+
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>
