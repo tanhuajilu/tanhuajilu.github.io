@@ -1,0 +1,63 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>告别怀念交通四</title><link rel='stylesheet' href='/style.css'></head><body class="book-page"><main class="site"><a href='index.html'>← 返回本书目录</a> · <a href='../../index.html'>书库首页</a><header><h1>告别怀念交通四</h1><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-11/s026.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></header><article class='article content'><p>安葬祷告</p>
+<p>2009年2月3日下午五点</p>
+<p>(弟兄姊妹们，我们一起祷告。)</p>
+<p>祷告:</p>
+<p>我们在天上荣耀的父神，我们再一次敬拜你，我们将荣耀、权柄、国度、赞美都归给你。我们谢谢你！</p>
+<p>主啊，我们亲爱的老弟兄的遗容在我们面前再也看不见了，主啊，我们要的就是你自己荣耀的脸在我们的里面更向我们显现；我们弟兄给我们交通、供应生命的话语，我们再也不能听见了，但主啊，你自己荣耀的话，藉着圣灵在我们里面，更多的向我们说话，叫我们有心爱主、事奉主、跟从主的弟兄姊妹，以更多话语的职事，能够成为你的出口，供应你的教会，叫你的名得荣耀，好叫你的自己得敬拜。</p>
+<p>愿你继续祝福厦门教会的弟兄姊妹，也祝福各地亲爱的弟兄姊妹，我们都是属于你的，你也是属于我们的。你是我们的主，我们的元首，我们所仰望的。我们的脸都转向你，求你因此就祝福我们，将生命的话语，属灵的祝福更加丰盛的赐给我们。</p>
+<p>我们再次向你低头敬拜！我们这样祷告，奉主耶稣基督你荣耀的名，阿们！</p>
+<p>告别怀念交通五──有感</p>
+<p>有感(一)</p>
+<p>哲成有感</p>
+<p>基督囚徒与基督同在，</p>
+<p>美果晒熟由主人收采，</p>
+<p>多经磨难，流露生命！</p>
+<p>没有高言大智，一切朴实无华，</p>
+<p>不在乎人的看待，乃行在审判光中。</p>
+<p>惟愿主名被高举，惟愿父神得荣耀，</p>
+<p>年日可以有长短，生命不能无内容。</p>
+<p>往日已逝！重新开始，</p>
+<p>所有机会，尽在即时！</p>
+<p>二零零九年二月四日午夜</p>
+<p>哲成有感于:基督囚徒一封信寄出三十年.</p>
+<p>重读1962.7.14、1979.5.22文字.</p>
+<p>有感(二)</p>
+<p>缅怀柯老弟兄有感</p>
+<p>恩主牧场领头羊，一生清楚活主前。</p>
+<p>多经患难心忍耐，因信得生灵敬虔。</p>
+<p>囚徒自由效主谦，默然栽培葡萄园。</p>
+<p>虽经幽谷脱帐棚，息主爱怀享甘甜。</p>
+<p>往者已回前路远，义人云彩常想念。</p>
+<p>羊群脚踪紧跟随，与神同行溢恩典。</p>
+<p>帐幕拐角要加强，复活生命满馨香。</p>
+<p>舍己背架跟随主，耶稣基督是榜样。</p>
+<p>ByMarkJ.Q.</p>
+<p>2009-2-7</p></article><footer class='nav-links'><a href='s025.html'>← 上一篇</a> <a href='s027.html'>下一篇 →</a></footer></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = document.querySelector("footer.nav-links a:last-child");
+  if (!audio || !toggle) return;
+  const KEY = 'book-11-auto-next-play';
+  const RATE_KEY = 'book-11-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink || !nextLink.textContent.includes('下一篇')) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

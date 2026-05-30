@@ -1,0 +1,40 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>3.一九八六年年终感悟</title><link rel='stylesheet' href='/style.css'></head><body class="book-page"><main class="site"><a href='index.html'>← 返回本书目录</a> · <a href='../../index.html'>书库首页</a><header><h1>3.一九八六年年终感悟</h1><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-11/s030.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></header><article class='article content'><p>越读神的话──圣经，越感到读得不够，自从十多岁读经到今年七十一岁(中间十五年没有圣经可读)，至今对圣经仍感到知道得太少，如果再有七十年，我仍是要全力以赴投入读神宝贝的话──圣经。</p>
+<p>是神的话──圣经感动我认识主耶稣是我的救主，从小孩时就印象母亲读圣经故事(厦门话罗马字本)，幼小心灵对神起了敬畏的心，是他的感动使我从小就起意将来长大了要做“传道”，讲圣经的道理。</p>
+<p>当起首学习传道时，给我有把握一生过幸福生活的圣经节是马太六章三十一至三十四节“你们需用的这一切东西，你们的天父是知道的。”既然天父是知道的，相信他负责一切、安排一切。几十年来信靠他的应许，度过了艰苦的岁月，走过千辛万难的路程。神的一句话使我和我的全家享用不尽，神的一句话涌流着神无限的祝福。</p>
+<p>神的话语──圣经述说神自己及其作为，他自己向我显明，并住在我的里面，他的作为不只显在万物，也作在我的身上，并要得着我。</p>
+<p>他的话是我暗中之光，是我迷途中的指引。</p>
+<p>他的话表明他的心意，叫我明白他的旨意，对他的话越认识，就对他的旨意越清楚，因为话表达意思。</p>
+<p>读了这么多年的圣经，我对他的话仍认识得很不够，巴不得有更多的时间来读它。</p>
+<p>我的余日还有多少？我要尽余下的一点点时间读神的话、投入神的话、浸在神的话、迷在神的话、享受神的话、活在神的话、行在神的话、发挥神的话，但愿神话的活力，从我发出去影响别人。</p>
+<p>神丰富的话语非我所能领受得完，我要虚心地、贫穷地、一无所有地来仰望他的怜悯，求他施恩。</p>
+<p>但愿他荣耀的话语──圣经，藉着荣耀的灵多启示在我里面，在新的一年──一九八七年多给亮光，多感动，使我读好他的话。</p>
+<p>主阿，怜悯。</p>
+<p>1986年12月31日</p></article><footer class='nav-links'><a href='s029.html'>← 上一篇</a> <a href='s031.html'>下一篇 →</a></footer></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = document.querySelector("footer.nav-links a:last-child");
+  if (!audio || !toggle) return;
+  const KEY = 'book-11-auto-next-play';
+  const RATE_KEY = 'book-11-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink || !nextLink.textContent.includes('下一篇')) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

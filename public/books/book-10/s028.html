@@ -1,5 +1,32 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>10.所信的道我已经守住了(10-11)-第27篇 选自02年12月23日早交通</title><link rel="stylesheet" href="../../style.css"></head><body><main class="site"><a href="index.html">← 返回本书目录</a> · <a href="../../index.html">书库首页</a><div class="hero"><h1>第27篇 选自02年12月23日早交通</h1><p class="meta">10.所信的道我已经守住了(10-11) · 第28/74段</p><p><a class="btn" href="s027.html">上一篇</a><a class="btn" href="s029.html">下一篇</a></p></div><article class="article"><h1>第27篇 选自02年12月23日早交通</h1>
-<p>答：你刚才讲了点历史。历史是很复杂的，讲也讲不清楚，你这样讲他那样讲，各有各的一方面去讲历史，所以讲出来都不完全相同。过去的历史，人去讲也讲不清楚，但是神却已经在过程里做了工，神做了工，人就不能说什么了。</p>
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>第27篇选自02年12月23日早交通</title><link rel='stylesheet' href='/style.css'></head><body class="book-page"><main class="site"><a href='index.html'>← 返回本书目录</a> · <a href='../../index.html'>书库首页</a><header><h1>第27篇选自02年12月23日早交通</h1><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-10/s028.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></header><article class='article content'><p>答:你刚才讲了点历史。历史是很复杂的，讲也讲不清楚，你这样讲他那样讲，各有各的一方面去讲历史，所以讲出来都不完全相同。过去的历史，人去讲也讲不清楚，但是神却已经在过程里做了工，神做了工，人就不能说什么了。</p>
 <p>因此，既已过去的，让它过去，我们还是要去抓住这一点，就是去抓住神，我们还抓住神，神就继续在我们身上作工。所以，以前在历史里，特别是那些消极的东西，我们让它过去，以后就不谈了。</p>
 <p>以往，我们有的人，作了很多的工、很多的事，作了的，在神面前，都没有价值，因为都是人去作的，就留不下来。只有那些让神作的，才有价值，可以存留在天上，在神面前。</p>
-<p>因此，我们所经过的每一方面，都可以给我们有学习。我们所看到的每一个人，即使我们看为最坏的，还有他好的一方面，也可以给我们有学习的地方。</p></article></main></body></html>
+<p>因此，我们所经过的每一方面，都可以给我们有学习。我们所看到的每一个人，即使我们看为最坏的，还有他好的一方面，也可以给我们有学习的地方。</p></article><footer class='nav-links'><a href='s027.html'>← 上一篇</a> <a href='s029.html'>下一篇 →</a></footer></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = document.querySelector("footer.nav-links a:last-child");
+  if (!audio || !toggle) return;
+  const KEY = 'book-10-auto-next-play';
+  const RATE_KEY = 'book-10-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink || !nextLink.textContent.includes('下一篇')) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

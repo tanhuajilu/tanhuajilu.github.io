@@ -1,0 +1,42 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>《基督囚徒的感语及其它》</title><link rel='stylesheet' href='/style.css'></head><body class="book-page"><main class="site"><a href='index.html'>← 返回本书目录</a> · <a href='../../index.html'>书库首页</a><header><h1>《基督囚徒的感语及其它》</h1><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-11/s027.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></header><article class='article content'><p>编者的话</p>
+<p>1.《倪弟兄三篇见证》抄后感语</p>
+<p>2.《聚会消息》抄后感</p>
+<p>附:聚会消息原文</p>
+<p>3.一九八六年年终感语</p>
+<p>4.一封复信</p>
+<p>编者的话</p>
+<p>在基督囚徒柯怜悯(柯恤)弟兄离开我们半年之际，有机会印发这一小册作为纪念，感谢主！谨将此书献给一切怀念他的弟兄姐妹及诸位亲人。柯弟兄很少谈到个人的经历，这几则所写的文字，让我们得知一点点，求主赐福给每一位读者！</p>
+<p>柯弟兄在失去自由的十五年里，没有圣经可读，没有肢体可交通，但里面与神更亲密的交通却是无时无刻，不受时间、空间的限制，从天上支取生命能力和丰盛恩典。有一位国外传道人问他:“你十五年没有读经、聚会，你的基督徒生活是如何过的？”他指着自己的心说:“一本活的圣经在里面，一位活的基督在里面。”</p>
+<p>当他有机会读圣经后，虽然外面工作繁忙，但仍抓紧时间，如饥似渴，一遍一遍地读经、默想，并写下“读经心得”。此外还阅读大量的属灵书籍，凡读过的书都认真地写“阅读集珍”，有的把整本书抄下，有的摘录其中精华，同时写了许多的“读后感语”(本册刊印其中一、二)。正是像牛羊吃草产奶、蜜蜂辛勤采花酿蜜一样，才能有点奶与蜜，供应人的需要。</p>
+<p>看得见的事奉，是根据看不见的生活。这个生活不是人所能见的，乃是神暗中察看的生活，也就是“清清楚楚，活在主前”(柯恤语)。只有里面有丰富的内容，才能叫人得饱足；玉瓶里要有香膏，打破后，屋里才满了香气。里面是生命的东西，是充满基督的，破碎后才有基督馨香之气:如果里面充满的是自己，破碎后，人所闻到的乃是“肉体”的气味。种下去的种子必须是有生命的，没有生命内容的种子只能烂在地里。</p>
+<p>柯弟兄一生敬畏主，给凡接触者留下深刻的印象:他的平易近人让不同年龄、不同文化、不同背景的人均感到亲切；没有高言大智，却按着各人的需要给予切合实际的帮助，这正是里面有丰盛的生命，外面又经过不断破碎对付的结果。</p>
+<p>但愿尊贵、荣耀、丰富，归给羔羊直到永古。阿们！</p>
+<p>2009年8月1日</p></article><footer class='nav-links'><a href='s026.html'>← 上一篇</a> <a href='s028.html'>下一篇 →</a></footer></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = document.querySelector("footer.nav-links a:last-child");
+  if (!audio || !toggle) return;
+  const KEY = 'book-11-auto-next-play';
+  const RATE_KEY = 'book-11-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink || !nextLink.textContent.includes('下一篇')) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>

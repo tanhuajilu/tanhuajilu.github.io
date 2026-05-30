@@ -1,0 +1,34 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>第70篇选自07年12月9日晚交通</title><link rel='stylesheet' href='/style.css'></head><body class="book-page"><main class="site"><a href='index.html'>← 返回本书目录</a> · <a href='../../index.html'>书库首页</a><header><h1>第70篇选自07年12月9日晚交通</h1><div class="audio-panel"><audio id="daily-audio" controls preload="none" src="https://audio.tanhuajilu.dpdns.org/book-11/s020.mp3"></audio><p class="meta audio-controls-inline"><label><input type="checkbox" id="auto-next-play"> 自动翻页并播放&nbsp;&nbsp;</label><span class="speed-control">播放速度:<select id="playback-rate"><option value="0.8">0.8x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select></span></p></div></header><article class='article content'><p>交通一:既然通了，还要有交通。通了以后的交通跟以前的就不一样。再交通，就叫我们能以在光中再有认识。(应:清清楚楚活在主前，愈过愈通，愈过愈深。)</p>
+<p>交通二:在X地我们常有交通，这交通也不随便，也要让人遇见主。所以需要很多的学习，因为不是简单几句话就能解决人的问题，还要顾到全面的需要。</p>
+<p>交通三:今天我们寻求属灵的交通，比前更困难。</p>
+<p>交通四:关于异象和使命。神给倪柝声弟兄的使命感，是神给人的祝福。虽然他经过很多难处，但有些东西他不会放弃。我感到在X老弟兄身上也是这样。</p>
+<p>交通五:问到我们基督徒还要不要盼望有一个复兴。盼望是好，但人想出的盼望，盼望不到。因为人是作不出来的。神的工作，人不知道，神要作的复兴，跟人所想的复兴不一样。复兴是神在人里头所作的工作。人转变了，复兴才有路。属灵的工作，在各地会像鞭炮一样一个一个的炮芯串起来，点着了，那时大家都有回应。这怎么说呢？这需要时间。因为各地的程度不一样，对此，大家要多祷告。因为各地有他自己要求，要转变时，很多会显明，时间还没有到时，他们要听也听不懂。当时候到了，神作工，人一听就懂，就会通。不然，有人讲很多了，他仍然不懂。</p>
+<p>交通六:对以后事奉的路怎样看呢？很难说。在人看:到处都是问题。在神看，不是那奔跑的，不是那定意的，只在乎发怜悯的神。神喜欢怜悯，不喜欢祭祀，都在乎神。保罗就经历了许多希奇的事。至于我们，经历是有了，仍然不多。保罗得了启示，十四年后才拿来讲。单说经历吧！讲到很多各种经历，他都经历过，有过学习，所以他讲不了。他一直在学习。有青年人问到，作工是不是要全时间。我说这个不对。因为太快了，都还没有学习。圣经还没有读几遍，就去作工！有一个例子，一个大学生，得救还没有多久，同工X老弟兄带着他。我问他圣经读了几遍，他说新约还没有一遍。我说:“你出来作工，圣经读那么少？你每天要多读圣经，有时间，就尽量抽出时间来读圣经才好！”一个人为主作工，神的话一定要在他里丰富起来，不然，他讲对讲错都不知道。</p></article><footer class='nav-links'><a href='s019.html'>← 上一篇</a> <a href='s021.html'>下一篇 →</a></footer></main><script>(function(){
+  const audio = document.getElementById('daily-audio');
+  const toggle = document.getElementById('auto-next-play');
+  const nextLink = document.querySelector("footer.nav-links a:last-child");
+  if (!audio || !toggle) return;
+  const KEY = 'book-11-auto-next-play';
+  const RATE_KEY = 'book-11-playback-rate';
+  const rateSel = document.getElementById('playback-rate');
+  const saved = localStorage.getItem(KEY);
+  toggle.checked = saved === null ? true : saved === '1';
+  toggle.addEventListener('change', () => localStorage.setItem(KEY, toggle.checked ? '1' : '0'));
+  const savedRate = localStorage.getItem(RATE_KEY) || '1';
+  if (rateSel) {
+    if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+    audio.playbackRate = parseFloat(rateSel.value || '1');
+    rateSel.addEventListener('change', () => {
+      audio.playbackRate = parseFloat(rateSel.value || '1');
+      localStorage.setItem(RATE_KEY, rateSel.value || '1');
+    });
+  }
+  const params = new URLSearchParams(location.search);
+  if (params.get('autoplay') === '1') audio.play().catch(() => {});
+  audio.addEventListener('ended', () => {
+    if (!toggle.checked || !nextLink || !nextLink.textContent.includes('下一篇')) return;
+    const u = new URL(nextLink.href, location.href);
+    u.searchParams.set('autoplay', '1');
+    location.href = u.toString();
+  });
+})();</script></body></html>
